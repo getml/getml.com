@@ -1,3 +1,4 @@
+[](){#json}
 # JSON interface
 
 The another convenient but slow way to import data into the getML

@@ -1,29 +1,31 @@
+[](){#annotating_data}
 # Annotating data
 
-After you have [imported your data](../importing_data/importing_data.md) into the getML engine, there is one more step to undertake before you can start learning features: You need to assign a **role** to each column. Why is that?
+After you have [imported][importing_data] your data into the getML engine, there is one more step to undertake before you can start learning features: You need to assign a **role** to each column. Why is that?
 
-First, the general structure of the individual data frames is needed to construct the [relational data model](data_model). This is done by assigning the roles [join key](#annotating_roles_join_key) and [time stamp](#annotating_roles_time_stamp). The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).
+First, the general structure of the individual data frames is needed to construct the [relational data model][data_model]. This is done by assigning the roles [join key][annotating_data_join_keys] and [time stamp][annotating_data_time_stamp]. The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).
 
-Second, you need to tell the [feature learning algorithm](feature_engineering) how to interpret the individual columns for it to construct sophisticated features. That is why we need the roles [numerical](#annotating_roles_numerical), [categorical](#annotating_roles_categorical), and [target](#annotating_roles_target). You can also assign [units](#annotating_units) to each column in a Data Frame.
+Second, you need to tell the [feature learning algorithm][feature_engineering] how to interpret the individual columns for it to construct sophisticated features. That is why we need the roles [numerical][annotating_data_numerical], [categorical][annotating_data_categorical], and [target][annotating_data_target]. You can also assign [units][annotating_data_units] to each column in a Data Frame.
 
-This chapter contains detailed information on the individual [roles](#annotating_roles) and [units](#annotating_units).
+This chapter contains detailed information on the individual [roles][annotating_data_roles] and [units][annotating_data_units].
 
 ## In short
 
 When **building the data model**, you should keep the following things in mind:
 
 - Every [`DataFrame`](getml/data/DataFrame) in a data model needs to have at least one column ([`columns`](getml/data/columns)) with the role [join key](#annotating_roles_join_key).
-- The role [time stamp](#annotating_roles_time_stamp) has to be used to prevent data leaks (refer to [data model time series](data_model_time_series) for details).
+- The role [time stamp][annotating_data_time_stamp] has to be used to prevent data leaks (refer to [data model time series](data_model_time_series) for details).
 
 When **learning features**, please keep the following things in mind:
 
-- Only [`columns`](getml/data/columns) with roles of [categorical](#annotating_roles_categorical), [numerical](#annotating_roles_numerical), and [time stamp](#annotating_roles_time_stamp) will be used by the feature learning algorithm for aggregations or conditions, unless you explicitly tell it to aggregate [target](#annotating_roles_target) columns as well (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)).
-- Columns are only compared with each other if they have the same [unit](#annotating_units).
-- If you want to make sure that a column is *only* used for comparison, you can set `comparison_only` (refer to [annotating units](#annotating_units)). Time stamps are automatically set to `comparison_only`.
+- Only [`columns`](getml/data/columns) with roles of [categorical][annotating_data_categorical], [numerical][annotating_data_numerical], and [time stamp][annotating_data_time_stamp] will be used by the feature learning algorithm for aggregations or conditions, unless you explicitly tell it to aggregate [target][annotating_data_target] columns as well (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)).
+- Columns are only compared with each other if they have the same [unit][annotating_data_units].
+- If you want to make sure that a column is *only* used for comparison, you can set `comparison_only` (refer to [annotating units][annotating_data_units]). Time stamps are automatically set to `comparison_only`.
 
+[](){#annotating_data_roles}
 ## Roles
 
-Roles determine if and how [`columns`](getml/data/columns) are handled during the construction of the [data model](data_model) and how they are interpreted by the [feature learning algorithm](feature_engineering). The following roles are available in getML:
+Roles determine if and how [`columns`](getml/data/columns) are handled during the construction of the [data model][data_model] and how they are interpreted by the [feature learning algorithm][feature_engineering]. The following roles are available in getML:
 
 | Role                | Class                                             | Included in FL algorithm |
 |---------------------|---------------------------------------------------|--------------------------|
@@ -36,7 +38,7 @@ Roles determine if and how [`columns`](getml/data/columns) are handled during th
 | [`unused_float`](getml/data/roles/unused_float)      | [`FloatColumn`](getml/data/columns/FloatColumn)   | no                     |
 | [`unused_string`](getml/data/roles/unused_string)     | [`StringColumn`](getml/data/columns/StringColumn) | no                     |
 
-When constructing a [`DataFrame`](getml/data/DataFrame) via the class methods [`from_csv`](getml/data/DataFrame/from_csv), [`from_pandas`](getml/data/DataFrame/from_pandas), [`from_db`](getml/data/DataFrame/from_db), and [`from_json`](getml/data/DataFrame/from_json), all [`columns`](getml/data/columns) will have either the role [unused float](#annotating_roles_unused_float) or [unused string](#annotating_roles_unused_string). Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
+When constructing a [`DataFrame`](getml/data/DataFrame) via the class methods [`from_csv`](getml/data/DataFrame/from_csv), [`from_pandas`](getml/data/DataFrame/from_pandas), [`from_db`](getml/data/DataFrame/from_db), and [`from_json`](getml/data/DataFrame/from_json), all [`columns`](getml/data/columns) will have either the role [unused float][annotating_data_unused_float] or [unused string][annotating_data_unused_string] . Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
 
 ```python
 import pandas as pd
@@ -120,15 +122,15 @@ roles = getml.data.DataFrame.from_csv(
 ```
 
 Even if your data source is type safe, setting roles is still a good idea because it is also more efficient. Using [`set_role()`](getml/data/DataFrame/set_role) creates a deep copy of the original column and might perform an implicit type conversion. If you already know where you want your data to end up, it might be a good idea to set roles in advance.
-
+[](){#annotating_data_join_keys}
 ## Join key
 
-Join keys are required to establish a relation between two [`DataFrame`](getml/data/DataFrame) objects. Please refer to the [data models](data_model) for details.
+Join keys are required to establish a relation between two [`DataFrame`](getml/data/DataFrame) objects. Please refer to the [data models][data_model]for details.
 
 The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.
 
 [`columns`](getml/data/columns) of this role will *not* be aggregated by the feature learning algorithm or used for conditions.
-
+[](){#annotating_data_time_stamp}
 ## Time stamp
 
 This role is used to prevent data leaks. When you join one table onto another, you usually want to make sure that no data from the future is used. Time stamps can be used to limit your joins.
@@ -203,43 +205,44 @@ to NULL.
 > getML time stamps are actually floats expressing the number of seconds since
 > UNIX time (1970-01-01T00:00:00).
 
+[](){#annotating_data_target}
 ## Target
 
-The associated [columns](getml/data/columns) contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables](#data_model_tables)).
+The associated [columns](getml/data/columns) contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data_model_tables]).
 
 The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be `NULL`.
-
+[](){#annotating_data_numerical}
 ## Numerical
 
 This role tells the getML engine to include the associated [`FloatColumn`](getml/data/columns/FloatColumn) during the feature learning.
 
 It should be used for all data with an inherent ordering, regardless of whether it is sampled from a continuous quantity, like passed time or the total amount of rainfall, or a discrete one, like the number of sugary mulberries one has eaten since lunch.
-
+[](){#annotating_data_categorical}
 ## Categorical
 
 This role tells the getML engine to include the associated [`StringColumn`](getml/data/columns/StringColumn) during feature learning.
 
 It should be used for all data with no inherent ordering, even if the categories are encoded as integers instead of strings.
-
+[](){#annotating_data_text}
 ## Text
 
-getML provides the role [`text`](getml/data/roles/text) to annotate free form text fields within relational data structures. getML deals with columns of role [`text`](getml/data/roles/text) through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) preprocessor. For more information on getML's handling of text fields, refer to [the Preprocessing section](#text_fields).
-
+getML provides the role [`text`](getml/data/roles/text) to annotate free form text fields within relational data structures. getML deals with columns of role [`text`](getml/data/roles/text) through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) preprocessor. For more information on getML's handling of text fields, refer to [the Preprocessing section][preprocessing_free_form_text]
+[](){#annotating_data_unused_float}
 ## Unused_float
 
 Marks a [`FloatColumn`](getml/data/columns/FloatColumn) as unused.
 
 The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
-
+[](){#annotating_data_unused_string}
 ## Unused_string
 
 Marks a [`StringColumn`](getml/data/columns/StringColumn) as unused.
 
 The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
-
+[](){#annotating_data_units}
 ## Units
 
-By default, all columns of role [categorical](#annotating_roles_categorical) or [numerical](#annotating_roles_numerical) will only be compared to fixed values.
+By default, all columns of role [categorical][annotating_data_categorical] or [numerical][annotating_data_numerical] will only be compared to fixed values.
 
 ```sql
 ...

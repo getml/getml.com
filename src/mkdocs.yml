@@ -1,2 +1,8 @@
 site_name: GetML Documentation
 
+plugins:
+  - search
+  - autorefs
+
+markdown_extensions:
+  - attr_list

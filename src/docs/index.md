@@ -161,4 +161,4 @@ documentation are more suitable. There are three major parts:
 
 You can also check out our other resources
 
-- [getML homepage](https://getml.com)
+[getML homepage](https://getml.com)

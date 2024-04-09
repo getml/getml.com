@@ -1,6 +1,7 @@
+[](){#mariadb}
 # MariaDB interface
 
-MariaDB [1] is a popular open source fork of MySQL. It can be
+[MariaDB](https://mariadb.org/) is a popular open source fork of MySQL. It can be
 connected to the getML engine using the function
 [`connect_mariadb()`](getml/database/connect_mariadb). But first, make sure your
 database is running, you have the corresponding hostname, port as well
@@ -29,4 +30,3 @@ Alternatively, you can use the [`read_db()`](getml/data/DataFrame/read_db) and [
 
 You can also write your results back into the MariaDB database. By providing a name for the destination table in [`transform()`](getml/pipeline/Pipeline/transform), the features generated from your raw data will be written back. Passing it into [`predict()`](getml/pipeline/Pipeline/predict) generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[1]: https://mariadb.org/

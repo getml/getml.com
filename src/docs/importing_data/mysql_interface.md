@@ -1,6 +1,7 @@
+[](){#mysql}
 # MySQL interface
 
-MySQL is one of the most popular databases in use today. It can be connected to the getML engine using the function [`connect_mysql()`](getml/database/connect_mysql). But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
+[MySQL](https://www.mysql.com) is one of the most popular databases in use today. It can be connected to the getML engine using the function [`connect_mysql()`](getml/database/connect_mysql). But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
 
 If you are unsure which port or socket your MySQL is running on, you can start the `mysql` command line interface
 ```bash
@@ -23,4 +24,3 @@ Alternatively, you can use the [`read_db()`](getml/data/DataFrame/read_db) and [
 
 You can also write your results back into the MySQL database. By providing a name for the destination table in [`transform()`](getml/pipeline/Pipeline/transform), the features generated from your raw data will be written back. Passing it into [`predict()`](getml/pipeline/Pipeline/predict) generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[1]: https://www.mysql.com

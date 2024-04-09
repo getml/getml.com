@@ -1,6 +1,7 @@
+[](){#greenplum}
 # Greenplum interface
 
-Greenplum [1] is an open source database system maintained by Pivotal
+[Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
 Software, Inc. It can be connected to the getML engine using the
 function [`connect_greenplum()`](getml/database/connect_greenplum). But first, make
 sure your database is running, you have the corresponding hostname,
@@ -27,4 +28,3 @@ from your raw data will be written back. Passing it into
 of the target variables to new, unseen data and stores the result into
 the corresponding table.
 
-[1]: [https://greenplum.org/](https://greenplum.org/)

@@ -1,6 +1,7 @@
+[](){#pandas}
 # Pandas interface
 
-Pandas is one of the key packages used in most data science projects done in Python. The associated import interface is one of the slowest, but you can harness the good data exploration and manipulation capabilities of this Python package.
+[Pandas](https://pandas.pydata.org/) is one of the key packages used in most data science projects done in Python. The associated import interface is one of the slowest, but you can harness the good data exploration and manipulation capabilities of this Python package.
 
 ## Import from Pandas
 
@@ -10,4 +11,3 @@ Using the [`DataFrame.from_pandas()`](getml/data/DataFrame/from_pandas) class me
 
 In addition to reading data from a `pandas.DataFrame`, you can also write an existing [`DataFrame`](getml/data/DataFrame) back into a `pandas.DataFrame` using [`DataFrame.to_pandas()`](getml/data/DataFrame/to_pandas). Due to the way data is stored within the getML engine, the dtypes of the original `pandas.DataFrame` cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.
 
-[1]: https://pandas.pydata.org/

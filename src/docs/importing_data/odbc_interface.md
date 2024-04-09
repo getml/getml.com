@@ -1,6 +1,7 @@
+[](){#odbc}
 # ODBC interface
 
-ODBC (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
+[ODBC](https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc) (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
 
 In a nutshell, it works like this:
 
@@ -16,7 +17,7 @@ ODBC is pre-installed on modern Windows operating systems, while Linux and macOS
 
 To connect to Microsoft SQL Server using ODBC:
 
-1. If you do not have a Microsoft SQL Server instance, you can [download a trial or development version](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+1. If you do not have a Microsoft SQL Server instance, you can [download](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) a trial or development version.
 2. Download the [ODBC driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server).
 3. Configure the ODBC driver. Many drivers provide customized scripts for this, so manual configuration might not be necessary.
 
@@ -86,6 +87,5 @@ Alternatively, you can use the [`read_db()`](getml/data/DataFrame/read_db) and [
 
 You can also write your results back into the PostgreSQL database. When you provide a name for the destination table in [`transform()`](getml/pipeline/Pipeline/transform), the features generated from your raw data will be written back. Passing it into [`predict()`](getml/pipeline/Pipeline/predict) generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[1]: https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc
 
 

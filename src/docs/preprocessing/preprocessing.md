@@ -1,3 +1,4 @@
+[](){#preprocessing}
 # Preprocessing
 
 As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and propositionalization deal with *relational data structures* and result in a single-table representation thereof, we categorize all operations that work on *single tables* as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.
@@ -99,7 +100,7 @@ Here is a small example that shows the [`Seasonal`](getml/preprocessors/Seasonal
 If you compare both of the features above, you will notice they are exactly the same: `COUNT - COUNT(DISTINCT)` on the month component conditional on the time-based restrictions introduced through memory and horizon.
 
 While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: [`Mapping`](getml/preprocessors/Mapping) and [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter).
-
+[](){#preprocessing_mappings}
 ## Mappings
 
 [`Mapping`](getml/preprocessors/Mapping) s are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.
@@ -120,7 +121,7 @@ Here is an example mapping from the [CORA notebook](https://nbviewer.getml.com/g
        ('Probabilistic_Methods', 0.01293103448275862);
 ```
 Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
-
+[](){#preprocessing_free_form_text}
 ## Handling of free form text
 
 getML provides the role [`text`](getml/data/roles/text) to annotate free form text fields within relational data structures. Learning from [`text`](getml/data/roles/text) columns works as follows: First, for each of the [`text`](getml/data/roles/text) columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter `vocab_size`. If a text field contains words that belong to the vocabulary, getML deals with columns of role [`text`](getml/data/roles/text) through one of two approaches: Text fields can either can be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) preprocessor. Opting for the second approach is as easy as adding the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) to the list of `preprocessors` on your [`Pipeline`](getml/pipeline/Pipeline). The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.
@@ -145,6 +146,6 @@ getML provides the role [`text`](getml/data/roles/text) to annotate free form te
 | 52     | lazy  |
 | 52     | dog   |
 
-As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (`COUNT WHERE words IN ('quick', 'jumps')`). Further, by utilizing [mappings](#mappings), any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.
+As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (`COUNT WHERE words IN ('quick', 'jumps')`). Further, by utilizing [mappings][preprocessing_mappings], any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.
 
 Note that the splitting of text fields can be computationally expensive. If performance suffers too much, you may resort to the default behavior by removing the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) from your [`Pipeline`](getml/pipeline/Pipeline).

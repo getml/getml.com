@@ -1,6 +1,7 @@
+[](){#postgresql}
 # PostgreSQL interface
 
-PostgreSQL is a powerful and well-established open source database system. It can be connected to the getML engine using the function [`connect_postgres()`](getml/database/connect_postgres). Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
+[PostgreSQL](https://www.postgresql.org/) is a powerful and well-established open source database system. It can be connected to the getML engine using the function [`connect_postgres()`](getml/database/connect_postgres). Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
 
 ## Import from PostgreSQL
 
@@ -11,4 +12,3 @@ Alternatively, you can use the [`read_db()`](getml/data/DataFrame/read_db) and [
 
 You can also write your results back into the PostgreSQL database. If you provide a name for the destination table in [`transform()`](getml/pipeline/Pipeline/transform), the features generated from your raw data will be written back. Passing it into [`predict()`](getml/pipeline/Pipeline/predict) generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[1]: https://www.postgresql.org/

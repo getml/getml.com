@@ -1,15 +1,17 @@
+[](){#importing_data}
 # Importing data
 
 Before being able to analyze and process your data using the getML software,
 you have to import it into the engine. At the end of this step, you will have
 your data in data frame objects in the getML engine and will be ready to
-[annotate them](#annotating).
+[annotate them][annotating_data].
 
 > __Note__:
 > 
 > If you have imported your data into the engine before and want to restore it,
-> refer to [the getML Python API lifecycles dataframe](the_getml_python_api_lifecycles_dataframe)
-
+> refer to [Lifecycle of DataFrame][lifecycle_dataframe]
+>
+[](){#importing_data_unified_interface}
 ## Unified import interface
 
 The getML Python API provides a unified import interface requiring
@@ -42,15 +44,16 @@ All those functions also have their counterparts for exporting called
 The particularities of the individual formats will be covered in the
 following sections:
 
-- CSV interface
-- Pandas interface
-- JSON interface
-- SQLite3 interface
-- MySQL interface
-- MariaDB interface
-- PostgreSQL interface
-- Greenplum interface
-- ODBC interface
+- [CSV interface][csv]
+- [Pandas interface][pandas]
+- [JSON interface][json]
+- [SQLite3 interface][sqlite3]
+- [MySQL interface][mysql]
+- [MariaDB interface][mariadb]
+- [PostgreSQL interface][postgresql]
+- [Greenplum interface][greenplum]
+- [ODBC interface][odbc]
+
 
 ## Data Frames
 
@@ -66,10 +69,10 @@ unique within the data frame they are associated with.
 Unfortunately, data sources often 
 contain missing or corrupt data - also called NULL
 values. getML is able to work with missing values except for the
-[target variable](#annotating_roles_target), which must not
+[target variable][annotating_data_target], which must not
 contain any NULL values (because having NULL targets does not
 make any sense). Please refer to the section on 
-[join keys](#annotating_roles_join_key) for
+[join keys][annotating_data_join_keys] for
 details about their handling during the construction of the data
 model.
 

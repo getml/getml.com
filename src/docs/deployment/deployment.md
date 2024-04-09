@@ -1,6 +1,6 @@
 # Deployment
 
-The results of the [feature learning](#feature_engineering) and the [prediction](#predicting) can be retrieved in different ways and formats.
+The results of the [feature learning][feature_engineering] and the [prediction][predicting] can be retrieved in different ways and formats.
 
 ## Transpiling pipelines
 
@@ -12,7 +12,7 @@ The results of the [feature learning](#feature_engineering) and the [prediction]
 
 ## Writing into a database
 
-- You can also write both features and prediction results back into a new table of the connected database by providing the `table_name` argument in the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods. Please refer to the [unified import interface](#unified_import_interface) for information on how to connect to a database.
+- You can also write both features and prediction results back into a new table of the connected database by providing the `table_name` argument in the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods. Please refer to the [unified import interface][importing_data_unified_interface] for information on how to connect to a database.
 
 ## Responding to a HTTP POST request
 
@@ -25,16 +25,18 @@ If you are looking for a pure Python, 100% open-source way to productionize getM
 
 ## HTTP Endpoints
 
-As soon as you have [trained a pipeline](#deployment_prerequisites), whitelisted it for external access using its [`deploy`](getml/pipeline/Pipeline/deploy) method, and configured the getML monitor for [remote access](#remote_access), you can transform new data into features or make predictions on them using these endpoints:
+As soon as you have trained a pipeline, whitelisted it for external access using its [`deploy`](getml/pipeline/Pipeline/deploy) method, and configured the getML monitor for [remote access](#remote_access), you can transform new data into features or make predictions on them using these endpoints:
 
-- [Transform endpoint](http://localhost:1709/transform/PIPELINE_NAME): `http://localhost:1709/transform/PIPELINE_NAME`
-- [Predict endpoint](http://localhost:1709/predict/PIPELINE_NAME): `http://localhost:1709/predict/PIPELINE_NAME`
+- [Transform endpoint: `http://localhost:1709/transform/PIPELINE_NAME`][deployment_transform]
+- [Predict endpoint: `http://localhost:1709/predict/PIPELINE_NAME`][deployment_predict]
 
-To each of them, you must send a POST request containing the new data as a JSON string in a specific [request format](#deployment_format).
+To each of them, you must send a POST request containing the new data as a JSON string in a specific [request format][deployment_request_format].
 
 > __Note__:  
 > For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is
    http://localhost:1709/predict/PIPELINE_NAME
+
+[](){#deployment_request_format}
 ## Request Format
 
 In all POST requests to the endpoints, a JSON string with the following syntax has to be provided in the body:
@@ -66,7 +68,7 @@ individual peripheral tables is very important and has to exactly
 match the order the corresponding [`Placeholder`](getml/data/Placeholder)
 have been provided in the constructor of `pipeline`.
 
-In our example [above](#deployment_prerequisites), we
+In our example above, we
 could post a JSON string like this:
 
 ```json
@@ -87,7 +89,7 @@ could post a JSON string like this:
 
 You might have noticed that the time stamps in the example above have been
 passed as numerical values and not as their string representations
-shown in the [beginning](#deployment_prerequisites). Both ways are
+shown in the beginning. Both ways are
 supported by the getML monitor. But if you choose to pass the
 string representation, you also have to specify the particular format
 in order for the getML engine to interpret your data properly.
@@ -134,7 +136,7 @@ exists on the getML engine:
 # Using data from a database
 
 You can also read the data from the connected database
-(see [unified import interface](unified_import_interface)) 
+(see [unified import interface][importing_data_unified_interface]) 
 by passing an arbitrary query to the `query` key:
 
 ```json
@@ -149,6 +151,7 @@ by passing an arbitrary query to the `query` key:
   }
 }
 ```
+[](){#deployment_transform}
 # Transform Endpoint
 
 The transform endpoint returns the generated features.
@@ -167,6 +170,7 @@ curl --header "Content-Type: application/json"           \
      --data '{"peripheral":[{"column_01":[2.4,3.0,1.2,1.4,2.2],"join_key":["0","0","0","0","0"],"time_stamp":[0.1,0.2,0.3,0.4,0.8]}],"population":{"column_01":[2.2,3.2],"join_key":["0","0"],"time_stamp":[0.65,0.81]}}' \
      http://localhost:1709/transform/PIPELINE_NAME
 ```
+[](){#deployment_predict}
 # Predict Endpoint
 
 When using getML as an end-to-end data science pipeline, you can use
