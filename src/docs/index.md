@@ -4,9 +4,8 @@ Welcome to the getML technical documentation. This document is written for data
 scientists who want to use the getML software suite for their projects. For
 general information about getML visit [getml.com](https://getml.com). For a collection of
 demo notebooks, visit [getml-demo](https://github.com/getml/getml-demo). You can also [contact
-us](https://getml.com/contact/lets-talk) for any questions or inquiries.
+us](https://www.getml.com/contact) for any questions or inquiries.
 
-____
 
 > __Note__:
 > Some components of getML have been open sourced as part of **getML community edition**. 
@@ -55,7 +54,6 @@ getml.engine.set_project('one_minute_to_getml')
 1. Load the data into the engine
 
 ```python
-
 population = getml.data.DataFrame.from_csv('data_population.csv',
             name='population_table')
 peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',
@@ -63,8 +61,7 @@ peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',
 ```
 2. Annotate the data
 
-```python
-            
+```python 
 population.set_role('target', getml.data.role.target)
 population.set_role('join_key', getml.data.role.join_key)
 ...
@@ -72,7 +69,6 @@ population.set_role('join_key', getml.data.role.join_key)
 3. Define the data model
 
 ```python
-
 dm = getml.data.DataModel(population.to_placeholder("POPULATION"))
 dm.add(peripheral.to_placeholder("PERIPHERAL"))
 dm.POPULATION.join(
@@ -82,8 +78,7 @@ dm.POPULATION.join(
 ```
 4. Train the feature learning algorithm and the predictor
 
-```python 
-
+```python
 pipe = getml.pipeline.Pipeline(
     data_model=dm,
     feature_learners=getml.feature_learning.FastProp()
@@ -98,7 +93,6 @@ pipe.fit(
 5. Evaluate
 
 ```python
-
 pipe.score(
     population=population_unseen,
     peripheral=[peripheral_unseen]
@@ -107,7 +101,6 @@ pipe.score(
 6. Predict   
 
 ```python
-
 pipe.predict(
     population=population_unseen,
     peripheral=[peripheral_unseen]
@@ -115,8 +108,7 @@ pipe.predict(
 ```
 7. Deploy
 
-```python 
-
+```python
 # Allow the pipeline to respond to HTTP requests
 pipe.deploy(True)
 ```

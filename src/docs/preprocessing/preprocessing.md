@@ -7,97 +7,102 @@ getML's preprocessors allow you to extract domains from email addresses ([`Email
 
 Here is a small example that shows the [`Seasonal`](getml/preprocessors/Seasonal) preprocessor in action.
 ```python
+import getml
 
-    >>> import getml
+getml.project.switch("seasonal")
 
-    >>> getml.project.switch("seasonal")
+traffic = getml.datasets.load_interstate94()
 
-    >>> traffic = getml.datasets.load_interstate94()
+# traffic explicitly holds seasonal components (hour, day, month, ...)
+# extracted from column ds; we copy traffic and delete all those components
+traffic2 = traffic.drop(["hour", "weekday", "day", "month", "year"])
 
-    # traffic explicitly holds seasonal components (hour, day, month, ...)
-    # extracted from column ds; we copy traffic and delete all those components
-    >>> traffic2 = traffic.drop(["hour", "weekday", "day", "month", "year"])
+start_test = getml.data.time.datetime(2018, 3, 14)
 
-    >>> start_test = getml.data.time.datetime(2018, 3, 14)
+split = getml.data.split.time(
+    population=traffic,
+    test=start_test,
+    time_stamp="ds",
+)
 
-    >>> split = getml.data.split.time(
-    ...     population=traffic,
-    ...     test=start_test,
-    ...     time_stamp="ds",
-    ... )
+time_series1 = getml.data.TimeSeries(
+    population=traffic,
+    split=split,
+    time_stamps="ds",
+    horizon=getml.data.time.hours(1),
+    memory=getml.data.time.days(7),
+    lagged_targets=True,
+)
 
-    >>> time_series1 = getml.data.TimeSeries(
-    ...     population=traffic1,
-    ...     split=split,
-    ...     time_stamps="ds",
-    ...     horizon=getml.data.time.hours(1),
-    ...     memory=getml.data.time.days(7),
-    ...     lagged_targets=True,
-    ... )
+time_series2 = getml.data.TimeSeries(
+    population=traffic2,
+    split=split,
+    time_stamps="ds",
+    horizon=getml.data.time.hours(1),
+    memory=getml.data.time.days(7),
+    lagged_targets=True,
+)
 
-    >>> time_series2 = getml.data.TimeSeries(
-    ...     population=traffic2,
-    ...     split=split,
-    ...     time_stamps="ds",
-    ...     horizon=getml.data.time.hours(1),
-    ...     memory=getml.data.time.days(7),
-    ...     lagged_targets=True,
-    ... )
+fast_prop = getml.feature_learning.FastProp(
+    loss_function=getml.feature_learning.loss_function.SquareLoss)
 
-    >>> fast_prop = getml.feature_learning.FastProp(
-    ...     loss_function=getml.feature_learning.loss_function.SquareLoss)
+pipe1 = getml.pipeline.Pipeline(
+    data_model=time_series1.data_model,
+    feature_learners=[fast_prop],
+    predictors=[getml.predictors.XGBoostRegressor()]
+)
 
-    >>> pipe1 = getml.pipeline.Pipeline(
-    ...     data_model=time_series1.data_model,
-    ...     feature_learners=[fast_prop],
-    ...     predictors=[getml.predictors.XGBoostRegressor()]
-    ... )
+pipe2 = getml.pipeline.Pipeline(
+    data_model=time_series2.data_model,
+    preprocessors=[getml.preprocessors.Seasonal()],
+    feature_learners=[fast_prop],
+    predictors=[getml.predictors.XGBoostRegressor()]
+)
 
-    >>> pipe2 = getml.pipeline.Pipeline(
-    ...     data_model=time_series2.data_model,
-    ...     preprocessors=[getml.preprocessors.Seasonal()],
-    ...     feature_learners=[fast_prop],
-    ...     predictors=[getml.predictors.XGBoostRegressor()]
-    ... )
+# pipe1 includes no preprocessor but receives the data frame with the components
+pipe1.fit(time_series1.train)
 
-    # pipe1 includes no preprocessor but receives the data frame with the components
-    >>> pipe1.fit(time_series1.train)
+# pipe2 includes the preprocessor; receives data w/o components
+pipe2.fit(time_series2.train)
 
-    # pipe2 includes the preprocessor; receives data w/o components
-    >>> pipe2.fit(time_series2.train)
+month_based1 = pipe1.features.filter(lambda feat: "month" in feat.sql)
+month_based2 = pipe2.features.filter(
+    lambda feat: "COUNT( DISTINCT t2.\"strftime('%m'" in feat.sql
+)
 
-    >>> month_based1 = pipe1.features.filter(lambda feat: "month" in feat.sql)
-    >>> month_based2 = pipe2.features.filter(
-    ...     lambda feat: "COUNT( DISTINCT t2.\"strftime('%m'" in feat.sql
-    ... )
+print(month_based1[1].sql)
+# Output:
+# DROP TABLE IF EXISTS "FEATURE_1_10";
+# 
+# CREATE TABLE "FEATURE_1_10" AS
+# SELECT COUNT( t2."month"  ) - COUNT( DISTINCT t2."month" ) AS "feature_1_10",
+#     t1.rowid AS "rownum"
+# FROM "POPULATION__STAGING_TABLE_1" t1
+# LEFT JOIN "POPULATION__STAGING_TABLE_2" t2
+# ON 1 = 1
+# WHERE t2."ds, '+1.000000 hours'" <= t1."ds"
+# AND ( t2."ds, '+7.041667 days'" > t1."ds" OR t2."ds, '+7.041667 days'" IS NULL )
+# GROUP BY t1.rowid;
 
-    >>> month_based1[1].sql
-    DROP TABLE IF EXISTS "FEATURE_1_10";
-
-    CREATE TABLE "FEATURE_1_10" AS
-    SELECT COUNT( t2."month"  ) - COUNT( DISTINCT t2."month" ) AS "feature_1_10",
-        t1.rowid AS "rownum"
-    FROM "POPULATION__STAGING_TABLE_1" t1
-    LEFT JOIN "POPULATION__STAGING_TABLE_2" t2
-    ON 1 = 1
-    WHERE t2."ds, '+1.000000 hours'" <= t1."ds"
-    AND ( t2."ds, '+7.041667 days'" > t1."ds" OR t2."ds, '+7.041667 days'" IS NULL )
-    GROUP BY t1.rowid;
-
-    >>> month_based2[0].sql
-    DROP TABLE IF EXISTS "FEATURE_1_5";
-
-    CREATE TABLE "FEATURE_1_5" AS
-    SELECT COUNT( t2."strftime('%m', ds )"  ) - COUNT( DISTINCT t2."strftime('%m', ds )" ) AS "feature_1_5",
-        t1.rowid AS "rownum"
-    FROM "POPULATION__STAGING_TABLE_1" t1
-    LEFT JOIN "POPULATION__STAGING_TABLE_2" t2
-    ON 1 = 1
-    WHERE t2."ds, '+1.000000 hours'" <= t1."ds"
-    AND ( t2."ds, '+7.041667 days'" > t1."ds" OR t2."ds, '+7.041667 days'" IS NULL )
-    GROUP BY t1.rowid;
+print(month_based2[0].sql)
+# Output:
+# DROP TABLE IF EXISTS "FEATURE_1_5";
+# 
+# CREATE TABLE "FEATURE_1_5" AS
+# SELECT COUNT( t2."strftime('%m', ds )"  ) - COUNT( DISTINCT t2."strftime('%m', ds )" ) AS "feature_1_5",
+#     t1.rowid AS "rownum"
+# FROM "POPULATION__STAGING_TABLE_1" t1
+# LEFT JOIN "POPULATION__STAGING_TABLE_2" t2
+# ON 1 = 1
+# WHERE t2."ds, '+1.000000 hours'" <= t1."ds"
+# AND ( t2."ds, '+7.041667 days'" > t1."ds" OR t2."ds, '+7.041667 days'" IS NULL )
+# GROUP BY t1.rowid;
 ```
+
+
 If you compare both of the features above, you will notice they are exactly the same: `COUNT - COUNT(DISTINCT)` on the month component conditional on the time-based restrictions introduced through memory and horizon.
+
+Pipelines can include more than one preprocessor.
 
 While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: [`Mapping`](getml/preprocessors/Mapping) and [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter).
 [](){#preprocessing_mappings}

@@ -47,12 +47,12 @@ You will need to set the following parameters:
 
 You can now connect getML to the database:
 
-```plaintext
-    getml.database.connect_odbc(
-        server_name="ANY-NAME-YOU-WANT",
-        user="YOUR-USERNAME",
-        password="YOUR-PASSWORD",
-        escape_chars="[]")
+```python
+getml.database.connect_odbc(
+    server_name="ANY-NAME-YOU-WANT",
+    user="YOUR-USERNAME",
+    password="YOUR-PASSWORD",
+    escape_chars="[]")
 ```
 
 ## Important: Always pass *escape_chars*

@@ -125,7 +125,7 @@ Even if your data source is type safe, setting roles is still a good idea becaus
 [](){#annotating_data_join_keys}
 ## Join key
 
-Join keys are required to establish a relation between two [`DataFrame`](getml/data/DataFrame) objects. Please refer to the [data models][data_model]for details.
+Join keys are required to establish a relation between two [`DataFrame`](getml/data/DataFrame) objects. Please refer to the [data models][data_model] for details.
 
 The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.
 
