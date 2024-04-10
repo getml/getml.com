@@ -5,7 +5,6 @@ Defining the data model is a crucial step before training one of getML's [`Pipel
 
 When working with getML, the raw data usually comes in the form of relational data. That means the information relevant for a prediction is spread over several tables. The data model is the definition of the relationships between all of them.
 
-> __Note__: If you are not sure what relational data is, check out our [blog post](https://go.getml.com/resources/relational-data-for-dummies) on this topic.
 
 Most relational machine learning problems can be represented in the form of a star schema, in which case you can use the [`StarSchema`](getml/data/StarSchema) abstraction. If your data set is a time series, you can use the [`TimeSeries`](getml/data/TimeSeries) abstraction.
 [](){#data_model_tables}
