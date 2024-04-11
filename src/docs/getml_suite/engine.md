@@ -7,7 +7,7 @@
 
 The getML engine is a standalone program written in C++ that does the actual work of feature engineering and prediction.
 
-[](){#engine_start_engine}
+[](){#engine-start-engine}
 ## Starting the engine
 
 The engine can be started using the dedicated launcher icon or by using the getML command line interface (CLI). For more information, check out the [installation instructions](#installation) for your operating system.

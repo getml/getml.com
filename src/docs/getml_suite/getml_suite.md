@@ -4,7 +4,7 @@ The getML software consists of three fundamental components:
 
 - [Engine][engine]
 - [Monitor][monitor]
-- [Python API][python_api]
+- [Python API][python-api]
 
 The **getML engine** is written in C++ and is the heart of the getML suite. It holds all data, is responsible for the feature engineering and the machine learning (ML) part, and does all the heavy lifting.
 

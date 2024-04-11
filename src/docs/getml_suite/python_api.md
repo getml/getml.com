@@ -1,4 +1,4 @@
-[](){#python_api}
+[](){#python-api}
 # The getML Python API
 
 The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from [getml.com](https://getml.com) (see [Installation](importing_data)).
@@ -9,7 +9,7 @@ The most important thing you have to keep in mind when working with the Python A
 
 In addition, two basic requirements need to be fulfilled to successfully use the API:
 
-1. You need a running getML engine (on the same host as your Python session) (see [starting the engine][engine_start_engine])
+1. You need a running getML engine (on the same host as your Python session) (see [starting the engine][engine-start-engine])
 2. You need to set a project in the getML engine using `getml.engine.set_project`.
 
    ```python
@@ -24,18 +24,18 @@ The getML Python API automatically connects to the engine with every command you
 
 ## Session management
 
-You can set the current project (see [Managing projects][project_management]) using [`set_project()`](getml/engine/set_project). If no project matches the supplied name, a new one will be created. To get a list of all available projects in your engine, you can use [`list_projects()`](getml/engine/list_projects) and to remove an entire project, you can use [`delete_project()`](getml/engine/delete_project).
-[](){#python_api_lifecycles}
+You can set the current project (see [Managing projects][project-management]) using [`set_project()`](getml/engine/set_project). If no project matches the supplied name, a new one will be created. To get a list of all available projects in your engine, you can use [`list_projects()`](getml/engine/list_projects) and to remove an entire project, you can use [`delete_project()`](getml/engine/delete_project).
+[](){#python-api-lifecycles}
 ## Lifecycles and synchronization between engine and API
 
 The most important objects are the following:
 
 - Data frames ([`DataFrame`](getml/data/DataFrame)), which act as a container for all your data.
 - Pipelines ([`Pipeline`](getml/pipeline/Pipeline)), which hold the trained states of the algorithms.
-[](){#lifecycle_dataframe}
+[](){#lifecycle-dataframe}
 ### Lifecycle of a [`DataFrame`](getml/data/DataFrame)
 
-You can create a [`DataFrame`](getml/data/DataFrame) by calling one of the class methods: `from_csv()`, `from_db()`, `from_json()`, or `from_pandas()`. These create a data frame object in the getML engine, import the provided data, and return a handler to the object as a [`DataFrame`](getml/data/DataFrame) in the Python API (see [Importing data][importing_data]).
+You can create a [`DataFrame`](getml/data/DataFrame) by calling one of the class methods: `from_csv()`, `from_db()`, `from_json()`, or `from_pandas()`. These create a data frame object in the getML engine, import the provided data, and return a handler to the object as a [`DataFrame`](getml/data/DataFrame) in the Python API (see [Importing data][importing-data]).
 
 When you apply any method, like `add()`, the changes will be automatically reflected in both the engine and Python. Under the hood, the Python API sends a command to create a new column to the getML engine. The moment the engine is done, it informs the Python API and the latter triggers the `refresh()` method to update the Python handler.
 

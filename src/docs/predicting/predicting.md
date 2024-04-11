@@ -1,7 +1,7 @@
 [](){#predicting}
 # Predicting
 
-Now that you know how to [engineer a flat table of features][feature_engineering], you are ready to make predictions of the [target variable(s)][annotating_data_target].
+Now that you know how to [engineer a flat table of features][feature-engineering], you are ready to make predictions of the [target variable(s)][annotating-data-target].
 
 ## Using getML
 
@@ -67,6 +67,6 @@ To use a trained model, including both the trained features and the predictor, t
 
 ## Using external software
 
-In our experience, the most relevant contribution to making accurate predictions are the generated features. Before trying to tweak your analysis by using sophisticated prediction algorithms and tuning their hyperparameters, we recommend tuning the hyperparameters of your [`Multirel`](getml/feature_learning/Multirel) or [`Relboost`](getml/feature_learning/Relboost) instead. You can do so either by hand or using getML's automated [hyperparameter optimization][hyperparamter_optimization].
+In our experience, the most relevant contribution to making accurate predictions are the generated features. Before trying to tweak your analysis by using sophisticated prediction algorithms and tuning their hyperparameters, we recommend tuning the hyperparameters of your [`Multirel`](getml/feature_learning/Multirel) or [`Relboost`](getml/feature_learning/Relboost) instead. You can do so either by hand or using getML's automated [hyperparameter optimization][hyperparamter-optimization].
 
 If you wish to use external predictors, you can transform new data, which is compliant with your relational data model, to a flat feature table using the `transform()` method of your pipeline.

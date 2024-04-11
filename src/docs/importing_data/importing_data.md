@@ -1,17 +1,17 @@
-[](){#importing_data}
+[](){#importing-data}
 # Importing data
 
 Before being able to analyze and process your data using the getML software,
 you have to import it into the engine. At the end of this step, you will have
 your data in data frame objects in the getML engine and will be ready to
-[annotate them][annotating_data].
+[annotate them][annotating-data].
 
 > __Note__:
 > 
 > If you have imported your data into the engine before and want to restore it,
-> refer to [Lifecycle of DataFrame][lifecycle_dataframe]
+> refer to [Lifecycle of DataFrame][lifecycle-dataframe]
 >
-[](){#importing_data_unified_interface}
+[](){#importing-data-unified-interface}
 ## Unified import interface
 
 The getML Python API provides a unified import interface requiring
@@ -69,10 +69,10 @@ unique within the data frame they are associated with.
 Unfortunately, data sources often 
 contain missing or corrupt data - also called NULL
 values. getML is able to work with missing values except for the
-[target variable][annotating_data_target], which must not
+[target variable][annotating-data-target], which must not
 contain any NULL values (because having NULL targets does not
 make any sense). Please refer to the section on 
-[join keys][annotating_data_join_keys] for
+[join keys][annotating-data-join-keys] for
 details about their handling during the construction of the data
 model.
 

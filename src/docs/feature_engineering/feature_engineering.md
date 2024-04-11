@@ -1,4 +1,4 @@
-[](){#feature_engineering}
+[](){#feature-engineering}
 # Feature engineering
 
 The deep learning revolution has enabled automated feature engineering for
@@ -60,7 +60,7 @@ getML provides a framework capable of automatically extracting useful and
 meaningful features from a relational data model by finding the best merge and
 aggregate operations. In fact, the relationships between the target and the
 original data is *learned* through one of [getML's feature learning
-algorithms][feature_learning_algorithms].
+algorithms][feature-engineering-algorithms].
 
 ## Design principles
 
@@ -68,15 +68,15 @@ The general procedure for feature learning on relational data and time
 series using getML looks like this:
 
 The only required input is a [relational data
-schema][data_model_data_schemata]. In particular, there needs to be
-some sort of [target variable(s)][annotating_data_target],
+schema][data-model-data-schemata]. In particular, there needs to be
+some sort of [target variable(s)][annotating-data-target],
 which shall be predicted. For time series, the schema would
 typically be a
-[self-join][data_model_self_join]. In addition to
+[self-join][data-model-self-join]. In addition to
 this general information on the data schema, the intended usage of
 the variables has to be provided by setting the
-[roles][annotating_data_roles] of the corresponding columns. How to
-setup a data scheme is described in [data model][data_model].
+[roles][annotating-data-roles] of the corresponding columns. How to
+setup a data scheme is described in [data model][data-model].
 
 - Features are often of the type (illustrated in pseudo SQL-like
 syntax):
@@ -104,7 +104,7 @@ condition_2 ) OR ( condition_3 AND condition_4 ) OR condition_5
 will be engineered automatically as well. Again, no input from the user is required.
 
 To increase transparency relating to the created features, they can be expressed in SQL code. Even though automatically generated features will always be less intuitive than hand-crafted ones and could be quite complex, we want the user to get an understanding of what is going on.
-[](){#feature_learning_algorithms}
+[](){#feature-engineering-algorithms}
 ## Algorithms
 
 getML contains four powerful feature learning algorithms: [`FastProp`](getml/feature_learning/FastProp), [`Multirel`](getml/feature_learning/Multirel), [`Relboost`](getml/feature_learning/Relboost) and [`RelMT`](getml/feature_learning/RelMT).
@@ -128,7 +128,7 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-You may notice that such a feature looks pretty similar to the [Multirel feature][feature_engineering_multirel_feature] below. And indeed, FastProp shares some of its [aggregations](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing_mappings].
+You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [aggregations](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
 
 ### Multirel
 
@@ -163,7 +163,7 @@ COUNT the number of `transactions` in the last 91 `days`
 
 very little changes in between. Multirel only recalculates what has changed and keeps everything else untouched. Therefore, it needs two ingredients that can be incrementally updated: An objective function and the actual aggregation(s).
 
-Our first ingredient is an objective function that must be suited for incremental updates. When we move from 90 to 91 days, presumably only very few lines in the [population table][data_model_population_table] actually change. We do not need to recalculate the entire table. In practice, most commonly used objective functions are fine and this is not much of a limitation. However, there are some, like rank correlation, that cannot be used.
+Our first ingredient is an objective function that must be suited for incremental updates. When we move from 90 to 91 days, presumably only very few lines in the [population table][data-model-population-table] actually change. We do not need to recalculate the entire table. In practice, most commonly used objective functions are fine and this is not much of a limitation. However, there are some, like rank correlation, that cannot be used.
 
 The second ingredient, the aggregations, must allow for incremental updates too. This part is a bit harder, so let us elaborate: Let’s say we have a match between the population table that contains our targets and another table (or a self-join). This match happens to be between the two thresholds 90 and 91 days. As we move from 90 to 91 days, we have to update our aggregation for that match. For maximum efficiency, this needs also to be done incrementally. That means we do not want to recalculate the entire aggregation for all matches that it aggregates - instead just for the one match in between the two thresholds.
 
@@ -181,7 +181,7 @@ With gradient boosting, we calculate the pseudo-residuals of our previously trai
 
 Transpiled to SQL, a typical feature generated by Multirel looks like this:
 
-[](){#feature_engineering_multirel_feature}
+[](){#feature-engineering-multirel-feature}
 
 ```sql
 CREATE TABLE FEATURE_1 AS
@@ -219,11 +219,11 @@ Relboost offers a way out of this dilemma: Because Relboost aggregates learnable
 
 This might seem very theoretical, but it has considerable implications: From our experience with real-world data in various projects, we know that Relboost usually outperforms Multirel in terms of predictive accuracy *and* training time.
 
-However, these advantages come at a price: First, the features generated by Relboost are less intuitive. They are further away from what you might write by hand, even though they can still be expressed as SQL code. Second, it is more difficult to apply Relboost to [multiple targets][annotating_data_target], because Relboost has to learn separate rules and weights for each target.
+However, these advantages come at a price: First, the features generated by Relboost are less intuitive. They are further away from what you might write by hand, even though they can still be expressed as SQL code. Second, it is more difficult to apply Relboost to [multiple targets][annotating-data-target], because Relboost has to learn separate rules and weights for each target.
 
 Expressed as SQL code, a typical feature generated by Relboost looks like this:
 
-[](){#relboost_feature}
+[](){#feature-engineering-relboost-feature}
 
 ```sql
 CREATE TABLE FEATURE_1 AS
@@ -284,4 +284,4 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-RelMT features share some characteristics with Relboost features: Compare the example feature to the [Relboost feature][relboost_feature] above. Both algorithms generate splits based on a combination of conditions (the `WHEN` part of the `CASE WHEN` statement above). But while Relboost learns weights for its leaves (the `THEN` part of the `CASE WHEN` statement), RelMT learns a linear model, allowing for linear combinations between columns from the population table and columns of a certain peripheral table.
+RelMT features share some characteristics with Relboost features: Compare the example feature to the [Relboost feature][feature-engineering-relboost-feature] above. Both algorithms generate splits based on a combination of conditions (the `WHEN` part of the `CASE WHEN` statement above). But while Relboost learns weights for its leaves (the `THEN` part of the `CASE WHEN` statement), RelMT learns a linear model, allowing for linear combinations between columns from the population table and columns of a certain peripheral table.

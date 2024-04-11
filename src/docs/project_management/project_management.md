@@ -1,4 +1,4 @@
-[](){#project_management}
+[](){#project-management}
 # Managing projects
 
 When working with getML, all data is bundled into *projects.* getML's projects are managed through the `getml.project` module.
@@ -8,7 +8,7 @@ Each project is tied to a specific instance of the [getML engine][engine] runnin
 
 To load an existing project or create a new one, you can do so from the 'Projects' view in the monitor or use the API (`getml.engine.set_project()`).
 
-If you want to shut down the engine process associated with the current project, you can call `getml.project.suspend()`. When you suspend the project, the memory of the engine is flushed and all unsaved changes to the data frames are lost (see [lifecycles and synchronization between engine and API][python_api_lifecycles] for details). All pipelines of the new project are automatically loaded into memory. You can retrieve all of your project's pipelines through `getml.project.pipelines`.
+If you want to shut down the engine process associated with the current project, you can call `getml.project.suspend()`. When you suspend the project, the memory of the engine is flushed and all unsaved changes to the data frames are lost (see [lifecycles and synchronization between engine and API][python-api-lifecycles] for details). All pipelines of the new project are automatically loaded into memory. You can retrieve all of your project's pipelines through `getml.project.pipelines`.
 
 Projects can be deleted by clicking the trash can icon in the 'Projects' tab of the getML monitor or by calling `getml.engine.delete_project()` (to delete a project by name) or `getml.project.delete()` (to suspend and delete the project currently loaded).
 
