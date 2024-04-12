@@ -85,20 +85,19 @@ You can also use the [`TimeSeries`](getml/data/TimeSeries) abstraction, which ab
   
 Crucial concepts of time series analysis are horizon and memory. In the context of getML's time series analysis, horizon is defined as a point forecast. That means the prediction of the target variable at the point as far in the future as defined by the horizon.   
   
-Memory, on the other hand is the time duration into the past, that is considered when making a prediction. The memory is used to define the time window of data entering the model between the past and 'now'. The horizon defines the point in the future that the predictions is being made for.   
+Memory, on the other hand is the time duration into the past, that is considered when making a prediction. The memory is used to define the time window of data entering the model between the past and _now_. The horizon defines the point in the future that the predictions is being made for.   
   
-### 'time_stamp' and 'on'  
+### `time_stamp` and `on`  
   
-Two parameters in the time series signature determine how the self join is carried out. The 'time_stamp' parameter defines what column is the underlying time dimension to which memory and horizon are applied to. The chosen column must also be of role [time_stamp][annotating-data-time-stamp].  
+Two parameters in the time series signature determine how the self join is carried out. The `time_stamp` parameter defines what column is the underlying time dimension to which memory and horizon are applied to. The chosen column must also be of role [time_stamp][annotating-data-time-stamp].  
   
-'on' simply provides an extra handle to control, what subset of the data is part of any given time series. For example if you have a time series of sales data, you might want to only consider the sales data of a certain product category. In this case you would specify the 'on' parameter to be the column containing the product category.
+`on` simply provides an extra handle to control, what subset of the data is part of any given time series. For example if you have a time series of sales data, you might want to only consider the sales data of a certain product category. In this case you would specify the `on` parameter to be the column containing the product category.
 
->__Tip__
-> 
->If you assign a column to the 'on' parameter, then this column will not enter the model as a predictor. If you have reason to believe that this column is relevant to the model (i.e. the actual product category), duplicate that column in advance and assign the duplicate to the 'on' parameter. 
-  
+!!! note "Tip"
+    If you assign a column to the `on` parameter, then this column will not enter the model as a predictor. If you have reason to believe that this column is relevant to the model (i.e. the actual product category), duplicate that column in advance and assign the duplicate to the `on` parameter. (see class method [`add()`](getml.data.DataFrame.add))
+
 ### Lagged Target and horizon  
-Another useful parameter in time series analysis is 'lagged_target'. This boolean controls whether the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until and including 'now' is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.
+Another useful parameter in time series analysis is `lagged_target`. This boolean controls whether the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until and including _now_ is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.
 
 ### Features based on time stamps
 
