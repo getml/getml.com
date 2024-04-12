@@ -87,9 +87,9 @@ Crucial concepts of time series analysis are horizon and memory. In the context 
   
 Memory, on the other hand is the time duration into the past, that is considered when making a prediction. The memory is used to define the time window of data entering the model between the past and _now_. The horizon defines the point in the future that the predictions is being made for.   
   
-### `time_stamp` and `on`  
+### `time_stamps` and `on`  
   
-Two parameters in the time series signature determine how the self join is carried out. The `time_stamp` parameter defines what column is the underlying time dimension to which memory and horizon are applied to. The chosen column must also be of role [time_stamp][annotating-data-time-stamp].  
+Two parameters in the time series signature determine how the self join is carried out. The `time_stamps` parameter defines what column is the underlying time dimension to which memory and horizon are applied to. The chosen column must also be of role [time_stamp][annotating-data-time-stamp].  
   
 `on` simply provides an extra handle to control, what subset of the data is part of any given time series. For example if you have a time series of sales data, you might want to only consider the sales data of a certain product category. In this case you would specify the `on` parameter to be the column containing the product category.
 
