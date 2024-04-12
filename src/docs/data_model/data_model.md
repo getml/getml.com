@@ -95,10 +95,10 @@ Two parameters in the time series signature determine how the self join is carri
 
 >__Tip__
 > 
->If you use assign a column to the 'on' parameter, then this column will not enter the model as a predictor. If you have reason to believe that this column is relevant to model (i.e. the actual product category), duplicate that column in advance and assign the duplicate to the 'on' parameter. 
+>If you assign a column to the 'on' parameter, then this column will not enter the model as a predictor. If you have reason to believe that this column is relevant to the model (i.e. the actual product category), duplicate that column in advance and assign the duplicate to the 'on' parameter. 
   
 ### Lagged Target and horizon  
-Another useful parameter in time series analysis is 'lagged_target'. This boolean controls whether or no the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until 'now' is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.
+Another useful parameter in time series analysis is 'lagged_target'. This boolean controls whether the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until and including 'now' is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.
 
 ### Features based on time stamps
 
