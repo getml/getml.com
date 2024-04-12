@@ -6,12 +6,12 @@ general information about getML visit [getml.com](https://getml.com). For a coll
 demo notebooks, visit [getml-demo](https://github.com/getml/getml-demo). You can also [contact
 us](https://www.getml.com/contact) for any questions or inquiries.
 
+!!! note 
 
-> __Note__:
-> Some components of getML have been open sourced as part of **getML community edition**. 
-> You may have a look at 
-> [community vs enterprise edition table](home/getting_started/getting_started#community-vs-enterprise-edition)
-> to see the highlights of both the editions. 
+    Some components of getML have been open sourced as part of **getML community edition**.  You may have a look at 
+    [community vs enterprise edition table](home/getting_started/getting_started#community-vs-enterprise-edition)
+    to see the highlights of both the editions. 
+
 
 ## getML in one minute 
 

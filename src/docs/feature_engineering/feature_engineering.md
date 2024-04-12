@@ -39,13 +39,14 @@ In any case it is a tedious, time-consuming, and error-prone process. Manual
 feature engineering is often done by writing scripts in languages like Python,
 R, or SQL.
 
-> __Note__:
-> 
-> Unfortunately, the term feature engineering is ambiguous. More often than
-> not, feature engineering is meant to describe numerical transformations or
-> encoding techniques on a **single** table. The definition used above
-> assumes that the raw data comes in relational form, which is true for
-> almost all real-world data sets.
+!!! note
+
+    Unfortunately, the term feature engineering is ambiguous. More often than
+    not, feature engineering is meant to describe numerical transformations or
+    encoding techniques on a **single** table. The definition used above
+    assumes that the raw data comes in relational form, which is true for
+    almost all real-world data sets.
+
 
 ## Feature learning vs. propositionalization
 
@@ -78,13 +79,12 @@ the variables has to be provided by setting the
 [roles][annotating-data-roles] of the corresponding columns. How to
 setup a data scheme is described in [data model][data-model].
 
-- Features are often of the type (illustrated in pseudo SQL-like
+Features are often of the type (illustrated in pseudo SQL-like
 syntax):
 ```sql
 COUNT the number of `transactions` within the last X `days`
 ```
-
-where `X` is some sort of fixed numerical value. getML's algorithms do identify appropriate values for `X` automatically and there is no need for you to provide them by hand.
+where $X$ is some sort of fixed numerical value. getML's algorithms do identify appropriate values for $X$ automatically and there is no need for you to provide them by hand.
 
 Features can also take the form of:
 
@@ -147,7 +147,7 @@ The main problem with trying to implement something like this on top of an exist
 ```sql
 COUNT the number of `transactions` in the last X `days`
 ```
-As we iterate through different values for the threshold `X`, we are forced to repeat the same operations on the same data over and over again. Tasks like this bring traditional database engines to their knees.
+As we iterate through different values for the threshold $X$, we are forced to repeat the same operations on the same data over and over again. Tasks like this bring traditional database engines to their knees.
 
 The core idea of getML's Multirel algorithm is to minimize redundancies through `incremental updates`. To allow for incremental updates and maximal efficiency, we developed a database engine from scratch in C++. When we evaluate a feature like:
 
@@ -211,11 +211,11 @@ Further information can be found in the API documentation for [`Multirel`](getml
 
 The main difference between Relboost and Multirel is that Multirel aggregates columns, whereas Relboost aggregates *learnable weights*.
 
-Relboost addresses a problem with Multirel that is related to computational complexity theory: In Multirel, every column can be aggregated and/or used for generating a condition. That means that the number of possible features is \\(\mathcal{O}(n^2)\\) in the number of columns in the original tables. As a result, having twice as many columns will lead to a search space that is four times as large (in reality, it is a bit more complicated than that, but the basic point is true).
+Relboost addresses a problem with Multirel that is related to computational complexity theory: In Multirel, every column can be aggregated and/or used for generating a condition. That means that the number of possible features is $\mathcal{O}(n^2)$ in the number of columns in the original tables. As a result, having twice as many columns will lead to a search space that is four times as large (in reality, it is a bit more complicated than that, but the basic point is true).
 
-Any computer scientist or applied mathematician will tell you that \\(\mathcal{O}(n^2)\\) is a problem. If you have tables with many columns, it might turn out to be a problem. Of course, this issue is not specific to Multirel: It is a very fundamental problem that you would also have, if you were to write your features by hand or use brute force.
+Any computer scientist or applied mathematician will tell you that $\mathcal{O}(n^2)$ is a problem. If you have tables with many columns, it might turn out to be a problem. Of course, this issue is not specific to Multirel: It is a very fundamental problem that you would also have, if you were to write your features by hand or use brute force.
 
-Relboost offers a way out of this dilemma: Because Relboost aggregates learnable weights and columns will only be used for conditions, but not for aggregation. So, now the search space is \\(\mathcal{O}(n)\\) in the number of columns in the original tables - much better.
+Relboost offers a way out of this dilemma: Because Relboost aggregates learnable weights and columns will only be used for conditions, but not for aggregation. So, now the search space is $\mathcal{O}(n)$ in the number of columns in the original tables - much better.
 
 This might seem very theoretical, but it has considerable implications: From our experience with real-world data in various projects, we know that Relboost usually outperforms Multirel in terms of predictive accuracy *and* training time.
 

@@ -185,25 +185,26 @@ If none of the formats works, the getML engine will try to interpret
 the time stamps as numerical values. If this fails, the time stamp will be set
 to NULL.
 ```python
->>> data_df = dict(
-... date1=[getml.data.time.days(365), getml.data.time.days(366), getml.data.time.days(367)],
-... date2=['1971-01-01', '1971-01-02', '1971-01-03'],
-... date3=['1|1|71', '1|2|71', '1|3|71'],
+data_df = dict(
+date1=[getml.data.time.days(365), getml.data.time.days(366), getml.data.time.days(367)],
+date2=['1971-01-01', '1971-01-02', '1971-01-03'],
+date3=['1|1|71', '1|2|71', '1|3|71'],
 )
->>> df = getml.data.DataFrame.from_dict(data_df, name='dates')
->>> df.set_role(['date1', 'date2', 'date3'], getml.data.roles.time_stamp, time_formats=['%Y-%m-%d', '%n|%e|%y'])
->>> df
-| date1                       | date2                       | date3                       |
-| time stamp                  | time stamp                  | time stamp                  |
--------------------------------------------------------------------------------------------
-| 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z |
-| 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z |
-| 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z |
+df = getml.data.DataFrame.from_dict(data_df, name='dates')
+df.set_role(['date1', 'date2', 'date3'], getml.data.roles.time_stamp, time_formats=['%Y-%m-%d', '%n|%e|%y'])
+df
+# | date1                       | date2                       | date3                       |
+# | time stamp                  | time stamp                  | time stamp                  |
+# -------------------------------------------------------------------------------------------
+# | 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z |
+# | 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z |
+# | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z |
 ```
-> __Note__:
-> 
-> getML time stamps are actually floats expressing the number of seconds since
-> UNIX time (1970-01-01T00:00:00).
+!!! note 
+
+    getML time stamps are actually floats expressing the number of seconds since 
+    UNIX time (1970-01-01T00:00:00).
+
 
 [](){#annotating-data-target}
 ## Target
@@ -256,10 +257,10 @@ you have to explicitly set a unit.
 
 
 ```sql
-    ...
-    WHERE numerical_column1 - numerical_column2 > some_value
-    OR categorical_column1 != categorical_column2
-    ...
+...
+WHERE numerical_column1 - numerical_column2 > some_value
+OR categorical_column1 != categorical_column2
+...
 
 ```
 Using [`set_unit()`](getml/data/DataFrame/set_unit) you can set the *unit* of
@@ -272,8 +273,11 @@ not a comparison with fixed values is useful. To cope with this problem,
 you can set the `comparison_only` flag in
 [`set_unit()`](getml/data/DataFrame/set_unit).
 
-> __Note__:
-> 
-> Note that time stamps are used for comparison only by default. The feature 
-> learning algorithm will not compare them to a fixed date, because
-> it is very unlikely that such a feature would perform well out-of-sample.
+!!! note
+
+    Note that time stamps are used for comparison only by default. The feature 
+    learning algorithm will not compare them to a fixed date, because
+    it is very unlikely that such a feature would perform well out-of-sample.
+
+
+
