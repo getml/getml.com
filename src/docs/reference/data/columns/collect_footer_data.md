@@ -1,0 +1,1 @@
+::: data.columns.collect_footer_data

@@ -1,0 +1,1 @@
+::: data.star_schema

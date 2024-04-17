@@ -1,0 +1,7 @@
+site_name: My Docs
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - gen_pages.py
