@@ -16,9 +16,11 @@ The HTTP port can only be accessed from within the host the getML suite is runni
 
 The main purpose of the monitor is to help you with your data science project by providing visual feedback.
 
-> __Note__:
-> If you experience any issues opening the monitor, try any of these steps:
-> 
-> - Manually shutdown the engine and restart it: `getml.engine.shutdown()` and `getml.engine.launch()`
-> - Kill the associated background process in the terminal and restart the engine
-> - Close all tabs and windows in which the monitor ran previously and try again
+!!! note "Tip"
+    
+    If you experience any issues opening the monitor, try any of these steps:
+    
+    - Manually shutdown the engine and restart it: `getml.engine.shutdown()` and `getml.engine.launch()`
+    - Kill the associated background process in the terminal and restart the engine
+    - Close all tabs and windows in which the monitor ran previously and try again
+

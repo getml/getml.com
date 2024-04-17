@@ -5,17 +5,17 @@ The getML Python API is shipped along with the matching version of the getML eng
 
 The most important thing you have to keep in mind when working with the Python API is this:
 
-**All classes in the Python API are just handles to objects living in the getML engine.**
+&nbsp;&nbsp;&nbsp;&nbsp;All classes in the Python API are just handles to objects living in the getML engine.
 
 In addition, two basic requirements need to be fulfilled to successfully use the API:
 
 1. You need a running getML engine (on the same host as your Python session) (see [starting the engine][engine-start-engine])
 2. You need to set a project in the getML engine using `getml.engine.set_project`.
 
-   ```python
-   import getml
-   getml.engine.set_project('test')
-    ```
+```python
+import getml
+getml.engine.set_project('test')
+```
 This section provides some general information about the API and how it interacts with the engine. For an in-depth read about its individual classes, check out the [Python API documentation](python_api).
 
 ## Connecting to the getML engine

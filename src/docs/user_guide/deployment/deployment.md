@@ -32,9 +32,9 @@ As soon as you have trained a pipeline, whitelisted it for external access using
 
 To each of them, you must send a POST request containing the new data as a JSON string in a specific [request format][deployment-request-format].
 
-> __Note__:  
-> For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is
-   http://localhost:1709/predict/PIPELINE_NAME
+!!! note
+
+    For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  [http://localhost:1709/predict/PIPELINE_NAME](http://localhost:1709/predict/PIPELINE_NAME)
 
 [](){#deployment-request-format}
 ## Request Format
@@ -156,7 +156,7 @@ by passing an arbitrary query to the `query` key:
 
 The transform endpoint returns the generated features.
 
-http://localhost:1709/transform/PIPELINE_NAME
+[http://localhost:1709/transform/PIPELINE_NAME](http://localhost:1709/transform/PIPELINE_NAME)
 
 Such an HTTP request can be sent in many languages. For
 illustration purposes, we will use the command line tool `curl`,
@@ -177,7 +177,7 @@ When using getML as an end-to-end data science pipeline, you can use
 the predict endpoint to upload new, unseen data and receive the
 resulting predictions as a response via HTTP.
 
-http://localhost:1709/predict/PIPELINE_NAME
+[http://localhost:1709/predict/PIPELINE_NAME](http://localhost:1709/predict/PIPELINE_NAME)
 
 Such an HTTP request can be sent in many languages. For
 illustration purposes, we will use the command line tool `curl`,

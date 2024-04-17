@@ -31,9 +31,9 @@ pipe = getml.pipeline.Pipeline(
 
 When you call `fit()` on a pipeline, the entire pipeline will be trained.
 
-
-> __Note__:
-> The time estimation for training a pipeline is a rough estimate. Occassionally, the training time can be significantly longer than the estimate. But the pipeline will never silently crash. Given enough time, computations will always finish.
+!!! Note
+    
+    The time estimation for training a pipeline is a rough estimate. Occasionally, the training time can be significantly longer than the estimate. But the pipeline never silently crashes. Given enough time, computations always finish.
 
 Note that [`Pipeline`](getml/pipeline/Pipeline) comes with dependency tracking. That means it can figure out on its own what has changed and what needs to be trained again.
 

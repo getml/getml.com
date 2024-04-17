@@ -6,11 +6,11 @@ you have to import it into the engine. At the end of this step, you will have
 your data in data frame objects in the getML engine and will be ready to
 [annotate them][annotating-data].
 
-> __Note__:
-> 
-> If you have imported your data into the engine before and want to restore it,
-> refer to [Lifecycle of DataFrame][lifecycle-dataframe]
->
+!!! note
+
+    If you have imported your data into the engine before and want to restore it,
+    refer to [Lifecycle of DataFrame][lifecycle-dataframe]
+
 [](){#importing-data-unified-interface}
 ## Unified import interface
 
