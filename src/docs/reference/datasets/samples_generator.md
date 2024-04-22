@@ -1,1 +1,1 @@
-::: datasets.samples_generator
+::: getml.datasets.samples_generator

@@ -1,1 +1,1 @@
-::: sqlite3.read_pandas
+::: getml.sqlite3.read_pandas

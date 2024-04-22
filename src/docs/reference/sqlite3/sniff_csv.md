@@ -1,1 +1,1 @@
-::: sqlite3.sniff_csv
+::: getml.sqlite3.sniff_csv

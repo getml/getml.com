@@ -1,1 +1,1 @@
-::: project.__init__
+::: getml.project

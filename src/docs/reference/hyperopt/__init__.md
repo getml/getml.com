@@ -1,1 +1,1 @@
-::: hyperopt.__init__
+::: getml.hyperopt

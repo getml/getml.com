@@ -1,12 +1,9 @@
-* [\__init__](__init__.md)
 * [communication](communication.md)
 * [constants](constants.md)
 * [cross_validation](cross_validation.md)
-* data
-    * [\__init__](data/__init__.md)
+* [data](data/__init__.md)
     * [access](data/access.md)
-    * columns
-        * [\__init__](data/columns/__init__.md)
+    * [columns](data/columns/__init__.md)
         * [aggregation](data/columns/aggregation.md)
         * [collect_footer_data](data/columns/collect_footer_data.md)
         * [column](data/columns/column.md)
@@ -41,15 +38,13 @@
     * [relationship](data/relationship.md)
     * [roles](data/roles.md)
     * [roles_obj](data/roles_obj.md)
-    * split
-        * [\__init__](data/split/__init__.md)
+    * [split](data/split/__init__.md)
         * [concat](data/split/concat.md)
         * [random](data/split/random.md)
         * [time](data/split/time.md)
     * [staging](data/staging.md)
     * [star_schema](data/star_schema.md)
-    * subroles
-        * [\__init__](data/subroles/__init__.md)
+    * [subroles](data/subroles/__init__.md)
         * [exclude](data/subroles/exclude.md)
         * [include](data/subroles/include.md)
         * [only](data/subroles/only.md)
@@ -57,8 +52,7 @@
     * [time](data/time.md)
     * [time_series](data/time_series.md)
     * [view](data/view.md)
-* database
-    * [\__init__](database/__init__.md)
+* [database](database/__init__.md)
     * [connect_bigquery](database/connect_bigquery.md)
     * [connect_greenplum](database/connect_greenplum.md)
     * [connect_hana](database/connect_hana.md)
@@ -80,16 +74,13 @@
     * [read_s3](database/read_s3.md)
     * [sniff_csv](database/sniff_csv.md)
     * [sniff_s3](database/sniff_s3.md)
-* datasets
-    * [\__init__](datasets/__init__.md)
+* [datasets](datasets/__init__.md)
     * [base](datasets/base.md)
     * [samples_generator](datasets/samples_generator.md)
-* engine
-    * [\__init__](engine/__init__.md)
+* [engine](engine/__init__.md)
     * [helpers](engine/helpers.md)
     * [launch](engine/launch.md)
-* feature_learning
-    * [\__init__](feature_learning/__init__.md)
+* [feature_learning](feature_learning/__init__.md)
     * [aggregations](feature_learning/aggregations.md)
     * [fastboost](feature_learning/fastboost.md)
     * [fastprop](feature_learning/fastprop.md)
@@ -100,8 +91,7 @@
     * [relmt](feature_learning/relmt.md)
     * [validation](feature_learning/validation.md)
 * [helpers](helpers.md)
-* hyperopt
-    * [\__init__](hyperopt/__init__.md)
+* [hyperopt](hyperopt/__init__.md)
     * [burn_in](hyperopt/burn_in.md)
     * [helpers](hyperopt/helpers.md)
     * [hyperopt](hyperopt/hyperopt.md)
@@ -111,8 +101,7 @@
     * [tuning](hyperopt/tuning.md)
     * [validation](hyperopt/validation.md)
 * [log](log.md)
-* pipeline
-    * [\__init__](pipeline/__init__.md)
+* [pipeline](pipeline/__init__.md)
     * [column](pipeline/column.md)
     * [columns](pipeline/columns.md)
     * [dialect](pipeline/dialect.md)
@@ -132,8 +121,7 @@
     * [table](pipeline/table.md)
     * [tables](pipeline/tables.md)
     * [tags](pipeline/tags.md)
-* predictors
-    * [\__init__](predictors/__init__.md)
+* [predictors](predictors/__init__.md)
     * [linear_regression](predictors/linear_regression.md)
     * [logistic_regression](predictors/logistic_regression.md)
     * [predictor](predictors/predictor.md)
@@ -141,8 +129,7 @@
     * [scale_gbm_regressor](predictors/scale_gbm_regressor.md)
     * [xgboost_classifier](predictors/xgboost_classifier.md)
     * [xgboost_regressor](predictors/xgboost_regressor.md)
-* preprocessors
-    * [\__init__](preprocessors/__init__.md)
+* [preprocessors](preprocessors/__init__.md)
     * [category_trimmer](preprocessors/category_trimmer.md)
     * [email_domain](preprocessors/email_domain.md)
     * [imputation](preprocessors/imputation.md)
@@ -153,17 +140,14 @@
     * [text_field_splitter](preprocessors/text_field_splitter.md)
     * [validate](preprocessors/validate.md)
 * [progress_bar](progress_bar.md)
-* project
-    * [\__init__](project/__init__.md)
+* [project](project/__init__.md)
     * [attrs](project/attrs.md)
-    * containers
-        * [\__init__](project/containers/__init__.md)
+    * [containers](project/containers/__init__.md)
         * [data_frames](project/containers/data_frames.md)
         * [hyperopts](project/containers/hyperopts.md)
         * [pipelines](project/containers/pipelines.md)
 * [spark](spark.md)
-* sqlite3
-    * [\__init__](sqlite3/__init__.md)
+* [sqlite3](sqlite3/__init__.md)
     * [connect](sqlite3/connect.md)
     * [contains](sqlite3/contains.md)
     * [count_above_mean](sqlite3/count_above_mean.md)
@@ -201,10 +185,8 @@
     * [trend](sqlite3/trend.md)
     * [var](sqlite3/var.md)
     * [variation_coefficient](sqlite3/variation_coefficient.md)
-* utilities
-    * [\__init__](utilities/__init__.md)
-    * formatting
-        * [\__init__](utilities/formatting/__init__.md)
+* [utilities](utilities/__init__.md)
+    * [formatting](utilities/formatting/__init__.md)
         * [cell_formatter](utilities/formatting/cell_formatter.md)
         * [column_formatter](utilities/formatting/column_formatter.md)
         * [data_frame_formatter](utilities/formatting/data_frame_formatter.md)
@@ -213,6 +195,5 @@
         * [helpers](utilities/formatting/helpers.md)
         * [signature_formatter](utilities/formatting/signature_formatter.md)
         * [view_formatter](utilities/formatting/view_formatter.md)
-    * templates
-        * [\__init__](utilities/templates/__init__.md)
+    * [templates](utilities/templates/__init__.md)
 * [version](version.md)

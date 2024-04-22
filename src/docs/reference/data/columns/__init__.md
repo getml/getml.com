@@ -1,1 +1,1 @@
-::: data.columns.__init__
+::: getml.data.columns

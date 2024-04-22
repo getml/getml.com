@@ -1,1 +1,1 @@
-::: sqlite3.ewma_trend
+::: getml.sqlite3.ewma_trend

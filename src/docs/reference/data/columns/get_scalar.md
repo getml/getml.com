@@ -1,1 +1,1 @@
-::: data.columns.get_scalar
+::: getml.data.columns.get_scalar

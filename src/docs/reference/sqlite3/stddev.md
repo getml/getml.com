@@ -1,1 +1,1 @@
-::: sqlite3.stddev
+::: getml.sqlite3.stddev

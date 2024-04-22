@@ -1,1 +1,1 @@
-::: feature_learning.fastboost
+::: getml.feature_learning.fastboost

@@ -1,1 +1,1 @@
-::: sqlite3.split_text_field
+::: getml.sqlite3.split_text_field

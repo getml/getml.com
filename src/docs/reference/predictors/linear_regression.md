@@ -1,1 +1,1 @@
-::: predictors.linear_regression
+::: getml.predictors.linear_regression

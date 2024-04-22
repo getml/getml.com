@@ -1,1 +1,1 @@
-::: predictors.predictor
+::: getml.predictors.predictor

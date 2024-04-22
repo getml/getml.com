@@ -1,1 +1,1 @@
-::: database.drop_table
+::: getml.database.drop_table

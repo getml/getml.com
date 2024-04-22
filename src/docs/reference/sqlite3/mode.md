@@ -1,1 +1,1 @@
-::: sqlite3.mode
+::: getml.sqlite3.mode

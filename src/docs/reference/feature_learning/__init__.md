@@ -1,1 +1,1 @@
-::: feature_learning.__init__
+::: getml.feature_learning

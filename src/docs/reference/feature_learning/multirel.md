@@ -1,1 +1,1 @@
-::: feature_learning.multirel
+::: getml.feature_learning.multirel

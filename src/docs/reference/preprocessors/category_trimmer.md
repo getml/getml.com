@@ -1,1 +1,1 @@
-::: preprocessors.category_trimmer
+::: getml.preprocessors.category_trimmer

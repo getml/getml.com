@@ -1,1 +1,1 @@
-::: sqlite3.sniff_pandas
+::: getml.sqlite3.sniff_pandas

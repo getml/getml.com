@@ -1,1 +1,1 @@
-::: sqlite3.num_min
+::: getml.sqlite3.num_min

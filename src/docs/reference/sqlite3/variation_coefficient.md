@@ -1,1 +1,1 @@
-::: sqlite3.variation_coefficient
+::: getml.sqlite3.variation_coefficient

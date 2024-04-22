@@ -1,1 +1,1 @@
-::: feature_learning.loss_functions
+::: getml.feature_learning.loss_functions

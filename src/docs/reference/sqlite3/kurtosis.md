@@ -1,1 +1,1 @@
-::: sqlite3.kurtosis
+::: getml.sqlite3.kurtosis

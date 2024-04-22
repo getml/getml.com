@@ -1,1 +1,1 @@
-::: feature_learning.feature_learner
+::: getml.feature_learning.feature_learner

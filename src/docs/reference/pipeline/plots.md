@@ -1,1 +1,1 @@
-::: pipeline.plots
+::: getml.pipeline.plots

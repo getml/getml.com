@@ -1,1 +1,1 @@
-::: preprocessors.seasonal
+::: getml.preprocessors.seasonal

@@ -1,1 +1,1 @@
-::: utilities.formatting.ellipsis
+::: getml.utilities.formatting.ellipsis

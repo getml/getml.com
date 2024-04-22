@@ -1,1 +1,1 @@
-::: predictors.scale_gbm_classifier
+::: getml.predictors.scale_gbm_classifier

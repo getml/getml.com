@@ -1,1 +1,1 @@
-::: data.diagram
+::: getml.data.diagram

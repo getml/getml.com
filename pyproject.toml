@@ -21,7 +21,9 @@ dependencies = [
   "ruff>=0.2.0",
   "ruff-lsp",
   "getml",
-  "mkdocs-gen-files"
+  "mkdocs-gen-files",
+  "mkdocstrings[python-legacy]>=0.18",
+  "docstring-to-markdown"
 ]
 python = "3.11"
 

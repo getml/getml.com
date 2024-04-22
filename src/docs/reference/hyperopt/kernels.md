@@ -1,1 +1,1 @@
-::: hyperopt.kernels
+::: getml.hyperopt.kernels

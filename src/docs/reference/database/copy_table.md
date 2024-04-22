@@ -1,1 +1,1 @@
-::: database.copy_table
+::: getml.database.copy_table

@@ -1,1 +1,1 @@
-::: sqlite3.quantiles
+::: getml.sqlite3.quantiles

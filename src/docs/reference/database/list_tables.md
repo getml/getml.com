@@ -1,1 +1,1 @@
-::: database.list_tables
+::: getml.database.list_tables

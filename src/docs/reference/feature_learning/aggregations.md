@@ -1,1 +1,1 @@
-::: feature_learning.aggregations
+::: getml.feature_learning.aggregations

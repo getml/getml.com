@@ -1,1 +1,1 @@
-::: pipeline.scores_container
+::: getml.pipeline.scores_container

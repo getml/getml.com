@@ -1,1 +1,1 @@
-::: cross_validation
+::: getml.cross_validation

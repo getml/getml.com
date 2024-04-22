@@ -1,1 +1,1 @@
-::: data.split.__init__
+::: getml.data.split

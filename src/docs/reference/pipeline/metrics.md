@@ -1,1 +1,1 @@
-::: pipeline.metrics
+::: getml.pipeline.metrics

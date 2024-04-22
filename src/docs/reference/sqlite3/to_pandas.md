@@ -1,1 +1,1 @@
-::: sqlite3.to_pandas
+::: getml.sqlite3.to_pandas

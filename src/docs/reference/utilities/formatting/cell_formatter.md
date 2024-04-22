@@ -1,1 +1,1 @@
-::: utilities.formatting.cell_formatter
+::: getml.utilities.formatting.cell_formatter

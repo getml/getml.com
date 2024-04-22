@@ -1,1 +1,1 @@
-::: project.attrs
+::: getml.project.attrs

@@ -1,1 +1,1 @@
-::: pipeline.metadata
+::: getml.pipeline.metadata

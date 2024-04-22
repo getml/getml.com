@@ -1,1 +1,1 @@
-::: database.connect_greenplum
+::: getml.database.connect_greenplum

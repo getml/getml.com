@@ -1,1 +1,1 @@
-::: pipeline.dialect
+::: getml.pipeline.dialect

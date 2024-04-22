@@ -1,1 +1,1 @@
-::: predictors.__init__
+::: getml.predictors
