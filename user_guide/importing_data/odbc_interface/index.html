@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Odbc interface - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Odbc interface";
+        var mkdocs_page_input_path = "user_guide/importing_data/odbc_interface.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Importing data</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Odbc interface</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#an-example-microsoft-sql-server">An example: Microsoft SQL Server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#important-always-pass-escape_chars">Important: Always pass escape_chars</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#import-data-using-odbc">Import data using ODBC</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#export-data-using-odbc">Export data using ODBC</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Importing data</li>
+      <li class="breadcrumb-item active">Odbc interface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="odbc"></a></p>
+<h1 id="odbc-interface">ODBC interface</h1>
+<p><a href="https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc">ODBC</a> (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.</p>
+<p>In a nutshell, it works like this:</p>
+<ul>
+<li>Any database of relevance has an ODBC driver that translates calls from the ODBC API into a format the database can understand, returning the query results in a format understood by the ODBC API.</li>
+<li>To connect getML or other software to a database using ODBC, you first need to install the ODBC driver provided by your database vendor.</li>
+<li>In theory, ODBC drivers should translate queries from the SQL 99 standard into the SQL dialect, but this is often ignored in practice. Also, not all ODBC drivers support all ODBC calls.</li>
+</ul>
+<p>At getML, native APIs are preferred for connecting to relational databases. ODBC is used when native APIs are not feasible due to licensing or other restrictions, especially for connecting to proprietary databases like Oracle, Microsoft SQL Server, or IBM DB2.</p>
+<p>ODBC is pre-installed on modern Windows operating systems, while Linux and macOS can use open-source implementations like unixODBC and iODBC, with getML using unixODBC.</p>
+<h2 id="an-example-microsoft-sql-server">An example: Microsoft SQL Server</h2>
+<p>To connect to Microsoft SQL Server using ODBC:</p>
+<ol>
+<li>If you do not have a Microsoft SQL Server instance, you can <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">download</a> a trial or development version.</li>
+<li>Download the <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server">ODBC driver for SQL Server</a>.</li>
+<li>Configure the ODBC driver. Many drivers provide customized scripts for this, so manual configuration might not be necessary.</li>
+</ol>
+<p>For Linux and macOS, create a <code>.odbc.ini</code> file in your home directory with the following contents:</p>
+<p><div class="highlight"><pre><span></span><code>[ANY-NAME-YOU-WANT]
+Driver = /opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
+Server = 123.45.67.890
+Port = 1433
+User = YOUR-USERNAME
+Password = YOUR-PASSWORD
+Database = YOUR-DATABASE
+Language = us_english
+NeedODBCTypesOnly = 1
+</code></pre></div>
+On <strong>Docker</strong>, you can make appropriate changes to the Dockerfile and then rerun <code>./setup.sh</code> or <code>bash setup.sh</code>.</p>
+<p>You will need to set the following parameters:</p>
+<ul>
+<li>The first line is the <em>server name</em> or <em>data source name</em>. You can use this name to tell getML that this is the server you want to connect to.</li>
+<li>The <em>Driver</em> is the location of the ODBC driver you have just downloaded. The location or file name might be different on your system.</li>
+<li>The <em>Server</em> is the IP address of the server. If the server is on the same machine as getML, just write "localhost".</li>
+<li>The <em>Port</em> is the port on which to connect the server. The default port for SQL Server is 1433.</li>
+<li><em>User</em> and <em>Password</em> are the user name and password that allow access to the server.</li>
+<li>The <em>Database</em> is the database inside the server you want to connect to.</li>
+</ul>
+<p>You can now connect getML to the database:</p>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_odbc</span><span class="p">(</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="s2">&quot;ANY-NAME-YOU-WANT&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;YOUR-USERNAME&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;YOUR-PASSWORD&quot;</span><span class="p">,</span>
+    <span class="n">escape_chars</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="important-always-pass-escape_chars">Important: Always pass <em>escape_chars</em></h2>
+<p>Earlier we mentioned that ODBC drivers are <em>supposed</em> to translate standard SQL queries into the specific SQL dialects, but this requirement is often ignored.</p>
+<p>A typical issue is <em>escape characters</em>, needed when the names of your schemas, tables, or columns are SQL keywords, like the loans dataset containing a table named <em>ORDER</em>.</p>
+<p>To avoid this problem, you can envelop the schema, table, and column names in <em>escape characters</em>. 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="ss">&quot;some_column&quot;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;SOME_SCHEMA&quot;</span><span class="p">.</span><span class="ss">&quot;SOME_TABLE&quot;</span><span class="p">;</span>
+</code></pre></div>
+getML always uses escape characters for its automatically generated queries.</p>
+<p>The SQL standard requires that the quotation mark (") be used as the escape character. However, many SQL dialects do not follow this requirement, e.g., SQL Server uses "[]":</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="n">some_column</span><span class="p">]</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">SOME_SCHEMA</span><span class="p">].[</span><span class="n">SOME_TABLE</span><span class="p">];</span>
+</code></pre></div>
+MySQL and MariaDB work like this:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">`</span><span class="n">some_column</span><span class="o">`</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">SOME_SCHEMA</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">SOME_TABLE</span><span class="o">`</span><span class="p">;</span>
+</code></pre></div>
+To avoid frustration, determine your server's escape characters and explicitly pass them to <a href="getml/database/connect_odbc"><code>connect_odbc()</code></a>.</p>
+<h2 id="import-data-using-odbc">Import data using ODBC</h2>
+<p>By selecting an existing table from your database in the <a href="getml/data/DataFrame/from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a href="getml/data/DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a href="getml/data/DataFrame/read_db"><code>read_db()</code></a> and <a href="getml/data/DataFrame/read_query"><code>read_query()</code></a> methods to replace the content of the current <a href="getml/data/DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<h2 id="export-data-using-odbc">Export data using ODBC</h2>
+<p>You can also write your results back into the PostgreSQL database. When you provide a name for the destination table in <a href="getml/pipeline/Pipeline/transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a href="getml/pipeline/Pipeline/predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mysql_interface/" class="btn btn-neutral float-left" title="Mysql interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pandas_interface/" class="btn btn-neutral float-right" title="Pandas interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mysql_interface/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pandas_interface/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

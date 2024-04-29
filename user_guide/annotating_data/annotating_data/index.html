@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Annotating data - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Annotating data";
+        var mkdocs_page_input_path = "user_guide/annotating_data/annotating_data.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >Annotating data</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Annotating data</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#in-short">In short</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#roles">Roles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-note-on-reproducibility-and-efficiency">A note on reproducibility and efficiency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#join-key">Join key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#time-stamp">Time stamp</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#target">Target</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#numerical">Numerical</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#categorical">Categorical</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text">Text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unused_float">Unused_float</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unused_string">Unused_string</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#units">Units</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Importing data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Annotating data</li>
+      <li class="breadcrumb-item active">Annotating data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="annotating-data"></a></p>
+<h1 id="annotating-data_1">Annotating data</h1>
+<p>After you have <a class="autorefs autorefs-internal" href="../../importing_data/importing_data/#importing-data_1">imported</a> your data into the getML engine, there is one more step to undertake before you can start learning features: You need to assign a <strong>role</strong> to each column. Why is that?</p>
+<p>First, the general structure of the individual data frames is needed to construct the <a class="autorefs autorefs-internal" href="../../data_model/data_model/#data-model_1">relational data model</a>. This is done by assigning the roles <a class="autorefs autorefs-internal" href="#join-key">join key</a> and <a class="autorefs autorefs-internal" href="#time-stamp">time stamp</a>. The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).</p>
+<p>Second, you need to tell the <a class="autorefs autorefs-internal" href="../../feature_engineering/feature_engineering/#feature-engineering_1">feature learning algorithm</a> how to interpret the individual columns for it to construct sophisticated features. That is why we need the roles <a class="autorefs autorefs-internal" href="#numerical">numerical</a>, <a class="autorefs autorefs-internal" href="#categorical">categorical</a>, and <a class="autorefs autorefs-internal" href="#target">target</a>. You can also assign <a class="autorefs autorefs-internal" href="#units">units</a> to each column in a Data Frame.</p>
+<p>This chapter contains detailed information on the individual <a class="autorefs autorefs-internal" href="#roles">roles</a> and <a class="autorefs autorefs-internal" href="#units">units</a>.</p>
+<h2 id="in-short">In short</h2>
+<p>When <strong>building the data model</strong>, you should keep the following things in mind:</p>
+<ul>
+<li>Every <a href="getml/data/DataFrame"><code>DataFrame</code></a> in a data model needs to have at least one column (<a href="getml/data/columns"><code>columns</code></a>) with the role <a class="autorefs autorefs-internal" href="#join-key">join key</a>.</li>
+<li>The role <a class="autorefs autorefs-internal" href="#time-stamp">time stamp</a> has to be used to prevent data leaks (refer to <a class="autorefs autorefs-internal" href="../../data_model/data_model/#time-series">data model time series</a> for details).</li>
+</ul>
+<p>When <strong>learning features</strong>, please keep the following things in mind:</p>
+<ul>
+<li>Only <a href="getml/data/columns"><code>columns</code></a> with roles of <a class="autorefs autorefs-internal" href="#categorical">categorical</a>, <a class="autorefs autorefs-internal" href="#numerical">numerical</a>, and <a class="autorefs autorefs-internal" href="#time-stamp">time stamp</a> will be used by the feature learning algorithm for aggregations or conditions, unless you explicitly tell it to aggregate <a class="autorefs autorefs-internal" href="#target">target</a> columns as well (refer to <code>allow_lagged_target</code> in <a href="getml/data/Placeholder/join"><code>join()</code></a>).</li>
+<li>Columns are only compared with each other if they have the same <a class="autorefs autorefs-internal" href="#units">unit</a>.</li>
+<li>If you want to make sure that a column is <em>only</em> used for comparison, you can set <code>comparison_only</code> (refer to <a class="autorefs autorefs-internal" href="#units">annotating units</a>). Time stamps are automatically set to <code>comparison_only</code>.</li>
+</ul>
+<p><a href="" id="annotating-data-roles"></a></p>
+<h2 id="roles">Roles</h2>
+<p>Roles determine if and how <a href="getml/data/columns"><code>columns</code></a> are handled during the construction of the <a class="autorefs autorefs-internal" href="../../data_model/data_model/#data-model_1">data model</a> and how they are interpreted by the <a class="autorefs autorefs-internal" href="../../feature_engineering/feature_engineering/#feature-engineering_1">feature learning algorithm</a>. The following roles are available in getML:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Class</th>
+<th>Included in FL algorithm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="getml/data/roles/categorical"><code>categorical</code></a></td>
+<td><a href="getml/data/columns/StringColumn"><code>StringColumn</code></a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/numerical"><code>numerical</code></a></td>
+<td><a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/text"><code>text</code></a></td>
+<td><a href="getml/data/columns/StringColumn"><code>StringColumn</code></a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/time_stamp"><code>time_stamp</code></a></td>
+<td><a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/join_key"><code>join_key</code></a></td>
+<td><a href="getml/data/columns/StringColumn"><code>StringColumn</code></a></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/target"><code>target</code></a></td>
+<td><a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a></td>
+<td>not by default</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/unused_float"><code>unused_float</code></a></td>
+<td><a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="getml/data/roles/unused_string"><code>unused_string</code></a></td>
+<td><a href="getml/data/columns/StringColumn"><code>StringColumn</code></a></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>When constructing a <a href="getml/data/DataFrame"><code>DataFrame</code></a> via the class methods <a href="getml/data/DataFrame/from_csv"><code>from_csv</code></a>, <a href="getml/data/DataFrame/from_pandas"><code>from_pandas</code></a>, <a href="getml/data/DataFrame/from_db"><code>from_db</code></a>, and <a href="getml/data/DataFrame/from_json"><code>from_json</code></a>, all <a href="getml/data/columns"><code>columns</code></a> will have either the role <a class="autorefs autorefs-internal" href="#unused_float">unused float</a> or <a class="autorefs autorefs-internal" href="#unused_string">unused string</a> . Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">animal</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hawk&quot;</span><span class="p">,</span> <span class="s2">&quot;parrot&quot;</span><span class="p">,</span> <span class="s2">&quot;goose&quot;</span><span class="p">],</span>
+    <span class="n">votes</span><span class="o">=</span><span class="p">[</span><span class="mi">12341</span><span class="p">,</span> <span class="mi">5127</span><span class="p">,</span> <span class="mi">65311</span><span class="p">],</span>
+    <span class="n">weight</span><span class="o">=</span><span class="p">[</span><span class="mf">12.14</span><span class="p">,</span> <span class="mf">12.6</span><span class="p">,</span> <span class="mf">11.92</span><span class="p">],</span>
+    <span class="n">animal_id</span><span class="o">=</span><span class="p">[</span><span class="mi">123</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">671</span><span class="p">],</span>
+    <span class="n">date</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2019-05-02&quot;</span><span class="p">,</span> <span class="s2">&quot;2019-02-28&quot;</span><span class="p">,</span> <span class="s2">&quot;2018-12-24&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">pandas_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_df</span><span class="p">)</span>
+<span class="n">getml_df</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">pandas_df</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;animal elections&#39;</span><span class="p">)</span>
+
+<span class="n">getml_df</span>
+<span class="c1"># Output:</span>
+<span class="c1"># | votes        | weight       | animal_id    | animal        | date          |</span>
+<span class="c1"># | unused float | unused float | unused float | unused string | unused string |</span>
+<span class="c1"># ------------------------------------------------------------------------------</span>
+<span class="c1"># | 12341        | 12.14        | 123          | hawk          | 2019-05-02    |</span>
+<span class="c1"># | 5127         | 12.6         | 512          | parrot        | 2019-02-28    |</span>
+<span class="c1"># | 65311        | 11.92        | 671          | goose         | 2018-12-24    |</span>
+
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal_id&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;votes&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">time_stamp</span><span class="p">)</span>    
+<span class="n">getml_df</span>
+<span class="c1"># Updated DataFrame structure will be displayed here.</span>
+</code></pre></div>
+<p>To make use of the imported data, you have to tell getML how you intend to use each column by assigning a role (<a href="getml/data/roles"><code>roles</code></a>). This is done by using the <a href="getml/data/DataFrame/set_role"><code>set_role</code></a> method of the <a href="getml/data/DataFrame"><code>DataFrame</code></a>. Each column must have exactly one role. If you wish to use a column in two different roles, you have to add it twice and assign each copy a different role.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal_id&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;votes&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>
+<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">time_stamp</span><span class="p">)</span>    
+<span class="n">getml_df</span>
+<span class="c1"># Output:</span>
+<span class="c1"># | date                        | animal_id | animal      | votes     | weight    |</span>
+<span class="c1"># | time stamp                  | join key  | categorical | numerical | numerical |</span>
+<span class="c1"># ---------------------------------------------------------------------------------</span>
+<span class="c1"># | 2019-05-02T00:00:00.000000Z | 123       | hawk        | 12341     | 12.14     |</span>
+<span class="c1"># | 2019-02-28T00:00:00.000000Z | 512       | parrot      | 5127      | 12.6      |</span>
+<span class="c1"># | 2018-12-24T00:00:00.000000Z | 671       | goose       | 65311     | 11.92     |</span>
+</code></pre></div>
+When assigning new roles to existing columns, you might notice that some of
+these calls are completed in an instance while others might take a considerable
+amount of time. What's happening here? A column's role also determines its type. 
+When you set a new role, an implicit type conversion might take place.</p>
+<h2 id="a-note-on-reproducibility-and-efficiency">A note on reproducibility and efficiency</h2>
+<p>When building a stable pipeline you want to deploy in a productive environment, the flexible default behavior of the import interface might be more of an obstacle. For instance, CSV files are not type-safe. A column that was interpreted as a float column for one set of files might be interpreted as a string column for a different set of files. This obviously has implications for the stability of your pipeline. Therefore, it might be a good idea to hard-code column roles.</p>
+<p>In the getML Python API, you can bypass the default deduction of the role of each column by providing a dictionary mapping each column name to a role in the import interface.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">roles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;categorical&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;colname1&quot;</span><span class="p">,</span> <span class="s2">&quot;colname2&quot;</span><span class="p">],</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;colname3&quot;</span><span class="p">]}</span>
+<span class="n">df_expd</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
+    <span class="n">fnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;file1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;file2.csv&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY DATA FRAME&quot;</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span>
+    <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+    <span class="n">roles</span><span class="o">=</span><span class="n">roles</span><span class="p">,</span>
+    <span class="n">ignore</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</code></pre></div>
+If the <code>ignore</code> argument is set to <code>True</code>, any columns missing in the dictionary won't be imported at all.</p>
+<p>If you feel that writing the roles by hand is too tedious, you can use <code>dry</code>: If you call the import interface while setting the <code>dry</code> argument to <code>True</code>, no data is read. Instead, the default roles of all columns will be returned as a dictionary. You can store, alter, and hard-code this dictionary into your stable pipeline.</p>
+<div class="highlight"><pre><span></span><code><span class="n">roles</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
+    <span class="n">fnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;file1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;file2.csv&quot;</span><span class="p">],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY DATA FRAME&quot;</span><span class="p">,</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span>
+    <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+    <span class="n">dry</span><span class="o">=</span><span class="kc">True</span>                                     
+<span class="p">)</span>
+</code></pre></div>
+<p>Even if your data source is type safe, setting roles is still a good idea because it is also more efficient. Using <a href="getml/data/DataFrame/set_role"><code>set_role()</code></a> creates a deep copy of the original column and might perform an implicit type conversion. If you already know where you want your data to end up, it might be a good idea to set roles in advance.
+<a href="" id="annotating-data-join-keys"></a></p>
+<h2 id="join-key">Join key</h2>
+<p>Join keys are required to establish a relation between two <a href="getml/data/DataFrame"><code>DataFrame</code></a> objects. Please refer to the <a class="autorefs autorefs-internal" href="../../data_model/data_model/#data-model_1">data models</a> for details.</p>
+<p>The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.</p>
+<p><a href="getml/data/columns"><code>columns</code></a> of this role will <em>not</em> be aggregated by the feature learning algorithm or used for conditions.
+<a href="" id="annotating-data-time-stamp"></a></p>
+<h2 id="time-stamp">Time stamp</h2>
+<p>This role is used to prevent data leaks. When you join one table onto another, you usually want to make sure that no data from the future is used. Time stamps can be used to limit your joins.</p>
+<p>In addition, the feature learning algorithm can aggregate time stamps or use them for conditions. However, they will not be compared to fixed values unless you explicitly change their units. This means that conditions like this are not possible by default:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">WHERE</span><span class="w"> </span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_fixed_date</span>
+</code></pre></div>
+Instead, time stamps will always be compared to other time stamps:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">WHERE</span><span class="w"> </span><span class="n">time_stamp1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_stamp2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_value</span>
+</code></pre></div>
+This is because it is unlikely that comparing time stamps to a fixed date performs
+well out-of-sample.</p>
+<p>When assigning the role time stamp to a column that is currently a 
+<a href="getml/data/StringColumn"><code>StringColumn</code></a>, 
+you need to specify the format of this string. You can do so by using 
+the <code>time_formats</code> argument of
+<a href="getml/data/DataFrame/set_role"><code>set_role()</code></a>. You can pass a list of time formats
+that is used to try to interpret the input strings. Possible format options are</p>
+<ul>
+<li>%w - abbreviated weekday (Mon, Tue, ...)</li>
+<li>%W - full weekday (Monday, Tuesday, ...)</li>
+<li>%b - abbreviated month (Jan, Feb, ...)</li>
+<li>%B - full month (January, February, ...)</li>
+<li>%d - zero-padded day of month (01 .. 31)</li>
+<li>%e - day of month (1 .. 31)</li>
+<li>%f - space-padded day of month ( 1 .. 31)</li>
+<li>%m - zero-padded month (01 .. 12)</li>
+<li>%n - month (1 .. 12)</li>
+<li>%o - space-padded month ( 1 .. 12)</li>
+<li>%y - year without century (70)</li>
+<li>%Y - year with century (1970)</li>
+<li>%H - hour (00 .. 23)</li>
+<li>%h - hour (00 .. 12)</li>
+<li>%a - am/pm</li>
+<li>%A - AM/PM</li>
+<li>%M - minute (00 .. 59)</li>
+<li>%S - second (00 .. 59)</li>
+<li>%s - seconds and microseconds (equivalent to %S.%F)</li>
+<li>%i - millisecond (000 .. 999)</li>
+<li>%c - centisecond (0 .. 9)</li>
+<li>%F - fractional seconds/microseconds (000000 - 999999)</li>
+<li>%z - time zone differential in ISO 8601 format (Z or +NN.NN)</li>
+<li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
+<li>%% - percent sign </li>
+</ul>
+<p>If none of the formats works, the getML engine will try to interpret
+the time stamps as numerical values. If this fails, the time stamp will be set
+to NULL.
+<div class="highlight"><pre><span></span><code><span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<span class="n">date1</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">365</span><span class="p">),</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">366</span><span class="p">),</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">367</span><span class="p">)],</span>
+<span class="n">date2</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1971-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;1971-01-02&#39;</span><span class="p">,</span> <span class="s1">&#39;1971-01-03&#39;</span><span class="p">],</span>
+<span class="n">date3</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1|1|71&#39;</span><span class="p">,</span> <span class="s1">&#39;1|2|71&#39;</span><span class="p">,</span> <span class="s1">&#39;1|3|71&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data_df</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dates&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;date1&#39;</span><span class="p">,</span> <span class="s1">&#39;date2&#39;</span><span class="p">,</span> <span class="s1">&#39;date3&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">time_stamp</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;%n|</span><span class="si">%e</span><span class="s1">|%y&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+<span class="c1"># | date1                       | date2                       | date3                       |</span>
+<span class="c1"># | time stamp                  | time stamp                  | time stamp                  |</span>
+<span class="c1"># -------------------------------------------------------------------------------------------</span>
+<span class="c1"># | 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z | 1971-01-01T00:00:00.000000Z |</span>
+<span class="c1"># | 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z | 1971-01-02T00:00:00.000000Z |</span>
+<span class="c1"># | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z |</span>
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>getML time stamps are actually floats expressing the number of seconds since 
+UNIX time (1970-01-01T00:00:00).</p>
+</div>
+<p><a href="" id="annotating-data-target"></a></p>
+<h2 id="target">Target</h2>
+<p>The associated <a href="getml/data/columns">columns</a> contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to <code>allow_lagged_target</code> in <a href="getml/data/Placeholder/join"><code>join()</code></a>). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to <a class="autorefs autorefs-internal" href="../../data_model/data_model/#tables">data model tables</a>).</p>
+<p>The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be <code>NULL</code>.
+<a href="" id="annotating-data-numerical"></a></p>
+<h2 id="numerical">Numerical</h2>
+<p>This role tells the getML engine to include the associated <a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a> during the feature learning.</p>
+<p>It should be used for all data with an inherent ordering, regardless of whether it is sampled from a continuous quantity, like passed time or the total amount of rainfall, or a discrete one, like the number of sugary mulberries one has eaten since lunch.
+<a href="" id="annotating-data-categorical"></a></p>
+<h2 id="categorical">Categorical</h2>
+<p>This role tells the getML engine to include the associated <a href="getml/data/columns/StringColumn"><code>StringColumn</code></a> during feature learning.</p>
+<p>It should be used for all data with no inherent ordering, even if the categories are encoded as integers instead of strings.
+<a href="" id="annotating-data-text"></a></p>
+<h2 id="text">Text</h2>
+<p>getML provides the role <a href="getml/data/roles/text"><code>text</code></a> to annotate free form text fields within relational data structures. getML deals with columns of role <a href="getml/data/roles/text"><code>text</code></a> through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the <a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a> preprocessor. For more information on getML's handling of text fields, refer to <a class="autorefs autorefs-internal" href="../../preprocessing/preprocessing/#handling-of-free-form-text">the Preprocessing section</a>
+<a href="" id="annotating-data-unused-float"></a></p>
+<h2 id="unused_float">Unused_float</h2>
+<p>Marks a <a href="getml/data/columns/FloatColumn"><code>FloatColumn</code></a> as unused.</p>
+<p>The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
+<a href="" id="annotating-data-unused-string"></a></p>
+<h2 id="unused_string">Unused_string</h2>
+<p>Marks a <a href="getml/data/columns/StringColumn"><code>StringColumn</code></a> as unused.</p>
+<p>The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
+<a href="" id="annotating-data-units"></a></p>
+<h2 id="units">Units</h2>
+<p>By default, all columns of role <a class="autorefs autorefs-internal" href="#categorical">categorical</a> or <a class="autorefs autorefs-internal" href="#numerical">numerical</a> will only be compared to fixed values.</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">...</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numerical_column</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_value</span><span class="w"> </span>
+<span class="k">OR</span><span class="w"> </span><span class="n">categorical_column</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;some string&#39;</span>
+<span class="p">...</span>
+</code></pre></div>
+If you want the feature learning algorithms to
+compare these columns with each other (like in the snippet below), 
+you have to explicitly set a unit. </p>
+<p><div class="highlight"><pre><span></span><code><span class="p">...</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">numerical_column1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">numerical_column2</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_value</span>
+<span class="k">OR</span><span class="w"> </span><span class="n">categorical_column1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">categorical_column2</span>
+<span class="p">...</span>
+</code></pre></div>
+Using <a href="getml/data/DataFrame/set_unit"><code>set_unit()</code></a> you can set the <em>unit</em> of
+a column to an arbitrary, non-empty string. If it matches the string
+of another column, both of them will be compared by the getML
+engine. Please note that a column can not have more than one unit.</p>
+<p>There are occasions where <em>only</em> a pairwise comparison of columns but
+not a comparison with fixed values is useful. To cope with this problem,
+you can set the <code>comparison_only</code> flag in
+<a href="getml/data/DataFrame/set_unit"><code>set_unit()</code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that time stamps are used for comparison only by default. The feature 
+learning algorithm will not compare them to a fixed date, because
+it is very unlikely that such a feature would perform well out-of-sample.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../.." class="btn btn-neutral float-left" title="getML Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../data_model/data_model/" class="btn btn-neutral float-right" title="Data model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../data_model/data_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

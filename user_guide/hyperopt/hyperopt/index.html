@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Hyperopt - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Hyperopt";
+        var mkdocs_page_input_path = "user_guide/hyperopt/hyperopt.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Hyperopt</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Hyperopt</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#tuning-routines">Tuning routines</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#tuning-recipes-for-predictors">Tuning recipes for predictors</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tuning-recipes-for-feature-learners">Tuning recipes for feature learners</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#random-search">Random search</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#latin-hypercube-search">Latin hypercube search</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gaussian-hyperparameter-search">Gaussian hyperparameter search</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Importing data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Hyperopt</li>
+      <li class="breadcrumb-item active">Hyperopt</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="hyperparamter-optimization"></a></p>
+<h1 id="hyperparameter-optimization">Hyperparameter optimization</h1>
+<p>In the sections on <a class="autorefs autorefs-internal" href="../../feature_engineering/feature_engineering/#feature-engineering_1">feature engineering</a> and <a class="autorefs autorefs-internal" href="../../predicting/predicting/#predicting_1">predicting</a>, we learned how to train both the feature learning algorithm and the machine learning algorithm used for prediction in the getML engine. However, there are lots of parameters involved. <a href="getml/feature_learning/Multirel"><code>Multirel</code></a>, <a href="getml/feature_learning/Relboost"><code>Relboost</code></a>, <a href="getml/feature_learning/RelMT"><code>RelMT</code></a>, <a href="getml/feature_learning/FastProp"><code>FastProp</code></a>, <a href="getml/predictors/LinearRegression"><code>LinearRegression</code></a>, <a href="getml/predictors/LogisticRegression"><code>LogisticRegression</code></a>, <a href="getml/predictors/XGBoostClassifier"><code>XGBoostClassifier</code></a>, and <a href="getml/predictors/XGBoostRegressor"><code>XGBoostRegressor</code></a> all have their own settings. That is why you might want to use hyperparameter optimization.</p>
+<p>The most relevant parameters of these classes can be chosen to constitute individual dimensions of a parameter space. For each parameter, a lower and upper bound has to be provided and the hyperparameter optimization will search the space within these bounds. This will be done iteratively by drawing a specific parameter combination, overwriting the corresponding parameters in a base pipeline, and then fitting and scoring it. The algorithm used to draw from the parameter space is represented by the different classes of <a href="getml/hyperopt"><code>hyperopt</code></a>.</p>
+<p>While <a href="getml/hyperopt/RandomSearch"><code>RandomSearch</code></a> and <a href="getml/hyperopt/LatinHypercubeSearch"><code>LatinHypercubeSearch</code></a> are purely statistical approaches, <a href="getml/hyperopt/GaussianHyperparameterSearch"><code>GaussianHyperparameterSearch</code></a> uses prior knowledge obtained from evaluations of previous parameter combinations to select the next one.</p>
+<h2 id="tuning-routines">Tuning routines</h2>
+<p>The easiest way to conduct a hyperparameter optimization in getML are the tuning routines <code>tune_feature_learners()</code> and <code>tune_predictors()</code>. They roughly work as follows:</p>
+<ul>
+<li>
+<p>They begin with a base pipeline, in which the default parameters for the feature learner or the predictor are used.</p>
+</li>
+<li>
+<p>They then proceed by optimizing 2 or 3 parameters at a time using a <code>GaussianHyperparameterSearch</code>. If the best pipeline outperforms the base pipeline, the best pipeline becomes the new base pipeline.</p>
+</li>
+<li>
+<p>Taking the base pipeline from the previous steps, the tuning routine then optimizes the next 2 or 3 hyperparameters. If the best pipeline from that hyperparameter optimization outperforms the current base pipeline, that pipeline becomes the new base pipeline.</p>
+</li>
+<li>
+<p>These steps are then repeated for more hyperparameters.</p>
+</li>
+</ul>
+<p>The following tables list the tuning recipes and hyperparameter subspaces for each step:</p>
+<h3 id="tuning-recipes-for-predictors">Tuning recipes for predictors</h3>
+<table>
+<thead>
+<tr>
+<th>Predictor</th>
+<th>Stage</th>
+<th>Hyperparameter</th>
+<th>Subspace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="getml/predictors/LinearRegression"><code>LinearRegression</code></a>; <a href="getml/predictors/LogisticRegression"><code>LogisticRegression</code></a></td>
+<td>1 (base parameters)</td>
+<td>reg_lambda</td>
+<td>[1E-11, 100]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>learning_rate</td>
+<td>[0.5, 0.99]</td>
+</tr>
+<tr>
+<td><a href="getml/predictors/XGBoostClassifier"><code>XGBoostClassifier</code></a>; <a href="getml/predictors/XGBoostRegressor"><code>XGBoostRegressor</code></a></td>
+<td>1 (base parameters)</td>
+<td>learning_rate</td>
+<td>[0.05, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_depth</td>
+<td>[1, 15]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_child_weights</td>
+<td>[1, 6]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>gamma</td>
+<td>[0, 5]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (sampling parameters)</td>
+<td>colsample_bytree</td>
+<td>[0.75, 0.9]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>subsample</td>
+<td>[0.75, 0.9]</td>
+</tr>
+<tr>
+<td></td>
+<td>4 (regularization parameters)</td>
+<td>reg_alpha</td>
+<td>[0, 5]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>reg_lambda</td>
+<td>[0, 10]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tuning-recipes-for-feature-learners">Tuning recipes for feature learners</h3>
+<table>
+<thead>
+<tr>
+<th>Feature Learner</th>
+<th>Stage</th>
+<th>Hyperparameter</th>
+<th>Subspace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="getml/feature_learning/FastProp"><code>FastProp</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[50, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>n_most_frequent</td>
+<td>[0, 20]</td>
+</tr>
+<tr>
+<td><a href="getml/feature_learning/Multirel"><code>Multirel</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_length</td>
+<td>[0, 10]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>share_aggregations</td>
+<td>[0.1, 0.5]</td>
+</tr>
+<tr>
+<td><a href="getml/feature_learning/Relboost"><code>Relboost</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_length</td>
+<td>[0, 10]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>share_aggregations</td>
+<td>[0.1, 0.5]</td>
+</tr>
+<tr>
+<td><a href="getml/feature_learning/RelMT"><code>RelMT</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_depth</td>
+<td>[1, 8]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>reg_lambda</td>
+<td>[0, 0.0001]</td>
+</tr>
+</tbody>
+</table>
+<p>The advantage of the tuning routines is that they provide a convenient out-of-the-box experience for hyperparameter tuning. For most use cases, it is sufficient to tune the XGBoost predictor.</p>
+<p>More advanced users can rely on the more low-level hyperparameter optimization routines.</p>
+<h2 id="random-search">Random search</h2>
+<p>A <code>RandomSearch</code> draws random hyperparameter sets from the hyperparameter space.</p>
+<h2 id="latin-hypercube-search">Latin hypercube search</h2>
+<p>A <code>LatinHypercubeSearch</code> draws almost random hyperparameter sets from the hyperparameter space, but ensures that they are sufficiently different from each other.</p>
+<h2 id="gaussian-hyperparameter-search">Gaussian hyperparameter search</h2>
+<p>A <code>GaussianHyperparameterSearch</code> works like this:</p>
+<ul>
+<li>
+<p>It begins with a burn-in phase, usually about 70% to 90% of all iterations. During that burn-in phase, the hyperparameter space is sampled more or less at random, using either a random search or a latin hypercube search. You can control this phase using <code>ratio_iter</code> and <code>surrogate_burn_in_algorithm</code>.</p>
+</li>
+<li>
+<p>Once enough information has been collected, it fits a Gaussian process on the hyperparameters with the score we want to maximize or minimize as the predicted variable. Note that the Gaussian process has hyperparameters itself, which are also optimized. You can control this phase using <code>gaussian_kernel</code>, <code>gaussian_optimization_algorithm</code>, <code>gaussian_optimization_burn_in_algorithm</code>, and <code>gaussian_optimization_burn_ins</code>.</p>
+</li>
+<li>
+<p>It then uses the Gaussian process to predict the expected information (EI). The EI is a measure of how much additional information it might get from evaluating a particular point in the hyperparameter space. The expected information is to be maximized. The point in the hyperparameter space with the maximum expected information is the next point that is actually evaluated (meaning a new pipeline with these hyperparameters is trained). You can control this phase using <code>optimization_algorithm</code>, <code>optimization_burn_ins</code>, and <code>optimization_burn_in_algorithm</code>.</p>
+</li>
+</ul>
+<p>In a nutshell, the GaussianHyperparameterSearch behaves like human data scientists:</p>
+<ul>
+<li>
+<p>At first, it picks random hyperparameter combinations.</p>
+</li>
+<li>
+<p>Once it has gained a better understanding of the hyperparameter space, it starts evaluating hyperparameter combinations that are particularly interesting.</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../getml_suite/python_api/" class="btn btn-neutral float-left" title="Python api"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../importing_data/csv_interface/" class="btn btn-neutral float-right" title="Csv interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../getml_suite/python_api/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../importing_data/csv_interface/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Python api - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Python api";
+        var mkdocs_page_input_path = "user_guide/getml_suite/python_api.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Getml suite</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Python api</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#connecting-to-the-getml-engine">Connecting to the getML engine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#session-management">Session management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lifecycles-and-synchronization-between-engine-and-api">Lifecycles and synchronization between engine and API</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#lifecycle-of-a-dataframe">Lifecycle of a DataFrame</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lifecycle-of-a-pipeline">Lifecycle of a Pipeline</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Importing data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Getml suite</li>
+      <li class="breadcrumb-item active">Python api</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="python-api"></a></p>
+<h1 id="the-getml-python-api">The getML Python API</h1>
+<p>The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from <a href="https://getml.com">getml.com</a> (see <a href="importing_data">Installation</a>).</p>
+<p>The most important thing you have to keep in mind when working with the Python API is this:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;All classes in the Python API are just handles to objects living in the getML engine.</p>
+<p>In addition, two basic requirements need to be fulfilled to successfully use the API:</p>
+<ol>
+<li>You need a running getML engine (on the same host as your Python session) (see <a class="autorefs autorefs-internal" href="../engine/#starting-the-engine">starting the engine</a>)</li>
+<li>You need to set a project in the getML engine using <code>getml.engine.set_project</code>.</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+</code></pre></div>
+This section provides some general information about the API and how it interacts with the engine. For an in-depth read about its individual classes, check out the <a href="python_api">Python API documentation</a>.</p>
+<h2 id="connecting-to-the-getml-engine">Connecting to the getML engine</h2>
+<p>The getML Python API automatically connects to the engine with every command you execute. It establishes a socket connection to the engine through a port inferred by the time you connect to a project (or create a new project).</p>
+<h2 id="session-management">Session management</h2>
+<p>You can set the current project (see <a class="autorefs autorefs-internal" href="../../project_management/project_management/#managing-projects">Managing projects</a>) using <a href="getml/engine/set_project"><code>set_project()</code></a>. If no project matches the supplied name, a new one will be created. To get a list of all available projects in your engine, you can use <a href="getml/engine/list_projects"><code>list_projects()</code></a> and to remove an entire project, you can use <a href="getml/engine/delete_project"><code>delete_project()</code></a>.
+<a href="" id="python-api-lifecycles"></a></p>
+<h2 id="lifecycles-and-synchronization-between-engine-and-api">Lifecycles and synchronization between engine and API</h2>
+<p>The most important objects are the following:</p>
+<ul>
+<li>Data frames (<a href="getml/data/DataFrame"><code>DataFrame</code></a>), which act as a container for all your data.</li>
+<li>Pipelines (<a href="getml/pipeline/Pipeline"><code>Pipeline</code></a>), which hold the trained states of the algorithms.
+<a href="" id="lifecycle-dataframe"></a></li>
+</ul>
+<h3 id="lifecycle-of-a-dataframe">Lifecycle of a <a href="getml/data/DataFrame"><code>DataFrame</code></a></h3>
+<p>You can create a <a href="getml/data/DataFrame"><code>DataFrame</code></a> by calling one of the class methods: <code>from_csv()</code>, <code>from_db()</code>, <code>from_json()</code>, or <code>from_pandas()</code>. These create a data frame object in the getML engine, import the provided data, and return a handler to the object as a <a href="getml/data/DataFrame"><code>DataFrame</code></a> in the Python API (see <a class="autorefs autorefs-internal" href="../../importing_data/importing_data/#importing-data_1">Importing data</a>).</p>
+<p>When you apply any method, like <code>add()</code>, the changes will be automatically reflected in both the engine and Python. Under the hood, the Python API sends a command to create a new column to the getML engine. The moment the engine is done, it informs the Python API and the latter triggers the <code>refresh()</code> method to update the Python handler.</p>
+<p>Data frames are <strong>never saved automatically</strong> and <strong>never loaded automatically</strong>. All unsaved changes to a <a href="getml/data/DataFrame"><code>DataFrame</code></a> will be lost when restarting the engine. To save a <a href="getml/data/DataFrame"><code>DataFrame</code></a>, use <code>save()</code>. You can also use batch operations like <code>save_all()</code> and <code>load_all()</code> to save or load all data frames associated with the current project. The <a href="getml/data/DataFrames"><code>DataFrames</code></a> container for the current project in memory can be accessed through <code>getml.project.data_frames</code>.</p>
+<p>To access the container, holding all of a project's data frames:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span>
+</code></pre></div>
+To save all data frames in memory to the project folder:</p>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="o">.</span><span class="n">save_all</span><span class="p">()</span>
+</code></pre></div>
+<p>You can subset the container to access single <a href="getml/data/DataFrame"><code>DataFrame</code></a> instances. You can then call all available methods on those instances. For example, to store a single data frame to disk:
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</code></pre></div>
+If a <a href="getml/data/DataFrame"><code>DataFrame</code></a> called NAME_OF_THE_DATA_FRAME is already available in memory, <code>load_data_frame()</code> will return a handle to that data frame. If no such <a href="getml/data/DataFrame"><code>DataFrame</code></a> is held in memory, the function will try to load the data frame from disk and then return a handle. If that is unsuccessful, an exception is thrown.</p>
+<p>If you want to force the API to load the version stored on disk over the one held in memory, you can use the <code>load()</code> method as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">NAME_OF_THE_DATA_FRAME</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="lifecycle-of-a-pipeline">Lifecycle of a <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a></h3>
+<p>The lifecycle of a <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a> is straightforward since the getML engine automatically saves all changes made to a pipeline and automatically loads all pipelines contained in a project.</p>
+<p>Using the constructors, the individual pipelines are created within the Python API, where they are represented as a set of hyperparameters. The actual weights of the machine learning algorithms are only stored in the getML engine and never transferred to the Python API.</p>
+<p>When applying any method, like <code>fit()</code>, the changes will be automatically reflected in both the engine and the Python API.</p>
+<p>When using <code>set_project()</code> to load an existing project, all pipelines contained in that project will be automatically loaded into memory. You can get an overview of all pipelines associated with the current project by accessing the <code>Pipelines</code> container, accessible through <code>getml.project.pipelines</code>.</p>
+<p>In order to create a corresponding handle in the Python API, you can use <code>load()</code>:
+<div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">NAME_OF_THE_PIPELINE</span><span class="p">)</span>
+</code></pre></div>
+The function <code>list_pipelines()</code> lists all available pipelines within a project.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../monitor/" class="btn btn-neutral float-left" title="Monitor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../hyperopt/hyperopt/" class="btn btn-neutral float-right" title="Hyperopt">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../monitor/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../hyperopt/hyperopt/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

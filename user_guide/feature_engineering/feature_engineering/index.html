@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Feature engineering - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Feature engineering";
+        var mkdocs_page_input_path = "user_guide/feature_engineering/feature_engineering.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Feature engineering</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Feature engineering</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#definition">Definition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#feature-learning-vs-propositionalization">Feature learning vs. propositionalization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#design-principles">Design principles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#algorithms">Algorithms</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fastprop">FastProp</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multirel">Multirel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relboost">Relboost</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#relmt">RelMT</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Importing data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Feature engineering</li>
+      <li class="breadcrumb-item active">Feature engineering</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="feature-engineering"></a></p>
+<h1 id="feature-engineering_1">Feature engineering</h1>
+<p>The deep learning revolution has enabled automated feature engineering for
+images and sound data. Yet, for relational data and classical time series
+analysis, feature engineering is still done by hand or using very simple brute
+force methods. Our mission is to change that.</p>
+<p>The automation of feature engineering on relational data and time
+series is at the heart of the getML software suite. There are other
+libraries that implement feature engineering tools on top of
+frameworks like <code>data.tables</code> in R, <code>pandas</code> in Python, or <code>Apache
+Spark</code>. In essence, they all use a brute force approach: Generate a
+large number of features, then use some sort of feature selection
+routine to pick a small subselection of them.</p>
+<p>getML has chosen another path: Our highly efficient feature
+learning algorithms produce features that are far more advanced
+than what manual feature engineering could achieve or what could be
+accomplished using simple brute force approaches.</p>
+<h2 id="definition">Definition</h2>
+<p>Feature engineering is the process of constructing variables, so-called
+features, from a dataset. These features are used as the input for machine learning
+algorithms. In most real-world datasets, the raw data is spread over multiple
+tables and the task is to bring these tables together and construct features
+based on their relationships. These features are stored in a flat feature table.
+In other words, feature engineering is the operation of merging and aggregating
+a relational data model into a flat (feature) table. From an academic point of view,
+most machine learning algorithms used nowadays can be classified as <em>propositional
+learners.</em> The process of creating flat attribute-value representations from
+relational data through simple rules or aggregation functions therefore is called
+<em>propositionalization.</em></p>
+<p>Usually, feature engineering is done manually, by using brute force approaches
+or domain knowledge. This process is sometimes also referred to as <em>data wrangling</em>.
+In any case it is a tedious, time-consuming, and error-prone process. Manual
+feature engineering is often done by writing scripts in languages like Python,
+R, or SQL.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unfortunately, the term feature engineering is ambiguous. More often than
+not, feature engineering is meant to describe numerical transformations or
+encoding techniques on a <strong>single</strong> table. The definition used above
+assumes that the raw data comes in relational form, which is true for
+almost all real-world data sets.</p>
+</div>
+<h2 id="feature-learning-vs-propositionalization">Feature learning vs. propositionalization</h2>
+<p>We follow academia and classify techniques that use simple, merely unconditional
+transformations (like aggregations) to construct flat (attribute-value)
+representations as <a href="https://link.springer.com/chapter/10.1007%2F978-3-662-04599-2_11">propositionalization approaches</a>, while we
+classify algorithms which directly learn from relational data structures as
+<em>feature learning.</em> Here, we pick up a term coined in the deep learning context,
+where complex relationships are equally learned from raw input data.</p>
+<p>getML provides a framework capable of automatically extracting useful and
+meaningful features from a relational data model by finding the best merge and
+aggregate operations. In fact, the relationships between the target and the
+original data is <em>learned</em> through one of <a class="autorefs autorefs-internal" href="#algorithms">getML's feature learning
+algorithms</a>.</p>
+<h2 id="design-principles">Design principles</h2>
+<p>The general procedure for feature learning on relational data and time
+series using getML looks like this:</p>
+<p>The only required input is a <a class="autorefs autorefs-internal" href="../../data_model/data_model/#data-schemata">relational data
+schema</a>. In particular, there needs to be
+some sort of <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#target">target variable(s)</a>,
+which shall be predicted. For time series, the schema would
+typically be a
+<a class="autorefs autorefs-internal" href="../../data_model/data_model/#self-joining-a-single-table">self-join</a>. In addition to
+this general information on the data schema, the intended usage of
+the variables has to be provided by setting the
+<a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#roles">roles</a> of the corresponding columns. How to
+setup a data scheme is described in <a class="autorefs autorefs-internal" href="../../data_model/data_model/#data-model_1">data model</a>.</p>
+<p>Features are often of the type (illustrated in pseudo SQL-like
+syntax):
+<div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="n">within</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
+</code></pre></div>
+where <span class="arithmatex">\(X\)</span> is some sort of fixed numerical value. getML's algorithms do identify appropriate values for <span class="arithmatex">\(X\)</span> automatically and there is no need for you to provide them by hand.</p>
+<p>Features can also take the form of:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="k">transaction</span><span class="w"> </span><span class="k">type</span><span class="o">`</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">‘</span><span class="n">type_1</span><span class="err">’</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="err">‘</span><span class="n">type_2</span><span class="err">’</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="err">’</span><span class="n">type_3</span><span class="err">’</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="err">…</span>
+</code></pre></div>
+getML's algorithms also find appropriate conditions based on
+categorical data without any input from the user.</p>
+<p>The feature learning algorithms can handle combinations of
+conditions too. So, features of the form:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">SOME_AGGREGATION</span><span class="p">(</span><span class="w"> </span><span class="n">over</span><span class="w"> </span><span class="k">some</span><span class="w"> </span><span class="k">column</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">condition_1</span><span class="w"> </span><span class="k">AND</span>
+<span class="n">condition_2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">condition_3</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">condition_4</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">condition_5</span>
+</code></pre></div>
+will be engineered automatically as well. Again, no input from the user is required.</p>
+<p>To increase transparency relating to the created features, they can be expressed in SQL code. Even though automatically generated features will always be less intuitive than hand-crafted ones and could be quite complex, we want the user to get an understanding of what is going on.
+<a href="" id="feature-engineering-algorithms"></a></p>
+<h2 id="algorithms">Algorithms</h2>
+<p>getML contains four powerful feature learning algorithms: <a href="getml/feature_learning/FastProp"><code>FastProp</code></a>, <a href="getml/feature_learning/Multirel"><code>Multirel</code></a>, <a href="getml/feature_learning/Relboost"><code>Relboost</code></a> and <a href="getml/feature_learning/RelMT"><code>RelMT</code></a>.</p>
+<h3 id="fastprop">FastProp</h3>
+<p><a href="getml/feature_learning/FastProp"><code>FastProp</code></a> is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.</p>
+<p>A typical FastProp feature looks like this:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">FEATURE_1</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">feature_1</span><span class="p">,</span>
+<span class="w">      </span><span class="n">t1</span><span class="p">.</span><span class="n">rowid</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;rownum&quot;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;population&quot;</span><span class="w"> </span><span class="n">t1</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="ss">&quot;peripheral&quot;</span><span class="w"> </span><span class="n">t2</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">join_key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">rownum</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
+</code></pre></div>
+You may notice that such a feature looks pretty similar to the <a class="autorefs autorefs-internal" href="#feature-engineering-multirel-feature">Multirel feature</a> below. And indeed, FastProp shares some of its <a href="getml/feature_learning/aggregations">aggregations</a> with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the <code>WHERE</code> statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with <a class="autorefs autorefs-internal" href="../../preprocessing/preprocessing/#mappings">mappings</a>.</p>
+<h3 id="multirel">Multirel</h3>
+<p>Simply speaking, <a href="getml/feature_learning/Multirel"><code>Multirel</code></a> is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.</p>
+<p>MRDTL is a strain of academic literature that was particularly popular in the early 2000s. It is based on a greedy, tree-like approach:</p>
+<ul>
+<li>Define some sort of objective function that evaluates the quality of your feature as it relates to the target variable(s).</li>
+<li>Pick an aggregation and some column to be aggregated.</li>
+<li>Try out different conditions. Keep the one that generates the greatest improvement of your objective. Repeat until no improvement can be found or some sort of stopping criterion is reached.</li>
+</ul>
+<p>The reason this approach has never really taken off outside of academia is that an efficient implementation is far from trivial. Most papers on MRDTL implement the algorithm on top of an existing relational database system, like MySQL.</p>
+<p>The main problem with trying to implement something like this on top of an existing database is that it requires many redundant operations. Consider a feature like:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
+</code></pre></div>
+As we iterate through different values for the threshold <span class="arithmatex">\(X\)</span>, we are forced to repeat the same operations on the same data over and over again. Tasks like this bring traditional database engines to their knees.</p>
+<p>The core idea of getML's Multirel algorithm is to minimize redundancies through <code>incremental updates</code>. To allow for incremental updates and maximal efficiency, we developed a database engine from scratch in C++. When we evaluate a feature like:</p>
+<div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
+</code></pre></div>
+<p>and</p>
+<div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="mi">91</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
+</code></pre></div>
+<p>very little changes in between. Multirel only recalculates what has changed and keeps everything else untouched. Therefore, it needs two ingredients that can be incrementally updated: An objective function and the actual aggregation(s).</p>
+<p>Our first ingredient is an objective function that must be suited for incremental updates. When we move from 90 to 91 days, presumably only very few lines in the <a class="autorefs autorefs-internal" href="../../data_model/data_model/#the-population-table">population table</a> actually change. We do not need to recalculate the entire table. In practice, most commonly used objective functions are fine and this is not much of a limitation. However, there are some, like rank correlation, that cannot be used.</p>
+<p>The second ingredient, the aggregations, must allow for incremental updates too. This part is a bit harder, so let us elaborate: Let’s say we have a match between the population table that contains our targets and another table (or a self-join). This match happens to be between the two thresholds 90 and 91 days. As we move from 90 to 91 days, we have to update our aggregation for that match. For maximum efficiency, this needs also to be done incrementally. That means we do not want to recalculate the entire aggregation for all matches that it aggregates - instead just for the one match in between the two thresholds.</p>
+<p>We want to also support the <code>AND</code> and <code>OR</code> combinations of conditions. Therefore, it is possible that a match was <em>not</em> included in the aggregation before, but becomes part of it as we move the threshold. It is also possible that the match <em>was</em> included in the aggregation, but now it isn’t anymore.</p>
+<p>For an aggregation like <a href="getml/feature_learning/aggregations/Count"><code>Count</code></a>, incremental updates are straight-forward. If the match was not included, but now it is, then increment by 1. If was included, but it isn’t anymore, then decrement by 1.</p>
+<p>Things are more tricky for aggregations like <a href="getml/feature_learning/aggregations/Max"><code>Max</code></a>, <a href="getml/feature_learning/aggregations/Median"><code>Median</code></a>, or <a href="getml/feature_learning/aggregations/CountDistinct"><code>CountDistinct</code></a>. For instance, whereas incrementing <a href="getml/feature_learning/aggregations/Max"><code>Max</code></a> is easy, decrementing it is hard. If the match used to be included and is in fact the maximum value, we now have to find the next biggest match. And we have to find it quickly - ideally iterating through a set of thresholds should take linear time in the number of matches. To make it even more complicated, some cross-joins might result in a lot of matches, so any data structures that have non-trivial memory overhead are a no-go.</p>
+<p>Everything so far has shed light on how we train <em>one</em> feature. But in practice, we want more than one. So, how do we do that? Since we are using a tree-based algorithm anyway, we are able to harness the power of ensemble learning algorithms that have been shown to work very well with non-relational decision trees, namely bagging and gradient boosting.</p>
+<p>With bagging, we just sample randomly from our population table. We train a feature on that sample and then pick a different random sample to train the next feature.</p>
+<p>With gradient boosting, we calculate the pseudo-residuals of our previously trained features. We then train features that predict these pseudo-residuals. This procedure guarantees that new features are targeted and compensate the weaknesses of older ones.</p>
+<p>Transpiled to SQL, a typical feature generated by Multirel looks like this:</p>
+<p><a href="" id="feature-engineering-multirel-feature"></a></p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">FEATURE_1</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">feature_1</span><span class="p">,</span>
+<span class="w">       </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">       </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">,</span>
+<span class="w">            </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">join_key</span><span class="p">,</span><span class="w"> </span><span class="n">time_stamp</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rownum</span>
+<span class="w">     </span><span class="k">FROM</span><span class="w"> </span><span class="n">POPULATION</span>
+<span class="p">)</span><span class="w"> </span><span class="n">t1</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PERIPHERAL</span><span class="w"> </span><span class="n">t2</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">join_key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span>
+<span class="w">   </span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">499624</span><span class="w"> </span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">rownum</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
+</code></pre></div>
+<p>Further information can be found in the API documentation for <a href="getml/feature_learning/Multirel"><code>Multirel</code></a>.</p>
+<h3 id="relboost">Relboost</h3>
+<p><a href="getml/feature_learning/Relboost"><code>Relboost</code></a> is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.</p>
+<p>The main difference between Relboost and Multirel is that Multirel aggregates columns, whereas Relboost aggregates <em>learnable weights</em>.</p>
+<p>Relboost addresses a problem with Multirel that is related to computational complexity theory: In Multirel, every column can be aggregated and/or used for generating a condition. That means that the number of possible features is <span class="arithmatex">\(\mathcal{O}(n^2)\)</span> in the number of columns in the original tables. As a result, having twice as many columns will lead to a search space that is four times as large (in reality, it is a bit more complicated than that, but the basic point is true).</p>
+<p>Any computer scientist or applied mathematician will tell you that <span class="arithmatex">\(\mathcal{O}(n^2)\)</span> is a problem. If you have tables with many columns, it might turn out to be a problem. Of course, this issue is not specific to Multirel: It is a very fundamental problem that you would also have, if you were to write your features by hand or use brute force.</p>
+<p>Relboost offers a way out of this dilemma: Because Relboost aggregates learnable weights and columns will only be used for conditions, but not for aggregation. So, now the search space is <span class="arithmatex">\(\mathcal{O}(n)\)</span> in the number of columns in the original tables - much better.</p>
+<p>This might seem very theoretical, but it has considerable implications: From our experience with real-world data in various projects, we know that Relboost usually outperforms Multirel in terms of predictive accuracy <em>and</em> training time.</p>
+<p>However, these advantages come at a price: First, the features generated by Relboost are less intuitive. They are further away from what you might write by hand, even though they can still be expressed as SQL code. Second, it is more difficult to apply Relboost to <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#target">multiple targets</a>, because Relboost has to learn separate rules and weights for each target.</p>
+<p>Expressed as SQL code, a typical feature generated by Relboost looks like this:</p>
+<p><a href="" id="feature-engineering-relboost-feature"></a></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">FEATURE_1</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span>
+<span class="k">CASE</span>
+<span class="w">     </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">499624</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>
+<span class="w">     </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">499624</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="w">     </span><span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span>
+<span class="k">END</span>
+<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">feature_1</span><span class="p">,</span>
+<span class="w">     </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">     </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span>
+<span class="w">            </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">join_key</span><span class="p">,</span><span class="w"> </span><span class="n">time_stamp</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rownum</span>
+<span class="w">     </span><span class="k">FROM</span><span class="w"> </span><span class="n">POPULATION</span>
+<span class="p">)</span><span class="w"> </span><span class="n">t1</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PERIPHERAL</span><span class="w"> </span><span class="n">t2</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">join_key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">rownum</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
+</code></pre></div>
+Further information can be found in the API documentation for <a href="getml/feature_learning/Relboost"><code>Relboost</code></a>.</p>
+<h3 id="relmt">RelMT</h3>
+<p><a href="getml/feature_learning/RelMT"><code>RelMT</code></a> is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).</p>
+<p>RelMT features are particularly well-suited for time-series applications because time series often carry autoregressive structures, which can be approximated well by linear models. Think that this month's revenue can usually be modeled particularly well as a (linear) function of last month's revenue and so on. Purely tree-based models often struggle to learn such relationships because they have to fit a piecewise-constant model by predicting the average of all observations associated with each leaf. Thus, it can require a vast amount of splits to approximate a linear relationship.</p>
+<p>Here is a typical RelMT feature:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">FEATURE_1</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span>
+<span class="k">CASE</span>
+<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">499624</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
+<span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">julianday</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;1970-01-01&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">17202</span><span class="p">.</span><span class="mi">004</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="mi">122</span><span class="p">.</span><span class="mi">121</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3301</span><span class="p">.</span><span class="mi">156</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">003</span><span class="w"> </span>
+<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">499624</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span>
+<span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">julianday</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;1970-01-01&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">17202</span><span class="p">.</span><span class="mi">004</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">654</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3301</span><span class="p">.</span><span class="mi">156</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">824</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">720</span>
+<span class="w">     </span><span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span>
+<span class="k">END</span>
+<span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">feature_1</span><span class="p">,</span>
+<span class="w">     </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">     </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span>
+<span class="w">            </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">join_key</span><span class="p">,</span><span class="w"> </span><span class="n">time_stamp</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rownum</span>
+<span class="w">     </span><span class="k">FROM</span><span class="w"> </span><span class="n">POPULATION</span>
+<span class="p">)</span><span class="w"> </span><span class="n">t1</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">PERIPHERAL</span><span class="w"> </span><span class="n">t2</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">join_key</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="n">time_stamp</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">rownum</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
+<span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
+</code></pre></div>
+RelMT features share some characteristics with Relboost features: Compare the example feature to the <a class="autorefs autorefs-internal" href="#feature-engineering-relboost-feature">Relboost feature</a> above. Both algorithms generate splits based on a combination of conditions (the <code>WHEN</code> part of the <code>CASE WHEN</code> statement above). But while Relboost learns weights for its leaves (the <code>THEN</code> part of the <code>CASE WHEN</code> statement), RelMT learns a linear model, allowing for linear combinations between columns from the population table and columns of a certain peripheral table.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../deployment/deployment/" class="btn btn-neutral float-left" title="Deployment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../getml_suite/engine/" class="btn btn-neutral float-right" title="Engine">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../deployment/deployment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../getml_suite/engine/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Sqlite3 interface - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Sqlite3 interface";
+        var mkdocs_page_input_path = "user_guide/importing_data/sqlite3_interface.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Importing data</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Sqlite3 interface</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#import-from-sqlite3">Import from SQLite3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#export-to-sqlite3">Export to SQLite3</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Preprocessing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../preprocessing/preprocessing/">Preprocessing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Importing data</li>
+      <li class="breadcrumb-item active">Sqlite3 interface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="sqlite3"></a></p>
+<h1 id="sqlite3-interface">SQLite3 interface</h1>
+<p><a href="https://sqlite.org/index.html">SQLite3</a> is a popular in-memory database. It is faster than classical relational databases like PostgreSQL but less stable under massive parallel access. It requires all contained datasets to be loaded into memory, which might use up too much RAM, especially for large datasets.</p>
+<p>As with all other databases in the unified import interface of the getML Python API, you first need to connect to it using <a href="getml/database/connect_sqlite3"><code>connect_sqlite3()</code></a>.</p>
+<h2 id="import-from-sqlite3">Import from SQLite3</h2>
+<p>By selecting an existing table from your database in the <a href="getml/data/DataFrame/from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a href="getml/data/DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a href="getml/data/DataFrame/read_db"><code>read_db()</code></a> and <a href="getml/data/DataFrame/read_query"><code>read_query()</code></a> methods to replace the content of the current <a href="getml/data/DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<h2 id="export-to-sqlite3">Export to SQLite3</h2>
+<p>You can also write your results back into the SQLite3 database. By providing a name for the destination table in <a href="getml/pipeline/Pipeline/transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a href="getml/pipeline/Pipeline/predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../postgres_interface/" class="btn btn-neutral float-left" title="Postgres interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../predicting/predicting/" class="btn btn-neutral float-right" title="Predicting">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../postgres_interface/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../predicting/predicting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

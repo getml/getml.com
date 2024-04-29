@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Preprocessing - GetML Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Preprocessing";
+        var mkdocs_page_input_path = "user_guide/preprocessing/preprocessing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> GetML Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">getML Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Annotating data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../annotating_data/annotating_data/">Annotating data</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Data model</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../data_model/data_model/">Data model</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Deployment</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../deployment/deployment/">Deployment</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Feature engineering</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../feature_engineering/feature_engineering/">Feature engineering</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Getml suite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/engine/">Engine</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/getml_suite/">The getML suite</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/monitor/">Monitor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../getml_suite/python_api/">Python api</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Hyperopt</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../hyperopt/hyperopt/">Hyperopt</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Importing data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/csv_interface/">Csv interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/greenplum_interface/">Greenplum interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/importing_data/">Importing data</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/json_interface/">Json interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mariadb_interface/">Mariadb interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/mysql_interface/">Mysql interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/odbc_interface/">Odbc interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/pandas_interface/">Pandas interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/postgres_interface/">Postgres interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../importing_data/sqlite3_interface/">Sqlite3 interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Predicting</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../predicting/predicting/">Predicting</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Preprocessing</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Preprocessing</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#mappings">Mappings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#handling-of-free-form-text">Handling of free form text</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#one-row-of-a-table-with-a-text-field">One row of a table with a text field</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-implicit-peripheral-table-that-results-from-splitting">The (implicit) peripheral table that results from splitting</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Project management</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../project_management/project_management/">Project management</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">GetML Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User guide</li>
+          <li class="breadcrumb-item">Preprocessing</li>
+      <li class="breadcrumb-item active">Preprocessing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><a href="" id="preprocessing"></a></p>
+<h1 id="preprocessing_1">Preprocessing</h1>
+<p>As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and propositionalization deal with <em>relational data structures</em> and result in a single-table representation thereof, we categorize all operations that work on <em>single tables</em> as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.</p>
+<p>getML's preprocessors allow you to extract domains from email addresses (<a href="getml/preprocessors/EmailDomain"><code>EmailDomain</code></a>), impute missing values (<a href="getml/preprocessors/Imputation"><code>Imputation</code></a>), map categorical columns to a continuous representation (<a href="getml/preprocessors/Mapping"><code>Mapping</code></a>), extract seasonal components from time stamps (<a href="getml/preprocessors/Seasonal"><code>Seasonal</code></a>), extract sub strings from string-based columns (<a href="getml/preprocessors/Substring"><code>Substring</code></a>) and split up <a href="getml/data/roles/text"><code>text</code></a> columns (<a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a>). Preprocessing operations in getML are very efficient and happen really fast. In fact, most of the time you won't even notice the presence of a preprocessor in your pipeline. getML's preprocessors operate on an abstract level without polluting your original data, are evaluated lazily and their set-up requires minimal effort.</p>
+<p>Here is a small example that shows the <a href="getml/preprocessors/Seasonal"><code>Seasonal</code></a> preprocessor in action.
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
+
+<span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+
+<span class="n">traffic</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_interstate94</span><span class="p">()</span>
+
+<span class="c1"># traffic explicitly holds seasonal components (hour, day, month, ...)</span>
+<span class="c1"># extracted from column ds; we copy traffic and delete all those components</span>
+<span class="n">traffic2</span> <span class="o">=</span> <span class="n">traffic</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;hour&quot;</span><span class="p">,</span> <span class="s2">&quot;weekday&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span>
+
+<span class="n">start_test</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+
+<span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">time</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
+    <span class="n">test</span><span class="o">=</span><span class="n">start_test</span><span class="p">,</span>
+    <span class="n">time_stamp</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">time_series1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
+    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
+    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">time_series2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic2</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
+    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
+    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">fast_prop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(</span>
+    <span class="n">loss_function</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">loss_function</span><span class="o">.</span><span class="n">SquareLoss</span><span class="p">)</span>
+
+<span class="n">pipe1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series1</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
+<span class="p">)</span>
+
+<span class="n">pipe2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series2</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">preprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Seasonal</span><span class="p">()],</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
+<span class="p">)</span>
+
+<span class="c1"># pipe1 includes no preprocessor but receives the data frame with the components</span>
+<span class="n">pipe1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series1</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
+
+<span class="c1"># pipe2 includes the preprocessor; receives data w/o components</span>
+<span class="n">pipe2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series2</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
+
+<span class="n">month_based1</span> <span class="o">=</span> <span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="n">month_based2</span> <span class="o">=</span> <span class="n">pipe2</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;COUNT( DISTINCT t2.</span><span class="se">\&quot;</span><span class="s2">strftime(&#39;%m&#39;&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">month_based1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_10&quot;;</span>
+<span class="c1"># </span>
+<span class="c1"># CREATE TABLE &quot;FEATURE_1_10&quot; AS</span>
+<span class="c1"># SELECT COUNT( t2.&quot;month&quot;  ) - COUNT( DISTINCT t2.&quot;month&quot; ) AS &quot;feature_1_10&quot;,</span>
+<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
+<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
+<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
+<span class="c1"># ON 1 = 1</span>
+<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
+<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
+<span class="c1"># GROUP BY t1.rowid;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">month_based2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_5&quot;;</span>
+<span class="c1"># </span>
+<span class="c1"># CREATE TABLE &quot;FEATURE_1_5&quot; AS</span>
+<span class="c1"># SELECT COUNT( t2.&quot;strftime(&#39;%m&#39;, ds )&quot;  ) - COUNT( DISTINCT t2.&quot;strftime(&#39;%m&#39;, ds )&quot; ) AS &quot;feature_1_5&quot;,</span>
+<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
+<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
+<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
+<span class="c1"># ON 1 = 1</span>
+<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
+<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
+<span class="c1"># GROUP BY t1.rowid;</span>
+</code></pre></div></p>
+<p>If you compare both of the features above, you will notice they are exactly the same: <code>COUNT - COUNT(DISTINCT)</code> on the month component conditional on the time-based restrictions introduced through memory and horizon.</p>
+<p>Pipelines can include more than one preprocessor.</p>
+<p>While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: <a href="getml/preprocessors/Mapping"><code>Mapping</code></a> and <a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a>.
+<a href="" id="preprocessing-mappings"></a></p>
+<h2 id="mappings">Mappings</h2>
+<p><a href="getml/preprocessors/Mapping"><code>Mapping</code></a> s are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.</p>
+<p>Mappings are a simple and interpretable alternative representation for categorical data. By introducing a continuous representation, mappings allow getML's feature learning algorithms to apply arbitrary aggregations to categorical columns. Further, mappings enable huge gains in efficiency when learning patterns from categorical data. You can control the extent mappings are utilized by specifying the minimum number of matching rows required for categories that constitutes a mapping through the <code>min_freq</code> parameter.</p>
+<p>Here is an example mapping from the <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb">CORA notebook</a>:
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">;</span>
+<span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">);</span>
+<span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;Case_Based&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">7109826589595376</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Rule_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">07368421052631578</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Reinforcement_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0576923076923077</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Theory&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0547945205479452</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Genetic_Algorithms&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">03157894736842105</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Neural_Networks&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">02088772845953003</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Probabilistic_Methods&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">01293103448275862</span><span class="p">);</span>
+</code></pre></div>
+Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
+<a href="" id="preprocessing-free-form-text"></a></p>
+<h2 id="handling-of-free-form-text">Handling of free form text</h2>
+<p>getML provides the role <a href="getml/data/roles/text"><code>text</code></a> to annotate free form text fields within relational data structures. Learning from <a href="getml/data/roles/text"><code>text</code></a> columns works as follows: First, for each of the <a href="getml/data/roles/text"><code>text</code></a> columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter <code>vocab_size</code>. If a text field contains words that belong to the vocabulary, getML deals with columns of role <a href="getml/data/roles/text"><code>text</code></a> through one of two approaches: Text fields can either can be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the <a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a> preprocessor. Opting for the second approach is as easy as adding the <a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a> to the list of <code>preprocessors</code> on your <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a>. The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.</p>
+<h3 id="one-row-of-a-table-with-a-text-field">One row of a table with a text field</h3>
+<table>
+<thead>
+<tr>
+<th>rownum</th>
+<th>text field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52</td>
+<td>The quick brown fox jumps over the lazy dog</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-implicit-peripheral-table-that-results-from-splitting">The (implicit) peripheral table that results from splitting</h3>
+<table>
+<thead>
+<tr>
+<th>rownum</th>
+<th>words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52</td>
+<td>the</td>
+</tr>
+<tr>
+<td>52</td>
+<td>quick</td>
+</tr>
+<tr>
+<td>52</td>
+<td>brown</td>
+</tr>
+<tr>
+<td>52</td>
+<td>fox</td>
+</tr>
+<tr>
+<td>52</td>
+<td>jumps</td>
+</tr>
+<tr>
+<td>52</td>
+<td>over</td>
+</tr>
+<tr>
+<td>52</td>
+<td>the</td>
+</tr>
+<tr>
+<td>52</td>
+<td>lazy</td>
+</tr>
+<tr>
+<td>52</td>
+<td>dog</td>
+</tr>
+</tbody>
+</table>
+<p>As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (<code>COUNT WHERE words IN ('quick', 'jumps')</code>). Further, by utilizing <a class="autorefs autorefs-internal" href="#mappings">mappings</a>, any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.</p>
+<p>Note that the splitting of text fields can be computationally expensive. If performance suffers too much, you may resort to the default behavior by removing the <a href="getml/preprocessors/TextFieldSplitter"><code>TextFieldSplitter</code></a> from your <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../predicting/predicting/" class="btn btn-neutral float-left" title="Predicting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../project_management/project_management/" class="btn btn-neutral float-right" title="Project management">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../predicting/predicting/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../project_management/project_management/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
