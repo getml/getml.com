@@ -1,7 +1,7 @@
 [](){#python-api}
 # The getML Python API
 
-The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from [getml.com](https://getml.com) (see [Installation](importing_data)).
+The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from [getml.com](https://getml.com) (see [Installation](installation)).
 
 The most important thing you have to keep in mind when working with the Python API is this:
 
@@ -10,7 +10,7 @@ The most important thing you have to keep in mind when working with the Python A
 In addition, two basic requirements need to be fulfilled to successfully use the API:
 
 1. You need a running getML engine (on the same host as your Python session) (see [starting the engine][engine-start-engine])
-2. You need to set a project in the getML engine using `getml.engine.set_project`.
+2. You need to set a project in the getML engine using `getml.engine.set_project()`.
 
 ```python
 import getml
