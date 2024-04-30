@@ -274,13 +274,6 @@
 <span class="c1"># | 12341        | 12.14        | 123          | hawk          | 2019-05-02    |</span>
 <span class="c1"># | 5127         | 12.6         | 512          | parrot        | 2019-02-28    |</span>
 <span class="c1"># | 65311        | 11.92        | 671          | goose         | 2018-12-24    |</span>
-
-<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal_id&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
-<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
-<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;votes&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>
-<span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">time_stamp</span><span class="p">)</span>    
-<span class="n">getml_df</span>
-<span class="c1"># Updated DataFrame structure will be displayed here.</span>
 </code></pre></div>
 <p>To make use of the imported data, you have to tell getML how you intend to use each column by assigning a role (<a href="getml/data/roles"><code>roles</code></a>). This is done by using the <a href="getml/data/DataFrame/set_role"><code>set_role</code></a> method of the <a href="getml/data/DataFrame"><code>DataFrame</code></a>. Each column must have exactly one role. If you wish to use a column in two different roles, you have to add it twice and assign each copy a different role.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">getml_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s1">&#39;animal_id&#39;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
@@ -488,8 +481,6 @@ it is very unlikely that such a feature would perform well out-of-sample.</p>
     <script>var base_url = "../../..";</script>
     <script src="../../../js/theme_extra.js"></script>
     <script src="../../../js/theme.js"></script>
-      <script src="../../../javascripts/mathjax.js"></script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="../../../search/main.js"></script>
     <script>

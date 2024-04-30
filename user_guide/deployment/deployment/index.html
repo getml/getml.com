@@ -62,19 +62,23 @@
     <ul class="current">
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">Deployment</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#transpiling-pipelines">Transpiling pipelines</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#returning-python-objects">Returning Python objects</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#writing-into-a-database">Writing into a database</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#responding-to-a-http-post-request">Responding to a HTTP POST request</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#batch-prediction">Batch prediction</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#http-endpoints">HTTP Endpoints</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#request-format">Request Format</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#request-format">Request Format</a>
+    <li class="toctree-l4"><a class="reference internal" href="#time-stamp-formats-in-requests">Time stamp formats in requests</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-an-existing-dataframe">Using an existing DataFrame</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#using-data-from-a-database">Using data from a database</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#transform-endpoint">Transform Endpoint</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#predict-endpoint">Predict Endpoint</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -174,22 +178,22 @@
               
                 <h1 id="deployment">Deployment</h1>
 <p>The results of the <a class="autorefs autorefs-internal" href="../../feature_engineering/feature_engineering/#feature-engineering_1">feature learning</a> and the <a class="autorefs autorefs-internal" href="../../predicting/predicting/#predicting_1">prediction</a> can be retrieved in different ways and formats.</p>
-<h2 id="transpiling-pipelines">Transpiling pipelines</h2>
-<ul>
-<li>Using <a href="getml/pipeline/SQLCode/save"><code>SQLCode.save()</code></a>, you can transpile Pipelines to SQL code, which can be used without any proprietary components.</li>
-</ul>
-<h2 id="returning-python-objects">Returning Python objects</h2>
-<ul>
-<li>Using the <a href="getml/pipeline/Pipeline/transform"><code>Pipeline.transform</code></a> and <a href="getml/pipeline/Pipeline/predict"><code>Pipeline.predict</code></a> methods of a trained <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a>, you can access both the features and the predictions as <code>numpy.ndarray</code> via the Python API.</li>
-</ul>
-<h2 id="writing-into-a-database">Writing into a database</h2>
-<ul>
-<li>You can also write both features and prediction results back into a new table of the connected database by providing the <code>table_name</code> argument in the <a href="getml/pipeline/Pipeline/transform"><code>Pipeline.transform</code></a> and <a href="getml/pipeline/Pipeline/predict"><code>Pipeline.predict</code></a> methods. Please refer to the <a class="autorefs autorefs-internal" href="../../importing_data/importing_data/#unified-import-interface">unified import interface</a> for information on how to connect to a database.</li>
-</ul>
-<h2 id="responding-to-a-http-post-request">Responding to a HTTP POST request</h2>
-<ul>
-<li>The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.</li>
-</ul>
+<p><strong>Transpiling pipelines</strong></p>
+<blockquote>
+<p>Using <a href="getml/pipeline/SQLCode/save"><code>SQLCode.save()</code></a>, you can transpile Pipelines to SQL code, which can be used without any proprietary components.</p>
+</blockquote>
+<p><strong>Returning Python objects</strong></p>
+<blockquote>
+<p>Using the <a href="getml/pipeline/Pipeline/transform"><code>Pipeline.transform</code></a> and <a href="getml/pipeline/Pipeline/predict"><code>Pipeline.predict</code></a> methods of a trained <a href="getml/pipeline/Pipeline"><code>Pipeline</code></a>, you can access both the features and the predictions as <code>numpy.ndarray</code> via the Python API.</p>
+</blockquote>
+<p><strong>Writing into a database</strong></p>
+<blockquote>
+<p>You can also write both features and prediction results back into a new table of the connected database by providing the <code>table_name</code> argument in the <a href="getml/pipeline/Pipeline/transform"><code>Pipeline.transform</code></a> and <a href="getml/pipeline/Pipeline/predict"><code>Pipeline.predict</code></a> methods. Please refer to the <a class="autorefs autorefs-internal" href="../../importing_data/importing_data/#unified-import-interface">unified import interface</a> for information on how to connect to a database.</p>
+</blockquote>
+<p><strong>Responding to a HTTP POST request</strong></p>
+<blockquote>
+<p>The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.</p>
+</blockquote>
 <h2 id="batch-prediction">Batch prediction</h2>
 <p>Batch prediction pipelines are the most common way of productionizing machine learning pipelines on relational data. These pipelines are usually set to run regularly (once a month, once a week, once a day...) to create a batch of predictions on the newest data. They are typically inserted into a <a href="https://www.docker.com/">Docker</a> container and scheduled using tools like <a href="https://www.jenkins.io/">Jenkins</a> and/or <a href="https://airflow.apache.org/">Airflow</a>.</p>
 <p>If you are looking for a pure Python, 100% open-source way to productionize getML's <a href="getml/data/Pipeline"><code>Pipeline</code></a>s, you can transpile all the features into sqlite3 code. sqlite3 is part of the Python standard library, and you can use getML's 100% open source and pure Python <a href="getml/sqlite3"><code>sqlite3</code></a> which provides some useful extra functionality not included in Python's standard library.</p>
@@ -205,7 +209,7 @@
 <p>For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  <a href="http://localhost:1709/predict/PIPELINE_NAME">http://localhost:1709/predict/PIPELINE_NAME</a></p>
 </div>
 <p><a href="" id="deployment-request-format"></a></p>
-<h2 id="request-format">Request Format</h2>
+<h3 id="request-format">Request Format</h3>
 <p>In all POST requests to the endpoints, a JSON string with the following syntax has to be provided in the body:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
@@ -244,7 +248,7 @@ could post a JSON string like this:</p>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h1 id="time-stamp-formats-in-requests">Time stamp formats in requests</h1>
+<h3 id="time-stamp-formats-in-requests">Time stamp formats in requests</h3>
 <p>You might have noticed that the time stamps in the example above have been
 passed as numerical values and not as their string representations
 shown in the beginning. Both ways are
@@ -268,7 +272,7 @@ in order for the getML engine to interpret your data properly.</p>
 <p>All special characters available for specifying the format of the time
 stamps are listed and described in
 e.g. <a href="getml/data/DataFrame/read_csv"><code>read_csv()</code></a>.</p>
-<h1 id="using-an-existing-dataframe">Using an existing <a href="getml/data/DataFrame"><code>DataFrame</code></a></h1>
+<h3 id="using-an-existing-dataframe">Using an existing <a href="getml/data/DataFrame"><code>DataFrame</code></a></h3>
 <p>You can also use a
 <a href="getml/data/DataFrame"><code>DataFrame</code></a> that already 
 exists on the getML engine:</p>
@@ -283,11 +287,11 @@ exists on the getML engine:</p>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h1 id="using-data-from-a-database">Using data from a database</h1>
+<h3 id="using-data-from-a-database">Using data from a database</h3>
 <p>You can also read the data from the connected database
 (see <a class="autorefs autorefs-internal" href="../../importing_data/importing_data/#unified-import-interface">unified import interface</a>) 
 by passing an arbitrary query to the <code>query</code> key:</p>
-<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
 <span class="w">    </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM PERIPHERAL WHERE join_key = &#39;0&#39;;&quot;</span>
 <span class="w">  </span><span class="p">}],</span>
@@ -298,8 +302,8 @@ by passing an arbitrary query to the <code>query</code> key:</p>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<a href="" id="deployment-transform"></a></p>
-<h1 id="transform-endpoint">Transform Endpoint</h1>
+<p><a href="" id="deployment-transform"></a></p>
+<h3 id="transform-endpoint">Transform Endpoint</h3>
 <p>The transform endpoint returns the generated features.</p>
 <p><a href="http://localhost:1709/transform/PIPELINE_NAME">http://localhost:1709/transform/PIPELINE_NAME</a></p>
 <p>Such an HTTP request can be sent in many languages. For
@@ -313,7 +317,7 @@ the same machine as the getML monitor) for better reproducibility.</p>
 <span class="w">     </span>http://localhost:1709/transform/PIPELINE_NAME
 </code></pre></div>
 <a href="" id="deployment-predict"></a></p>
-<h1 id="predict-endpoint">Predict Endpoint</h1>
+<h3 id="predict-endpoint">Predict Endpoint</h3>
 <p>When using getML as an end-to-end data science pipeline, you can use
 the predict endpoint to upload new, unseen data and receive the
 resulting predictions as a response via HTTP.</p>
@@ -367,8 +371,6 @@ the same machine as the getML monitor) for better reproducibility.</p>
     <script>var base_url = "../../..";</script>
     <script src="../../../js/theme_extra.js"></script>
     <script src="../../../js/theme.js"></script>
-      <script src="../../../javascripts/mathjax.js"></script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="../../../search/main.js"></script>
     <script>

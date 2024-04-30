@@ -172,13 +172,13 @@
               
                 <p><a href="" id="python-api"></a></p>
 <h1 id="the-getml-python-api">The getML Python API</h1>
-<p>The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from <a href="https://getml.com">getml.com</a> (see <a href="importing_data">Installation</a>).</p>
+<p>The getML Python API is shipped along with the matching version of the getML engine and monitor in the file you can download from <a href="https://getml.com">getml.com</a> (see <a href="installation">Installation</a>).</p>
 <p>The most important thing you have to keep in mind when working with the Python API is this:</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;All classes in the Python API are just handles to objects living in the getML engine.</p>
 <p>In addition, two basic requirements need to be fulfilled to successfully use the API:</p>
 <ol>
 <li>You need a running getML engine (on the same host as your Python session) (see <a class="autorefs autorefs-internal" href="../engine/#starting-the-engine">starting the engine</a>)</li>
-<li>You need to set a project in the getML engine using <code>getml.engine.set_project</code>.</li>
+<li>You need to set a project in the getML engine using <code>getml.engine.set_project()</code>.</li>
 </ol>
 <p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
@@ -261,8 +261,6 @@ The function <code>list_pipelines()</code> lists all available pipelines within 
     <script>var base_url = "../../..";</script>
     <script src="../../../js/theme_extra.js"></script>
     <script src="../../../js/theme.js"></script>
-      <script src="../../../javascripts/mathjax.js"></script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       <script src="../../../search/main.js"></script>
     <script>
