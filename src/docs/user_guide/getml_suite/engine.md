@@ -3,8 +3,6 @@
 
 
 
-## A verbose title about foobar
-
 The getML engine is a standalone program written in C++ that does the actual work of feature engineering and prediction.
 
 [](){#engine-start-engine}

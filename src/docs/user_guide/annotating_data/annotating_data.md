@@ -60,13 +60,6 @@ getml_df
 # | 12341        | 12.14        | 123          | hawk          | 2019-05-02    |
 # | 5127         | 12.6         | 512          | parrot        | 2019-02-28    |
 # | 65311        | 11.92        | 671          | goose         | 2018-12-24    |
-
-getml_df.set_role(['animal_id'], getml.data.roles.join_key)
-getml_df.set_role(['animal'], getml.data.roles.categorical)
-getml_df.set_role(['votes', 'weight'], getml.data.roles.numerical)
-getml_df.set_role(['date'], getml.data.roles.time_stamp)    
-getml_df
-# Updated DataFrame structure will be displayed here.
 ```
 
 To make use of the imported data, you have to tell getML how you intend to use each column by assigning a role ([`roles`](getml/data/roles)). This is done by using the [`set_role`](getml/data/DataFrame/set_role) method of the [`DataFrame`](getml/data/DataFrame). Each column must have exactly one role. If you wish to use a column in two different roles, you have to add it twice and assign each copy a different role.
