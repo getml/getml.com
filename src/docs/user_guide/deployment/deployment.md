@@ -2,21 +2,19 @@
 
 The results of the [feature learning][feature-engineering] and the [prediction][predicting] can be retrieved in different ways and formats.
 
-## Transpiling pipelines
+**Transpiling pipelines**
+> Using [`SQLCode.save()`](getml/pipeline/SQLCode/save), you can transpile Pipelines to SQL code, which can be used without any proprietary components.
 
-- Using [`SQLCode.save()`](getml/pipeline/SQLCode/save), you can transpile Pipelines to SQL code, which can be used without any proprietary components.
+**Returning Python objects**
+> Using the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods of a trained [`Pipeline`](getml/pipeline/Pipeline), you can access both the features and the predictions as `numpy.ndarray` via the Python API.
 
-## Returning Python objects
+**Writing into a database**
+> You can also write both features and prediction results back into a new table of the connected database by providing the `table_name` argument in the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods. Please refer to the [unified import interface][importing-data-unified-interface] for information on how to connect to a database.
 
-- Using the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods of a trained [`Pipeline`](getml/pipeline/Pipeline), you can access both the features and the predictions as `numpy.ndarray` via the Python API.
+**Responding to a HTTP POST request**
 
-## Writing into a database
+> The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.
 
-- You can also write both features and prediction results back into a new table of the connected database by providing the `table_name` argument in the [`Pipeline.transform`](getml/pipeline/Pipeline/transform) and [`Pipeline.predict`](getml/pipeline/Pipeline/predict) methods. Please refer to the [unified import interface][importing-data-unified-interface] for information on how to connect to a database.
-
-## Responding to a HTTP POST request
-
-- The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.
 ## Batch prediction
 
 Batch prediction pipelines are the most common way of productionizing machine learning pipelines on relational data. These pipelines are usually set to run regularly (once a month, once a week, once a day...) to create a batch of predictions on the newest data. They are typically inserted into a [Docker](https://www.docker.com/) container and scheduled using tools like [Jenkins](https://www.jenkins.io/) and/or [Airflow](https://airflow.apache.org/).
@@ -37,7 +35,7 @@ To each of them, you must send a POST request containing the new data as a JSON 
     For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  [http://localhost:1709/predict/PIPELINE_NAME](http://localhost:1709/predict/PIPELINE_NAME)
 
 [](){#deployment-request-format}
-## Request Format
+### Request Format
 
 In all POST requests to the endpoints, a JSON string with the following syntax has to be provided in the body:
 
@@ -85,7 +83,8 @@ could post a JSON string like this:
   }
 }
 ```
-# Time stamp formats in requests
+
+### Time stamp formats in requests
 
 You might have noticed that the time stamps in the example above have been
 passed as numerical values and not as their string representations
@@ -114,7 +113,7 @@ All special characters available for specifying the format of the time
 stamps are listed and described in
 e.g. [`read_csv()`](getml/data/DataFrame/read_csv).
 
-# Using an existing [`DataFrame`](getml/data/DataFrame)
+### Using an existing [`DataFrame`](getml/data/DataFrame)
 
 You can also use a
 [`DataFrame`](getml/data/DataFrame) that already 
@@ -133,7 +132,7 @@ exists on the getML engine:
 }
 ```
 
-# Using data from a database
+### Using data from a database
 
 You can also read the data from the connected database
 (see [unified import interface][importing-data-unified-interface]) 
@@ -151,8 +150,9 @@ by passing an arbitrary query to the `query` key:
   }
 }
 ```
+
 [](){#deployment-transform}
-# Transform Endpoint
+### Transform Endpoint
 
 The transform endpoint returns the generated features.
 
@@ -171,7 +171,7 @@ curl --header "Content-Type: application/json"           \
      http://localhost:1709/transform/PIPELINE_NAME
 ```
 [](){#deployment-predict}
-# Predict Endpoint
+### Predict Endpoint
 
 When using getML as an end-to-end data science pipeline, you can use
 the predict endpoint to upload new, unseen data and receive the
