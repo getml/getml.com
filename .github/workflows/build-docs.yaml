@@ -25,9 +25,13 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install dependencies
-        run: pip install mkdocs mkdocstrings mkdocs-material
-          
+      - name: Install public dependencies
+        run: pip install mkdocs mkdocstrings 
+
+      - name: Install private mkdocs-material-insiders
+        run: git clone https://${{ secrets.GH_PAT_CODE_17_DEV }}@github.com/squidfunk/mkdocs-material-insiders.git |
+          pip install -e mkdocs-material-insiders
+
       - name: Build documentation
         run: mkdocs build
 
