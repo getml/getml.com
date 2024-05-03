@@ -3,11 +3,7 @@ site_name: GetML Documentation
 plugins:
   - search
   - autorefs
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: sphinx
+  - mkdocstrings
 
 
 markdown_extensions:

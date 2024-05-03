@@ -272,5 +272,3 @@ you can set the `comparison_only` flag in
     learning algorithm will not compare them to a fixed date, because
     it is very unlikely that such a feature would perform well out-of-sample.
 
-
-
