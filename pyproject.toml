@@ -3,19 +3,21 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "getml-docs4"
+name = "getml-docs"
 keywords = []
 authors = [
-  { name = "Jan", email = "jan@getml.com" },
+  { name = "Awais", email = "awais@getml.com" },
+  { name = "Jan", email = "jan@getml.com" }
 ]
 
 version = "0.0.1"
 
 [tool.hatch.envs.default]
 dependencies = [
+  "mkdocs",
   "getml",
   "mkdocs-gen-files",
-  "mkdocstrings[python-legacy]>=0.18",
+  "mkdocstrings-python",
   "docstring-to-markdown",
   "mkdocs-material"
 ]
