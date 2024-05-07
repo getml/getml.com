@@ -63,6 +63,7 @@ aggregate operations. In fact, the relationships between the target and the
 original data is *learned* through one of [getML's feature learning
 algorithms][feature-engineering-algorithms].
 
+[](){#feature-engineering-design-principles}
 ## Design principles
 
 The general procedure for feature learning on relational data and time
@@ -109,6 +110,7 @@ To increase transparency relating to the created features, they can be expressed
 
 getML contains four powerful feature learning algorithms: [`FastProp`](getml/feature_learning/FastProp), [`Multirel`](getml/feature_learning/Multirel), [`Relboost`](getml/feature_learning/Relboost) and [`RelMT`](getml/feature_learning/RelMT).
 
+[](){#feature-engineering-algorithms-fastprop}
 ### FastProp
 
 [`FastProp`](getml/feature_learning/FastProp) is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.
@@ -130,6 +132,7 @@ GROUP BY t1.rownum,
 ```
 You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [aggregations](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
 
+[](){#feature-engineering-algorithms-multirel}
 ### Multirel
 
 Simply speaking, [`Multirel`](getml/feature_learning/Multirel) is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
@@ -205,6 +208,7 @@ GROUP BY t1.rownum,
 
 Further information can be found in the API documentation for [`Multirel`](getml/feature_learning/Multirel).
 
+[](){#feature-engineering-algorithms-relboost}
 ### Relboost
 
 [`Relboost`](getml/feature_learning/Relboost) is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
@@ -250,6 +254,7 @@ GROUP BY t1.rownum,
 ```
 Further information can be found in the API documentation for [`Relboost`](getml/feature_learning/Relboost).
 
+[](){#feature-engineering-algorithms-relmt}
 ### RelMT
 
 [`RelMT`](getml/feature_learning/RelMT) is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
