@@ -10,12 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # defaults:
-    #   run:
-    #     working-directory: src
-
     steps:
-      - name: Checkout
+      - name: Checkout getml-docs repo
         uses: actions/checkout@v4
         with:
           ref: develop
@@ -24,7 +20,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: 3.11
-
 
       - name: Set up SSH
         run: |
@@ -49,24 +44,19 @@ jobs:
           ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Install Hatch
-        run: pip install hatch 
-
-      - name: Create Hatch environment and install dependencies
+      - name: Install Hatch & create environment
         run: |
-          # cd ..
+          pip install hatch 
           hatch env create
 
-      - name: Clone GitLab repository
-        run: git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
-
-      - name: Install getML
-        run: hatch run pip install -e monorepo/src/python-api
+      - name: Clone monorepo & install getML
+        run: |
+          git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
+          hatch run pip install monorepo/src/python-api
 
       - name: Build documentation
         run: |
           cd src
-          hatch run pip list
           hatch run mkdocs build 
 
       - name: Deploy to GitHub Pages
