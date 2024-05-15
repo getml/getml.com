@@ -55,7 +55,7 @@ jobs:
       - name: Create Hatch environment and install dependencies
         run: |
           # cd ..
-          hatch shell
+          hatch env create
 
       - name: Clone GitLab repository
         run: git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
@@ -66,7 +66,8 @@ jobs:
       - name: Build documentation
         run: |
           cd src
-          mkdocs build
+          hatch run pip list
+          hatch run mkdocs build 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
