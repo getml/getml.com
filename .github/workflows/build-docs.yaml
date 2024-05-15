@@ -61,7 +61,7 @@ jobs:
         run: git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
 
       - name: Install getML
-        run: pip install -e monorepo/src/python-api
+        run: hatch run pip install -e monorepo/src/python-api
 
       - name: Build documentation
         run: |
