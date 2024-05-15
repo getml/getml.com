@@ -7936,14 +7936,13 @@
 
 
 <a id="getml.data.columns.random"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Generates random numbers</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7956,74 +7955,72 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.columns.random.random" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">random</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">5849</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">random</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">5849</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create random column.</p>
 <p>The numbers will be uniformly distributed from 0.0 to 1.0. This can be
 used to randomly split a population table into a training and a test
 set</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>seed</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>5849</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>seed</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator.</p>
+              </div>
+            </td>
+            <td>
+                  <code>5849</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="../columns/#getml.data.columns.columns.FloatColumnView">FloatColumnView</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.FloatColumnView"><code>FloatColumnView</code></a>:
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="../columns/#getml.data.columns.columns.FloatColumnView">FloatColumnView</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.FloatColumnView"><code>FloatColumnView</code></a>:
 FloatColumn containing random numbers</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8035,9 +8032,9 @@ FloatColumn containing random numbers</p>
 <span class="n">population_test</span> <span class="o">=</span> <span class="n">population</span><span class="p">[</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="mf">0.7</span><span class="p">]</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/random.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/columns/random.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
@@ -8103,8 +8100,8 @@ FloatColumn containing random numbers</p>
     <span class="n">col</span><span class="o">.</span><span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;seed_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seed</span>
     <span class="k">return</span> <span class="n">col</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8112,7 +8109,7 @@ FloatColumn containing random numbers</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

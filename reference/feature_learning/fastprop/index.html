@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.feature_learning.fastprop"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Feature learning based on propositionalization.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.feature_learning.fastprop.FastProp" class="doc doc-heading">
-          <code>FastProp</code>
+            <code>FastProp</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Generates simple features based on propositionalization.</p>
 <p><a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.FastProp"><code>FastProp</code></a> generates simple and easily
 interpretable features for relational data and time series. It is based on a
@@ -8017,139 +8017,138 @@ preprocessors, which can drastically improve predictive accuracy.</p>
 out the User guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#fastprop">FastProp</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.aggregation">aggregation</span></code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Mathematical operations used by the automated feature
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.aggregation">aggregation</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.delta_t">delta_t</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Frequency with which lag variables will be explored in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.delta_t">delta_t</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables. Please note that you must also pass a value to
 max_lag.</p>
 <p>For more information please refer to
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Data Model Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.max_lag">max_lag</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum number of steps taken into the past to form lag variables. The
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.max_lag">max_lag</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum number of steps taken into the past to form lag variables. The
 step size is determined by delta_t. Please note that you must also pass
 a value to delta_t.</p>
 <p>For more information please refer to
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.min_df">min_df</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.min_df">min_df</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
 Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.n_most_frequent">n_most_frequent</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.FastProp"><code>FastProp</code></a> can find the N most frequent
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.n_most_frequent">n_most_frequent</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.FastProp"><code>FastProp</code></a> can find the N most frequent
 categories in a categorical column and derive features from them.
 The parameter determines how many categories should be used.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.sampling_factor">sampling_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>FastProp uses a bootstrapping procedure (sampling with replacement) to train
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.sampling_factor">sampling_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>FastProp uses a bootstrapping procedure (sampling with replacement) to train
 each of the features. The sampling factor is proportional to the share of
 the samples randomly drawn from the population table every time Multirel
 generates a new feature. A lower sampling factor (but still greater than
@@ -8158,40 +8157,40 @@ faster training. When set to 1.0, roughly 2,000 samples are drawn from the
 population table. If the population table contains less than 2,000 samples,
 it will use standard bagging. When set to 0.0, there will be no sampling at
 all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastprop.FastProp.vocab_size">vocab_size</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the maximum number
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastprop.FastProp.vocab_size">vocab_size</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastprop.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/fastprop.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
@@ -8479,12 +8478,11 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 
         <span class="n">_validate_dfs_model_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8497,57 +8495,55 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.fastprop.FastProp.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing the parameters to validate.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing the parameters to validate.
 params can hold the full set or a subset of the
 parameters explained in
 <a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.FastProp"><code>FastProp</code></a>.
 If params is None, the
 current set of parameters in the
 instance dictionary will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastprop.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/fastprop.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
 <span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
@@ -8613,8 +8609,8 @@ instance dictionary will be validated.</p>
 
     <span class="n">_validate_dfs_model_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8622,8 +8618,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8632,7 +8627,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

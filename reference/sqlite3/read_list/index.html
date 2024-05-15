@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.sqlite3.read_list"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Reads data into an sqlite3 table.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,78 +7953,76 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.read_list.read_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reads data into an sqlite3 table.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the table to write to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>data</code></td>
-          <td>
-                <code>List[List[Object]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The data to insert into the table.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the table to write to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data</code></td>
+            <td>
+                  <code>List[List[Object]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The data to insert into the table.
 Every list represents one row to be read into the table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/read_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/read_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
@@ -8111,8 +8108,8 @@ Every list represents one row to be read into the table.</p>
         <span class="o">+</span> <span class="s2">&quot; invalid lines.&quot;</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8120,7 +8117,7 @@ Every list represents one row to be read into the table.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

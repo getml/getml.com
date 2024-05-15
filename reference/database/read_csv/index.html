@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.read_csv"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Reads a CSV file into the database.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,150 +7953,149 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.read_csv.read_csv" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_csv</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fnames</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">num_lines_read</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_csv</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fnames</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">num_lines_read</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reads a CSV file into the database.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the table in which the data is to be inserted.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>fnames</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of CSV file names to be read.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>quotechar</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used to wrap strings. Default:<code>"</code></p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#34;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The separator used for separating fields. Default:<code>,</code></p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>num_lines_read</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines read from each file.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the table in which the data is to be inserted.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fnames</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of CSV file names to be read.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>quotechar</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used to wrap strings. Default:<code>"</code></p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#34;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The separator used for separating fields. Default:<code>,</code></p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>num_lines_read</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines read from each file.
 Set to 0 to read in the entire file.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>skip</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines to skip at the beginning of each
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>skip</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines to skip at the beginning of each
 file (Default: 0).</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colnames</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str] or None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The first line of a CSV file
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colnames</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str] or None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first line of a CSV file
 usually contains the column names. When this is not the case, you need to
 explicitly pass them.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code>[`Connection`][getml.database.Connection]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The database connection to be used.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code>[`Connection`][getml.database.Connection]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The database connection to be used.
 If you don't explicitly pass a connection,
 the engine will use the default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8119,9 +8117,9 @@ using the following commands:</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/read_csv.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/read_csv.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
@@ -8315,8 +8313,8 @@ using the following commands:</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8324,7 +8322,7 @@ using the following commands:</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

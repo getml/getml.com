@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.connect_sqlite3"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Creates a new SQLite3 database connection.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,15 +7953,14 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.connect_sqlite3.connect_sqlite3" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">connect_sqlite3</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;:memory:&#39;</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">connect_sqlite3</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;:memory:&#39;</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a new SQLite3 database connection.</p>
 <p>SQLite3 is a popular in-memory database. It is faster than
 distributed databases, like PostgreSQL, but less stable under massive
@@ -7971,42 +7969,41 @@ data sets to be loaded into memory, which might fill up too much
 of your RAM, especially for large data sets.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the sqlite3 file.  If the file does not exist, it
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the sqlite3 file.  If the file does not exist, it
 will be created. Set to ":memory:" for a purely in-memory SQLite3
 database.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;:memory:&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of formats tried when parsing time stamps.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;:memory:&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of formats tried when parsing time stamps.</p>
 <p>The formats are allowed to contain the following
 special characters:</p>
 <ul>
@@ -8036,29 +8033,30 @@ special characters:</p>
 <li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
 <li>%% - percent sign</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name to be used to reference the connection.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name to be used to reference the connection.
 If you do not pass anything, this will create a new default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;default&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;default&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -8079,9 +8077,9 @@ them into <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#g
 makes predictions of the target variables to new, unseen data
 and stores the result into the corresponding table.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/connect_sqlite3.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/connect_sqlite3.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -8293,8 +8291,8 @@ and stores the result into the corresponding table.</p>
 
     <span class="k">return</span> <span class="n">Connection</span><span class="p">(</span><span class="n">conn_id</span><span class="o">=</span><span class="n">conn_id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8302,7 +8300,7 @@ and stores the result into the corresponding table.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

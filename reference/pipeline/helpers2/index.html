@@ -8000,14 +8000,13 @@
 
 
 <a id="getml.pipeline.helpers2"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Helper functions that depend on Pipeline.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8020,50 +8019,48 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.pipeline.helpers2.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>If a pipeline named 'name' exists, it is deleted.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the pipeline.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the pipeline.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/helpers2.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">132</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
 <span class="normal">135</span>
@@ -8091,59 +8088,56 @@
     <span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
         <span class="n">_make_dummy</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.pipeline.helpers2.exists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">exists</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns true if a pipeline named 'name' exists.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the pipeline.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the pipeline.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/helpers2.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
 <span class="normal">116</span>
@@ -8171,24 +8165,22 @@
 
     <span class="k">return</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">all_pipelines</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.pipeline.helpers2.list_pipelines" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">list_pipelines</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">list_pipelines</span><span class="p">()</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Lists all pipelines present in the engine.</p>
 <p>Note that this function only lists pipelines which are part of the
 current project. See <a class="autorefs autorefs-internal" href="../../engine/__init__/#getml.engine.set_project"><code>set_project</code></a> for
@@ -8198,32 +8190,31 @@ the lifecycles of the pipelines.</p>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.load"><code>load</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list containing the names of all pipelines.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list containing the names of all pipelines.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/helpers2.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">64</span>
 <span class="normal">65</span>
 <span class="normal">66</span>
 <span class="normal">67</span>
@@ -8277,93 +8268,89 @@ the lifecycles of the pipelines.</p>
 
     <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)[</span><span class="s2">&quot;names&quot;</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.pipeline.helpers2.load" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Loads a pipeline from the getML engine into Python.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the pipeline to be loaded.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the pipeline to be loaded.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.pipeline.pipeline.Pipeline" href="../pipeline/#getml.pipeline.pipeline.Pipeline">Pipeline</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> that is a handler</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-        <tr class="doc-section-item">
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.pipeline.pipeline.Pipeline" href="../pipeline/#getml.pipeline.pipeline.Pipeline">Pipeline</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>for the pipeline signified by name.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.pipeline.pipeline.Pipeline" href="../pipeline/#getml.pipeline.pipeline.Pipeline">Pipeline</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> that is a handler</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.pipeline.pipeline.Pipeline" href="../pipeline/#getml.pipeline.pipeline.Pipeline">Pipeline</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>for the pipeline signified by name.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/helpers2.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 96</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 96</span>
 <span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
@@ -8387,8 +8374,8 @@ the lifecycles of the pipelines.</p>
 
     <span class="k">return</span> <span class="n">_make_dummy</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8396,7 +8383,7 @@ the lifecycles of the pipelines.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

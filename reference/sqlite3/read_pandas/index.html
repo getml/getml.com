@@ -7934,15 +7934,14 @@
 
 
 <a id="getml.sqlite3.read_pandas"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains utility functions for reading a pandas DataFrame
 into sqlite3.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7955,99 +7954,97 @@ into sqlite3.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.read_pandas.read_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data_frame</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data_frame</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Loads a pandas.DataFrame into SQLite3.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the table to write to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>data_frame</code></td>
-          <td>
-                <code><span title="pandas.DataFrame">DataFrame</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pandas.DataFrame to read
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the table to write to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data_frame</code></td>
+            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The pandas.DataFrame to read
 into the table. The column names must match the column
 names of the target table in the SQLite3 database, but
 their order is not important.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>if_exists</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>How to behave if the table already exists:</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>if_exists</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>How to behave if the table already exists:</p>
 <ul>
 <li>'fail': Raise a ValueError.</li>
 <li>'replace': Drop the table before inserting new values.</li>
 <li>'append': Insert new values into the existing table.</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>&#39;append&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;append&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/read_pandas.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/read_pandas.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
@@ -8165,8 +8162,8 @@ their order is not important.</p>
     <span class="p">]</span>
     <span class="n">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8174,7 +8171,7 @@ their order is not important.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.preprocessors.text_field_splitter"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains routines for preprocessing data frames.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.preprocessors.text_field_splitter.TextFieldSplitter" class="doc doc-heading">
-          <code>TextFieldSplitter</code>
+            <code>TextFieldSplitter</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
 
-  
+
       <p>A TextFieldSplitter splits columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 into relational bag-of-words representations to allow the
 feature learners to learn patterns based on
@@ -8012,6 +8012,7 @@ following characters:</p>
 <p><div class="highlight"><pre><span></span><code><span class="p">;</span> <span class="p">,</span> <span class="o">.</span> <span class="err">!</span> <span class="err">?</span> <span class="o">-</span> <span class="o">|</span> <span class="s2">&quot; </span><span class="se">\t</span><span class="s2"> </span><span class="se">\v</span><span class="s2"> </span><span class="se">\f</span><span class="s2"> </span><span class="se">\r</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> % &#39; ( ) [ ] { }</span>
 </code></pre></div>
 Refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/preprocessing/preprocessing/#handling-of-free-form-text">User Guide</a> for more information.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8028,9 +8029,9 @@ Refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/pre
 <span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/text_field_splitter.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/preprocessors/text_field_splitter.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
@@ -8116,12 +8117,11 @@ Refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/pre
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8134,53 +8134,51 @@ Refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/pre
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.preprocessors.text_field_splitter.TextFieldSplitter.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/text_field_splitter.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">54</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/preprocessors/text_field_splitter.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
@@ -8202,8 +8200,8 @@ the own parameters will be validated.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8211,8 +8209,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8221,7 +8218,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -8628,11 +8628,11 @@
 
 
 <a id="getml.data.view"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains the view.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8648,15 +8648,15 @@
 
 
 <h2 id="getml.data.view.View" class="doc doc-heading">
-          <code>View</code>
+            <code>View</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>A view is a lazily evaluated, immutable representation of a <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>.</p>
 <p>There are important differences between a
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> and a view:</p>
@@ -8678,91 +8678,91 @@
 </ul>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>base</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A data frame or view used as the basis for this view.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name assigned to this view.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>subselection</code></td>
-          <td>
-                <code>[`BooleanColumnView`][getml.data.columns.BooleanColumnView], [`FloatColumnView`][getml.data.columns.FloatColumnView] or [`FloatColumn`][getml.data.columns.FloatColumn]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Indicates which rows we would like to keep.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>added</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary that describes a new column
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>base</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A data frame or view used as the basis for this view.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name assigned to this view.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>subselection</code></td>
+            <td>
+                  <code>[`BooleanColumnView`][getml.data.columns.BooleanColumnView], [`FloatColumnView`][getml.data.columns.FloatColumnView] or [`FloatColumn`][getml.data.columns.FloatColumn]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Indicates which rows we would like to keep.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>added</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary that describes a new column
 that has been added to the view.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>dropped</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A list of columns that have been dropped.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>dropped</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of columns that have been dropped.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8807,9 +8807,9 @@ deep copies of the data frames whenever you have made a small
 change like the one in our example. Note that the pipeline will
 record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Container"><code>Container</code></a> you have used.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  54</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/view.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  54</span>
 <span class="normal">  55</span>
 <span class="normal">  56</span>
 <span class="normal">  57</span>
@@ -10873,9 +10873,9 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">_with_unit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">comparison_only</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -10890,8 +10890,8 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 
 
 <h3 id="getml.data.view.View.added" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">added</span></code>
-  
+            <code class="highlight language-python"><span class="n">added</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -10899,10 +10899,10 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The column that has been added to the view.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -10911,8 +10911,8 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 
 
 <h3 id="getml.data.view.View.base" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">base</span></code>
-  
+            <code class="highlight language-python"><span class="n">base</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -10920,11 +10920,11 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The basis on which the view is created. Must be a
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> or a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -10933,8 +10933,8 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 
 
 <h3 id="getml.data.view.View.colnames" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">colnames</span></code>
-  
+            <code class="highlight language-python"><span class="n">colnames</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -10942,34 +10942,33 @@ record which <a class="autorefs autorefs-internal" href="../__init__/#getml.data
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List of the names of all columns.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[str]:
-List of the names of all columns.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[str]:
+List of the names of all columns.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -10978,8 +10977,8 @@ List of the names of all columns.</p>
 
 
 <h3 id="getml.data.view.View.columns" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">columns</span></code>
-  
+            <code class="highlight language-python"><span class="n">columns</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -10987,34 +10986,33 @@ List of the names of all columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Alias for <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View.colnames"><code>colnames</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[str]:
-List of the names of all columns.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[str]:
+List of the names of all columns.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -11023,8 +11021,8 @@ List of the names of all columns.</p>
 
 
 <h3 id="getml.data.view.View.dropped" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dropped</span></code>
-  
+            <code class="highlight language-python"><span class="n">dropped</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11032,10 +11030,10 @@ List of the names of all columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The names of the columns that has been dropped.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11044,8 +11042,8 @@ List of the names of all columns.</p>
 
 
 <h3 id="getml.data.view.View.last_change" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">last_change</span><span class="p">:</span> <span class="nb">str</span></code>
-  
+            <code class="highlight language-python"><span class="n">last_change</span><span class="p">:</span> <span class="nb">str</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11053,10 +11051,10 @@ List of the names of all columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A string describing the last time this data frame has been changed.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11065,8 +11063,8 @@ List of the names of all columns.</p>
 
 
 <h3 id="getml.data.view.View.name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">name</span></code>
-  
+            <code class="highlight language-python"><span class="n">name</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11074,11 +11072,11 @@ List of the names of all columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The name of the view. If no name is explicitly set,
 the name will be identical to the name of the base.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11087,8 +11085,8 @@ the name will be identical to the name of the base.</p>
 
 
 <h3 id="getml.data.view.View.roles" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">roles</span></code>
-  
+            <code class="highlight language-python"><span class="n">roles</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11096,11 +11094,11 @@ the name will be identical to the name of the base.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The roles of the columns included
 in this View.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11109,8 +11107,8 @@ in this View.</p>
 
 
 <h3 id="getml.data.view.View.rowid" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rowid</span></code>
-  
+            <code class="highlight language-python"><span class="n">rowid</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11118,10 +11116,10 @@ in this View.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The rowids for this view.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11130,8 +11128,8 @@ in this View.</p>
 
 
 <h3 id="getml.data.view.View.shape" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">shape</span></code>
-  
+            <code class="highlight language-python"><span class="n">shape</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11139,11 +11137,11 @@ in this View.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A tuple containing the number of rows and columns of
 the View.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -11152,8 +11150,8 @@ the View.</p>
 
 
 <h3 id="getml.data.view.View.subselection" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">subselection</span></code>
-  
+            <code class="highlight language-python"><span class="n">subselection</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -11161,34 +11159,32 @@ the View.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The subselection that is applied to this view.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.check" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks whether the underlying data frame has been changed
 after the creation of the view.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">323</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">323</span>
 <span class="normal">324</span>
 <span class="normal">325</span>
 <span class="normal">326</span>
@@ -11224,59 +11220,56 @@ after the creation of the view.</p>
             <span class="o">+</span> <span class="s2">&quot;inexpensive operation).&quot;</span>
         <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.drop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">drop</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">drop</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a new <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a> that has one or several columns removed.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cols</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The names of the columns to be dropped.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cols</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The names of the columns to be dropped.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">378</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">378</span>
 <span class="normal">379</span>
 <span class="normal">380</span>
 <span class="normal">381</span>
@@ -11304,52 +11297,49 @@ after the creation of the view.</p>
 
     <span class="k">return</span> <span class="n">View</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropped</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.ncols" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">ncols</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">ncols</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Number of columns in the current instance.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>int</code></td>          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Overall number of columns</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>int</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Overall number of columns</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">431</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">431</span>
 <span class="normal">432</span>
 <span class="normal">433</span>
 <span class="normal">434</span>
@@ -11367,62 +11357,59 @@ after the creation of the view.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">colnames</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.nrows" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">nrows</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">nrows</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the number of rows in the current instance.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>force</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If the number of rows is unknown,
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>force</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the number of rows is unknown,
 do you want to force the engine to calculate it anyway?
 This is a relatively expensive operation, therefore
 you might not necessarily want this.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">443</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">443</span>
 <span class="normal">444</span>
 <span class="normal">445</span>
 <span class="normal">446</span>
@@ -11490,55 +11477,52 @@ you might not necessarily want this.</p>
 
     <span class="k">return</span> <span class="s2">&quot;unknown&quot;</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.refresh" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">refresh</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">refresh</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Aligns meta-information of the current instance with the
 corresponding data frame in the getML engine.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>:
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>:
 Updated handle the underlying data frame in the getML
 engine.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">486</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">486</span>
 <span class="normal">487</span>
 <span class="normal">488</span>
 <span class="normal">489</span>
@@ -11562,56 +11546,53 @@ engine.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">_base</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_base&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
     <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_arrow" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_arrow</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_arrow</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a <code>pyarrow.Table</code> from the view.</p>
 <p>Loads the underlying data from the getML engine and constructs
 a <code>pyarrow.Table</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><code>pyarrow.Table</code>:
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>pyarrow.Table</code>:
 Pyarrow equivalent of the current instance including
 its underlying data.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">567</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">567</span>
 <span class="normal">568</span>
 <span class="normal">569</span>
 <span class="normal">570</span>
@@ -11635,104 +11616,101 @@ its underlying data.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_to_arrow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_csv" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Writes the underlying data into a newly created CSV file.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fname</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the CSV file.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fname</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the CSV file.
 The ending ".csv" and an optional batch number will
 be added automatically.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>quotechar</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used to wrap strings.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#34;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used for separating fields.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>batch_size</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum number of lines per file. Set to 0 to read
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>quotechar</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used to wrap strings.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#34;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used for separating fields.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>batch_size</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum number of lines per file. Set to 0 to read
 the entire data frame into a single file.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">592</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">592</span>
 <span class="normal">593</span>
 <span class="normal">594</span>
 <span class="normal">595</span>
@@ -11834,78 +11812,75 @@ the entire data frame into a single file.</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_db" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_db</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_db</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Writes the underlying data into a newly created table in the
 database.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the table to be created.</p>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the table to be created.</p>
 <p>If a table of that name already exists, it will be
 replaced.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code>[`Connection`][getml.database.Connection]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The database connection to be used.
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code>[`Connection`][getml.database.Connection]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The database connection to be used.
 If you don't explicitly pass a connection,
 the engine will use the default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">646</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">646</span>
 <span class="normal">647</span>
 <span class="normal">648</span>
 <span class="normal">649</span>
@@ -11979,31 +11954,29 @@ the engine will use the default connection.</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_json" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_json</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_json</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a JSON string from the current instance.</p>
 <p>Loads the underlying data from the getML engine and constructs
 a JSON string.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">582</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">582</span>
 <span class="normal">583</span>
 <span class="normal">584</span>
 <span class="normal">585</span>
@@ -12017,56 +11990,53 @@ a JSON string.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a <code>pandas.DataFrame</code> from the view.</p>
 <p>Loads the underlying data from the getML engine and constructs
 a <code>pandas.DataFrame</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><code>pandas.DataFrame</code>:
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>pandas.DataFrame</code>:
 Pandas equivalent of the current instance including
 its underlying data.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">686</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">686</span>
 <span class="normal">687</span>
 <span class="normal">688</span>
 <span class="normal">689</span>
@@ -12090,75 +12060,72 @@ its underlying data.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_to_arrow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_parquet" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_parquet</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;snappy&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_parquet</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;snappy&#39;</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Writes the underlying data into a newly created parquet file.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fname</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the parquet file.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fname</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the parquet file.
 The ending ".parquet" will be added automatically.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>compression</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The compression format to use.
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>compression</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The compression format to use.
 Supported values are "brotli", "gzip", "lz4", "snappy", "zstd"</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;snappy&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;snappy&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">722</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">722</span>
 <span class="normal">723</span>
 <span class="normal">724</span>
 <span class="normal">725</span>
@@ -12186,86 +12153,82 @@ Supported values are "brotli", "gzip", "lz4", "snappy", "zstd"</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_to_parquet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">compression</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_placeholder" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_placeholder</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_placeholder</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generates a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Placeholder"><code>Placeholder</code></a> from the
 current <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the placeholder. If no
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the placeholder. If no
 name is passed, then the name of the placeholder will
 be identical to the name of the current view.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.Placeholder"><code>Placeholder</code></a>:
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.Placeholder"><code>Placeholder</code></a>:
 A placeholder with the same name as this data frame.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">701</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">701</span>
 <span class="normal">702</span>
 <span class="normal">703</span>
 <span class="normal">704</span>
@@ -12301,107 +12264,103 @@ A placeholder with the same name as this data frame.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">Placeholder</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">roles</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">roles</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_pyspark" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_pyspark</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_pyspark</span><span class="p">(</span><span class="n">spark</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a <code>pyspark.sql.DataFrame</code> from the current instance.</p>
 <p>Loads the underlying data from the getML engine and constructs
 a <code>pyspark.sql.DataFrame</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>spark</code></td>
-          <td>
-                <code><span title="pyspark.sql.SparkSession">SparkSession</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pyspark session in which you want to
-create the data frame.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str or None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the temporary view to be created on top
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>spark</code></td>
+            <td>
+                  <code><span title="pyspark.sql.SparkSession">SparkSession</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The pyspark session in which you want to
+create the data frame.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str or None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the temporary view to be created on top
 of the <code>pyspark.sql.DataFrame</code>,
 with which it can be referred to
 in Spark SQL (refer to
 <code>pyspark.sql.DataFrame.createOrReplaceTempView</code>).
 If none is passed, then the name of this
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> will be used.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>pyspark.sql.DataFrame:
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>pyspark.sql.DataFrame:
 Pyspark equivalent of the current instance including
 its underlying data.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">739</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">739</span>
 <span class="normal">740</span>
 <span class="normal">741</span>
 <span class="normal">742</span>
@@ -12455,117 +12414,115 @@ its underlying data.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_to_pyspark</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">spark</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.to_s3" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_s3</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_s3</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Writes the underlying data into a newly created CSV file
 located in an S3 bucket.
 Note:
     S3 is not supported on Windows.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>bucket</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The bucket from which to read the files.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The key in the S3 bucket in which you want to
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>bucket</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The bucket from which to read the files.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The key in the S3 bucket in which you want to
 write the output. The ending ".csv" and an optional
 batch number will be added automatically.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>region</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The region in which the bucket is located.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used for separating fields.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>batch_size</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum number of lines per file. Set to 0 to read
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>region</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The region in which the bucket is located.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used for separating fields.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>batch_size</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum number of lines per file. Set to 0 to read
 the entire data frame into a single file.</p>
-            </div>
-          </td>
-          <td>
-                <code>50000</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>50000</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -12580,9 +12537,9 @@ the entire data frame into a single file.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">769</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">769</span>
 <span class="normal">770</span>
 <span class="normal">771</span>
 <span class="normal">772</span>
@@ -12736,57 +12693,55 @@ the entire data frame into a single file.</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.where" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">where</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">where</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extract a subset of rows.</p>
 <p>Creates a new <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a> as a
 subselection of the current instance.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>index</code></td>
-          <td>
-                <code>[`BooleanColumnView`][getml.data.columns.BooleanColumnView] or [`FloatColumnView`][getml.data.columns.FloatColumnView] or [`FloatColumn`][getml.data.columns.FloatColumn]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Boolean column indicating the rows you want to select.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>index</code></td>
+            <td>
+                  <code>[`BooleanColumnView`][getml.data.columns.BooleanColumnView] or [`FloatColumnView`][getml.data.columns.FloatColumnView] or [`FloatColumn`][getml.data.columns.FloatColumn]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Boolean column indicating the rows you want to select.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -12824,9 +12779,9 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 | 2        | cherry      | 1.4       |
 </code></pre></div></p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">867</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">867</span>
 <span class="normal">868</span>
 <span class="normal">869</span>
 <span class="normal">870</span>
@@ -12956,117 +12911,114 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 
     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unsupported type for a subselection: &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.with_column" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">with_column</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">subroles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">with_column</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">subroles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a new <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a> that contains an additional column.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>col</code></td>
-          <td>
-                <code>[`column`][getml.column]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The column to be added.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the new column.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>role</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Role of the new column. Must be from <a class="autorefs autorefs-internal" href="../roles/#getml.data.roles"><code>roles</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>subroles</code></td>
-          <td>
-                <code>(str, <span title="typing.List">List</span>[str] or None)</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Subroles of the new column. Must be from <a class="autorefs autorefs-internal" href="../subroles/__init__/#getml.data.subroles"><code>subroles</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>unit</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Unit of the column.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Formats to be used to parse the time stamps.</p>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>col</code></td>
+            <td>
+                  <code>[`column`][getml.column]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The column to be added.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the new column.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>role</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Role of the new column. Must be from <a class="autorefs autorefs-internal" href="../roles/#getml.data.roles"><code>roles</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>subroles</code></td>
+            <td>
+                  <code>(str, <span title="typing.List">List</span>[str] or None)</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Subroles of the new column. Must be from <a class="autorefs autorefs-internal" href="../subroles/__init__/#getml.data.subroles"><code>subroles</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>unit</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Unit of the column.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Formats to be used to parse the time stamps.</p>
 <p>This is only necessary, if an implicit conversion from
 a <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns.StringColumn"><code>StringColumn</code></a> to a time
 stamp is taking place.</p>
@@ -13099,18 +13051,18 @@ special characters:</p>
 <li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
 <li>%% - percent sign</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 935</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 935</span>
 <span class="normal"> 936</span>
 <span class="normal"> 937</span>
 <span class="normal"> 938</span>
@@ -13250,59 +13202,56 @@ special characters:</p>
         <span class="p">},</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.with_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">with_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">with_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a new <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a> with a new name.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the new view.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the new view.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1008</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1008</span>
 <span class="normal">1009</span>
 <span class="normal">1010</span>
 <span class="normal">1011</span>
@@ -13318,24 +13267,22 @@ special characters:</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">View</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.with_role" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">with_role</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">with_role</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a new <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a> with modified roles.</p>
 <p>When switching from a role based on type float to a role based on type
 string or vice verse, an implicit type conversion will be conducted.
@@ -13344,68 +13291,67 @@ format string: <code>annotating_roles_time_stamp</code>. For more information on
 roles, please refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#annotating-data_1">User Guide</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>names</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name or names of the column.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>role</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The role to be assigned.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Formats to be used to parse the time stamps.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>names</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name or names of the column.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>role</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The role to be assigned.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Formats to be used to parse the time stamps.
 This is only necessary, if an implicit conversion from a StringColumn to
 a time stamp is taking place.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1019</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1019</span>
 <span class="normal">1020</span>
 <span class="normal">1021</span>
 <span class="normal">1022</span>
@@ -13449,88 +13395,85 @@ a time stamp is taking place.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_with_role</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">role</span><span class="p">,</span> <span class="n">time_formats</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.with_subroles" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">with_subroles</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">subroles</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">with_subroles</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">subroles</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a new view with one or several new subroles on one or more columns.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>names</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name or names of the column.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>subroles</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The subroles to be assigned.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>append</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to append the
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>names</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name or names of the column.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>subroles</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The subroles to be assigned.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>append</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to append the
 new subroles to the existing subroles.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1044</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1044</span>
 <span class="normal">1045</span>
 <span class="normal">1046</span>
 <span class="normal">1047</span>
@@ -13560,75 +13503,72 @@ new subroles to the existing subroles.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_with_subroles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">subroles</span><span class="p">,</span> <span class="n">append</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.view.View.with_unit" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">with_unit</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">comparison_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">with_unit</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">comparison_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a view that contains a new unit on one or more columns.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>names</code></td>
-          <td>
-                <code>str or <span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name or names of the column.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>unit</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The unit to be assigned.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>comparison_only</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want the column to
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>names</code></td>
+            <td>
+                  <code>str or <span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name or names of the column.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>unit</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The unit to be assigned.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>comparison_only</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want the column to
 be used for comparison only. This means that the column can
 only be used in comparison to other columns of the same unit.</p>
 <p>An example might be a bank account number: The number in itself
@@ -13637,18 +13577,18 @@ we have seen that same bank account number in another table.</p>
 <p>If True, this will append ", comparison only" to the unit.
 The feature learning algorithms and the feature selectors will
 interpret this accordingly.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/view.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1062</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/view.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1062</span>
 <span class="normal">1063</span>
 <span class="normal">1064</span>
 <span class="normal">1065</span>
@@ -13696,8 +13636,8 @@ interpret this accordingly.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_with_unit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">comparison_only</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -13705,8 +13645,7 @@ interpret this accordingly.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -13715,7 +13654,7 @@ interpret this accordingly.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.preprocessors.mapping"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains routines for preprocessing data frames.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.preprocessors.mapping.Mapping" class="doc doc-heading">
-          <code>Mapping</code>
+            <code>Mapping</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
 
-  
+
       <p>A mapping preprocessor maps categorical values, discrete values and individual
 words in a text field to numerical values. These numerical values are retrieved
 by aggregating targets in the relational neighbourhood.</p>
@@ -8011,64 +8011,64 @@ by aggregating targets in the relational neighbourhood.</p>
 <p>Refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/preprocessing/preprocessing/#mappings">User guide</a> for more information.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>List[[`aggregations`][getml.feature_learning.aggregations]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The aggregation function to use over the targets.</p>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>List[[`aggregations`][getml.feature_learning.aggregations]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The aggregation function to use over the targets.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>lambda: <span title="getml.feature_learning.aggregations.mapping.Default">Default</span>()</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>min_freq</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The minimum number of targets required for a value to be included in
+              </div>
+            </td>
+            <td>
+                  <code>lambda: <span title="getml.feature_learning.aggregations.mapping.Default">Default</span>()</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>min_freq</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The minimum number of targets required for a value to be included in
 the mapping. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>30</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>multithreading</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to apply multithreading.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>30</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>multithreading</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to apply multithreading.</p>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8085,13 +8085,14 @@ the mapping. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/mapping.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/preprocessors/mapping.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -8247,12 +8248,11 @@ the mapping. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;multithreading&quot;</span><span class="p">],</span> <span class="nb">bool</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;multithreading&#39; must be a bool.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8265,53 +8265,51 @@ the mapping. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.preprocessors.mapping.Mapping.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/mapping.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 73</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/preprocessors/mapping.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 73</span>
 <span class="normal"> 74</span>
 <span class="normal"> 75</span>
 <span class="normal"> 76</span>
@@ -8367,8 +8365,8 @@ the own parameters will be validated.</p>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;multithreading&quot;</span><span class="p">],</span> <span class="nb">bool</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;multithreading&#39; must be a bool.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8376,8 +8374,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8386,7 +8383,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

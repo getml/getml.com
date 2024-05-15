@@ -7934,8 +7934,8 @@
 
 
 <a id="getml.database"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This module contains communication routines to access various databases.</p>
 <p>The <a class="autorefs autorefs-internal" href="../connect_bigquery/#getml.database.connect_bigquery"><code>connect_bigquery</code></a>,
 <a class="autorefs autorefs-internal" href="../connect_hana/#getml.database.connect_hana"><code>connect_hana</code></a>,
@@ -7954,7 +7954,7 @@ the Python interpreter.</p>
 <p>In addition, several auxiliary functions that might be handy during
 the analysis and interaction with the database are provided.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7970,38 +7970,37 @@ the analysis and interaction with the database are provided.</p>
 
 
 <h2 id="getml.database.Connection" class="doc doc-heading">
-          <code>Connection</code>
+            <code>Connection</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>A handle to a database connection on the getML engine.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conn_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name you want to use to reference the connection.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conn_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name you want to use to reference the connection.
 You can call it
 anything you want to. If a database
 connection with the same conn_id already exists, that connection
@@ -8009,18 +8008,18 @@ will be removed automatically and the new connection will take its place.
 The default conn_id is "default", which refers to the default connection.
 If you do not explicitly pass a connection handle to any function that
 relates to a database, the default connection will be used automatically.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;default&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;default&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/database/connection.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/database/connection.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -8104,9 +8103,9 @@ relates to a database, the default connection will be used automatically.</p>
 
         <span class="k">return</span> <span class="n">sig</span><span class="o">.</span><span class="n">_format</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8122,8 +8121,7 @@ relates to a database, the default connection will be used automatically.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8132,7 +8130,7 @@ relates to a database, the default connection will be used automatically.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

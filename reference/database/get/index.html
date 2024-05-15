@@ -7934,15 +7934,14 @@
 
 
 <a id="getml.database.get"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Executes an SQL query on the database and returns the result as
 a pandas dataframe.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7955,67 +7954,65 @@ a pandas dataframe.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.get.get" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Executes an SQL query on the database and returns the result as
 a pandas dataframe.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>query</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The SQL query to be executed.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code>[`Connection`][getml.database.Connection]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The database connection to be used.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>query</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The SQL query to be executed.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code>[`Connection`][getml.database.Connection]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The database connection to be used.
 If you don't explicitly pass a connection,
 the engine will use the default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/get.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/get.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
@@ -8075,8 +8072,8 @@ the engine will use the default connection.</p>
 
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8084,7 +8081,7 @@ the engine will use the default connection.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

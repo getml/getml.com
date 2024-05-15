@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.drop_table"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Drops a table from the database.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,66 +7953,64 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.drop_table.drop_table" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">drop_table</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Drops a table from the database.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The table to be dropped.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code>[`Connection`][getml.database.Connection]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The database connection to be used.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The table to be dropped.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code>[`Connection`][getml.database.Connection]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The database connection to be used.
 If you don't explicitly pass a connection,
 the engine will use the default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/drop_table.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/drop_table.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
@@ -8071,8 +8068,8 @@ the engine will use the default connection.</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8080,7 +8077,7 @@ the engine will use the default connection.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

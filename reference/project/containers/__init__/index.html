@@ -8302,11 +8302,11 @@
 
 
 <a id="getml.project.containers"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Containers for representing data of the current project.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8322,22 +8322,22 @@
 
 
 <h2 id="getml.project.containers.DataFrames" class="doc doc-heading">
-          <code>DataFrames</code>
+            <code>DataFrames</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds all data frames associated with the running
 project that are currently stored in memory. The container supports
 slicing and is sort- and filterable.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
@@ -8739,9 +8739,9 @@ slicing and is sort- and filterable.</p>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_disk</span><span class="p">:</span>
             <span class="n">DataFrame</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">unload</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8756,8 +8756,8 @@ slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.project.containers.DataFrames.in_memory" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">in_memory</span></code>
-  
+            <code class="highlight language-python"><span class="n">in_memory</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8765,10 +8765,10 @@ slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the names of all data frames currently in memory.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8777,8 +8777,8 @@ slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.project.containers.DataFrames.on_disk" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">on_disk</span></code>
-  
+            <code class="highlight language-python"><span class="n">on_disk</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8786,64 +8786,61 @@ slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the names of all data frames stored in the project folder.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">delete</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Deletes all data frames in the current project.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mem_only</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If called with the <code>mem_only</code> option set to True, the data
-frames will be kept on disk (in the project folder).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mem_only</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If called with the <code>mem_only</code> option set to True, the data
+frames will be kept on disk (in the project folder).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
@@ -8867,87 +8864,84 @@ frames will be kept on disk (in the project folder).</p>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_disk</span><span class="p">:</span>
         <span class="n">DataFrame</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the data frames container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of filtered data frames.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of filtered data frames.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">big_frames</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="o">.</span><span class="n">memory_usage</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
 <span class="normal">133</span>
@@ -8985,29 +8979,27 @@ frames will be kept on disk (in the project folder).</p>
     <span class="n">dfs_filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">if</span> <span class="n">conditional</span><span class="p">(</span><span class="n">df</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">DataFrames</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dfs_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.load" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">load</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">load</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Loads all data frames stored in the project folder to memory.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
 <span class="normal">153</span>
 <span class="normal">154</span>
 <span class="normal">155</span>
@@ -9023,29 +9015,27 @@ frames will be kept on disk (in the project folder).</p>
         <span class="k">if</span> <span class="n">df</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_memory</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">load_data_frame</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.retrieve" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">retrieve</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">retrieve</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Retrieve a dict of all data frames in memory.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
 <span class="normal">173</span>
 <span class="normal">174</span>
 <span class="normal">175</span>
@@ -9057,29 +9047,27 @@ frames will be kept on disk (in the project folder).</p>
 
     <span class="k">return</span> <span class="p">{</span><span class="n">df</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">df</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.save" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">save</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">save</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Saves all data frames currently in memory to disk.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
 <span class="normal">182</span>
 <span class="normal">183</span>
 <span class="normal">184</span>
@@ -9093,82 +9081,81 @@ frames will be kept on disk (in the project folder).</p>
     <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
         <span class="n">df</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the data frames container.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="return" open>
   <summary>Return</summary>
   <p>A container of sorted data frames.</p>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">by_num_rows</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="o">.</span><span class="n">nrows</span><span class="p">())</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">191</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">191</span>
 <span class="normal">192</span>
 <span class="normal">193</span>
 <span class="normal">194</span>
@@ -9210,29 +9197,27 @@ frames will be kept on disk (in the project folder).</p>
     <span class="n">dfs_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">DataFrames</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dfs_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.DataFrames.unload" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unload</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">unload</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Unloads all data frames in the current project from memory.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/data_frames.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">215</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/data_frames.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">215</span>
 <span class="normal">216</span>
 <span class="normal">217</span>
 <span class="normal">218</span>
@@ -9246,8 +9231,8 @@ frames will be kept on disk (in the project folder).</p>
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_disk</span><span class="p">:</span>
         <span class="n">DataFrame</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">unload</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9255,8 +9240,7 @@ frames will be kept on disk (in the project folder).</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9265,21 +9249,21 @@ frames will be kept on disk (in the project folder).</p>
 
 
 <h2 id="getml.project.containers.Hyperopts" class="doc doc-heading">
-          <code>Hyperopts</code>
+            <code>Hyperopts</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds all hyperopts associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -9499,12 +9483,11 @@ project. The container supports slicing and is sort- and filterable.</p>
         <span class="n">hyperopts_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9517,78 +9500,76 @@ project. The container supports slicing and is sort- and filterable.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.Hyperopts.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the hyperopts container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of filtered hyperopts.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of filtered hyperopts.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">gaussian_hyperopts</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lamda</span> <span class="n">hyp</span><span class="p">:</span> <span class="s2">&quot;Gaussian&quot;</span> <span class="ow">in</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
 <span class="normal"> 88</span>
 <span class="normal"> 89</span>
 <span class="normal"> 90</span>
@@ -9628,82 +9609,81 @@ project. The container supports slicing and is sort- and filterable.</p>
     <span class="p">]</span>
     <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.Hyperopts.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the hyperopts container.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="return" open>
   <summary>Return</summary>
   <p>A container of sorted hyperopts.</p>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">by_type</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">hyp</span><span class="p">:</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
 <span class="normal">113</span>
@@ -9743,8 +9723,8 @@ project. The container supports slicing and is sort- and filterable.</p>
     <span class="n">hyperopts_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9752,8 +9732,7 @@ project. The container supports slicing and is sort- and filterable.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9762,17 +9741,18 @@ project. The container supports slicing and is sort- and filterable.</p>
 
 
 <h2 id="getml.project.containers.Pipelines" class="doc doc-heading">
-          <code>Pipelines</code>
+            <code>Pipelines</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds all pipelines associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -9791,9 +9771,9 @@ for your project:
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">hyperopt_scores</span><span class="p">))</span>
 </code></pre></div></p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
@@ -10213,12 +10193,11 @@ for your project:
 
         <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -10231,69 +10210,67 @@ for your project:
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.Pipelines.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the pipelines container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of filtered pipelines.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of filtered pipelines.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -10301,9 +10278,9 @@ for your project:
 <span class="n">accurate_pipes</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">all</span><span class="p">(</span><span class="n">acc</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">pipe</span><span class="o">.</span><span class="n">accuracy</span><span class="p">))</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
 <span class="normal">211</span>
 <span class="normal">212</span>
 <span class="normal">213</span>
@@ -10347,92 +10324,89 @@ for your project:
 
     <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.Pipelines.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the pipelines container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of sorted pipelines.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of sorted pipelines.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="example" open>
   <summary>Example</summary>
@@ -10440,9 +10414,9 @@ for your project:
 <span class="n">by_fl</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">feature_learners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
 <span class="normal">186</span>
 <span class="normal">187</span>
 <span class="normal">188</span>
@@ -10486,8 +10460,8 @@ for your project:
     <span class="n">pipelines_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -10495,8 +10469,7 @@ for your project:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10505,7 +10478,7 @@ for your project:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

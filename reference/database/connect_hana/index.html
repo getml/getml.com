@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.connect_hana"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Creates a new HANA database connection.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,124 +7953,122 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.connect_hana.connect_hana" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">connect_hana</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">39017</span><span class="p">,</span> <span class="n">default_schema</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">ping_interval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">connect_hana</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">39017</span><span class="p">,</span> <span class="n">default_schema</span><span class="o">=</span><span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="n">ping_interval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a new HANA database connection.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>user</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Username with which to log into the HANA database.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>password</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Password with which to log into the HANA database.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>host</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Host of the HANA database.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>port</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Port of the database.</p>
-            </div>
-          </td>
-          <td>
-                <code>39017</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>default_schema</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The schema within the database you want to connect
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>user</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Username with which to log into the HANA database.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>password</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Password with which to log into the HANA database.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>host</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Host of the HANA database.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>port</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Port of the database.</p>
+              </div>
+            </td>
+            <td>
+                  <code>39017</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>default_schema</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The schema within the database you want to connect
 use unless another schema is explicitly set.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;public&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ping_interval</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The interval at which you want to ping the database,
+              </div>
+            </td>
+            <td>
+                  <code>&#39;public&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ping_interval</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The interval at which you want to ping the database,
 in seconds. Set to 0 for no pings at all.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of formats tried when parsing time stamps.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of formats tried when parsing time stamps.</p>
 <p>The formats are allowed to contain the following
 special characters:</p>
 <ul>
@@ -8101,37 +8098,38 @@ special characters:</p>
 <li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
 <li>%% - percent sign</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name to be used to reference the connection.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name to be used to reference the connection.
 If you do not pass anything, this will create a new default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;default&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;default&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/connect_hana.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/connect_hana.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
@@ -8331,8 +8329,8 @@ If you do not pass anything, this will create a new default connection.</p>
 
     <span class="k">return</span> <span class="n">Connection</span><span class="p">(</span><span class="n">conn_id</span><span class="o">=</span><span class="n">conn_id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8340,7 +8338,7 @@ If you do not pass anything, this will create a new default connection.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

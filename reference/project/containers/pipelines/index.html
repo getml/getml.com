@@ -7992,11 +7992,11 @@
 
 
 <a id="getml.project.containers.pipelines"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Container which holds all of a project's pipelines.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8012,17 +8012,18 @@
 
 
 <h2 id="getml.project.containers.pipelines.Pipelines" class="doc doc-heading">
-          <code>Pipelines</code>
+            <code>Pipelines</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds all pipelines associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8041,9 +8042,9 @@ for your project:
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">hyperopt_scores</span><span class="p">))</span>
 </code></pre></div></p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
@@ -8463,12 +8464,11 @@ for your project:
 
         <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8481,69 +8481,67 @@ for your project:
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.pipelines.Pipelines.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the pipelines container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of filtered pipelines.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of filtered pipelines.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8551,9 +8549,9 @@ for your project:
 <span class="n">accurate_pipes</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">all</span><span class="p">(</span><span class="n">acc</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">pipe</span><span class="o">.</span><span class="n">accuracy</span><span class="p">))</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
 <span class="normal">211</span>
 <span class="normal">212</span>
 <span class="normal">213</span>
@@ -8597,92 +8595,89 @@ for your project:
 
     <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.pipelines.Pipelines.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the pipelines container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of sorted pipelines.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of sorted pipelines.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8690,9 +8685,9 @@ for your project:
 <span class="n">by_fl</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">feature_learners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/pipelines.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
 <span class="normal">186</span>
 <span class="normal">187</span>
 <span class="normal">188</span>
@@ -8736,8 +8731,8 @@ for your project:
     <span class="n">pipelines_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Pipelines</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pipelines_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8745,8 +8740,7 @@ for your project:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8755,7 +8749,7 @@ for your project:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

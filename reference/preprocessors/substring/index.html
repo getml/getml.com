@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.preprocessors.substring"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains routines for preprocessing data frames.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.preprocessors.substring.Substring" class="doc doc-heading">
-          <code>Substring</code>
+            <code>Substring</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
 
-  
+
       <p>The Substring preprocessor extracts substrings from
 categorical columns and unused string columns.</p>
 <p>The preprocessor will be applied to all
@@ -8014,68 +8014,68 @@ columns that were assigned one of the <a class="autorefs autorefs-internal" href
 you can also assign a <em>unit</em>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>begin</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Index of the beginning of the substring (starting from 0).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>length</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The length of the substring.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>unit</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The unit of all columns to which the preprocessor
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>begin</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Index of the beginning of the substring (starting from 0).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>length</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The length of the substring.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>unit</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The unit of all columns to which the preprocessor
 should be applied. These columns must also have the subrole
 substring.</p>
 <p>If it is left empty, then the preprocessor
 will be applied to all columns with the subrole
 <a class="autorefs autorefs-internal" href="../../data/subroles/include/#getml.data.subroles.include.substring"><code>include.substring</code></a> or
 <a class="autorefs autorefs-internal" href="../../data/subroles/only/#getml.data.subroles.only.substring"><code>only.substring</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8101,9 +8101,9 @@ will be applied to all columns with the subrole
 <span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/substring.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 19</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/preprocessors/substring.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 19</span>
 <span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
@@ -8277,12 +8277,11 @@ will be applied to all columns with the subrole
         <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;length&#39; must be &gt; 0!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8295,53 +8294,51 @@ will be applied to all columns with the subrole
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.preprocessors.substring.Substring.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/substring.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 80</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/preprocessors/substring.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 80</span>
 <span class="normal"> 81</span>
 <span class="normal"> 82</span>
 <span class="normal"> 83</span>
@@ -8393,8 +8390,8 @@ the own parameters will be validated.</p>
     <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;&#39;length&#39; must be &gt; 0!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8402,8 +8399,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8412,7 +8408,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

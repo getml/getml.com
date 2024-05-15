@@ -8218,11 +8218,11 @@
 
 
 <a id="getml.communication"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Handles the communication for the getML library</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8237,8 +8237,8 @@
 
 
 <h2 id="getml.communication.port" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">port</span> <span class="o">=</span> <span class="mi">1708</span></code>
-  
+            <code class="highlight language-python"><span class="n">port</span> <span class="o">=</span> <span class="mi">1708</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8246,13 +8246,13 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The port of the getML engine. The port is automatically set
 according to the process spawned when setting a project.
 The monitor automatically looks up a free port (starting from 1708).
 Setting the port here has no effect.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8261,8 +8261,8 @@ Setting the port here has no effect.</p>
 
 
 <h2 id="getml.communication.tcp_port" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tcp_port</span> <span class="o">=</span> <span class="mi">1711</span></code>
-  
+            <code class="highlight language-python"><span class="n">tcp_port</span> <span class="o">=</span> <span class="mi">1711</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8270,81 +8270,78 @@ Setting the port here has no effect.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The TCP port of the getML monitor.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.engine_exception_handler" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">fallback</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Looks at the error message thrown by the engine and decides whether
 to throw a corresponding Exception using the same string or
 altering the message first.</p>
 <p>In either way, this function will always throw some sort of Exception.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>msg</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Error message returned by the getML engine.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>fallback</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If not empty, the default Exception will carry this
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>msg</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Error message returned by the getML engine.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fallback</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If not empty, the default Exception will carry this
 string.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
 <span class="normal">139</span>
 <span class="normal">140</span>
 <span class="normal">141</span>
@@ -8380,53 +8377,50 @@ string.</p>
 
     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="n">fallback</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.is_monitor_alive" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_monitor_alive</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_monitor_alive</span><span class="p">()</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks if the getML monitor is running.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><code>True</code> if the getML monitor is running and ready to accept commands and <code>False</code> otherwise.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>True</code> if the getML monitor is running and ready to accept commands and <code>False</code> otherwise.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">58</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
 <span class="normal">61</span>
@@ -8460,29 +8454,27 @@ string.</p>
 
     <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.log" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">log</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">log</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prints all the logs received by the socket.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">499</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">499</span>
 <span class="normal">500</span>
 <span class="normal">501</span>
 <span class="normal">502</span>
@@ -8536,29 +8528,27 @@ string.</p>
             <span class="n">pbar</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="n">pbar</span> <span class="o">=</span> <span class="n">_ProgressBar</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_bytestring" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_bytestring</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_bytestring</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives a bytestring from the getml engine.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">240</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">240</span>
 <span class="normal">241</span>
 <span class="normal">242</span>
 <span class="normal">243</span>
@@ -8592,29 +8582,27 @@ string.</p>
 
     <span class="k">return</span> <span class="n">recv_data</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_data" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_data</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_data</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives data (of any type) sent by the getml engine.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
 <span class="normal">162</span>
 <span class="normal">163</span>
 <span class="normal">164</span>
@@ -8678,29 +8666,27 @@ string.</p>
 
     <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_float_matrix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_float_matrix</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_float_matrix</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives a matrix (type np.float64) from the getml engine.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">198</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">198</span>
 <span class="normal">199</span>
 <span class="normal">200</span>
 <span class="normal">201</span>
@@ -8774,29 +8760,27 @@ string.</p>
 
     <span class="k">return</span> <span class="n">matrix</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_issues" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_issues</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_issues</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives a set of warnings to raise from the getml engine.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">334</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">334</span>
 <span class="normal">335</span>
 <span class="normal">336</span>
 <span class="normal">337</span>
@@ -8842,30 +8826,28 @@ string.</p>
         <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">all_warnings</span>
     <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_string</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_string</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives a string from the getml engine
 (an actual string, not a bytestring).</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">262</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">262</span>
 <span class="normal">263</span>
 <span class="normal">264</span>
 <span class="normal">265</span>
@@ -8913,29 +8895,27 @@ string.</p>
 
     <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">errors</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.recv_string_column" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">recv_string_column</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">recv_string_column</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Receives a column of type string from the getml engine</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">291</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">291</span>
 <span class="normal">292</span>
 <span class="normal">293</span>
 <span class="normal">294</span>
@@ -8983,24 +8963,22 @@ string.</p>
 
     <span class="k">return</span> <span class="n">col</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">col</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.send" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sends a command to the getml engine and closes the established
 connection.</p>
 <p>Creates a socket and sends a command to the getML engine using the
@@ -9017,41 +8995,40 @@ and the calling function must handle the message itself!</p>
 of the socket communication! The engine is quite sensitive and might freeze.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary specifying the command the engine is
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary specifying the command the engine is
 supposed to execute. It <em>must</em> contain at least two string
 values with the corresponding keys being named "name_" and
 "type_".</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">362</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">362</span>
 <span class="normal">363</span>
 <span class="normal">364</span>
 <span class="normal">365</span>
@@ -9153,24 +9130,22 @@ values with the corresponding keys being named "name_" and
     <span class="k">if</span> <span class="n">msg</span> <span class="o">!=</span> <span class="s2">&quot;Success!&quot;</span><span class="p">:</span>
         <span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.send_and_get_socket" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">send_and_get_socket</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">send_and_get_socket</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sends a command to the getml engine and returns the established
 connection.</p>
 <p>Creates a socket and sends a command to the getML engine using the
@@ -9189,65 +9164,63 @@ to be sent via the same socket or the engine will not be able to
 handle them and might block.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary specifying the command the engine is
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary specifying the command the engine is
 supposed to execute. It <em>must</em> contain at least two string
 values with the corresponding keys being named "name_" and
 "type_"."</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="socket.socket">socket</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A socket which, using the Python API, can communicate with the getML engine.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><span title="socket.socket">socket</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A socket which, using the Python API, can communicate with the getML engine.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">418</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">418</span>
 <span class="normal">419</span>
 <span class="normal">420</span>
 <span class="normal">421</span>
@@ -9341,30 +9314,28 @@ values with the corresponding keys being named "name_" and
 
     <span class="k">return</span> <span class="n">sock</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.communication.send_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">send_string</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">send_string</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sends a string to the getml engine
 (an actual string, not a bytestring).</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/communication.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">470</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/communication.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">470</span>
 <span class="normal">471</span>
 <span class="normal">472</span>
 <span class="normal">473</span>
@@ -9412,8 +9383,8 @@ values with the corresponding keys being named "name_" and
 
     <span class="n">sock</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9421,7 +9392,7 @@ values with the corresponding keys being named "name_" and
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.sqlite3.sniff_pandas"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains utility functions for siffing sqlite data types from pandas DataFrames.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,88 +7953,85 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.sniff_pandas.sniff_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sniff_pandas</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">data_frame</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sniff_pandas</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">data_frame</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sniffs a pandas data frame.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the table in which the data is to be inserted.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>data_frame</code></td>
-          <td>
-                <code><span title="pandas.DataFrame">DataFrame</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The pandas.DataFrame to read into the table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the table in which the data is to be inserted.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data_frame</code></td>
+            <td>
+                  <code><span title="pandas.DataFrame">DataFrame</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The pandas.DataFrame to read into the table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Appropriate <code>CREATE TABLE</code> statement.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Appropriate <code>CREATE TABLE</code> statement.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/sniff_pandas.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/sniff_pandas.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
@@ -8115,8 +8111,8 @@
 
     <span class="k">return</span> <span class="n">_generate_schema</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">sql_types</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8124,7 +8120,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

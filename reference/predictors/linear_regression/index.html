@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.predictors.linear_regression"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A simple linear regression model for predicting regression problems.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.predictors.linear_regression.LinearRegression" class="doc doc-heading">
-          <code>LinearRegression</code>
+            <code>LinearRegression</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.predictors.predictor._Predictor">_Predictor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.predictors.predictor._Predictor">_Predictor</span></code></p>
 
-  
+
       <p>Simple predictor for regression problems.</p>
 <p>Learns a simple linear relationship using ordinary least squares (OLS)
 regression:</p>
@@ -8022,54 +8022,53 @@ scalability.</p>
 numerically. Otherwise, it will be trained arithmetically.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>learning_rate</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The learning rate used for training numerically (only
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>learning_rate</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The learning rate used for training numerically (only
 relevant when categorical features are included). Range:
 (0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>0.9</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>reg_lambda</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization parameter. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>1e-10</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0.9</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reg_lambda</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization parameter. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+              </div>
+            </td>
+            <td>
+                  <code>1e-10</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/predictors/linear_regression.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 25</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/predictors/linear_regression.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 25</span>
 <span class="normal"> 26</span>
 <span class="normal"> 27</span>
 <span class="normal"> 28</span>
@@ -8225,12 +8224,11 @@ relevant when categorical features are included). Range:
 
         <span class="n">_validate_linear_model_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8243,49 +8241,48 @@ relevant when categorical features are included). Range:
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.predictors.linear_regression.LinearRegression.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If nothing is passed,
 the default parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8294,15 +8291,16 @@ the default parameters will be validated.</p>
 <span class="n">l</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
 </code></pre></div>
 </details>
+
 <details class="note" open>
   <summary>Note</summary>
   <p>This method is called at end of the __init__ constructor
 and every time before the predictor - or a class holding
 it as an instance variable - is sent to the getML engine.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/predictors/linear_regression.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 72</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/predictors/linear_regression.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 72</span>
 <span class="normal"> 73</span>
 <span class="normal"> 74</span>
 <span class="normal"> 75</span>
@@ -8364,8 +8362,8 @@ it as an instance variable - is sent to the getML engine.</p>
 
     <span class="n">_validate_linear_model_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8373,8 +8371,7 @@ it as an instance variable - is sent to the getML engine.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8383,7 +8380,7 @@ it as an instance variable - is sent to the getML engine.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

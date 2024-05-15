@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.sniff_s3"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Sniffs a list of CSV files located in an S3 bucket.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,185 +7953,183 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.sniff_s3.sniff_s3" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sniff_s3</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">num_lines_sniffed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sniff_s3</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">num_lines_sniffed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sniffs a list of CSV files located in an S3 bucket.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the table in which the data is to be inserted.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>bucket</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The bucket from which to read the files.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>keys</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of keys (files in the bucket) to be read.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>region</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The region in which the bucket is located.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>num_lines_sniffed</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines analyzed by the sniffer.</p>
-            </div>
-          </td>
-          <td>
-                <code>1000</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used for separating fields.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>skip</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines to skip at the beginning of each file.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colnames</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str] or None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The first line of a CSV file
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the table in which the data is to be inserted.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>bucket</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The bucket from which to read the files.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>keys</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of keys (files in the bucket) to be read.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>region</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The region in which the bucket is located.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>num_lines_sniffed</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines analyzed by the sniffer.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1000</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used for separating fields.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>skip</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines to skip at the beginning of each file.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colnames</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str] or None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first line of a CSV file
 usually contains the column names. When this is not the case, you need to
 explicitly pass them.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code>[`Connection`][getml.database.Connection]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The database connection to be used.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code>[`Connection`][getml.database.Connection]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The database connection to be used.
 If you don't explicitly pass a connection,
 the engine will use the default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Appropriate <code>CREATE TABLE</code> statement.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>str</code></td>          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Appropriate <code>CREATE TABLE</code> statement.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8155,9 +8152,9 @@ commands:
 You can also set the access credential as environment variables
 before you launch the getML engine.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/sniff_s3.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/sniff_s3.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -8351,8 +8348,8 @@ before you launch the getML engine.</p>
             <span class="n">comm</span><span class="o">.</span><span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">comm</span><span class="o">.</span><span class="n">recv_string</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8360,7 +8357,7 @@ before you launch the getML engine.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

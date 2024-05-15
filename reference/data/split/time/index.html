@@ -7936,14 +7936,13 @@
 
 
 <a id="getml.data.split.time"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Splits data at random.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7956,15 +7955,14 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.split.time.time" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">time</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">time_stamp</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">time</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">time_stamp</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a <a class="autorefs autorefs-internal" href="../../columns/__init__/#getml.data.columns.StringColumnView"><code>StringColumnView</code></a> that can be used to divide
 data into training, testing, validation or other sets.</p>
 <p>The arguments are
@@ -7975,95 +7973,95 @@ left from the first named starting point, i.e.  <span class="arithmatex">\([0, f
 considered to be the training set.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table you would like to split.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>time_stamp</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the time stamp column in the population table
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table you would like to split.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_stamp</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the time stamp column in the population table
 you want to use. Ideally, the role of said column would be
 <a class="autorefs autorefs-internal" href="../../roles/#getml.data.roles.time_stamp"><code>time_stamp</code></a>. If you want to split on the rowid,
 then pass "rowid" to <code>time_stamp</code>.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The start date of the validation set.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>test</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The start date of the test set.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Any other sets you would like to assign.
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The start date of the validation set.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>test</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The start date of the test set.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Any other sets you would like to assign.
 You can name these sets whatever you want to (in our example,
 we called it 'other').</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8092,9 +8090,9 @@ we called it 'other').</p>
 <span class="n">other_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;other&#39;</span><span class="p">]</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/split/time.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 27</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/split/time.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 27</span>
 <span class="normal"> 28</span>
 <span class="normal"> 29</span>
 <span class="normal"> 30</span>
@@ -8322,8 +8320,8 @@ we called it 'other').</p>
 
     <span class="k">return</span> <span class="n">col</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8331,7 +8329,7 @@ we called it 'other').</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

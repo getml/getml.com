@@ -8056,11 +8056,11 @@
 
 
 <a id="getml.data.container"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>For keeping and versioning data.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8076,15 +8076,15 @@
 
 
 <h2 id="getml.data.container.Container" class="doc doc-heading">
-          <code>Container</code>
+            <code>Container</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>A container holds the actual data in the form of a <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> or a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>.</p>
 <p>The purpose of a container is twofold:</p>
 <ul>
@@ -8097,142 +8097,141 @@
 </ul>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table defines the
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table defines the
 <a href="https://en.wikipedia.org/wiki/Statistical_population">statistical population </a>
 of the machine learning problem and contains the target variables.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The peripheral tables are joined onto <em>population</em> or other
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The peripheral tables are joined onto <em>population</em> or other
 peripheral tables. Note that you can also pass them using
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Container.add"><code>add</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>split</code></td>
-          <td>
-                <code>[`StringColumn`][getml.data.columns.StringColumn] or [`StringColumnView`][getml.data.columns.StringColumnView]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Contains information on how you want to split <em>population</em> into
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>split</code></td>
+            <td>
+                  <code>[`StringColumn`][getml.data.columns.StringColumn] or [`StringColumnView`][getml.data.columns.StringColumnView]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Contains information on how you want to split <em>population</em> into
 different <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>s.
 Also refer to <a class="autorefs autorefs-internal" href="../split/__init__/#getml.data.split"><code>split</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>deep_copy</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to create deep copies or your tables.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>train</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>train</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>deep_copy</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to create deep copies or your tables.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>train</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>train</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>validation</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>validation</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>test</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>test</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>test</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>test</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>s
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>s
 other than the predefined <em>train</em>, <em>validation</em> and <em>test</em> subsets.
 You can call these subsets anything you want to, and you can access them
 just like <em>train</em>, <em>validation</em> and <em>test</em>.
@@ -8247,14 +8246,15 @@ and <em>kwargs</em>.</p>
 <span class="c1"># validation or test</span>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">my_subset</span><span class="p">)</span>
 </code></pre></div></p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8372,9 +8372,9 @@ deep copies of the data frames whenever you have made a small
 change like the one in our example. Note that the pipeline will
 record which container you have used.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 36</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/container.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 36</span>
 <span class="normal"> 37</span>
 <span class="normal"> 38</span>
 <span class="normal"> 39</span>
@@ -9468,12 +9468,11 @@ record which container you have used.</p>
 
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Container is empty.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9486,20 +9485,19 @@ record which container you have used.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.container.Container.add" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Adds new peripheral data frames or views.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">490</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">490</span>
 <span class="normal">491</span>
 <span class="normal">492</span>
 <span class="normal">493</span>
@@ -9571,33 +9569,31 @@ record which container you have used.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_peripheral</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subsets</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.container.Container.freeze" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">freeze</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">freeze</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Freezes the container, so that changes are no longer possible.</p>
 <p>This is required before you can extract data when <code>deep_copy=True</code>. The idea of
 <code>deep_copy</code> is to ensure that you can always retrace and reproduce your results.
 That is why the container needs to be immutable before it can be
 used.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">527</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">527</span>
 <span class="normal">528</span>
 <span class="normal">529</span>
 <span class="normal">530</span>
@@ -9619,29 +9615,27 @@ used.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_frozen_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.container.Container.save" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">save</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">save</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Saves the Container to disk.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">539</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">539</span>
 <span class="normal">540</span>
 <span class="normal">541</span>
 <span class="normal">542</span>
@@ -9665,31 +9659,29 @@ used.</p>
 
     <span class="n">comm</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.container.Container.sync" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sync</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sync</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Synchronizes the last change with the data to avoid warnings that the data
 has been changed.</p>
 <p>This is only a problem when <code>deep_copy=False</code>.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">552</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">552</span>
 <span class="normal">553</span>
 <span class="normal">554</span>
 <span class="normal">555</span>
@@ -9713,29 +9705,27 @@ has been changed.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">_population</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_peripheral</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subsets</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.container.Container.to_pandas" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_pandas</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>TODO</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">565</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">565</span>
 <span class="normal">566</span>
 <span class="normal">567</span>
 <span class="normal">568</span>
@@ -9771,8 +9761,8 @@ has been changed.</p>
 
     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Container is empty.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9780,8 +9770,7 @@ has been changed.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9790,7 +9779,7 @@ has been changed.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

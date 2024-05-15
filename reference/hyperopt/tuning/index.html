@@ -7956,15 +7956,14 @@
 
 
 <a id="getml.hyperopt.tuning"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Tuning routines simplify the hyperparameter optimizations and
 are the recommended way of tuning hyperparameters.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7977,15 +7976,14 @@ are the recommended way of tuning hyperparameters.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.hyperopt.tuning.tune_feature_learners" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tune_feature_learners</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_threads</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">tune_feature_learners</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_threads</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A high-level interface for optimizing the feature learners of a
 [<code>Pipeline</code>][getml.pipelines.Pipeline].</p>
 <p>Efficiently optimizes the hyperparameters for the set of feature learners
@@ -7997,122 +7995,122 @@ the actual recipes behind the tuning routines refer
 to tuning routines: <code>hyperopt_tuning</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pipeline</code></td>
-          <td>
-                <code>[`Pipeline`][getml.Pipeline]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Base pipeline used to derive all models fitted and scored
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pipeline</code></td>
+            <td>
+                  <code>[`Pipeline`][getml.Pipeline]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Base pipeline used to derive all models fitted and scored
 during the hyperparameter optimization. It defines the data
 schema and any hyperparameters that are not optimized.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>container</code></td>
-          <td>
-                <code>[`Container`][getml.data.Container]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The data container used for the hyperparameter tuning.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>train</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the subset in 'container' used for training.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;train&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the subset in 'container' used for validation.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;validation&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>n_iter</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of iterations.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>score</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The score to optimize. Must be from
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>container</code></td>
+            <td>
+                  <code>[`Container`][getml.data.Container]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The data container used for the hyperparameter tuning.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>train</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the subset in 'container' used for training.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;train&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the subset in 'container' used for validation.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;validation&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_iter</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of iterations.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>score</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The score to optimize. Must be from
 <a class="autorefs autorefs-internal" href="../../pipeline/metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>num_threads</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of parallel threads to use. If set to 0,
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>num_threads</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of parallel threads to use. If set to 0,
 the number of threads will be inferred.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8125,44 +8123,44 @@ the number of threads will be inferred.</p>
 </code></pre>
 </details>
 
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> containing tuned versions</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>of the feature learners.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> containing tuned versions</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>of the feature learners.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/hyperopt/tuning.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/hyperopt/tuning.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
 <span class="normal">230</span>
 <span class="normal">231</span>
 <span class="normal">232</span>
@@ -8370,24 +8368,22 @@ the number of threads will be inferred.</p>
         <span class="n">validation</span><span class="p">,</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.hyperopt.tuning.tune_predictors" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tune_predictors</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_threads</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">tune_predictors</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">score</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">num_threads</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A high-level interface for optimizing the predictors of a
 <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 <p>Efficiently optimizes the hyperparameters for the set of predictors (from
@@ -8399,122 +8395,122 @@ the actual recipes behind the tuning routines refer to
 tuning routines: <code>hyperopt_tuning</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pipeline</code></td>
-          <td>
-                <code>[`Pipeline`][getml.Pipeline]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Base pipeline used to derive all models fitted and scored
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pipeline</code></td>
+            <td>
+                  <code>[`Pipeline`][getml.Pipeline]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Base pipeline used to derive all models fitted and scored
 during the hyperparameter optimization. It defines the data
 schema and any hyperparameters that are not optimized.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>container</code></td>
-          <td>
-                <code>[`Container`][getml.data.Container]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The data container used for the hyperparameter tuning.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>train</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the subset in 'container' used for training.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;train&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the subset in 'container' used for validation.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;validation&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>n_iter</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of iterations.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>score</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The score to optimize. Must be from
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>container</code></td>
+            <td>
+                  <code>[`Container`][getml.data.Container]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The data container used for the hyperparameter tuning.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>train</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the subset in 'container' used for training.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;train&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the subset in 'container' used for validation.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;validation&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_iter</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of iterations.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>score</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The score to optimize. Must be from
 <a class="autorefs autorefs-internal" href="../../pipeline/metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>num_threads</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of parallel threads to use. If set to 0,
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>num_threads</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of parallel threads to use. If set to 0,
 the number of threads will be inferred.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8527,44 +8523,44 @@ the number of threads will be inferred.</p>
 </code></pre>
 </details>
 
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> containing tuned</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>predictors.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a> containing tuned</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>predictors.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/hyperopt/tuning.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/hyperopt/tuning.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
 <span class="normal">339</span>
 <span class="normal">340</span>
 <span class="normal">341</span>
@@ -8768,8 +8764,8 @@ the number of threads will be inferred.</p>
         <span class="n">validation</span><span class="p">,</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8777,7 +8773,7 @@ the number of threads will be inferred.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

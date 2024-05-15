@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.connect_bigquery"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Creates a new BigQuery database connection.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,81 +7953,79 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.connect_bigquery.connect_bigquery" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">connect_bigquery</span><span class="p">(</span><span class="n">database_id</span><span class="p">,</span> <span class="n">project_id</span><span class="p">,</span> <span class="n">google_application_credentials</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">connect_bigquery</span><span class="p">(</span><span class="n">database_id</span><span class="p">,</span> <span class="n">project_id</span><span class="p">,</span> <span class="n">google_application_credentials</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a new BigQuery database connection.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>database_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The ID of the database to connect to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>project_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The ID of the project to connect to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>google_application_credentials</code></td>
-          <td>
-                <code>str or <span title="pathlib.Path">Path</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The path of the Google application credentials.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>database_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the database to connect to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>project_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The ID of the project to connect to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>google_application_credentials</code></td>
+            <td>
+                  <code>str or <span title="pathlib.Path">Path</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The path of the Google application credentials.
 (Must be located on the machine hosting the getML engine).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of formats tried when parsing time stamps.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of formats tried when parsing time stamps.</p>
 <p>The formats are allowed to contain the following
 special characters:</p>
 <ul>
@@ -8058,37 +8055,38 @@ special characters:</p>
 <li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
 <li>%% - percent sign</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name to be used to reference the connection.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name to be used to reference the connection.
 If you do not pass anything, this will create a new default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;default&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;default&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/connect_bigquery.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/connect_bigquery.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -8258,8 +8256,8 @@ If you do not pass anything, this will create a new default connection.</p>
 
     <span class="k">return</span> <span class="n">Connection</span><span class="p">(</span><span class="n">conn_id</span><span class="o">=</span><span class="n">conn_id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8267,7 +8265,7 @@ If you do not pass anything, this will create a new default connection.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

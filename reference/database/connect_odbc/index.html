@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.database.connect_odbc"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Creates a new ODBC database connection.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,15 +7953,14 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.database.connect_odbc.connect_odbc" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">connect_odbc</span><span class="p">(</span><span class="n">server_name</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">escape_chars</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">double_precision</span><span class="o">=</span><span class="s1">&#39;DOUBLE PRECISION&#39;</span><span class="p">,</span> <span class="n">integer</span><span class="o">=</span><span class="s1">&#39;INTEGER&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;TEXT&#39;</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">connect_odbc</span><span class="p">(</span><span class="n">server_name</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">escape_chars</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">double_precision</span><span class="o">=</span><span class="s1">&#39;DOUBLE PRECISION&#39;</span><span class="p">,</span> <span class="n">integer</span><span class="o">=</span><span class="s1">&#39;INTEGER&#39;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;TEXT&#39;</span><span class="p">,</span> <span class="n">time_formats</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn_id</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a new ODBC database connection.</p>
 <p>ODBC is standardized format that can be used to connect to almost any
 database.</p>
@@ -7970,72 +7968,71 @@ database.</p>
 running and that the appropriate ODBC drivers are installed.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>server_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The server name, as referenced in your .obdc.ini file.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>user</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Username with which to log into the database.
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>server_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The server name, as referenced in your .obdc.ini file.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>user</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Username with which to log into the database.
 You do not need to pass this, if it is already contained in your
 .odbc.ini.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>password</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Password with which to log into the database.
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>password</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Password with which to log into the database.
 You do not need to pass this, if it is already contained in your
 .odbc.ini.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>escape_chars</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>ODBC drivers are supposed to support
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>escape_chars</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ODBC drivers are supposed to support
 escaping table and column names using '"' characters irrespective of the
 syntax in the target database. Unfortunately, not all ODBC drivers
 follow this standard. This is why some
@@ -8062,62 +8059,62 @@ tuning might be necessary.</p>
 <p>If you pass more than two characters, the engine will throw an exception.</p>
 </li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#34;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>double_precision</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The keyword used for double precision columns.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;DOUBLE PRECISION&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>integer</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The keyword used for integer columns.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;INTEGER&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>text</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The keyword used for text columns.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;TEXT&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_formats</code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of formats tried when parsing time stamps.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#34;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>double_precision</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The keyword used for double precision columns.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;DOUBLE PRECISION&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>integer</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The keyword used for integer columns.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;INTEGER&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>text</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The keyword used for text columns.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;TEXT&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_formats</code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of formats tried when parsing time stamps.</p>
 <p>The formats are allowed to contain the following
 special characters:</p>
 <ul>
@@ -8147,37 +8144,38 @@ special characters:</p>
 <li>%Z - time zone differential in RFC format (GMT or +NNNN)</li>
 <li>%% - percent sign</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>conn_id</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name to be used to reference the connection.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>conn_id</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name to be used to reference the connection.
 If you do not pass anything, this will create a new default connection.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;default&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;default&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/database/connect_odbc.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/database/connect_odbc.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
@@ -8445,8 +8443,8 @@ If you do not pass anything, this will create a new default connection.</p>
 
     <span class="k">return</span> <span class="n">Connection</span><span class="p">(</span><span class="n">conn_id</span><span class="o">=</span><span class="n">conn_id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8454,7 +8452,7 @@ If you do not pass anything, this will create a new default connection.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

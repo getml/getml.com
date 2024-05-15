@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.feature_learning.fastboost"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Feature learning based on fast gradient boosting.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.feature_learning.fastboost.Fastboost" class="doc doc-heading">
-          <code>Fastboost</code>
+            <code>Fastboost</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,178 +7998,177 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Feature learning based on Gradient Boosting.</p>
 <p><a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.Fastboost"><code>Fastboost</code></a> automates feature learning
 for relational data and time series. The algorithm used is slightly
 simpler than <a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.Relboost"><code>Relboost</code></a> and much faster.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.gamma">gamma</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>During the training of Fastboost, which is based on
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.gamma">gamma</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>During the training of Fastboost, which is based on
 gradient tree boosting, this value serves as the minimum
 improvement in terms of the <code>loss_function</code> required for a
 split of the tree to be applied. Larger <code>gamma</code> will lead
 to fewer partitions of the tree and a more conservative
 algorithm. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Literal">Literal</span>[&#39;CrossEntropyLoss&#39;, &#39;SquareLoss&#39;]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Literal">Literal</span>[&#39;CrossEntropyLoss&#39;, &#39;SquareLoss&#39;]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.max_depth">max_depth</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum depth of the trees generated during the gradient
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.max_depth">max_depth</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum depth of the trees generated during the gradient
 tree boosting. Deeper trees will result in more complex
 models and increase the risk of overfitting. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.min_child_weights">min_child_weights</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the minimum sum of the weights a subcondition
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.min_child_weights">min_child_weights</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the minimum sum of the weights a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
 overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [<span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.reg_lambda">reg_lambda</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization on the weights in the gradient boosting
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.reg_lambda">reg_lambda</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights in the gradient boosting
 routine. This is one of the most important hyperparameters
 in the <a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.Relboost"><code>Relboost</code></a> as it allows
 for the most direct regularization. Larger values will
 make the resulting model more conservative. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.seed">seed</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator that underlies
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.seed">seed</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
 5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.shrinkage">shrinkage</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Since Fastboost works using a gradient-boosting-like
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.shrinkage">shrinkage</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Since Fastboost works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
 weights and thus the impact of each new tree. This gives
 more room for future ones to improve the overall
 performance of the model in this greedy algorithm. It must
 be between 0.0 and 1.0 with higher values leading to a higher
 danger of overfitting. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.fastboost.Fastboost.subsample">subsample</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Fastboost uses a bootstrapping procedure (sampling with
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.fastboost.Fastboost.subsample">subsample</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fastboost uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
 factor is proportional to the share of the samples
 randomly drawn from the population table every time
@@ -8180,19 +8179,20 @@ training. When set to 1.0, the number of samples drawn will
 be identical to the size of the population table.
 When set to 0.0, there will be no sampling at all.
 Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastboost.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/fastboost.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -8470,12 +8470,11 @@ Range: [0, 1]</p>
 
         <span class="n">_validate_fastboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8488,57 +8487,55 @@ Range: [0, 1]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.fastboost.Fastboost.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing the parameters to validate.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing the parameters to validate.
 params can hold the full set or a subset of the
 parameters explained in
 <a class="autorefs autorefs-internal" href="../__init__/#getml.feature_learning.Fastboost"><code>Fastboost</code></a>.
 If params is None, the
 current set of parameters in the
 instance dictionary will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastboost.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">123</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/fastboost.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">123</span>
 <span class="normal">124</span>
 <span class="normal">125</span>
 <span class="normal">126</span>
@@ -8610,8 +8607,8 @@ instance dictionary will be validated.</p>
 
     <span class="n">_validate_fastboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8619,8 +8616,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8629,7 +8625,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -7956,8 +7956,8 @@
 
 
 <a id="getml.feature_learning.loss_functions"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Loss functions used by the feature learning algorithms.</p>
 <p>The getML Python API contains two different loss
 functions. We recommend using
@@ -7967,7 +7967,7 @@ problems.</p>
 <p>Please note that these loss functions will only be used by the feature
 learning algorithms and not by the <a class="autorefs autorefs-internal" href="../../predictors/__init__/#getml.predictors"><code>predictors</code></a>.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7982,8 +7982,8 @@ learning algorithms and not by the <a class="autorefs autorefs-internal" href=".
 
 
 <h2 id="getml.feature_learning.loss_functions.CrossEntropyLoss" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">CrossEntropyLoss</span> <span class="o">=</span> <span class="s1">&#39;CrossEntropyLoss&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">CrossEntropyLoss</span> <span class="o">=</span> <span class="s1">&#39;CrossEntropyLoss&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -7991,8 +7991,8 @@ learning algorithms and not by the <a class="autorefs autorefs-internal" href=".
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The cross entropy between two probability distributions
 <span class="arithmatex">\(p(x)\)</span> and <span class="arithmatex">\(q(x)\)</span> is a combination of the information
 contained in <span class="arithmatex">\(p(x)\)</span> and the additional information stored in
@@ -8016,10 +8016,11 @@ H(p,q) = - \int_{X} p(x) \log q(x) dx
 and <span class="arithmatex">\(q(x)\)</span> being two discrete or continuous probability
 distributions over <span class="arithmatex">\(X\)</span>.</p>
 
+
 <details class="note" open>
   <summary>Note</summary>
   <p>Recommended loss function for classification problems.</p>
-</details>  </div>
+</details>    </div>
 
 </div>
 
@@ -8028,8 +8029,8 @@ distributions over <span class="arithmatex">\(X\)</span>.</p>
 
 
 <h2 id="getml.feature_learning.loss_functions.SquareLoss" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">SquareLoss</span> <span class="o">=</span> <span class="s1">&#39;SquareLoss&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">SquareLoss</span> <span class="o">=</span> <span class="s1">&#39;SquareLoss&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8037,8 +8038,8 @@ distributions over <span class="arithmatex">\(X\)</span>.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The Square loss (aka mean squared error (MSE)) measures the loss by calculating the average of all squared
 deviations of the predictions <span class="arithmatex">\(\hat{y}\)</span> from the observed
 (given) outcomes <span class="arithmatex">\(y\)</span>. Depending on the context this measure
@@ -8050,10 +8051,11 @@ L(y,\hat{y}) = \frac{1}{n} \sum_{i=1}^{n} (y_i -\hat{y}_i)^2
 <p>with <span class="arithmatex">\(n\)</span> being the number of samples, <span class="arithmatex">\(y\)</span> the observed
 outcome, and <span class="arithmatex">\(\hat{y}\)</span> the estimate.</p>
 
+
 <details class="note" open>
   <summary>Note</summary>
   <p>Recommended loss function for regression problems.</p>
-</details>  </div>
+</details>    </div>
 
 </div>
 
@@ -8063,7 +8065,7 @@ outcome, and <span class="arithmatex">\(\hat{y}\)</span> the estimate.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

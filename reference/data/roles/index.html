@@ -8088,12 +8088,13 @@
 
 
 <a id="getml.data.roles"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A role determines if and how
 <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns"><code>columns</code></a> are handled during the construction of the
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.DataModel"><code>DataModel</code></a> and used by the feature learning
 algorithm (see <a class="autorefs autorefs-internal" href="../../feature_learning/__init__/#getml.feature_learning"><code>feature_learning</code></a>).</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8109,7 +8110,7 @@ algorithm (see <a class="autorefs autorefs-internal" href="../../feature_learnin
 <span class="n">data_frame</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 </code></pre></div>
 </details>
-  
+
 
   <div class="doc doc-children">
 
@@ -8124,8 +8125,8 @@ algorithm (see <a class="autorefs autorefs-internal" href="../../feature_learnin
 
 
 <h2 id="getml.data.roles.categorical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">categorical</span> <span class="o">=</span> <span class="s1">&#39;categorical&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">categorical</span> <span class="o">=</span> <span class="s1">&#39;categorical&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8133,8 +8134,8 @@ algorithm (see <a class="autorefs autorefs-internal" href="../../feature_learnin
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks categorical columns.</p>
 <p>This role tells the getML engine to include the associated
 <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns.StringColumn"><code>StringColumn</code></a> during feature
@@ -8142,7 +8143,7 @@ learning.</p>
 <p>It should be used for all data with no inherent ordering, even if the
 categories are encoded as integer instead of strings in your provided
 data set.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8151,8 +8152,8 @@ data set.</p>
 
 
 <h2 id="getml.data.roles.join_key" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join_key</span> <span class="o">=</span> <span class="s1">&#39;join_key&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">join_key</span> <span class="o">=</span> <span class="s1">&#39;join_key&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8160,8 +8161,8 @@ data set.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks join keys.</p>
 <p>Role required to establish a relation between two
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Placeholder"><code>Placeholder</code></a>, the abstract representation of the
@@ -8173,7 +8174,7 @@ beware, columns with NULL in their join keys won't be matched to
 anything, not even to NULL in other join keys.</p>
 <p><a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns"><code>columns</code></a> of this role will <em>not</em> be handled by
 the feature learning algorithm.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8182,8 +8183,8 @@ the feature learning algorithm.</p>
 
 
 <h2 id="getml.data.roles.numerical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">numerical</span> <span class="o">=</span> <span class="s1">&#39;numerical&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">numerical</span> <span class="o">=</span> <span class="s1">&#39;numerical&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8191,8 +8192,8 @@ the feature learning algorithm.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks numerical columns.</p>
 <p>This role tells the getML engine to include the associated
 <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns.FloatColumn"><code>FloatColumn</code></a> during feature
@@ -8201,7 +8202,7 @@ learning.</p>
 of whether it is sampled from a continuous quantity, like passed time or the
 total amount of rainfall, or a discrete one, like the number of sugary
 mulberries one has eaten since lunch.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8210,8 +8211,8 @@ mulberries one has eaten since lunch.</p>
 
 
 <h2 id="getml.data.roles.target" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;target&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;target&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8219,8 +8220,8 @@ mulberries one has eaten since lunch.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks the column(s) we would like to predict.</p>
 <p>The associated <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns"><code>columns</code></a> contain the variables we
 want to predict. They are not used by the feature learning
@@ -8232,7 +8233,7 @@ to contain at least one of them (refer to <a class="autorefs autorefs-internal" 
 <p>The content of the target columns needs to be numerical.
 For classification problems, target variables can only assume the values
 0 or 1. Target variables can never be <code>NULL</code>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8241,8 +8242,8 @@ For classification problems, target variables can only assume the values
 
 
 <h2 id="getml.data.roles.text" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;text&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;text&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8250,8 +8251,8 @@ For classification problems, target variables can only assume the values
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks text columns.</p>
 <p>This role tells the getML engine to include the associated
 <a class="autorefs autorefs-internal" href="../columns/__init__/#getml.data.columns.StringColumn"><code>StringColumn</code></a> during feature
@@ -8260,7 +8261,7 @@ learning.</p>
 Unlike categorical columns, text columns can not be used
 as a whole. Instead, the feature learners have to apply
 basic text mining techniques before they are able to use them.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8269,8 +8270,8 @@ basic text mining techniques before they are able to use them.</p>
 
 
 <h2 id="getml.data.roles.time_stamp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">time_stamp</span> <span class="o">=</span> <span class="s1">&#39;time_stamp&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">time_stamp</span> <span class="o">=</span> <span class="s1">&#39;time_stamp&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8278,8 +8279,8 @@ basic text mining techniques before they are able to use them.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks time stamps.</p>
 <p>This role is used to prevent data leaks. When you join one table onto another,
 you usually want to make sure that no data from the future is used. Time stamps
@@ -8332,6 +8333,7 @@ that is used to try to interpret the input strings. Possible format options are<
 the time stamps as numerical values. If this fails, the time stamp will be set
 to NULL.</p>
 
+
 <details class="example" open>
   <summary>Example</summary>
   <p><div class="highlight"><pre><span></span><code><span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -8351,11 +8353,12 @@ to NULL.</p>
 | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z | 1971-01-03T00:00:00.000000Z |
 </code></pre></div></p>
 </details>
+
 <details class="note" open>
   <summary>Note</summary>
   <p>getML time stamps are actually floats expressing the number of seconds since
 UNIX time (1970-01-01T00:00:00).</p>
-</details>  </div>
+</details>    </div>
 
 </div>
 
@@ -8364,8 +8367,8 @@ UNIX time (1970-01-01T00:00:00).</p>
 
 
 <h2 id="getml.data.roles.unused_float" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unused_float</span> <span class="o">=</span> <span class="s1">&#39;unused_float&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">unused_float</span> <span class="o">=</span> <span class="s1">&#39;unused_float&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8373,12 +8376,12 @@ UNIX time (1970-01-01T00:00:00).</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks a <a class="autorefs autorefs-internal" href="../columns/columns/#getml.data.columns.columns.FloatColumn"><code>FloatColumn</code></a> as unused.</p>
 <p>The associated <a class="autorefs autorefs-internal" href="../columns/columns/#getml.data.columns.columns"><code>column</code></a> will be neither used in the
 data model nor during feature learning or prediction.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8387,8 +8390,8 @@ data model nor during feature learning or prediction.</p>
 
 
 <h2 id="getml.data.roles.unused_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unused_string</span> <span class="o">=</span> <span class="s1">&#39;unused_string&#39;</span></code>
-  
+            <code class="highlight language-python"><span class="n">unused_string</span> <span class="o">=</span> <span class="s1">&#39;unused_string&#39;</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8396,12 +8399,12 @@ data model nor during feature learning or prediction.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Marks a <a class="autorefs autorefs-internal" href="../columns/columns/#getml.data.columns.columns.StringColumn"><code>StringColumn</code></a> as unused.</p>
 <p>The associated <a class="autorefs autorefs-internal" href="../columns/columns/#getml.data.columns.columns"><code>column</code></a> will be neither used in the
 data model nor during feature learning or prediction.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8411,7 +8414,7 @@ data model nor during feature learning or prediction.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

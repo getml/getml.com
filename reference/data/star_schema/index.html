@@ -8034,11 +8034,11 @@
 
 
 <a id="getml.data.star_schema"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Special container for star schemata.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8054,15 +8054,15 @@
 
 
 <h2 id="getml.data.star_schema.StarSchema" class="doc doc-heading">
-          <code>StarSchema</code>
+            <code>StarSchema</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>A StarSchema is a simplifying abstraction that can be used
 for machine learning problems that can be organized in a simple
 <a href="https://en.wikipedia.org/wiki/Star_schema">star schema</a>.</p>
@@ -8078,157 +8078,156 @@ but <em>has</em> both of them.</p>
 accessing the attributes <code>container</code> and <code>data_model</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table defines the
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table defines the
 <a href="https://en.wikipedia.org/wiki/Statistical_population">statistical population </a>
 of the machine learning problem and contains the target variables.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>alias</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The alias to be used for the population table. This is required,
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>alias</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The alias to be used for the population table. This is required,
 if <em>population</em> is a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The peripheral tables are joined onto <em>population</em> or other
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The peripheral tables are joined onto <em>population</em> or other
 peripheral tables. Note that you can also pass them using
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.StarSchema.join"><code>join</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>split</code></td>
-          <td>
-                <code>[`StringColumn`][getml.data.columns.StringColumn] or [`StringColumnView`][getml.data.columns.StringColumnView]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Contains information on how you want to split <em>population</em> into
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>split</code></td>
+            <td>
+                  <code>[`StringColumn`][getml.data.columns.StringColumn] or [`StringColumnView`][getml.data.columns.StringColumnView]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Contains information on how you want to split <em>population</em> into
 different <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a> s.
 Also refer to <a class="autorefs autorefs-internal" href="../split/__init__/#getml.data.split"><code>split</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>deep_copy</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to create deep copies or your tables.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>train</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>train</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>deep_copy</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to create deep copies or your tables.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>train</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>train</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>validation</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>validation</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>test</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in the <em>test</em>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>test</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in the <em>test</em>
 <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The population table used in <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a> s
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The population table used in <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Subset"><code>Subset</code></a> s
 other than the predefined <em>train</em>, <em>validation</em> and <em>test</em> subsets.
 You can call these subsets anything you want to and can access them
 just like <em>train</em>, <em>validation</em> and <em>test</em>.
@@ -8244,14 +8243,15 @@ and <em>kwargs</em>.</p>
 <span class="c1"># validation or test</span>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">my_subset</span><span class="p">)</span>
 </code></pre></div></p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8349,9 +8349,9 @@ you can use a function from the
 <span class="c1"># work just like above.</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/star_schema.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 25</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/star_schema.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 25</span>
 <span class="normal"> 26</span>
 <span class="normal"> 27</span>
 <span class="normal"> 28</span>
@@ -9427,9 +9427,9 @@ you can use a function from the
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9444,8 +9444,8 @@ you can use a function from the
 
 
 <h3 id="getml.data.star_schema.StarSchema.container" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">container</span></code>
-  
+            <code class="highlight language-python"><span class="n">container</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9453,10 +9453,10 @@ you can use a function from the
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The underlying <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Container"><code>Container</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -9465,8 +9465,8 @@ you can use a function from the
 
 
 <h3 id="getml.data.star_schema.StarSchema.data_model" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">data_model</span></code>
-  
+            <code class="highlight language-python"><span class="n">data_model</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9474,33 +9474,32 @@ you can use a function from the
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The underlying <a class="autorefs autorefs-internal" href="../__init__/#getml.data.DataModel"><code>DataModel</code></a>.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.star_schema.StarSchema.join" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">right_df</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_stamps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relationship</span><span class="o">=</span><span class="n">many_to_many</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">upper_time_stamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">right_df</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_stamps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relationship</span><span class="o">=</span><span class="n">many_to_many</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">upper_time_stamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Joins a <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> or <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>
 to the population table.</p>
 <p>In a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.StarSchema"><code>StarSchema</code></a> or <a class="autorefs autorefs-internal" href="../__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>,
 all joins take place on the population table. If you want to create more
 complex data models, use <a class="autorefs autorefs-internal" href="../__init__/#getml.data.DataModel"><code>DataModel</code></a> instead.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -9584,158 +9583,157 @@ algorithm for this join, which can significantly speed things up.</p>
 <p>Please also refer to <a class="autorefs autorefs-internal" href="../relationship/#getml.data.relationship"><code>relationship</code></a>.</p>
 </details>
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>right_df</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The data frame or view you would like to join.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>alias</code></td>
-          <td>
-                <code>str or None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name as which you want <em>right_df</em> to be referred to in
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>right_df</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame] or [`View`][getml.data.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The data frame or view you would like to join.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>alias</code></td>
+            <td>
+                  <code>str or None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name as which you want <em>right_df</em> to be referred to in
 the generated SQL code.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>on</code></td>
-          <td>
-                <code>(None, string, Tuple[str] or List[Union[str, Tuple[str]]])</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The join keys to use. If none is passed, then everything
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on</code></td>
+            <td>
+                  <code>(None, string, Tuple[str] or List[Union[str, Tuple[str]]])</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The join keys to use. If none is passed, then everything
 will be joined to everything else.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_stamps</code></td>
-          <td>
-                <code>string or Tuple[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The time stamps used to limit the join.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>relationship</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The relationship between the two tables. Must be from
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_stamps</code></td>
+            <td>
+                  <code>string or Tuple[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The time stamps used to limit the join.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>relationship</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The relationship between the two tables. Must be from
 <a class="autorefs autorefs-internal" href="../relationship/#getml.data.relationship"><code>relationship</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.data.relationship.many_to_many" href="../relationship/#getml.data.relationship.many_to_many">many_to_many</a></code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>memory</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The difference between the time stamps until data is 'forgotten'.
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.data.relationship.many_to_many" href="../relationship/#getml.data.relationship.many_to_many">many_to_many</a></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>memory</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The difference between the time stamps until data is 'forgotten'.
 Limiting your joins using memory can significantly speed up
 training time. Also refer to <a class="autorefs autorefs-internal" href="../time/#getml.data.time"><code>time</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>horizon</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The prediction horizon to apply to this join.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>horizon</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The prediction horizon to apply to this join.
 Also refer to <a class="autorefs autorefs-internal" href="../time/#getml.data.time"><code>time</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>lagged_targets</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to allow lagged targets. If this is set to True,
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>lagged_targets</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to allow lagged targets. If this is set to True,
 you must also pass a positive, non-zero <em>horizon</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>upper_time_stamp</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of a time stamp in <em>right_df</em> that serves as an upper limit
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>upper_time_stamp</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of a time stamp in <em>right_df</em> that serves as an upper limit
 on the join.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/star_schema.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">330</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/star_schema.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">330</span>
 <span class="normal">331</span>
 <span class="normal">332</span>
 <span class="normal">333</span>
@@ -10183,31 +10181,29 @@ on the join.</p>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="n">alias</span><span class="p">:</span> <span class="n">right_df</span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.star_schema.StarSchema.sync" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sync</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sync</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Synchronizes the last change with the data to avoid warnings that the data
 has been changed.</p>
 <p>This is only a problem when <code>deep_copy=False</code>.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/star_schema.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">555</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/star_schema.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">555</span>
 <span class="normal">556</span>
 <span class="normal">557</span>
 <span class="normal">558</span>
@@ -10223,8 +10219,8 @@ has been changed.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">container</span><span class="o">.</span><span class="n">sync</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -10232,8 +10228,7 @@ has been changed.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10242,7 +10237,7 @@ has been changed.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -8192,16 +8192,17 @@
 
 
 <a id="getml.feature_learning"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This module contains relational learning algorithms to learn features
 from relational data or time series.</p>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>All feature learners need to be passed to <a class="autorefs autorefs-internal" href="../../pipeline/pipeline/#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 </details>
-  
+
 
   <div class="doc doc-children">
 
@@ -8217,9 +8218,9 @@ from relational data or time series.</p>
 
 
 <h2 id="getml.feature_learning.FastProp" class="doc doc-heading">
-          <code>FastProp</code>
+            <code>FastProp</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -8227,11 +8228,11 @@ from relational data or time series.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Generates simple features based on propositionalization.</p>
 <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.FastProp"><code>FastProp</code></a> generates simple and easily
 interpretable features for relational data and time series. It is based on a
@@ -8246,139 +8247,138 @@ preprocessors, which can drastically improve predictive accuracy.</p>
 out the User guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#fastprop">FastProp</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.aggregation">aggregation</span></code></td>
-          <td>
-                <code><span title="typing.List">List</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Mathematical operations used by the automated feature
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.aggregation">aggregation</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.delta_t">delta_t</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Frequency with which lag variables will be explored in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.delta_t">delta_t</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables. Please note that you must also pass a value to
 max_lag.</p>
 <p>For more information please refer to
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Data Model Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.max_lag">max_lag</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum number of steps taken into the past to form lag variables. The
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.max_lag">max_lag</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum number of steps taken into the past to form lag variables. The
 step size is determined by delta_t. Please note that you must also pass
 a value to delta_t.</p>
 <p>For more information please refer to
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.min_df">min_df</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.min_df">min_df</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
 Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.n_most_frequent">n_most_frequent</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.FastProp"><code>FastProp</code></a> can find the N most frequent
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.n_most_frequent">n_most_frequent</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.FastProp"><code>FastProp</code></a> can find the N most frequent
 categories in a categorical column and derive features from them.
 The parameter determines how many categories should be used.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.sampling_factor">sampling_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>FastProp uses a bootstrapping procedure (sampling with replacement) to train
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.sampling_factor">sampling_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>FastProp uses a bootstrapping procedure (sampling with replacement) to train
 each of the features. The sampling factor is proportional to the share of
 the samples randomly drawn from the population table every time Multirel
 generates a new feature. A lower sampling factor (but still greater than
@@ -8387,40 +8387,40 @@ faster training. When set to 1.0, roughly 2,000 samples are drawn from the
 population table. If the population table contains less than 2,000 samples,
 it will use standard bagging. When set to 0.0, there will be no sampling at
 all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.FastProp.vocab_size">vocab_size</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the maximum number
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.FastProp.vocab_size">vocab_size</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastprop.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/fastprop.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
@@ -8708,12 +8708,11 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 
         <span class="n">_validate_dfs_model_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8726,57 +8725,55 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.FastProp.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing the parameters to validate.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing the parameters to validate.
 params can hold the full set or a subset of the
 parameters explained in
 <a class="autorefs autorefs-internal" href="#getml.feature_learning.FastProp"><code>FastProp</code></a>.
 If params is None, the
 current set of parameters in the
 instance dictionary will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastprop.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/fastprop.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
 <span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
@@ -8842,8 +8839,8 @@ instance dictionary will be validated.</p>
 
     <span class="n">_validate_dfs_model_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8851,8 +8848,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8861,9 +8857,9 @@ instance dictionary will be validated.</p>
 
 
 <h2 id="getml.feature_learning.Fastboost" class="doc doc-heading">
-          <code>Fastboost</code>
+            <code>Fastboost</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -8871,178 +8867,177 @@ instance dictionary will be validated.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Feature learning based on Gradient Boosting.</p>
 <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.Fastboost"><code>Fastboost</code></a> automates feature learning
 for relational data and time series. The algorithm used is slightly
 simpler than <a class="autorefs autorefs-internal" href="#getml.feature_learning.Relboost"><code>Relboost</code></a> and much faster.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.gamma">gamma</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>During the training of Fastboost, which is based on
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.gamma">gamma</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>During the training of Fastboost, which is based on
 gradient tree boosting, this value serves as the minimum
 improvement in terms of the <code>loss_function</code> required for a
 split of the tree to be applied. Larger <code>gamma</code> will lead
 to fewer partitions of the tree and a more conservative
 algorithm. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Literal">Literal</span>[&#39;CrossEntropyLoss&#39;, &#39;SquareLoss&#39;]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Literal">Literal</span>[&#39;CrossEntropyLoss&#39;, &#39;SquareLoss&#39;]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.max_depth">max_depth</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum depth of the trees generated during the gradient
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.max_depth">max_depth</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum depth of the trees generated during the gradient
 tree boosting. Deeper trees will result in more complex
 models and increase the risk of overfitting. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.min_child_weights">min_child_weights</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the minimum sum of the weights a subcondition
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.min_child_weights">min_child_weights</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the minimum sum of the weights a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
 overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [<span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.reg_lambda">reg_lambda</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization on the weights in the gradient boosting
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.reg_lambda">reg_lambda</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights in the gradient boosting
 routine. This is one of the most important hyperparameters
 in the <a class="autorefs autorefs-internal" href="#getml.feature_learning.Relboost"><code>Relboost</code></a> as it allows
 for the most direct regularization. Larger values will
 make the resulting model more conservative. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.seed">seed</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator that underlies
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.seed">seed</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
 5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.shrinkage">shrinkage</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Since Fastboost works using a gradient-boosting-like
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.shrinkage">shrinkage</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Since Fastboost works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
 weights and thus the impact of each new tree. This gives
 more room for future ones to improve the overall
 performance of the model in this greedy algorithm. It must
 be between 0.0 and 1.0 with higher values leading to a higher
 danger of overfitting. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Fastboost.subsample">subsample</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Fastboost uses a bootstrapping procedure (sampling with
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Fastboost.subsample">subsample</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Fastboost uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
 factor is proportional to the share of the samples
 randomly drawn from the population table every time
@@ -9053,19 +9048,20 @@ training. When set to 1.0, the number of samples drawn will
 be identical to the size of the population table.
 When set to 0.0, there will be no sampling at all.
 Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastboost.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/fastboost.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -9343,12 +9339,11 @@ Range: [0, 1]</p>
 
         <span class="n">_validate_fastboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9361,57 +9356,55 @@ Range: [0, 1]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.Fastboost.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing the parameters to validate.
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing the parameters to validate.
 params can hold the full set or a subset of the
 parameters explained in
 <a class="autorefs autorefs-internal" href="#getml.feature_learning.Fastboost"><code>Fastboost</code></a>.
 If params is None, the
 current set of parameters in the
 instance dictionary will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/fastboost.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">123</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/fastboost.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">123</span>
 <span class="normal">124</span>
 <span class="normal">125</span>
 <span class="normal">126</span>
@@ -9483,8 +9476,8 @@ instance dictionary will be validated.</p>
 
     <span class="n">_validate_fastboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9492,8 +9485,7 @@ instance dictionary will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9502,9 +9494,9 @@ instance dictionary will be validated.</p>
 
 
 <h2 id="getml.feature_learning.Multirel" class="doc doc-heading">
-          <code>Multirel</code>
+            <code>Multirel</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -9512,11 +9504,11 @@ instance dictionary will be validated.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Feature learning based on Multi-Relational Decision Tree Learning.</p>
 <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.Multirel"><code>Multirel</code></a> automates feature learning
 for relational data and time series. It is based on an efficient
@@ -9525,38 +9517,37 @@ variation of the Multi-Relational Decision Tree Learning (MRDTL).</p>
 out the User guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#multirel">Multirel</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.aggregation">aggregation</span></code></td>
-          <td>
-                <code><span title="typing.List">List</span>[<span title="getml.feature_learning.aggregations._Aggregations">_Aggregations</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Mathematical operations used by the automated feature
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.aggregation">aggregation</span></code></td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="getml.feature_learning.aggregations._Aggregations">_Aggregations</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.allow_sets">allow_sets</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Multirel can summarize different categories into sets for
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.allow_sets">allow_sets</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Multirel can summarize different categories into sets for
 producing conditions. When expressed as SQL statements these
 sets might look like this:</p>
 <pre><code>t2.category IN ( 'value_1', 'value_2', ... )
@@ -9564,62 +9555,62 @@ sets might look like this:</p>
 <p>This can be very powerful, but it can also produce
 features that are hard to read and might be prone to
 overfitting when the <code>sampling_factor</code> is too low.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.delta_t">delta_t</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Frequency with which lag variables will be explored in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.delta_t">delta_t</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
 <p>For more information please refer to
 :ref:<code>data_model_time_series</code>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.grid_factor">grid_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Multirel will try a grid of critical values for your
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.grid_factor">grid_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Multirel will try a grid of critical values for your
 numerical features. A higher <code>grid_factor</code> will lead to a
 larger number of critical values being considered. This
 can increase the training time, but also lead to more
 accurate features. Range: (0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.max_length">max_length</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The maximum length a subcondition might have. Multirel
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.max_length">max_length</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum length a subcondition might have. Multirel
 will create conditions in the form</p>
 <pre><code>(condition 1.1 AND condition 1.2 AND condition 1.3 )
 OR ( condition 2.1 AND condition 2.2 AND condition 2.3 )
@@ -9627,126 +9618,126 @@ OR ( condition 2.1 AND condition 2.2 AND condition 2.3 )
 </code></pre>
 <p>Using this parameter you can set the maximum number of
 conditions allowed in the brackets. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.min_df">min_df</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.min_df">min_df</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
 Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.min_num_samples">min_num_samples</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the minimum number of samples a subcondition
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.min_num_samples">min_num_samples</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the minimum number of samples a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
 overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.num_subfeatures">num_subfeatures</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of subfeatures you would like to extract in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.num_subfeatures">num_subfeatures</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#the-snowflake-schema">Snowflake Schema</a> for more
 information. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [<span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.propositionalization">propositionalization</span></code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The feature learner used for joins which are flagged to be
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.propositionalization">propositionalization</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The feature learner used for joins which are flagged to be
 propositionalized (by setting a join's <code>relationship</code> parameter to
 <a class="autorefs autorefs-internal" href="../../data/relationship/#getml.data.relationship.propositionalization"><code>propositionalization</code></a>)</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.regularization">regularization</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Most important regularization parameter for the quality of
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.regularization">regularization</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Most important regularization parameter for the quality of
 the features produced by Multirel. Higher values will lead
 to less complex features and less danger of overfitting. A
 <code>regularization</code> of 1.0 is very strong and allows no
 conditions. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.round_robin">round_robin</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If True, the Multirel picks a different <code>aggregation</code>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.round_robin">round_robin</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If True, the Multirel picks a different <code>aggregation</code>
 every time a new feature is generated.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.sampling_factor">sampling_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Multirel uses a bootstrapping procedure (sampling with
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.sampling_factor">sampling_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Multirel uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
 factor is proportional to the share of the samples
 randomly drawn from the population table every time
@@ -9758,104 +9749,105 @@ from the population table. If the population table
 contains less than 20,000 samples, it will use standard
 bagging. When set to 0.0, there will be no sampling at
 all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.seed">seed</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator that underlies
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.seed">seed</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
 5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.share_aggregations">share_aggregations</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Every time a new feature is generated, the <code>aggregation</code>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.share_aggregations">share_aggregations</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Every time a new feature is generated, the <code>aggregation</code>
 will be taken from a random subsample of possible
 aggregations and values to be aggregated. This parameter
 determines the size of that subsample. Only relevant when
 <code>round_robin</code> is False. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.share_conditions">share_conditions</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Every time a new column is tested for applying conditions,
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.share_conditions">share_conditions</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Every time a new column is tested for applying conditions,
 it might be skipped at random. This parameter determines
 the probability that a column will <em>not</em> be
 skipped. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.shrinkage">shrinkage</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Since Multirel works using a gradient-boosting-like
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.shrinkage">shrinkage</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Since Multirel works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
 weights and thus the impact of each new tree. This gives
 more room for future ones to improve the overall
 performance of the model in this greedy algorithm. Higher
 values will lead to more danger of overfitting. Range: [0,
 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Multirel.vocab_size">vocab_size</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the maximum number
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Multirel.vocab_size">vocab_size</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/multirel.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 26</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/multirel.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 26</span>
 <span class="normal"> 27</span>
 <span class="normal"> 28</span>
 <span class="normal"> 29</span>
@@ -10325,12 +10317,11 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 
         <span class="n">_validate_multirel_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -10343,53 +10334,51 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.Multirel.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/multirel.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">227</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/multirel.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">227</span>
 <span class="normal">228</span>
 <span class="normal">229</span>
 <span class="normal">230</span>
@@ -10457,8 +10446,8 @@ the own parameters will be validated.</p>
 
     <span class="n">_validate_multirel_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -10466,8 +10455,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10476,9 +10464,9 @@ the own parameters will be validated.</p>
 
 
 <h2 id="getml.feature_learning.RelMT" class="doc doc-heading">
-          <code>RelMT</code>
+            <code>RelMT</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -10486,11 +10474,11 @@ the own parameters will be validated.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Feature learning based on relational linear model trees.</p>
 <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.RelMT"><code>RelMT</code></a> automates feature learning
 for relational data and time series. It is based on a
@@ -10501,195 +10489,194 @@ with linear models on its leaves.</p>
 algorithm, check out the User Guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#relmt">RelMT</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.allow_avg">allow_avg</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to allow an AVG aggregation. Particularly for time
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.allow_avg">allow_avg</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to allow an AVG aggregation. Particularly for time
 series problems, AVG aggregations are not necessary and you
 can save some time by taking them out.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.delta_t">delta_t</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Frequency with which lag variables will be explored in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.delta_t">delta_t</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
 <p>For more information, please refer to <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Data Model Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.gamma">gamma</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>During the training of RelMT, which is based on
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.gamma">gamma</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>During the training of RelMT, which is based on
 gradient tree boosting, this value serves as the minimum
 improvement in terms of the <code>loss_function</code> required for a
 split of the tree to be applied. Larger <code>gamma</code> will lead
 to fewer partitions of the tree and a more conservative
 algorithm. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.max_depth">max_depth</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum depth of the trees generated during the gradient
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.max_depth">max_depth</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum depth of the trees generated during the gradient
 tree boosting. Deeper trees will result in more complex
 models and increase the risk of overfitting. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.min_df">min_df</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.min_df">min_df</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
 Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.min_num_samples">min_num_samples</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the minimum number of samples a subcondition
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.min_num_samples">min_num_samples</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the minimum number of samples a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
 overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.num_subfeatures">num_subfeatures</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of subfeatures you would like to extract in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.num_subfeatures">num_subfeatures</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
 :ref:<code>data_model_snowflake_schema</code> for more
 information. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [-<span class="arithmatex">\(\infty\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.propositionalization">propositionalization</span></code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The feature learner used for joins which are flagged to be
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.propositionalization">propositionalization</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The feature learner used for joins which are flagged to be
 propositionalized (by setting a join's <code>relationship</code> parameter to
 <a class="autorefs autorefs-internal" href="../../data/relationship/#getml.data.relationship.propositionalization"><code>propositionalization</code></a>)</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.reg_lambda">reg_lambda</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization on the weights in the gradient boosting
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.reg_lambda">reg_lambda</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights in the gradient boosting
 routine. This is one of the most important hyperparameters
 in the <a class="autorefs autorefs-internal" href="#getml.feature_learning.RelMT"><code>RelMT</code></a> as it allows
 for the most direct regularization. Larger values will
 make the resulting model more conservative. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.sampling_factor">sampling_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>RelMT uses a bootstrapping procedure (sampling with
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.sampling_factor">sampling_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>RelMT uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
 factor is proportional to the share of the samples
 randomly drawn from the population table every time
@@ -10701,75 +10688,76 @@ from the population table. If the population table
 contains less than 20,000 samples, it will use standard
 bagging. When set to 0.0, there will be no sampling at
 all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.seed">seed</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator that underlies
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.seed">seed</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
 5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.shrinkage">shrinkage</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Since RelMT works using a gradient-boosting-like
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.shrinkage">shrinkage</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Since RelMT works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
 weights and thus the impact of each new tree. This gives
 more room for future ones to improve the overall
 performance of the model in this greedy algorithm. It must
 be between 0.0 and 1.0 with higher values leading to more
 danger of overfitting. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.RelMT.vocab_size">vocab_size</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the maximum number
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.RelMT.vocab_size">vocab_size</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/relmt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/relmt.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -11159,12 +11147,11 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 
         <span class="n">_validate_relboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -11177,53 +11164,51 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.RelMT.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/relmt.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">179</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/relmt.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">179</span>
 <span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span>
@@ -11301,8 +11286,8 @@ the own parameters will be validated.</p>
 
     <span class="n">_validate_relboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -11310,8 +11295,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -11320,9 +11304,9 @@ the own parameters will be validated.</p>
 
 
 <h2 id="getml.feature_learning.Relboost" class="doc doc-heading">
-          <code>Relboost</code>
+            <code>Relboost</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -11330,11 +11314,11 @@ the own parameters will be validated.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.feature_learning.feature_learner._FeatureLearner">_FeatureLearner</span></code></p>
 
-  
+
       <p>Feature learning based on Gradient Boosting.</p>
 <p><a class="autorefs autorefs-internal" href="#getml.feature_learning.Relboost"><code>Relboost</code></a> automates feature learning
 for relational data and time series. It is based on a
@@ -11344,196 +11328,195 @@ the name.</p>
 algorithm, check out the User Guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#relboost">Relboost</a>.</p>
 
 
-
-  <p><span class="doc-section-title">Attributes:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.allow_null_weights">allow_null_weights</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to allow
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.allow_null_weights">allow_null_weights</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to allow
 <a class="autorefs autorefs-internal" href="#getml.feature_learning.Relboost"><code>Relboost</code></a> to set weights to
 NULL.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.delta_t">delta_t</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Frequency with which lag variables will be explored in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.delta_t">delta_t</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
 <p>For more information, please refer to
 :ref:<code>data_model_time_series</code>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.gamma">gamma</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>During the training of Relboost, which is based on
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.gamma">gamma</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>During the training of Relboost, which is based on
 gradient tree boosting, this value serves as the minimum
 improvement in terms of the <code>loss_function</code> required for a
 split of the tree to be applied. Larger <code>gamma</code> will lead
 to fewer partitions of the tree and a more conservative
 algorithm. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.loss_function">loss_function</span></code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Objective function used by the feature learning algorithm
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.loss_function">loss_function</span></code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
 classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.max_depth">max_depth</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum depth of the trees generated during the gradient
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.max_depth">max_depth</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum depth of the trees generated during the gradient
 tree boosting. Deeper trees will result in more complex
 models and increase the risk of overfitting. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.min_df">min_df</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.min_df">min_df</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
 Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.min_num_samples">min_num_samples</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the minimum number of samples a subcondition
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.min_num_samples">min_num_samples</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the minimum number of samples a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
 overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.num_features">num_features</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of features generated by the feature learning
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.num_features">num_features</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of features generated by the feature learning
 algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.num_subfeatures">num_subfeatures</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of subfeatures you would like to extract in a
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.num_subfeatures">num_subfeatures</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
 :ref:<code>data_model_snowflake_schema</code> for more
 information. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.num_threads">num_threads</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of threads used by the feature learning algorithm. If set to
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.num_threads">num_threads</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
 [<span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.propositionalization">propositionalization</span></code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The feature learner used for joins which are flagged to be
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.propositionalization">propositionalization</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.fastprop.FastProp">FastProp</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The feature learner used for joins which are flagged to be
 propositionalized (by setting a join's <code>relationship</code> parameter to
 <a class="autorefs autorefs-internal" href="../../data/relationship/#getml.data.relationship.propositionalization"><code>propositionalization</code></a>)</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.reg_lambda">reg_lambda</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization on the weights in the gradient boosting
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.reg_lambda">reg_lambda</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights in the gradient boosting
 routine. This is one of the most important hyperparameters
 in the <a class="autorefs autorefs-internal" href="#getml.feature_learning.Relboost"><code>Relboost</code></a> as it allows
 for the most direct regularization. Larger values will
 make the resulting model more conservative. Range: [0,
 <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.sampling_factor">sampling_factor</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Relboost uses a bootstrapping procedure (sampling with
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.sampling_factor">sampling_factor</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Relboost uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
 factor is proportional to the share of the samples
 randomly drawn from the population table every time
@@ -11545,75 +11528,76 @@ from the population table. If the population table
 contains less than 20,000 samples, it will use standard
 bagging. When set to 0.0, there will be no sampling at
 all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.seed">seed</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for the random number generator that underlies
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.seed">seed</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
 5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.shrinkage">shrinkage</span></code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Since Relboost works using a gradient-boosting-like
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.shrinkage">shrinkage</span></code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Since Relboost works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
 weights and thus the impact of each new tree. This gives
 more room for future ones to improve the overall
 performance of the model in this greedy algorithm. It must
 be between 0.0 and 1.0 with higher values leading to a higher
 danger of overfitting. Range: [0, 1]</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.silent">silent</span></code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Controls the logging during training.</p>
-            </div>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code><span title="getml.feature_learning.Relboost.vocab_size">vocab_size</span></code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Determines the maximum number
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.silent">silent</span></code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Controls the logging during training.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="getml.feature_learning.Relboost.vocab_size">vocab_size</span></code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
 Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Not supported in the getML community edition.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/relboost.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/feature_learning/relboost.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -12003,12 +11987,11 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 
         <span class="n">_validate_relboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -12021,53 +12004,51 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.feature_learning.Relboost.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/feature_learning/relboost.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">178</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/feature_learning/relboost.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">178</span>
 <span class="normal">179</span>
 <span class="normal">180</span>
 <span class="normal">181</span>
@@ -12147,8 +12128,8 @@ the own parameters will be validated.</p>
 
     <span class="n">_validate_relboost_parameters</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -12156,8 +12137,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -12166,7 +12146,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

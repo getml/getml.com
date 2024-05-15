@@ -7934,15 +7934,14 @@
 
 
 <a id="getml.data.helpers"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Collection of helper functions that are not intended to be used by
 the end-user.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7955,35 +7954,33 @@ the end-user.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.helpers.list_data_frames" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">list_data_frames</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">list_data_frames</span><span class="p">()</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Lists all available data frames of the project.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>dict</code></td>          <td>
-                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.List">List</span>[str]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Dict containing lists of strings representing the names of
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>dict</code></td>            <td>
+                  <code><span title="typing.Dict">Dict</span>[str, <span title="typing.List">List</span>[str]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Dict containing lists of strings representing the names of
 the data frames objects</p>
 <ul>
 <li>'in_memory'
@@ -7991,11 +7988,12 @@ the data frames objects</p>
 <li>'on_disk'
     stored on disk.</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8005,9 +8003,9 @@ the data frames objects</p>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">list_data_frames</span><span class="p">()</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/helpers.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/helpers.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
@@ -8075,8 +8073,8 @@ the data frames objects</p>
 
     <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8084,7 +8082,7 @@ the data frames objects</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

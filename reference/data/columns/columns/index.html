@@ -8124,11 +8124,11 @@
 
 
 <a id="getml.data.columns.columns"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains the actual columns.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8144,22 +8144,23 @@
 
 
 <h2 id="getml.data.columns.columns.BooleanColumnView" class="doc doc-heading">
-          <code>BooleanColumnView</code>
+            <code>BooleanColumnView</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
-  
+
       <p>Handle for a lazily evaluated boolean column view.</p>
 <p>Column views do not actually exist - they will be lazily
 evaluated when necessary.</p>
 <p>They can be used to take subselection of the data frame
 or to update other columns.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8228,9 +8229,9 @@ or to update other columns.</p>
 <span class="n">my_df</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
 <span class="normal">176</span>
 <span class="normal">177</span>
 <span class="normal">178</span>
@@ -8604,12 +8605,11 @@ or to update other columns.</p>
             <span class="n">operand2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8622,20 +8622,19 @@ or to update other columns.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.columns.columns.BooleanColumnView.as_num" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_num</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">as_num</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Transforms the boolean column into a numerical column</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">355</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">355</span>
 <span class="normal">356</span>
 <span class="normal">357</span>
 <span class="normal">358</span>
@@ -8649,29 +8648,27 @@ or to update other columns.</p>
         <span class="n">operand2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.columns.columns.BooleanColumnView.is_false" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_false</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_false</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Whether an entry is False - effectively inverts the Boolean column.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">345</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">345</span>
 <span class="normal">346</span>
 <span class="normal">347</span>
 <span class="normal">348</span>
@@ -8685,8 +8682,8 @@ or to update other columns.</p>
         <span class="n">operand2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8694,8 +8691,7 @@ or to update other columns.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8704,79 +8700,78 @@ or to update other columns.</p>
 
 
 <h2 id="getml.data.columns.columns.FloatColumn" class="doc doc-heading">
-          <code>FloatColumn</code>
+            <code>FloatColumn</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
-  
+
       <p>Handle for numerical data in the engine.</p>
 <p>This is a handler for all numerical data in the getML engine,
 including time stamps.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the categorical column.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>role</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Role that the column plays.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;numerical&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>df_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><code>name</code> instance variable of the
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the categorical column.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>role</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Role that the column plays.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;numerical&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>df_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>name</code> instance variable of the
 <a class="autorefs autorefs-internal" href="../../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>  containing this column.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
       <p>Examples:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -8828,9 +8823,9 @@ including time stamps.</p>
 <span class="n">my_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s2">&quot;column_03&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>
 </code></pre></div></p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">593</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">593</span>
 <span class="normal">594</span>
 <span class="normal">595</span>
 <span class="normal">596</span>
@@ -9010,9 +9005,9 @@ including time stamps.</p>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;type_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">FLOAT_COLUMN</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9028,8 +9023,7 @@ including time stamps.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9038,24 +9032,24 @@ including time stamps.</p>
 
 
 <h2 id="getml.data.columns.columns.FloatColumnView" class="doc doc-heading">
-          <code>FloatColumnView</code>
+            <code>FloatColumnView</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
-  
+
       <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.FloatColumn"><code>FloatColumn</code></a>.</p>
 <p>Column views do not actually exist - they will be lazily
 evaluated when necessary.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">688</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">688</span>
 <span class="normal">689</span>
 <span class="normal">690</span>
 <span class="normal">691</span>
@@ -9201,9 +9195,9 @@ evaluated when necessary.</p>
 
         <span class="k">return</span> <span class="n">operand</span><span class="o">.</span><span class="n">cmd</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9219,8 +9213,7 @@ evaluated when necessary.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9229,77 +9222,76 @@ evaluated when necessary.</p>
 
 
 <h2 id="getml.data.columns.columns.StringColumn" class="doc doc-heading">
-          <code>StringColumn</code>
+            <code>StringColumn</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
-  
+
       <p>Handle for categorical data that is kept in the getML engine</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the categorical column.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>role</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Role that the column plays.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;categorical&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>df_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><code>name</code> instance variable of the
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the categorical column.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>role</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Role that the column plays.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;categorical&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>df_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><code>name</code> instance variable of the
 <a class="autorefs autorefs-internal" href="../../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> containing this column.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
       <p>Examples:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -9351,9 +9343,9 @@ evaluated when necessary.</p>
 <span class="n">my_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s2">&quot;new_names&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
 </code></pre></div></p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">367</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">367</span>
 <span class="normal">368</span>
 <span class="normal">369</span>
 <span class="normal">370</span>
@@ -9519,9 +9511,9 @@ evaluated when necessary.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;role_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">role</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;type_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">STRING_COLUMN</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9537,8 +9529,7 @@ evaluated when necessary.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9547,17 +9538,17 @@ evaluated when necessary.</p>
 
 
 <h2 id="getml.data.columns.columns.StringColumnView" class="doc doc-heading">
-          <code>StringColumnView</code>
+            <code>StringColumnView</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
-  
+
       <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.StringColumn"><code>StringColumn</code></a>.</p>
 <p>Columns views do not actually exist - they will be lazily
 evaluated when necessary.</p>
@@ -9622,9 +9613,9 @@ evaluated when necessary.</p>
 <span class="n">my_df</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s2">&quot;new_names&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
 </code></pre></div></p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">455</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">455</span>
 <span class="normal">456</span>
 <span class="normal">457</span>
 <span class="normal">458</span>
@@ -9890,9 +9881,9 @@ evaluated when necessary.</p>
 
         <span class="k">return</span> <span class="n">operand</span><span class="o">.</span><span class="n">cmd</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9908,88 +9899,84 @@ evaluated when necessary.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.columns.columns.arange" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns evenly spaced variables, within a given interval.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>start</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The beginning of the interval. Defaults to 0.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stop</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The end of the interval.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>step</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The step taken. Defaults to 1.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>start</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The beginning of the interval. Defaults to 0.</p>
-            </div>
-          </td>
-          <td>
-                <code>0.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>stop</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The end of the interval.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>step</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The step taken. Defaults to 1.</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 67</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 67</span>
 <span class="normal"> 68</span>
 <span class="normal"> 69</span>
 <span class="normal"> 70</span>
@@ -10079,53 +10066,50 @@ evaluated when necessary.</p>
 
     <span class="k">return</span> <span class="n">col</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.columns.columns.rowid" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rowid</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">rowid</span><span class="p">()</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the row numbers of the table.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.FloatColumnView"><code>FloatColumnView</code></a>:
-(numerical) column containing the row id, starting with 0</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.data.columns.FloatColumnView"><code>FloatColumnView</code></a>:
+(numerical) column containing the row id, starting with 0</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/columns/columns.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">117</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">117</span>
 <span class="normal">118</span>
 <span class="normal">119</span>
 <span class="normal">120</span>
@@ -10143,8 +10127,8 @@ evaluated when necessary.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">FloatColumnView</span><span class="p">(</span><span class="n">operator</span><span class="o">=</span><span class="s2">&quot;rowid&quot;</span><span class="p">,</span> <span class="n">operand1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">operand2</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -10152,7 +10136,7 @@ evaluated when necessary.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

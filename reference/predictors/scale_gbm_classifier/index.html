@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.predictors.scale_gbm_classifier"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A gradient boosting model for predicting classification problems.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.predictors.scale_gbm_classifier.ScaleGBMClassifier" class="doc doc-heading">
-          <code>ScaleGBMClassifier</code>
+            <code>ScaleGBMClassifier</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.predictors.predictor._Predictor">_Predictor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.predictors.predictor._Predictor">_Predictor</span></code></p>
 
-  
+
       <p>Standard gradient boosting classifier that fully supports memory mapping
    and can be used for datasets that do not fit into memory.</p>
 <p>Gradient tree boosting trains an ensemble of decision trees by training
@@ -8037,26 +8037,25 @@ This hyperparameter can be set by the users or the hyperparameter
 optimization algorithm to avoid overfitting.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>colsample_bylevel</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Subsample ratio for the columns used, for each level
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>colsample_bylevel</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Subsample ratio for the columns used, for each level
 inside a tree.</p>
 <p>Note that ScaleGBM grows its trees level-by-level, not
 node-by-node.
@@ -8068,57 +8067,57 @@ When set to 1, then now such sampling takes place.</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: (0, 1]</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colsample_bytree</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Subsample ratio for the columns used, for each tree.
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colsample_bytree</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Subsample ratio for the columns used, for each tree.
 This means that for each tree, a subselection
 of the features will be randomly chosen. This hyperparameter
 determines the share of features randomly picked for each tree.</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: (0, 1]</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>early_stopping_rounds</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of early_stopping_rounds for which we see
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>early_stopping_rounds</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of early_stopping_rounds for which we see
 no improvement on the validation set until we stop
 the training process.</p>
 <p>Range: (0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>10</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>gamma</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Minimum loss reduction required for any update
+              </div>
+            </td>
+            <td>
+                  <code>10</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>gamma</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Minimum loss reduction required for any update
 to the tree. This means that every potential update
 will first be evaluated for its improvement to the loss
 function. If the improvement exceeds gamma,
@@ -8126,57 +8125,57 @@ the update will be accepted.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>0.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>goss_a</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Share of the samples with the largest residuals
+              </div>
+            </td>
+            <td>
+                  <code>0.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>goss_a</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Share of the samples with the largest residuals
 taken for each tree.</p>
 <p>If <code>goss_a</code> is set to 1, then gradients one-sided
 sampling is effectively turned off.</p>
 <p>Range: [0, 1]</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>goss_b</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Share of the samples that are not in the <code>goss_a</code>
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>goss_b</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Share of the samples that are not in the <code>goss_a</code>
 percentile of largest residuals randomly sampled
 for each tree.</p>
 <p>The sum of <code>goss_a</code> and <code>goss_b</code> cannot exceed
 1.</p>
 <p>Range: [0, 1]</p>
-            </div>
-          </td>
-          <td>
-                <code>0.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>learning_rate</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Learning rate for the gradient boosting algorithm.
+              </div>
+            </td>
+            <td>
+                  <code>0.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>learning_rate</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Learning rate for the gradient boosting algorithm.
 When a new tree <span class="arithmatex">\(\nabla f_{t,i}\)</span> is trained,
 it will be added to the existing trees
 <span class="arithmatex">\(f_{t-1,i}\)</span>. Before doing so, it will be
@@ -8184,37 +8183,37 @@ multiplied by the <em>learning_rate</em>.</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [0, 1]</p>
-            </div>
-          </td>
-          <td>
-                <code>0.1</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>max_depth</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Maximum allowed depth of the trees.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.1</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>max_depth</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Maximum allowed depth of the trees.</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>3</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>min_child_weights</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Minimum sum of weights needed in each child node for a
+              </div>
+            </td>
+            <td>
+                  <code>3</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>min_child_weights</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Minimum sum of weights needed in each child node for a
 split. The idea here is that any leaf should have
 a minimum number of samples in order to avoid overfitting.
 This very common form of regularizing decision trees is
@@ -8224,86 +8223,86 @@ but the basic idea is the same.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>n_estimators</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of estimators (trees).</p>
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_estimators</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of estimators (trees).</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [10, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>100</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>n_jobs</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of parallel threads. When set to zero, then
+              </div>
+            </td>
+            <td>
+                  <code>100</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_jobs</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of parallel threads. When set to zero, then
 the optimal number of threads will be inferred automatically.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>1</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>reg_lambda</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>L2 regularization on the weights. Please refer to
+              </div>
+            </td>
+            <td>
+                  <code>1</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reg_lambda</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights. Please refer to
 the introductory remarks to understand how this
 hyperparameter influences your weights.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>1.0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>seed</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed used for random sampling and other random
+              </div>
+            </td>
+            <td>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>seed</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed used for random sampling and other random
 factors.</p>
 <p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
-            </div>
-          </td>
-          <td>
-                <code>5843</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>5843</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/predictors/scale_gbm_classifier.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">120</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/predictors/scale_gbm_classifier.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">120</span>
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
@@ -8751,12 +8750,11 @@ factors.</p>
 
         <span class="n">_validate_scalegbm_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8769,49 +8767,48 @@ factors.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.predictors.scale_gbm_classifier.ScaleGBMClassifier.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -8819,9 +8816,9 @@ the own parameters will be validated.</p>
 and every time before the predictor - or a class holding
 it as an instance variable - is sent to the getML engine.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/predictors/scale_gbm_classifier.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">310</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/predictors/scale_gbm_classifier.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">310</span>
 <span class="normal">311</span>
 <span class="normal">312</span>
 <span class="normal">313</span>
@@ -8889,8 +8886,8 @@ it as an instance variable - is sent to the getML engine.</p>
 
     <span class="n">_validate_scalegbm_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8898,8 +8895,7 @@ it as an instance variable - is sent to the getML engine.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8908,7 +8904,7 @@ it as an instance variable - is sent to the getML engine.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

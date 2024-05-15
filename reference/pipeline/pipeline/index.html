@@ -8540,12 +8540,12 @@
 
 
 <a id="getml.pipeline.pipeline"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This submodule contains the Pipeline, which is the main
 class for feature learning and prediction.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8561,54 +8561,53 @@ class for feature learning and prediction.</p>
 
 
 <h2 id="getml.pipeline.pipeline.Pipeline" class="doc doc-heading">
-          <code>Pipeline</code>
+            <code>Pipeline</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>A Pipeline is the main class for feature learning and prediction.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>data_model</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="getml.data.DataModel" href="../../data/__init__/#getml.data.DataModel">DataModel</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Abstract representation of the data_model,
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>data_model</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="getml.data.DataModel" href="../../data/__init__/#getml.data.DataModel">DataModel</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Abstract representation of the data_model,
 which defines the abstract relationships between the tables.
 Required for the feature learners.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="getml.data.Placeholder" href="../../data/__init__/#getml.data.Placeholder">Placeholder</a>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Abstract representations of the additional tables used to
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="getml.data.Placeholder" href="../../data/__init__/#getml.data.Placeholder">Placeholder</a>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Abstract representations of the additional tables used to
 augment the information provided in <code>population</code>. These
 have to be the same objects that were
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder.join"><code>join</code></a> ed onto the
@@ -8625,144 +8624,145 @@ pass the data frames as a list.
 If you omit the peripheral placeholders, they will
 be inferred from the data model and ordered
 alphabetically.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>preprocessors</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.preprocessors.CategoryTrimmer" href="../../preprocessors/__init__/#getml.preprocessors.CategoryTrimmer">CategoryTrimmer</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.EmailDomain" href="../../preprocessors/__init__/#getml.preprocessors.EmailDomain">EmailDomain</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Imputation" href="../../preprocessors/__init__/#getml.preprocessors.Imputation">Imputation</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Mapping" href="../../preprocessors/__init__/#getml.preprocessors.Mapping">Mapping</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Seasonal" href="../../preprocessors/__init__/#getml.preprocessors.Seasonal">Seasonal</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Substring" href="../../preprocessors/__init__/#getml.preprocessors.Substring">Substring</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.TextFieldSplitter" href="../../preprocessors/__init__/#getml.preprocessors.TextFieldSplitter">TextFieldSplitter</a>, <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.preprocessors.CategoryTrimmer" href="../../preprocessors/__init__/#getml.preprocessors.CategoryTrimmer">CategoryTrimmer</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.EmailDomain" href="../../preprocessors/__init__/#getml.preprocessors.EmailDomain">EmailDomain</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Imputation" href="../../preprocessors/__init__/#getml.preprocessors.Imputation">Imputation</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Mapping" href="../../preprocessors/__init__/#getml.preprocessors.Mapping">Mapping</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Seasonal" href="../../preprocessors/__init__/#getml.preprocessors.Seasonal">Seasonal</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Substring" href="../../preprocessors/__init__/#getml.preprocessors.Substring">Substring</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.TextFieldSplitter" href="../../preprocessors/__init__/#getml.preprocessors.TextFieldSplitter">TextFieldSplitter</a>]]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The preprocessor(s) to be used.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>preprocessors</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.preprocessors.CategoryTrimmer" href="../../preprocessors/__init__/#getml.preprocessors.CategoryTrimmer">CategoryTrimmer</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.EmailDomain" href="../../preprocessors/__init__/#getml.preprocessors.EmailDomain">EmailDomain</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Imputation" href="../../preprocessors/__init__/#getml.preprocessors.Imputation">Imputation</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Mapping" href="../../preprocessors/__init__/#getml.preprocessors.Mapping">Mapping</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Seasonal" href="../../preprocessors/__init__/#getml.preprocessors.Seasonal">Seasonal</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Substring" href="../../preprocessors/__init__/#getml.preprocessors.Substring">Substring</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.TextFieldSplitter" href="../../preprocessors/__init__/#getml.preprocessors.TextFieldSplitter">TextFieldSplitter</a>, <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.preprocessors.CategoryTrimmer" href="../../preprocessors/__init__/#getml.preprocessors.CategoryTrimmer">CategoryTrimmer</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.EmailDomain" href="../../preprocessors/__init__/#getml.preprocessors.EmailDomain">EmailDomain</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Imputation" href="../../preprocessors/__init__/#getml.preprocessors.Imputation">Imputation</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Mapping" href="../../preprocessors/__init__/#getml.preprocessors.Mapping">Mapping</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Seasonal" href="../../preprocessors/__init__/#getml.preprocessors.Seasonal">Seasonal</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.Substring" href="../../preprocessors/__init__/#getml.preprocessors.Substring">Substring</a>, <a class="autorefs autorefs-internal" title="getml.preprocessors.TextFieldSplitter" href="../../preprocessors/__init__/#getml.preprocessors.TextFieldSplitter">TextFieldSplitter</a>]]]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The preprocessor(s) to be used.
 Must be from <a class="autorefs autorefs-internal" href="../../preprocessors/__init__/#getml.preprocessors"><code>preprocessors</code></a>.
 A single preprocessor does not have to be wrapped in a list.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>feature_learners</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.Fastboost" href="../../feature_learning/__init__/#getml.feature_learning.Fastboost">Fastboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.FastProp" href="../../feature_learning/__init__/#getml.feature_learning.FastProp">FastProp</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Multirel" href="../../feature_learning/__init__/#getml.feature_learning.Multirel">Multirel</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Relboost" href="../../feature_learning/__init__/#getml.feature_learning.Relboost">Relboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.RelMT" href="../../feature_learning/__init__/#getml.feature_learning.RelMT">RelMT</a>], <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.Fastboost" href="../../feature_learning/__init__/#getml.feature_learning.Fastboost">Fastboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.FastProp" href="../../feature_learning/__init__/#getml.feature_learning.FastProp">FastProp</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Multirel" href="../../feature_learning/__init__/#getml.feature_learning.Multirel">Multirel</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Relboost" href="../../feature_learning/__init__/#getml.feature_learning.Relboost">Relboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.RelMT" href="../../feature_learning/__init__/#getml.feature_learning.RelMT">RelMT</a>]]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The feature learner(s) to be used.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>feature_learners</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.Fastboost" href="../../feature_learning/__init__/#getml.feature_learning.Fastboost">Fastboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.FastProp" href="../../feature_learning/__init__/#getml.feature_learning.FastProp">FastProp</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Multirel" href="../../feature_learning/__init__/#getml.feature_learning.Multirel">Multirel</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Relboost" href="../../feature_learning/__init__/#getml.feature_learning.Relboost">Relboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.RelMT" href="../../feature_learning/__init__/#getml.feature_learning.RelMT">RelMT</a>], <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.feature_learning.Fastboost" href="../../feature_learning/__init__/#getml.feature_learning.Fastboost">Fastboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.FastProp" href="../../feature_learning/__init__/#getml.feature_learning.FastProp">FastProp</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Multirel" href="../../feature_learning/__init__/#getml.feature_learning.Multirel">Multirel</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.Relboost" href="../../feature_learning/__init__/#getml.feature_learning.Relboost">Relboost</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.RelMT" href="../../feature_learning/__init__/#getml.feature_learning.RelMT">RelMT</a>]]]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The feature learner(s) to be used.
 Must be from <a class="autorefs autorefs-internal" href="../../feature_learning/__init__/#getml.feature_learning"><code>feature_learning</code></a>.
 A single feature learner does not have to be wrapped
 in a list.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>feature_selectors</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>], <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>]]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Predictor(s) used to select the best features.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>feature_selectors</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>], <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>]]]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Predictor(s) used to select the best features.
 Must be from <a class="autorefs autorefs-internal" href="../../predictors/__init__/#getml.predictors"><code>predictors</code></a>.
 A single feature selector does not have to be wrapped
 in a list.
 Make sure to also set <em>share_selected_features</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>predictors</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>, <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>]]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Predictor(s) used to generate the predictions.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>predictors</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>, <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[<a class="autorefs autorefs-internal" title="getml.predictors.LinearRegression" href="../../predictors/__init__/#getml.predictors.LinearRegression">LinearRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.LogisticRegression" href="../../predictors/__init__/#getml.predictors.LogisticRegression">LogisticRegression</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostClassifier" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.XGBoostRegressor" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMClassifier" href="../../predictors/__init__/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>, <a class="autorefs autorefs-internal" title="getml.predictors.ScaleGBMRegressor" href="../../predictors/__init__/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a>]]]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Predictor(s) used to generate the predictions.
 If more than one predictor is passed, the predictions
 generated will be averaged.
 Must be from <a class="autorefs autorefs-internal" href="../../predictors/__init__/#getml.predictors"><code>predictors</code></a>.
 A single predictor does not have to be wrapped
 in a list.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>loss_function</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The loss function to use for the feature learners.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tags</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[list[str]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Tags exist to help you organize your pipelines.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>loss_function</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The loss function to use for the feature learners.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tags</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[list[str]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Tags exist to help you organize your pipelines.
 You can add any tags that help you remember what you were
 trying to do.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>include_categorical</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to pass categorical columns
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>include_categorical</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to pass categorical columns
 in the population table to the predictor.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>share_selected_features</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The share of features you want the feature
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>share_selected_features</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The share of features you want the feature
 selection to keep. When set to 0.0, then all features will be kept.</p>
-            </div>
-          </td>
-          <td>
-                <code>0.5</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0.5</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8821,6 +8821,7 @@ abstraction.</p>
 <span class="n">predictions</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">full</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <p>If your data can be organized in a simple star schema,
@@ -8887,6 +8888,7 @@ you can use <a class="autorefs autorefs-internal" href="../../data/__init__/#get
 <span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">test</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <p><a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a> is simpler,
@@ -9007,9 +9009,9 @@ and it is usually in alphabetical order.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 104</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 104</span>
 <span class="normal"> 105</span>
 <span class="normal"> 106</span>
 <span class="normal"> 107</span>
@@ -12495,9 +12497,9 @@ and it is usually in alphabetical order.</p>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_check_classification_or_regression</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -12512,8 +12514,8 @@ and it is usually in alphabetical order.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.accuracy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">accuracy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">accuracy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12521,12 +12523,12 @@ and it is usually in alphabetical order.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the accuracy of the latest scoring run (the
 last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12535,8 +12537,8 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.auc" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">auc</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">auc</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12544,12 +12546,12 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the auc of the latest scoring run (the
 last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12558,8 +12560,8 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.columns" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">columns</span><span class="p">:</span> <span class="n">Columns</span></code>
-  
+            <code class="highlight language-python"><span class="n">columns</span><span class="p">:</span> <span class="n">Columns</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12567,12 +12569,12 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Columns"><code>Columns</code></a> object that
 can be used to handle information about the original
 columns utilized by the feature learners.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12581,8 +12583,8 @@ columns utilized by the feature learners.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.cross_entropy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cross_entropy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">cross_entropy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12590,12 +12592,12 @@ columns utilized by the feature learners.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the cross entropy of the latest scoring
 run (the last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12604,8 +12606,8 @@ run (the last time <code>.score()</code> was called) on the pipeline.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.features" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">features</span><span class="p">:</span> <span class="n">Features</span></code>
-  
+            <code class="highlight language-python"><span class="n">features</span><span class="p">:</span> <span class="n">Features</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12613,12 +12615,12 @@ run (the last time <code>.score()</code> was called) on the pipeline.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Features"><code>Features</code></a> object that
 can be used to handle the features generated
 by the feature learners.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12627,8 +12629,8 @@ by the feature learners.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.fitted" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fitted</span><span class="p">:</span> <span class="nb">bool</span></code>
-  
+            <code class="highlight language-python"><span class="n">fitted</span><span class="p">:</span> <span class="nb">bool</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12636,10 +12638,10 @@ by the feature learners.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Whether the pipeline has already been fitted.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12648,8 +12650,8 @@ by the feature learners.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.id" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">id</span><span class="p">:</span> <span class="nb">str</span></code>
-  
+            <code class="highlight language-python"><span class="nb">id</span><span class="p">:</span> <span class="nb">str</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12657,11 +12659,11 @@ by the feature learners.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>ID of the pipeline. This is used to uniquely identify
 the pipeline on the engine.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12670,8 +12672,8 @@ the pipeline on the engine.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.is_classification" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_classification</span><span class="p">:</span> <span class="nb">bool</span></code>
-  
+            <code class="highlight language-python"><span class="n">is_classification</span><span class="p">:</span> <span class="nb">bool</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12679,10 +12681,10 @@ the pipeline on the engine.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Whether the pipeline can used for classification problems.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12691,8 +12693,8 @@ the pipeline on the engine.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.is_regression" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_regression</span><span class="p">:</span> <span class="nb">bool</span></code>
-  
+            <code class="highlight language-python"><span class="n">is_regression</span><span class="p">:</span> <span class="nb">bool</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12700,10 +12702,10 @@ the pipeline on the engine.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Whether the pipeline can used for regression problems.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12712,8 +12714,8 @@ the pipeline on the engine.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.mae" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mae</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">mae</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12721,12 +12723,12 @@ the pipeline on the engine.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the mae of the latest scoring run (the
 last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12735,8 +12737,8 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.metadata" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AllMetadata</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AllMetadata</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12744,15 +12746,15 @@ last time <code>.score()</code> was called) on the pipeline.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Contains information on the data frames
 that were passed to .fit(...). The roles
 contained therein can be directly passed
 to existing data frames to correctly reassign
 the roles of existing columns. If the pipeline
 has not been fitted, this is None.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12761,8 +12763,8 @@ has not been fitted, this is None.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">name</span><span class="p">:</span> <span class="nb">str</span></code>
-  
+            <code class="highlight language-python"><span class="n">name</span><span class="p">:</span> <span class="nb">str</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12770,11 +12772,11 @@ has not been fitted, this is None.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the ID of the pipeline. The name property is
 kept for backward compatibility.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12783,8 +12785,8 @@ kept for backward compatibility.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.plots" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">plots</span><span class="p">:</span> <span class="n">Plots</span></code>
-  
+            <code class="highlight language-python"><span class="n">plots</span><span class="p">:</span> <span class="n">Plots</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12792,12 +12794,12 @@ kept for backward compatibility.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Plots"><code>Plots</code></a> object that
 can be used to generate plots like an ROC
 curve or a lift curve.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12806,8 +12808,8 @@ curve or a lift curve.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.rmse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rmse</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rmse</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12815,12 +12817,12 @@ curve or a lift curve.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the rmse of the latest scoring run
 (the last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12829,8 +12831,8 @@ curve or a lift curve.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.rsquared" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rsquared</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rsquared</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12838,12 +12840,12 @@ curve or a lift curve.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the rsquared of the latest scoring run
 (the last time <code>.score()</code> was called) on the pipeline.</p>
 <p>For programmatic access use <a class="autorefs autorefs-internal" href="../metrics/#getml.pipeline.metrics"><code>metrics</code></a>.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12852,8 +12854,8 @@ curve or a lift curve.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.scored" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">scored</span><span class="p">:</span> <span class="nb">bool</span></code>
-  
+            <code class="highlight language-python"><span class="n">scored</span><span class="p">:</span> <span class="nb">bool</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12861,10 +12863,10 @@ curve or a lift curve.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Whether the pipeline has been scored.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12873,8 +12875,8 @@ curve or a lift curve.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.scores" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">scores</span><span class="p">:</span> <span class="n">Scores</span></code>
-  
+            <code class="highlight language-python"><span class="n">scores</span><span class="p">:</span> <span class="n">Scores</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12882,35 +12884,34 @@ curve or a lift curve.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Contains all scores generated by <a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.score"><code>score</code></a></p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.pipeline.scores_container.Scores" href="../scores_container/#getml.pipeline.scores_container.Scores">Scores</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Scores"><code>Scores</code></a>:
-A container that holds the scores for the pipeline.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.pipeline.scores_container.Scores" href="../scores_container/#getml.pipeline.scores_container.Scores">Scores</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Scores"><code>Scores</code></a>:
+A container that holds the scores for the pipeline.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -12919,8 +12920,8 @@ A container that holds the scores for the pipeline.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.tables" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tables</span><span class="p">:</span> <span class="n">Tables</span></code>
-  
+            <code class="highlight language-python"><span class="n">tables</span><span class="p">:</span> <span class="n">Tables</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12928,12 +12929,12 @@ A container that holds the scores for the pipeline.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Tables"><code>Tables</code></a> object that
 can be used to handle information about the original
 tables utilized by the feature learners.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -12942,8 +12943,8 @@ tables utilized by the feature learners.</p>
 
 
 <h3 id="getml.pipeline.pipeline.Pipeline.targets" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">targets</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">targets</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -12951,68 +12952,65 @@ tables utilized by the feature learners.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Contains the names of the targets used for this pipeline.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.check" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks the validity of the data model.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_tables</code></td>
-          <td>
-                <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional tables corresponding to the <code>peripheral</code>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_tables</code></td>
+            <td>
+                  <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tables corresponding to the <code>peripheral</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If passed as a list, the order needs to
 match the order of the corresponding placeholders passed
@@ -13022,18 +13020,18 @@ the peripheral tables from that subset will be used. If you use
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Container"><code>Container</code></a>, <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a>
 or <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>, that means you are passing
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Subset"><code>Subset</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1034</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1034</span>
 <span class="normal">1035</span>
 <span class="normal">1036</span>
 <span class="normal">1037</span>
@@ -13187,33 +13185,32 @@ a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Su
 
     <span class="k">return</span> <span class="kc">None</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">issues</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">issues</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">delete</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Deletes the pipeline from the engine.</p>
+
 
 <details class="note" open>
   <summary>Note</summary>
   <p>Caution: You can not undo this action!</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1138</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1138</span>
 <span class="normal">1139</span>
 <span class="normal">1140</span>
 <span class="normal">1141</span>
@@ -13247,61 +13244,58 @@ a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Su
 
     <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">NOT_FITTED</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.deploy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">deploy</span><span class="p">(</span><span class="n">deploy</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">deploy</span><span class="p">(</span><span class="n">deploy</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Allows a fitted pipeline to be addressable via an HTTP request.
 See <a class="autorefs autorefs-internal" href="../../../user_guide/deployment/deployment/#deployment">deployment</a> for details.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>deploy</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If <code>True</code>, the deployment of the pipeline
-will be triggered.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>deploy</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If <code>True</code>, the deployment of the pipeline
+will be triggered.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1158</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1158</span>
 <span class="normal">1159</span>
 <span class="normal">1160</span>
 <span class="normal">1161</span>
@@ -13349,65 +13343,62 @@ will be triggered.</p>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">_save</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.fit" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fit</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validation_table</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fit</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validation_table</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Trains the feature learning algorithms, feature selectors
 and predictors.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_tables</code></td>
-          <td>
-                <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional tables corresponding to the <code>peripheral</code>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_tables</code></td>
+            <td>
+                  <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tables corresponding to the <code>peripheral</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If passed as a list, the order needs to
 match the order of the corresponding placeholders passed
@@ -13417,53 +13408,53 @@ the peripheral tables from that subset will be used. If you use
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Container"><code>Container</code></a>, <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a>
 or <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>, that means you are passing
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Subset"><code>Subset</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validation_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validation_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If you are passing a subset, that subset
 must be derived from the same container as <em>population_table</em>.</p>
 <p>Only used for early stopping in <a class="autorefs autorefs-internal" href="../../predictors/__init__/#getml.predictors.XGBoostClassifier"><code>XGBoostClassifier</code></a>
 and <a class="autorefs autorefs-internal" href="../../predictors/__init__/#getml.predictors.XGBoostRegressor"><code>XGBoostRegressor</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>check</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to check the data model before fitting. The checks are
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>check</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to check the data model before fitting. The checks are
 equivalent to the checks run by <a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.check"><code>check</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1197</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1197</span>
 <span class="normal">1198</span>
 <span class="normal">1199</span>
 <span class="normal">1200</span>
@@ -13699,67 +13690,64 @@ equivalent to the checks run by <a class="autorefs autorefs-internal" href="#get
 
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.predict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Forecasts on new, unseen data using the trained <code>predictor</code>.</p>
 <p>Returns the predictions generated by the pipeline based on
 <code>population_table</code> and <code>peripheral_tables</code> or writes them into
 a data base named <code>table_name</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_tables</code></td>
-          <td>
-                <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional tables corresponding to the <code>peripheral</code>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_tables</code></td>
+            <td>
+                  <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tables corresponding to the <code>peripheral</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If passed as a list, the order needs to
 match the order of the corresponding placeholders passed
@@ -13769,54 +13757,54 @@ the peripheral tables from that subset will be used. If you use
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Container"><code>Container</code></a>, <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a>
 or <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>, that means you are passing
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Subset"><code>Subset</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If not an empty string, the resulting predictions will
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If not an empty string, the resulting predictions will
 be written into a table in a <a class="autorefs autorefs-internal" href="../../database/__init__/#getml.database"><code>database</code></a>.
 Refer to <a class="autorefs autorefs-internal" href="../../../user_guide/importing_data/importing_data/#unified-import-interface">Unified import interface</a> for further information.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Union">Union</span>[<span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float_">float_</span>], None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Resulting predictions provided in an array of the (number of rows in <code>population_table</code>, number of targets in <code>population_table</code>).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><span title="typing.Union">Union</span>[<span title="numpy.typing.NDArray">NDArray</span>[<span title="numpy.float_">float_</span>], None]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Resulting predictions provided in an array of the (number of rows in <code>population_table</code>, number of targets in <code>population_table</code>).</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="note" open>
   <summary>Note</summary>
@@ -13824,9 +13812,9 @@ Refer to <a class="autorefs autorefs-internal" href="../../../user_guide/importi
 (<a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.fit"><code>fit</code></a>) can be used for
 prediction.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1403</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1403</span>
 <span class="normal">1404</span>
 <span class="normal">1405</span>
 <span class="normal">1406</span>
@@ -13998,56 +13986,53 @@ prediction.</p>
 
     <span class="k">return</span> <span class="n">y_hat</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.refresh" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">refresh</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">refresh</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reloads the pipeline from the engine.</p>
 <p>This discards all local changes you have made since the
 last time you called <a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.fit"><code>fit</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code>&#39;Pipeline&#39;</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a>:
-Current instance</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>&#39;Pipeline&#39;</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline"><code>Pipeline</code></a>:
+Current instance</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1492</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1492</span>
 <span class="normal">1493</span>
 <span class="normal">1494</span>
 <span class="normal">1495</span>
@@ -14099,66 +14084,63 @@ Current instance</p>
 
     <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.score" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">score</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">score</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Calculates the performance of the <code>predictor</code>.</p>
 <p>Returns different scores calculated on <code>population_table</code> and
 <code>peripheral_tables</code>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_tables</code></td>
-          <td>
-                <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional tables corresponding to the <code>peripheral</code>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_tables</code></td>
+            <td>
+                  <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tables corresponding to the <code>peripheral</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If passed as a list, the order needs to
 match the order of the corresponding placeholders passed
@@ -14168,14 +14150,15 @@ the peripheral tables from that subset will be used. If you use
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Container"><code>Container</code></a>, <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a>
 or <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>, that means you are passing
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Subset"><code>Subset</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -14183,9 +14166,9 @@ a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Su
 (<a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.fit"><code>fit</code></a>) can be
 scored.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1545</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1545</span>
 <span class="normal">1546</span>
 <span class="normal">1547</span>
 <span class="normal">1548</span>
@@ -14347,28 +14330,27 @@ scored.</p>
 
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">scores</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.pipeline.Pipeline.transform" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">transform</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">df_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">transform</span><span class="p">(</span><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_tables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">df_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Translates new data into the trained features.</p>
 <p>Transforms the data passed in <code>population_table</code> and
 <code>peripheral_tables</code> into features, which can be inserted into
 machine learning models.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -14385,43 +14367,42 @@ Or you can write the results directly into a database:
 </code></pre></div></p>
 </details>
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population_table</code></td>
-          <td>
-                <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Main table containing the target variable(s) and
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population_table</code></td>
+            <td>
+                  <code>[`DataFrame`][getml.DataFrame], [`View`][getml.View] or [`Subset`][getml.data.Subset]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Main table containing the target variable(s) and
 corresponding to the <code>population</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_tables</code></td>
-          <td>
-                <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Additional tables corresponding to the <code>peripheral</code>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_tables</code></td>
+            <td>
+                  <code>List[[`DataFrame`][getml.DataFrame] or [`View`][getml.View]], dict, [`DataFrame`][getml.DataFrame] or [`View`][getml.View]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Additional tables corresponding to the <code>peripheral</code>
 <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Placeholder"><code>Placeholder</code></a> instance
 variable. If passed as a list, the order needs to
 match the order of the corresponding placeholders passed
@@ -14431,45 +14412,46 @@ the peripheral tables from that subset will be used. If you use
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Container"><code>Container</code></a>, <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.StarSchema"><code>StarSchema</code></a>
 or <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.TimeSeries"><code>TimeSeries</code></a>, that means you are passing
 a <a class="autorefs autorefs-internal" href="../../data/__init__/#getml.data.Subset"><code>Subset</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>df_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If not an empty string, the resulting features will be
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>df_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If not an empty string, the resulting features will be
 written into a newly created DataFrame.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If not an empty string, the resulting features will
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If not an empty string, the resulting features will
 be written into a table in a <a class="autorefs autorefs-internal" href="../../database/__init__/#getml.database"><code>database</code></a>.
 Refer to <a class="autorefs autorefs-internal" href="../../../user_guide/importing_data/importing_data/#unified-import-interface">Unified import interface</a> for further information.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -14477,9 +14459,9 @@ Refer to <a class="autorefs autorefs-internal" href="../../../user_guide/importi
 (<a class="autorefs autorefs-internal" href="#getml.pipeline.pipeline.Pipeline.fit"><code>fit</code></a>) can transform
 data into features.</p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/pipeline.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1682</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/pipeline.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1682</span>
 <span class="normal">1683</span>
 <span class="normal">1684</span>
 <span class="normal">1685</span>
@@ -14685,8 +14667,8 @@ data into features.</p>
 
     <span class="k">return</span> <span class="n">y_hat</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -14694,8 +14676,7 @@ data into features.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -14704,7 +14685,7 @@ data into features.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

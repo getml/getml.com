@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.sqlite3.sniff_csv"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains utility functions for sniffing sqlite data types from CSV files.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,176 +7953,173 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.sniff_csv.sniff_csv" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sniff_csv</span><span class="p">(</span><span class="n">fnames</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">num_lines_sniffed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sniff_csv</span><span class="p">(</span><span class="n">fnames</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">num_lines_sniffed</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sniffs a list of csv files.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fnames</code></td>
-          <td>
-                <code>List[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The list of CSV file names to be read.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of the table in which the data is to be inserted.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>header</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether the csv file contains a header. If True, the first line
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fnames</code></td>
+            <td>
+                  <code>List[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The list of CSV file names to be read.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of the table in which the data is to be inserted.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>header</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether the csv file contains a header. If True, the first line
 is skipped and column names are inferred accordingly.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>num_lines_sniffed</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines analyzed by the sniffer.</p>
-            </div>
-          </td>
-          <td>
-                <code>1000</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>quotechar</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The character used to wrap strings.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#34;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The separator used for separating fields.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>skip</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of lines to skip at the beginning of each
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>num_lines_sniffed</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines analyzed by the sniffer.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1000</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>quotechar</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used to wrap strings.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#34;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The separator used for separating fields.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>skip</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of lines to skip at the beginning of each
 file.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colnames</code></td>
-          <td>
-                <code>List[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The first line of a CSV file
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colnames</code></td>
+            <td>
+                  <code>List[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first line of a CSV file
 usually contains the column names. When this is not the case, you can
 explicitly pass them. If you pass colnames, it is assumed that the
 CSV files do not contain a header, thus overriding the 'header' variable.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Appropriate <code>CREATE TABLE</code> statement.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>str</code></td>          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Appropriate <code>CREATE TABLE</code> statement.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/sniff_csv.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/sniff_csv.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 22</span>
 <span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
@@ -8321,8 +8317,8 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
     <span class="k">return</span> <span class="n">sniff_pandas</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">merged</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8330,7 +8326,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

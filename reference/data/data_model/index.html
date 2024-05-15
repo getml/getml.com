@@ -7990,11 +7990,11 @@
 
 
 <a id="getml.data.data_model"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A container for the placeholders.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8010,50 +8010,50 @@
 
 
 <h2 id="getml.data.data_model.DataModel" class="doc doc-heading">
-          <code>DataModel</code>
+            <code>DataModel</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Abstract representation of the relationship between tables.</p>
 <p>You might also want to refer to <a class="autorefs autorefs-internal" href="../__init__/#getml.data.Placeholder"><code>Placeholder</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>population</code></td>
-          <td>
-                <code>[`Placeholder`][getml.data.Placeholder]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The placeholder representing the population table,
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>population</code></td>
+            <td>
+                  <code>[`Placeholder`][getml.data.Placeholder]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The placeholder representing the population table,
 which defines the
 <a href="https://en.wikipedia.org/wiki/Statistical_population">statistical population</a>
 and contains the targets.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8168,9 +8168,9 @@ data models. In this case, you can do something like this:
     is necessary, refer to the
     <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb">CORA notebook</a>.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/data_model.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 24</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/data_model.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
 <span class="normal"> 27</span>
@@ -8702,9 +8702,9 @@ data models. In this case, you can do something like this:
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8719,8 +8719,8 @@ data models. In this case, you can do something like this:
 
 
 <h3 id="getml.data.data_model.DataModel.names" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">names</span></code>
-  
+            <code class="highlight language-python"><span class="n">names</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8728,63 +8728,60 @@ data models. In this case, you can do something like this:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A list of the names of all tables contained in the DataModel.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.data_model.DataModel.add" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">placeholders</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="o">*</span><span class="n">placeholders</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Adds peripheral placeholders to the data model.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>placeholders</code></td>
-          <td>
-                <code>[`Placeholder`][getml.data.Placeholder]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The placeholder or placeholders you would like to add.</p>
-            </div>
-          </td>
-          <td>
-                <code>()</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>placeholders</code></td>
+            <td>
+                  <code>[`Placeholder`][getml.data.Placeholder]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The placeholder or placeholders you would like to add.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/data_model.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">257</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/data_model.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">257</span>
 <span class="normal">258</span>
 <span class="normal">259</span>
 <span class="normal">260</span>
@@ -8836,8 +8833,8 @@ data models. In this case, you can do something like this:
     <span class="k">for</span> <span class="n">placeholder</span> <span class="ow">in</span> <span class="n">placeholders_dc</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_add</span><span class="p">(</span><span class="n">placeholder</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8845,8 +8842,7 @@ data models. In this case, you can do something like this:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8855,7 +8851,7 @@ data models. In this case, you can do something like this:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

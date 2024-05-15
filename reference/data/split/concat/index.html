@@ -7936,14 +7936,13 @@
 
 
 <a id="getml.data.split.concat"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Concatenates data.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7956,63 +7955,62 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.split.concat.concat" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">concat</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">concat</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Concatenates several data frames into and produces a split
 column that keeps track of their origin.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the data frame you would like to create.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data_frame/#getml.data.data_frame.DataFrame">DataFrame</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The data frames you would like
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the data frame you would like to create.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data_frame/#getml.data.data_frame.DataFrame">DataFrame</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The data frames you would like
 to concat with the name in which they should appear
 in the split column.</p>
-            </div>
-          </td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>{}</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8037,9 +8035,9 @@ in the split column.</p>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
 </code></pre></div></p>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/split/concat.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/split/concat.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
@@ -8157,8 +8155,8 @@ in the split column.</p>
 
     <span class="k">return</span> <span class="n">population</span><span class="p">,</span> <span class="n">split</span><span class="p">[:</span> <span class="n">population</span><span class="o">.</span><span class="n">nrows</span><span class="p">()]</span>  <span class="c1"># type: ignore</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8166,7 +8164,7 @@ in the split column.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

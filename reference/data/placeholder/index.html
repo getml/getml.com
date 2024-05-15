@@ -8012,11 +8012,11 @@
 
 
 <a id="getml.data.placeholder"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Abstract representation of tables and their relations.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8032,15 +8032,15 @@
 
 
 <h2 id="getml.data.placeholder.Placeholder" class="doc doc-heading">
-          <code>Placeholder</code>
+            <code>Placeholder</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Abstract representation of tables and their relations.</p>
 <p>This class is an abstract representation of the
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> or <a class="autorefs autorefs-internal" href="../__init__/#getml.data.View"><code>View</code></a>.
@@ -8048,35 +8048,35 @@ However, it does not contain any actual data.</p>
 <p>You might also want to refer to <a class="autorefs autorefs-internal" href="../__init__/#getml.data.DataModel"><code>DataModel</code></a>.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name used for this placeholder. This name will appear
-in the generated SQL code.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name used for this placeholder. This name will appear
+in the generated SQL code.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8191,9 +8191,9 @@ If you want to check out a real-world example where this
 is necessary, refer to the
 <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb">CORA notebook </a>.</p>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/placeholder.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 32</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/placeholder.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 32</span>
 <span class="normal"> 33</span>
 <span class="normal"> 34</span>
 <span class="normal"> 35</span>
@@ -9071,12 +9071,11 @@ is necessary, refer to the
     <span class="k">def</span> <span class="nf">columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">columns</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9089,155 +9088,153 @@ is necessary, refer to the
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.placeholder.Placeholder.join" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_stamps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relationship</span><span class="o">=</span><span class="n">many_to_many</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">upper_time_stamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_stamps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relationship</span><span class="o">=</span><span class="n">many_to_many</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">horizon</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">upper_time_stamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Joins another to placeholder to this placeholder.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>right</code></td>
-          <td>
-                <code>[`Placeholder`][getml.data.Placeholder]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The placeholder you would like to join.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>on</code></td>
-          <td>
-                <code>(None, string, <span title="typing.Tuple">Tuple</span>[str, str] or <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[str, <span title="typing.Tuple">Tuple</span>[str, str]]])</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The join keys to use. If none is passed, then everything
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>right</code></td>
+            <td>
+                  <code>[`Placeholder`][getml.data.Placeholder]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The placeholder you would like to join.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on</code></td>
+            <td>
+                  <code>(None, string, <span title="typing.Tuple">Tuple</span>[str, str] or <span title="typing.List">List</span>[<span title="typing.Union">Union</span>[str, <span title="typing.Tuple">Tuple</span>[str, str]]])</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The join keys to use. If none is passed, then everything
 will be joined to everything else.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>time_stamps</code></td>
-          <td>
-                <code>string or <span title="typing.Tuple">Tuple</span>[str, str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The time stamps used to limit the join.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>relationship</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The relationship between the two tables. Must be from
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>time_stamps</code></td>
+            <td>
+                  <code>string or <span title="typing.Tuple">Tuple</span>[str, str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The time stamps used to limit the join.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>relationship</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The relationship between the two tables. Must be from
 <a class="autorefs autorefs-internal" href="../relationship/#getml.data.relationship"><code>relationship</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.data.relationship.many_to_many" href="../relationship/#getml.data.relationship.many_to_many">many_to_many</a></code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>memory</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The difference between the time stamps until data is 'forgotten'.
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.data.relationship.many_to_many" href="../relationship/#getml.data.relationship.many_to_many">many_to_many</a></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>memory</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The difference between the time stamps until data is 'forgotten'.
 Limiting your joins using memory can significantly speed up
 training time. Also refer to <a class="autorefs autorefs-internal" href="../time/#getml.data.time"><code>time</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>horizon</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The prediction horizon to apply to this join.
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>horizon</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The prediction horizon to apply to this join.
 Also refer to <a class="autorefs autorefs-internal" href="../time/#getml.data.time"><code>time</code></a>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>lagged_targets</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether you want to allow lagged targets. If this is set to True,
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>lagged_targets</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether you want to allow lagged targets. If this is set to True,
 you must also pass a positive, non-zero <em>horizon</em>.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>upper_time_stamp</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name of a time stamp in <em>right</em> that serves as an upper limit
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>upper_time_stamp</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name of a time stamp in <em>right</em> that serves as an upper limit
 on the join.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/placeholder.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/placeholder.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
 <span class="normal">307</span>
 <span class="normal">308</span>
 <span class="normal">309</span>
@@ -9479,29 +9476,27 @@ on the join.</p>
     <span class="bp">self</span><span class="o">.</span><span class="n">joins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">join</span><span class="p">)</span>
     <span class="n">right</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span>  <span class="c1"># type: ignore</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.placeholder.Placeholder.to_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_dict</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Expresses this placeholder and all of its descendants as a dictionary.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/placeholder.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">453</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/placeholder.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">453</span>
 <span class="normal">454</span>
 <span class="normal">455</span>
 <span class="normal">456</span>
@@ -9529,29 +9524,27 @@ on the join.</p>
         <span class="n">phs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">ph</span>
     <span class="k">return</span> <span class="n">phs</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.placeholder.Placeholder.to_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a list of this placeholder and all of its descendants.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/placeholder.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">447</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/placeholder.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">447</span>
 <span class="normal">448</span>
 <span class="normal">449</span>
 <span class="normal">450</span>
@@ -9561,8 +9554,8 @@ on the join.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">ph</span> <span class="k">for</span> <span class="n">join</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">joins</span> <span class="k">for</span> <span class="n">ph</span> <span class="ow">in</span> <span class="n">join</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">to_list</span><span class="p">()]</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -9570,8 +9563,7 @@ on the join.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9580,7 +9572,7 @@ on the join.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

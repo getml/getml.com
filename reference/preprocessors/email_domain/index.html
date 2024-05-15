@@ -7968,11 +7968,11 @@
 
 
 <a id="getml.preprocessors.email_domain"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains routines for preprocessing data frames.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -7988,9 +7988,9 @@
 
 
 <h2 id="getml.preprocessors.email_domain.EmailDomain" class="doc doc-heading">
-          <code>EmailDomain</code>
+            <code>EmailDomain</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -7998,11 +7998,11 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.preprocessors.preprocessor._Preprocessor">_Preprocessor</span></code></p>
 
-  
+
       <p>The EmailDomain preprocessor extracts the domain from e-mail addresses.</p>
 <p>For instance, if the e-mail address is 'some.guy@domain.com',
 the preprocessor will automatically extract '@domain.com'.</p>
@@ -8012,6 +8012,7 @@ columns that were assigned one of the <a class="autorefs autorefs-internal" href
 <a class="autorefs autorefs-internal" href="../../data/subroles/only/#getml.data.subroles.only.email"><code>only.email</code></a>.</p>
 <p>It is recommended that you assign <a class="autorefs autorefs-internal" href="../../data/subroles/only/#getml.data.subroles.only.email"><code>only.email</code></a>,
 because it is unlikely that the e-mail address itself is interesting.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8030,9 +8031,9 @@ because it is unlikely that the e-mail address itself is interesting.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/email_domain.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/preprocessors/email_domain.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
@@ -8122,12 +8123,11 @@ because it is unlikely that the e-mail address itself is interesting.</p>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8140,53 +8140,51 @@ because it is unlikely that the e-mail address itself is interesting.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.preprocessors.email_domain.EmailDomain.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks both the types and the values of all instance
 variables and raises an exception if something is off.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td>
-                <code>dict</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A dictionary containing
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td>
+                  <code>dict</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary containing
 the parameters to validate. If not is passed,
 the own parameters will be validated.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/preprocessors/email_domain.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/preprocessors/email_domain.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
@@ -8208,8 +8206,8 @@ the own parameters will be validated.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">_validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8217,8 +8215,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8227,7 +8224,7 @@ the own parameters will be validated.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

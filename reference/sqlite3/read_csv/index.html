@@ -7934,15 +7934,14 @@
 
 
 <a id="getml.sqlite3.read_csv"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Contains utility functions for reading CSV files
 into sqlite3.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7955,185 +7954,183 @@ into sqlite3.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.read_csv.read_csv" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_csv</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">fnames</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_csv</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">fnames</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reads a list of CSV files and writes them into an sqlite3 table.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-                <code><span title="sqlite3.Connection">Connection</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>fnames</code></td>
-          <td>
-                <code>str or List[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The names of the CSV files.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>fnames</code></td>
-          <td>
-                <code>str or List[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The names of the CSV files.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>table_name</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the table to write to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>header</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether the csv file contains a header. If True, the first line
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+                  <code><span title="sqlite3.Connection">Connection</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fnames</code></td>
+            <td>
+                  <code>str or List[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The names of the CSV files.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fnames</code></td>
+            <td>
+                  <code>str or List[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The names of the CSV files.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>table_name</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the table to write to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>header</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether the csv file contains a header. If True, the first line
 is skipped and column names are inferred accordingly.</p>
-            </div>
-          </td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>quotechar</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The string escape character.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#34;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>if_exists</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>How to behave if the table already exists:</p>
+              </div>
+            </td>
+            <td>
+                  <code>True</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>quotechar</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The string escape character.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#34;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>if_exists</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>How to behave if the table already exists:</p>
 <ul>
 <li>'fail': Raise a ValueError.</li>
 <li>'replace': Drop the table before inserting new values.</li>
 <li>'append': Insert new values to the existing table.</li>
 </ul>
-            </div>
-          </td>
-          <td>
-                <code>&#39;append&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sep</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The field separator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;,&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>skip</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of lines to skip (before a possible header)</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colnames</code></td>
-          <td>
-                <code>List[str] or None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The first line of a CSV file
+              </div>
+            </td>
+            <td>
+                  <code>&#39;append&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sep</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The field separator.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;,&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>skip</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of lines to skip (before a possible header)</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colnames</code></td>
+            <td>
+                  <code>List[str] or None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The first line of a CSV file
 usually contains the column names. When this is not the case, you can
 explicitly pass them. If you pass colnames, it is assumed that the
 CSV files do not contain a header, thus overriding the 'header' variable.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/read_csv.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 37</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/read_csv.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 37</span>
 <span class="normal"> 38</span>
 <span class="normal"> 39</span>
 <span class="normal"> 40</span>
@@ -8343,8 +8340,8 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
         <span class="n">data</span> <span class="o">=</span> <span class="n">_read_csv_file</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">sep</span><span class="p">,</span> <span class="n">quotechar</span><span class="p">,</span> <span class="n">header</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">skip</span><span class="p">)</span>
         <span class="n">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">table_name</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8352,7 +8349,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

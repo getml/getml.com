@@ -7992,11 +7992,11 @@
 
 
 <a id="getml.project.containers.hyperopts"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Container which holds a project's hyperopts.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8012,21 +8012,21 @@
 
 
 <h2 id="getml.project.containers.hyperopts.Hyperopts" class="doc doc-heading">
-          <code>Hyperopts</code>
+            <code>Hyperopts</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds all hyperopts associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
 <span class="normal"> 21</span>
 <span class="normal"> 22</span>
 <span class="normal"> 23</span>
@@ -8246,12 +8246,11 @@ project. The container supports slicing and is sort- and filterable.</p>
         <span class="n">hyperopts_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8264,78 +8263,76 @@ project. The container supports slicing and is sort- and filterable.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.hyperopts.Hyperopts.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the hyperopts container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A container of filtered hyperopts.</p>
-            </div>
-          </td>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A container of filtered hyperopts.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">gaussian_hyperopts</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lamda</span> <span class="n">hyp</span><span class="p">:</span> <span class="s2">&quot;Gaussian&quot;</span> <span class="ow">in</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
 <span class="normal"> 88</span>
 <span class="normal"> 89</span>
 <span class="normal"> 90</span>
@@ -8375,82 +8372,81 @@ project. The container supports slicing and is sort- and filterable.</p>
     <span class="p">]</span>
     <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_filtered</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.project.containers.hyperopts.Hyperopts.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the hyperopts container.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="return" open>
   <summary>Return</summary>
   <p>A container of sorted hyperopts.</p>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">by_type</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">hyp</span><span class="p">:</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/project/containers/hyperopts.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
 <span class="normal">113</span>
@@ -8490,8 +8486,8 @@ project. The container supports slicing and is sort- and filterable.</p>
     <span class="n">hyperopts_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Hyperopts</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">hyperopts_sorted</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8499,8 +8495,7 @@ project. The container supports slicing and is sort- and filterable.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8509,7 +8504,7 @@ project. The container supports slicing and is sort- and filterable.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

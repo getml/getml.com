@@ -8044,11 +8044,11 @@
 
 
 <a id="getml.pipeline.metrics"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Signifies different scoring methods.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8063,8 +8063,8 @@
 
 
 <h2 id="getml.pipeline.metrics.accuracy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">accuracy</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">accuracy</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8072,8 +8072,8 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Accuracy - measures the share of accurate predictions as of total
 samples in the testing set.</p>
 <p>Used for classification problems.</p>
@@ -8094,7 +8094,7 @@ For instance, if only 2% of the samples are positive, a predictor that
 always predicts negative outcomes will have an accuracy of 98%. This sounds
 very good to the layman, but the predictor in this example
 actually has no predictive value.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8103,8 +8103,8 @@ actually has no predictive value.</p>
 
 
 <h2 id="getml.pipeline.metrics.auc" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">auc</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">auc</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8112,8 +8112,8 @@ actually has no predictive value.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Area under the curve - refers to the area under the receiver
 operating characteristic (ROC) curve.</p>
 <p>Used for classification problems.</p>
@@ -8140,7 +8140,7 @@ conflict with each other.</p>
 under said curve (AUC). A higher AUC implies that the trade-off between
 TPR and FPR is more beneficial. A perfect model would have an AUC of
 1. An AUC of 0.5 implies that the model has no predictive value.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8149,8 +8149,8 @@ TPR and FPR is more beneficial. A perfect model would have an AUC of
 
 
 <h2 id="getml.pipeline.metrics.cross_entropy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8158,8 +8158,8 @@ TPR and FPR is more beneficial. A perfect model would have an AUC of
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Cross entropy, also referred to as log-loss, is a measure of the likelihood
 of the classification model.</p>
 <p>Used for classification problems.</p>
@@ -8184,7 +8184,7 @@ likelihood = \prod_{i}^{N} (p_i^{y_i} * (1 - p_i)^{1 - y_i}).
 <p>If we take the logarithm of the likelihood as defined above, divide by
 <span class="arithmatex">\(N\)</span> and then multiply by <code>-1</code> (because we want lower to mean
 better and 0 to mean perfect), the outcome will be cross entropy.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8193,8 +8193,8 @@ better and 0 to mean perfect), the outcome will be cross entropy.</p>
 
 
 <h2 id="getml.pipeline.metrics.mae" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mae</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">mae</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8202,8 +8202,8 @@ better and 0 to mean perfect), the outcome will be cross entropy.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Mean Absolute Error - measure of distance between two
 numerical targets.</p>
 <p>Used for regression problems.</p>
@@ -8215,7 +8215,7 @@ values or prediction respectively for a particular data sample
 <span class="arithmatex">\(i\)</span> (both multidimensional in case of using multiple targets)
 while <span class="arithmatex">\(n\)</span> is the number of samples we consider during the
 scoring.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8224,8 +8224,8 @@ scoring.</p>
 
 
 <h2 id="getml.pipeline.metrics.rmse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rmse</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rmse</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8233,8 +8233,8 @@ scoring.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Root Mean Squared Error - measure of distance between two
 numerical targets.</p>
 <p>Used for regression problems.</p>
@@ -8246,7 +8246,7 @@ values or prediction respectively for a particular data sample
 <span class="arithmatex">\(i\)</span> (both multidimensional in case of using multiple targets)
 while <span class="arithmatex">\(n\)</span> is the number of samples we consider during the
 scoring.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8255,8 +8255,8 @@ scoring.</p>
 
 
 <h2 id="getml.pipeline.metrics.rsquared" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rsquared</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rsquared</span> <span class="o">=</span> <span class="n">_all_metrics</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -8264,8 +8264,8 @@ scoring.</p>
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p><span class="arithmatex">\(R^{2}\)</span> - squared correlation coefficient between predictions and targets.</p>
 <p>Used for regression problems.</p>
 <p><span class="arithmatex">\(R^{2}\)</span> is defined as follows:</p>
@@ -8277,7 +8277,7 @@ the predictions and <span class="arithmatex">\(\bar{...}\)</span> denotes the me
 <p>An <span class="arithmatex">\(R^{2}\)</span> of 1 implies perfect correlation between the predictions
 and the targets and an <span class="arithmatex">\(R^{2}\)</span> of 0 implies no correlation
 at all.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8287,7 +8287,7 @@ at all.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

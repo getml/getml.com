@@ -7956,14 +7956,13 @@
 
 
 <a id="getml.data.access"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Manages the access to various data sources.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7976,16 +7975,16 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.access.set_s3_access_key_id" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sets the Access Key ID to S3.</p>
+
 
 <details class="notes" open>
   <summary>Notes</summary>
@@ -7996,38 +7995,37 @@ variables before you start the getML engine, or you can set them from
 this module.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>value</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value to which you want to set the Access Key ID.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>value</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value to which you want to set the Access Key ID.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/access.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/access.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -8103,25 +8101,24 @@ this module.</p>
         <span class="k">if</span> <span class="n">msg</span> <span class="o">!=</span> <span class="s2">&quot;Success!&quot;</span><span class="p">:</span>
             <span class="n">comm</span><span class="o">.</span><span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.data.access.set_s3_secret_access_key" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sets the Secret Access Key to S3.</p>
+
 
 <details class="notes" open>
   <summary>Notes</summary>
@@ -8132,38 +8129,37 @@ variables before you start the getML engine, or you can set them from
 this module.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>value</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value to which you want to set the Secret Access Key.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>value</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value to which you want to set the Secret Access Key.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/access.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 64</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/access.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 64</span>
 <span class="normal"> 65</span>
 <span class="normal"> 66</span>
 <span class="normal"> 67</span>
@@ -8239,8 +8235,8 @@ this module.</p>
         <span class="k">if</span> <span class="n">msg</span> <span class="o">!=</span> <span class="s2">&quot;Success!&quot;</span><span class="p">:</span>
             <span class="n">comm</span><span class="o">.</span><span class="n">engine_exception_handler</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8248,7 +8244,7 @@ this module.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

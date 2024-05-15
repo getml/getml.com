@@ -8044,14 +8044,13 @@
 
 
 <a id="getml.datasets.samples_generator"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Generate samples of artificial data sets.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8064,15 +8063,14 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_categorical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_categorical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_categorical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with categorical variables</p>
 <p>The dataset consists of a population table and one peripheral table.</p>
 <p>The peripheral table has 3 columns:</p>
@@ -8103,71 +8101,70 @@
 </code></pre></div>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -8175,20 +8172,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>categorical_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the peripheral
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -8196,60 +8193,59 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>categorical_peripheral_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a> used to generate the 'target'
 column.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 83</span>
 <span class="normal"> 84</span>
 <span class="normal"> 85</span>
 <span class="normal"> 86</span>
@@ -8577,24 +8573,22 @@ column.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_discrete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_discrete</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_discrete</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with categorical variables</p>
 <p>The dataset consists of a population table and one peripheral table.</p>
 <p>The peripheral table has 3 columns:</p>
@@ -8625,71 +8619,70 @@ column.</p>
 </ul>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -8697,20 +8690,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>discrete_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the peripheral
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -8718,60 +8711,59 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>discrete_peripheral_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">252</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">252</span>
 <span class="normal">253</span>
 <span class="normal">254</span>
 <span class="normal">255</span>
@@ -9095,24 +9087,22 @@ column.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_numerical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_numerical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_numerical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with continuous numerical variables</p>
 <p>The dataset consists of a population table and one peripheral table.</p>
 <p>The peripheral table has 3 columns:</p>
@@ -9142,71 +9132,70 @@ column.</p>
 </code></pre></div>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -9214,20 +9203,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>numerical_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the peripheral
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -9235,60 +9224,59 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>numerical_peripheral_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">419</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">419</span>
 <span class="normal">420</span>
 <span class="normal">421</span>
 <span class="normal">422</span>
@@ -9612,24 +9600,22 @@ column.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_same_units_categorical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_same_units_categorical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_same_units_categorical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with categorical variables</p>
 <p>The dataset consists of a population table and one peripheral table.</p>
 <p>The peripheral table has 3 columns:</p>
@@ -9660,71 +9646,70 @@ column.</p>
 </code></pre></div>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -9732,20 +9717,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>make_same_units_categorical_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the peripheral
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -9753,60 +9738,59 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>make_same_units_categorical_peripheral_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">586</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">586</span>
 <span class="normal">587</span>
 <span class="normal">588</span>
 <span class="normal">589</span>
@@ -10190,24 +10174,22 @@ column.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_same_units_numerical" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_same_units_numerical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_same_units_numerical</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with continuous numerical variables</p>
 <p>The dataset consists of a population table and one peripheral table.</p>
 <p>The peripheral table has 3 columns:</p>
@@ -10237,71 +10219,70 @@ column.</p>
 </code></pre></div>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code>Union[int, None]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code>Union[int, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -10309,20 +10290,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>make_same_units_numerical_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the peripheral
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -10330,60 +10311,59 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>make_same_units_numerical_peripheral_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">783</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">783</span>
 <span class="normal">784</span>
 <span class="normal">785</span>
 <span class="normal">786</span>
@@ -10755,24 +10735,22 @@ column.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.datasets.samples_generator.make_snowflake" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_snowflake</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral1</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">n_rows_peripheral2</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name1</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name2</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation1</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span><span class="p">,</span> <span class="n">aggregation2</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_snowflake</span><span class="p">(</span><span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">n_rows_peripheral1</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">n_rows_peripheral2</span><span class="o">=</span><span class="mi">125000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">population_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name1</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">peripheral_name2</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggregation1</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span><span class="p">,</span> <span class="n">aggregation2</span><span class="o">=</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a random dataset with continuous numerical variables</p>
 <p>The dataset consists of a population table and two peripheral tables.</p>
 <p>The first peripheral table has 4 columns:</p>
@@ -10815,85 +10793,84 @@ column.</p>
 </code></pre></div>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>n_rows_population</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the population table.</p>
-            </div>
-          </td>
-          <td>
-                <code>500</code>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral1</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the first peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>n_row_peripheral2</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Number of rows in the second peripheral table.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>random_state</code></td>
-          <td>
-                <code>Union[int, None]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Seed to initialize the random number generator used for
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>n_rows_population</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the population table.</p>
+              </div>
+            </td>
+            <td>
+                  <code>500</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral1</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the first peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_row_peripheral2</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Number of rows in the second peripheral table.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>random_state</code></td>
+            <td>
+                  <code>Union[int, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Seed to initialize the random number generator used for
 the dataset creation. If set to None, the seed will be the
 'microsecond' component of
 <code>datetime.datetime.now()</code>.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>population_name</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>population_name</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the population
 table. If set to a name already existing on the getML
 engine, the corresponding <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>
@@ -10901,20 +10878,20 @@ will be overwritten. If set to an empty string, a unique
 name will be generated by concatenating
 <code>snowflake_population_</code> and the seed of the random
 number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name1</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name1</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the first
 peripheral table. If set to a name already existing on the
 getML engine, the corresponding
@@ -10922,20 +10899,20 @@ getML engine, the corresponding
 set to an empty string, a unique name will be generated by
 concatenating <code>snowflake_peripheral_1_</code> and the seed of the
 random number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>peripheral_name2</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Name assigned to the
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>peripheral_name2</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Name assigned to the
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> holding the second
 peripheral table. If set to a name already existing on the
 getML engine, the corresponding
@@ -10943,76 +10920,75 @@ getML engine, the corresponding
 set to an empty string, a unique name will be generated by
 concatenating <code>snowflake_peripheral_2_</code> and the seed of the
 random number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation1</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code>&#39;&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation1</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column in the first peripheral table.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Sum" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Sum">Sum</a></code>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>aggregation2</code></td>
-          <td>
-                <code>string</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Sum" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Sum">Sum</a></code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>aggregation2</code></td>
+            <td>
+                  <code>string</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations">aggregations</a> used to generate the 'target'
 column in the second peripheral table.</p>
-            </div>
-          </td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
-          </td>
+              </div>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Count" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.Count">Count</a></code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-<td><code>tuple</code></td>          <td>
-                <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <ul>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tuple</code></td>            <td>
+                  <code><span title="typing.Tuple">Tuple</span>[<a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>, <a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.data_frame.DataFrame">DataFrame</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <ul>
 <li>population (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Population table</li>
 <li>peripheral (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 <li>peripheral_2 (<a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a>): Peripheral table</li>
 </ul>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/datasets/samples_generator.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 974</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/datasets/samples_generator.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 974</span>
 <span class="normal"> 975</span>
 <span class="normal"> 976</span>
 <span class="normal"> 977</span>
@@ -11528,8 +11504,8 @@ column in the second peripheral table.</p>
 
     <span class="k">return</span> <span class="n">population_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine</span><span class="p">,</span> <span class="n">peripheral_on_engine2</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -11537,7 +11513,7 @@ column in the second peripheral table.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

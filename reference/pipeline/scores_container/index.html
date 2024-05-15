@@ -8122,11 +8122,11 @@
 
 
 <a id="getml.pipeline.scores_container"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A container for storing a pipeline's scoring history.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8142,21 +8142,21 @@
 
 
 <h2 id="getml.pipeline.scores_container.Scores" class="doc doc-heading">
-          <code>Scores</code>
+            <code>Scores</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Container which holds the history of all scores associated with a given pipeline.
 The container supports slicing and is sort- and filterable.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/scores_container.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 24</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/pipeline/scores_container.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
 <span class="normal"> 27</span>
@@ -8524,9 +8524,9 @@ The container supports slicing and is sort- and filterable.</p>
         <span class="n">scores_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Scores</span><span class="p">(</span><span class="n">scores_sorted</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8541,8 +8541,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.accuracy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">accuracy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">accuracy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8550,10 +8550,10 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>accuracy</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8562,8 +8562,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.auc" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">auc</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">auc</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8571,10 +8571,10 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>auc</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8583,8 +8583,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.cross_entropy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cross_entropy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">cross_entropy</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8592,10 +8592,10 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>cross entropy</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8604,8 +8604,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.mae" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mae</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">mae</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8613,10 +8613,10 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>mae</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8625,8 +8625,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.rmse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rmse</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rmse</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8634,10 +8634,10 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>rmse</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8646,8 +8646,8 @@ The container supports slicing and is sort- and filterable.</p>
 
 
 <h3 id="getml.pipeline.scores_container.Scores.rsquared" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rsquared</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
-  
+            <code class="highlight language-python"><span class="n">rsquared</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8655,84 +8655,81 @@ The container supports slicing and is sort- and filterable.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience wrapper to retrieve the <code>rsquared</code> from the latest scoring run.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.scores_container.Scores.filter" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">filter</span><span class="p">(</span><span class="n">conditional</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filters the scores container.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conditional</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a boolean for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conditional</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a boolean for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><span class="doc-section-title">Returns:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-                <code><a class="autorefs autorefs-internal" title="getml.pipeline.scores_container.Scores" href="#getml.pipeline.scores_container.Scores">Scores</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Scores"><code>Scores</code></a>:
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="getml.pipeline.scores_container.Scores" href="#getml.pipeline.scores_container.Scores">Scores</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Scores"><code>Scores</code></a>:
 A container of filtered scores.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8741,9 +8738,9 @@ A container of filtered scores.</p>
 <span class="n">scores_last_week</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">date_time</span> <span class="o">&gt;=</span> <span class="n">one_week_ago</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/scores_container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/scores_container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
 <span class="normal">133</span>
@@ -8787,84 +8784,83 @@ A container of filtered scores.</p>
 
     <span class="k">return</span> <span class="n">Scores</span><span class="p">(</span><span class="n">scores_filtered</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.pipeline.scores_container.Scores.sort" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sorts the scores container.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td>
+                  <code>callable</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A callable that evaluates to a sort key for a given item.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descending</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to sort in descending order.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td>
-                <code>callable</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A callable that evaluates to a sort key for a given item.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>descending</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to sort in descending order.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
 <details class="return" open>
   <summary>Return</summary>
   <p><a class="autorefs autorefs-internal" href="../__init__/#getml.pipeline.Scores"><code>Scores</code></a>:
     A container of sorted scores.</p>
 </details>
+
 <details class="example" open>
   <summary>Example</summary>
   <div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
 <span class="n">most_recent_first</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">date_time</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 </details>
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/pipeline/scores_container.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/pipeline/scores_container.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">182</span>
 <span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
@@ -8916,8 +8912,8 @@ A container of filtered scores.</p>
     <span class="n">scores_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">descending</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Scores</span><span class="p">(</span><span class="n">scores_sorted</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_latest</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8925,8 +8921,7 @@ A container of filtered scores.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8935,7 +8930,7 @@ A container of filtered scores.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

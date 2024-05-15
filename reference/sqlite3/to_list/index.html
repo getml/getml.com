@@ -7934,14 +7934,13 @@
 
 
 <a id="getml.sqlite3.to_list"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Returns a table as a list of lists.</p>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -7954,66 +7953,64 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="getml.sqlite3.to_list.to_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_list</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Transforms a query or table into a list of lists. Returns
 a tuple which contains the column names and the actual data.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>conn</code></td>
-          <td>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>query</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The query used to get the table. You can also
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>conn</code></td>
+            <td>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="../connect/#getml.sqlite3.connect"><code>connect</code></a>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>query</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The query used to get the table. You can also
 pass the name of the table, in which case the entire
 table will be imported.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/sqlite3/to_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/sqlite3/to_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
@@ -8071,8 +8068,8 @@ table will be imported.</p>
     <span class="n">data</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">data</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8080,7 +8077,7 @@ table will be imported.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 

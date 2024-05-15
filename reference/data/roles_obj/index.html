@@ -8056,11 +8056,11 @@
 
 
 <a id="getml.data.roles_obj"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Dataclass for handling the roles.</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8076,9 +8076,9 @@
 
 
 <h2 id="getml.data.roles_obj.Roles" class="doc doc-heading">
-          <code>Roles</code>
+            <code>Roles</code>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
@@ -8086,11 +8086,12 @@
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Roles can be passed to <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.data_frame.DataFrame"><code>DataFrame</code></a> to
 predefine the roles assigned to certain columns.</p>
+
 
 <details class="example" open>
   <summary>Example</summary>
@@ -8107,9 +8108,9 @@ predefine the roles assigned to certain columns.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
-            <details class="quote">
-              <summary>Source code in <code>monorepo/src/python-api/getml/data/roles_obj.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
+              <details class="quote">
+                <summary>Source code in <code>getml/data/roles_obj.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
 <span class="normal"> 19</span>
 <span class="normal"> 20</span>
 <span class="normal"> 21</span>
@@ -8307,9 +8308,9 @@ predefine the roles assigned to certain columns.</p>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">unused_float</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">unused_string</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8324,8 +8325,8 @@ predefine the roles assigned to certain columns.</p>
 
 
 <h3 id="getml.data.roles_obj.Roles.columns" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">columns</span></code>
-  
+            <code class="highlight language-python"><span class="n">columns</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8333,10 +8334,10 @@ predefine the roles assigned to certain columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The name of all columns contained in the roles object.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -8345,8 +8346,8 @@ predefine the roles assigned to certain columns.</p>
 
 
 <h3 id="getml.data.roles_obj.Roles.unused" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unused</span></code>
-  
+            <code class="highlight language-python"><span class="n">unused</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -8354,63 +8355,60 @@ predefine the roles assigned to certain columns.</p>
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Names of all unused columns (unused_float + unused_string).</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.roles_obj.Roles.infer" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">infer</span><span class="p">(</span><span class="n">colname</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">infer</span><span class="p">(</span><span class="n">colname</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Infers the role of a column.</p>
 
 
-
-  <p><span class="doc-section-title">Parameters:</span></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>colname</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the column to be inferred.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>colname</code></td>
+            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the column to be inferred.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/roles_obj.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/roles_obj.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
@@ -8434,29 +8432,27 @@ predefine the roles assigned to certain columns.</p>
             <span class="k">return</span> <span class="n">role</span>
     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Column named &#39;&quot;</span> <span class="o">+</span> <span class="n">colname</span> <span class="o">+</span> <span class="s2">&quot;&#39; not found.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.roles_obj.Roles.to_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_dict</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Expresses the roles object as a dictionary.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/roles_obj.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/roles_obj.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span>
 <span class="normal">101</span>
@@ -8466,30 +8462,28 @@ predefine the roles assigned to certain columns.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">role</span><span class="p">:</span> <span class="bp">self</span><span class="p">[</span><span class="n">role</span><span class="p">]</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="getml.data.roles_obj.Roles.to_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a list containing the roles, without the corresponding
 columns names.</p>
 
-          <details class="quote">
-            <summary>Source code in <code>monorepo/src/python-api/getml/data/roles_obj.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
+            <details class="quote">
+              <summary>Source code in <code>getml/data/roles_obj.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
 <span class="normal">105</span>
 <span class="normal">106</span>
 <span class="normal">107</span>
@@ -8501,8 +8495,8 @@ columns names.</p>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">role</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="n">role</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">role</span><span class="p">])]</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -8510,8 +8504,7 @@ columns names.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8520,7 +8513,7 @@ columns names.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
