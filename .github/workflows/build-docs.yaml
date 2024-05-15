@@ -10,9 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: src
+    # defaults:
+    #   run:
+    #     working-directory: src
 
     steps:
       - name: Checkout
@@ -54,8 +54,8 @@ jobs:
 
       - name: Create Hatch environment and install dependencies
         run: |
-          cd $GITHUB_WORKSPACE
-          hatch env create
+          # cd ..
+          hatch shell
 
       - name: Clone GitLab repository
         run: git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
@@ -65,8 +65,8 @@ jobs:
 
       - name: Build documentation
         run: |
-          cd $GITHUB_WORKSPACE/src
-          hatch run mkdocs build
+          cd src
+          mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
