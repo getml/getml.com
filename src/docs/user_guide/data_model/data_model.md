@@ -17,6 +17,10 @@ When defining the data model, we distinguish between a population table and one 
 The population table is the main table of the analysis. It defines the statistical population of your machine learning problem and contains the [target][annotating-data-target]variable(s), which we want to predict. Furthermore, the table usually also contains one or more columns with the role [join_key][annotating-data-join-keys]. These are keys used to establish a relationship – also called [joins][data-model-joins] – with one or more peripheral tables.
 
 The example below contains the population table of a customer churn analysis. The target variable is `churn` – whether a person stops using the services and products of a company. It also contains the information whether or not a given customer has churned after a certain reference date. The join key `customer_id` is used to establish relations with a [peripheral table][data-model-peripheral-tables]. Additionally, the date the customer joined the company is contained in the column `date_joined`, which we have assigned the role [time_stamp][annotating-data-time-stamp].
+
+![Population table example](../../images/population_table.png){: .centered-image style="width: 300px;"}
+
+
 [](){#data-model-peripheral-tables}
 ## Peripheral tables
 
@@ -24,7 +28,8 @@ Peripheral tables contain additional information relevant for the prediction of 
 
 The images below represent two peripheral tables that could be used for our customer churn analysis. One table represents complaints a customer made with a certain agent, and the other represents the transactions the customer made using their account.
 
-![Peripheral tables example](/res/peripheral_tables.png)
+![Peripheral tables example](../../images/peripheral_tables.png){: .centered-image style="width: 600px;"}
+
 [](){#data-model-placeholders}
 ## Placeholders
 
@@ -56,7 +61,8 @@ Because this is a very popular schema in many machine learning problems on relat
 
 The population table and two peripheral tables introduced in [Tables][data-model-tables] can be arranged in a star schema like this:
 
-![Star schema example](/res/star_scheme.png)
+![Star schema example](../../images/star_scheme.png){: .centered-image style="width: 750px;"}
+
 [](){#data-model-snowflake-schema}
 ### The snowflake schema
 
@@ -64,7 +70,7 @@ In some cases, the star schema is not enough to represent the complexity of a da
 
 Assume that in the customer churn analysis shown earlier, there is an additional table containing information about the calls a certain agent made in customer service. It can be joined to the `COMPLAINTS` table using the key `agent_id`.
 
-![Snowflake schema example](/res/snowflake_schema.png)
+![Snowflake schema example](../../images//snowflake_schema.png){: .centered-image style="width: 750px;"}
 
 To model snowflake schemata, you need to use the [`DataModel`](getml/data/DataModel) and [`Container`](getml/data/Container) classes.
 
