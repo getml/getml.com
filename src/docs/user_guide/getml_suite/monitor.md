@@ -5,8 +5,6 @@ The getML monitor contains information on the data imported into the engine as w
 
 ## Accessing the monitor
 
-![Screenshot of getML monitor login](/res/screenshot_login.png)
-
 The monitor is always started on the same machine as the engine. The engine and the monitor use sockets to communicate. The monitor opens an HTTP port - 1709 by default - for you to access it via your favorite internet browser. Entering the following address into the navigation bar will point your browser to the monitor:
 
 [http://localhost:1709](http://localhost:1709){: style="text-align: center; display: block"}
