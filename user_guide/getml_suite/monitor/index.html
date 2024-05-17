@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -7915,7 +7917,6 @@
 <h1 id="the-getml-monitor">The getML monitor</h1>
 <p>The getML monitor contains information on the data imported into the engine as well as the trained pipelines and their performance. It is written in Go and compiled into a binary that is separate from the getML engine.</p>
 <h2 id="accessing-the-monitor">Accessing the monitor</h2>
-<p><img alt="Screenshot of getML monitor login" src="/res/screenshot_login.png" /></p>
 <p>The monitor is always started on the same machine as the engine. The engine and the monitor use sockets to communicate. The monitor opens an HTTP port - 1709 by default - for you to access it via your favorite internet browser. Entering the following address into the navigation bar will point your browser to the monitor:</p>
 <p><a href="http://localhost:1709" style="text-align: center; display: block">http://localhost:1709</a></p>
 <p>The HTTP port can only be accessed from within the host the getML suite is running on.</p>

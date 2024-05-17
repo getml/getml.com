@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -8244,13 +8246,14 @@
 <a href="" id="data-model-population-table"></a></p>
 <h3 id="the-population-table">The population table</h3>
 <p>The population table is the main table of the analysis. It defines the statistical population of your machine learning problem and contains the <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#target">target</a>variable(s), which we want to predict. Furthermore, the table usually also contains one or more columns with the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#join-key">join_key</a>. These are keys used to establish a relationship – also called <a class="autorefs autorefs-internal" href="#joins">joins</a> – with one or more peripheral tables.</p>
-<p>The example below contains the population table of a customer churn analysis. The target variable is <code>churn</code> – whether a person stops using the services and products of a company. It also contains the information whether or not a given customer has churned after a certain reference date. The join key <code>customer_id</code> is used to establish relations with a <a class="autorefs autorefs-internal" href="#peripheral-tables">peripheral table</a>. Additionally, the date the customer joined the company is contained in the column <code>date_joined</code>, which we have assigned the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#time-stamp">time_stamp</a>.
-<a href="" id="data-model-peripheral-tables"></a></p>
+<p>The example below contains the population table of a customer churn analysis. The target variable is <code>churn</code> – whether a person stops using the services and products of a company. It also contains the information whether or not a given customer has churned after a certain reference date. The join key <code>customer_id</code> is used to establish relations with a <a class="autorefs autorefs-internal" href="#peripheral-tables">peripheral table</a>. Additionally, the date the customer joined the company is contained in the column <code>date_joined</code>, which we have assigned the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#time-stamp">time_stamp</a>.</p>
+<p><img alt="Population table example" class="centered-image" src="../../../images/population_table.png" style="width: 300px;" /></p>
+<p><a href="" id="data-model-peripheral-tables"></a></p>
 <h2 id="peripheral-tables">Peripheral tables</h2>
 <p>Peripheral tables contain additional information relevant for the prediction of the target variable in the <a class="autorefs autorefs-internal" href="#the-population-table">population table</a>. Each of them is related to the latter (or another peripheral table, refer to <a class="autorefs autorefs-internal" href="#the-snowflake-schema">the snowflake schema</a>) via a <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#join-key">join_key</a>.</p>
 <p>The images below represent two peripheral tables that could be used for our customer churn analysis. One table represents complaints a customer made with a certain agent, and the other represents the transactions the customer made using their account.</p>
-<p><img alt="Peripheral tables example" src="/res/peripheral_tables.png" />
-<a href="" id="data-model-placeholders"></a></p>
+<p><img alt="Peripheral tables example" class="centered-image" src="../../../images/peripheral_tables.png" style="width: 600px;" /></p>
+<p><a href="" id="data-model-placeholders"></a></p>
 <h2 id="placeholders">Placeholders</h2>
 <p>In getML, <a href="getml/data/Placeholder"><code>Placeholder</code></a>s are used to construct the <a href="getml/data/DataModel"><code>DataModel</code></a>. They are abstract representations of <a href="getml/data/DataFrame"><code>DataFrame</code></a>s or <a href="getml/data/View"><code>View</code></a>s and the relationships among each other, but do not contain any data themselves.</p>
 <p>The idea behind the placeholder concept is that they allow constructing an abstract data model without any reference to an actual data set. This data model serves as input for the <a href="getml/data/Pipeline"><code>Pipeline</code></a>. Later on, the <a href="getml/feature_learning"><code>feature_learning</code></a> algorithms can be trained and applied on any data set that follows this data model.</p>
@@ -8267,12 +8270,12 @@
 <p>In the star schema, the population table is surrounded by any number of peripheral tables, all joined via a certain join key. However, no joins between peripheral tables are allowed.</p>
 <p>Because this is a very popular schema in many machine learning problems on relational data, getML contains a special class for these sorts of problems: <a href="getml/data/StarSchema"><code>StarSchema</code></a>.</p>
 <p>The population table and two peripheral tables introduced in <a class="autorefs autorefs-internal" href="#tables">Tables</a> can be arranged in a star schema like this:</p>
-<p><img alt="Star schema example" src="/res/star_scheme.png" />
-<a href="" id="data-model-snowflake-schema"></a></p>
+<p><img alt="Star schema example" class="centered-image" src="../../../images/star_scheme.png" style="width: 750px;" /></p>
+<p><a href="" id="data-model-snowflake-schema"></a></p>
 <h3 id="the-snowflake-schema">The snowflake schema</h3>
 <p>In some cases, the star schema is not enough to represent the complexity of a data set. This is where the snowflake schema comes in: In a snowflake schema, peripheral tables can have peripheral tables of their own.</p>
 <p>Assume that in the customer churn analysis shown earlier, there is an additional table containing information about the calls a certain agent made in customer service. It can be joined to the <code>COMPLAINTS</code> table using the key <code>agent_id</code>.</p>
-<p><img alt="Snowflake schema example" src="/res/snowflake_schema.png" /></p>
+<p><img alt="Snowflake schema example" class="centered-image" src="../../../images/snowflake_schema.png" style="width: 750px;" /></p>
 <p>To model snowflake schemata, you need to use the <a href="getml/data/DataModel"><code>DataModel</code></a> and <a href="getml/data/Container"><code>Container</code></a> classes.</p>
 <p><a href="" id="data-model-time-series"></a></p>
 <h2 id="time-series">Time series</h2>
