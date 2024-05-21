@@ -3,7 +3,11 @@ site_name: GetML Documentation
 plugins:
   - search
   - autorefs
-  - mkdocstrings
+  - mkdocstrings:
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
 
 
 markdown_extensions:
