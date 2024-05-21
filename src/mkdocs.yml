@@ -1,26 +1,163 @@
-site_name: GetML Documentation
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
+# Project information
+site_name: GetML Developer Portal
+site_url: https://dev.getml.com/
+site_author: Code17 GmbH
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
+repo_name: getml
+# repo_url: https://github.com/getml/getml-community
+
+# Copyright
+copyright: Copyright &copy; 2017 - 2024 Code17 GmbH
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/brand/getml-light.svg
+  logo_dark_mode: assets/brand/getml-dark.svg
+  favicon: assets/brand/logo-color.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.instant.preview # disable! enable on page basis
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - announce.dismiss
+    #
+    # - announce.dismiss
+    # - content.action.edit
+    # - content.action.view
+    # - content.code.annotate
+    # - content.code.copy
+    # # - content.code.select
+    # # - content.footnote.tooltips
+    # # - content.tabs.link
+    # - content.tooltips
+    # # - header.autohide
+    # # - navigation.expand
+    # - navigation.footer
+    # - navigation.indexes
+    # # - navigation.instant
+    # # - navigation.instant.prefetch
+    # # - navigation.instant.progress
+    # # - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # # - navigation.tabs.sticky
+    # - navigation.top
+    # - navigation.tracking
+    # - search.highlight
+    # - search.share
+    # - search.suggest
+    # - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-5
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-2
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-6
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
 plugins:
-  - search
-  - autorefs
-  - mkdocstrings:
-      handlers:
-        python:
-          import:
-            - https://docs.python.org/3/objects.inv
+  # - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - autorefs
+  - mkdocstrings
+  # - meta
 
+# Additional configuration
+extra:
+  generator: false
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/getml
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/getml/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@code17-gmbh
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/code17-gmbh
 
+# Extensions
 markdown_extensions:
+  - abbr
+  - md_in_html
   - attr_list
   - admonition
+  - footnotes
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.superfences
   - pymdownx.arithmatex:
-        generic: true
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - material.extensions.preview:
+      #     sources:
+      #       include:
+      #         - ...
+      #       exclude:
+      #         - ...
+      targets:
+        include:
+          - reference/*
+          - user_guide/*
+  #       exclude:
+  #         - ...
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-extra_css:
-  - assets/css/custom.css
-
-theme: material
+nav:
+  - Home: index.md
+  - User Guide:
+      - user_guide/index.md
+      - Annotating Data: user_guide/annotating_data/annotating_data.md
+      - Data Model: user_guide/data_model/data_model.md
+  - API Reference:
+      - reference/index.md
+      - reference/communication.md
+      - reference/constants.md
