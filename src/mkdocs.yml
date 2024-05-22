@@ -95,6 +95,7 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
   - mkdocstrings
+  - tags
   # - meta
 
 # Additional configuration
@@ -182,6 +183,79 @@ nav:
       - Hyperparameter optimization: user_guide/hyperopt/hyperopt.md
       - Deployment: user_guide/deployment/deployment.md
 
- 
+      
+  - API Reference:
+    - data:
+      - Container: reference/data/container.md
+      - Dataframe: reference/data/data_frame.md
+      - DataModel: reference/data/data_model.md
+      - Placeholder: reference/data/placeholder.md
+      - Roles: reference/data/roles_obj.md
+      - StarSchema: reference/data/star_schema.md
+      - Subset: reference/data/subset.md
+      - TimeSeries: reference/data/time_series.md
+      - View: reference/data/view.md
+      - concat: reference/data/concat.md
+      - helpers: reference/data/helpers.md
+      - helpers2: reference/data/helpers2.md
+      - load_container: reference/data/load_container.md
+      - access: reference/data/access.md
+      - columns: 
+        - Columns: reference/data/columns/columns.md
+        - from_value: reference/data/columns/from_value.md
+        - random: reference/data/columns/random.md
+      - relationship: reference/data/relationship.md
+      - roles: reference/data/roles.md
+      - split: 
+        - reference/data/split/__init__.md
+        - concat: reference/data/split/concat.md
+        - random: reference/data/split/random.md
+        - time: reference/data/split/time.md
+      - time: reference/data/time.md
+      - subroles: reference/data/subroles/__init__.md
+    - database:
+      - reference/database/index.md
+      - connect_bigquery: reference/database/connect_bigquery.md
+      - connect_greenplum: reference/database/connect_greenplum.md
+      - connect_hana: reference/database/connect_hana.md
+      - connect_mariadb: reference/database/connect_mariadb.md
+      - connect_mysql: reference/database/connect_mysql.md
+      - connect_odbc: reference/database/connect_odbc.md
+      - connect_postgres: reference/database/connect_postgres.md
+      - connect_sqlite3: reference/database/connect_sqlite3.md
+      - copy_table: reference/database/copy_table.md
+      - drop_table: reference/database/drop_table.md
+      - execute: reference/database/execute.md
+      - get: reference/database/get.md
+      - get_colnames: reference/database/get_colnames.md
+      - list_connections: reference/database/list_connections.md
+      - list_tables: reference/database/list_tables.md
+      - read_csv: reference/database/read_csv.md
+      - read_s3: reference/database/read_s3.md
+      - sniff_csv: reference/database/sniff_csv.md
+      - sniff_s3: reference/database/sniff_s3.md
+      - Connection: reference/database/connection.md
+    - datasets:
+      - reference/datasets/index.md
+      - base: reference/datasets/base.md
+    - engine:
+      - reference/engine/index.md
+    - hyperopt: 
+      - reference/hyperopt/index.md
+    - feature_learning:
+      - reference/feature_learning/index.md
+      - Relboost: reference/feature_learning/relboost.md
+    - project:
+      - reference/project/index.md
+    - preprocessors:
+      - reference/preprocessors/index.md
+    - pipeline:
+      - reference/pipeline/index.md
+    - predictors:
+      - reference/predictors/index.md
+    - sqlite3:
+      - reference/sqlite3/index.md
+    - Dataframe: reference/data/data_frame.md
+    - Pipeline: reference/pipeline/pipeline.md
+    # - set_project: reference/engine/set_project.md
 
-   
