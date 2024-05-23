@@ -5,15 +5,15 @@ In the sections on [feature engineering][feature-engineering] and [predicting][p
 
 The most relevant parameters of these classes can be chosen to constitute individual dimensions of a parameter space. For each parameter, a lower and upper bound has to be provided and the hyperparameter optimization will search the space within these bounds. This will be done iteratively by drawing a specific parameter combination, overwriting the corresponding parameters in a base pipeline, and then fitting and scoring it. The algorithm used to draw from the parameter space is represented by the different classes of [`hyperopt`](getml/hyperopt).
 
-While [`RandomSearch`](getml/hyperopt/RandomSearch) and [`LatinHypercubeSearch`](getml/hyperopt/LatinHypercubeSearch) are purely statistical approaches, [`GaussianHyperparameterSearch`](getml/hyperopt/GaussianHyperparameterSearch) uses prior knowledge obtained from evaluations of previous parameter combinations to select the next one.
+While [`RandomSearch`][getml.hyperopt.RandomSearch] and [`LatinHypercubeSearch`][getml.hyperopt.LatinHypercubeSearch] are purely statistical approaches, [`GaussianHyperparameterSearch`][getml.hyperopt.GaussianHyperparameterSearch] uses prior knowledge obtained from evaluations of previous parameter combinations to select the next one.
 
 ## Tuning routines
 
-The easiest way to conduct a hyperparameter optimization in getML are the tuning routines `tune_feature_learners()` and `tune_predictors()`. They roughly work as follows:
+The easiest way to conduct a hyperparameter optimization in getML are the tuning routines [`tune_feature_learners()`][getml.hyperopt.tune_feature_learners] and [`tune_predictors()`][getml.hyperopt.tune_predictors]. They roughly work as follows:
 
 - They begin with a base pipeline, in which the default parameters for the feature learner or the predictor are used.
 
-- They then proceed by optimizing 2 or 3 parameters at a time using a `GaussianHyperparameterSearch`. If the best pipeline outperforms the base pipeline, the best pipeline becomes the new base pipeline.
+- They then proceed by optimizing 2 or 3 parameters at a time using a [`GaussianHyperparameterSearch`][getml.hyperopt.GaussianHyperparameterSearch]. If the best pipeline outperforms the base pipeline, the best pipeline becomes the new base pipeline.
 
 - Taking the base pipeline from the previous steps, the tuning routine then optimizes the next 2 or 3 hyperparameters. If the best pipeline from that hyperparameter optimization outperforms the current base pipeline, that pipeline becomes the new base pipeline.
 
@@ -25,9 +25,9 @@ The following tables list the tuning recipes and hyperparameter subspaces for ea
 
 | Predictor                                                       | Stage                  | Hyperparameter    | Subspace         |
 |-----------------------------------------------------------------|------------------------|-------------------|------------------|
-| [`LinearRegression`](getml/predictors/LinearRegression); [`LogisticRegression`](getml/predictors/LogisticRegression) | 1 (base parameters)    | reg_lambda        | [1E-11, 100]     |
+| [`LinearRegression`][getml.predictors.LinearRegression]; [`LogisticRegression`][getml.predictors.LogisticRegression] | 1 (base parameters)    | reg_lambda        | [1E-11, 100]     |
 |                                                                 |                        | learning_rate     | [0.5, 0.99]      |
-| [`XGBoostClassifier`](getml/predictors/XGBoostClassifier); [`XGBoostRegressor`](getml/predictors/XGBoostRegressor) | 1 (base parameters)    | learning_rate     | [0.05, 0.3]      |
+| [`XGBoostClassifier`][getml.predictors.XGBoostClassifier]; [`XGBoostRegressor`][getml.predictors.XGBoostRegressor] | 1 (base parameters)    | learning_rate     | [0.05, 0.3]      |
 |                                                                 | 2 (tree parameters)    | max_depth         | [1, 15]          |
 |                                                                 |                        | min_child_weights | [1, 6]           |
 |                                                                 |                        | gamma             | [0, 5]           |
@@ -40,19 +40,19 @@ The following tables list the tuning recipes and hyperparameter subspaces for ea
 
 | Feature Learner                                                | Stage                  | Hyperparameter    | Subspace         |
 |----------------------------------------------------------------|------------------------|-------------------|------------------|
-| [`FastProp`](getml/feature_learning/FastProp)                  | 1 (base parameters)    | num_features      | [50, 500]        |
+| [`FastProp`][getml.feature_learning.FastProp]                  | 1 (base parameters)    | num_features      | [50, 500]        |
 |                                                                 |                        | n_most_frequent   | [0, 20]          |
-| [`Multirel`](getml/feature_learning/Multirel)                  | 1 (base parameters)    | num_features      | [10, 50]         |
+| [`Multirel`][getml.feature_learning.Multirel]                  | 1 (base parameters)    | num_features      | [10, 50]         |
 |                                                                 |                        | shrinkage         | [0, 0.3]         |
 |                                                                 | 2 (tree parameters)    | max_length        | [0, 10]          |
 |                                                                 |                        | min_num_samples   | [1, 500]         |
 |                                                                 | 3 (regularization parameters) | share_aggregations | [0.1, 0.5]    |
-| [`Relboost`](getml/feature_learning/Relboost)                  | 1 (base parameters)    | num_features      | [10, 50]         |
+| [`Relboost`][getml.feature_learning.Relboost]                  | 1 (base parameters)    | num_features      | [10, 50]         |
 |                                                                 |                        | shrinkage         | [0, 0.3]         |
 |                                                                 | 2 (tree parameters)    | max_length        | [0, 10]          |
 |                                                                 |                        | min_num_samples   | [1, 500]         |
 |                                                                 | 3 (regularization parameters) | share_aggregations | [0.1, 0.5]    |
-| [`RelMT`](getml/feature_learning/RelMT)                        | 1 (base parameters)    | num_features      | [10, 50]         |
+| [`RelMT`][getml.feature_learning.RelMT]                        | 1 (base parameters)    | num_features      | [10, 50]         |
 |                                                                 |                        | shrinkage         | [0, 0.3]         |
 |                                                                 | 2 (tree parameters)    | max_depth         | [1, 8]           |
 |                                                                 |                        | min_num_samples   | [1, 500]         |
@@ -64,15 +64,15 @@ More advanced users can rely on the more low-level hyperparameter optimization r
 
 ## Random search
 
-A `RandomSearch` draws random hyperparameter sets from the hyperparameter space.
+A [`RandomSearch`][getml.hyperopt.RandomSearch] draws random hyperparameter sets from the hyperparameter space.
 
 ## Latin hypercube search
 
-A `LatinHypercubeSearch` draws almost random hyperparameter sets from the hyperparameter space, but ensures that they are sufficiently different from each other.
+A [`LatinHypercubeSearch`][getml.hyperopt.LatinHypercubeSearch] draws almost random hyperparameter sets from the hyperparameter space, but ensures that they are sufficiently different from each other.
 
 ## Gaussian hyperparameter search
 
-A `GaussianHyperparameterSearch` works like this:
+A [`GaussianHyperparameterSearch`][getml.hyperopt.GaussianHyperparameterSearch] works like this:
 
 - It begins with a burn-in phase, usually about 70% to 90% of all iterations. During that burn-in phase, the hyperparameter space is sampled more or less at random, using either a random search or a latin hypercube search. You can control this phase using `ratio_iter` and `surrogate_burn_in_algorithm`.
 

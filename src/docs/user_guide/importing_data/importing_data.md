@@ -19,27 +19,27 @@ similar arguments and resulting in the same output format, regardless
 of the data source.
 
 You can use one of the dedicated
-[`from_csv()`](getml/data/DataFrame/from_csv),
-[`from_pandas()`](getml/data/DataFrame/from_pandas),
-[`from_db()`](getml/data/DataFrame/from_db), and
-[`from_json()`](getml/data/DataFrame/from_json) class methods to construct a
+[`from_csv()`][getml.data.DataFrame.from_csv],
+[`from_pandas()`][getml.data.DataFrame.from_pandas],
+[`from_db()`][getml.data.DataFrame.from_db], and
+[`from_json()`][getml.data.DataFrame.from_json] class methods to construct a
 data frame object in the getML engine, fill it with the provided data,
-and retrieve a [`DataFrame`](getml/data/DataFrame) handle in the Python
+and retrieve a [`DataFrame`][getml.data.DataFrame] handle in the Python
 API. 
 
 If you already have a data frame object in place, you
-can use the [`read_csv()`](getml/data/DataFrame/read_csv),
-[`read_pandas()`](getml/data/DataFrame/read_pandas),
-[`read_db()`](getml/data/DataFrame/read_db), or
-[`read_json()`](getml/data/DataFrame/read_json) methods of the corresponding
-[`DataFrame`](getml/data/DataFrame) handle to either replace its content
+can use the [`read_csv()`][getml.data.DataFrame.read_csv],
+[`read_pandas()`][getml.data.DataFrame.read_pandas],
+[`read_db()`][getml.data.DataFrame.read_db], or
+[`read_json()`][getml.data.DataFrame.read_json] methods of the corresponding
+[`DataFrame`][getml.data.DataFrame] handle to either replace its content
 with new data or append to it.
 
 All those functions also have their counterparts for exporting called
-[`to_csv()`](getml/data/DataFrame/to_csv),
-[`to_pandas()`](getml/data/DataFrame/to_pandas),
-[`to_db()`](getml/data/DataFrame/to_db), and
-[`to_json()`](getml/data/DataFrame/to_json).
+[`to_csv()`][getml.data.DataFrame.to_csv],
+[`to_pandas()`][getml.data.DataFrame.to_pandas],
+[`to_db()`][getml.data.DataFrame.to_db], and
+[`to_json()`][getml.data.DataFrame.to_json].
 
 The particularities of the individual formats will be covered in the
 following sections:
@@ -57,12 +57,13 @@ following sections:
 
 ## Data Frames
 
-The resulting [`DataFrame`](getml/data/DataFrame) instance in the Python
+The resulting [`DataFrame`][getml.data.DataFrame] instance in the Python
 API represents a handle to the corresponding data frame object in the
 getML engine. The mapping between the two is done based on
 the name of the object, which has to be unique. Similarly, the names of 
-the [`columns`](getml/data/columns) are required to be
+the [`columns`][getml.data.columns] are required to be
 unique within the data frame they are associated with.
+
 
 ## Handling of NULL values
 
