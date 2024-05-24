@@ -1,6 +1,4 @@
 ---
-tags:
-  - Enterprise
+status: enterprise
 ---
-
-::: getml.feature_learning.relboost
+::: getml.feature_learning.Relboost
