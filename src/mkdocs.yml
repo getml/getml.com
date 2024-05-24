@@ -94,7 +94,31 @@ plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
-  - mkdocstrings
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_toc_entry: false
+            show_source: false
+            members_order: source
+            show_signature: true
+            separate_signature: true
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            show_signature_annotations: true
+            signature_crossrefs: true # mkdocstring insider
+            show_submodules: false
+            show_symbol_type_heading: false
+            show_symbol_type_toc: true # mkdocstring insider
+            line_length: 60 # not working
+            modernize_annotations: true # mkdocstring  insider
+            ignore_init_summary: true
+            show_root_heading: true
+            heading_level: 1
+            # unwrap_annotated: false
+            filters: ["!^_"]
+            docstring_options:
+              ignore_init_summary: true
   - tags
   # - meta
 
@@ -185,9 +209,10 @@ nav:
 
       
   - API Reference:
-    - data:
+    - getml.data:
+      - reference/data/index.md
       - Container: reference/data/container.md
-      - Dataframe: reference/data/data_frame.md
+      - DataFrame: reference/data/data_frame.md
       - DataModel: reference/data/data_model.md
       - Placeholder: reference/data/placeholder.md
       - Roles: reference/data/roles_obj.md
@@ -195,46 +220,17 @@ nav:
       - Subset: reference/data/subset.md
       - TimeSeries: reference/data/time_series.md
       - View: reference/data/view.md
-      - concat: reference/data/concat.md
-      - helpers: reference/data/helpers.md
-      - helpers2: reference/data/helpers2.md
-      - load_container: reference/data/load_container.md
       - access: reference/data/access.md
-      - columns: 
-        - Columns: reference/data/columns/columns.md
-        - from_value: reference/data/columns/from_value.md
-        - random: reference/data/columns/random.md
+      - columns: reference/data/columns.md
       - relationship: reference/data/relationship.md
       - roles: reference/data/roles.md
-      - split: 
-        - reference/data/split/__init__.md
-        - concat: reference/data/split/concat.md
-        - random: reference/data/split/random.md
-        - time: reference/data/split/time.md
+      - split: reference/data/split.md
       - time: reference/data/time.md
-      - subroles: reference/data/subroles/__init__.md
-    - database:
+      - subroles: reference/data/subroles.md
+      - DEBUG: reference/data/DEBUG.md
+    - getml.database:
       - reference/database/index.md
-      - connect_bigquery: reference/database/connect_bigquery.md
-      - connect_greenplum: reference/database/connect_greenplum.md
-      - connect_hana: reference/database/connect_hana.md
-      - connect_mariadb: reference/database/connect_mariadb.md
-      - connect_mysql: reference/database/connect_mysql.md
-      - connect_odbc: reference/database/connect_odbc.md
-      - connect_postgres: reference/database/connect_postgres.md
-      - connect_sqlite3: reference/database/connect_sqlite3.md
-      - copy_table: reference/database/copy_table.md
-      - drop_table: reference/database/drop_table.md
-      - execute: reference/database/execute.md
-      - get: reference/database/get.md
-      - get_colnames: reference/database/get_colnames.md
-      - list_connections: reference/database/list_connections.md
-      - list_tables: reference/database/list_tables.md
-      - read_csv: reference/database/read_csv.md
-      - read_s3: reference/database/read_s3.md
-      - sniff_csv: reference/database/sniff_csv.md
-      - sniff_s3: reference/database/sniff_s3.md
-      - Connection: reference/database/connection.md
+      - DEBUG: reference/database/DEBUG.md
     - datasets:
       - reference/datasets/index.md
       - base: reference/datasets/base.md
@@ -242,9 +238,16 @@ nav:
       - reference/engine/index.md
     - hyperopt: 
       - reference/hyperopt/index.md
-    - feature_learning:
+    - getml.feature_learning:
       - reference/feature_learning/index.md
+      - FastProp: reference/feature_learning/fastprop.md
+      - Fastboost: reference/feature_learning/fastboost.md
+      - Multirel: reference/feature_learning/multirel.md
       - Relboost: reference/feature_learning/relboost.md
+      - RelMT: reference/feature_learning/relmt.md
+      - aggregations: reference/feature_learning/aggregations.md
+      - loss_functions: reference/feature_learning/loss_functions.md
+      - DEBUG: reference/feature_learning/DEBUG.md
     - project:
       - reference/project/index.md
     - preprocessors:
