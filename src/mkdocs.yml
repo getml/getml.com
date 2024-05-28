@@ -97,6 +97,8 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
+          import:
+            - https://docs.python.org/3/objects.inv
           options:
             show_root_toc_entry: false
             show_source: false
