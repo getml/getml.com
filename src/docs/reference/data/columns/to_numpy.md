@@ -1,1 +1,0 @@
-::: getml.data.columns.to_numpy
