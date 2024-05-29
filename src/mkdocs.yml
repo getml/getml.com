@@ -3,6 +3,7 @@ site_name: GetML Documentation
 plugins:
   - search
   - autorefs
+  - table-reader
   - mkdocstrings:
       handlers:
         python:

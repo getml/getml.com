@@ -13,9 +13,9 @@ and click the download button. This will download a ZIP archive containing every
 
 Your system should meet the following requirements to successfully install getML for Docker:
 
-- Docker. If you are on Linux, make sure that you can run docker without root rights/sudo. [Docker](https://www.docker.com/)
-- Bash. This is pre-installed on Linux and macOS. For Windows users, we recommend [Git Bash](https://gitforwindows.org/).
-- OpenSSL. This should be pre-installed on most systems as well. [OpenSSL](https://www.openssl.org/)
+- [Docker](https://www.docker.com/). If you are on Linux, make sure that you can run docker without root rights/sudo.
+- [Git Bash](https://gitforwindows.org/). This is pre-installed on Linux and macOS. For Windows users, we recommend.
+- [OpenSSL](https://www.openssl.org/). This should be pre-installed on most systems as well.
 
 ## Setup and Run getML for Docker
 
@@ -23,14 +23,14 @@ Your system should meet the following requirements to successfully install getML
 2. Unzip `getml-X.X.X-docker.zip`, where `X.X.X` is a placeholder for the version number.
 3. Execute `setup.sh`. This will run the Dockerfile and set up your Docker image. It will also create a Docker volume called 'getml'. On Windows, you can just click on `setup.sh`.
 
-   On macOS and Linux, do the following:
-
-```bash
-cd getml-X.X.X-docker
-bash setup.sh # or ./setup.sh
-```
-
-(Please make sure that you actually `cd` into that directory, otherwise `setup.sh` will not find the Dockerfile.)
+      On macOS and Linux, do the following:
+   
+      ```bash
+      cd getml-X.X.X-docker
+      bash setup.sh # or ./setup.sh
+      ```
+      
+      (Please make sure that you actually `cd` into that directory, otherwise `setup.sh` will not find the Dockerfile.)
 
 4. Execute `run.sh`. This will run the Docker image.
 

@@ -1,6 +1,5 @@
 [](){#getting-started}
 # Get started with getML
-======================
 
 In this example, you will learn about the basic concepts of getML. You will tackle a simple problem using the Python API in order to gain a technical understanding of the benefits of getML. More specifically, you will learn how to do the following:
 
@@ -11,17 +10,18 @@ In this example, you will learn about the basic concepts of getML. You will tack
 
 The guide is applicable to both the enterprise and the community editions of getML. The highlights of the two are mentioned under [community vs enterprise edition](#community-vs-enterprise-edition) section below.
 
-You have not installed getML on your machine yet? Before you get started, head over to the installation instructions: for the enterprise edition [here](https://docs.get.ml/latest/tutorial/installation.html) or for the community edition [here](https://github.com/getml/getml-community#installation).
+You have not installed getML on your machine yet? Before you get started, head over 
+to the installation instructions: for the enterprise edition [here][installation] or 
+for the community edition [here](https://github.com/getml/getml-community#installation).
 
 
-Introduction
-------------
+## Introduction
 
 Automated machine learning (AutoML) has attracted a great deal of attention in recent years. The goal is to simplify the application of traditional machine learning methods to real-world business problems by automating key steps of a data science project, such as feature extraction, model selection, and hyperparameter optimization. With AutoML, data scientists are able to develop and compare dozens of models, gain insights, generate predictions, and solve more business problems in less time.
 
 While it is often claimed that AutoML covers the complete workflow of a data science project - from the raw data set to the deployable machine learning models - current solutions have one major drawback: They cannot handle *real world* business data. This data typically comes in the form relational data. The relevant information is scattered over a multitude of tables that are related via so-called join keys. In order to start an AutoML pipeline, a flat feature table has to be created from the raw relational data by hand. This step is called feature engineering and is a tedious and error-prone process that accounts for up to 90% of the time in a data science project.
 
-![Getting Started](getting_started_files/getting_started_4_0.png)
+![Getting Started](../../images/getting_started_4_0.png)
 
 getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors. This topic is covered in other material.
 
@@ -30,16 +30,16 @@ All functionality of getML is implemented in the so-called *getML engine*. It is
 In this article, we start with a brief glimpse of different toolsets offered by getML community and enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.
 
 
-Community vs enterprise edition
--------------------------------
+## Community vs enterprise edition
 
 Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
 
+{{ read_csv('../../images/community_vs_enterprise_edition.csv') }}
 
-Starting a new project
-----------------------
+## Starting a new project
 
-After you’ve successfully installed getML ([enterprise](https://docs.get.ml/latest/tutorial/installation.html) or [community](https://github.com/getml/getml-community#installation)), you can begin by executing the following in a jupyter-notebook:
+After you’ve successfully installed getML ([enterprise][installation] or [community]
+(https://github.com/getml/getml-community#installation)), you can begin by executing the following in a jupyter-notebook:
 
 ```python
 import getml
@@ -85,8 +85,7 @@ Current project:
 getting_started
 ```
 
-Data Set
---------
+## Data Set
 
 The data set used in this tutorial consists of 2 tables. The so-called population table represents the entities we want to make a prediction about in the analysis. The peripheral table contains additional information and is related to the population table via a join key. Such a data set could appear, for example, in a customer churn analysis where each row in the population table represents a customer and each row in the peripheral table represents a transaction. It could also be part of a predictive maintenance campaign where each row in the population table corresponds to a particular machine in a production line and each row in the peripheral table to a measurement from a certain sensor.
 
@@ -136,6 +135,8 @@ The relationship between the population and peripheral table is established usin
 
 In the peripheral table, ``columns_01`` also contains a random numerical value. The population table and the peripheral table have a one-to-many relationship via ``join_key``. This means that one row in the population table is associated with many rows in the peripheral table. In order to use the information from the peripheral table, we need to merge the many rows corresponding to one entry in the population table into so-called features. This is done using certain aggregations.
 
+![Getting Started](../../images/getting_started_18_0.png)
+
 For example, such an aggregation could be the sum of all values in ``column_01``. We could also apply a subcondition, like taking only values into account that fall into a certain time range with respect to the entry in the population table. In SQL code such a feature would look like this:
     
 ```sql
@@ -158,8 +159,7 @@ Unfortunately, neither the right aggregation nor the right subconditions are cle
 
 This is where getML comes in. It finds the correct features for you - automatically. You do not need to manually merge and aggregate tables in order to get started with a data science project. In addition, getML uses the derived features in a classical AutoML setting to easily make predictions with established and well-performing algorithms. This means getML provides an end-to-end solution starting from the relational data to a trained ML-model. How this is done via the getML Python API is demonstrated in the following.
 
-Defining the data model
------------------------
+## Defining the data model
 
 Most machine learning problems on relational data can be expressed as a simple [star schema](https://en.wikipedia.org/wiki/Star_schema). This example is no exception, so we will use the predefined [`StarSchema`][getml.data.StarSchema] class.
 
@@ -177,8 +177,7 @@ Most machine learning problems on relational data can be expressed as a simple [
 
 ```
 
-Building a pipeline
--------------------
+## Building a pipeline
 
 Now we can define the feature learner. 
 Additionally, you can alter some hyperparameters like the number of
@@ -224,7 +223,7 @@ Now, that we have defined a [`Pipeline`][getml.pipeline.Pipeline], we can let ge
 * [`predict()`][getml.pipeline.Pipeline.predict] the [`target`][getml.data.roles.target]s for unseen data;
 * [`deploy()`][getml.pipeline.Pipeline.deploy] the pipeline to an http endpoint.
 
-### Training
+## Training
 
 When fitting the model, we pass the handlers to the actual data residing in the getML engine – the [`DataFrame`][getml.data.DataFrame]s.
 
@@ -274,7 +273,7 @@ url: http://localhost:1709/#/getpipeline/getting_started/MXzNDT/0/
 
 That’s it. The features learned by [`FastProp`][getml.feature_learning.FastProp] as well as the [`LinearRegression`][getml.predictors.LinearRegression] are now trained on our data set.
 
-### Scoring
+## Scoring
 
 We can also score our algorithms on the test set.
 
@@ -297,7 +296,7 @@ FastProp: Building features...
 
 Our model is able to predict the target variable in the newly generated data set pretty accurately. Though, the enterprise feature learner [`Multirel`][getml.feature_learning.Multirel] performs even better here with R<sup>2</sup> of 0.9995 and MAE and RMSE of 0.07079 and 0.1638 respectively.
 
-### Making predictions
+## Making predictions
 
 Let’s simulate the arrival of unseen data and generate another population table. Since the data model is already stored in the pipeline, we do not need to recreate it and can just use a [`Container`][getml.data.Container] instead of a [`StarSchema`][getml.data.StarSchema].
 
@@ -336,7 +335,7 @@ print(yhat[:10])
  [26.20538556]]
 ```
 
-### Extracting features
+## Extracting features
 
 Of course, you can also transform a specific data set into the corresponding features in order to insert them into another machine learning algorithm.
 

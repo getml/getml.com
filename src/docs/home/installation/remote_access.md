@@ -31,7 +31,7 @@ Follow the [installation instructions][installation-linux] to install getML on t
 [](){#remote-access-start}
 ### Starting Engine and Monitor
 
-Start getML using the command-line interface. It is a good idea to disown or nohup the process, so that it keeps running when you close the SSH terminal or if the connection breaks down temporarily.
+Start getML using the command-line interface. It is a good idea to `disown` or `nohup` the process, so that it keeps running when you close the SSH terminal or if the connection breaks down temporarily.
 
 ```bash
 ./getML > run.log &
@@ -55,7 +55,7 @@ This collects all traffic on port 1709 of the remote host—the HTTP port of the
 
 ### Running Analyses Using the Python API
 
-When you start a Python script, you should also disown or nohup it, as explained in the previous section.
+When you start a Python script, you should also `disown` or `nohup` it, as explained in the previous section.
 
 If you want to know whether the Python process is still running, use `ps -aux`.
 ```bash
@@ -113,9 +113,21 @@ When accessing the getML monitor via HTTPS (even locally on [https://localhost:1
 
 ### Adding an Exception in Browsers
 
-In Firefox, you first have to click on 'Advanced', followed by 'Accept the Risk and Continue'. 
+In Firefox, you first have to click on 'Advanced'
 
-In Chrome, you first have to click on 'Advanced', followed by 'Proceed to localhost (unsafe)'.
+![Remote Access](../../images/screenshot_login_https_firefox_1.png)
+
+, followed by 'Accept the Risk and Continue'. 
+
+![Remote Access](../../images/screenshot_login_https_firefox_2.png)
+
+In Chrome, you first have to click on 'Advanced',
+
+![Remote Access](../../images/screenshot_login_https_chrome_1.png)
+
+followed by 'Proceed to localhost (unsafe)'.
+
+![Remote Access](../../images/screenshot_login_https_chrome_2.png)
 
 ### Opening the HTTPS Port
 
