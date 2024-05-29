@@ -1,1 +1,1 @@
-::: getml.feature_learning.fastprop
+::: getml.feature_learning.FastProp

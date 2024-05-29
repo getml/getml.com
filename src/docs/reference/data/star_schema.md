@@ -1,1 +1,1 @@
-::: getml.data.star_schema
+::: getml.data.StarSchema
