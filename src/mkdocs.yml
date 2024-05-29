@@ -94,6 +94,7 @@ plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
+  - table-reader
   - mkdocstrings:
       handlers:
         python:
