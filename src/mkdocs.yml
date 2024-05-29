@@ -238,8 +238,11 @@ nav:
       - reference/datasets/index.md
     - getml.engine:
       - reference/engine/index.md
-    - hyperopt: 
+    - getml.hyperopt: 
       - reference/hyperopt/index.md
+      - Gaussian Hyperparameter: reference/hyperopt/gaussian.md
+      - Latin Hypercube: reference/hyperopt/latin.md
+      - Random: reference/hyperopt/random.md
     - getml.feature_learning:
       - reference/feature_learning/index.md
       - FastProp: reference/feature_learning/fastprop.md
