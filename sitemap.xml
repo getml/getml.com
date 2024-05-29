@@ -6,6 +6,61 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/home/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/how_to_use_this_guide/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/getting_started/getting_started/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/installation/installation/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/installation/linux/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/installation/mac/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/installation/remote_access/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/installation/windows/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/home/support/support/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/integration/fastapi/fastapi/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/reference/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/reference/SUMMARY/</loc>
          <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
@@ -742,6 +797,11 @@
     </url>
     <url>
          <loc>https://dev.getml.com/reference/utilities/templates/__init__/</loc>
+         <lastmod>2024-05-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/user_guide/</loc>
          <lastmod>2024-05-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
