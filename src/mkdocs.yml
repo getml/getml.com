@@ -234,9 +234,8 @@ nav:
     - getml.database:
       - reference/database/index.md
       - DEBUG: reference/database/DEBUG.md
-    - datasets:
+    - getml.datasets:
       - reference/datasets/index.md
-      - base: reference/datasets/base.md
     - engine:
       - reference/engine/index.md
     - hyperopt: 
