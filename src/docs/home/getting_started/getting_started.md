@@ -38,8 +38,7 @@ Before you start the tutorial, here are the highlights of the open-source getML 
 
 ## Starting a new project
 
-After you’ve successfully installed getML ([enterprise][installation] or [community]
-(https://github.com/getml/getml-community#installation)), you can begin by executing the following in a jupyter-notebook:
+After you’ve successfully installed getML ([enterprise][installation] or [community](https://github.com/getml/getml-community#installation)), you can begin by executing the following in a jupyter-notebook:
 
 ```python
 import getml

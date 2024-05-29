@@ -14,7 +14,8 @@ and click the download button. This will download a ZIP archive containing every
 Your system should meet the following requirements to successfully install getML for Docker:
 
 - [Docker](https://www.docker.com/). If you are on Linux, make sure that you can run docker without root rights/sudo.
-- [Git Bash](https://gitforwindows.org/). This is pre-installed on Linux and macOS. For Windows users, we recommend.
+- [Git Bash](https://gitforwindows.org/). Only for Windows users. (On Linux and
+  macOS, it is pre-installed)
 - [OpenSSL](https://www.openssl.org/). This should be pre-installed on most systems as well.
 
 ## Setup and Run getML for Docker
