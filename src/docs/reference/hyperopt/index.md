@@ -4,7 +4,6 @@ status: new
 
 ::: getml.hyperopt
     options:
-      inherited_members: true
       members:
         - list_hyperopts
         - load_hyperopt
