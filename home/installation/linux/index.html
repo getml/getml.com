@@ -3165,7 +3165,6 @@ To download the getML suite, go to </p>
 <p>Python 3.7 or above must be installed on your machine. Furthermore, <code>numpy</code> and <code>pandas</code> are required dependencies for the getML Python API.</p>
 </li>
 </ul>
-<hr />
 <h3 id="install-and-run-the-getml-engine-and-monitor">Install and run the getML engine and monitor</h3>
 <p>The getML engine is the C++ backend of getML. It comes with a graphical user interface - the getML monitor - that runs in your browser. To install these components, do the following:</p>
 <ol>
@@ -3192,10 +3191,11 @@ To download the getML suite, go to </p>
 </code></pre></div>
 <h3 id="install-the-getml-cli">Install the getML CLI</h3>
 <p>getML comes with a <a href="#api_documentation_cli">command-line interface</a> (CLI) that lets you configure the most important parameters on startup. The CLI is a standalone Go-binary located in the downloaded bundle.</p>
-<blockquote>
-<p><strong>Note</strong>:</p>
-<p>Before you can use the CLI, you have to follow steps 1 and 2 of the installation instructions above.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before you can use the CLI, you have to follow steps 1 and 2 of the installation 
+instructions above.</p>
+</div>
 <p>After deflating the tarball, you should find the <code>getML</code> binary in the resulting folder.</p>
 <p>After you have started getML for the first time, you can move the <code>getML</code> binary anywhere you want. We recommend moving the <code>getML</code> binary to a location included in the <code>PATH</code> environment variable, such as <code>~/.local/bin</code>. You can inspect the content of the aforementioned variable in a shell using:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
