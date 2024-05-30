@@ -253,8 +253,11 @@ nav:
       - aggregations: reference/feature_learning/aggregations.md
       - loss_functions: reference/feature_learning/loss_functions.md
       - DEBUG: reference/feature_learning/DEBUG.md
-    - project:
+    - getml.project:
       - reference/project/index.md
+      - DataFrames: reference/project/data_frames.md
+      - Hyperopts: reference/project/hyperopts.md
+      - Pipelines: reference/project/pipelines.md
     - preprocessors:
       - reference/preprocessors/index.md
     - pipeline:
