@@ -264,4 +264,5 @@ nav:
     - Dataframe: reference/data/data_frame.md
     - Pipeline: reference/pipeline/pipeline.md
     # - set_project: reference/engine/set_project.md
+    - Command Line Interface: reference/cli.md
 
