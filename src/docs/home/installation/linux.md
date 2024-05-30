@@ -48,7 +48,8 @@ pip install getml
 
 ### Install the getML CLI
 
-getML comes with a [command-line interface](#api_documentation_cli) (CLI) that lets you configure the most important parameters on startup. The CLI is a standalone Go-binary located in the downloaded bundle.
+getML comes with a [command-line interface][cli] (CLI) that lets you configure the most 
+important parameters on startup. The CLI is a standalone Go-binary located in the downloaded bundle.
 
 > __Note__:
 >   
