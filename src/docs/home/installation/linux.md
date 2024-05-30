@@ -18,8 +18,6 @@ Your Linux should meet at least the following requirements to successfully insta
 
 - Python 3.7 or above must be installed on your machine. Furthermore, `numpy` and `pandas` are required dependencies for the getML Python API.
 
-___
-
 ### Install and run the getML engine and monitor
 
 The getML engine is the C++ backend of getML. It comes with a graphical user interface - the getML monitor - that runs in your browser. To install these components, do the following:
@@ -50,9 +48,9 @@ pip install getml
 
 getML comes with a [command-line interface](#api_documentation_cli) (CLI) that lets you configure the most important parameters on startup. The CLI is a standalone Go-binary located in the downloaded bundle.
 
-> __Note__:
->   
->   Before you can use the CLI, you have to follow steps 1 and 2 of the installation instructions above.
+!!! note
+    Before you can use the CLI, you have to follow steps 1 and 2 of the installation 
+    instructions above.
 
 After deflating the tarball, you should find the `getML` binary in the resulting folder.
 
