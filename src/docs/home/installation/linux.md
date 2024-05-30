@@ -53,8 +53,8 @@ important parameters on startup. The CLI is a standalone Go-binary located in th
 
 !!! note 
 
-      Before you can use the CLI, you have to follow steps 1 and 2 of the installation instructions above.
-
+    Before you can use the CLI, you have to follow steps 1 and 2 of the installation 
+    instructions above.
 After deflating the tarball, you should find the `getML` binary in the resulting folder.
 
 After you have started getML for the first time, you can move the `getML` binary anywhere you want. We recommend moving the `getML` binary to a location included in the `PATH` environment variable, such as `~/.local/bin`. You can inspect the content of the aforementioned variable in a shell using:
