@@ -15,8 +15,6 @@ Your Mac should meet at least the following requirements to successfully install
 * macOS must be version 10.14 or newer. You can check your macOS version by running the following command in a terminal: `sw_vers`
 * Python 3.7 or above must be installed on your machine. Furthermore, `numpy` and `pandas` are required dependencies for the getML Python API.
 
-___
-
 ### Install and run the getML engine and monitor
 
 The getML engine is the C++ backend of getML. It comes with a graphical user interface - the getML monitor - that runs in your browser. To install these components:
