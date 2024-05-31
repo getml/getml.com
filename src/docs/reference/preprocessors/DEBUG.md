@@ -1,3 +1,9 @@
+---
+status: deprecated
+search:
+  exclude: true
+---
+
 ::: getml.preprocessors
     options:
       show_submodules: true

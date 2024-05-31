@@ -1,3 +1,9 @@
+---
+status: deprecated
+search:
+  exclude: true
+---
+
 ::: getml.pipeline
     options:
       show_submodules: true
