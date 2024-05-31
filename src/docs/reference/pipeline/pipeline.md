@@ -1,1 +1,1 @@
-::: getml.pipeline.pipeline
+::: getml.pipeline.Pipeline
