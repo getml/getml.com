@@ -29,7 +29,7 @@ theme:
     # - navigation.instant.preview # disable! enable on page basis
     - navigation.tracking
     - navigation.tabs
-    - navigation.expand
+    # - navigation.expand
     - navigation.path
     - navigation.indexes
     - navigation.top
@@ -102,7 +102,7 @@ plugins:
             - https://docs.python.org/3/objects.inv
           options:
             show_root_toc_entry: false
-            show_source: false
+            show_source: true
             members_order: source
             show_signature: true
             separate_signature: true
@@ -258,15 +258,35 @@ nav:
       - DataFrames: reference/project/data_frames.md
       - Hyperopts: reference/project/hyperopts.md
       - Pipelines: reference/project/pipelines.md
-    - preprocessors:
+    - getml.preprocessors:
       - reference/preprocessors/index.md
-    - pipeline:
+      - DEBUG: reference/preprocessors/DEBUG.md
+    - getml.pipeline:
       - reference/pipeline/index.md
-    - predictors:
+      - Pipeline: reference/pipeline/pipeline.md
+      - Columns: reference/pipeline/columns.md
+      # - Column: reference/pipeline/column.md
+      - Tables: reference/pipeline/tables.md
+      # - Table: reference/pipeline/table.md
+      - Features: reference/pipeline/features.md
+      # - Feature: reference/pipeline/feature.md
+      - Plots: reference/pipeline/plots.md
+      - Scores: reference/pipeline/scores_container.md
+      - Score: reference/pipeline/score.md
+      - SQLCode: reference/pipeline/sql_code.md
+      # - SQLString: reference/pipeline/sql_string.md
+      # - metadata: reference/pipeline/metadata.md
+      - metrics: reference/pipeline/metrics.md
+      - dialect: reference/pipeline/dialect.md
+      - DEBUG: reference/pipeline/DEBUG.md
+    - getml.predictors:
       - reference/predictors/index.md
-    - sqlite3:
+      - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
+      - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
+      - LinearRegression: reference/predictors/linear_regression.md
+      - LogisticRegression: reference/predictors/logistic_regression.md
+      - XGBoostClassifier: reference/predictors/xgboost_classifier.md
+      - XGBoostRegressor: reference/predictors/xgboost_regressor.md
+    - getml.sqlite3:
       - reference/sqlite3/index.md
-    - Dataframe: reference/data/data_frame.md
-    - Pipeline: reference/pipeline/pipeline.md
-    # - set_project: reference/engine/set_project.md
 
