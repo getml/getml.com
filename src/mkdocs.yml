@@ -197,12 +197,13 @@ nav:
        - Support: home/support/support.md
 
   - User Guide:
+      - user_guide/index.md
       - getML suite:
         - user_guide/getml_suite/index.md
         - Engine: user_guide/getml_suite/engine.md
         - Monitor: user_guide/getml_suite/monitor.md
         - Python API: user_guide/getml_suite/python_api.md
-      - Managing projects: user_guide/managing_projects/managing_projects.md
+      - Managing projects: user_guide/project_management/project_management.md
       - Importing data: 
         - user_guide/importing_data/index.md
         - CSV interface: user_guide/importing_data/csv_interface.md

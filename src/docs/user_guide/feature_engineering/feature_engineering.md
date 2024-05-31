@@ -130,7 +130,7 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [aggregations](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
+You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
 
 [](){#feature-engineering-algorithms-multirel}
 ### Multirel

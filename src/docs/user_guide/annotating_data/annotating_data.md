@@ -202,7 +202,7 @@ df
 [](){#annotating-data-target}
 ## Target
 
-The associated [columns](getml/data/columns) contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data-model-tables]).
+The associated [`columns`](getml/data/columns) contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data-model-tables]).
 
 The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be `NULL`.
 [](){#annotating-data-numerical}

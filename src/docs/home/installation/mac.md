@@ -20,10 +20,10 @@ Your Mac should meet at least the following requirements to successfully install
 The getML engine is the C++ backend of getML. It comes with a graphical user interface - the getML monitor - that runs in your browser. To install these components:
 
 1. Double-click the `dmg`-file to open the installer, then drag the getML Icon into the Applications folder.
-   ![Installation Process on macOS](install_mac.png)
+   ![Installation Process on macOS](../../images/install_mac.png)
 
 2. Double-click **getML.app** in the Applications folder to start getML. A security feature in macOS will ask you to confirm that you want to open getML when launching it for the first time. After confirmation, the getML icon in your status bar indicates that the getML engine is running.
-   ![Running getML on macOS](install_mac2.png)
+   ![Running getML on macOS](../../images/install_mac2.png)
 
 3. Open a browser and visit [http://localhost:1709/](http://localhost:1709/) (if opening the getML.app did not point you there automatically). 
 
@@ -47,7 +47,8 @@ python -c 'import getml'
 
 ### Install the getML-CLI
 
-getML comes with a [command-line interface](#api_documentation_cli) (CLI) that lets you configure the most important parameters on startup. The CLI is a standalone Go-binary. The CLI is optional. If you are fine with launching getML from your Launchpad, you can stop reading.
+getML comes with a [command-line interface][cli] (CLI) that lets you configure the most 
+important parameters on startup. The CLI is a standalone Go-binary. The CLI is optional. If you are fine with launching getML from your Launchpad, you can stop reading.
 
 Before you can use the CLI, you have to have launched getML from your Launchpad at least once. This is because when you launch getML for the first time, it creates a hidden folder in your home directory (called `.getML`) into which it copies the binaries and all necessary resources. Said hidden folder is then accessed by the CLI. 
 
