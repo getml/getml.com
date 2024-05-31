@@ -297,7 +297,7 @@ nav:
     - getml.sqlite3:
       - reference/sqlite3/index.md
 
-  - Command Line Interface: reference/cli.md
+    - CLI: reference/cli.md
 
   - Integration:
       FastAPI: integration/fastapi/fastapi.md
