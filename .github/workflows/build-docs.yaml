@@ -4,18 +4,15 @@ on:
   push:
     branches:
       - main
+      - develop
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: src
-
     steps:
-      - name: Checkout
+      - name: Checkout getml-docs repo
         uses: actions/checkout@v4
         with:
           ref: develop
@@ -25,11 +22,43 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install dependencies
-        run: pip install mkdocs mkdocstrings mkdocs-material
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITLAB_MONOREPO_SSH_KEY }}" > ~/.ssh/id_ed25519_gitlab_monorepo
+          echo "${{ secrets.GH_CODE17DEV_SSH_KEY }}" > ~/.ssh/id_ed25519_github_code17dev
+          chmod 600 ~/.ssh/id_ed25519_gitlab_monorepo
+          chmod 600 ~/.ssh/id_ed25519_github_code17dev
           
+          # Set up SSH config
+          echo "Host gitlab.com" >> ~/.ssh/config
+          echo "  HostName gitlab.com" >> ~/.ssh/config
+          echo "  User git" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_ed25519_gitlab_monorepo" >> ~/.ssh/config
+
+          echo "Host code17devgit" >> ~/.ssh/config
+          echo "  HostName github.com" >> ~/.ssh/config
+          echo "  User git" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_ed25519_github_code17dev" >> ~/.ssh/config
+          
+          # Add GitLab and GitHub to known_hosts
+          ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Install Hatch & create environment
+        run: |
+          pip install hatch 
+          hatch env create
+
+      - name: Clone monorepo & install getML
+        run: |
+          git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
+          hatch run pip install monorepo/src/python-api
+
       - name: Build documentation
-        run: mkdocs build
+        run: |
+          cd src
+          hatch run mkdocs build 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
