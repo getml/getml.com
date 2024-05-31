@@ -1,1 +1,1 @@
-::: getml.predictors.xgboost_regressor
+::: getml.predictors.XGBoostRegressor
