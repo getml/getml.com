@@ -65,9 +65,8 @@ It lists all running processes and filters only those containing the letters 'py
 
 Running an interactive session using `IPython` is also possible but should not be done directly (since you will lose all progress the moment you get disconnected). Instead, we recommend using third-party helper programs, like [GNU screen](https://www.gnu.org/software/screen/) or [tmux](https://github.com/tmux/tmux/wiki).
 
-> __Note:__
-> 
-> It is usually NOT a good idea to forward the port of the getML engine to your local computer and then run the Python API locally. If you decide to do so anyway, make sure to always use absolute paths for data loading.
+!!! note 
+    It is usually NOT a good idea to forward the port of the getML engine to your local computer and then run the Python API locally. If you decide to do so anyway, make sure to always use absolute paths for data loading.
 
 ### Retrieving Results
 
@@ -113,11 +112,11 @@ When accessing the getML monitor via HTTPS (even locally on [https://localhost:1
 
 ### Adding an Exception in Browsers
 
-In Firefox, you first have to click on 'Advanced'
+In Firefox, you first have to click on 'Advanced',
 
 ![Remote Access](../../images/screenshot_login_https_firefox_1.png)
 
-, followed by 'Accept the Risk and Continue'. 
+followed by 'Accept the Risk and Continue'. 
 
 ![Remote Access](../../images/screenshot_login_https_firefox_2.png)
 

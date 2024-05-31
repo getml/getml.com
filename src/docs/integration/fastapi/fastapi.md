@@ -7,10 +7,11 @@ The following shows an example how easy pipelines in a project can be made acces
 
 It is assumed that you have some basic knowledge of FastAPI and the getML framework.
 
-Helpful resources to get started:  
-- [FastAPI get started](https://fastapi.tiangolo.com/tutorial/first-steps/)  
-- [getML example notebooks](https://github.com/getml/getml-demo)  
-- [getML documentation][getting-started]  
+Helpful resources to get started:
+
+[FastAPI get started](https://fastapi.tiangolo.com/tutorial/first-steps/)  
+[getML example notebooks](https://github.com/getml/getml-demo)  
+[getML documentation][getting-started]  
 
 This integration example requires at least v1.4.0 of the [getml package](https://pypi.org/project/getml/) and at least [Python 3.8](https://www.python.org/downloads/).
 
