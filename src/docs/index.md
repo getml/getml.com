@@ -122,7 +122,7 @@ ____
 
 If you want to get started with getML right away, we recommend to follow the
 [installation instructions][installation] and then go through the
-[getting started guide][getting-started. 
+[getting started guide][getting-started]. 
 
 If you are looking for more detailed information, other sections of this
 documentation are more suitable. There are three major parts: 
