@@ -1,7 +1,3 @@
----
-status: new
----
-
 ::: getml.datasets
     options:
       show_submodules: true

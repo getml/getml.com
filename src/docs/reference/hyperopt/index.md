@@ -1,7 +1,3 @@
----
-status: new
----
-
 ::: getml.hyperopt
     options:
       members:
