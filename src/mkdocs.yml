@@ -183,7 +183,19 @@ extra_css:
   - assets/css/custom.css
 
 nav:
-  - Home: index.md
+  - index.md
+  - Home:
+       - home/index.md
+       - Installation:
+          - home/installation/index.md
+          - macOS: home/installation/mac.md
+          - Windows/Docker: home/installation/windows.md
+          - Linux: home/installation/linux.md
+          - Remote access: home/installation/remote_access.md
+       - How to use this Guide: home/how_to_use_this_guide.md
+       - Getting Started: home/getting_started/getting_started.md
+       - Support: home/support/support.md
+
   - User Guide:
       - getML suite:
         - user_guide/getml_suite/index.md
@@ -266,3 +278,6 @@ nav:
     # - set_project: reference/engine/set_project.md
     - Command Line Interface: reference/cli.md
 
+  - Integration:
+      FastAPI: integration/fastapi/fastapi.md
+      About: integration/about/about.md
