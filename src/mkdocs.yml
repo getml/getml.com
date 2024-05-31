@@ -185,8 +185,9 @@ extra_css:
 nav:
   - index.md
   - Home:
+       - home/index.md
        - Installation:
-          - home/installation/installation.md
+          - home/installation/index.md
           - macOS: home/installation/mac.md
           - Windows/Docker: home/installation/windows.md
           - Linux: home/installation/linux.md
