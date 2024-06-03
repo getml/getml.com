@@ -9,7 +9,7 @@ your data in data frame objects in the getML engine and will be ready to
 !!! note
 
     If you have imported your data into the engine before and want to restore it,
-    refer to [Lifecycle of DataFrame][lifecycle-dataframe]
+    refer to [Lifecycle of a DataFrame][lifecycle-dataframe]
 
 [](){#importing-data-unified-interface}
 ## Unified import interface

@@ -14,7 +14,8 @@ When defining the data model, we distinguish between a population table and one 
 [](){#data-model-population-table}
 ### The population table
 
-The population table is the main table of the analysis. It defines the statistical population of your machine learning problem and contains the [target][annotating-data-target]variable(s), which we want to predict. Furthermore, the table usually also contains one or more columns with the role [join_key][annotating-data-join-keys]. These are keys used to establish a relationship – also called [joins][data-model-joins] – with one or more peripheral tables.
+The population table is the main table of the analysis. It defines the statistical 
+population of your machine learning problem and contains the [target][annotating-data-target] variable(s), which we want to predict. Furthermore, the table usually also contains one or more columns with the role [join_key][annotating-data-join-keys]. These are keys used to establish a relationship – also called [joins][data-model-joins] – with one or more peripheral tables.
 
 The example below contains the population table of a customer churn analysis. The target variable is `churn` – whether a person stops using the services and products of a company. It also contains the information whether or not a given customer has churned after a certain reference date. The join key `customer_id` is used to establish relations with a [peripheral table][data-model-peripheral-tables]. Additionally, the date the customer joined the company is contained in the column `date_joined`, which we have assigned the role [time_stamp][annotating-data-time-stamp].
 
@@ -43,7 +44,7 @@ More information on how to construct placeholders and build a data model can be 
 
 Joins are used to establish relationships between placeholders. To join two placeholders, the data frames used to derive them should both have at least one [join_key][annotating-data-join-keys]. The joining itself is done using the [`join()`](getml/data/Placeholder/join) method.
 
-All columns corresponding to time stamps have to be given the role [join_key][annotating-data-time-stamp], and one of them in both the population and peripheral table is usually passed to the [`join()`](getml/data/Placeholder/join) method. This approach ensures that no information from the future is considered during training by including only those rows of the peripheral table in the join operation for which the time stamp of the corresponding row in the population table is either the same or more recent.
+All columns corresponding to time stamps have to be given the role [time_stamp][annotating-data-time-stamp], and one of them in both the population and peripheral table is usually passed to the [`join()`](getml/data/Placeholder/join) method. This approach ensures that no information from the future is considered during training by including only those rows of the peripheral table in the join operation for which the time stamp of the corresponding row in the population table is either the same or more recent.
 
 
 [](){#data-model-data-schemata}

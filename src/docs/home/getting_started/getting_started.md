@@ -163,17 +163,16 @@ This is where getML comes in. It finds the correct features for you - automatica
 Most machine learning problems on relational data can be expressed as a simple [star schema](https://en.wikipedia.org/wiki/Star_schema). This example is no exception, so we will use the predefined [`StarSchema`][getml.data.StarSchema] class.
 
 ```python
->>> split = getml.data.split.random(train=0.8, test=0.2)
+split = getml.data.split.random(train=0.8, test=0.2)
 
->>> star_schema = getml.data.StarSchema(
-...     population=population_table, alias="population", split=split)
+star_schema = getml.data.StarSchema(
+    population=population_table, alias="population", split=split)
 
->>> star_schema.join(peripheral_table,
-...                  alias="peripheral",
-...                  on="join_key",
-...                  time_stamps="time_stamp",
-... )
-
+star_schema.join(peripheral_table,
+                 alias="peripheral",
+                 on="join_key",
+                 time_stamps="time_stamp",
+)
 ```
 
 ## Building a pipeline
@@ -384,7 +383,8 @@ This very much resembles the ad hoc definition we tried in the beginning. The co
 
 This guide has shown you the very basics of getML. Starting with raw data, you have completed a full project including feature engineering and linear regression using an automated end-to-end pipeline. The most tedious part of this process - finding the right aggregations and subconditions to construct a feature table from the relational data model - was also included in this pipeline.
 
-But there’s more! Related articles show application of getML on real world data sets.
+But there’s more! [Related articles](https://www.getml.com/blog) show application 
+of getML on real world data sets.
 
 Also, don’t hesitate to [contact us](https://www.getml.com/contact) with your feedback.
 

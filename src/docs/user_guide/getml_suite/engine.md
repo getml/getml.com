@@ -8,7 +8,9 @@ The getML engine is a standalone program written in C++ that does the actual wor
 [](){#engine-start-engine}
 ## Starting the engine
 
-The engine can be started using the dedicated launcher icon or by using the getML command line interface (CLI). For more information, check out the [installation instructions](#installation) for your operating system.
+The engine can be started using the dedicated launcher icon or by using the getML 
+command line interface (CLI). For more information, check out the [installation 
+instructions][installation] for your operating system.
 
 ## Shutting down the engine
 
@@ -16,7 +18,9 @@ There are several ways to shut down the getML engine:
 
 - Click the '⏻ Shutdown' tab in the sidebar of the monitor
 - Press `Ctrl-C` (if started via the command line)
-- Run the getML command-line interface (CLI) (see [installation](#installation)) using the `-stop` option
+- Run the getML command-line interface (CLI) (see [installation][installation]) using 
+  the `-stop` 
+  option
 
 ## Logging
 
