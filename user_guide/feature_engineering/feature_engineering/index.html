@@ -348,16 +348,8 @@
   
     
     
-      
-  
-  
-    
-  
-  
-    
-    
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../getml_suite/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -366,9 +358,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -846,6 +835,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -881,8 +874,10 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -895,8 +890,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
@@ -908,6 +909,8 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -940,7 +943,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           
@@ -962,14 +965,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1077,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../managing_projects/managing_projects.md" class="md-nav__link">
+      <a href="../../project_management/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1143,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
           
@@ -1162,14 +1165,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3851,12 +3854,8 @@
   
     
     
-      
-  
-    
-    
       <li class="md-path__item">
-        <a href="../../getml_suite/" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
     User Guide
@@ -3864,9 +3863,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -3995,7 +3991,7 @@ will be engineered automatically as well. Again, no input from the user is requi
 <span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
 <span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
 </code></pre></div>
-You may notice that such a feature looks pretty similar to the <a class="autorefs autorefs-internal" href="#feature-engineering-multirel-feature">Multirel feature</a> below. And indeed, FastProp shares some of its <a href="getml/feature_learning/aggregations">aggregations</a> with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the <code>WHERE</code> statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with <a class="autorefs autorefs-internal" href="../../preprocessing/preprocessing/#mappings">mappings</a>.</p>
+You may notice that such a feature looks pretty similar to the <a class="autorefs autorefs-internal" href="#feature-engineering-multirel-feature">Multirel feature</a> below. And indeed, FastProp shares some of its <a href="getml/feature_learning/aggregations"><code>aggregations</code></a> with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the <code>WHERE</code> statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with <a class="autorefs autorefs-internal" href="../../preprocessing/preprocessing/#mappings">mappings</a>.</p>
 <p><a href="" id="feature-engineering-algorithms-multirel"></a></p>
 <h3 id="multirel">Multirel</h3>
 <p>Simply speaking, <a href="getml/feature_learning/Multirel"><code>Multirel</code></a> is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.</p>

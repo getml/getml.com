@@ -348,14 +348,8 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../user_guide/getml_suite/" class="md-tabs__link">
+        <a href="../../../user_guide/" class="md-tabs__link">
           
   
     
@@ -364,9 +358,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -1023,6 +1014,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1057,8 +1052,10 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../user_guide/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -1071,8 +1068,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -1084,6 +1087,8 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1116,7 +1121,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           
@@ -1138,14 +1143,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1253,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/managing_projects/managing_projects.md" class="md-nav__link">
+      <a href="../../../user_guide/project_management/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,7 +1321,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
           
@@ -1338,14 +1343,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -4134,16 +4139,16 @@ Now, when you check the current projects:</p>
 <p>This is where getML comes in. It finds the correct features for you - automatically. You do not need to manually merge and aggregate tables in order to get started with a data science project. In addition, getML uses the derived features in a classical AutoML setting to easily make predictions with established and well-performing algorithms. This means getML provides an end-to-end solution starting from the relational data to a trained ML-model. How this is done via the getML Python API is demonstrated in the following.</p>
 <h2 id="defining-the-data-model">Defining the data model</h2>
 <p>Most machine learning problems on relational data can be expressed as a simple <a href="https://en.wikipedia.org/wiki/Star_schema">star schema</a>. This example is no exception, so we will use the predefined <a class="autorefs autorefs-internal" href="../../../reference/data/star_schema/#getml.data.StarSchema"><code>StarSchema</code></a> class.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">train</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">train</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">star_schema</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">StarSchema</span><span class="p">(</span>
-<span class="o">...</span>     <span class="n">population</span><span class="o">=</span><span class="n">population_table</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">)</span>
+<span class="n">star_schema</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">StarSchema</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">population_table</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">star_schema</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">peripheral_table</span><span class="p">,</span>
-<span class="o">...</span>                  <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;peripheral&quot;</span><span class="p">,</span>
-<span class="o">...</span>                  <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
-<span class="o">...</span>                  <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;time_stamp&quot;</span><span class="p">,</span>
-<span class="o">...</span> <span class="p">)</span>
+<span class="n">star_schema</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">peripheral_table</span><span class="p">,</span>
+                 <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;peripheral&quot;</span><span class="p">,</span>
+                 <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
+                 <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;time_stamp&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
 <h2 id="building-a-pipeline">Building a pipeline</h2>
 <p>Now we can define the feature learner. 
@@ -4314,7 +4319,8 @@ getML bundles the sequential operations of a data science project
 <p>This very much resembles the ad hoc definition we tried in the beginning. The correct aggregation to use on this data set is <code>Count</code>. getML extracted this definition completely autonomously.</p>
 <h2 id="next-steps">Next steps</h2>
 <p>This guide has shown you the very basics of getML. Starting with raw data, you have completed a full project including feature engineering and linear regression using an automated end-to-end pipeline. The most tedious part of this process - finding the right aggregations and subconditions to construct a feature table from the relational data model - was also included in this pipeline.</p>
-<p>But there’s more! Related articles show application of getML on real world data sets.</p>
+<p>But there’s more! <a href="https://www.getml.com/blog">Related articles</a> show application 
+of getML on real world data sets.</p>
 <p>Also, don’t hesitate to <a href="https://www.getml.com/contact">contact us</a> with your feedback.</p>
 
 <!-- Source file information -->

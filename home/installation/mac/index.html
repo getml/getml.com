@@ -348,14 +348,8 @@
   
     
     
-      
-  
-  
-  
-    
-    
       <li class="md-tabs__item">
-        <a href="../../../user_guide/getml_suite/" class="md-tabs__link">
+        <a href="../../../user_guide/" class="md-tabs__link">
           
   
     
@@ -364,9 +358,6 @@
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -974,6 +965,10 @@
     
       
         
+          
+        
+      
+        
       
         
       
@@ -1008,8 +1003,10 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../user_guide/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -1022,8 +1019,14 @@
   
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -1035,6 +1038,8 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1067,7 +1072,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           
@@ -1089,14 +1094,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1204,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user_guide/managing_projects/managing_projects.md" class="md-nav__link">
+      <a href="../../../user_guide/project_management/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1267,7 +1272,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
           
@@ -1289,14 +1294,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3894,11 +3899,11 @@ To download the getML suite, go to </p>
 <ol>
 <li>
 <p>Double-click the <code>dmg</code>-file to open the installer, then drag the getML Icon into the Applications folder.
-   <img alt="Installation Process on macOS" src="install_mac.png" /></p>
+   <img alt="Installation Process on macOS" src="../../../images/install_mac.png" /></p>
 </li>
 <li>
 <p>Double-click <strong>getML.app</strong> in the Applications folder to start getML. A security feature in macOS will ask you to confirm that you want to open getML when launching it for the first time. After confirmation, the getML icon in your status bar indicates that the getML engine is running.
-   <img alt="Running getML on macOS" src="install_mac2.png" /></p>
+   <img alt="Running getML on macOS" src="../../../images/install_mac2.png" /></p>
 </li>
 <li>
 <p>Open a browser and visit <a href="http://localhost:1709/">http://localhost:1709/</a> (if opening the getML.app did not point you there automatically). </p>
@@ -3914,7 +3919,8 @@ To download the getML suite, go to </p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import getml&#39;</span>
 </code></pre></div>
 <h3 id="install-the-getml-cli">Install the getML-CLI</h3>
-<p>getML comes with a <a href="#api_documentation_cli">command-line interface</a> (CLI) that lets you configure the most important parameters on startup. The CLI is a standalone Go-binary. The CLI is optional. If you are fine with launching getML from your Launchpad, you can stop reading.</p>
+<p>getML comes with a <a class="autorefs autorefs-internal" href="../../../reference/cli/#command-line-interface">command-line interface</a> (CLI) that lets you configure the most 
+important parameters on startup. The CLI is a standalone Go-binary. The CLI is optional. If you are fine with launching getML from your Launchpad, you can stop reading.</p>
 <p>Before you can use the CLI, you have to have launched getML from your Launchpad at least once. This is because when you launch getML for the first time, it creates a hidden folder in your home directory (called <code>.getML</code>) into which it copies the binaries and all necessary resources. Said hidden folder is then accessed by the CLI. </p>
 <p>After launching getML for the first time, you can find the CLI in <code>$HOME/.getML/getml-VERSION</code>.</p>
 <div class="highlight"><pre><span></span><code>./getml-cli
