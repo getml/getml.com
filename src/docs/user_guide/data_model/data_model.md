@@ -36,7 +36,7 @@ The images below represent two peripheral tables that could be used for our cust
 
 In getML, [`Placeholder`][getml.data.Placeholder]s are used to construct the [`DataModel`][getml.data.DataModel]. They are abstract representations of [`DataFrame`][getml.data.DataFrame]s or [`View`][getml.data.View]s and the relationships among each other, but do not contain any data themselves.
 
-The idea behind the placeholder concept is that they allow constructing an abstract data model without any reference to an actual data set. This data model serves as input for the [`Pipeline`][getml.data.Pipeline]. Later on, the [`feature_learning`][getml.feature_learning] algorithms can be trained and applied on any data set that follows this data model.
+The idea behind the placeholder concept is that they allow constructing an abstract data model without any reference to an actual data set. This data model serves as input for the [`Pipeline`][getml.pipeline.Pipeline]. Later on, the [`feature_learning`][getml.feature_learning] algorithms can be trained and applied on any data set that follows this data model.
 
 More information on how to construct placeholders and build a data model can be found in the API documentation for [`Placeholder`][getml.data.Placeholder] and [`DataModel`][getml.data.DataModel].
 [](){#data-model-joins}
@@ -44,7 +44,10 @@ More information on how to construct placeholders and build a data model can be 
 
 Joins are used to establish relationships between placeholders. To join two placeholders, the data frames used to derive them should both have at least one [join_key][annotating-data-join-keys]. The joining itself is done using the [`join()`][getml.data.Placeholder.join] method.
 
-All columns corresponding to time stamps have to be given the role [time_stamp][annotating-data-time-stamp], and one of them in both the population and peripheral table is usually passed to the [`join()`](getml/data/Placeholder/join) method. This approach ensures that no information from the future is considered during training by including only those rows of the peripheral table in the join operation for which the time stamp of the corresponding row in the population table is either the same or more recent.
+All columns corresponding to time stamps have to be given the role [time_stamp]
+[annotating-data-time-stamp], and one of them in both the population and peripheral 
+table is usually passed to the [`join()`][getml.data.Placeholder.join] method. This 
+approach ensures that no information from the future is considered during training by including only those rows of the peripheral table in the join operation for which the time stamp of the corresponding row in the population table is either the same or more recent.
 
 
 [](){#data-model-data-schemata}
