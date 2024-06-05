@@ -23,7 +23,10 @@ If you are looking for a pure Python, 100% open-source way to productionize getM
 
 ## HTTP Endpoints
 
-As soon as you have trained a pipeline, whitelisted it for external access using its [`deploy`][getml.pipeline.Pipeline.deploy] method, and configured the getML monitor for [remote access](#remote_access), you can transform new data into features or make predictions on them using these endpoints:
+As soon as you have trained a pipeline, whitelisted it for external access using its 
+[`deploy`][getml.pipeline.Pipeline.deploy] method, and configured the getML monitor 
+for [remote access][remote-access], you can transform new data into 
+features or make predictions on them using these endpoints:
 
 - [Transform endpoint: `http://localhost:1709/transform/PIPELINE_NAME`][deployment-transform]
 - [Predict endpoint: `http://localhost:1709/predict/PIPELINE_NAME`][deployment-predict]

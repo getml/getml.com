@@ -1,1 +1,0 @@
-::: getml.database.get_colnames

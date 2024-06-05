@@ -1,1 +1,0 @@
-::: getml.utilities.formatting.column_formatter

@@ -1,21 +1,180 @@
-site_name: GetML Documentation
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
+# Project information
+site_name: GetML Developer Portal
+site_url: https://dev.getml.com/
+site_author: Code17 GmbH
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
+repo_name: getml
+# repo_url: https://github.com/getml/getml-community
+
+# Copyright
+copyright: Copyright &copy; 2017 - 2024 Code17 GmbH
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/brand/getml-light.svg
+  logo_dark_mode: assets/brand/getml-dark.svg
+  favicon: assets/brand/logo-color.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.instant.preview # disable! enable on page basis
+    - navigation.tracking
+    - navigation.tabs
+    # - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - announce.dismiss
+    #
+    # - announce.dismiss
+    # - content.action.edit
+    # - content.action.view
+    # - content.code.annotate
+    # - content.code.copy
+    # # - content.code.select
+    # # - content.footnote.tooltips
+    # # - content.tabs.link
+    # - content.tooltips
+    # # - header.autohide
+    # # - navigation.expand
+    # - navigation.footer
+    # - navigation.indexes
+    # # - navigation.instant
+    # # - navigation.instant.prefetch
+    # # - navigation.instant.progress
+    # # - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # # - navigation.tabs.sticky
+    # - navigation.top
+    # - navigation.tracking
+    # - search.highlight
+    # - search.share
+    # - search.suggest
+    # - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-5
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-2
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-6
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+# Plugins
 plugins:
-  - search
+  # - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
+  - table-reader
   - mkdocstrings:
       handlers:
         python:
           import:
             - https://docs.python.org/3/objects.inv
+          options:
+            show_root_toc_entry: false
+            show_source: true
+            members_order: source
+            show_signature: true
+            separate_signature: true
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            show_signature_annotations: true
+            signature_crossrefs: true # mkdocstring insider
+            show_submodules: false
+            show_symbol_type_heading: false
+            show_symbol_type_toc: true # mkdocstring insider
+            line_length: 60 # not working
+            modernize_annotations: true # mkdocstring  insider
+            ignore_init_summary: true
+            show_root_heading: true
+            heading_level: 1
+            # unwrap_annotated: false
+            filters: ["!^_"]
+            docstring_options:
+              ignore_init_summary: true
+  - tags
+  # - meta
 
+# Additional configuration
+extra:
+  generator: false
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/getml
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/getml/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@code17-gmbh
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/code17-gmbh
 
+# Extensions
 markdown_extensions:
+  - abbr
+  - md_in_html
   - attr_list
   - admonition
+  - footnotes
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.superfences
   - pymdownx.arithmatex:
-        generic: true
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - material.extensions.preview:
+      #     sources:
+      #       include:
+      #         - ...
+      #       exclude:
+      #         - ...
+      targets:
+        include:
+          - reference/*
+          - user_guide/*
+  #       exclude:
+  #         - ...
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -23,4 +182,124 @@ extra_javascript:
 extra_css:
   - assets/css/custom.css
 
-theme: material
+nav:
+  - index.md
+  - Home:
+       - home/index.md
+       - Installation:
+          - home/installation/index.md
+          - macOS: home/installation/mac.md
+          - Windows/Docker: home/installation/windows.md
+          - Linux: home/installation/linux.md
+          - Remote access: home/installation/remote_access.md
+       - How to use this Guide: home/how_to_use_this_guide.md
+       - Getting Started: home/getting_started/getting_started.md
+       - Support: home/support/support.md
+
+  - User Guide:
+      - user_guide/index.md
+      - getML suite:
+        - user_guide/getml_suite/index.md
+        - Engine: user_guide/getml_suite/engine.md
+        - Monitor: user_guide/getml_suite/monitor.md
+        - Python API: user_guide/getml_suite/python_api.md
+      - Managing projects: user_guide/project_management/project_management.md
+      - Importing data: 
+        - user_guide/importing_data/index.md
+        - CSV interface: user_guide/importing_data/csv_interface.md
+        - Pandas interface: user_guide/importing_data/pandas_interface.md
+        - JSON interface: user_guide/importing_data/json_interface.md
+        - SQLite3 interface: user_guide/importing_data/sqlite3_interface.md
+        - MySQL interface: user_guide/importing_data/mysql_interface.md
+        - MariaDB interface: user_guide/importing_data/mariadb_interface.md
+        - PostgreSQL interface: user_guide/importing_data/postgres_interface.md
+        - Greenplum interface: user_guide/importing_data/greenplum_interface.md
+        - ODBC interface: user_guide/importing_data/odbc_interface.md
+      - Annotating data: user_guide/annotating_data/annotating_data.md
+      - Data model: user_guide/data_model/data_model.md
+      - Preprocessing: user_guide/preprocessing/preprocessing.md
+      - Feature engineering: user_guide/feature_engineering/feature_engineering.md
+      - Predicting: user_guide/predicting/predicting.md
+      - Hyperparameter optimization: user_guide/hyperopt/hyperopt.md
+      - Deployment: user_guide/deployment/deployment.md
+
+      
+  - API Reference:
+    - getml.data:
+      - reference/data/index.md
+      - Container: reference/data/container.md
+      - DataFrame: reference/data/data_frame.md
+      - DataModel: reference/data/data_model.md
+      - Placeholder: reference/data/placeholder.md
+      - Roles: reference/data/roles_obj.md
+      - StarSchema: reference/data/star_schema.md
+      - Subset: reference/data/subset.md
+      - TimeSeries: reference/data/time_series.md
+      - View: reference/data/view.md
+      - access: reference/data/access.md
+      - columns: reference/data/columns.md
+      - relationship: reference/data/relationship.md
+      - roles: reference/data/roles.md
+      - split: reference/data/split.md
+      - time: reference/data/time.md
+      - subroles: reference/data/subroles.md
+    - getml.database:
+      - reference/database/index.md
+    - getml.datasets:
+      - reference/datasets/index.md
+    - getml.engine:
+      - reference/engine/index.md
+    - getml.hyperopt: 
+      - reference/hyperopt/index.md
+      - Gaussian Hyperparameter: reference/hyperopt/gaussian.md
+      - Latin Hypercube: reference/hyperopt/latin.md
+      - Random: reference/hyperopt/random.md
+    - getml.feature_learning:
+      - reference/feature_learning/index.md
+      - FastProp: reference/feature_learning/fastprop.md
+      - Fastboost: reference/feature_learning/fastboost.md
+      - Multirel: reference/feature_learning/multirel.md
+      - Relboost: reference/feature_learning/relboost.md
+      - RelMT: reference/feature_learning/relmt.md
+      - aggregations: reference/feature_learning/aggregations.md
+      - loss_functions: reference/feature_learning/loss_functions.md
+    - getml.project:
+      - reference/project/index.md
+      - DataFrames: reference/project/data_frames.md
+      - Hyperopts: reference/project/hyperopts.md
+      - Pipelines: reference/project/pipelines.md
+    - getml.preprocessors:
+      - reference/preprocessors/index.md
+    - getml.pipeline:
+      - reference/pipeline/index.md
+      - Pipeline: reference/pipeline/pipeline.md
+      - Columns: reference/pipeline/columns.md
+      # - Column: reference/pipeline/column.md
+      - Tables: reference/pipeline/tables.md
+      # - Table: reference/pipeline/table.md
+      - Features: reference/pipeline/features.md
+      # - Feature: reference/pipeline/feature.md
+      - Plots: reference/pipeline/plots.md
+      - Scores: reference/pipeline/scores_container.md
+      - Score: reference/pipeline/score.md
+      - SQLCode: reference/pipeline/sql_code.md
+      # - SQLString: reference/pipeline/sql_string.md
+      # - metadata: reference/pipeline/metadata.md
+      - metrics: reference/pipeline/metrics.md
+      - dialect: reference/pipeline/dialect.md
+    - getml.predictors:
+      - reference/predictors/index.md
+      - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
+      - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
+      - LinearRegression: reference/predictors/linear_regression.md
+      - LogisticRegression: reference/predictors/logistic_regression.md
+      - XGBoostClassifier: reference/predictors/xgboost_classifier.md
+      - XGBoostRegressor: reference/predictors/xgboost_regressor.md
+    - getml.sqlite3:
+      - reference/sqlite3/index.md
+
+    - CLI: reference/cli.md
+
+  - Integration:
+      FastAPI: integration/fastapi/fastapi.md
+      About: integration/about/about.md

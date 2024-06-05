@@ -1,1 +1,1 @@
-::: getml.predictors.scale_gbm_regressor
+::: getml.predictors.ScaleGBMRegressor

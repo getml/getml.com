@@ -1,1 +1,1 @@
-::: getml.pipeline.column
+::: getml.pipeline.column.Column

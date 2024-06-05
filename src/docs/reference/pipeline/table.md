@@ -1,1 +1,1 @@
-::: getml.pipeline.table
+::: getml.pipeline.table.Table

@@ -1,1 +1,8 @@
-::: getml.feature_learning.fastboost
+---
+status: enterprise
+hide:
+  - toc
+---
+::: getml.feature_learning.Fastboost
+    options:
+      members: false
