@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - name: Checkout getml-docs repo
@@ -52,8 +53,10 @@ jobs:
 
       - name: Clone monorepo & install getML
         run: |
-          git clone -b getml-community git@gitlab.com:getml/all/monorepo.git
+          git clone -b BRANCH git@gitlab.com:getml/all/monorepo.git
           hatch run pip install monorepo/src/python-api
+        env:
+          BRANCH: ${{ vars.MONOREPO_DEV_BRANCH }}
 
       - name: Build documentation
         run: |
