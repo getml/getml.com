@@ -1,1 +1,1 @@
-::: getml.predictors.xgboost_classifier
+::: getml.predictors.XGBoostClassifier

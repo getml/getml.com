@@ -1,1 +1,1 @@
-::: getml.predictors.logistic_regression
+::: getml.predictors.LogisticRegression
