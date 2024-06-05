@@ -1,7 +1,8 @@
 [](){#postgresql}
 # PostgreSQL interface
 
-[PostgreSQL](https://www.postgresql.org/) is a powerful and well-established open source database system. It can be connected to the getML engine using the function [`connect_postgres()`][getml.database.connect_postgres]. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
+[PostgreSQL](https://www.postgresql.org/) is a powerful and well-established open 
+source database system. It can be connected to the getML engine using the function [`connect_postgres()`][getml.database.connect_postgres.connect_postgres]. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
 
 ## Import from PostgreSQL
 

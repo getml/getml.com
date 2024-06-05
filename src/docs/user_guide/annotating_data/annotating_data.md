@@ -12,7 +12,8 @@ This chapter contains detailed information on the individual [roles][annotating-
 ## In short
 
 When **building the data model**, you should keep the following things in mind:
-- Every [`DataFrame`][getml.data.data_frame] in a data model needs to have at least one column ([`columns`][getml.data.columns]) with the role [join key][annotating-data-join-keys].
+- Every [`DataFrame`][getml.data.DataFrame] in a data model needs to have at least one 
+  column ([`columns`][getml.data.columns]) with the role [join key][annotating-data-join-keys].
 - The role [time stamp][annotating-data-time-stamp] has to be used to prevent data leaks (refer to [data model time series][data-model-time-series] for details).
 
 When **learning features**, please keep the following things in mind:
@@ -139,7 +140,7 @@ This is because it is unlikely that comparing time stamps to a fixed date perfor
 well out-of-sample.
 
 When assigning the role time stamp to a column that is currently a 
-[`StringColumn`][getml.data.StringColumn], 
+[`StringColumn`][getml.data.columns.StringColumn], 
 you need to specify the format of this string. You can do so by using 
 the `time_formats` argument of
 [`set_role()`][getml.data.DataFrame.set_role]. You can pass a list of time formats

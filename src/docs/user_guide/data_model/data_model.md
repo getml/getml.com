@@ -1,7 +1,7 @@
 [](){#data-model}
 # Data model
 
-Defining the data model is a crucial step before training one of getML's [`Pipeline`][getml.data.Pipeline]s. You typically deal with this step after having [imported your data][importing-data] and [specified the roles][annotating-data-roles] of each column.
+Defining the data model is a crucial step before training one of getML's [`Pipeline`][getml.pipeline.Pipeline]s. You typically deal with this step after having [imported your data][importing-data] and [specified the roles][annotating-data-roles] of each column.
 
 When working with getML, the raw data usually comes in the form of relational data. That means the information relevant for a prediction is spread over several tables. The data model is the definition of the relationships between all of them.
 

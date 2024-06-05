@@ -171,9 +171,15 @@ The second ingredient, the aggregations, must allow for incremental updates too.
 
 We want to also support the `AND` and `OR` combinations of conditions. Therefore, it is possible that a match was *not* included in the aggregation before, but becomes part of it as we move the threshold. It is also possible that the match *was* included in the aggregation, but now it isn’t anymore.
 
-For an aggregation like [`Count`][getml.feature_learning.aggregations.Count], incremental updates are straightforward. If the match was not included but now it is, then increment by 1. If it was included but isn't anymore, then decrement by 1.
+For an aggregation like [`COUNT`][getml.feature_learning.aggregations.COUNT], 
+incremental updates are straightforward. If the match was not included but now it is, then increment by 1. If it was included but isn't anymore, then decrement by 1.
 
-Things are more tricky for aggregations like [`Max`][getml.feature_learning.aggregations.Max], [`Median`][getml.feature_learning.aggregations.Median], or [`CountDistinct`][getml.feature_learning.aggregations.CountDistinct]. For instance, whereas incrementing [`Max`][getml.feature_learning.aggregations.Max] is easy, decrementing it is hard. If the match used to be included and is in fact the maximum value, we now have to find the next biggest match. And we have to find it quickly - ideally iterating through a set of thresholds should take linear time in the number of matches. To make it even more complicated, some cross-joins might result in a lot of matches, so any data structures that have non-trivial memory overhead are a no-go.
+Things are more tricky for aggregations like [`MAX`][getml.feature_learning.aggregations.MAX], 
+[`MEDIAN`][getml.feature_learning.aggregations.MEDIAN], or 
+[`COUNT_DISTINCT`][getml.feature_learning.aggregations.COUNT_DISTINCT]. For instance, 
+whereas 
+incrementing [`MAX`][getml.feature_learning.aggregations.MAX] is easy, decrementing it 
+is hard. If the match used to be included and is in fact the maximum value, we now have to find the next biggest match. And we have to find it quickly - ideally iterating through a set of thresholds should take linear time in the number of matches. To make it even more complicated, some cross-joins might result in a lot of matches, so any data structures that have non-trivial memory overhead are a no-go.
 
 Everything so far has shed light on how we train *one* feature. But in practice, we want more than one. So, how do we do that? Since we are using a tree-based algorithm anyway, we are able to harness the power of ensemble learning algorithms that have been shown to work very well with non-relational decision trees, namely bagging and gradient boosting.
 

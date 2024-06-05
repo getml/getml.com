@@ -1,7 +1,8 @@
 [](){#mysql}
 # MySQL interface
 
-[MySQL](https://www.mysql.com) is one of the most popular databases in use today. It can be connected to the getML engine using the function [`connect_mysql()`][getml.database.connect_mysql]. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
+[MySQL](https://www.mysql.com) is one of the most popular databases in use today. It 
+can be connected to the getML engine using the function [`connect_mysql()`][getml.database.connect_mysql.connect_mysql]. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
 
 If you are unsure which port or socket your MySQL is running on, you can start the `mysql` command line interface
 ```bash

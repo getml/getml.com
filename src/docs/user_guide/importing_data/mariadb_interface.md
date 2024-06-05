@@ -3,7 +3,7 @@
 
 [MariaDB](https://mariadb.org/) is a popular open source fork of MySQL. It can be
 connected to the getML engine using the function
-[`connect_mariadb()`][getml.database.connect_mariadb]. But first, make sure your
+[`connect_mariadb()`][getml.database.connect_mariadb.connect_mariadb]. But first, make sure your
 database is running, you have the corresponding hostname, port as well
 as your username and password ready, and you can reach it from your command line.
 

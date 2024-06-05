@@ -3,7 +3,7 @@
 
 [Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
 Software, Inc. It can be connected to the getML engine using the
-function [`connect_greenplum()`][getml.database.connect_greenplum]. But first, make
+function [`connect_greenplum()`][getml.database.connect_greenplum.connect_greenplum]. But first, make
 sure your database is running, you have the corresponding hostname,
 port as well as your user name and password ready, and you can reach
 it from your command line.

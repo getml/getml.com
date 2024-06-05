@@ -3,7 +3,8 @@
 
 [SQLite3](https://sqlite.org/index.html) is a popular in-memory database. It is faster than classical relational databases like PostgreSQL but less stable under massive parallel access. It requires all contained datasets to be loaded into memory, which might use up too much RAM, especially for large datasets.
 
-As with all other databases in the unified import interface of the getML Python API, you first need to connect to it using [`connect_sqlite3()`][getml.database.connect_sqlite3].
+As with all other databases in the unified import interface of the getML Python API, 
+you first need to connect to it using [`connect_sqlite3()`][getml.database.connect_sqlite3.connect_sqlite3].
 
 ## Import from SQLite3
 

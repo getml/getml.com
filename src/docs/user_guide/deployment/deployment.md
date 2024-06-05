@@ -19,7 +19,7 @@ The results of the [feature learning][feature-engineering] and the [prediction][
 
 Batch prediction pipelines are the most common way of productionizing machine learning pipelines on relational data. These pipelines are usually set to run regularly (once a month, once a week, once a day...) to create a batch of predictions on the newest data. They are typically inserted into a [Docker](https://www.docker.com/) container and scheduled using tools like [Jenkins](https://www.jenkins.io/) and/or [Airflow](https://airflow.apache.org/).
 
-If you are looking for a pure Python, 100% open-source way to productionize getML's [`Pipeline`][getml.data.Pipeline]s, you can transpile all the features into sqlite3 code. sqlite3 is part of the Python standard library, and you can use getML's 100% open source and pure Python [`sqlite3`][getml.sqlite3] which provides some useful extra functionality not included in Python's standard library.
+If you are looking for a pure Python, 100% open-source way to productionize getML's [`Pipeline`][getml.pipeline.Pipeline]s, you can transpile all the features into sqlite3 code. sqlite3 is part of the Python standard library, and you can use getML's 100% open source and pure Python [`sqlite3`][getml.sqlite3] which provides some useful extra functionality not included in Python's standard library.
 
 ## HTTP Endpoints
 
