@@ -53,7 +53,7 @@ jobs:
 
       - name: Clone monorepo & install getML
         run: |
-          git clone -b BRANCH git@gitlab.com:getml/all/monorepo.git
+          git clone -b $BRANCH git@gitlab.com:getml/all/monorepo.git
           hatch run pip install monorepo/src/python-api
         env:
           BRANCH: ${{ vars.MONOREPO_DEV_BRANCH }}
