@@ -4960,20 +4960,20 @@ of the fitting of the Gaussian process. Range: [3,
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">param_space</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
-    <span class="n">score</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">rmse</span><span class="p">,</span>
-    <span class="n">n_iter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5483</span><span class="p">,</span>
-    <span class="n">ratio_iter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.80</span><span class="p">,</span>
-    <span class="n">optimization_algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">nelder_mead</span><span class="p">,</span>
-    <span class="n">optimization_burn_in_algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">latin_hypercube</span><span class="p">,</span>
-    <span class="n">optimization_burn_ins</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-    <span class="n">surrogate_burn_in_algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">latin_hypercube</span><span class="p">,</span>
-    <span class="n">gaussian_kernel</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">matern52</span><span class="p">,</span>
-    <span class="n">gaussian_optimization_burn_in_algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">latin_hypercube</span><span class="p">,</span>
-    <span class="n">gaussian_optimization_algorithm</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">nelder_mead</span><span class="p">,</span>
-    <span class="n">gaussian_optimization_burn_ins</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-    <span class="n">gaussian_nugget</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-    <span class="n">early_stopping</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">score</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">rmse</span><span class="p">,</span>
+    <span class="n">n_iter</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">5483</span><span class="p">,</span>
+    <span class="n">ratio_iter</span><span class="p">:</span><span class="nb">float</span><span class="o">=</span><span class="mf">0.80</span><span class="p">,</span>
+    <span class="n">optimization_algorithm</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">nelder_mead</span><span class="p">,</span>
+    <span class="n">optimization_burn_in_algorithm</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">latin_hypercube</span><span class="p">,</span>
+    <span class="n">optimization_burn_ins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">surrogate_burn_in_algorithm</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">latin_hypercube</span><span class="p">,</span>
+    <span class="n">gaussian_kernel</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">matern52</span><span class="p">,</span>
+    <span class="n">gaussian_optimization_burn_in_algorithm</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">latin_hypercube</span><span class="p">,</span>
+    <span class="n">gaussian_optimization_algorithm</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="n">nelder_mead</span><span class="p">,</span>
+    <span class="n">gaussian_optimization_burn_ins</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">gaussian_nugget</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">early_stopping</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">):</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
         <span class="n">param_space</span><span class="o">=</span><span class="n">param_space</span><span class="p">,</span>
@@ -5539,9 +5539,9 @@ but the best pipeline.</p>
 
     <span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;population_training_df_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_table_training</span><span class="o">.</span><span class="n">_getml_deserialize</span><span class="p">()</span>
 
-    <span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;population_validation_df_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="n">population_table_validation</span><span class="o">.</span><span class="n">_getml_deserialize</span><span class="p">()</span>
-    <span class="p">)</span>
+    <span class="n">cmd</span><span class="p">[</span>
+        <span class="s2">&quot;population_validation_df_&quot;</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="n">population_table_validation</span><span class="o">.</span><span class="n">_getml_deserialize</span><span class="p">()</span>
 
     <span class="n">cmd</span><span class="p">[</span><span class="s2">&quot;peripheral_dfs_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">elem</span><span class="o">.</span><span class="n">_getml_deserialize</span><span class="p">()</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">peripheral_tables</span>
