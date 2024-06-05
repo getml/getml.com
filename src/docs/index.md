@@ -9,7 +9,7 @@ us](https://www.getml.com/contact) for any questions or inquiries.
 !!! note 
 
     Some components of getML have been open sourced as part of **getML community edition**.  You may have a look at 
-    [community vs enterprise edition table](home/getting_started/getting_started#community-vs-enterprise-edition)
+    [community vs enterprise edition table](home/getting_started/getting_started.md#community-vs-enterprise-edition)
     to see the highlights of both the editions. 
 
 

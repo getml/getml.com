@@ -114,12 +114,12 @@ in order for the getML engine to interpret your data properly.
 
 All special characters available for specifying the format of the time
 stamps are listed and described in
-e.g. [`read_csv()`](getml/data/DataFrame/read_csv).
+e.g. [`read_csv()`][getml.data.DataFrame.read_csv].
 
-### Using an existing [`DataFrame`](getml/data/DataFrame)
+### Using an existing [`DataFrame`][getml.data.DataFrame]
 
 You can also use a
-[`DataFrame`](getml/data/DataFrame) that already 
+[`DataFrame`][getml.data.DataFrame] that already 
 exists on the getML engine:
 
 ```json

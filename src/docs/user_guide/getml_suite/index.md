@@ -13,4 +13,5 @@ You can control the engine using the **getML Python API**. The API provides hand
 
 To help you explore the various data sets and ML models built during your analysis, we provide the **getML monitor**. The monitor is written in Go. In addition to visualization, it lets you handle the login and the account management for the getML suite.
 
-To get started with the getML, head over to the [installation](#installation) instructions.
+To get started with the getML, head over to the [installation][installation] 
+instructions.

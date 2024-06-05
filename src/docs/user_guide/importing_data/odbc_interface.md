@@ -76,7 +76,8 @@ MySQL and MariaDB work like this:
 ```sql
 SELECT `some_column` FROM `SOME_SCHEMA`.`SOME_TABLE`;
 ```
-To avoid frustration, determine your server's escape characters and explicitly pass them to [`connect_odbc()`][getml.database.connect_odbc].
+To avoid frustration, determine your server's escape characters and explicitly pass 
+them to [`connect_odbc()`][getml.database.connect_odbc.connect_odbc].
 
 ## Import data using ODBC
 

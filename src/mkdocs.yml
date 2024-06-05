@@ -225,6 +225,7 @@ nav:
 
       
   - API Reference:
+    - reference/index.md
     - getml.data:
       - reference/data/index.md
       - Container: reference/data/container.md
