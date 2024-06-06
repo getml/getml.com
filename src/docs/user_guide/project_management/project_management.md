@@ -22,8 +22,8 @@ Every project has its own folder in `~/.getML/getml-VERSION/projects` (for Linux
 ## Using the project module to manage your project
 
 The [`getml.project`][getml.project] module is the entry point to your projects. 
-From here, you can: query project-specific data ([`pipelines`][getml.project.Pipelines], 
-[`data_frames`][getml.project.DataFrames], 
-[`hyperopts`][getml.project.Hyperopts]), manage the state of the current project (
+From here, you can: query project-specific data ([`data_frames`][project-dataframes], 
+[`hyperopts`][project-hyperopts], [`pipelines`][project-pipelines]),  
+ manage the state of the current project (
 [`delete()`][getml.project.attrs.delete], [`restart()`][getml.project.attrs.restart], [`switch()`][getml.project.attrs.switch], [`suspend()`][getml.project.attrs.suspend]), and import projects from or export projects as a `.getml` bundle to disk ([`load()`][getml.project.attrs.load], [`save()`][getml.project.attrs.save]).
 
