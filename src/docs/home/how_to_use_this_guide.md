@@ -9,7 +9,7 @@ If you are looking for more detailed information, other sections of this documen
 
   The user guide explains all conceptional details behind getML in depth. It can serve as a reference guide for experienced users but it's also suitable for first day users who want to get a deeper understanding of how getML works. Each chapter in the user guide represents one step of a typical data science project.
 
-### [API documentation][summary]
+### [API documentation][python-api]
 
   The API documentation covers everything related to the Python interface to the getML engine. Each module comes with a dedicated section that contains concrete code examples.
 

@@ -107,13 +107,12 @@ will be engineered automatically as well. Again, no input from the user is requi
 To increase transparency relating to the created features, they can be expressed in SQL code. Even though automatically generated features will always be less intuitive than hand-crafted ones and could be quite complex, we want the user to get an understanding of what is going on.
 [](){#feature-engineering-algorithms}
 ## Algorithms
-
-getML contains four powerful feature learning algorithms: [`FastProp`](getml/feature_learning/FastProp), [`Multirel`](getml/feature_learning/Multirel), [`Relboost`](getml/feature_learning/Relboost) and [`RelMT`](getml/feature_learning/RelMT).
+getML contains four powerful feature learning algorithms: [`FastProp`][getml.feature_learning.FastProp], [`Multirel`][getml.feature_learning.Multirel], [`Relboost`][getml.feature_learning.Relboost], and [`RelMT`][getml.feature_learning.RelMT].
 
 [](){#feature-engineering-algorithms-fastprop}
 ### FastProp
 
-[`FastProp`](getml/feature_learning/FastProp) is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.
+[`FastProp`][getml.feature_learning.FastProp] is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.
 
 A typical FastProp feature looks like this:
 
@@ -130,12 +129,12 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`](getml/feature_learning/aggregations) with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
+You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`][getml.feature_learning.aggregations] with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
 
 [](){#feature-engineering-algorithms-multirel}
 ### Multirel
 
-Simply speaking, [`Multirel`](getml/feature_learning/Multirel) is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
+Simply speaking, [`Multirel`][getml.feature_learning.Multirel] is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
 
 MRDTL is a strain of academic literature that was particularly popular in the early 2000s. It is based on a greedy, tree-like approach:
 
@@ -172,9 +171,15 @@ The second ingredient, the aggregations, must allow for incremental updates too.
 
 We want to also support the `AND` and `OR` combinations of conditions. Therefore, it is possible that a match was *not* included in the aggregation before, but becomes part of it as we move the threshold. It is also possible that the match *was* included in the aggregation, but now it isn’t anymore.
 
-For an aggregation like [`Count`](getml/feature_learning/aggregations/Count), incremental updates are straight-forward. If the match was not included, but now it is, then increment by 1. If was included, but it isn’t anymore, then decrement by 1.
+For an aggregation like [`COUNT`][getml.feature_learning.aggregations.COUNT], 
+incremental updates are straightforward. If the match was not included but now it is, then increment by 1. If it was included but isn't anymore, then decrement by 1.
 
-Things are more tricky for aggregations like [`Max`](getml/feature_learning/aggregations/Max), [`Median`](getml/feature_learning/aggregations/Median), or [`CountDistinct`](getml/feature_learning/aggregations/CountDistinct). For instance, whereas incrementing [`Max`](getml/feature_learning/aggregations/Max) is easy, decrementing it is hard. If the match used to be included and is in fact the maximum value, we now have to find the next biggest match. And we have to find it quickly - ideally iterating through a set of thresholds should take linear time in the number of matches. To make it even more complicated, some cross-joins might result in a lot of matches, so any data structures that have non-trivial memory overhead are a no-go.
+Things are more tricky for aggregations like [`MAX`][getml.feature_learning.aggregations.MAX], 
+[`MEDIAN`][getml.feature_learning.aggregations.MEDIAN], or 
+[`COUNT_DISTINCT`][getml.feature_learning.aggregations.COUNT_DISTINCT]. For instance, 
+whereas 
+incrementing [`MAX`][getml.feature_learning.aggregations.MAX] is easy, decrementing it 
+is hard. If the match used to be included and is in fact the maximum value, we now have to find the next biggest match. And we have to find it quickly - ideally iterating through a set of thresholds should take linear time in the number of matches. To make it even more complicated, some cross-joins might result in a lot of matches, so any data structures that have non-trivial memory overhead are a no-go.
 
 Everything so far has shed light on how we train *one* feature. But in practice, we want more than one. So, how do we do that? Since we are using a tree-based algorithm anyway, we are able to harness the power of ensemble learning algorithms that have been shown to work very well with non-relational decision trees, namely bagging and gradient boosting.
 
@@ -206,12 +211,12 @@ GROUP BY t1.rownum,
          t1.time_stamp;
 ```
 
-Further information can be found in the API documentation for [`Multirel`](getml/feature_learning/Multirel).
+Further information can be found in the API documentation for [`Multirel`][getml.feature_learning.Multirel].
 
 [](){#feature-engineering-algorithms-relboost}
 ### Relboost
 
-[`Relboost`](getml/feature_learning/Relboost) is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
+[`Relboost`][getml.feature_learning.Relboost] is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
 
 The main difference between Relboost and Multirel is that Multirel aggregates columns, whereas Relboost aggregates *learnable weights*.
 
@@ -252,12 +257,12 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-Further information can be found in the API documentation for [`Relboost`](getml/feature_learning/Relboost).
+Further information can be found in the API documentation for [`Relboost`][getml.feature_learning.Relboost].
 
 [](){#feature-engineering-algorithms-relmt}
 ### RelMT
 
-[`RelMT`](getml/feature_learning/RelMT) is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
+[`RelMT`][getml.feature_learning.RelMT] is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
 
 RelMT features are particularly well-suited for time-series applications because time series often carry autoregressive structures, which can be approximated well by linear models. Think that this month's revenue can usually be modeled particularly well as a (linear) function of last month's revenue and so on. Purely tree-based models often struggle to learn such relationships because they have to fit a piecewise-constant model by predicting the average of all observations associated with each leaf. Thus, it can require a vast amount of splits to approximate a linear relationship.
 

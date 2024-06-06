@@ -34,28 +34,28 @@
         heading_level: 2
         show_root_full_path: false
 
-
+[](){#project-dataframes}
 ## data_frames
 ```
 getml.project.data_frames
 ```
 An instance of [getml.project.DataFrames][].
 
-
+[](){#project-hyperopts}
 ## hyperopts
 ```
 getml.project.hyperopts
 ```
 An instance of [getml.project.Hyperopts][].
 
-
+[](){#project-pipelines}
 ## pipelines
 ```
 getml.project.pipelines
 ```
 An instance of [getml.project.Pipelines][].
 
-
+[](){#project-name}
 ## name
 ```
 getml.project.name

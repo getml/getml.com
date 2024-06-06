@@ -23,7 +23,8 @@ As an example project we first run the demo notebook ["Loan default prediction"]
 
 First, import the necessary packages, create a FastAPI-App `app`. If the engine isn't running yet 
 ([`getml.engine.is_engine_alive()`][getml.engine.is_engine_alive]) launch the getML engine 
-([`getml.engine.launch()`][getml.engine.launch]). The `launch_browser=False` option prevents the browser to be opened 
+([`getml.engine.launch()`][getml.engine.launch]). The `launch_browser=False` 
+option prevents the browser to be opened 
 when the engine spins up. Further, direct the engine to load and set the previously created 
 [`project`][getml.project] "loans". ([`getml.engine.set_project()`][getml.engine.set_project])
 

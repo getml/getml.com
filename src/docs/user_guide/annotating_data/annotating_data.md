@@ -12,33 +12,32 @@ This chapter contains detailed information on the individual [roles][annotating-
 ## In short
 
 When **building the data model**, you should keep the following things in mind:
-
-- Every [`DataFrame`](getml/data/DataFrame) in a data model needs to have at least one column ([`columns`](getml/data/columns)) with the role [join key][annotating-data-join-keys].
+- Every [`DataFrame`][getml.data.DataFrame] in a data model needs to have at least one 
+  column ([`columns`][getml.data.columns]) with the role [join key][annotating-data-join-keys].
 - The role [time stamp][annotating-data-time-stamp] has to be used to prevent data leaks (refer to [data model time series][data-model-time-series] for details).
 
 When **learning features**, please keep the following things in mind:
 
-- Only [`columns`](getml/data/columns) with roles of [categorical][annotating-data-categorical], [numerical][annotating-data-numerical], and [time stamp][annotating-data-time-stamp] will be used by the feature learning algorithm for aggregations or conditions, unless you explicitly tell it to aggregate [target][annotating-data-target] columns as well (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)).
+- Only [`columns`][getml.data.columns] with roles of [categorical][annotating-data-categorical], [numerical][annotating-data-numerical], and [time stamp][annotating-data-time-stamp] will be used by the feature learning algorithm for aggregations or conditions, unless you explicitly tell it to aggregate [target][annotating-data-target] columns as well (refer to `allow_lagged_target` in [`join()`][getml.data.Placeholder.join]).
 - Columns are only compared with each other if they have the same [unit][annotating-data-units].
 - If you want to make sure that a column is *only* used for comparison, you can set `comparison_only` (refer to [annotating units][annotating-data-units]). Time stamps are automatically set to `comparison_only`.
 
 [](){#annotating-data-roles}
 ## Roles
-
-Roles determine if and how [`columns`](getml/data/columns) are handled during the construction of the [data model][data-model] and how they are interpreted by the [feature learning algorithm][feature-engineering]. The following roles are available in getML:
+Roles determine if and how [`columns`][getml.data.columns] are handled during the construction of the [data model][data-model] and how they are interpreted by the [feature learning algorithm][feature-engineering]. The following roles are available in getML:
 
 | Role                | Class                                             | Included in FL algorithm |
 |---------------------|---------------------------------------------------|--------------------------|
-| [`categorical`](getml/data/roles/categorical)       | [`StringColumn`](getml/data/columns/StringColumn) | yes                    |
-| [`numerical`](getml/data/roles/numerical)         | [`FloatColumn`](getml/data/columns/FloatColumn)   | yes                    |
-| [`text`](getml/data/roles/text)              | [`StringColumn`](getml/data/columns/StringColumn) | yes                    |
-| [`time_stamp`](getml/data/roles/time_stamp)        | [`FloatColumn`](getml/data/columns/FloatColumn)   | yes                    |
-| [`join_key`](getml/data/roles/join_key)          | [`StringColumn`](getml/data/columns/StringColumn) | no                     |
-| [`target`](getml/data/roles/target)            | [`FloatColumn`](getml/data/columns/FloatColumn)   | not by default         |
-| [`unused_float`](getml/data/roles/unused_float)      | [`FloatColumn`](getml/data/columns/FloatColumn)   | no                     |
-| [`unused_string`](getml/data/roles/unused_string)     | [`StringColumn`](getml/data/columns/StringColumn) | no                     |
+| [`categorical`][getml.data.roles.categorical]       | [`StringColumn`][getml.data.columns.StringColumn] | yes                      |
+| [`numerical`][getml.data.roles.numerical]         | [`FloatColumn`][getml.data.columns.FloatColumn]   | yes                      |
+| [`text`][getml.data.roles.text]              | [`StringColumn`][getml.data.columns.StringColumn] | yes                      |
+| [`time_stamp`][getml.data.roles.time_stamp]        | [`FloatColumn`][getml.data.columns.FloatColumn]   | yes                      |
+| [`join_key`][getml.data.roles.join_key]          | [`StringColumn`][getml.data.columns.StringColumn] | no                       |
+| [`target`][getml.data.roles.target]            | [`FloatColumn`][getml.data.columns.FloatColumn]   | not by default           |
+| [`unused_float`][getml.data.roles.unused_float]      | [`FloatColumn`][getml.data.columns.FloatColumn]   | no                       |
+| [`unused_string`][getml.data.roles.unused_string]     | [`StringColumn`][getml.data.columns.StringColumn] | no                       |
 
-When constructing a [`DataFrame`](getml/data/DataFrame) via the class methods [`from_csv`](getml/data/DataFrame/from_csv), [`from_pandas`](getml/data/DataFrame/from_pandas), [`from_db`](getml/data/DataFrame/from_db), and [`from_json`](getml/data/DataFrame/from_json), all [`columns`](getml/data/columns) will have either the role [unused float][annotating-data-unused-float] or [unused string][annotating-data-unused-string] . Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
+When constructing a [`DataFrame`][getml.data.DataFrame] via the class methods [`from_csv`][getml.data.DataFrame.from_csv], [`from_pandas`][getml.data.DataFrame.from_pandas], [`from_db`][getml.data.DataFrame.from_db], and [`from_json`][getml.data.DataFrame.from_json], all [`columns`][getml.data.columns] will have either the role [unused float][annotating-data-unused-float] or [unused string][annotating-data-unused-string]. Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
 
 ```python
 import pandas as pd
@@ -62,7 +61,7 @@ getml_df
 # | 65311        | 11.92        | 671          | goose         | 2018-12-24    |
 ```
 
-To make use of the imported data, you have to tell getML how you intend to use each column by assigning a role ([`roles`](getml/data/roles)). This is done by using the [`set_role`](getml/data/DataFrame/set_role) method of the [`DataFrame`](getml/data/DataFrame). Each column must have exactly one role. If you wish to use a column in two different roles, you have to add it twice and assign each copy a different role.
+To make use of the imported data, you have to tell getML how you intend to use each column by assigning a role ([`roles`][getml.data.roles]). This is done by using the [`set_role`][getml.data.DataFrame.set_role] method of the [`DataFrame`][getml.data.DataFrame]. Each column must have exactly one role. If you wish to use a column in two different roles, you have to add it twice and assign each copy a different role.
 
 ```python
 getml_df.set_role(['animal_id'], getml.data.roles.join_key)
@@ -113,16 +112,15 @@ roles = getml.data.DataFrame.from_csv(
     dry=True                                     
 )
 ```
-
-Even if your data source is type safe, setting roles is still a good idea because it is also more efficient. Using [`set_role()`](getml/data/DataFrame/set_role) creates a deep copy of the original column and might perform an implicit type conversion. If you already know where you want your data to end up, it might be a good idea to set roles in advance.
+Even if your data source is type safe, setting roles is still a good idea because it is also more efficient. Using [`set_role()`][getml.data.DataFrame.set_role] creates a deep copy of the original column and might perform an implicit type conversion. If you already know where you want your data to end up, it might be a good idea to set roles in advance.
 [](){#annotating-data-join-keys}
 ## Join key
 
-Join keys are required to establish a relation between two [`DataFrame`](getml/data/DataFrame) objects. Please refer to the [data models][data-model] for details.
+Join keys are required to establish a relation between two [`DataFrame`][getml.data.DataFrame] objects. Please refer to the [data models][data-model] for details.
 
 The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.
 
-[`columns`](getml/data/columns) of this role will *not* be aggregated by the feature learning algorithm or used for conditions.
+[`columns`][getml.data.columns] of this role will *not* be aggregated by the feature learning algorithm or used for conditions.
 [](){#annotating-data-time-stamp}
 ## Time stamp
 
@@ -142,11 +140,12 @@ This is because it is unlikely that comparing time stamps to a fixed date perfor
 well out-of-sample.
 
 When assigning the role time stamp to a column that is currently a 
-[`StringColumn`](getml/data/StringColumn), 
+[`StringColumn`][getml.data.columns.StringColumn], 
 you need to specify the format of this string. You can do so by using 
 the `time_formats` argument of
-[`set_role()`](getml/data/DataFrame/set_role). You can pass a list of time formats
+[`set_role()`][getml.data.DataFrame.set_role]. You can pass a list of time formats
 that is used to try to interpret the input strings. Possible format options are
+
 
 * %w - abbreviated weekday (Mon, Tue, ...)
 * %W - full weekday (Monday, Tuesday, ...)
@@ -202,35 +201,35 @@ df
 [](){#annotating-data-target}
 ## Target
 
-The associated [`columns`](getml/data/columns) contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`](getml/data/Placeholder/join)). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data-model-tables]).
+The associated [`columns`][getml.data.columns] contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`][getml.data.Placeholder.join]). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data-model-tables]).
 
 The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be `NULL`.
 [](){#annotating-data-numerical}
 ## Numerical
 
-This role tells the getML engine to include the associated [`FloatColumn`](getml/data/columns/FloatColumn) during the feature learning.
+This role tells the getML engine to include the associated [`FloatColumn`][getml.data.columns.FloatColumn] during the feature learning.
 
 It should be used for all data with an inherent ordering, regardless of whether it is sampled from a continuous quantity, like passed time or the total amount of rainfall, or a discrete one, like the number of sugary mulberries one has eaten since lunch.
 [](){#annotating-data-categorical}
 ## Categorical
 
-This role tells the getML engine to include the associated [`StringColumn`](getml/data/columns/StringColumn) during feature learning.
+This role tells the getML engine to include the associated [`StringColumn`][getml.data.columns.StringColumn] during feature learning.
 
 It should be used for all data with no inherent ordering, even if the categories are encoded as integers instead of strings.
 [](){#annotating-data-text}
 ## Text
 
-getML provides the role [`text`](getml/data/roles/text) to annotate free form text fields within relational data structures. getML deals with columns of role [`text`](getml/data/roles/text) through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`](getml/preprocessors/TextFieldSplitter) preprocessor. For more information on getML's handling of text fields, refer to [the Preprocessing section][preprocessing-free-form-text]
+getML provides the role [`text`][getml.data.roles.text] to annotate free form text fields within relational data structures. getML deals with columns of role [`text`][getml.data.roles.text] through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`][getml.preprocessors.TextFieldSplitter] preprocessor. For more information on getML's handling of text fields, refer to [the Preprocessing section][preprocessing-free-form-text]
 [](){#annotating-data-unused-float}
 ## Unused_float
 
-Marks a [`FloatColumn`](getml/data/columns/FloatColumn) as unused.
+Marks a [`FloatColumn`][getml.data.columns.FloatColumn] as unused.
 
 The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
 [](){#annotating-data-unused-string}
 ## Unused_string
 
-Marks a [`StringColumn`](getml/data/columns/StringColumn) as unused.
+Marks a [`StringColumn`][getml.data.columns.StringColumn] as unused.
 
 The associated columns will be neither used for the data model nor by the feature learning algorithms and predictors.
 [](){#annotating-data-units}
@@ -256,7 +255,7 @@ OR categorical_column1 != categorical_column2
 ...
 
 ```
-Using [`set_unit()`](getml/data/DataFrame/set_unit) you can set the *unit* of
+Using [`set_unit()`][getml.data.DataFrame.set_unit] you can set the *unit* of
 a column to an arbitrary, non-empty string. If it matches the string
 of another column, both of them will be compared by the getML
 engine. Please note that a column can not have more than one unit.
@@ -264,7 +263,7 @@ engine. Please note that a column can not have more than one unit.
 There are occasions where *only* a pairwise comparison of columns but
 not a comparison with fixed values is useful. To cope with this problem,
 you can set the `comparison_only` flag in
-[`set_unit()`](getml/data/DataFrame/set_unit).
+[`set_unit()`][getml.data.DataFrame.set_unit].
 
 !!! note
 

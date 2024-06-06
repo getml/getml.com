@@ -76,16 +76,17 @@ MySQL and MariaDB work like this:
 ```sql
 SELECT `some_column` FROM `SOME_SCHEMA`.`SOME_TABLE`;
 ```
-To avoid frustration, determine your server's escape characters and explicitly pass them to [`connect_odbc()`](getml/database/connect_odbc).
+To avoid frustration, determine your server's escape characters and explicitly pass 
+them to [`connect_odbc()`][getml.database.connect_odbc.connect_odbc].
 
 ## Import data using ODBC
 
-By selecting an existing table from your database in the [`DataFrame.from_db()`](getml/data/DataFrame/from_db) class method, you can create a new [`DataFrame`](getml/data/DataFrame) containing all its data.
-Alternatively, you can use the [`read_db()`](getml/data/DataFrame/read_db) and [`read_query()`](getml/data/DataFrame/read_query) methods to replace the content of the current [`DataFrame`](getml/data/DataFrame) instance or append further rows based on either a table or a specific query.
+By selecting an existing table from your database in the [`DataFrame.from_db()`][getml.data.DataFrame.from_db] class method, you can create a new [`DataFrame`][getml.data.DataFrame] containing all its data.
+Alternatively, you can use the [`read_db()`][getml.data.DataFrame.read_db] and [`read_query()`][getml.data.DataFrame.read_query] methods to replace the content of the current [`DataFrame`][getml.data.DataFrame] instance or append further rows based on either a table or a specific query.
 
 ## Export data using ODBC
 
-You can also write your results back into the PostgreSQL database. When you provide a name for the destination table in [`transform()`](getml/pipeline/Pipeline/transform), the features generated from your raw data will be written back. Passing it into [`predict()`](getml/pipeline/Pipeline/predict) generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
+You can also write your results back into the database using ODBC. When you provide a name for the destination table in [`transform()`][getml.pipeline.Pipeline.transform], the features generated from your raw data will be written back. Passing it into [`predict()`][getml.pipeline.Pipeline.predict] generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
 
 
