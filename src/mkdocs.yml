@@ -183,7 +183,7 @@ extra_css:
   - assets/css/custom.css
 
 nav:
-  - index.md
+  - Documentation: index.md
   - Home:
        - home/index.md
        - Installation:
