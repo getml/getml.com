@@ -1,4 +1,8 @@
-# getML Documentation
+---
+hide:
+  - navigation
+---
+# Documentation
 
 Welcome to the getML technical documentation. This document is written for data
 scientists who want to use the getML software suite for their projects. For
@@ -13,7 +17,7 @@ us](https://www.getml.com/contact) for any questions or inquiries.
     to see the highlights of both the editions. 
 
 
-## getML in one minute 
+## GetML in one minute 
 
 getML is an innovative tool for the end-to-end automation of data
 science projects. It covers everything from convenient data loading procedures 
