@@ -4677,8 +4677,16 @@ we called it 'other').</p>
 <span class="normal">92</span>
 <span class="normal">93</span>
 <span class="normal">94</span>
-<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random</span><span class="p">(</span>
-    <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">5849</span><span class="p">,</span> <span class="n">train</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">validation</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">float</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span>
+<span class="normal">99</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">random</span><span class="p">(</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5849</span><span class="p">,</span>
+    <span class="n">train</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">test</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">validation</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StringColumnView</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a [`StringColumnView`][getml.data.columns.StringColumnView] that</span>
@@ -4913,8 +4921,7 @@ we called it 'other').</p>
 </details>
             <details class="quote">
               <summary>Source code in <code>getml/data/split/time.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 27</span>
-<span class="normal"> 28</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 28</span>
 <span class="normal"> 29</span>
 <span class="normal"> 30</span>
 <span class="normal"> 31</span>
@@ -5026,12 +5033,13 @@ we called it 'other').</p>
 <span class="normal">137</span>
 <span class="normal">138</span>
 <span class="normal">139</span>
-<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">time</span><span class="p">(</span>
+<span class="normal">140</span>
+<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">time</span><span class="p">(</span>
     <span class="n">population</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
     <span class="n">time_stamp</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FloatColumn</span><span class="p">,</span> <span class="n">FloatColumnView</span><span class="p">],</span>
     <span class="n">validation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeStampType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">test</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeStampType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">TimeStampType</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">TimeStampType</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StringColumnView</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a [`StringColumnView`][getml.data.columns.StringColumnView] that can be used to divide</span>
