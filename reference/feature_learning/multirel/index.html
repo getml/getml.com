@@ -4170,44 +4170,44 @@ out the User guide: <a class="autorefs autorefs-internal" href="../../../user_gu
 <table>
       <thead>
         <tr>
-          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span class="doc-section-title">ATTRIBUTE</span></th>
           <th><span>DESCRIPTION</span></th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code>agg_sets</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.agg_sets">agg_sets</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Available aggregation sets for the Multirel feature learner.</p>
               </div>
               <p>
+                  <span class="doc-attribute-annotation">
+                    <b>TYPE:</b>
+                      <code><span title="getml.feature_learning.aggregations.AggregationsSets">AggregationsSets</span></code>
+                  </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>aggregation</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.aggregation">aggregation</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Aggregations" href="../aggregations/#getml.feature_learning.aggregations.Aggregations">Aggregations</a>]</code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.MULTIREL.default">default</span></code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>allow_sets</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.allow_sets">allow_sets</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Multirel can summarize different categories into sets for
 producing conditions. When expressed as SQL statements these
@@ -4219,64 +4219,52 @@ features that are hard to read and might be prone to
 overfitting when the <code>sampling_factor</code> is too low.</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>True</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>delta_t</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.delta_t">delta_t</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
 <p>For more information please refer to
-<a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a> in the User Guide. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a> in the User Guide. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>grid_factor</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.grid_factor">grid_factor</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Multirel will try a grid of critical values for your
 numerical features. A higher <code>grid_factor</code> will lead to a
 larger number of critical values being considered. This
 can increase the training time, but also lead to more
-accurate features. Range: (0, <span class="arithmatex">\(\infty\)</span>]</p>
+accurate features. Range: (0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>1.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>loss_function</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.loss_function">loss_function</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
@@ -4285,20 +4273,16 @@ classification problems use
 <a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CROSSENTROPYLOSS"><code>CrossEntropyLoss</code></a>.</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a>]]</code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>None</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>max_length</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.max_length">max_length</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>The maximum length a subcondition might have. Multirel
 will create conditions in the form
@@ -4307,147 +4291,119 @@ will create conditions in the form
 <span class="p">...</span>
 </code></pre></div>
 Using this parameter you can set the maximum number of
-conditions allowed in the brackets. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+conditions allowed in the brackets. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>4</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>min_df</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.min_df">min_df</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
-Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>30</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>min_num_samples</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.min_num_samples">min_num_samples</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Determines the minimum number of samples a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
-overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+overfitting. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>1</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>num_features</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.num_features">num_features</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Number of features generated by the feature learning
-algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+algorithm. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>100</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>num_subfeatures</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.num_subfeatures">num_subfeatures</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
 <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#the-snowflake-schema">Snowflake Schema</a> for more
-information. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+information. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>5</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>num_threads</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.num_threads">num_threads</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
-[<span class="arithmatex">\(0\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
+[0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>propositionalization</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.propositionalization">propositionalization</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>The feature learner used for joins which are flagged to be
 propositionalized (by setting a join's <code>relationship</code> parameter to
 <a class="autorefs autorefs-internal" href="../../data/relationship/#getml.data.relationship.propositionalization"><code>propositionalization</code></a>)</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.FastProp">FastProp</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.FastProp">FastProp</a>()</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>regularization</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.regularization">regularization</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Most important regularization parameter for the quality of
 the features produced by Multirel. Higher values will lead
@@ -4456,39 +4412,31 @@ to less complex features and less danger of overfitting. A
 conditions. Range: [0, 1]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>0.01</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>round_robin</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.round_robin">round_robin</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>If True, the Multirel picks a different <code>aggregation</code>
 every time a new feature is generated.</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>False</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>sampling_factor</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.sampling_factor">sampling_factor</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Multirel uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
@@ -4501,44 +4449,36 @@ training. When set to 1.0, roughly 20,000 samples are drawn
 from the population table. If the population table
 contains less than 20,000 samples, it will use standard
 bagging. When set to 0.0, there will be no sampling at
-all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+all. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>1.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>seed</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.seed">seed</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
-5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+5543. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>5543</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>share_aggregations</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.share_aggregations">share_aggregations</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Every time a new feature is generated, the <code>aggregation</code>
 will be taken from a random subsample of possible
@@ -4547,20 +4487,16 @@ determines the size of that subsample. Only relevant when
 <code>round_robin</code> is False. Range: [0, 1]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>share_conditions</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.share_conditions">share_conditions</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Every time a new column is tested for applying conditions,
 it might be skipped at random. This parameter determines
@@ -4568,20 +4504,16 @@ the probability that a column will <em>not</em> be
 skipped. Range: [0, 1]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>1.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>shrinkage</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.shrinkage">shrinkage</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Since Multirel works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
@@ -4592,52 +4524,40 @@ values will lead to more danger of overfitting. Range: [0,
 1]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>silent</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.silent">silent</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Controls the logging during training.</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>True</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>vocab_size</code></td>
-            <td class="doc-param-details">
+            <td><code><span title="getml.feature_learning.Multirel.vocab_size">vocab_size</span></code></td>
+            <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
-Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-param-annotation">
+                  <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
-                  </span>
-                  <span class="doc-param-default">
-                    <b>DEFAULT:</b>
-                      <code>500</code>
                   </span>
               </p>
             </td>
