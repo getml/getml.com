@@ -11,9 +11,6 @@ There are five different algorithms, each capitalizing on unique strengths and
 suitable for different use cases. Most of them are available in the 
 [getML enterprise edition][getting-started-community-vs-enterprise].
 
-!!! info "Enterprise edition"
-    To purchase a licence for the Enterprise Edition, technical support and 
-    more information, please [contact us](https://www.getml.com/contact)!
 
 ## [FastProp][getml.feature_learning.FastProp]
 - FastProp utilizes aggregation-based 
