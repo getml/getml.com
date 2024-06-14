@@ -30,7 +30,7 @@ All functionality of getML is implemented in the so-called *getML engine*. It is
 In this article, we start with a brief glimpse of different toolsets offered by getML community and enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.
 
 [](){#getting-started-community-vs-enterprise}
-## Community vs enterprise edition
+## Community vs Enterprise edition
 
 !!! note
     To purchase a licence for the Enterprise Edition, technical support and 
@@ -39,6 +39,9 @@ In this article, we start with a brief glimpse of different toolsets offered by 
 Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
 
 {{ read_csv('../../images/community_vs_enterprise_edition.csv') }}
+
+*The Enterprise edition contains all features of the Community edition plus the 
+features listed in the column.
 
 ## Starting a new project
 
