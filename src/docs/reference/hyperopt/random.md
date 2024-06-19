@@ -1,3 +1,6 @@
+---
+icon: material/trending-up
+---
 ::: getml.hyperopt.RandomSearch
     options:
       inherited_members: true

@@ -1,5 +1,5 @@
 ---
-status: enterprise
+icon: material/trending-up
 hide:
   - toc
 ---

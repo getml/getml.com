@@ -1,3 +1,6 @@
+---
+icon: material/trending-up
+---
 ::: getml.hyperopt.GaussianHyperparameterSearch
     options:
       inherited_members: true
