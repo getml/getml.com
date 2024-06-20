@@ -1,3 +1,7 @@
+---
+status: enterprise
+---
+
 ::: getml.hyperopt
     options:
       members:

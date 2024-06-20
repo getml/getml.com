@@ -1,3 +1,6 @@
+---
+status: enterprise
+---
 ::: getml.hyperopt.GaussianHyperparameterSearch
     options:
       inherited_members: true

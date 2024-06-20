@@ -1,3 +1,6 @@
+---
+status: enterprise
+---
 ::: getml.hyperopt.RandomSearch
     options:
       inherited_members: true

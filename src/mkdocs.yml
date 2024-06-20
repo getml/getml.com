@@ -131,6 +131,7 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
+    enterprise: Enterprise feature
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -181,6 +182,7 @@ extra_javascript:
 
 extra_css:
   - assets/css/custom.css
+  - assets/stylesheets/extra.css
 
 nav:
   - Documentation: index.md
@@ -252,7 +254,7 @@ nav:
       - reference/engine/index.md
     - getml.hyperopt: 
       - reference/hyperopt/index.md
-      - Gaussian Hyperparameter: reference/hyperopt/gaussian.md
+      - Gaussian Process: reference/hyperopt/gaussian.md
       - Latin Hypercube: reference/hyperopt/latin.md
       - Random: reference/hyperopt/random.md
     - getml.feature_learning:

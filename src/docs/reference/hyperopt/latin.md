@@ -1,3 +1,6 @@
+---
+status: enterprise
+---
 ::: getml.hyperopt.LatinHypercubeSearch
     options:
       inherited_members: true

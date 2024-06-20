@@ -1,11 +1,11 @@
- ,Community edition,Enterprise edition
+ ,Community edition,Enterprise edition*
 License,Elastic Licence v2,Proprietary
-Platform,Linux & Docker,Also macOS
-Preprocessors,"EmailDomain, Imputation, Seasonal, Substring, TextFieldSplitter",Also Mapping
-Feature learners,FastProp,"Also Multirel, Relboost, RelMT"
-Predictors,"LinearRegression, LogisticRegression, XGBoost",Same
-Productionization,Transpilation to human-readable SQL,"Also transpilation to SQLite, Spark SQL, SAP HANA, BigQuery, TSQL. Built-in HTTP Endpoints."
+Platform,Linux & Docker, macOS
+Preprocessors,"EmailDomain, Imputation, Seasonal, Substring, TextFieldSplitter", Mapping
+Feature learners,FastProp,"Multirel, Relboost, RelMT, Fastboost"
+Predictors,"LinearRegression, LogisticRegression, XGBoostClassifier, XGBoostRegressor","ScaleGBMClassifier, ScaleGBMRegressor"
+Productionization,Transpilation to human-readable SQL,"Transpilation to MySQL, PostgreSQL, SQLite, Spark SQL, SAP HANA, BigQuery, TSQL. Built-in HTTP Endpoints."
 Hyperparameter optimization,Not supported,"RandomSearch, LatinHypercube, GaussianOptimization, Customized tuning routines"
-Database connectors,"SQLite, MySQL, MariaDB, PostgreSQL","Also Greenplum, ODBC, SAP HANA, BigQuery"
-Other data sources,"CSV, Parquet, Pandas, Arrow, Pyspark, JSON",Also S3
-Other functionalities,Memory mapping,Also web frontend
+Database connectors,"SQLite, MySQL, MariaDB, PostgreSQL","Greenplum, ODBC, SAP HANA, BigQuery"
+Other data sources,"CSV, Parquet, Pandas, Arrow, Pyspark, JSON", S3
+Other functionalities,Memory mapping, Web Frontend
