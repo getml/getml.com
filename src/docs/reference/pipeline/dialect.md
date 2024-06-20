@@ -1,5 +1,5 @@
 ---
-icon: material/trending-up
+status: enterprise
 ---
 ::: getml.pipeline.dialect
     options:

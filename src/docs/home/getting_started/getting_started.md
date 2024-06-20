@@ -32,7 +32,7 @@ In this article, we start with a brief glimpse of different toolsets offered by 
 [](){#getting-started-community-vs-enterprise}
 ## Community vs Enterprise edition
 
-!!! info ":material-trending-up: Enterprise Edition"
+!!! enterprise-adm "Enterprise Edition"
     To purchase a licence for the Enterprise Edition, technical support and 
     more information, please [contact us](https://www.getml.com/contact)!
 

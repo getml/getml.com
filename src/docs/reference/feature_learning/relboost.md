@@ -1,4 +1,4 @@
 ---
-icon: material/trending-up
+status: enterprise
 ---
 ::: getml.feature_learning.Relboost
