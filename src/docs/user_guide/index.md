@@ -17,8 +17,8 @@ support your data science projects.
 ### [Managing Projects][project-management]
 
 Learn how to manage your projects within the getML engine. This section covers the 
-functionalities of the project Python API and how it is used to orchestrate project 
-activities.
+functionalities of the project module of the Python API and how it is used to 
+orchestrate project activities.
 
 ### [Importing Data][importing-data]
 

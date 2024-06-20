@@ -3,8 +3,8 @@ License,Elastic Licence v2,Proprietary
 Platform,Linux & Docker, macOS
 Preprocessors,"EmailDomain, Imputation, Seasonal, Substring, TextFieldSplitter", Mapping
 Feature learners,FastProp,"Multirel, Relboost, RelMT, Fastboost"
-Predictors,"LinearRegression, LogisticRegression, XGBoost","ScaleGBMClassifier, ScaleGBMRegressor"
-Productionization,Transpilation to human-readable SQL,"Transpilation to SQLite, Spark, SQL, SAP HANA, BigQuery, TSQL. Built-in HTTP Endpoints."
+Predictors,"LinearRegression, LogisticRegression, XGBoostClassifier, XGBoostRegressor","ScaleGBMClassifier, ScaleGBMRegressor"
+Productionization,Transpilation to human-readable SQL,"Transpilation to MySQL, PostgreSQL, SQLite, Spark SQL, SAP HANA, BigQuery, TSQL. Built-in HTTP Endpoints."
 Hyperparameter optimization,Not supported,"RandomSearch, LatinHypercube, GaussianOptimization, Customized tuning routines"
 Database connectors,"SQLite, MySQL, MariaDB, PostgreSQL","Greenplum, ODBC, SAP HANA, BigQuery"
 Other data sources,"CSV, Parquet, Pandas, Arrow, Pyspark, JSON", S3

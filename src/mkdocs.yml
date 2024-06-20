@@ -254,7 +254,7 @@ nav:
       - reference/engine/index.md
     - getml.hyperopt: 
       - reference/hyperopt/index.md
-      - Gaussian Hyperparameter: reference/hyperopt/gaussian.md
+      - Gaussian Process: reference/hyperopt/gaussian.md
       - Latin Hypercube: reference/hyperopt/latin.md
       - Random: reference/hyperopt/random.md
     - getml.feature_learning:

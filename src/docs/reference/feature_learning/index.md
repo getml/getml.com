@@ -1,8 +1,7 @@
 ::: getml.feature_learning
     options:
       members: false
-
-# Feature Learners
+      show_docstring_description: false
 
 Feature Learners are getML's powerhouse leveraging the high performance of C++ to 
 ensure efficient execution and effective memory use.
@@ -21,7 +20,7 @@ quick, decent results.
   edition][getting-started-community-vs-enterprise].
 
 
-## [Mulitrel][getml.feature_learning.Multirel]
+## [Multirel][getml.feature_learning.Multirel]
 - Multirel focuses on minimizing algorithmic redundancies through incremental 
 updates and combining 
 these improvements with ensemble learning methods. 
