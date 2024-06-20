@@ -71,6 +71,8 @@
     
       <link rel="stylesheet" href="../../assets/css/custom.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2456,6 +2458,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
             </a>
             
@@ -2492,12 +2502,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2526,6 +2544,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -2552,6 +2578,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2698,7 +2732,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2732,7 +2767,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2766,7 +2802,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2800,7 +2837,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -3446,6 +3484,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3557,6 +3603,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3583,6 +3637,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -3943,6 +4005,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fastprop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FastProp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multirel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multirel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relboost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relmt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RelMT
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4043,14 +4157,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>This module contains relational learning algorithms to learn features
-from relational data or time series.</p>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>All feature learners need to be passed to <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
-</details>
 
 
   <div class="doc doc-children">
@@ -4069,7 +4176,48 @@ from relational data or time series.</p>
 
     </div>
 
-</div><p>On this page we go into details of community vs enterprise features and provide some infos on the feature learner from within this sub package.</p>
+</div><p>Feature Learners are getML's powerhouse leveraging the high performance of C++ to 
+ensure efficient execution and effective memory use.</p>
+<p>There are five different algorithms, each capitalizing on unique strengths and 
+suitable for different use cases. Most of them are available in the 
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">getML enterprise edition</a>.</p>
+<h2 id="fastprop"><a class="autorefs autorefs-internal" href="fastprop/#getml.feature_learning.FastProp">FastProp</a></h2>
+<ul>
+<li>FastProp utilizes aggregation-based 
+operations, enabling rapid generation of numerous features through simple aggregations. This 
+makes FastProp ideal for the exploration phase of a data science project, delivering 
+quick, decent results. </li>
+<li>FastProp is available in both, the <a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">getML community edition and getML enterprise 
+  edition</a>.</li>
+</ul>
+<h2 id="multirel"><a class="autorefs autorefs-internal" href="multirel/#getml.feature_learning.Multirel">Multirel</a></h2>
+<ul>
+<li>Multirel focuses on minimizing algorithmic redundancies through incremental 
+updates and combining 
+these improvements with ensemble learning methods. </li>
+<li>Recalculations are only performed where changes occur, 
+significantly increasing efficiency while 
+integrating methods such as bagging and gradient boosting.</li>
+<li>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">getML enterprise edition</a>.</li>
+</ul>
+<h2 id="relboost"><a class="autorefs autorefs-internal" href="relboost/#getml.feature_learning.Relboost">Relboost</a></h2>
+<ul>
+<li>Relboost extends the gradient boosting approach,
+to relational learning by focusing on aggregating learnable weights rather than
+columns, addressing computational complexity and exponentially growing feature 
+space. </li>
+<li>While Relboost often surpasses Multirel 
+in predictive accuracy and training efficiency, its generated features are less 
+intuitive.</li>
+<li>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">getML enterprise edition</a>.</li>
+</ul>
+<h2 id="relmt"><a class="autorefs autorefs-internal" href="relmt/#getml.feature_learning.RelMT">RelMT</a></h2>
+<ul>
+<li>RelMT adapts linear model trees to relational data, combining linear models at each 
+tree leaf to effectively capture both linear and non-linear relationships, making it 
+particularly advantageous for modeling time-series data. </li>
+<li>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">getML enterprise edition</a>.</li>
+</ul>
 
 <!-- Source file information -->
 

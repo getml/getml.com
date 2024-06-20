@@ -29,7 +29,7 @@
     
     
       
-        <title>Gaussian Hyperparameter - GetML Developer Portal</title>
+        <title>Gaussian Process - GetML Developer Portal</title>
       
     
     
@@ -70,6 +70,8 @@
       <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -159,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gaussian Hyperparameter
+              Gaussian Process
             
           </span>
         </div>
@@ -2458,6 +2460,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
             </a>
             
@@ -2503,12 +2513,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2520,12 +2538,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2673,6 +2699,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -2699,6 +2733,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2843,7 +2885,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2877,7 +2920,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2911,7 +2955,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2945,7 +2990,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -3591,6 +3637,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3702,6 +3756,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3728,6 +3790,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -4325,6 +4395,13 @@ throughout previous evaluations. Assessing the quality of potential
 combinations will be done using the expected information (EI).</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
@@ -4875,18 +4952,9 @@ of the fitting of the Gaussian process. Range: [3,
 <span class="n">best_pipeline</span> <span class="o">=</span> <span class="n">gaussian_search</span><span class="o">.</span><span class="n">best_pipeline</span>
 </code></pre></div>
 </details>
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
                   <details class="quote">
                     <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">736</span>
-<span class="normal">737</span>
-<span class="normal">738</span>
-<span class="normal">739</span>
-<span class="normal">740</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">740</span>
 <span class="normal">741</span>
 <span class="normal">742</span>
 <span class="normal">743</span>
@@ -4922,7 +4990,11 @@ of the fitting of the Gaussian process. Range: [3,
 <span class="normal">773</span>
 <span class="normal">774</span>
 <span class="normal">775</span>
-<span class="normal">776</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">776</span>
+<span class="normal">777</span>
+<span class="normal">778</span>
+<span class="normal">779</span>
+<span class="normal">780</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">param_space</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
@@ -5614,11 +5686,11 @@ but the best pipeline.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">792</span>
-<span class="normal">793</span>
-<span class="normal">794</span>
-<span class="normal">795</span>
-<span class="normal">796</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">796</span>
+<span class="normal">797</span>
+<span class="normal">798</span>
+<span class="normal">799</span>
+<span class="normal">800</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validate the parameters of the hyperparameter optimization.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -5644,6 +5716,9 @@ but the best pipeline.</p>
 
 
 
+
+  
+  
 
 
 

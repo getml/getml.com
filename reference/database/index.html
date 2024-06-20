@@ -71,6 +71,8 @@
     
       <link rel="stylesheet" href="../../assets/css/custom.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2458,6 +2460,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
             </a>
             
@@ -2494,12 +2504,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2528,6 +2546,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -2554,6 +2580,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2698,7 +2732,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2732,7 +2767,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2766,7 +2802,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2800,7 +2837,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -3446,6 +3484,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3557,6 +3603,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3583,6 +3637,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -4405,6 +4467,13 @@ relates to a database, the default connection will be used automatically.</p>
       <p>Creates a new BigQuery database connection.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
@@ -4526,11 +4595,6 @@ If you do not pass anything, this will create a new default connection.</p>
     </table>
 
 
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
-
 <table>
       <thead>
         <tr>
@@ -4643,7 +4707,11 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
-<span class="normal">110</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_bigquery</span><span class="p">(</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_bigquery</span><span class="p">(</span>
     <span class="n">database_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">project_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">google_application_credentials</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span>
@@ -4652,6 +4720,13 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Connection</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates a new BigQuery database connection.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        database_id:</span>
@@ -4699,9 +4774,6 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="sd">        conn_id:</span>
 <span class="sd">            The name to be used to reference the connection.</span>
 <span class="sd">            If you do not pass anything, this will create a new default connection.</span>
-
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        The connection object.</span>
@@ -4763,6 +4835,13 @@ If you do not pass anything, this will create a new default connection.</p>
 <p>But first, make sure your database is running, and you can reach it
 from your command line.</p>
 
+
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
 
 <table>
       <thead>
@@ -5106,7 +5185,14 @@ and stores the result into the corresponding table.
 <span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
-<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_greenplum</span><span class="p">(</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_greenplum</span><span class="p">(</span>
     <span class="n">dbname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -5120,6 +5206,13 @@ and stores the result into the corresponding table.
 
 <span class="sd">    But first, make sure your database is running, and you can reach it</span>
 <span class="sd">    from your command line.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        dbname:</span>
@@ -5265,6 +5358,13 @@ and stores the result into the corresponding table.
 
       <p>Creates a new HANA database connection.</p>
 
+
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
 
 <table>
       <thead>
@@ -5442,11 +5542,6 @@ If you do not pass anything, this will create a new default connection.</p>
     </table>
 
 
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
-
 <table>
       <thead>
         <tr>
@@ -5574,7 +5669,11 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="normal">120</span>
 <span class="normal">121</span>
 <span class="normal">122</span>
-<span class="normal">123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_hana</span><span class="p">(</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_hana</span><span class="p">(</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -5586,6 +5685,13 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Connection</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates a new HANA database connection.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        user:</span>
@@ -5643,9 +5749,6 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="sd">        conn_id (str, optional):</span>
 <span class="sd">            The name to be used to reference the connection.</span>
 <span class="sd">            If you do not pass anything, this will create a new default connection.</span>
-
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        The connection object.</span>
@@ -6245,6 +6348,13 @@ the corresponding table.</p>
 from via your command line.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
@@ -6605,7 +6715,14 @@ and stores the result into the corresponding table.</p>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
-<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_mysql</span><span class="p">(</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_mysql</span><span class="p">(</span>
     <span class="n">dbname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -6620,6 +6737,13 @@ and stores the result into the corresponding table.</p>
 
 <span class="sd">    But first, make sure your database is running and you can reach it</span>
 <span class="sd">    from via your command line.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        dbname:</span>
@@ -6777,6 +6901,13 @@ database.</p>
 <p>Before you use the ODBC connector, make sure the database is up and
 running and that the appropriate ODBC drivers are installed.</p>
 
+
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise Edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
 
 <table>
       <thead>
@@ -7031,11 +7162,6 @@ If you do not pass anything, this will create a new default connection.</p>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
             <details class="quote">
               <summary>Source code in <code>getml/database/connect_odbc.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
@@ -7174,7 +7300,12 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
-<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_odbc</span><span class="p">(</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_odbc</span><span class="p">(</span>
     <span class="n">server_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -7193,6 +7324,13 @@ If you do not pass anything, this will create a new default connection.</p>
 
 <span class="sd">    Before you use the ODBC connector, make sure the database is up and</span>
 <span class="sd">    running and that the appropriate ODBC drivers are installed.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise Edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        server_name:</span>
@@ -7280,8 +7418,6 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        The connection object.</span>
 
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">time_formats</span> <span class="o">=</span> <span class="n">time_formats</span> <span class="ow">or</span> <span class="n">constants</span><span class="o">.</span><span class="n">TIME_FORMATS</span>
@@ -7343,6 +7479,13 @@ If you do not pass anything, this will create a new default connection.</p>
 <p>But first, make sure your database is running, and you can reach it
 from via your command line.</p>
 
+
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
 
 <table>
       <thead>
@@ -7708,7 +7851,14 @@ and stores the result into the corresponding table.</p>
 <span class="normal">154</span>
 <span class="normal">155</span>
 <span class="normal">156</span>
-<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_postgres</span><span class="p">(</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_postgres</span><span class="p">(</span>
     <span class="n">dbname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -7723,6 +7873,13 @@ and stores the result into the corresponding table.</p>
 
 <span class="sd">    But first, make sure your database is running, and you can reach it</span>
 <span class="sd">    from via your command line.</span>
+
+<span class="sd">    enterprise-adm: Enterprise edition</span>
+<span class="sd">        This feature is available in the getML</span>
+<span class="sd">        [Enterprise edition][getting-started-community-vs-enterprise].</span>
+
+<span class="sd">        For licences, technical support and more information, feel free to [contact us](</span>
+<span class="sd">        https://www.getml.com/contact)!</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        dbname:</span>

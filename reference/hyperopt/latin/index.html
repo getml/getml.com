@@ -71,6 +71,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/custom.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2458,6 +2460,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
             </a>
             
@@ -2494,12 +2504,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2537,6 +2555,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -2553,6 +2579,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2700,6 +2734,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -2843,7 +2885,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2877,7 +2920,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2911,7 +2955,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2945,7 +2990,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -3591,6 +3637,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3702,6 +3756,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3728,6 +3790,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -4321,6 +4391,13 @@ space, and a random search, which draws completely random samples
 from the hyperparameter space.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
@@ -4571,23 +4648,9 @@ either <a class="autorefs autorefs-internal" href="../../predictors/xgboost_regr
 <span class="p">)</span>
 </code></pre></div>
 </details>
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
                   <details class="quote">
                     <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 999</span>
-<span class="normal">1000</span>
-<span class="normal">1001</span>
-<span class="normal">1002</span>
-<span class="normal">1003</span>
-<span class="normal">1004</span>
-<span class="normal">1005</span>
-<span class="normal">1006</span>
-<span class="normal">1007</span>
-<span class="normal">1008</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1008</span>
 <span class="normal">1009</span>
 <span class="normal">1010</span>
 <span class="normal">1011</span>
@@ -4600,7 +4663,16 @@ either <a class="autorefs autorefs-internal" href="../../predictors/xgboost_regr
 <span class="normal">1018</span>
 <span class="normal">1019</span>
 <span class="normal">1020</span>
-<span class="normal">1021</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1021</span>
+<span class="normal">1022</span>
+<span class="normal">1023</span>
+<span class="normal">1024</span>
+<span class="normal">1025</span>
+<span class="normal">1026</span>
+<span class="normal">1027</span>
+<span class="normal">1028</span>
+<span class="normal">1029</span>
+<span class="normal">1030</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">param_space</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
@@ -5274,19 +5346,19 @@ but the best pipeline.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1036</span>
-<span class="normal">1037</span>
-<span class="normal">1038</span>
-<span class="normal">1039</span>
-<span class="normal">1040</span>
-<span class="normal">1041</span>
-<span class="normal">1042</span>
-<span class="normal">1043</span>
-<span class="normal">1044</span>
-<span class="normal">1045</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1045</span>
 <span class="normal">1046</span>
 <span class="normal">1047</span>
-<span class="normal">1048</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">1048</span>
+<span class="normal">1049</span>
+<span class="normal">1050</span>
+<span class="normal">1051</span>
+<span class="normal">1052</span>
+<span class="normal">1053</span>
+<span class="normal">1054</span>
+<span class="normal">1055</span>
+<span class="normal">1056</span>
+<span class="normal">1057</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validate the parameters of the hyperparameter optimization.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -5320,6 +5392,9 @@ but the best pipeline.</p>
 
 
 
+
+  
+  
 
 
 

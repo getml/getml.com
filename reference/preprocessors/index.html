@@ -71,6 +71,8 @@
     
       <link rel="stylesheet" href="../../assets/css/custom.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2456,6 +2458,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
             </a>
             
@@ -2492,12 +2502,20 @@
   <span class="md-ellipsis">
     
   
-    Gaussian Hyperparameter
+    Gaussian Process
   
 
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2526,6 +2544,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -2552,6 +2578,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -2696,7 +2730,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2730,7 +2765,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2764,7 +2800,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -2798,7 +2835,8 @@
     
   
   
-    <span class="md-status md-status--enterprise"></span>
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
   
 
   
@@ -3446,6 +3484,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3557,6 +3603,14 @@
   </span>
   
   
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
 
       </a>
     </li>
@@ -3583,6 +3637,14 @@
     
   </span>
   
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
   
 
       </a>
@@ -4461,68 +4523,83 @@ by aggregating targets in the relational neighbourhood.</p>
 <p>Refer to the <a class="autorefs autorefs-internal" href="../../user_guide/preprocessing/preprocessing/#mappings">User guide</a> for more information.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
-          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span class="doc-section-title">PARAMETER</span></th>
           <th><span>DESCRIPTION</span></th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code><span title="getml.preprocessors.Mapping.agg_sets">agg_sets</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>agg_sets</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Available aggregation sets for the mapping preprocessor.</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><span title="getml.feature_learning.aggregations.AggregationsSets">AggregationsSets</span></code>
-                  </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.preprocessors.Mapping.aggregation">aggregation</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>aggregation</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The aggregation function to use over the targets.</p>
 <p>Must be from <a class="autorefs autorefs-internal" href="../feature_learning/aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a>.</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.Aggregations" href="../feature_learning/aggregations/#getml.feature_learning.aggregations.Aggregations">Aggregations</a>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="getml.feature_learning.aggregations.MAPPING.default">default</span></code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.preprocessors.Mapping.min_freq">min_freq</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>min_freq</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The minimum number of targets required for a value to be included in
 the mapping. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>30</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.preprocessors.Mapping.multithreading">multithreading</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>multithreading</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Whether you want to apply multithreading.</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
                   </span>
               </p>
             </td>
@@ -4545,11 +4622,6 @@ the mapping. Range: [0, ∞]</p>
     <span class="n">share_selected_features</span><span class="o">=</span><span class="mf">0.5</span>
 <span class="p">)</span>
 </code></pre></div>
-</details>
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
 </details>
 
 
