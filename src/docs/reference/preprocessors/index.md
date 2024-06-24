@@ -1,3 +1,7 @@
+---
+title: Preprocessors
+---
+
 ::: getml.preprocessors
     options:
       members: false

@@ -1,3 +1,7 @@
+---
+title: Data
+---
+
 ::: getml.data
     options:
       show_submodules: true

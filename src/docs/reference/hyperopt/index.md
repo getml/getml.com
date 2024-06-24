@@ -1,5 +1,6 @@
 ---
 status: enterprise
+title: Hyperparameter Optimization
 ---
 
 ::: getml.hyperopt

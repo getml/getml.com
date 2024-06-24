@@ -1,3 +1,7 @@
+---
+title: Database
+---
+
 ::: getml.database
     options:
       members:

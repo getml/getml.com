@@ -1,3 +1,7 @@
+---
+title: API Reference
+---
+
 [](){#python-api}
 # Python API
 

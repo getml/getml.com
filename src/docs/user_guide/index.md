@@ -1,3 +1,7 @@
+---
+title: User Guide
+---
+
 [](){#user-guide}
 # User Guide
 

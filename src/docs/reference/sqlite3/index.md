@@ -1,3 +1,7 @@
+---
+title: Sqlite3
+---
+
 ::: getml.sqlite3
     
   

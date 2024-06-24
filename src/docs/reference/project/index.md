@@ -1,3 +1,7 @@
+---
+title: Project Management
+---
+
 ::: getml.project
     options:
       show_submodules: false
