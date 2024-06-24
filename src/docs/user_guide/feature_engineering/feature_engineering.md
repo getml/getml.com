@@ -108,7 +108,7 @@ To increase transparency relating to the created features, they can be expressed
 
 [](){#feature-engineering-algorithms}
 ## Algorithms
-getML contains four powerful feature learning algorithms: 
+getML contains five powerful feature learning algorithms: 
 [`FastProp`][getml.feature_learning.FastProp], 
 [`Multirel`][getml.feature_learning.Multirel], 
 [`Relboost`][getml.feature_learning.Relboost], 
@@ -269,7 +269,7 @@ Further information can be found in the API documentation for [`Relboost`][getml
 ### Fastboost
 
 While both are generalizations of the gradient boosting algorithm, the main difference 
-between Fastboost 
+between [`Fastboost`][getml.feature_learning.Fastboost] 
 and Relboost is that Fastboost uses a simpler algorithm and is therefore much faster 
 and more scalable. Fastboost is particularly suitable for large datasets or datasets 
 with many cross-joins. However, from a statistical point of view, the Relboost 
