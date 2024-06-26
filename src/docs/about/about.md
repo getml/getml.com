@@ -11,4 +11,5 @@ and Munich is committed to
 delivering exceptional software solutions. From concept to deployment, we guide 
 business leaders through the process, offering continuous support to ensure 
 sustained performance. The unique getML framework, tailored for relational enterprise 
-data, enables faster project completions and better outcomes.
+data and relying on [reflect-cpp](https://github.com/getml/reflect-cpp) enables faster 
+project completions and better outcomes.
