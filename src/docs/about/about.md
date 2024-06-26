@@ -1,8 +1,7 @@
 [](){#about}
 # About
 
-GetML, established in 2017 by Dr. Patrick Urbanke and Alex Uhlig, who met at the 
-Volkswagen AI lab, is 
+GetML, established in 2017 by Dr. Patrick Urbanke and Alex Uhlig, is 
 dedicated to transforming predictive AI for relational and time-series data. Our 
 mission is to make advanced machine learning algorithms accessible, enhancing data 
 scientists' productivity with automated feature engineering and improving model accuracy.
