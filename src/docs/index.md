@@ -1,7 +1,6 @@
 ---
 hide:
   - navigation
-title: getML Documentation
 ---
 # Documentation
 
