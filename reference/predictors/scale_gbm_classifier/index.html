@@ -12,30 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/">
+        <link rel="canonical" href="https://dev.getml.com/reference/predictors/scale_gbm_classifier/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="home/">
+      
+        <link rel="next" href="../scale_gbm_regressor/">
       
       
         
       
       
-      <link rel="icon" href="assets/favicon.png">
+      <link rel="icon" href="../../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>GetML Developer Portal</title>
+        <title>ScaleGBMClassifier - GetML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="assets/stylesheets/getml.css"
+    href="../../../assets/stylesheets/getml.css"
   />
 
     
@@ -65,13 +67,13 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="assets/css/custom.css">
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
     
-      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -106,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation" class="md-skip">
+        <a href="#getml.predictors.ScaleGBMClassifier" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +131,7 @@
 
     <!-- Link to home -->
     <a
-      href="."
+      href="../../.."
       title="GetML Developer Portal"
       class="md-header__button md-logo"
       aria-label="GetML Developer Portal"
@@ -137,8 +139,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -159,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Documentation
+              ScaleGBMClassifier
             
           </span>
         </div>
@@ -276,11 +278,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="home/" class="md-tabs__link">
+        <a href="../../../home/" class="md-tabs__link">
           
   
     
@@ -319,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="user_guide/" class="md-tabs__link">
+        <a href="../../../user_guide/" class="md-tabs__link">
           
   
     
@@ -335,11 +335,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="reference/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -359,7 +361,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="integration/fastapi/fastapi/" class="md-tabs__link">
+        <a href="../../../integration/fastapi/fastapi/" class="md-tabs__link">
           
   
     
@@ -383,9 +385,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -396,11 +396,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="GetML Developer Portal" class="md-nav__button md-logo" aria-label="GetML Developer Portal" data-md-component="logo">
+    <a href="../../.." title="GetML Developer Portal" class="md-nav__button md-logo" aria-label="GetML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     GetML Developer Portal
@@ -412,36 +412,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    Documentation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,48 +430,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getml-in-one-minute" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GetML in one minute
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to use this guide
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -538,7 +470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="home/" class="md-nav__link ">
+            <a href="../../../home/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -610,7 +542,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="home/installation/" class="md-nav__link ">
+            <a href="../../../home/installation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -653,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/mac/" class="md-nav__link">
+      <a href="../../../home/installation/mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/windows/" class="md-nav__link">
+      <a href="../../../home/installation/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/linux/" class="md-nav__link">
+      <a href="../../../home/installation/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/remote_access/" class="md-nav__link">
+      <a href="../../../home/installation/remote_access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/how_to_use_this_guide/" class="md-nav__link">
+      <a href="../../../home/how_to_use_this_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/getting_started/getting_started/" class="md-nav__link">
+      <a href="../../../home/getting_started/getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -823,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/support/support/" class="md-nav__link">
+      <a href="../../../home/support/support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +830,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/" class="md-nav__link ">
+            <a href="../../../user_guide/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -968,7 +900,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/getml_suite/" class="md-nav__link ">
+            <a href="../../../user_guide/getml_suite/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1011,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/engine/" class="md-nav__link">
+      <a href="../../../user_guide/getml_suite/engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/monitor/" class="md-nav__link">
+      <a href="../../../user_guide/getml_suite/monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/python_api/" class="md-nav__link">
+      <a href="../../../user_guide/getml_suite/python_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1100,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/project_management/project_management/" class="md-nav__link">
+      <a href="../../../user_guide/project_management/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1166,7 +1098,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/importing_data/" class="md-nav__link ">
+            <a href="../../../user_guide/importing_data/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1209,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/csv_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/csv_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/pandas_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/pandas_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/json_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/json_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/sqlite3_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/sqlite3_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1317,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/mysql_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/mysql_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/mariadb_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/mariadb_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/postgres_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/postgres_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/greenplum_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/greenplum_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/odbc_interface/" class="md-nav__link">
+      <a href="../../../user_guide/importing_data/odbc_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1460,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../../../user_guide/annotating_data/annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1487,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/data_model/data_model/" class="md-nav__link">
+      <a href="../../../user_guide/data_model/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1514,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/preprocessing/preprocessing/" class="md-nav__link">
+      <a href="../../../user_guide/preprocessing/preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1541,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/feature_engineering/feature_engineering/" class="md-nav__link">
+      <a href="../../../user_guide/feature_engineering/feature_engineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1568,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/predicting/predicting/" class="md-nav__link">
+      <a href="../../../user_guide/predicting/predicting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1595,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/hyperopt/hyperopt/" class="md-nav__link">
+      <a href="../../../user_guide/hyperopt/hyperopt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/deployment/deployment/" class="md-nav__link">
+      <a href="../../../user_guide/deployment/deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1653,6 +1585,8 @@
       
   
   
+    
+  
   
   
     
@@ -1689,19 +1623,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1718,13 +1655,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1797,7 +1734,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/data/" class="md-nav__link ">
+            <a href="../../data/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1840,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/container/" class="md-nav__link">
+      <a href="../../data/container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1867,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/data_frame/" class="md-nav__link">
+      <a href="../../data/data_frame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/data_model/" class="md-nav__link">
+      <a href="../../data/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1921,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/placeholder/" class="md-nav__link">
+      <a href="../../data/placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1948,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/roles_obj/" class="md-nav__link">
+      <a href="../../data/roles_obj/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/star_schema/" class="md-nav__link">
+      <a href="../../data/star_schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2002,7 +1939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/subset/" class="md-nav__link">
+      <a href="../../data/subset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2029,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/time_series/" class="md-nav__link">
+      <a href="../../data/time_series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2056,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/view/" class="md-nav__link">
+      <a href="../../data/view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2083,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/access/" class="md-nav__link">
+      <a href="../../data/access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2110,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/columns/" class="md-nav__link">
+      <a href="../../data/columns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2137,7 +2074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/relationship/" class="md-nav__link">
+      <a href="../../data/relationship/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2164,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/roles/" class="md-nav__link">
+      <a href="../../data/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2191,7 +2128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/split/" class="md-nav__link">
+      <a href="../../data/split/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2218,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/time/" class="md-nav__link">
+      <a href="../../data/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2245,7 +2182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/subroles/" class="md-nav__link">
+      <a href="../../data/subroles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2301,7 +2238,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/database/" class="md-nav__link ">
+            <a href="../../database/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2368,7 +2305,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/datasets/" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2435,7 +2372,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/engine/" class="md-nav__link ">
+            <a href="../../engine/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2508,7 +2445,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/hyperopt/" class="md-nav__link ">
+            <a href="../../hyperopt/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2559,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/gaussian/" class="md-nav__link">
+      <a href="../../hyperopt/gaussian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2594,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/latin/" class="md-nav__link">
+      <a href="../../hyperopt/latin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2629,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/random/" class="md-nav__link">
+      <a href="../../hyperopt/random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2707,7 +2644,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/feature_learning/" class="md-nav__link ">
+            <a href="../../feature_learning/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2750,7 +2687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/fastprop/" class="md-nav__link">
+      <a href="../../feature_learning/fastprop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2777,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/fastboost/" class="md-nav__link">
+      <a href="../../feature_learning/fastboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2812,7 +2749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/multirel/" class="md-nav__link">
+      <a href="../../feature_learning/multirel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2847,7 +2784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/relboost/" class="md-nav__link">
+      <a href="../../feature_learning/relboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2882,7 +2819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/relmt/" class="md-nav__link">
+      <a href="../../feature_learning/relmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2917,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/aggregations/" class="md-nav__link">
+      <a href="../../feature_learning/aggregations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2944,7 +2881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/loss_functions/" class="md-nav__link">
+      <a href="../../feature_learning/loss_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3006,7 +2943,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/project/" class="md-nav__link ">
+            <a href="../../project/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3049,7 +2986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/data_frames/" class="md-nav__link">
+      <a href="../../project/data_frames/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3076,7 +3013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/hyperopts/" class="md-nav__link">
+      <a href="../../project/hyperopts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3103,7 +3040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/pipelines/" class="md-nav__link">
+      <a href="../../project/pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3159,7 +3096,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/preprocessors/" class="md-nav__link ">
+            <a href="../../preprocessors/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3246,7 +3183,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/pipeline/" class="md-nav__link ">
+            <a href="../../pipeline/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3289,7 +3226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/pipeline/" class="md-nav__link">
+      <a href="../../pipeline/pipeline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3316,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/columns/" class="md-nav__link">
+      <a href="../../pipeline/columns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3343,7 +3280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/tables/" class="md-nav__link">
+      <a href="../../pipeline/tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3370,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/features/" class="md-nav__link">
+      <a href="../../pipeline/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3397,7 +3334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/plots/" class="md-nav__link">
+      <a href="../../pipeline/plots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3424,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/scores_container/" class="md-nav__link">
+      <a href="../../pipeline/scores_container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3451,7 +3388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/score/" class="md-nav__link">
+      <a href="../../pipeline/score/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3478,7 +3415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/sql_code/" class="md-nav__link">
+      <a href="../../pipeline/sql_code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3505,7 +3442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/metrics/" class="md-nav__link">
+      <a href="../../pipeline/metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3532,7 +3469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/dialect/" class="md-nav__link">
+      <a href="../../pipeline/dialect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3572,6 +3509,8 @@
                 
   
   
+    
+  
   
   
     
@@ -3599,16 +3538,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/predictors/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3631,7 +3570,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3648,10 +3587,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="reference/predictors/scale_gbm_classifier/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    ScaleGBMClassifier
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--enterprise" title="Enterprise feature">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3674,6 +3647,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getml.predictors.ScaleGBMClassifier.validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3686,7 +3690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/scale_gbm_regressor/" class="md-nav__link">
+      <a href="../scale_gbm_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3721,7 +3725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/linear_regression/" class="md-nav__link">
+      <a href="../linear_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3748,7 +3752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/logistic_regression/" class="md-nav__link">
+      <a href="../logistic_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3775,7 +3779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/xgboost_classifier/" class="md-nav__link">
+      <a href="../xgboost_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3802,7 +3806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/xgboost_regressor/" class="md-nav__link">
+      <a href="../xgboost_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3858,7 +3862,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/sqlite3/" class="md-nav__link ">
+            <a href="../../sqlite3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3904,7 +3908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/cli/" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3992,7 +3996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/fastapi/fastapi/" class="md-nav__link">
+      <a href="../../../integration/fastapi/fastapi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4019,7 +4023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/about/about/" class="md-nav__link">
+      <a href="../../../integration/about/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4054,8 +4058,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4075,21 +4077,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getml-in-one-minute" class="md-nav__link">
+  <a href="#getml.predictors.ScaleGBMClassifier.validate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GetML in one minute
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-this-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to use this guide
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate
       
     </span>
   </a>
@@ -4109,19 +4100,70 @@
               
                 
 
+
+
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Documentation
+  </span>
 
+      </a>
+    </li>
   
 
+      
+      
+        
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    getml.predictors
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
 
               
               <article class="md-content__inner md-typeset">
                 
                   <!-- Tags -->
-
-  
 
 
 
@@ -4135,128 +4177,570 @@
 
 
 <!-- Page content -->
-<h1 id="documentation">Documentation</h1>
-<p>Welcome to the getML technical documentation. This document is written for data
-scientists who want to use the getML software suite for their projects. For
-general information about getML visit <a href="https://getml.com">getml.com</a>. For a collection of
-demo notebooks, visit <a href="https://github.com/getml/getml-demo">getml-demo</a>. You can also <a href="https://www.getml.com/contact">contact
-us</a> for any questions or inquiries.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some components of getML have been open sourced as part of <strong>getML community edition</strong>.  You may have a look at 
-<a href="home/getting_started/getting_started/#community-vs-enterprise-edition">community vs enterprise edition table</a>
-to see the highlights of both the editions. </p>
-</div>
-<h2 id="getml-in-one-minute">GetML in one minute</h2>
-<p>getML is an innovative tool for the end-to-end automation of data
-science projects. It covers everything from convenient data loading procedures 
-to the deployment of trained models. </p>
-<p>Most notably, getML includes advanced algorithms for
-<strong>automated feature engineering</strong> (feature learning) on relational data and time
-series. Feature engineering on relational data is defined as the creation of a 
-flat table by merging and aggregating data. It is sometimes also referred to
-as <strong>data wrangling</strong>. Feature engineering is necessary if your data is distributed
-over more than one data table.</p>
-<p>Automated feature engineering</p>
-<ul>
-<li>Saves up to 90% of the time spent on a data science project</li>
-<li>Increases the prediction accuracy over manual feature engineering </li>
-</ul>
-<p>Andrew Ng, Professor at Stanford
-University and Co-founder of Google Brain described manual feature engineering as follows:</p>
-<blockquote>
-<p><em>Coming up with features is difficult, time-consuming, requires expert
-knowledge. "Applied machine learning" is basically feature engineering.</em></p>
-</blockquote>
-<p>The main purpose of getML is to automate this <em>"difficult, time-consuming"</em> process as much
-as possible.</p>
-<p>getML comes with a high-performance <strong>engine</strong> written in C++ and an intuitive
-<strong>Python API</strong>. Completing a data science project with getML consists of seven
-simple steps.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
+<div class="doc doc-object doc-class">
 
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;one_minute_to_getml&#39;</span><span class="p">)</span>
+
+
+<h1 id="getml.predictors.ScaleGBMClassifier" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">getml.predictors.ScaleGBMClassifier</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h1>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">ScaleGBMClassifier</span><span class="p">(</span>
+    <span class="n">colsample_bylevel</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">colsample_bytree</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">early_stopping_rounds</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">gamma</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">goss_a</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">goss_b</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">learning_rate</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">max_depth</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">min_child_weights</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">n_estimators</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">n_jobs</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">objective</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a></span><span class="p">[</span>
+        <span class="s2">&quot;binary:logistic&quot;</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;binary:logistic&quot;</span><span class="p">,</span>
+    <span class="n">reg_lambda</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">seed</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">5843</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
+
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="getml.predictors.predictor._Predictor">_Predictor</span></code></p>
+
+
+      <p>Standard gradient boosting classifier that fully supports memory mapping
+   and can be used for datasets that do not fit into memory.</p>
+<p>Gradient tree boosting trains an ensemble of decision trees by training
+each tree to predict the <em>prediction error of all previous trees</em> in the
+ensemble:</p>
+<div class="arithmatex">\[
+\min_{\nabla f_{t,i}} \sum_i L(f_{t-1,i} + \nabla f_{t,i}; y_i),
+\]</div>
+<p>where <span class="arithmatex">\(\nabla f_{t,i}\)</span> is the prediction generated by the
+newest decision tree for sample <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(f_{t-1,i}\)</span> is
+the prediction generated by all previous trees, <span class="arithmatex">\(L(...)\)</span> is
+the loss function used and <span class="arithmatex">\(y_i\)</span> is the <a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#target">target</a> we are trying to predict.</p>
+<p>XGBoost implements this general approach by adding two specific components:</p>
 <ol>
-<li>Load the data into the engine</li>
+<li>
+<p>The loss function <span class="arithmatex">\(L(...)\)</span> is approximated using a Taylor series.</p>
+</li>
+<li>
+<p>The leaves of the decision tree <span class="arithmatex">\(\nabla f_{t,i}\)</span> contain weights
+   that can be regularized.</p>
+</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population_table&#39;</span><span class="p">)</span>
-<span class="n">peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;peripheral_table&#39;</span><span class="p">)</span>
-</code></pre></div>
-2. Annotate the data</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
-<span class="n">population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s1">&#39;join_key&#39;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
-<span class="o">...</span>
-</code></pre></div>
-3. Define the data model</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">dm</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">(</span><span class="s2">&quot;POPULATION&quot;</span><span class="p">))</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">peripheral</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">(</span><span class="s2">&quot;PERIPHERAL&quot;</span><span class="p">))</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">POPULATION</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-   <span class="n">dm</span><span class="o">.</span><span class="n">PERIPHERAL</span><span class="p">,</span>
-   <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-4. Train the feature learning algorithm and the predictor</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
-    <span class="n">data_model</span><span class="o">=</span><span class="n">dm</span><span class="p">,</span>
-    <span class="n">feature_learners</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">()</span>
-    <span class="n">predictors</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="p">)</span>
+<p>These weights are calculated as follows:</p>
+<div class="arithmatex">\[
+w_l = -\frac{\sum_{i \in l} g_i}{ \sum_{i \in l} h_i + \lambda},
+\]</div>
+<p>where <span class="arithmatex">\(g_i\)</span> and <span class="arithmatex">\(h_i\)</span> are the first and second order derivative
+of <span class="arithmatex">\(L(...)\)</span> w.r.t. <span class="arithmatex">\(f_{t-1,i}\)</span>, <span class="arithmatex">\(w_l\)</span> denotes the weight
+on leaf <span class="arithmatex">\(l\)</span> and <span class="arithmatex">\(i \in l\)</span> denotes all samples on that leaf.</p>
+<p><span class="arithmatex">\(\lambda\)</span> is the regularization parameter <code>reg_lambda</code>.
+This hyperparameter can be set by the users or the hyperparameter
+optimization algorithm to avoid overfitting.</p>
 
-<span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral</span><span class="p">]</span>
-<span class="p">)</span>
+
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>colsample_bylevel</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Subsample ratio for the columns used, for each level
+inside a tree.</p>
+<p>Note that ScaleGBM grows its trees level-by-level, not
+node-by-node.
+At each level, a subselection of the features will be randomly
+picked and the best
+feature for each split will be chosen. This hyperparameter
+determines the share of features randomly picked at each level.
+When set to 1, then now such sampling takes place.</p>
+<p><em>Decreasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: (0, 1]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colsample_bytree</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Subsample ratio for the columns used, for each tree.
+This means that for each tree, a subselection
+of the features will be randomly chosen. This hyperparameter
+determines the share of features randomly picked for each tree.</p>
+<p><em>Decreasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: (0, 1]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>early_stopping_rounds</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The number of early_stopping_rounds for which we see
+no improvement on the validation set until we stop
+the training process.</p>
+<p>Range: (0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>10</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>gamma</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Minimum loss reduction required for any update
+to the tree. This means that every potential update
+will first be evaluated for its improvement to the loss
+function. If the improvement exceeds gamma,
+the update will be accepted.</p>
+<p><em>Increasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>goss_a</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Share of the samples with the largest residuals
+taken for each tree.</p>
+<p>If <code>goss_a</code> is set to 1, then gradients one-sided
+sampling is effectively turned off.</p>
+<p>Range: [0, 1]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>goss_b</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Share of the samples that are not in the <code>goss_a</code>
+percentile of largest residuals randomly sampled
+for each tree.</p>
+<p>The sum of <code>goss_a</code> and <code>goss_b</code> cannot exceed
+1.</p>
+<p>Range: [0, 1]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>learning_rate</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Learning rate for the gradient boosting algorithm.
+When a new tree <span class="arithmatex">\(\nabla f_{t,i}\)</span> is trained,
+it will be added to the existing trees
+<span class="arithmatex">\(f_{t-1,i}\)</span>. Before doing so, it will be
+multiplied by the <em>learning_rate</em>.</p>
+<p><em>Decreasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [0, 1]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.1</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>max_depth</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Maximum allowed depth of the trees.</p>
+<p><em>Decreasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>3</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>min_child_weights</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Minimum sum of weights needed in each child node for a
+split. The idea here is that any leaf should have
+a minimum number of samples in order to avoid overfitting.
+This very common form of regularizing decision trees is
+slightly
+modified to refer to weights instead of number of samples,
+but the basic idea is the same.</p>
+<p><em>Increasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_estimators</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Number of estimators (trees).</p>
+<p><em>Decreasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [10, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>100</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_jobs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Number of parallel threads. When set to zero, then
+the optimal number of threads will be inferred automatically.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>objective</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Specify the learning task and the corresponding
+learning objective.</p>
+<p>Possible values:</p>
+<ul>
+<li><code>binary:logistic</code></li>
+</ul>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;binary:logistic&#39;]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;binary:logistic&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reg_lambda</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>L2 regularization on the weights. Please refer to
+the introductory remarks to understand how this
+hyperparameter influences your weights.</p>
+<p><em>Increasing</em> this hyperparameter reduces the
+likelihood of overfitting.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>seed</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Seed used for random sampling and other random
+factors.</p>
+<p>Range: [0, ∞]</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>5843</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="getml.predictors.ScaleGBMClassifier.validate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">validate</span>
+
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate</span><span class="p">(</span><span class="n">params</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
-5. Evaluate</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral_unseen</span><span class="p">]</span>
-<span class="p">)</span>
-</code></pre></div>
-6. Predict   </p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral_unseen</span><span class="p">]</span>
-<span class="p">)</span>
-</code></pre></div>
-7. Deploy</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># Allow the pipeline to respond to HTTP requests</span>
-<span class="n">pipe</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-Check out the rest of this documentation to find out how getML achieves top
-performance on real-world data science projects with many tables and complex
-data schemes.</p>
-<hr />
-<h2 id="how-to-use-this-guide">How to use this guide</h2>
-<p>If you want to get started with getML right away, we recommend to follow the
-<a class="autorefs autorefs-internal" href="home/installation/#installation_1">installation instructions</a> and then go through the
-<a class="autorefs autorefs-internal" href="home/getting_started/getting_started/#get-started-with-getml">getting started guide</a>. </p>
-<p>If you are looking for more detailed information, other sections of this
-documentation are more suitable. There are three major parts: </p>
-<p><a href="https://github.com/getml/getml-demo">Tutorials</a></p>
-<p>The tutorials section contains examples of how to use getML in 
-  real-world projects. All tutorials are based on public data sets 
-  so that
-  you can follow along. If you are looking for an intuitive access to
-  getML, the tutorials section is the right place to go. Also, the
-  code examples are explicitly intended to be used as a template for
-  your own projects.  </p>
-<p><a class="autorefs autorefs-internal" href="user_guide/#user-guide_1">User guide</a></p>
-<p>The user guide explains all conceptional details behind getML in
-  depth. It can serve as a reference guide for experienced users but it's also
-  suitable for first day users who want to get a deeper understanding
-  of how getML works. Each chapter in the
-  user guide represents one step of a typical data science project.</p>
-<p><a class="autorefs autorefs-internal" href="reference/#python-api_1">API documentation</a></p>
-<p>The API documentation covers everything related to the Python
-  interface to the getML engine. Each module comes with a dedicated
-  section that contains concrete code examples.</p>
-<p>You can also check out our other resources</p>
-<p><a href="https://getml.com">getML homepage</a></p>
+
+    <div class="doc doc-contents ">
+
+      <p>Checks both the types and the values of all instance
+variables and raises an exception if something is off.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A dictionary containing
+the parameters to validate. If not is passed,
+the own parameters will be validated.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="note" open>
+  <summary>Note</summary>
+  <p>This method is called at end of the <code>__init__</code> constructor
+and every time before the predictor - or a class holding
+it as an instance variable - is sent to the getML engine.</p>
+</details>
+            <details class="quote">
+              <summary>Source code in <code>getml/predictors/scale_gbm_classifier.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks both the types and the values of all instance</span>
+<span class="sd">    variables and raises an exception if something is off.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        params: A dictionary containing</span>
+<span class="sd">            the parameters to validate. If not is passed,</span>
+<span class="sd">            the own parameters will be validated.</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        This method is called at end of the `__init__` constructor</span>
+<span class="sd">        and every time before the predictor - or a class holding</span>
+<span class="sd">        it as an instance variable - is sent to the getML engine.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">}</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;params must be None or a dictionary!&quot;</span><span class="p">)</span>
+
+    <span class="n">unsupported_params</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">params</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_supported_params</span>
+    <span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">unsupported_params</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+            <span class="s2">&quot;The following instance variables are not supported &quot;</span>
+            <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">unsupported_params</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">_validate_scalegbm_parameters</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 <!-- Source file information -->
 
@@ -4275,8 +4759,6 @@ documentation are more suitable. There are three major parts: </p>
 
   
 
-
-  
 
 
 
@@ -4382,18 +4864,18 @@ documentation are more suitable. There are three major parts: </p>
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "announce.dismiss", "content.code.copy"], "search": "assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">
