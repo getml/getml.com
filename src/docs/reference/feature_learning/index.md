@@ -1,3 +1,7 @@
+---
+title: Feature Learning
+---
+
 ::: getml.feature_learning
     options:
       members: false
