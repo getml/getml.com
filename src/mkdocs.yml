@@ -21,7 +21,7 @@ theme:
   custom_dir: overrides
   logo: assets/brand/getml-light.svg
   logo_dark_mode: assets/brand/getml-dark.svg
-  favicon: assets/brand/logo-color.png
+  favicon: images/favicon.png
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -84,7 +84,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
   icon:
     logo: logo
 
