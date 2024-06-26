@@ -306,6 +306,6 @@ nav:
   - Integration:
     - FastAPI: integration/fastapi/fastapi.md
   - About:
-    - About: about/about.md
+    - about/index.md
     - Imprint: about/imprint.md
     - Disclaimer: about/disclaimer.md
