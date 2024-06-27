@@ -23,9 +23,9 @@ theme:
   logo_dark_mode: assets/brand/getml-dark.svg
   favicon: images/favicon.png
   features:
-    - navigation.instant
+    # - navigation.instant
     - navigation.instant.prefetch
-    - navigation.instant.progress
+    # - navigation.instant.progress
     # - navigation.instant.preview # disable! enable on page basis
     - navigation.tracking
     - navigation.tabs
@@ -205,7 +205,7 @@ nav:
         - Monitor: user_guide/getml_suite/monitor.md
         - Python API: user_guide/getml_suite/python_api.md
       - Managing projects: user_guide/project_management/project_management.md
-      - Importing data: 
+      - Importing data:
         - user_guide/importing_data/index.md
         - CSV interface: user_guide/importing_data/csv_interface.md
         - Pandas interface: user_guide/importing_data/pandas_interface.md
@@ -224,7 +224,7 @@ nav:
       - Hyperparameter optimization: user_guide/hyperopt/hyperopt.md
       - Deployment: user_guide/deployment/deployment.md
 
-      
+
   - API Reference:
     - reference/index.md
     - getml.data:
@@ -251,7 +251,7 @@ nav:
       - reference/datasets/index.md
     - getml.engine:
       - reference/engine/index.md
-    - getml.hyperopt: 
+    - getml.hyperopt:
       - reference/hyperopt/index.md
       - Gaussian Process: reference/hyperopt/gaussian.md
       - Latin Hypercube: reference/hyperopt/latin.md
