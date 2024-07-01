@@ -4314,7 +4314,9 @@
     <span class="n">allow_avg</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">delta_t</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="n">gamma</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
-    <span class="n">loss_function</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">loss_function</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span>
+        <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a></span><span class="p">]</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">max_depth</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
     <span class="n">min_df</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
     <span class="n">min_num_samples</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
@@ -4346,223 +4348,278 @@ with linear models on its leaves.</p>
 algorithm, check out the User Guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#relmt">RelMT</a>.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
-          <th><span class="doc-section-title">ATTRIBUTE</span></th>
+          <th><span class="doc-section-title">PARAMETER</span></th>
           <th><span>DESCRIPTION</span></th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.allow_avg">allow_avg</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>allow_avg</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Whether to allow an AVG aggregation. Particularly for time
 series problems, AVG aggregations are not necessary and you
 can save some time by taking them out.</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.delta_t">delta_t</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>delta_t</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Frequency with which lag variables will be explored in a
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
-<p>For more information, please refer to <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Data Model Time Series</a>. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>For more information, please refer to <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a> in the User Guide. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.gamma">gamma</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>gamma</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>During the training of RelMT, which is based on
 gradient tree boosting, this value serves as the minimum
 improvement in terms of the <code>loss_function</code> required for a
 split of the tree to be applied. Larger <code>gamma</code> will lead
 to fewer partitions of the tree and a more conservative
-algorithm. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+algorithm. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
                   </span>
-              </p>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.loss_function">loss_function</span></code></td>
-            <td class="doc-attribute-details">
-              <div class="doc-md-description">
-                <p>Objective function used by the feature learning algorithm
-to optimize your features. For regression problems use
-<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
-classification problems use
-<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
-              </div>
-              <p>
-                  <span class="doc-attribute-annotation">
-                    <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.max_depth">max_depth</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>loss_function</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Objective function used by the feature learning algorithm
+to optimize your features. For regression problems use
+<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SQUARELOSS"><code>SquareLoss</code></a> and for
+classification problems use
+<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CROSSENTROPYLOSS"><code>CrossEntropyLoss</code></a>.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a>]]</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>max_depth</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Maximum depth of the trees generated during the gradient
 tree boosting. Deeper trees will result in more complex
 models and increase the risk of overfitting. Range: [0,
-<span class="arithmatex">\(\infty\)</span>]</p>
+∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>2</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.min_df">min_df</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>min_df</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Only relevant for columns with role <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
 The minimum
 number of fields (i.e. rows) in <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a> column a
 given word is required to appear in to be included in the bag of words.
-Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>30</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.min_num_samples">min_num_samples</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>min_num_samples</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Determines the minimum number of samples a subcondition
 should apply to in order for it to be considered. Higher
 values lead to less complex statements and less danger of
-overfitting. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+overfitting. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.num_features">num_features</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>num_features</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Number of features generated by the feature learning
-algorithm. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+algorithm. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>30</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.num_subfeatures">num_subfeatures</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>num_subfeatures</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
 :ref:<code>data_model_snowflake_schema</code> for more
-information. Range: [1, <span class="arithmatex">\(\infty\)</span>]</p>
+information. Range: [1, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>30</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.num_threads">num_threads</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>num_threads</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Number of threads used by the feature learning algorithm. If set to
 zero or a negative value, the number of threads will be
 determined automatically by the getML engine. Range:
-[-<span class="arithmatex">\(\infty\)</span>, <span class="arithmatex">\(\infty\)</span>]</p>
+[-∞, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.propositionalization">propositionalization</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>propositionalization</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The feature learner used for joins which are flagged to be
 propositionalized (by setting a join's <code>relationship</code> parameter to
 <a class="autorefs autorefs-internal" href="../../data/relationship/#getml.data.relationship.propositionalization"><code>propositionalization</code></a>)</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.FastProp">FastProp</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.fastprop.FastProp" href="../fastprop/#getml.feature_learning.FastProp">FastProp</a>()</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.reg_lambda">reg_lambda</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>reg_lambda</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>L2 regularization on the weights in the gradient boosting
 routine. This is one of the most important hyperparameters
 in the <a class="autorefs autorefs-internal" href="#getml.feature_learning.RelMT"><code>RelMT</code></a> as it allows
 for the most direct regularization. Larger values will
 make the resulting model more conservative. Range: [0,
-<span class="arithmatex">\(\infty\)</span>]</p>
+∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.sampling_factor">sampling_factor</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>sampling_factor</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>RelMT uses a bootstrapping procedure (sampling with
 replacement) to train each of the features. The sampling
@@ -4575,36 +4632,44 @@ training. When set to 1.0, roughly 20,000 samples are drawn
 from the population table. If the population table
 contains less than 20,000 samples, it will use standard
 bagging. When set to 0.0, there will be no sampling at
-all. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+all. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1.0</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.seed">seed</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>seed</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Seed used for the random number generator that underlies
 the sampling procedure to make the calculation
 reproducible. Internally, a <code>seed</code> of None will be mapped to
-5543. Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+5543. Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>5543</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.shrinkage">shrinkage</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>shrinkage</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Since RelMT works using a gradient-boosting-like
 algorithm, <code>shrinkage</code> (or learning rate) scales down the
@@ -4615,40 +4680,52 @@ be between 0.0 and 1.0 with higher values leading to more
 danger of overfitting. Range: [0, 1]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>0.1</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.silent">silent</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Controls the logging during training.</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
                   </span>
               </p>
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code><span title="getml.feature_learning.RelMT.vocab_size">vocab_size</span></code></td>
-            <td class="doc-attribute-details">
+            <td><code>vocab_size</code></td>
+            <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Determines the maximum number
 of words that are extracted in total from <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>
 columns. This can be interpreted as the maximum size of the bag of words.
-Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+Range: [0, ∞]</p>
               </div>
               <p>
-                  <span class="doc-attribute-annotation">
+                  <span class="doc-param-annotation">
                     <b>TYPE:</b>
                       <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>500</code>
                   </span>
               </p>
             </td>
@@ -4656,11 +4733,6 @@ Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
 
 
 
@@ -4710,7 +4782,7 @@ the own parameters will be validated.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4724,11 +4796,7 @@ the own parameters will be validated.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/feature_learning/relmt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
 <span class="normal">186</span>
@@ -4762,13 +4830,17 @@ the own parameters will be validated.</p>
 <span class="normal">214</span>
 <span class="normal">215</span>
 <span class="normal">216</span>
-<span class="normal">217</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks both the types and the values of all instance</span>
 <span class="sd">    variables and raises an exception if something is off.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        params (dict, optional): A dictionary containing</span>
+<span class="sd">        params: A dictionary containing</span>
 <span class="sd">            the parameters to validate. If not is passed,</span>
 <span class="sd">            the own parameters will be validated.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

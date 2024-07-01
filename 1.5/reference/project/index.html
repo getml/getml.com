@@ -4427,7 +4427,9 @@ If None, the name will be extracted from the bundle.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">80</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
 <span class="normal">81</span>
 <span class="normal">82</span>
 <span class="normal">83</span>
@@ -4436,9 +4438,7 @@ If None, the name will be extracted from the bundle.</p>
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">bundle</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Loads a project from a bundle and connects to it.</span>
@@ -4447,7 +4447,7 @@ If None, the name will be extracted from the bundle.</p>
 <span class="sd">        bundle: The `.getml` bundle file to load.</span>
 
 <span class="sd">        name: A name for the project contained in the bundle.</span>
-<span class="sd">          If None, the name will be extracted from the bundle.</span>
+<span class="sd">            If None, the name will be extracted from the bundle.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">comm</span><span class="o">.</span><span class="n">_load_project</span><span class="p">(</span><span class="n">bundle</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -4474,13 +4474,13 @@ data frames and hyperopts will be irretrievably deleted.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">delete</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Deletes the currently connected project. All related pipelines,</span>
@@ -4511,13 +4511,13 @@ This will kill all jobs currently running on that process.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">103</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
 <span class="normal">104</span>
 <span class="normal">105</span>
 <span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+<span class="normal">107</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">restart</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Suspends and then relaunches the currently connected project.</span>
@@ -4580,7 +4580,7 @@ This will kill all jobs currently running on that process.</p>
             <td><code>target_dir</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>the directory to save the bundle to.
+                <p>The directory to save the bundle to.
 If None, the current working directory is used.</p>
               </div>
               <p>
@@ -4618,7 +4618,9 @@ If None, the current working directory is used.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
 <span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
@@ -4633,9 +4635,7 @@ If None, the current working directory is used.</p>
 <span class="normal">124</span>
 <span class="normal">125</span>
 <span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">save</span><span class="p">(</span>
     <span class="n">filename</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">target_dir</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -4647,8 +4647,8 @@ If None, the current working directory is used.</p>
 <span class="sd">    Args:</span>
 <span class="sd">        filename: The name of the `.getml` bundle file</span>
 
-<span class="sd">        target_dir: the directory to save the bundle to.</span>
-<span class="sd">          If None, the current working directory is used.</span>
+<span class="sd">        target_dir: The directory to save the bundle to.</span>
+<span class="sd">            If None, the current working directory is used.</span>
 
 <span class="sd">        replace: Whether to replace an existing bundle.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -4676,12 +4676,12 @@ If None, the current working directory is used.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">132</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+<span class="normal">135</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">suspend</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Suspends the currently connected project.</span>
@@ -4739,7 +4739,9 @@ information.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/project/attrs.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">140</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
 <span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
@@ -4748,9 +4750,7 @@ information.</p>
 <span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
+<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@module_function</span>
 <span class="k">def</span> <span class="nf">switch</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a new project or loads an existing one.</span>
 

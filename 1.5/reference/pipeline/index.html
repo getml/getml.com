@@ -4514,7 +4514,7 @@ syntactic sugar for this approach):</p>
 <span class="p">)</span>
 </code></pre></div>
 Or you could even do this. The order of the peripheral tables
-can be inferred from the __repr__ method of the pipeline,
+can be inferred from the <code>__repr__()</code> method of the pipeline,
 and it is usually in alphabetical order.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">check</span><span class="p">(</span>
     <span class="n">population_train</span><span class="p">,</span>
@@ -4587,9 +4587,7 @@ and it is usually in alphabetical order.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
 <span class="normal">134</span>
 <span class="normal">135</span>
 <span class="normal">136</span>
@@ -4600,12 +4598,14 @@ and it is usually in alphabetical order.</p>
 <span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
-<span class="normal">144</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    If a pipeline named &#39;name&#39; exists, it is deleted.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        name (str):</span>
+<span class="sd">        name:</span>
 <span class="sd">            Name of the pipeline.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -4661,9 +4661,34 @@ and it is usually in alphabetical order.</p>
       </tbody>
     </table>
 
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>True if the pipeline exists, False otherwise.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/helpers2.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
+<span class="normal">112</span>
 <span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
@@ -4676,13 +4701,18 @@ and it is usually in alphabetical order.</p>
 <span class="normal">122</span>
 <span class="normal">123</span>
 <span class="normal">124</span>
-<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns true if a pipeline named &#39;name&#39; exists.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        name (str):</span>
 <span class="sd">            Name of the pipeline.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">            True if the pipeline exists, False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;&#39;name&#39; must be of type str&quot;</span><span class="p">)</span>
@@ -4734,7 +4764,7 @@ the lifecycles of the pipelines.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>list containing the names of all pipelines.</p>
+                <p>List containing the names of all pipelines.</p>
               </div>
             </td>
           </tr>
@@ -4781,7 +4811,7 @@ the lifecycles of the pipelines.</p>
 <span class="sd">    [`load`][getml.pipeline.load].</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        list containing the names of all pipelines.</span>
+<span class="sd">        List containing the names of all pipelines.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">cmd</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
@@ -4860,19 +4890,7 @@ the lifecycles of the pipelines.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>A <a class="autorefs autorefs-internal" href="pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> that is a handler</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-internal" title="getml.pipeline.pipeline.Pipeline" href="pipeline/#getml.pipeline.Pipeline">Pipeline</a></code>
-                </span>
-            </td>
-            <td class="doc-returns-details">
-              <div class="doc-md-description">
-                <p>for the pipeline signified by name.</p>
+                <p>Pipeline that is a handler for the pipeline signified by name.</p>
               </div>
             </td>
           </tr>
@@ -4891,16 +4909,14 @@ the lifecycles of the pipelines.</p>
 <span class="normal">102</span>
 <span class="normal">103</span>
 <span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
+<span class="normal">105</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Loads a pipeline from the getML engine into Python.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        name: The name of the pipeline to be loaded.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        A [`Pipeline`][getml.Pipeline] that is a handler</span>
-<span class="sd">        for the pipeline signified by name.</span>
+<span class="sd">        Pipeline that is a handler for the pipeline signified by name.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">return</span> <span class="n">_make_dummy</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>

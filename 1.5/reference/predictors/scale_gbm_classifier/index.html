@@ -4369,6 +4369,13 @@ This hyperparameter can be set by the users or the hyperparameter
 optimization algorithm to avoid overfitting.</p>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <table>
       <thead>
         <tr>
@@ -4437,7 +4444,7 @@ likelihood of overfitting.</p>
                 <p>The number of early_stopping_rounds for which we see
 no improvement on the validation set until we stop
 the training process.</p>
-<p>Range: (0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: (0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4462,7 +4469,7 @@ function. If the improvement exceeds gamma,
 the update will be accepted.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4553,7 +4560,7 @@ likelihood of overfitting.</p>
                 <p>Maximum allowed depth of the trees.</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4580,7 +4587,7 @@ modified to refer to weights instead of number of samples,
 but the basic idea is the same.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4601,7 +4608,7 @@ likelihood of overfitting.</p>
                 <p>Number of estimators (trees).</p>
 <p><em>Decreasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
-<p>Range: [10, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [10, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4621,7 +4628,7 @@ likelihood of overfitting.</p>
               <div class="doc-md-description">
                 <p>Number of parallel threads. When set to zero, then
 the optimal number of threads will be inferred automatically.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4667,7 +4674,7 @@ the introductory remarks to understand how this
 hyperparameter influences your weights.</p>
 <p><em>Increasing</em> this hyperparameter reduces the
 likelihood of overfitting.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4687,7 +4694,7 @@ likelihood of overfitting.</p>
               <div class="doc-md-description">
                 <p>Seed used for random sampling and other random
 factors.</p>
-<p>Range: [0, <span class="arithmatex">\(\infty\)</span>]</p>
+<p>Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4768,20 +4775,13 @@ the own parameters will be validated.</p>
 
 <details class="note" open>
   <summary>Note</summary>
-  <p>This method is called at end of the __init__ constructor
+  <p>This method is called at end of the <code>__init__</code> constructor
 and every time before the predictor - or a class holding
 it as an instance variable - is sent to the getML engine.</p>
 </details>
             <details class="quote">
               <summary>Source code in <code>getml/predictors/scale_gbm_classifier.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">318</span>
-<span class="normal">319</span>
-<span class="normal">320</span>
-<span class="normal">321</span>
-<span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">325</span>
 <span class="normal">326</span>
 <span class="normal">327</span>
 <span class="normal">328</span>
@@ -4807,7 +4807,14 @@ it as an instance variable - is sent to the getML engine.</p>
 <span class="normal">348</span>
 <span class="normal">349</span>
 <span class="normal">350</span>
-<span class="normal">351</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks both the types and the values of all instance</span>
 <span class="sd">    variables and raises an exception if something is off.</span>
 
@@ -4817,7 +4824,7 @@ it as an instance variable - is sent to the getML engine.</p>
 <span class="sd">            the own parameters will be validated.</span>
 
 <span class="sd">    Note:</span>
-<span class="sd">        This method is called at end of the \_\_init\_\_ constructor</span>
+<span class="sd">        This method is called at end of the `__init__` constructor</span>
 <span class="sd">        and every time before the predictor - or a class holding</span>
 <span class="sd">        it as an instance variable - is sent to the getML engine.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

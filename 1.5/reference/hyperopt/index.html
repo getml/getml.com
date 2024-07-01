@@ -4452,6 +4452,13 @@
 </ul>
 
 
+<details class="enterprise-adm" open>
+  <summary>Enterprise edition</summary>
+  <p>This feature is available in the getML
+<a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
+</details>
+
 <details class="example" open>
   <summary>Example</summary>
   <p>The easiest way to conduct a hyperparameter optimization
@@ -4696,7 +4703,7 @@ we use very small data sets as we do in this example.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">list_hyperopts</span><span class="p">()</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">list_hyperopts</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4706,7 +4713,7 @@ we use very small data sets as we do in this example.</p>
 current project. See <a class="autorefs autorefs-internal" href="../engine/#getml.engine.set_project"><code>set_project</code></a> for
 changing projects.</p>
 <p>To subsequently load one of them, use
-[<code>load_hyperopt</code>][getml.hyperopt.load_hyperopt].</p>
+<a class="autorefs autorefs-internal" href="#getml.hyperopt.load_hyperopt.load_hyperopt"><code>load_hyperopt</code></a>.</p>
 
 
 <table>
@@ -4719,6 +4726,9 @@ changing projects.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]</code>
+                </span>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
@@ -4729,11 +4739,6 @@ changing projects.</p>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/helpers.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
@@ -4761,10 +4766,7 @@ changing projects.</p>
 <span class="normal">41</span>
 <span class="normal">42</span>
 <span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_hyperopts</span><span class="p">():</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_hyperopts</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Lists all hyperparameter optimization objects present in the engine.</span>
 
 <span class="sd">    Note that this function only lists hyperopts which are part of the</span>
@@ -4772,13 +4774,10 @@ changing projects.</p>
 <span class="sd">    changing projects.</span>
 
 <span class="sd">    To subsequently load one of them, use</span>
-<span class="sd">    [`load_hyperopt`][getml.hyperopt.load_hyperopt].</span>
+<span class="sd">    [`load_hyperopt`][getml.hyperopt.load_hyperopt.load_hyperopt].</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        list containing the names of all hyperopts.</span>
-
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -4821,7 +4820,7 @@ changing projects.</p>
     <div class="doc doc-contents ">
 
       <p>A high-level interface for optimizing the feature learners of a
-[<code>Pipeline</code>][getml.pipelines.Pipeline].</p>
+<a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 <p>Efficiently optimizes the hyperparameters for the set of feature learners
 (from <a class="autorefs autorefs-internal" href="../feature_learning/#getml.feature_learning"><code>feature_learning</code></a>) of a given pipeline by breaking each
 feature learner's hyperparameter space down into carefully curated
@@ -4999,14 +4998,11 @@ the number of threads will be inferred.</p>
     <span class="n">container</span><span class="o">=</span><span class="n">container</span><span class="p">)</span>
 </code></pre></div>
 </details>
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/tuning.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">231</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
 <span class="normal">232</span>
 <span class="normal">233</span>
 <span class="normal">234</span>
@@ -5102,12 +5098,7 @@ the number of threads will be inferred.</p>
 <span class="normal">324</span>
 <span class="normal">325</span>
 <span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tune_feature_learners</span><span class="p">(</span>
+<span class="normal">327</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tune_feature_learners</span><span class="p">(</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
     <span class="n">container</span><span class="p">:</span> <span class="n">Container</span><span class="p">,</span>
     <span class="n">train</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span><span class="p">,</span>
@@ -5118,7 +5109,7 @@ the number of threads will be inferred.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A high-level interface for optimizing the feature learners of a</span>
-<span class="sd">    [`Pipeline`][getml.pipelines.Pipeline].</span>
+<span class="sd">    [`Pipeline`][getml.pipeline.Pipeline].</span>
 
 <span class="sd">    Efficiently optimizes the hyperparameters for the set of feature learners</span>
 <span class="sd">    (from [`feature_learning`][getml.feature_learning]) of a given pipeline by breaking each</span>
@@ -5167,9 +5158,6 @@ the number of threads will be inferred.</p>
 <span class="sd">            pipeline=base_pipeline,</span>
 <span class="sd">            container=container)</span>
 <span class="sd">        ```</span>
-
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">):</span>
@@ -5239,7 +5227,8 @@ the number of threads will be inferred.</p>
       <p>A high-level interface for optimizing the predictors of a
 <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 <p>Efficiently optimizes the hyperparameters for the set of predictors (from
-<code>getml.predictors</code>) of a given pipeline by breaking each predictor's
+<a class="autorefs autorefs-internal" href="../predictors/#getml.predictors"><code>getml.predictors</code></a>) of a given pipeline by breaking each
+predictor's
 hyperparameter space down into carefully curated
 subspaces: <code>hyperopt_tuning_subspaces</code> and optimizing the hyperparameters for
 each subspace in a sequential multi-step process.  For further details about
@@ -5415,14 +5404,14 @@ the number of threads will be inferred.</p>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/tuning.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
 <span class="normal">339</span>
 <span class="normal">340</span>
 <span class="normal">341</span>
@@ -5516,13 +5505,7 @@ the number of threads will be inferred.</p>
 <span class="normal">429</span>
 <span class="normal">430</span>
 <span class="normal">431</span>
-<span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
-<span class="normal">435</span>
-<span class="normal">436</span>
-<span class="normal">437</span>
-<span class="normal">438</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tune_predictors</span><span class="p">(</span>
+<span class="normal">432</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">tune_predictors</span><span class="p">(</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
     <span class="n">container</span><span class="p">:</span> <span class="n">Container</span><span class="p">,</span>
     <span class="n">train</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span><span class="p">,</span>
@@ -5536,7 +5519,8 @@ the number of threads will be inferred.</p>
 <span class="sd">    [`Pipeline`][getml.Pipeline].</span>
 
 <span class="sd">    Efficiently optimizes the hyperparameters for the set of predictors (from</span>
-<span class="sd">    `getml.predictors`) of a given pipeline by breaking each predictor&#39;s</span>
+<span class="sd">    [`getml.predictors`][getml.predictors]) of a given pipeline by breaking each</span>
+<span class="sd">    predictor&#39;s</span>
 <span class="sd">    hyperparameter space down into carefully curated</span>
 <span class="sd">    subspaces: `hyperopt_tuning_subspaces` and optimizing the hyperparameters for</span>
 <span class="sd">    each subspace in a sequential multi-step process.  For further details about</span>
@@ -5583,8 +5567,6 @@ the number of threads will be inferred.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        Pipeline containing tuned predictors.</span>
 
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">):</span>
@@ -5696,7 +5678,10 @@ the number of threads will be inferred.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/helpers.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
@@ -5705,10 +5690,7 @@ the number of threads will be inferred.</p>
 <span class="normal">59</span>
 <span class="normal">60</span>
 <span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">exists</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Determines whether a hyperopt exists.</span>
 
 <span class="sd">    Args:</span>
@@ -5770,7 +5752,10 @@ the number of threads will be inferred.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/helpers.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
 <span class="normal">72</span>
 <span class="normal">73</span>
 <span class="normal">74</span>
@@ -5786,10 +5771,7 @@ the number of threads will be inferred.</p>
 <span class="normal">84</span>
 <span class="normal">85</span>
 <span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">87</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    If a hyperopt named &#39;name&#39; exists, it is deleted.</span>
 
@@ -5894,11 +5876,6 @@ the number of threads will be inferred.</p>
       </tbody>
     </table>
 
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>Not supported in the getML community edition.</p>
-</details>
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/load_hyperopt.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
@@ -5936,9 +5913,7 @@ the number of threads will be inferred.</p>
 <span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_hyperopt</span><span class="p">(</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_hyperopt</span><span class="p">(</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">GaussianHyperparameterSearch</span><span class="p">,</span> <span class="n">LatinHypercubeSearch</span><span class="p">,</span> <span class="n">RandomSearch</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Loads a hyperparameter optimization object from the getML engine into Python.</span>
@@ -5950,8 +5925,6 @@ the number of threads will be inferred.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        The hyperopt object.</span>
 
-<span class="sd">    Note:</span>
-<span class="sd">        Not supported in the getML community edition.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># This will be overwritten by .refresh(...) anyway</span>
     <span class="n">dummy_pipeline</span> <span class="o">=</span> <span class="n">_make_dummy</span><span class="p">(</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>

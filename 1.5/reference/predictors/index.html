@@ -4225,15 +4225,15 @@
 
     <div class="doc doc-contents first">
 
-      <p>This module contains machine learning algorithms to learn and predict on the
-generated features.</p>
-<p>The predictor classes defined in this module serve two
-purposes. First, a predictor can be used as a <code>feature_selector</code>
+      <p>The predictor classes defined in this module <strong>serve two purposes</strong>.</p>
+<p>First, a predictor can be used as a <strong>feature selector</strong>
 in <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> to only select the best features
 generated during the automated feature learning and to get rid of
-any redundancies. Second, by using it as a <code>predictor</code>, it will
+any redundancies.</p>
+<p>Second, by using it as a <strong>predictor</strong>, it will
 be trained on the features of the supplied data set and used to
-predict to unknown results. Every time a new data set is passed to
+predict unknown results.</p>
+<p>Every time a new data set is passed to
 the <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict</code></a> method of one of the
 models, the raw relational data is interpreted in the
 data model, which was provided during the construction of the model,
@@ -4242,13 +4242,15 @@ algorithm, and, finally, its <a class="autorefs autorefs-internal" href="../../u
 will be predicted using the trained predictor.</p>
 <p>The algorithms can be grouped according to their finesse and
 whether you want to use them for a classification or
-regression problem.</p>
+regression problem. For memory intensive applications, the getML
+Enterprise edition offers predictors with memory mapping .</p>
 <table>
 <thead>
 <tr>
 <th></th>
 <th>simple</th>
 <th>sophisticated</th>
+<th>memory intensive</th>
 </tr>
 </thead>
 <tbody>
@@ -4256,11 +4258,13 @@ regression problem.</p>
 <td><strong>regression</strong></td>
 <td><a class="autorefs autorefs-internal" href="linear_regression/#getml.predictors.LinearRegression"><code>LinearRegression</code></a></td>
 <td><a class="autorefs autorefs-internal" href="xgboost_regressor/#getml.predictors.XGBoostRegressor"><code>XGBoostRegressor</code></a></td>
+<td><a class="autorefs autorefs-internal" href="scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor"><code>ScaleGBMRegressor</code></a></td>
 </tr>
 <tr>
 <td><strong>classification</strong></td>
 <td><a class="autorefs autorefs-internal" href="logistic_regression/#getml.predictors.LogisticRegression"><code>LogisticRegression</code></a></td>
 <td><a class="autorefs autorefs-internal" href="xgboost_classifier/#getml.predictors.XGBoostClassifier"><code>XGBoostClassifier</code></a></td>
+<td><a class="autorefs autorefs-internal" href="scale_gbm_classifier/#getml.predictors.ScaleGBMClassifier"><code>ScaleGBMClassifier</code></a></td>
 </tr>
 </tbody>
 </table>

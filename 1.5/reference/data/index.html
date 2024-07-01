@@ -4667,7 +4667,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="columns/#getml.data.columns.FloatColumnView">FloatColumnView</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4685,11 +4685,13 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
       <tbody>
           <tr class="doc-section-item">
             <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="columns/#getml.data.columns.FloatColumnView">FloatColumnView</a></code>
+                </span>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p><a class="autorefs autorefs-internal" href="columns/#getml.data.columns.FloatColumnView"><code>FloatColumnView</code></a>:
-(numerical) column containing the row id, starting with 0</p>
+                <p>(numerical) column containing the row id, starting with 0</p>
               </div>
             </td>
           </tr>
@@ -4705,13 +4707,11 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">():</span>
+<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s2">&quot;FloatColumnView&quot;</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the row numbers of the table.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        [`FloatColumnView`][getml.data.columns.FloatColumnView]:</span>
 <span class="sd">            (numerical) column containing the row id, starting with 0</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">FloatColumnView</span><span class="p">(</span><span class="n">operator</span><span class="o">=</span><span class="s2">&quot;rowid&quot;</span><span class="p">,</span> <span class="n">operand1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">operand2</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
