@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 # Project information
-site_name: GetML Developer Portal
+site_name: getML Developer Portal
 site_url: https://dev.getml.com/
 site_author: Code17 GmbH
 site_description: >-

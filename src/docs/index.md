@@ -17,7 +17,7 @@ us](https://www.getml.com/contact) for any questions or inquiries.
     to see the highlights of both the editions. 
 
 
-## GetML in one minute 
+## getML in one minute 
 
 getML is an innovative tool for the end-to-end automation of data
 science projects. It covers everything from convenient data loading procedures 
