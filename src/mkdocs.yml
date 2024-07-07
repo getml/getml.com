@@ -154,6 +154,7 @@ markdown_extensions:
   - admonition
   - footnotes
   - pymdownx.betterem
+  - pymdownx.blocks.html
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
@@ -301,9 +302,16 @@ nav:
 
     - CLI: reference/cli.md
 
-  - Integration:
-    - FastAPI: integration/fastapi/fastapi.md
+  - Examples:
+    - FastAPI: examples/fastapi/fastapi.md
+  - Community:
+    - community/community.md
+  - Enterprise:
+    - Benefits: enterprise/enterprise.md
+    - Feature List: enterprise/feature-list.md
+    - Trial Download: entperise/trial-download.md
+    - Book a Demo: enterprise/book-demo.md
   - About:
-    - about/index.md
+    - Company: about/company.md
     - Imprint: about/imprint.md
     - Disclaimer: about/disclaimer.md
