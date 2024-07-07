@@ -51,7 +51,7 @@ theme:
     # # - navigation.instant
     # # - navigation.instant.prefetch
     # # - navigation.instant.progress
-    # # - navigation.prune
+    - navigation.prune
     # - navigation.sections
     # - navigation.tabs
     # # - navigation.tabs.sticky
@@ -90,6 +90,9 @@ theme:
 # Plugins
 plugins:
   # - blog
+  - privacy:
+      links_attr_map:
+        target: _blank
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
@@ -122,7 +125,7 @@ plugins:
             docstring_options:
               ignore_init_summary: true
   - tags
-  # - meta
+  - meta
 
 # Additional configuration
 extra:
@@ -145,6 +148,9 @@ extra:
       link: https://www.youtube.com/@code17-gmbh
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/code17-gmbh
+
+draft_docs: |
+  *_.md
 
 # Extensions
 markdown_extensions:
@@ -307,11 +313,16 @@ nav:
   - Community:
     - community/community.md
   - Enterprise:
-    - Benefits: enterprise/enterprise.md
-    - Feature List: enterprise/feature-list.md
-    - Trial Download: entperise/trial-download.md
+    - Benefits: enterprise/overview.md
     - Book a Demo: enterprise/book-demo.md
+    - Feature List: enterprise/feature-list.md
+    - Trial Download: enterprise/trial.md
+    - (debug): enterprise/trial/debug_.md
+    # - Trial:
+    #   - enterprise/trial/debug_.md
+    #   - GetML Trial: enterprise/trial/download.md
+    #   - Terms: enterprise/trial/terms.md
   - About:
     - Company: about/company.md
     - Imprint: about/imprint.md
-    - Disclaimer: about/disclaimer.md
+    - Privacy: https://getml.notion.site/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a
