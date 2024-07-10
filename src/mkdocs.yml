@@ -5,8 +5,7 @@ site_name: GetML Developer Portal
 site_url: https://dev.getml.com/
 site_author: Code17 GmbH
 site_description: >-
-  Write your documentation in Markdown and create a professional static site in
-  minutes – searchable, customizable, in 60+ languages, for all devices
+  ...
 
 # Repository
 repo_name: getml
@@ -23,38 +22,32 @@ theme:
   logo_dark_mode: assets/brand/getml-dark.svg
   favicon: images/favicon.png
   features:
-    # - navigation.instant
-    - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.instant.preview # disable! enable on page basis
-    - navigation.tracking
-    - navigation.tabs
-    # - navigation.expand
-    - navigation.path
-    - navigation.indexes
-    - navigation.top
     - announce.dismiss
-    #
-    # - announce.dismiss
     # - content.action.edit
     # - content.action.view
-    # - content.code.annotate
     - content.code.copy
-    # # - content.code.select
-    # # - content.footnote.tooltips
-    # # - content.tabs.link
+    # - content.code.annotate
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
     # - content.tooltips
-    # # - header.autohide
-    # # - navigation.expand
-    # - navigation.footer
-    # - navigation.indexes
-    # # - navigation.instant
-    # # - navigation.instant.prefetch
-    # # - navigation.instant.progress
+    # - header.autohide
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant.prefetch
+    - navigation.path
     - navigation.prune
-    # - navigation.sections
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    # - navigation.footer
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.preview # disable! enable on page basis
+    # - navigation.instant.progress
     # - navigation.tabs
-    # # - navigation.tabs.sticky
+    # - navigation.tabs.sticky
     # - navigation.top
     # - navigation.tracking
     # - search.highlight
@@ -89,43 +82,44 @@ theme:
 
 # Plugins
 plugins:
-  # - blog
-  - privacy:
-      links_attr_map:
-        target: _blank
-  - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - autorefs
-  - table-reader
+  # - blog
   - mkdocstrings:
       handlers:
         python:
           import:
             - https://docs.python.org/3/objects.inv
           options:
-            show_root_toc_entry: false
-            show_source: true
-            members_order: source
-            show_signature: true
-            separate_signature: true
-            merge_init_into_class: true
+            docstring_options:
+              ignore_init_summary: true
             docstring_section_style: spacy
+            filters: ["!^_"]
+            heading_level: 1
+            ignore_init_summary: true
+            line_length: 60 # not working
+            members_order: source
+            merge_init_into_class: true
+            modernize_annotations: true # mkdocstring  insider
+            separate_signature: true
+            show_root_heading: true
+            show_root_toc_entry: false
+            show_signature: true
             show_signature_annotations: true
-            signature_crossrefs: true # mkdocstring insider
+            show_source: true
             show_submodules: false
             show_symbol_type_heading: false
             show_symbol_type_toc: true # mkdocstring insider
-            line_length: 60 # not working
-            modernize_annotations: true # mkdocstring  insider
-            ignore_init_summary: true
-            show_root_heading: true
-            heading_level: 1
+            signature_crossrefs: true # mkdocstring insider
             # unwrap_annotated: false
-            filters: ["!^_"]
-            docstring_options:
-              ignore_init_summary: true
+  - privacy:
+      links_attr_map:
+        target: _blank
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - table-reader
   - tags
   - meta
+
 
 # Additional configuration
 extra:
@@ -149,8 +143,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/code17-gmbh
 
-draft_docs: |
-  *_.md
 
 # Extensions
 markdown_extensions:
@@ -189,23 +181,40 @@ extra_javascript:
 extra_css:
   # - assets/stylesheets/getml.css - Use for custom styles. Is loaded in header by default in overrides/main.html
 
+draft_docs: |
+  *_.md
+  *debug.md
+  release-notes.md
+  install/build.md
+  enterprise/training-and-support.md
+  enterprise/guided-evaluation.md
+
+not_in_nav: |
+  enterprise/trial/trial-download.md
+  reference/pipeline/column.md
+  reference/pipeline/feature.md
+  reference/pipeline/metadata.md
+  reference/pipeline/sql_string.md
+  reference/pipeline/table.md
+
 nav:
-  - Documentation: index.md
-  - Home:
-       - home/index.md
-       - Installation:
+  - Home: index.md
+
+  - Overview:
+    - Documentation:
+        - Overview: index-documentation.md
+        - Installation:
           - home/installation/index.md
           - macOS: home/installation/mac.md
           - Windows/Docker: home/installation/windows.md
           - Linux: home/installation/linux.md
           - Remote access: home/installation/remote_access.md
-       - How to use this Guide: home/how_to_use_this_guide.md
-       - Getting Started: home/getting_started/getting_started.md
-       - Support: home/support/support.md
-
-  - User Guide:
+        - How to use this Guide: home/how_to_use_this_guide.md
+        - Getting Started: home/getting_started/getting_started.md
+        - Support: home/support/support.md
+    - User Guide:
       - user_guide/index.md
-      - getML suite:
+      - Components:
         - user_guide/getml_suite/index.md
         - Engine: user_guide/getml_suite/engine.md
         - Monitor: user_guide/getml_suite/monitor.md
@@ -231,32 +240,52 @@ nav:
       - Deployment: user_guide/deployment/deployment.md
 
 
+  - Install:
+    - install/index.md
+    - Packages:
+      # - install/packages/index.md
+      - Pip: install/packages/pip.md
+      - Docker: install/packages/Docker.md
+      - Archive: install/packages/archive.md
+    - Build from source:
+      # - Build: install/build/index.md
+      - Linux: install/build/build.md
+      # - install/build.md
+
+  - Enterprise:
+    - Benefits: enterprise/benefits.md
+    - Book a Demo: enterprise/book-demo.md
+    - Feature List: enterprise/feature-list.md
+    - Trial Download: enterprise/trial.md
+    - Training & Support: enterprise/training-and-support.md
+    - Guided Evaluation: enterprise/guided-evaluation.md
+    - DEBUG: enterprise/debug.md
+
   - API Reference:
     - reference/index.md
-    - getml.data:
-      - reference/data/index.md
-      - Container: reference/data/container.md
-      - DataFrame: reference/data/data_frame.md
-      - DataModel: reference/data/data_model.md
-      - Placeholder: reference/data/placeholder.md
-      - Roles: reference/data/roles_obj.md
-      - StarSchema: reference/data/star_schema.md
-      - Subset: reference/data/subset.md
-      - TimeSeries: reference/data/time_series.md
-      - View: reference/data/view.md
-      - access: reference/data/access.md
-      - columns: reference/data/columns.md
-      - relationship: reference/data/relationship.md
-      - roles: reference/data/roles.md
-      - split: reference/data/split.md
-      - time: reference/data/time.md
-      - subroles: reference/data/subroles.md
-    - getml.database:
-      - reference/database/index.md
-    - getml.datasets:
-      - reference/datasets/index.md
-    - getml.engine:
-      - reference/engine/index.md
+    - Python API:
+      # - reference/index.md
+      - getml.data:
+        - reference/data/index.md
+        - Container: reference/data/container.md
+        - DataFrame: reference/data/data_frame.md
+        - DataModel: reference/data/data_model.md
+        - Placeholder: reference/data/placeholder.md
+        - Roles: reference/data/roles_obj.md
+        - StarSchema: reference/data/star_schema.md
+        - Subset: reference/data/subset.md
+        - TimeSeries: reference/data/time_series.md
+        - View: reference/data/view.md
+        - access: reference/data/access.md
+        - columns: reference/data/columns.md
+        - relationship: reference/data/relationship.md
+        - roles: reference/data/roles.md
+        - split: reference/data/split.md
+        - time: reference/data/time.md
+        - subroles: reference/data/subroles.md
+      - getml.database: reference/database/database.md
+      - getml.datasets: reference/datasets/datasets.md
+      - getml.engine: reference/engine/engine.md
     - getml.hyperopt:
       - reference/hyperopt/index.md
       - Gaussian Process: reference/hyperopt/gaussian.md
@@ -306,22 +335,14 @@ nav:
     - getml.sqlite3:
       - reference/sqlite3/index.md
 
-    - CLI: reference/cli.md
+    - Command Line:
+      # - reference/cli/index.md
+      - Engine CLI: reference/cli/engine.md
 
   - Examples:
+    - examples/index.md
     - FastAPI: examples/fastapi/fastapi.md
-  - Community:
-    - community/community.md
-  - Enterprise:
-    - Benefits: enterprise/overview.md
-    - Book a Demo: enterprise/book-demo.md
-    - Feature List: enterprise/feature-list.md
-    - Trial Download: enterprise/trial.md
-    - (debug): enterprise/trial/debug_.md
-    # - Trial:
-    #   - enterprise/trial/debug_.md
-    #   - GetML Trial: enterprise/trial/download.md
-    #   - Terms: enterprise/trial/terms.md
+
   - About:
     - Company: about/company.md
     - Imprint: about/imprint.md
