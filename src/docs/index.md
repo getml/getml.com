@@ -9,18 +9,17 @@ to the deployment of trained models.
 
 ### Why getML
 
-getML features:
 
-- **automated feature engineering** — five highly efficient algorithms for automated feature engineering on relational data and time series
-- **database engine** — a high-performance database engine written in C++ customized for feature engineering
-- **faster speed** — 60x to 1000x more speed than other tools for automated feature engineering
-- **python API** — an intuitive python API to interact with the engine 
-- **increase in prediction accuracy** — increase of up to 30% in prediction accuracy compared to manual feature engineering  
-- **less time** — decrease of up to 90% time spent on a data science project
-- **real-time dashboard** — a real-time monitor for tracking data, pipelines, and performance 
-- **native data connectors** — multiple native data connectors for maximum efficiency and minimal data duplication
--  **transpilation**  — transpilation of engineered features into numerous SQL dialects
--  **deployment** — seamless deployment of ML pipelines into production environments for real-time and batch predictions.
+- **Automated feature engineering** — Leverage five highly efficient algorithms for automated feature engineering on relational data and time series.
+- **High-performance database engine** — Accelerate feature engineering process with our customized database engine written in C++.
+- **Unparalleled speed** — Achieve speeds 60x to 1000x faster than other automated feature engineering tools.
+- **Intuitive Python API** — Interact seamlessly with the engine through an intuitive Python API.
+- **Enhanced prediction accuracy** — Boost prediction accuracy by up to 30% compared to manual feature engineering.
+- **Significant time savings** — Reduce time spent on data science projects by up to 90%.
+- **Real-Time dashboard** — Monitor data, pipelines, and performance in real-time with our dynamic getML monitor.
+- **Native data connectors** — Utilize multiple native data connectors for maximum efficiency and minimal data duplication.
+-  **Feature transpilation** — Transpile engineered features into various SQL dialects effortlessly.
+-  **Seamless deployment** — Deploy ML pipelines smoothly into production environments for real-time and batch predictions.
 
 
 
