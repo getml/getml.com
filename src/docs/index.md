@@ -6,7 +6,7 @@ hide:
 
 # Your machine learning suite for relational and time-series data
 
-GetML Relational Learning algorithms unlock a 10x speed-up potential and a more accurate model performance. GetML is a game changer in building and maintaining predictive applications on enterprise data.
+GetML Relational Learning unlocks a 10x speed-up potential and superior model performance. A game changer in enabling industry leading predictive applications on enterprise data.
 
 ### Trusted by industry leaders
 
@@ -15,20 +15,20 @@ GetML Relational Learning algorithms unlock a 10x speed-up potential and a more 
 
 ## Why you should consider getML
 
-GetML's cutting-edge ML algorithms empower data scientists to achieve superior model performance without the burden of manual feature engineering and complex feature pipelines.
-By generalizing gradient boosting to multi-relational decision trees, getML brings the first supervised learning algorithms for end-to-end prediction models on raw relational data.
-The GetML Suite provides an easy to use Python API, adhering to modern standards. GetML is developed by Code17 GmbH, and is used across industries, from finance and manufacturing to healthcare and beyond.
+GetML introduces new ML algorithms that empower data scientists to achieve superior model performance without the burden of manual feature engineering and building complex feature pipelines. By generalizing gradient boosting to multi-relational decision trees, getML brings supervised learning to raw relational data, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
+
+GetML is developed by Code17 GmbH, and is used across industries, from finance and manufacturing to healthcare and beyond.
 
 
 ## The right getML flavor for your application
 
 ### Community Edition
-For anyone who knows a,b,c and is looking for a more memory and run-time efficient implementation of popular brute-fore propositionalization algorithms.
+For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a more memory and run-time efficient solution. GetML Community is the leading open source implementation of the propositionalization framework.
 
 [Get started](){ .md-button .md-button--primary }
 
 ### Enterprise Edition
-If you look for the latest algorithmic adanvces in relational learning. This is your choice if you relies on the highest model performance and shortes development cycles.
+This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
 
 [Learn more](/enterprise/benefits){ .md-button .md-button--primary }
 
