@@ -123,6 +123,8 @@ plugins:
               ignore_init_summary: true
   - tags
   # - meta
+  - mike:
+      canonical_version: latest
 
 # Additional configuration
 extra:
@@ -145,6 +147,8 @@ extra:
       link: https://www.youtube.com/@code17-gmbh
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/code17-gmbh
+  version:
+    provider: mike
 
 # Extensions
 markdown_extensions:
