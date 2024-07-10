@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 # Project information
-site_name: GetML Developer Portal
+site_name: getML Developer Portal
 site_url: https://dev.getml.com/
 site_author: Code17 GmbH
 site_description: >-
@@ -188,18 +188,16 @@ extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - Documentation: index.md
-  - Home:
-       - home/index.md
-       - Installation:
-          - home/installation/index.md
-          - macOS: home/installation/mac.md
-          - Windows/Docker: home/installation/windows.md
-          - Linux: home/installation/linux.md
-          - Remote access: home/installation/remote_access.md
-       - How to use this Guide: home/how_to_use_this_guide.md
-       - Getting Started: home/getting_started/getting_started.md
-       - Support: home/support/support.md
+  - Welcome:
+    - index.md
+    - Installation:
+      - home/installation/index.md
+      - macOS: home/installation/mac.md
+      - Windows/Docker: home/installation/windows.md
+      - Linux: home/installation/linux.md
+      - Remote access: home/installation/remote_access.md
+    - Getting Started: home/getting_started/getting_started.md
+    - Support: home/support/support.md
 
   - User Guide:
       - user_guide/index.md
@@ -306,7 +304,8 @@ nav:
 
     - CLI: reference/cli.md
 
-  - Integration:
+  - Examples:
+    - examples/index.md  
     - FastAPI: integration/fastapi/fastapi.md
   - About:
     - about/index.md

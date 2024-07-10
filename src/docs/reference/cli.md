@@ -1,6 +1,10 @@
 [](){#cli}
 # Command Line Interface
 
+!!! note
+
+      You do not need to launch getML with the command line if you are using [getml.engine.launch()][getml.engine.launch].
+
 getML can be launched via the command line. The command line interface is called `getML` on Linux, `getml-cli` on macOS, and `getML.exe` on Windows.
 
 Refer to the [installation section][installation], for instructions on how to set up 
