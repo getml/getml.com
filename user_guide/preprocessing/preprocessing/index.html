@@ -12,30 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/">
+        <link rel="canonical" href="https://dev.getml.com/user_guide/preprocessing/preprocessing/">
       
       
+        <link rel="prev" href="../../data_model/data_model/">
       
-        <link rel="next" href="home/installation/">
+      
+        <link rel="next" href="../../feature_engineering/feature_engineering/">
       
       
         
       
       
-      <link rel="icon" href="images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>getML Developer Portal</title>
+        <title>Preprocessing - getML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="assets/stylesheets/getml.css"
+    href="../../../assets/stylesheets/getml.css"
   />
 
     
@@ -65,13 +67,13 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="assets/css/custom.css">
+      <link rel="stylesheet" href="../../../assets/css/custom.css">
     
-      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -106,7 +108,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#why-getml" class="md-skip">
+        <a href="#preprocessing_1" class="md-skip">
           Skip to content
         </a>
       
@@ -133,7 +135,7 @@
 
     <!-- Link to home -->
     <a
-      href="."
+      href="../../.."
       title="getML Developer Portal"
       class="md-header__button md-logo"
       aria-label="getML Developer Portal"
@@ -141,8 +143,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -163,7 +165,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Preprocessing
             
           </span>
         </div>
@@ -280,13 +282,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -302,11 +302,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="user_guide/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -326,7 +328,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
     
@@ -346,7 +348,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="examples/" class="md-tabs__link">
+        <a href="../../../examples/" class="md-tabs__link">
           
   
     
@@ -366,7 +368,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
     
@@ -401,11 +403,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
+    <a href="../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     getML Developer Portal
@@ -417,8 +419,6 @@
       
   
   
-    
-  
   
   
     
@@ -437,22 +437,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="." class="md-nav__link md-nav__link--active">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -469,13 +466,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -524,7 +521,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="home/installation/" class="md-nav__link ">
+            <a href="../../../home/installation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -567,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/mac/" class="md-nav__link">
+      <a href="../../../home/installation/mac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/windows/" class="md-nav__link">
+      <a href="../../../home/installation/windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/linux/" class="md-nav__link">
+      <a href="../../../home/installation/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/remote_access/" class="md-nav__link">
+      <a href="../../../home/installation/remote_access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/getting_started/getting_started/" class="md-nav__link">
+      <a href="../../../home/getting_started/getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/support/support/" class="md-nav__link">
+      <a href="../../../home/support/support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,6 +738,8 @@
       
   
   
+    
+  
   
   
     
@@ -773,19 +772,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -802,13 +804,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -855,7 +857,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/getml_suite/" class="md-nav__link ">
+            <a href="../../getml_suite/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -898,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/engine/" class="md-nav__link">
+      <a href="../../getml_suite/engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/monitor/" class="md-nav__link">
+      <a href="../../getml_suite/monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/getml_suite/python_api/" class="md-nav__link">
+      <a href="../../getml_suite/python_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/project_management/project_management/" class="md-nav__link">
+      <a href="../../project_management/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1053,7 +1055,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="user_guide/importing_data/" class="md-nav__link ">
+            <a href="../../importing_data/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1096,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/csv_interface/" class="md-nav__link">
+      <a href="../../importing_data/csv_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/pandas_interface/" class="md-nav__link">
+      <a href="../../importing_data/pandas_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/json_interface/" class="md-nav__link">
+      <a href="../../importing_data/json_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/sqlite3_interface/" class="md-nav__link">
+      <a href="../../importing_data/sqlite3_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/mysql_interface/" class="md-nav__link">
+      <a href="../../importing_data/mysql_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/mariadb_interface/" class="md-nav__link">
+      <a href="../../importing_data/mariadb_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1258,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/postgres_interface/" class="md-nav__link">
+      <a href="../../importing_data/postgres_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/greenplum_interface/" class="md-nav__link">
+      <a href="../../importing_data/greenplum_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/importing_data/odbc_interface/" class="md-nav__link">
+      <a href="../../importing_data/odbc_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../../annotating_data/annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/data_model/data_model/" class="md-nav__link">
+      <a href="../../data_model/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,10 +1400,36 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="user_guide/preprocessing/preprocessing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1416,6 +1444,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-of-free-form-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling of free form text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling of free form text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-row-of-a-table-with-a-text-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One row of a table with a text field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-implicit-peripheral-table-that-results-from-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The (implicit) peripheral table that results from splitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1428,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/feature_engineering/feature_engineering/" class="md-nav__link">
+      <a href="../../feature_engineering/feature_engineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/predicting/predicting/" class="md-nav__link">
+      <a href="../../predicting/predicting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/hyperopt/hyperopt/" class="md-nav__link">
+      <a href="../../hyperopt/hyperopt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="user_guide/deployment/deployment/" class="md-nav__link">
+      <a href="../../deployment/deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1588,7 +1686,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/" class="md-nav__link ">
+            <a href="../../../reference/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1684,7 +1782,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/data/" class="md-nav__link ">
+            <a href="../../../reference/data/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1727,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/container/" class="md-nav__link">
+      <a href="../../../reference/data/container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/data_frame/" class="md-nav__link">
+      <a href="../../../reference/data/data_frame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1781,7 +1879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/data_model/" class="md-nav__link">
+      <a href="../../../reference/data/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1808,7 +1906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/placeholder/" class="md-nav__link">
+      <a href="../../../reference/data/placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,7 +1933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/roles_obj/" class="md-nav__link">
+      <a href="../../../reference/data/roles_obj/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1862,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/star_schema/" class="md-nav__link">
+      <a href="../../../reference/data/star_schema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1889,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/subset/" class="md-nav__link">
+      <a href="../../../reference/data/subset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/time_series/" class="md-nav__link">
+      <a href="../../../reference/data/time_series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1943,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/view/" class="md-nav__link">
+      <a href="../../../reference/data/view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1970,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/access/" class="md-nav__link">
+      <a href="../../../reference/data/access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1997,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/columns/" class="md-nav__link">
+      <a href="../../../reference/data/columns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2024,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/relationship/" class="md-nav__link">
+      <a href="../../../reference/data/relationship/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2051,7 +2149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/roles/" class="md-nav__link">
+      <a href="../../../reference/data/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2078,7 +2176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/split/" class="md-nav__link">
+      <a href="../../../reference/data/split/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2105,7 +2203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/time/" class="md-nav__link">
+      <a href="../../../reference/data/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2132,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/data/subroles/" class="md-nav__link">
+      <a href="../../../reference/data/subroles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2286,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/database/" class="md-nav__link ">
+            <a href="../../../reference/database/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2255,7 +2353,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/datasets/" class="md-nav__link ">
+            <a href="../../../reference/datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2322,7 +2420,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/engine/" class="md-nav__link ">
+            <a href="../../../reference/engine/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2395,7 +2493,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/hyperopt/" class="md-nav__link ">
+            <a href="../../../reference/hyperopt/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2446,7 +2544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/gaussian/" class="md-nav__link">
+      <a href="../../../reference/hyperopt/gaussian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2481,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/latin/" class="md-nav__link">
+      <a href="../../../reference/hyperopt/latin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2516,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/hyperopt/random/" class="md-nav__link">
+      <a href="../../../reference/hyperopt/random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2594,7 +2692,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/feature_learning/" class="md-nav__link ">
+            <a href="../../../reference/feature_learning/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2637,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/fastprop/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/fastprop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2664,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/fastboost/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/fastboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2699,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/multirel/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/multirel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2734,7 +2832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/relboost/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/relboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2769,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/relmt/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/relmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2804,7 +2902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/aggregations/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/aggregations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2831,7 +2929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/feature_learning/loss_functions/" class="md-nav__link">
+      <a href="../../../reference/feature_learning/loss_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2893,7 +2991,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/project/" class="md-nav__link ">
+            <a href="../../../reference/project/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2936,7 +3034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/data_frames/" class="md-nav__link">
+      <a href="../../../reference/project/data_frames/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2963,7 +3061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/hyperopts/" class="md-nav__link">
+      <a href="../../../reference/project/hyperopts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2990,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/project/pipelines/" class="md-nav__link">
+      <a href="../../../reference/project/pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3046,7 +3144,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/preprocessors/" class="md-nav__link ">
+            <a href="../../../reference/preprocessors/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3133,7 +3231,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/pipeline/" class="md-nav__link ">
+            <a href="../../../reference/pipeline/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3176,7 +3274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/pipeline/" class="md-nav__link">
+      <a href="../../../reference/pipeline/pipeline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3203,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/columns/" class="md-nav__link">
+      <a href="../../../reference/pipeline/columns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3230,7 +3328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/tables/" class="md-nav__link">
+      <a href="../../../reference/pipeline/tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3257,7 +3355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/features/" class="md-nav__link">
+      <a href="../../../reference/pipeline/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3284,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/plots/" class="md-nav__link">
+      <a href="../../../reference/pipeline/plots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3311,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/scores_container/" class="md-nav__link">
+      <a href="../../../reference/pipeline/scores_container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3338,7 +3436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/score/" class="md-nav__link">
+      <a href="../../../reference/pipeline/score/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/sql_code/" class="md-nav__link">
+      <a href="../../../reference/pipeline/sql_code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3392,7 +3490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/metrics/" class="md-nav__link">
+      <a href="../../../reference/pipeline/metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3419,7 +3517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/pipeline/dialect/" class="md-nav__link">
+      <a href="../../../reference/pipeline/dialect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3495,7 +3593,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/predictors/" class="md-nav__link ">
+            <a href="../../../reference/predictors/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3538,7 +3636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/scale_gbm_classifier/" class="md-nav__link">
+      <a href="../../../reference/predictors/scale_gbm_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3573,7 +3671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/scale_gbm_regressor/" class="md-nav__link">
+      <a href="../../../reference/predictors/scale_gbm_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3608,7 +3706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/linear_regression/" class="md-nav__link">
+      <a href="../../../reference/predictors/linear_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3635,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/logistic_regression/" class="md-nav__link">
+      <a href="../../../reference/predictors/logistic_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3662,7 +3760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/xgboost_classifier/" class="md-nav__link">
+      <a href="../../../reference/predictors/xgboost_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3689,7 +3787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/predictors/xgboost_regressor/" class="md-nav__link">
+      <a href="../../../reference/predictors/xgboost_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3745,7 +3843,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="reference/sqlite3/" class="md-nav__link ">
+            <a href="../../../reference/sqlite3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3791,7 +3889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/cli/" class="md-nav__link">
+      <a href="../../../reference/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3848,7 +3946,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="examples/" class="md-nav__link ">
+            <a href="../../../examples/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3891,7 +3989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="integration/fastapi/fastapi/" class="md-nav__link">
+      <a href="../../../integration/fastapi/fastapi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3950,7 +4048,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="about/" class="md-nav__link ">
+            <a href="../../../about/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3993,7 +4091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/imprint/" class="md-nav__link">
+      <a href="../../../about/imprint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4020,7 +4118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/disclaimer/" class="md-nav__link">
+      <a href="../../../about/disclaimer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4064,6 +4162,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4072,10 +4172,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-getml" class="md-nav__link">
+  <a href="#mappings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why getML
+        Mappings
       
     </span>
   </a>
@@ -4083,35 +4183,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-automated-feature-engineering" class="md-nav__link">
+  <a href="#handling-of-free-form-text" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why automated feature engineering
+        Handling of free form text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Handling of free form text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-row-of-a-table-with-a-text-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One row of a table with a text field
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#the-implicit-peripheral-table-that-results-from-splitting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        The (implicit) peripheral table that results from splitting
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-the-developer-portal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to use the developer portal
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4146,145 +4252,191 @@
   page title (or respectively site name) is used as the main headline.
 -->
 
-    <h1 class="">getML Developer Portal</h1>
-    
-
 
 <!-- Page content -->
-<p>getML is an innovative tool for the end-to-end automation of data
-science projects. It covers everything from convenient data loading procedures 
-to the deployment of trained models. </p>
-<h3 id="why-getml">Why getML</h3>
-<ul>
-<li><strong>Automated feature engineering</strong> — Leverage five highly efficient algorithms for automated feature engineering on relational data and time series.</li>
-<li><strong>High-performance database engine</strong> — Accelerate feature engineering process with our customized database engine written in C++.</li>
-<li><strong>Unparalleled speed</strong> — Achieve speeds 60x to 1000x faster than other automated feature engineering tools.</li>
-<li><strong>Intuitive Python API</strong> — Interact seamlessly with the engine through an intuitive Python API.</li>
-<li><strong>Enhanced prediction accuracy</strong> — Boost prediction accuracy by up to 30% compared to manual feature engineering.</li>
-<li><strong>Significant time savings</strong> — Reduce time spent on data science projects by up to 90%.</li>
-<li><strong>Real-Time dashboard</strong> — Monitor data, pipelines, and performance in real-time with our dynamic getML monitor.</li>
-<li><strong>Native data connectors</strong> — Utilize multiple native data connectors for maximum efficiency and minimal data duplication.</li>
-<li><strong>Feature transpilation</strong> — Transpile engineered features into various SQL dialects effortlessly.</li>
-<li><strong>Seamless deployment</strong> — Deploy ML pipelines smoothly into production environments for real-time and batch predictions.</li>
-</ul>
-<div class="admonition enterprise-adm">
-<p class="admonition-title">Enterprise and community editions</p>
-<p>getML comes with a full-featured Enterprise Edition as well as limited-featured 
-Community Edition. Compare the highlights of both editions in our 
-<a href="home/getting_started/getting_started/#community-vs-enterprise-edition">community vs enterprise edition table</a>. 
-Unlock advanced features by purchasing the Enterprise Edition. 
-For licenses, technical support, and more information, please <a href="https://www.getml.com/contact">contact us</a>!</p>
-</div>
-<h3 id="why-automated-feature-engineering">Why automated feature engineering</h3>
-<p>Feature engineering on relational data is the process of creating a 
-flat table by merging and aggregating data. Also referred to
-as <strong>data wrangling</strong>, feature engineering is essential if your data is distributed
-over multiple tables. </p>
-<p>Andrew Ng, Professor at Stanford
-University and Co-founder of Google Brain described manual feature engineering as follows:</p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>Coming up with features is difficult, time-consuming, requires expert
-knowledge. "Applied machine learning" is basically feature engineering.</p>
-</div>
-<p>The main purpose of getML is to automate this <em>"difficult, time-consuming"</em> process as much as possible.</p>
-<h3 id="example">Example</h3>
-<p>Completing a data science project with getML consists of seven
-simple steps.</p>
+<p><a href="" id="preprocessing"></a></p>
+<h1 id="preprocessing_1">Preprocessing</h1>
+<p>As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and propositionalization deal with <em>relational data structures</em> and result in a single-table representation thereof, we categorize all operations that work on <em>single tables</em> as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.</p>
+<p>getML's preprocessors allow you to extract domains from email addresses (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.EmailDomain"><code>EmailDomain</code></a>), impute missing values (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Imputation"><code>Imputation</code></a>), map categorical columns to a continuous representation (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a>), extract seasonal components from time stamps (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a>), extract sub strings from string-based columns (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Substring"><code>Substring</code></a>) and split up <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>). Preprocessing operations in getML are very efficient and happen really fast. In fact, most of the time you won't even notice the presence of a preprocessor in your pipeline. getML's preprocessors operate on an abstract level without polluting your original data, are evaluated lazily and their set-up requires minimal effort.</p>
+<p>Here is a small example that shows the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a> preprocessor in action.
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;one_minute_to_getml&#39;</span><span class="p">)</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
 
+<span class="n">traffic</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_interstate94</span><span class="p">()</span>
 
-<span class="c1"># 1. Load the data into the engine</span>
-<span class="n">df_population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population_table&#39;</span><span class="p">)</span>
-<span class="n">df_peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>
-            <span class="n">name</span><span class="o">=</span><span class="s1">&#39;peripheral_table&#39;</span><span class="p">)</span>
+<span class="c1"># traffic explicitly holds seasonal components (hour, day, month, ...)</span>
+<span class="c1"># extracted from column ds; we copy traffic and delete all those components</span>
+<span class="n">traffic2</span> <span class="o">=</span> <span class="n">traffic</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;hour&quot;</span><span class="p">,</span> <span class="s2">&quot;weekday&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span>
 
+<span class="n">start_test</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
 
-<span class="c1"># 2. Annotate the data</span>
-<span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
-<span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;join_key&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
-
-
-<span class="c1"># 3. Define the data model</span>
-<span class="n">dm</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">df_peripheral</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-   <span class="n">dm</span><span class="o">.</span><span class="n">peripheral</span><span class="p">,</span>
-   <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
+<span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">time</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
+    <span class="n">test</span><span class="o">=</span><span class="n">start_test</span><span class="p">,</span>
+    <span class="n">time_stamp</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-
-<span class="c1"># 4. Train the feature learning algorithm and the predictor</span>
-<span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
-    <span class="n">data_model</span><span class="o">=</span><span class="n">dm</span><span class="p">,</span>
-    <span class="n">feature_learners</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(),</span>
-    <span class="n">predictors</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="p">)</span>
-<span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral</span><span class="p">]</span>
+<span class="n">time_series1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
+    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
+    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
-
-<span class="c1"># 5. Evaluate</span>
-<span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
+<span class="n">time_series2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">traffic2</span><span class="p">,</span>
+    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
+    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
+    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
+<span class="n">fast_prop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(</span>
+    <span class="n">loss_function</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">loss_function</span><span class="o">.</span><span class="n">SquareLoss</span><span class="p">)</span>
 
-<span class="c1"># 6. Predict   </span>
-<span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
+<span class="n">pipe1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series1</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
 <span class="p">)</span>
 
+<span class="n">pipe2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series2</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">preprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Seasonal</span><span class="p">()],</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
+<span class="p">)</span>
 
-<span class="c1"># 7. Deploy</span>
-<span class="c1"># Allow the pipeline to respond to HTTP requests</span>
-<span class="n">pipe</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># pipe1 includes no preprocessor but receives the data frame with the components</span>
+<span class="n">pipe1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series1</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
+
+<span class="c1"># pipe2 includes the preprocessor; receives data w/o components</span>
+<span class="n">pipe2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series2</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
+
+<span class="n">month_based1</span> <span class="o">=</span> <span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="n">month_based2</span> <span class="o">=</span> <span class="n">pipe2</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;COUNT( DISTINCT t2.</span><span class="se">\&quot;</span><span class="s2">strftime(&#39;%m&#39;&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">month_based1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_10&quot;;</span>
+<span class="c1"># </span>
+<span class="c1"># CREATE TABLE &quot;FEATURE_1_10&quot; AS</span>
+<span class="c1"># SELECT COUNT( t2.&quot;month&quot;  ) - COUNT( DISTINCT t2.&quot;month&quot; ) AS &quot;feature_1_10&quot;,</span>
+<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
+<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
+<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
+<span class="c1"># ON 1 = 1</span>
+<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
+<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
+<span class="c1"># GROUP BY t1.rowid;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">month_based2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
+<span class="c1"># Output:</span>
+<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_5&quot;;</span>
+<span class="c1"># </span>
+<span class="c1"># CREATE TABLE &quot;FEATURE_1_5&quot; AS</span>
+<span class="c1"># SELECT COUNT( t2.&quot;strftime(&#39;%m&#39;, ds )&quot;  ) - COUNT( DISTINCT t2.&quot;strftime(&#39;%m&#39;, ds )&quot; ) AS &quot;feature_1_5&quot;,</span>
+<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
+<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
+<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
+<span class="c1"># ON 1 = 1</span>
+<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
+<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
+<span class="c1"># GROUP BY t1.rowid;</span>
+</code></pre></div></p>
+<p>If you compare both of the features above, you will notice they are exactly the same: <code>COUNT - COUNT(DISTINCT)</code> on the month component conditional on the time-based restrictions introduced through memory and horizon.</p>
+<p>Pipelines can include more than one preprocessor.</p>
+<p>While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>.
+<a href="" id="preprocessing-mappings"></a></p>
+<h2 id="mappings">Mappings</h2>
+<p><a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a>s are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.</p>
+<p>Mappings are a simple and interpretable alternative representation for categorical data. By introducing a continuous representation, mappings allow getML's feature learning algorithms to apply arbitrary aggregations to categorical columns. Further, mappings enable huge gains in efficiency when learning patterns from categorical data. You can control the extent mappings are utilized by specifying the minimum number of matching rows required for categories that constitutes a mapping through the <code>min_freq</code> parameter.</p>
+<p>Here is an example mapping from the <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb">CORA notebook</a>:
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">;</span>
+<span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">);</span>
+<span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;Case_Based&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">7109826589595376</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Rule_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">07368421052631578</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Reinforcement_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0576923076923077</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Theory&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0547945205479452</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Genetic_Algorithms&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">03157894736842105</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Neural_Networks&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">02088772845953003</span><span class="p">),</span>
+<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Probabilistic_Methods&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">01293103448275862</span><span class="p">);</span>
 </code></pre></div>
-<p>Check out the rest of this documentation to find out how getML achieves top
-performance on real-world data science projects with many tables and complex
-data schemes.</p>
-<h3 id="how-to-use-the-developer-portal">How to use the developer portal</h3>
-<p>If you want to get started with getML right away, we recommend to follow the
-<a class="autorefs autorefs-internal" href="home/installation/#installation_1">installation instructions</a> and then go through the
-<a class="autorefs autorefs-internal" href="home/getting_started/getting_started/#get-started-with-getml">getting started guide</a>. </p>
-<p>If you are looking for more detailed information, other sections of this
-documentation are more suitable:</p>
-<ul>
-<li>
-<p><a href="examples/">Examples</a></p>
-<p>The examples section contains examples of how to use getML in 
-real-world projects. All examples are based on public data sets 
-so that
-you can follow along. If you are looking for an intuitive access to
-getML, the examples section is the right place to go. Also, the
-code examples are explicitly intended to be used as a template for
-your own projects.  </p>
-</li>
-<li>
-<p><a class="autorefs autorefs-internal" href="user_guide/#user-guide_1">User guide</a></p>
-<p>The user guide explains all conceptional details behind getML in
-depth. It can serve as a reference guide for experienced users but it's also
-suitable for first day users who want to get a deeper understanding
-of how getML works. Each chapter in the
-user guide represents one step of a typical data science project.</p>
-</li>
-<li>
-<p><a class="autorefs autorefs-internal" href="reference/#python-api_1">API documentation</a></p>
-<p>The API documentation covers everything related to the Python
-interface to the getML engine. Each module comes with a dedicated
-section that contains concrete code examples.</p>
-</li>
-</ul>
-<p>The developer portal is targeted to data scientists who want to use the getML software suite for their projects. For business-related information about getML, visit <a href="https://getml.com">getml.com</a>. You can also check out our <a href="https://www.getml.com/blog">blog articles and case studies</a>. And, of course, you can always <a href="https://www.getml.com/contact">contact
-us</a> for any questions or inquiries.</p>
+Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
+<a href="" id="preprocessing-free-form-text"></a></p>
+<h2 id="handling-of-free-form-text">Handling of free form text</h2>
+<p>getML provides the role <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> to annotate free form text fields within relational data structures. Learning from <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns works as follows: First, for each of the <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter <code>vocab_size</code>. If a text field contains words that belong to the vocabulary, getML deals with columns of role <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> preprocessor. Opting for the second approach is as easy as adding the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> to the list of <code>preprocessors</code> on your <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>. The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.</p>
+<h3 id="one-row-of-a-table-with-a-text-field">One row of a table with a text field</h3>
+<table>
+<thead>
+<tr>
+<th>rownum</th>
+<th>text field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52</td>
+<td>The quick brown fox jumps over the lazy dog</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-implicit-peripheral-table-that-results-from-splitting">The (implicit) peripheral table that results from splitting</h3>
+<table>
+<thead>
+<tr>
+<th>rownum</th>
+<th>words</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>52</td>
+<td>the</td>
+</tr>
+<tr>
+<td>52</td>
+<td>quick</td>
+</tr>
+<tr>
+<td>52</td>
+<td>brown</td>
+</tr>
+<tr>
+<td>52</td>
+<td>fox</td>
+</tr>
+<tr>
+<td>52</td>
+<td>jumps</td>
+</tr>
+<tr>
+<td>52</td>
+<td>over</td>
+</tr>
+<tr>
+<td>52</td>
+<td>the</td>
+</tr>
+<tr>
+<td>52</td>
+<td>lazy</td>
+</tr>
+<tr>
+<td>52</td>
+<td>dog</td>
+</tr>
+</tbody>
+</table>
+<p>As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (<code>COUNT WHERE words IN ('quick', 'jumps')</code>). Further, by utilizing <a class="autorefs autorefs-internal" href="#mappings">mappings</a>, any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.</p>
+<p>Note that the splitting of text fields can be computationally expensive. If performance suffers too much, you may resort to the default behavior by removing the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> from your <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 
 <!-- Source file information -->
 
@@ -4293,9 +4445,6 @@ us</a> for any questions or inquiries.</p>
 
 
 
-
-  
-  
 
 
 
@@ -4406,18 +4555,18 @@ us</a> for any questions or inquiries.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "announce.dismiss", "content.code.copy"], "search": "assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "announce.dismiss", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">
