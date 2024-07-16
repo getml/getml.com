@@ -248,8 +248,8 @@ nav:
       - Docker: install/packages/Docker.md
     - From source:
       # - Build: install/build/index.md
-      - Install API: install/build/python-api.md
-      - Build engine & API: install/build/build.md
+      - Install API: install/source/python-api.md
+      - Build engine & API: install/source/build.md
       # - install/build.md
     - Uninstall: 
       - Any platform: install/uninstall.md
