@@ -1,5 +1,11 @@
-# Installing from versioned archives
+<!-- # Installing from versioned archives -->
+# getML community edition archives
 
 The getML community edition is provided as downloadable, versioned archives for each release.
 
-Each versioned archive contains a self-contained installation of the gcloud CLI in a directory named google-cloud-sdk that can be copied to any location on your file system.
+
+### Version 1.5.0
+- [getml-1.5.0-arm64-community-edition-linux.tar.gz](https://storage.googleapis.com/static.getml.com/download/1.5.0/getml-1.5.0-arm64-community-edition-linux.tar.gz) - X MB
+- [getml-1.5.0-x64-community-edition-linux.tar.gz](https://storage.googleapis.com/static.getml.com/download/1.5.0/getml-1.5.0-x64-community-edition-linux.tar.gz) - X MB
+- [getml-1.5.0-community-edition-docker.zip](https://storage.googleapis.com/static.getml.com/download/1.5.0/getml-1.5.0-community-edition-docker.zip) - X MB
+- [python-getml-1.5.0-arm64-community-edition-linux.tar.gz](https://storage.googleapis.com/static.getml.com/download/1.5.0/python-getml-1.5.0-arm64-community-edition-linux.tar.gz) - X KB
