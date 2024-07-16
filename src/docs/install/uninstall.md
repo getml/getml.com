@@ -1,8 +1,10 @@
-## Python API <a name="deinstallation-python-api"></a>
+# Uninstall
+
+## Python API (all platforms)
 
 !!! warning "Project data might be deleted"
 
-    If you have not installed the engine separately and have not set the home directory to a custom location on engine launch, the project data will be deleted when you uninstall the Python API.
+    If you have not [installed the engine separately][separate-installation-of-engine] and have not set the home directory to a custom location on the engine launch, projects data will be deleted when you uninstall the Python API.
 
 To uninstall the Python API, execute the following command in a terminal:
 
@@ -10,13 +12,40 @@ To uninstall the Python API, execute the following command in a terminal:
 pip uninstall getml
 ```
 
-## Linux <a name="deinstallation-linux"></a>
+## Linux 
 
 !!! warning "Project data might be deleted"
 
-    If you have not set the home directory to a custom location on engine launch, the project data will be deleted when you remove the `.getML` directory.
+    If you have not set the home directory to a custom location on the engine launch, projects data will be deleted when you remove the `.getML` directory.
 
 You will have to remove the folder `.getML` from your home directory. In a terminal, execute: 
 ```bash
 rm -r $HOME/.getML
 ```
+
+## Docker
+
+To remove the Docker image and volume defined in the `docker-compose.yml` file, you can follow these steps:
+
+
+### Docker Image
+
+Remove the Docker image `getml/getml` from your local Docker repository as follows:
+
+```sh
+docker rmi getml/getml
+```
+
+Note that if there are any containers using this image, you must remove those containers first.
+
+### Named Volumes
+
+Remove the `getml` volume as follows:
+
+```sh
+docker volume rm getml
+```
+
+Ensure that the volume is not in use by any other containers.
+
+
