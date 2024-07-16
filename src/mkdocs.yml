@@ -205,7 +205,7 @@ nav:
         - Overview: index-documentation.md
         - Installation:
           - home/installation/index.md
-          - macOS: home/installation/mac.md
+          # - macOS: home/installation/mac.md
           - Windows/Docker: home/installation/windows.md
           - Linux: home/installation/linux.md
           - Remote access: home/installation/remote_access.md
@@ -249,8 +249,11 @@ nav:
       - Archive: install/packages/archive.md
     - Build from source:
       # - Build: install/build/index.md
-      - Linux: install/build/build.md
+      - Python API: install/build/python-api.md
+      - Engine: install/build/build.md
       # - install/build.md
+    - Uninstallation: 
+      - install/uninstall.md
 
   - Enterprise:
     - Benefits: enterprise/benefits.md
