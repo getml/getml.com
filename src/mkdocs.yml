@@ -242,18 +242,19 @@ nav:
 
   - Install:
     - install/index.md
-    - Packages:
+    - Platform:
       # - install/packages/index.md
-      - Pip: install/packages/pip.md
+      - Linux: install/packages/linux.md
       - Docker: install/packages/Docker.md
-      - Archive: install/packages/archive.md
-    - Build from source:
+    - From source:
       # - Build: install/build/index.md
-      - Python API: install/build/python-api.md
-      - Engine: install/build/build.md
+      - Install API: install/build/python-api.md
+      - Build engine & API: install/build/build.md
       # - install/build.md
-    - Uninstallation: 
-      - install/uninstall.md
+    - Uninstall: 
+      - Any platform: install/uninstall.md
+    - Archive: 
+      - Archive: install/packages/archive.md
 
   - Enterprise:
     - Benefits: enterprise/benefits.md
