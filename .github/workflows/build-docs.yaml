@@ -90,7 +90,7 @@ jobs:
             echo "No numbered deployed version found. Deploying $TAG_VERSION with the latest alias"
             hatch run mike deploy --config-file ./src/mkdocs.yml $TAG_VERSION latest
 
-          elif [[ $(echo -e "$TAG_VERSION\n$LATEST_DEPLOYED_VERSION" | sort -V | tail -n 1) == "$TAG_VERSION" && "$TAG_VERSION" != "$LATEST_DEPLOYED_VERSION"]]; then
+          elif [[ $(echo -e "$TAG_VERSION\n$LATEST_DEPLOYED_VERSION" | sort -V | tail -n 1) == "$TAG_VERSION" && "$TAG_VERSION" != "$LATEST_DEPLOYED_VERSION" ]]; then
             echo "Tag version ($TAG_VERSION) is higher than the currently deployed latest version ($LATEST_DEPLOYED_VERSION). Deploying $TAG_VERSION with the latest alias"
             hatch run mike deploy --config-file ./src/mkdocs.yml --update-aliases $TAG_VERSION latest
 
