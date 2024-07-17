@@ -39,11 +39,11 @@ docker run ...
 
 Install the Python API from its source files.
 
-[Read the API install guide](build/python-api.md){ .md-button .md-button--primary }
+[Read the API install guide](source/python-api.md){ .md-button .md-button--primary }
 
 Build engine and the API from the source.
 
-[Read the engine & API build guide](build/build.md){ .md-button .md-button--primary }
+[Read the engine & API build guide](source/build.md){ .md-button .md-button--primary }
 
 
 
