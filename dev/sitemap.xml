@@ -6,12 +6,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/about/</loc>
+         <loc>https://dev.getml.com/latest/index-documentation/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/about/disclaimer/</loc>
+         <loc>https://dev.getml.com/latest/about/company/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -21,12 +21,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/enterprise/benefits/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/enterprise/book-demo/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/enterprise/feature-list/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/enterprise/trial/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/enterprise/trial/terms/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/enterprise/trial/trial-download/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/examples/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/examples/fastapi/fastapi/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/home/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/home/how_to_use_this_guide/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -66,7 +106,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/integration/fastapi/fastapi/</loc>
+         <loc>https://dev.getml.com/latest/install/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/uninstall/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/packages/Docker/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/packages/archive/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/packages/linux/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/source/build/</loc>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/install/source/python-api/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -76,7 +146,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/reference/cli/</loc>
+         <loc>https://dev.getml.com/latest/reference/cli/engine/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -166,17 +236,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/reference/database/</loc>
+         <loc>https://dev.getml.com/latest/reference/database/database/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/reference/datasets/</loc>
+         <loc>https://dev.getml.com/latest/reference/datasets/datasets/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/reference/engine/</loc>
+         <loc>https://dev.getml.com/latest/reference/engine/engine/</loc>
          <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
