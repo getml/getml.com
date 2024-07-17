@@ -4376,11 +4376,9 @@
 to transpile its features to production-ready SQL code.
 This SQL code can be run on standard cloud infrastructure.
 Please also refer to <a class="autorefs autorefs-internal" href="../sql_code/#getml.pipeline.SQLCode"><code>SQLCode</code></a>.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">sql_code</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">sql_code</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span>
     <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">spark_sql</span><span class="p">)</span>
 
 <span class="c1"># Creates a folder called &quot;my_pipeline&quot;</span>
@@ -4388,6 +4386,7 @@ Please also refer to <a class="autorefs autorefs-internal" href="../sql_code/#ge
 <span class="n">sql_code</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;my_pipeline&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
   <div class="doc doc-children">

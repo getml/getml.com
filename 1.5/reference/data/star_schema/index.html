@@ -4447,15 +4447,17 @@ just like <em>train</em>, <em>validation</em> and <em>test</em>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-<p>Example:
-    <div class="highlight"><pre><span></span><code><span class="c1"># Pass the subset.</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pass the subset.</span>
 <span class="n">star_schema</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">StarSchema</span><span class="p">(</span>
     <span class="n">my_subset</span><span class="o">=</span><span class="n">my_data_frame</span><span class="p">)</span>
 
 <span class="c1"># You can access the subset just like train,</span>
 <span class="c1"># validation or test</span>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">my_subset</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</details>
               </div>
               <p>
               </p>
@@ -4463,11 +4465,9 @@ and <em>kwargs</em>.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Note that this example is taken from the
+      <details class="example">
+<summary>Example</summary>
+<p>Note that this example is taken from the
 <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/loans.ipynb">loans notebook</a>.</p>
 <p>You might also want to refer to
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>
@@ -4561,6 +4561,7 @@ you can use a function from the
 <span class="c1"># work just like above.</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/star_schema.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">212</span>
@@ -4789,11 +4790,9 @@ to the population table.</p>
 <p>In a <a class="autorefs autorefs-internal" href="#getml.data.StarSchema"><code>StarSchema</code></a> or <a class="autorefs autorefs-internal" href="../time_series/#getml.data.TimeSeries"><code>TimeSeries</code></a>,
 all joins take place on the population table. If you want to create more
 complex data models, use <a class="autorefs autorefs-internal" href="../data_model/#getml.data.DataModel"><code>DataModel</code></a> instead.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>This example will construct a data model in which the
+<details class="example">
+<summary>Example</summary>
+<p>This example will construct a data model in which the
 'population_table' depends on the 'peripheral_table' via
 the 'join_key' column. In addition, only those rows in
 'peripheral_table' for which 'time_stamp' is smaller or
@@ -4872,6 +4871,7 @@ algorithm for this join, which can significantly speed things up.</p>
 </code></pre></div>
 <p>Please also refer to <a class="autorefs autorefs-internal" href="../relationship/#getml.data.relationship"><code>relationship</code></a>.</p>
 </details>
+
 
 <table>
       <thead>
@@ -5295,7 +5295,7 @@ on the join.</p>
 <span class="sd">    all joins take place on the population table. If you want to create more</span>
 <span class="sd">    complex data models, use [`DataModel`][getml.data.DataModel] instead.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        This example will construct a data model in which the</span>
 <span class="sd">        &#39;population_table&#39; depends on the &#39;peripheral_table&#39; via</span>
 <span class="sd">        the &#39;join_key&#39; column. In addition, only those rows in</span>

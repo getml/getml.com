@@ -4258,11 +4258,9 @@
 
       <p>Container which holds all pipelines associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Show the first 10 pipelines belonging to the current project:
+<details class="example">
+<summary>Example</summary>
+<p>Show the first 10 pipelines belonging to the current project:
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
 </code></pre></div>
 You can use nested list comprehensions to retrieve a scoring history
@@ -4277,6 +4275,7 @@ for your project:
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">hyperopt_scores</span><span class="p">))</span>
 </code></pre></div></p>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
@@ -4389,14 +4388,13 @@ for your project:
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
 <span class="n">by_fl</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">feature_learners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
@@ -4434,7 +4432,7 @@ for your project:
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted pipelines.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_auc = getml.project.pipelines.sort(key=lambda pipe: pipe.auc)</span>
 <span class="sd">        by_fl = getml.project.pipelines.sort(key=lambda pipe: pipe.feature_learners[0].type)</span>
@@ -4512,14 +4510,13 @@ for your project:
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">pipelines_with_tags</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">pipelines_with_tags</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">accurate_pipes</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">all</span><span class="p">(</span><span class="n">acc</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">pipe</span><span class="o">.</span><span class="n">accuracy</span><span class="p">))</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/project/containers/pipelines.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">210</span>
@@ -4554,7 +4551,7 @@ for your project:
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of filtered pipelines.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        pipelines_with_tags = getml.project.pipelines.filter(lambda pipe: len(pipe.tags) &gt; 0)</span>
 <span class="sd">        accurate_pipes = getml.project.pipelines.filter(lambda pipe: all(acc &gt; 0.9 for acc in pipe.accuracy))</span>

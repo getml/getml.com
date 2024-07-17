@@ -4937,11 +4937,9 @@ of a uniform type.</p>
   until they are required.</p>
 </li>
 </ul>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>This is what some column operations might look like:</p>
+<details class="example">
+<summary>Example</summary>
+<p>This is what some column operations might look like:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">getml.data</span> <span class="k">as</span> <span class="nn">data</span>
@@ -4996,6 +4994,7 @@ of a uniform type.</p>
 </details>
 
 
+
   <div class="doc doc-children">
 
 
@@ -5031,11 +5030,9 @@ of a uniform type.</p>
 evaluated when necessary.</p>
 <p>They can be used to take subselection of the data frame
 or to update other columns.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">getml.data</span> <span class="k">as</span> <span class="nn">data</span>
 <span class="kn">import</span> <span class="nn">getml.engine</span> <span class="k">as</span> <span class="nn">engine</span>
@@ -5100,6 +5097,7 @@ or to update other columns.</p>
 <span class="n">my_df</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">251</span>
@@ -5987,7 +5985,7 @@ evaluated when necessary.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;FloatColumnView&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="#getml.data.columns.FloatColumnView">FloatColumnView</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6006,7 +6004,7 @@ evaluated when necessary.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code>&#39;FloatColumnView&#39;</code>
+                    <code><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="#getml.data.columns.FloatColumnView">FloatColumnView</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -6027,7 +6025,7 @@ evaluated when necessary.</p>
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
-<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s2">&quot;FloatColumnView&quot;</span><span class="p">:</span>
+<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">FloatColumnView</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the row numbers of the table.</span>
 
@@ -6158,14 +6156,13 @@ column.</p>
 
 
       <p>Lazily evaluated aggregation over a column.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">my_data_frame</span><span class="p">[</span><span class="s2">&quot;my_column&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">avg</span><span class="p">()</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">my_data_frame</span><span class="p">[</span><span class="s2">&quot;my_column&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">avg</span><span class="p">()</span>
 <span class="mf">3.0</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/columns/aggregation.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
@@ -7001,11 +6998,9 @@ set</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
 <span class="n">population</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;column_01&#39;</span><span class="p">)</span>
 
 <span class="n">idx</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -7013,6 +7008,7 @@ set</p>
 <span class="n">population_test</span> <span class="o">=</span> <span class="n">population</span><span class="p">[</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="mf">0.7</span><span class="p">]</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/columns/random.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
@@ -7061,7 +7057,7 @@ set</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            FloatColumn containing random numbers</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        population = getml.DataFrame(&#39;population&#39;)</span>
 <span class="sd">        population.add(numpy.zeros(100), &#39;column_01&#39;)</span>

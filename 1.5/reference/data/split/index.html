@@ -4416,11 +4416,9 @@ in the split column.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>A common use case for this functionality are <a class="autorefs autorefs-internal" href="../time_series/#getml.data.TimeSeries"><code>TimeSeries</code></a>:
+      <details class="example">
+<summary>Example</summary>
+<p>A common use case for this functionality are <a class="autorefs autorefs-internal" href="../time_series/#getml.data.TimeSeries"><code>TimeSeries</code></a>:
 <div class="highlight"><pre><span></span><code><span class="n">data_train</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span>
     <span class="n">datatraining_pandas</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;data_train&#39;</span><span class="p">)</span>
 
@@ -4441,6 +4439,7 @@ in the split column.</p>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
 </code></pre></div></p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/split/concat.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
@@ -4521,7 +4520,7 @@ in the split column.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A tuple containing the concatenated data frame and the split column.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        A common use case for this functionality are [`TimeSeries`][getml.data.TimeSeries]:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        data_train = getml.DataFrame.from_pandas(</span>
@@ -4701,11 +4700,9 @@ we called it 'other').</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span>
     <span class="n">train</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">other</span><span class="o">=</span><span class="mf">0.05</span>
 <span class="p">)</span>
 
@@ -4715,6 +4712,7 @@ we called it 'other').</p>
 <span class="n">other_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;other&#39;</span><span class="p">]</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/split/random.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
@@ -4826,7 +4824,7 @@ we called it 'other').</p>
 <span class="sd">            You can name these sets whatever you want to (in our example,</span>
 <span class="sd">            we called it &#39;other&#39;).</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        split = getml.data.split.random(</span>
 <span class="sd">            train=0.8, test=0.1, validation=0.05, other=0.05</span>
@@ -5002,11 +5000,9 @@ we called it 'other').</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">validation_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">validation_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">test_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">other_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
@@ -5031,6 +5027,7 @@ we called it 'other').</p>
 <span class="n">other_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;other&#39;</span><span class="p">]</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/split/time.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 28</span>
@@ -5185,7 +5182,7 @@ we called it 'other').</p>
 <span class="sd">            You can name these sets whatever you want to (in our example,</span>
 <span class="sd">            we called it &#39;other&#39;).</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        validation_begin = getml.data.time.datetime(2010, 1, 1)</span>
 <span class="sd">        test_begin = getml.data.time.datetime(2011, 1, 1)</span>

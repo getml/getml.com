@@ -4307,11 +4307,9 @@ three different steps.</p>
   <a class="autorefs autorefs-internal" href="placeholder/#getml.data.Placeholder"><code>Placeholder</code></a> from the data and joining them to
   represent the data schema.</li>
 </ul>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Creating a new data frame object in the getML engine and importing
+<details class="example">
+<summary>Example</summary>
+<p>Creating a new data frame object in the getML engine and importing
 data is done by one of the class methods
 <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame.from_csv"><code>from_csv</code></a>,
 <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame.from_db"><code>from_db</code></a>,
@@ -4395,6 +4393,7 @@ them using the <a class="autorefs autorefs-internal" href="placeholder/#getml.da
 <p>The data model contained in <code>ph_loan</code> can now be used to
 construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 </details>
+
 
 
   <div class="doc doc-children">
@@ -4597,7 +4596,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s1">&#39;FloatColumnView&#39;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="columns/#getml.data.columns.FloatColumnView">FloatColumnView</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4616,7 +4615,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code>&#39;FloatColumnView&#39;</code>
+                    <code><a class="autorefs autorefs-internal" title="getml.data.columns.columns.FloatColumnView" href="columns/#getml.data.columns.FloatColumnView">FloatColumnView</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -4637,7 +4636,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
-<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="s2">&quot;FloatColumnView&quot;</span><span class="p">:</span>
+<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rowid</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">FloatColumnView</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the row numbers of the table.</span>
 
@@ -4700,16 +4699,15 @@ the data frames objects</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">list_data_frames</span><span class="p">()</span>
 <span class="n">d</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">list_data_frames</span><span class="p">()</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/helpers.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 79</span>
@@ -4758,7 +4756,7 @@ the data frames objects</p>
 <span class="sd">            - &#39;on_disk&#39;</span>
 <span class="sd">                stored on disk.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        d, _ = getml.datasets.make_numerical()</span>
 <span class="sd">        getml.data.list_data_frames()</span>
@@ -5374,11 +5372,9 @@ changes.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Suppose we wanted to create a <a class="autorefs autorefs-internal" href="data_model/#getml.data.DataModel"><code>DataModel</code></a>:</p>
+      <details class="example">
+<summary>Example</summary>
+<p>Suppose we wanted to create a <a class="autorefs autorefs-internal" href="data_model/#getml.data.DataModel"><code>DataModel</code></a>:</p>
 <pre><code>dm = getml.data.DataModel(
     population_train.to_placeholder("population")
 )
@@ -5399,6 +5395,7 @@ the following:
     <span class="n">meta</span><span class="o">=</span><span class="n">meta</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">,</span> <span class="n">trans</span><span class="o">=</span><span class="n">trans</span><span class="p">))</span>
 </code></pre></div></p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/helpers2.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">364</span>
@@ -5470,7 +5467,7 @@ the following:
 <span class="sd">    Returns:</span>
 <span class="sd">        A list of placeholders.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Suppose we wanted to create a [`DataModel`][getml.data.DataModel]:</span>
 
 
@@ -5903,11 +5900,9 @@ set</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
 <span class="n">population</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;column_01&#39;</span><span class="p">)</span>
 
 <span class="n">idx</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -5915,6 +5910,7 @@ set</p>
 <span class="n">population_test</span> <span class="o">=</span> <span class="n">population</span><span class="p">[</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="mf">0.7</span><span class="p">]</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/columns/random.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
@@ -5963,7 +5959,7 @@ set</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            FloatColumn containing random numbers</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        population = getml.DataFrame(&#39;population&#39;)</span>
 <span class="sd">        population.add(numpy.zeros(100), &#39;column_01&#39;)</span>

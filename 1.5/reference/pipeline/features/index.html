@@ -4506,11 +4506,9 @@ correlations and their respective transpiled sql representation.</p>
   <p>The container is an iterable. So, in addition to
 <a class="autorefs autorefs-internal" href="#getml.pipeline.Features.filter"><code>filter</code></a> you can also use python list
 comprehensions for filtering.</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">all_my_features</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span>
+</details>      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">all_my_features</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span>
 
 <span class="n">first_feature</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -4527,6 +4525,7 @@ comprehensions for filtering.</p>
 <span class="n">sql_code</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">()</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/pipeline/features.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 92</span>
@@ -5088,14 +5087,13 @@ importances.
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">important_features</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">important_features</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">correlated_features</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">correlation</span> <span class="o">&gt;</span> <span class="mf">0.3</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/features.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">330</span>
@@ -5127,7 +5125,7 @@ importances.
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of filtered Features.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        important_features = my_pipeline.features.filter(lambda feature: feature.importance &gt; 0.1)</span>
 <span class="sd">        correlated_features = my_pipeline.features.filter(lambda feature: feature.correlation &gt; 0.3)</span>
@@ -5473,15 +5471,14 @@ container is sorted by target and name.</p>
 <details class="return" open>
   <summary>Return</summary>
   <p>A container of sorted Features.</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_correlation</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;correlation&quot;</span><span class="p">)</span>
+</details>      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_correlation</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;correlation&quot;</span><span class="p">)</span>
 
 <span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/features.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">463</span>
@@ -5599,7 +5596,7 @@ container is sorted by target and name.</p>
 <span class="sd">    Return:</span>
 <span class="sd">            A container of sorted Features.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_correlation = my_pipeline.features.sort(by=&quot;correlation&quot;)</span>
 

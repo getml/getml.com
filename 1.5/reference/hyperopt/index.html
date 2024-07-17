@@ -4387,11 +4387,9 @@
   <p>This feature is available in the getML
 <a class="autorefs autorefs-internal" href="../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact">contact us</a>!</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>The easiest way to conduct a hyperparameter optimization
+</details>      <details class="example">
+<summary>Example</summary>
+<p>The easiest way to conduct a hyperparameter optimization
 is to use the built-in tuning routines. Note that these
 tuning routines usually take a day to complete unless
 we use very small data sets as we do in this example.</p>
@@ -4613,6 +4611,7 @@ we use very small data sets as we do in this example.</p>
 <span class="n">best_pipeline</span> <span class="o">=</span> <span class="n">gaussian_search</span><span class="o">.</span><span class="n">best_pipeline</span>
 </code></pre></div>
 </details>
+
 
 
   <div class="doc doc-children">
@@ -4916,11 +4915,9 @@ the number of threads will be inferred.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>We assume that you have already set up your
+      <details class="example">
+<summary>Example</summary>
+<p>We assume that you have already set up your
 <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> and
 <a class="autorefs autorefs-internal" href="../data/container/#getml.data.Container"><code>Container</code></a>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">tuned_pipeline</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">tune_predictors</span><span class="p">(</span>
@@ -4928,6 +4925,7 @@ the number of threads will be inferred.</p>
     <span class="n">container</span><span class="o">=</span><span class="n">container</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/tuning.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">231</span>
@@ -5078,7 +5076,7 @@ the number of threads will be inferred.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        Pipeline containing tuned versions of the feature learners.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        We assume that you have already set up your</span>
 <span class="sd">        [`Pipeline`][getml.Pipeline] and</span>
 <span class="sd">        [`Container`][getml.data.Container].</span>
@@ -5298,11 +5296,9 @@ the number of threads will be inferred.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>We assume that you have already set up your
+      <details class="example">
+<summary>Example</summary>
+<p>We assume that you have already set up your
 <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> and
 <a class="autorefs autorefs-internal" href="../data/container/#getml.data.Container"><code>Container</code></a>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">tuned_pipeline</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">tune_predictors</span><span class="p">(</span>
@@ -5310,6 +5306,7 @@ the number of threads will be inferred.</p>
     <span class="n">container</span><span class="o">=</span><span class="n">container</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 <table>
       <thead>
@@ -5483,7 +5480,7 @@ the number of threads will be inferred.</p>
 <span class="sd">            The number of parallel threads to use. If set to 0,</span>
 <span class="sd">            the number of threads will be inferred.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        We assume that you have already set up your</span>
 <span class="sd">        [`Pipeline`][getml.Pipeline] and</span>
 <span class="sd">        [`Container`][getml.data.Container].</span>

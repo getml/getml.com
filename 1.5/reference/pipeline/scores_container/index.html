@@ -4747,15 +4747,14 @@ The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 <span class="n">one_week_ago</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">scores_last_week</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">date_time</span> <span class="o">&gt;=</span> <span class="n">one_week_ago</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/scores_container.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">136</span>
@@ -4789,7 +4788,7 @@ The container supports slicing and is sort- and filterable.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of filtered scores.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        from datetime import datetime, timedelta</span>
 <span class="sd">        one_week_ago = datetime.today() - timedelta(days=7)</span>
@@ -4890,14 +4889,13 @@ The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
 <span class="n">most_recent_first</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">date_time</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/scores_container.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">196</span>
@@ -4940,7 +4938,7 @@ The container supports slicing and is sort- and filterable.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted scores.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_auc = pipe.scores.sort(key=lambda score: score.auc)</span>
 <span class="sd">        most_recent_first = pipe.scores.sort(key=lambda score: score.date_time, descending=True)</span>

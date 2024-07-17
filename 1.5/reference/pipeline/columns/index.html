@@ -4440,11 +4440,9 @@ to data frames provided to the pipeline.</p>
   <p>The container is an iterable. So, in addition to
 <a class="autorefs autorefs-internal" href="#getml.pipeline.Columns.filter"><code>filter</code></a> you can also use python list
 comprehensions for filtering.</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">all_my_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span>
+</details>      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">all_my_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span>
 
 <span class="n">first_column</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -4461,6 +4459,7 @@ comprehensions for filtering.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/pipeline/columns.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 88</span>
@@ -4643,14 +4642,13 @@ comprehensions for filtering.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">important_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">important_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">peripheral_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">marker</span> <span class="o">==</span> <span class="s2">&quot;[PERIPHERAL]&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/columns.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">276</span>
@@ -4682,7 +4680,7 @@ comprehensions for filtering.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A container of filtered Columns.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        important_columns = my_pipeline.columns.filter(lambda column: column.importance &gt; 0.1)</span>
 <span class="sd">        peripheral_columns = my_pipeline.columns.filter(lambda column: column.marker == &quot;[PERIPHERAL]&quot;)</span>
@@ -5270,13 +5268,12 @@ container is sorted by target and name.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/columns.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">442</span>
@@ -5369,7 +5366,7 @@ container is sorted by target and name.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted columns.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_importance = my_pipeline.columns.sort(key=lambda column: column.importance)</span>
 <span class="sd">        ```</span>

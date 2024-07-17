@@ -4419,17 +4419,16 @@ holds global methods to request tables' importances.</p>
   <p>The container is an iterable. So, in addition to
 <a class="autorefs autorefs-internal" href="#getml.pipeline.Tables.filter"><code>filter</code></a> you can also use python list
 comprehensions for filtering.</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">all_my_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span>
+</details>      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">all_my_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span>
 <span class="n">first_table</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">all_but_last_10_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="p">[:</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>
 <span class="n">important_tables</span> <span class="o">=</span> <span class="p">[</span><span class="n">table</span> <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span> <span class="k">if</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">]</span>
 <span class="n">names</span><span class="p">,</span> <span class="n">importances</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">importances</span><span class="p">()</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/pipeline/tables.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
@@ -4654,14 +4653,13 @@ comprehensions for filtering.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">important_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">important_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">peripheral_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">marker</span> <span class="o">==</span> <span class="s2">&quot;[PERIPHERAL]&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/tables.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
@@ -4693,7 +4691,7 @@ comprehensions for filtering.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of filtered tables.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        important_tables = my_pipeline.table.filter(lambda table: table.importance &gt; 0.1)</span>
 <span class="sd">        peripheral_tables = my_pipeline.tables.filter(lambda table: table.marker == &quot;[PERIPHERAL]&quot;)</span>
@@ -5011,13 +5009,12 @@ container is sorted by target and name.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/tables.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">280</span>
@@ -5101,7 +5098,7 @@ container is sorted by target and name.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted tables.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_importance = my_pipeline.tables.sort(key=lambda table: table.importance)</span>
 <span class="sd">        ```</span>

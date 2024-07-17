@@ -5086,25 +5086,27 @@ If you do not pass anything, this will create a new default connection.</p>
           </tr>
       </tbody>
     </table>
-      <p>Note:
-    By selecting an existing table of your database in
-    <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.from_db"><code>from_db</code></a> function, you can create
-    a new <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
-    Alternatively you can use the
-    <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.read_db"><code>read_db</code></a> and
-    <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.read_query"><code>read_query</code></a> methods to replace
-    the content of the current <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>
-    instance or append further rows based on either a table or a
-    specific query.</p>
-<pre><code>You can also write your results back into the Greenplum
-database. By passing the name for the destination table to
-[`transform`][getml.Pipeline.transform], the features
-generated from your raw data will be written back. Passing
-them into [`predict`][getml.Pipeline.predict], instead,
-makes predictions of the target variables to new, unseen data
-and stores the result into the corresponding table.
-</code></pre>
 
+
+<details class="note" open>
+  <summary>Note</summary>
+  <p>By selecting an existing table of your database in
+<a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.from_db"><code>from_db</code></a> function, you can create
+a new <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively you can use the
+<a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.read_db"><code>read_db</code></a> and
+<a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame.read_query"><code>read_query</code></a> methods to replace
+the content of the current <a class="autorefs autorefs-internal" href="../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>
+instance or append further rows based on either a table or a
+specific query.</p>
+<p>You can also write your results back into the Greenplum
+database. By passing the name for the destination table to
+<a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform</code></a>, the features
+generated from your raw data will be written back. Passing
+them into <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict</code></a>, instead,
+makes predictions of the target variables to new, unseen data
+and stores the result into the corresponding table.</p>
+</details>
             <details class="quote">
               <summary>Source code in <code>getml/database/connect_greenplum.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 21</span>
@@ -5242,7 +5244,8 @@ and stores the result into the corresponding table.
 <span class="normal">153</span>
 <span class="normal">154</span>
 <span class="normal">155</span>
-<span class="normal">156</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_greenplum</span><span class="p">(</span>
+<span class="normal">156</span>
+<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect_greenplum</span><span class="p">(</span>
     <span class="n">dbname</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">user</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -5329,6 +5332,7 @@ and stores the result into the corresponding table.
 
 <span class="sd">    Returns:</span>
 <span class="sd">        The connection object.</span>
+
 <span class="sd">    Note:</span>
 <span class="sd">        By selecting an existing table of your database in</span>
 <span class="sd">        [`from_db`][getml.DataFrame.from_db] function, you can create</span>
@@ -8542,11 +8546,9 @@ name will be identical to the source_table.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>A frequent use case for this function is to copy data from a data source into
+      <details class="example">
+<summary>Example</summary>
+<p>A frequent use case for this function is to copy data from a data source into
 sqlite. This is a good idea, because sqlite is faster than most standard,
 ACID-compliant databases, and also you want to avoid messing up a productive
 environment.</p>
@@ -8569,6 +8571,7 @@ be any name you see fit.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/database/copy_table.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
@@ -8666,7 +8669,7 @@ be any name you see fit.</p>
 <span class="sd">            connection. If you do not explicitly pass a target_table, the</span>
 <span class="sd">            name will be identical to the source_table.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        A frequent use case for this function is to copy data from a data source into</span>
 <span class="sd">        sqlite. This is a good idea, because sqlite is faster than most standard,</span>
 <span class="sd">        ACID-compliant databases, and also you want to avoid messing up a productive</span>
@@ -9691,11 +9694,9 @@ the engine will use the default connection.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Let's assume you have two CSV files - <em>file1.csv</em> and
+      <details class="example">
+<summary>Example</summary>
+<p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> . You can import their data into the database
 using the following commands:</p>
 <div class="highlight"><pre><span></span><code><span class="n">stmt</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">sniff_csv</span><span class="p">(</span>
@@ -9713,6 +9714,7 @@ using the following commands:</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/database/read_csv.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
@@ -9836,7 +9838,7 @@ using the following commands:</p>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
 <span class="sd">            the engine will use the default connection.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* . You can import their data into the database</span>
 <span class="sd">        using the following commands:</span>
@@ -10064,11 +10066,9 @@ the engine will use the default connection.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Let's assume you have two CSV files - <em>file1.csv</em> and
+      <details class="example">
+<summary>Example</summary>
+<p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
 import their data into the getML engine using the following
 commands:
@@ -10097,6 +10097,7 @@ commands:
 You can also set the access credential as environment variables
 before you launch the getML engine.</p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/database/read_s3.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
@@ -10251,7 +10252,7 @@ before you launch the getML engine.</p>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
 <span class="sd">            the engine will use the default connection.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
 <span class="sd">        import their data into the getML engine using the following</span>
@@ -10848,11 +10849,9 @@ the engine will use the default connection.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Let's assume you have two CSV files - <em>file1.csv</em> and
+      <details class="example">
+<summary>Example</summary>
+<p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
 import their data into the getML engine using the following
 commands:
@@ -10871,6 +10870,7 @@ commands:
 You can also set the access credential as environment variables
 before you launch the getML engine.</p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/database/sniff_s3.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 20</span>
@@ -11018,7 +11018,7 @@ before you launch the getML engine.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        Appropriate `CREATE TABLE` statement.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
 <span class="sd">        import their data into the getML engine using the following</span>

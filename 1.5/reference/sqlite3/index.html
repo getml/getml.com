@@ -4270,11 +4270,9 @@ version of your Python distribution, do the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">sqlite3</span><span class="o">.</span><span class="n">sqlite_version</span>
 </code></pre></div>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>For our example we will assume that you want to productionize
+<details class="example">
+<summary>Example</summary>
+<p>For our example we will assume that you want to productionize
 the <a href="https://github.com/getml/getml-demo/blob/master/cora.ipynb">CORA project</a>.</p>
 <p>First, we want to transpile the features into SQL code,
 like this:</p>
@@ -4318,6 +4316,7 @@ This will generate SQLite3 code that creates the "cites" table. You can
 hard-code that into your pipeline. This will ensure that the data always have
 the correct types, avoiding awkward problems in the future.</p>
 </details>
+
 
 
   <div class="doc doc-children">

@@ -4688,11 +4688,9 @@
       <p>Subroles allow for more fine-granular control of how certain columns
 will be used by the pipeline.</p>
 <p>A column can have no subrole, one subrole or several subroles.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="c1"># The Relboost feature learning algorithm will</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># The Relboost feature learning algorithm will</span>
 <span class="c1"># ignore this column.</span>
 <span class="n">my_data_frame</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span>
     <span class="s2">&quot;my_column&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">exclude</span><span class="o">.</span><span class="n">relboost</span><span class="p">)</span>
@@ -4709,6 +4707,7 @@ will be used by the pipeline.</p>
 <span class="n">my_data_frame</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;emails&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">only</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
   <div class="doc doc-children">

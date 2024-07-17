@@ -4353,13 +4353,12 @@ project. The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">gaussian_hyperopts</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lamda</span> <span class="n">hyp</span><span class="p">:</span> <span class="s2">&quot;Gaussian&quot;</span> <span class="ow">in</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">gaussian_hyperopts</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopts</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">lamda</span> <span class="n">hyp</span><span class="p">:</span> <span class="s2">&quot;Gaussian&quot;</span> <span class="ow">in</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 91</span>
@@ -4392,7 +4391,7 @@ project. The container supports slicing and is sort- and filterable.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of filtered hyperopts.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        gaussian_hyperopts = getml.project.hyperopts.filter(lamda hyp: &quot;Gaussian&quot; in hyp.type)</span>
 <span class="sd">        ```</span>
@@ -4489,13 +4488,12 @@ project. The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">by_type</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">hyp</span><span class="p">:</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">by_type</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">hyperopt</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">hyp</span><span class="p">:</span> <span class="n">hyp</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/project/containers/hyperopts.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">114</span>
@@ -4532,7 +4530,7 @@ project. The container supports slicing and is sort- and filterable.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted hyperopts.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        by_type = getml.project.hyperopt.sort(lambda hyp: hyp.type)</span>
 <span class="sd">        ```</span>

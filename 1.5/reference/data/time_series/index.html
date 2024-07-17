@@ -4507,11 +4507,9 @@ on the join.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="c1"># All rows before row 10500 will be used for training.</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># All rows before row 10500 will be used for training.</span>
 <span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="n">data_all</span><span class="p">,</span> <span class="s2">&quot;rowid&quot;</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mi">10500</span><span class="p">)</span>
 
 <span class="n">time_series</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
@@ -4550,6 +4548,7 @@ on the join.</p>
 <span class="n">predictions</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">full</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/time_series.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
