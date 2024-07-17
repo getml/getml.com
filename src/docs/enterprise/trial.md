@@ -8,7 +8,7 @@ This is best for data scientists and engineers that are already familiar with ou
 
 ## What you will get:
 - Chance to test drive relational learning
-- Build any model for non-productive use (see [**Terms**](/enterprise/trial/terms))
+- Build any model for non-productive use (see [**Terms**](trial/terms.md))
 
 <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
 <script>

@@ -8,7 +8,7 @@ The will install both the [Python API][getml-suite-python-api] and the [engine][
 [](){#separate-installation-of-engine}
 ### Separate installation of engine
 
-In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the [enterprise edition](/enterprise/benefits) of the engine.
+In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the [enterprise edition](../../enterprise/benefits.md) of the engine.
 
 
 Please execute the following commands, replacing `ARCH` with either `x64` or `arm64`, depending on your architecture.

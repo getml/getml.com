@@ -30,7 +30,7 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 ### Enterprise Edition
 This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
 
-[Learn more](/enterprise/benefits){ .md-button .md-button--primary }
+[Learn more](enterprise/benefits.md){ .md-button .md-button--primary }
 
 
 ## Interested in getML Relational Learning?

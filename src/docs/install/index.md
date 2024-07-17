@@ -59,9 +59,9 @@ In some scenarios, installing getML from an archive might be necessary. Refer to
 
 Need the highest models accuracy in commercial prediction applications and enterprise grade support?
 
-[Choose getML enterprise](/enterprise/benefits){ .md-button }
+[Choose getML enterprise](../enterprise/benefits.md){ .md-button }
 
-Once you have downloaded the [trial version](/enterprise/book-demo) or [purchased the license](https://www.getml.com/contact) of getML enterprise edition, you can proceed as follows:
+Once you have downloaded the [trial version](../enterprise/book-demo.md) or [purchased the license](https://www.getml.com/contact) of getML enterprise edition, you can proceed as follows:
 
 - Install the [Python API][getml-suite-python-api]: `pip install getml`
 - Install the [engine][engine] by following [instructions for separate installation of it][separate-installation-of-engine]. Start from step 2 and use the `tar` file you have been provided with.
