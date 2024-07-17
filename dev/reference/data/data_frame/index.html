@@ -5596,11 +5596,9 @@ Otherwise, you can use the <a class="autorefs autorefs-internal" href="../roles_
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Creating a new data frame object in the getML engine and importing
+      <details class="example">
+<summary>Example</summary>
+<p>Creating a new data frame object in the getML engine and importing
 data is done by one the class functions
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_csv"><code>from_csv</code></a>,
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_db"><code>from_db</code></a>,
@@ -5637,6 +5635,7 @@ present in the getML engine (see
 <span class="n">df_table_reloaded</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">load_data_frame</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -7284,11 +7283,9 @@ printed to stdout during the download.</p>
   <summary>Note</summary>
   <p>It is assumed that the first line of each CSV file
 contains a header with the column names.</p>
-</details>
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Let's assume you have two CSV files - <em>file1.csv</em> and
+</details>      <details class="example">
+<summary>Example</summary>
+<p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the current working directory. You can
 import their data into the getML engine using.
 <div class="highlight"><pre><span></span><code><span class="n">df_expd</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
@@ -7326,6 +7323,7 @@ import their data into the getML engine using.
 <p>This will return the roles dictionary it would have used. You
 can now hard-code this.</p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1015</span>
@@ -7609,7 +7607,7 @@ can now hard-code this.</p>
 <span class="sd">        It is assumed that the first line of each CSV file</span>
 <span class="sd">        contains a header with the column names.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the current working directory. You can</span>
 <span class="sd">        import their data into the getML engine using.</span>
@@ -7909,11 +7907,9 @@ will use the default connection.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_mysql</span><span class="p">(</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_mysql</span><span class="p">(</span>
     <span class="n">host</span><span class="o">=</span><span class="s2">&quot;db.relational-data.org&quot;</span><span class="p">,</span>
     <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
     <span class="n">dbname</span><span class="o">=</span><span class="s2">&quot;financial&quot;</span><span class="p">,</span>
@@ -7925,6 +7921,7 @@ will use the default connection.</p>
     <span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;loan&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;data_frame_loan&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1238</span>
@@ -8090,7 +8087,7 @@ will use the default connection.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            Handler of the underlying data.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.database.connect_mysql(</span>
 <span class="sd">            host=&quot;db.relational-data.org&quot;,</span>
@@ -9952,11 +9949,9 @@ will return the inffered roles.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Let's assume you have two CSV files - <em>file1.csv</em> and
+      <details class="example">
+<summary>Example</summary>
+<p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
 import their data into the getML engine using the following
 commands:
@@ -9977,6 +9972,7 @@ before you launch the getML engine.</p>
 for further information on overriding the CSV sniffer for greater
 type safety.</p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1863</span>
@@ -10249,7 +10245,7 @@ type safety.</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            Handler of the underlying data.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
 <span class="sd">        import their data into the getML engine using the following</span>
@@ -10585,11 +10581,9 @@ will return an empty data frame with the roles set as inferred.</p>
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> instance will be loaded from
 disk into the getML engine and updates the current handler
 using <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.refresh"><code>refresh</code></a>.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>First, we have to create and import data sets.
+<details class="example">
+<summary>Example</summary>
+<p>First, we have to create and import data sets.
 <div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">(</span><span class="n">population_name</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">list_data_frames</span><span class="p">()</span>
 </code></pre></div></p>
@@ -10607,6 +10601,7 @@ different sessions.
 <span class="n">d2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </code></pre></div></p>
 </details>
+
 
 <table>
       <thead>
@@ -10749,7 +10744,7 @@ getML engine.</p>
 <span class="sd">    disk into the getML engine and updates the current handler</span>
 <span class="sd">    using [`refresh`][getml.DataFrame.refresh].</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        First, we have to create and import data sets.</span>
 <span class="sd">        ```python</span>
 <span class="sd">        d, _ = getml.datasets.make_numerical(population_name = &#39;test&#39;)</span>
@@ -14484,11 +14479,9 @@ a time stamp is taking place.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">animal</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hawk&quot;</span><span class="p">,</span> <span class="s2">&quot;parrot&quot;</span><span class="p">,</span> <span class="s2">&quot;goose&quot;</span><span class="p">],</span>
     <span class="n">votes</span><span class="o">=</span><span class="p">[</span><span class="mi">12341</span><span class="p">,</span> <span class="mi">5127</span><span class="p">,</span> <span class="mi">65311</span><span class="p">],</span>
     <span class="n">date</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;04/06/2019&quot;</span><span class="p">,</span> <span class="s2">&quot;01/03/2019&quot;</span><span class="p">,</span> <span class="s2">&quot;24/12/2018&quot;</span><span class="p">])</span>
@@ -14508,6 +14501,7 @@ a time stamp is taking place.</p>
 | 2018-12-24T00:00:00.000000Z | goose       | 65311     |
 </code></pre></div></p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3247</span>
@@ -14620,7 +14614,7 @@ a time stamp is taking place.</p>
 <span class="sd">            This is only necessary, if an implicit conversion from a StringColumn to</span>
 <span class="sd">            a time stamp is taking place.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        data_df = dict(</span>
 <span class="sd">            animal=[&quot;hawk&quot;, &quot;parrot&quot;, &quot;goose&quot;],</span>
@@ -16190,11 +16184,9 @@ the entire data frame into a single file.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="s2">&quot;YOUR-SECRET-ACCESS-KEY&quot;</span><span class="p">)</span>
 
 <span class="n">your_df</span><span class="o">.</span><span class="n">to_s3</span><span class="p">(</span>
@@ -16205,6 +16197,7 @@ the entire data frame into a single file.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3665</span>
@@ -16332,7 +16325,7 @@ the entire data frame into a single file.</p>
 <span class="sd">            Maximum number of lines per file. Set to 0 to read</span>
 <span class="sd">            the entire data frame into a single file.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.engine.set_s3_access_key_id(&quot;YOUR-ACCESS-KEY-ID&quot;)</span>
 <span class="sd">        getml.engine.set_s3_secret_access_key(&quot;YOUR-SECRET-ACCESS-KEY&quot;)</span>
@@ -16494,11 +16487,9 @@ subselection of the current instance.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Generate example data:
+      <details class="example">
+<summary>Example</summary>
+<p>Generate example data:
 <div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;melon&quot;</span><span class="p">,</span> <span class="s2">&quot;pineapple&quot;</span><span class="p">],</span>
     <span class="n">price</span><span class="o">=</span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">],</span>
@@ -16532,6 +16523,7 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 | 2        | cherry      | 1.4       |
 </code></pre></div></p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">3782</span>
@@ -16612,7 +16604,7 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 <span class="sd">    Returns:</span>
 <span class="sd">            A new [`View`][getml.data.View] containing the selected rows.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Generate example data:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        data = dict(</span>

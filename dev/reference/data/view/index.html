@@ -5028,11 +5028,9 @@ that has been added to the view.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>You hardly ever directly create views. Instead, it is more likely
+      <details class="example">
+<summary>Example</summary>
+<p>You hardly ever directly create views. Instead, it is more likely
 that you will encounter them as a result of some operation on a
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Creates a view on the first 100 lines</span>
@@ -5073,6 +5071,7 @@ deep copies of the data frames whenever you have made a small
 change like the one in our example. Note that the pipeline will
 record which <a class="autorefs autorefs-internal" href="../container/#getml.data.Container"><code>Container</code></a> you have used.</p>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/view.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
@@ -7281,11 +7280,9 @@ the entire data frame into a single file.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="s2">&quot;YOUR-SECRET-ACCESS-KEY&quot;</span><span class="p">)</span>
 
 <span class="n">your_view</span><span class="o">.</span><span class="n">to_s3</span><span class="p">(</span>
@@ -7296,6 +7293,7 @@ the entire data frame into a single file.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/view.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">851</span>
@@ -7409,7 +7407,7 @@ the entire data frame into a single file.</p>
 <span class="sd">            Maximum number of lines per file. Set to 0 to read</span>
 <span class="sd">            the entire data frame into a single file.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.engine.set_s3_access_key_id(&quot;YOUR-ACCESS-KEY-ID&quot;)</span>
 <span class="sd">        getml.engine.set_s3_secret_access_key(&quot;YOUR-SECRET-ACCESS-KEY&quot;)</span>
@@ -7531,11 +7529,9 @@ subselection of the current instance.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>Generate example data:
+      <details class="example">
+<summary>Example</summary>
+<p>Generate example data:
 <div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">fruit</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;melon&quot;</span><span class="p">,</span> <span class="s2">&quot;pineapple&quot;</span><span class="p">],</span>
     <span class="n">price</span><span class="o">=</span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">],</span>
@@ -7569,6 +7565,7 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 | 2        | cherry      | 1.4       |
 </code></pre></div></p>
 </details>
+
             <details class="quote">
               <summary>Source code in <code>getml/data/view.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 950</span>
@@ -7642,7 +7639,7 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 <span class="sd">    Returns:</span>
 <span class="sd">        A new view containing only the rows that satisfy the condition.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        Generate example data:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        data = dict(</span>

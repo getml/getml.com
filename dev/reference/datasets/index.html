@@ -4431,11 +4431,9 @@ impact, APEC and winter heating. Proceedings of the Royal Society A, 471,
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">air_pollution</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_air_pollution</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">air_pollution</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_air_pollution</span><span class="p">()</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">air_pollution</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
@@ -4443,6 +4441,7 @@ For a full analysis of the atherosclerosis dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/air_pollution.ipynb">getml-demo
 </a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -4546,7 +4545,7 @@ using <a class="autorefs autorefs-internal" href="../data/placeholder/#getml.dat
 
 <span class="sd">                * `air_pollution`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        air_pollution = getml.datasets.load_air_pollution()</span>
 <span class="sd">        type(air_pollution)</span>
@@ -4719,11 +4718,9 @@ is True). The keys correspond to the name of the DataFrame on the
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">population</span><span class="p">,</span> <span class="n">contr</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_atherosclerosis</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">population</span><span class="p">,</span> <span class="n">contr</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_atherosclerosis</span><span class="p">()</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">population</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
@@ -4731,6 +4728,7 @@ For a full analysis of the atherosclerosis dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/atherosclerosis.ipynb">getml-examples
 </a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -4866,7 +4864,7 @@ using <a class="autorefs autorefs-internal" href="../data/placeholder/#getml.dat
 <span class="sd">            - `population`</span>
 <span class="sd">            - `contr`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        population, contr = getml.datasets.load_atherosclerosis()</span>
 <span class="sd">        type(population)</span>
@@ -5041,15 +5039,14 @@ is True). The keys correspond to the name of the DataFrame on the
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">biodegradability</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_biodegradability</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">biodegradability</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_biodegradability</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">biodegradability</span><span class="p">[</span><span class="s2">&quot;molecule_train&quot;</span><span class="p">])</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -5203,7 +5200,7 @@ using <a class="autorefs autorefs-internal" href="../data/placeholder/#getml.dat
 <span class="sd">            * `gmember`</span>
 <span class="sd">            * `group`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        biodegradability = getml.datasets.load_biodegradability(as_dict=True)</span>
 <span class="sd">        type(biodegradability[&quot;molecule_train&quot;])</span>
@@ -5380,11 +5377,9 @@ is True). The keys correspond to the name of the DataFrame on the
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">ce</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_consumer_expenditures</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">ce</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_consumer_expenditures</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">ce</span><span class="p">[</span><span class="s2">&quot;expd&quot;</span><span class="p">])</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
@@ -5392,6 +5387,7 @@ For a full analysis of the occupancy dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/consumer_expenditures.ipynb">getml-examples
 </a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -5525,7 +5521,7 @@ using <a class="autorefs autorefs-internal" href="../data/placeholder/#getml.dat
 <span class="sd">            * `fmld`</span>
 <span class="sd">            * `memd`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        ce = getml.datasets.load_consumer_expenditures(as_dict=True)</span>
 <span class="sd">        type(ce[&quot;expd&quot;])</span>
@@ -5687,17 +5683,16 @@ with. Such characteristics are:</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">traffic</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_interstate94</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">traffic</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_interstate94</span><span class="p">()</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">traffic</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
 For a full analysis of the interstate94 dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/interstate94.ipynb">getml-examples</a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -5818,7 +5813,7 @@ analysis, a data model needs to be constructed using
 
 <span class="sd">            * `traffic`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        traffic = getml.datasets.load_interstate94()</span>
 <span class="sd">        type(traffic)</span>
@@ -6018,11 +6013,9 @@ is True). The keys correspond to the name of the DataFrame on the
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">loans</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_loans</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">loans</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_loans</span><span class="p">(</span><span class="n">as_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">loans</span><span class="p">[</span><span class="s2">&quot;population_train&quot;</span><span class="p">])</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
@@ -6030,6 +6023,7 @@ For a full analysis of the loans dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/loans.ipynb">getml-examples
 </a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -6193,7 +6187,7 @@ analysis, a data model needs to be constructed using
 <span class="sd">            * `order`</span>
 <span class="sd">            * `trans`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        loans = getml.datasets.load_loans(as_dict=True)</span>
 <span class="sd">        type(loans[&quot;population_train&quot;])</span>
@@ -6358,11 +6352,9 @@ is True). The keys correspond to the name of the DataFrame on the
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p><div class="highlight"><pre><span></span><code><span class="n">population_train</span><span class="p">,</span> <span class="n">population_test</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_occupancy</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">population_train</span><span class="p">,</span> <span class="n">population_test</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_occupancy</span><span class="p">()</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">occupancy_train</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">data_frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
@@ -6370,6 +6362,7 @@ For a full analysis of the occupancy dataset including all necessary
 preprocessing steps please refer to <a href="https://github.com/getml/getml-demo/blob/master/occupancy.ipynb">getml-examples
 </a>.</p>
 </details>
+
 
 <details class="note" open>
   <summary>Note</summary>
@@ -6501,7 +6494,7 @@ using <a class="autorefs autorefs-internal" href="../data/placeholder/#getml.dat
 <span class="sd">            * `population_test`</span>
 <span class="sd">            * `population_validation`</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        population_train, population_test, _ = getml.datasets.load_occupancy()</span>
 <span class="sd">        type(occupancy_train)</span>

@@ -4454,14 +4454,16 @@ just like <em>train</em>, <em>validation</em> and <em>test</em>.
 You can either pass <em>population</em> and <em>split</em> or you can pass
 the subsets separately using <em>train</em>, <em>validation</em>, <em>test</em>
 and <em>kwargs</em>.</p>
-<p>Example:
-    <div class="highlight"><pre><span></span><code><span class="c1"># Pass the subset.</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pass the subset.</span>
 <span class="n">container</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">my_subset</span><span class="o">=</span><span class="n">my_data_frame</span><span class="p">)</span>
 
 <span class="c1"># You can access the subset just like train,</span>
 <span class="c1"># validation or test</span>
 <span class="n">my_pipeline</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">container</span><span class="o">.</span><span class="n">my_subset</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</details>
               </div>
               <p>
               </p>
@@ -4469,11 +4471,9 @@ and <em>kwargs</em>.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>A <a class="autorefs autorefs-internal" href="../data_model/#getml.data.DataModel"><code>DataModel</code></a> only contains abstract data. When we
+      <details class="example">
+<summary>Example</summary>
+<p>A <a class="autorefs autorefs-internal" href="../data_model/#getml.data.DataModel"><code>DataModel</code></a> only contains abstract data. When we
 fit a pipeline, we need to assign concrete data.</p>
 <p>This example is taken from the
 <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/loans.ipynb">loans notebook </a>.
@@ -4587,6 +4587,7 @@ deep copies of the data frames whenever you have made a small
 change like the one in our example. Note that the pipeline will
 record which container you have used.</p>
 </details>
+
                   <details class="quote">
                     <summary>Source code in <code>getml/data/container.py</code></summary>
                     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>

@@ -4337,11 +4337,9 @@ included.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">category_trimmer</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">CategoryTrimmer</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">category_trimmer</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">CategoryTrimmer</span><span class="p">()</span>
 
 <span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">population_placeholder</span><span class="p">,</span>
@@ -4354,6 +4352,7 @@ included.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -4405,11 +4404,9 @@ columns that were assigned one of the <a class="autorefs autorefs-internal" href
 <a class="autorefs autorefs-internal" href="../data/subroles/#getml.data.subroles.only.email"><code>only.email</code></a>.</p>
 <p>It is recommended that you assign <a class="autorefs autorefs-internal" href="../data/subroles/#getml.data.subroles.only.email"><code>only.email</code></a>,
 because it is unlikely that the e-mail address itself is interesting.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">my_data_frame</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">only</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">my_data_frame</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;email&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">only</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
 
 <span class="n">domain</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">EmailDomain</span><span class="p">()</span>
 
@@ -4424,6 +4421,7 @@ because it is unlikely that the e-mail address itself is interesting.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -4502,11 +4500,9 @@ that signify whether the original value was imputed.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">imputation</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Imputation</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">imputation</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Imputation</span><span class="p">()</span>
 
 <span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">population_placeholder</span><span class="p">,</span>
@@ -4519,6 +4515,7 @@ that signify whether the original value was imputed.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -4677,11 +4674,9 @@ the mapping. Range: [0, ∞]</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">mapping</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Mapping</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">mapping</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Mapping</span><span class="p">()</span>
 
 <span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">population_placeholder</span><span class="p">,</span>
@@ -4694,6 +4689,7 @@ the mapping. Range: [0, ∞]</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -4865,11 +4861,9 @@ extracting the minute from time stamps.</p>
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">seasonal</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Seasonal</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">seasonal</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Seasonal</span><span class="p">()</span>
 
 <span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">population_placeholder</span><span class="p">,</span>
@@ -4882,6 +4876,7 @@ extracting the minute from time stamps.</p>
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -4997,11 +4992,9 @@ will be applied to all columns with the subrole
           </tr>
       </tbody>
     </table>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">my_df</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">include</span><span class="o">.</span><span class="n">substring</span><span class="p">)</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">my_df</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">include</span><span class="o">.</span><span class="n">substring</span><span class="p">)</span>
 
 <span class="n">my_df</span><span class="o">.</span><span class="n">set_subroles</span><span class="p">(</span><span class="s2">&quot;col2&quot;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">subroles</span><span class="o">.</span><span class="n">include</span><span class="o">.</span><span class="n">substring</span><span class="p">)</span>
 <span class="n">my_df</span><span class="o">.</span><span class="n">set_unit</span><span class="p">(</span><span class="s2">&quot;col2&quot;</span><span class="p">,</span> <span class="s2">&quot;substr14&quot;</span><span class="p">)</span>
@@ -5023,6 +5016,7 @@ will be applied to all columns with the subrole
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
@@ -5074,11 +5068,9 @@ following characters:</p>
 <p><div class="highlight"><pre><span></span><code><span class="p">;</span> <span class="p">,</span> <span class="o">.</span> <span class="err">!</span> <span class="err">?</span> <span class="o">-</span> <span class="o">|</span> <span class="s2">&quot; </span><span class="se">\t</span><span class="s2"> </span><span class="se">\v</span><span class="s2"> </span><span class="se">\f</span><span class="s2"> </span><span class="se">\r</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> % &#39; ( ) [ ] { }</span>
 </code></pre></div>
 Refer to the <a class="autorefs autorefs-internal" href="../../user_guide/preprocessing/preprocessing/#handling-of-free-form-text">User Guide</a> for more information.</p>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <div class="highlight"><pre><span></span><code><span class="n">text_field_splitter</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">TextFieldSplitter</span><span class="p">()</span>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">text_field_splitter</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">TextFieldSplitter</span><span class="p">()</span>
 
 <span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">population_placeholder</span><span class="p">,</span>
@@ -5091,6 +5083,7 @@ Refer to the <a class="autorefs autorefs-internal" href="../../user_guide/prepro
 <span class="p">)</span>
 </code></pre></div>
 </details>
+
 
 
 
