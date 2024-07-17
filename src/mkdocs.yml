@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 # Project information
-site_name: GetML Developer Portal
+site_name: getML Developer Portal
 site_url: https://dev.getml.com/
 site_author: Code17 GmbH
 site_description: >-
@@ -120,6 +120,8 @@ plugins:
   - tags
   - meta
 
+  - mike:
+      canonical_version: latest
 
 # Additional configuration
 extra:
@@ -142,7 +144,8 @@ extra:
       link: https://www.youtube.com/@code17-gmbh
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/code17-gmbh
-
+  version:
+    provider: mike
 
 # Extensions
 markdown_extensions:
@@ -157,6 +160,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.superfences
+  - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
