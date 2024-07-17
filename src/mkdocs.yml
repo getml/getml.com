@@ -114,6 +114,9 @@ plugins:
   - privacy:
       links_attr_map:
         target: _blank
+  - redirects:
+      redirect_maps:
+        'enterprise.md': 'enterprise/benefits.md'
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - table-reader
@@ -252,9 +255,9 @@ nav:
     - From source:
       - Install API: install/source/python-api.md
       - Build engine & API: install/source/build.md
-    - Uninstall: 
+    - Uninstall:
       - Any platform: install/uninstall.md
-    - Archive: 
+    - Archive:
       - Archive: install/packages/archive.md
 
   - Enterprise:
