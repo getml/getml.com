@@ -10,8 +10,8 @@ In this example, you will learn about the basic concepts of getML. You will tack
 
 The guide is applicable to both the enterprise and the community editions of getML. The highlights of the two are mentioned under [community vs enterprise edition](#community-vs-enterprise-edition) section below.
 
-You have not installed getML on your machine yet? Before you get started, head over 
-to the installation instructions: for the enterprise edition [here][installation] or 
+You have not installed getML on your machine yet? Before you get started, head over
+to the installation instructions: for the enterprise edition [here][installation] or
 for the community edition [here](https://github.com/getml/getml-community#installation).
 
 
@@ -33,14 +33,14 @@ In this article, we start with a brief glimpse of different toolsets offered by 
 ## Community vs Enterprise edition
 
 !!! enterprise-adm "Enterprise Edition"
-    To purchase a licence for the Enterprise Edition, technical support and 
+    To purchase a licence for the Enterprise Edition, technical support and
     more information, please [contact us](https://www.getml.com/contact)!
 
 Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
 
-{{ read_csv('../../images/community_vs_enterprise_edition.csv') }}
+{{ read_csv('docs/assets/csv/community_vs_enterprise_edition.csv') }}
 
-*The Enterprise edition contains all features of the Community edition plus the 
+*The Enterprise edition contains all features of the Community edition plus the
 features listed in the column.
 
 ## Starting a new project
@@ -58,10 +58,10 @@ This will import the getML Python API, launch the engine, and the monitor.
 
 Alternatively, you can also launch the getML engine and the monitor as follows:
 
-- On Mac, execute  ``getml-cli`` inside a terminal or double-click the application icon.  
-- On Windows/docker, execute ``run.sh`` in Git Bash.  
+- On Mac, execute  ``getml-cli`` inside a terminal or double-click the application icon.
+- On Windows/docker, execute ``run.sh`` in Git Bash.
 - On Linux, execute ``getML`` inside a terminal.
-  
+
 Now, inside Python, execute ``import getml`` to import the API.
 
 The getML Monitor, available in the enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python. We will cover the getML monitor in a later tutorial, but feel free to check what is going on while following this guide.
@@ -112,13 +112,13 @@ getml.project.data_frames
 population_table
 Name   time_stamp                    join_key   targets   column_01
 Role   time_stamp                    join_key    target   numerical
-Units   time stamp, comparison only                                 
+Units   time stamp, comparison only
     0   1970-01-01 00:00:00.470834           0       101     -0.6295
     1   1970-01-01 00:00:00.899782           1        88     -0.9622
     2   1970-01-01 00:00:00.085734           2        17      0.7326
     3   1970-01-01 00:00:00.365223           3        74     -0.4627
     4   1970-01-01 00:00:00.442957           4        96     -0.8374
-        ...                                ...       ...     ...    
+        ...                                ...       ...     ...
   495   1970-01-01 00:00:00.945288         495        93      0.4998
   496   1970-01-01 00:00:00.518100         496       101     -0.4657
   497   1970-01-01 00:00:00.312872         497        59      0.9932
@@ -144,7 +144,7 @@ In the peripheral table, ``columns_01`` also contains a random numerical value. 
 ![Getting Started](../../images/getting_started_18_0.png)
 
 For example, such an aggregation could be the sum of all values in ``column_01``. We could also apply a subcondition, like taking only values into account that fall into a certain time range with respect to the entry in the population table. In SQL code such a feature would look like this:
-    
+
 ```sql
 SELECT COUNT( * )
 FROM POPULATION t1
@@ -184,7 +184,7 @@ star_schema.join(peripheral_table,
 
 ## Building a pipeline
 
-Now we can define the feature learner. 
+Now we can define the feature learner.
 Additionally, you can alter some hyperparameters like the number of
 features you want to train or the list of aggregations to select from
 when building features.
@@ -390,8 +390,7 @@ This very much resembles the ad hoc definition we tried in the beginning. The co
 
 This guide has shown you the very basics of getML. Starting with raw data, you have completed a full project including feature engineering and linear regression using an automated end-to-end pipeline. The most tedious part of this process - finding the right aggregations and subconditions to construct a feature table from the relational data model - was also included in this pipeline.
 
-But there’s more! [Related articles](https://www.getml.com/blog) show application 
+But there’s more! [Related articles](https://www.getml.com/blog) show application
 of getML on real world data sets.
 
 Also, don’t hesitate to [contact us](https://www.getml.com/contact) with your feedback.
-

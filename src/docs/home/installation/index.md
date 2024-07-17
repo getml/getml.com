@@ -9,7 +9,6 @@ getML is a software suite for automated feature engineering on relational data a
 
 You can download and install getML on multiple platforms. Please refer to one of the following sections:
 
-- [macOS][installation-macos]
 - [Windows/Docker][installation-windows]
 - [Linux][installation-linux]
 

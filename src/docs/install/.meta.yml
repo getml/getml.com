@@ -1,0 +1,10 @@
+# Configuration
+# theme:
+#   features:
+#     - navigation.expand
+
+# navigation:
+#   - expand
+
+hide:
+  - path
