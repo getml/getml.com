@@ -17,6 +17,7 @@ dependencies = [
   "mkdocs-material @ git+ssh://git@code17devgit/squidfunk/mkdocs-material-insiders.git@9.5.20-insiders-4.53.8",
   "mkdocs-table-reader-plugin",
   "black",
-  "mike"
+  "mike",
+  "mkdocs-redirect"
 ]
 python = "3.11"
