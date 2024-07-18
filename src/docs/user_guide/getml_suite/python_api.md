@@ -1,9 +1,7 @@
 [](){#getml-suite-python-api}
 # The getML Python API
 
-The getML Python API is shipped along with the matching version of the getML engine 
-and monitor in the file you can download from [getml.com](https://getml.com) (see 
-[Installation][installation]).
+The getML Python API is shipped along with the matching version of the getML engine and monitor (see [Installation][installation]).
 
 The most important thing you have to keep in mind when working with the Python API is this:
 
