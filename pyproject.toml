@@ -18,6 +18,6 @@ dependencies = [
   "mkdocs-table-reader-plugin",
   "black",
   "mike",
-  "mkdocs-redirect"
+  "mkdocs-redirects"
 ]
 python = "3.11"
