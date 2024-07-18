@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/enterprise/request-trial/</loc>
+         <lastmod>2024-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/enterprise/trial/terms/</loc>
          <lastmod>2024-07-18</lastmod>
          <changefreq>daily</changefreq>
