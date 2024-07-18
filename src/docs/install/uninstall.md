@@ -25,7 +25,7 @@ rm -r $HOME/.getML
 
 ## Docker
 
-To remove the Docker image and volume defined in the `docker-compose.yml` file, you can follow these steps:
+To remove the resources defined in the `docker-compose.yml` file, you can follow these steps:
 
 
 ### Docker Image
@@ -48,4 +48,14 @@ docker volume rm getml
 
 Ensure that the volume is not in use by any other containers.
 
+### `getml` directory
 
+Remove your local directory `getml` as follows:
+
+!!! warning "Project data will be deleted"
+
+    Your projects data will be deleted when you delete the `getml` directory.
+
+```bash
+rm -r getml
+```

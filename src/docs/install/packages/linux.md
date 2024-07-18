@@ -1,9 +1,20 @@
-Install getML community edition with Python's pip package manager.
+Install [getML community edition](https://github.com/getml/getml-community) with Python's pip package manager.
 
 ```py
 pip install getml
 ```
 The will install both the [Python API][getml-suite-python-api] and the [engine][engine] on your Linux machine.
+
+
+!!! enterprise-adm "Enterprise Edition"
+    Need the highest models accuracy in commercial prediction applications and enterprise grade support?
+
+    [Choose getML enterprise](../../enterprise/benefits.md){ .md-button }
+
+    Once you have obtained the getML enterprise edition, you can install it as follows:
+
+    - Install the [Python API][getml-suite-python-api]: `pip install getml`
+    - Install the [engine][engine] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
 
 [](){#separate-installation-of-engine}
 ### Separate installation of engine
