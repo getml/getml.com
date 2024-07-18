@@ -8210,12 +8210,16 @@ getML engine.</p>
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code>fname</code></td>
+            <td><code>fnames</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>The path of the parquet file to be read.</p>
+                <p>The path of the parquet file(s) to be read.</p>
               </div>
               <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
+                  </span>
               </p>
             </td>
           </tr>
@@ -8419,8 +8423,8 @@ will return the inffered roles.</p>
 <span class="sd">    getML engine.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        fname:</span>
-<span class="sd">            The path of the parquet file to be read.</span>
+<span class="sd">        fnames:</span>
+<span class="sd">            The path of the parquet file(s) to be read.</span>
 
 <span class="sd">        name:</span>
 <span class="sd">            Name of the data frame to be created.</span>
@@ -11327,12 +11331,16 @@ use <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_json"
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code>fname</code></td>
+            <td><code>fnames</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>The filepath of the parquet file to be read.</p>
+                <p>The filepath of the parquet file(s) to be read.</p>
               </div>
               <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
+                  </span>
               </p>
             </td>
           </tr>
@@ -11473,8 +11481,8 @@ stdout during the download.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a parquet file.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        fname:</span>
-<span class="sd">            The filepath of the parquet file to be read.</span>
+<span class="sd">        fnames:</span>
+<span class="sd">            The filepath of the parquet file(s) to be read.</span>
 
 <span class="sd">        append:</span>
 <span class="sd">            If a data frame object holding the same ``name`` is</span>

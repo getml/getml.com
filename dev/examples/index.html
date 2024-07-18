@@ -29,7 +29,7 @@
     
     
       
-        <title>Examples - getML Developer Portal</title>
+        <title>Index - getML Developer Portal</title>
       
     
     
@@ -103,6 +103,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#title-examples" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -156,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Examples
+              Index
             
           </span>
         </div>
@@ -928,6 +933,109 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#title-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        title: "Examples"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Repository
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastprop-benchmark-notebooks-community-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FastProp Benchmark Notebooks (Community Edition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-learner-notebooks-enterprise-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Learner Notebooks (Enterprise Edition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FastAPI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -997,12 +1105,42 @@
   page title (or respectively site name) is used as the main headline.
 -->
 
-    <h1 class="">Examples</h1>
-    
-
 
 <!-- Page content -->
-<p>TODO: All of our demo notebooks will be rendered in this section.</p>
+<hr />
+<h2 id="title-examples">title: "Examples"</h2>
+<h1 id="examples">Examples</h1>
+<p>This section showcases practical demonstrations of getML's capabilities across various domains and use cases, including integrations with other tools and frameworks.</p>
+<h2 id="demo-repository">Demo Repository</h2>
+<p>Our <a href="https://github.com/getml/getml-demo" target="_blank" rel="noopener">getml-demo</a> repository on GitHub features a collection of Jupyter Notebooks that illustrate different aspects of getML's feature engineering and predictive modeling. You will get a comprehensive overview of how getML can be applied to various machine learning tasks, from basic feature engineering to advanced relational learning. Here are some interesting sections to get you started:</p>
+<ul>
+<li>
+<h4 id="fastprop-benchmark-notebooks-community-edition">FastProp Benchmark Notebooks (Community Edition)</h4>
+<p>Showcase the performance of getML's <a href="https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#fastprop" target="_blank" rel="noopener">FastProp algorithm</a>, designed for efficient feature engineering and typically outperforming competing tools in runtime and resource requirements. These benchmarks help you understand how getML handles large datasets and complex feature engineering tasks.</p>
+<div class="admonition example">
+<p class="admonition-title">Key Examples of FastProp Benchmarks:</p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/fastprop_benchmark/air_pollution_prop.ipynb" target="_blank" rel="noopener">Air Pollution Prediction</a></strong>: Demonstrates the superiority of FastProp over featuretools and tsfresh in runtime and predictive accuracy.</p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/fastprop_benchmark/dodgers_prop.ipynb" target="_blank" rel="noopener">Dodgers Traffic Volume Prediction</a></strong>: Showcases FastProp's handling of high-frequency time series data, outperforming Prophet and tsfresh.</p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/fastprop_benchmark/interstate94_prop.ipynb" target="_blank" rel="noopener">Interstate 94 Traffic Volume Prediction</a></strong>: Highlights FastProp's efficiency and predictive power compared to traditional methods.</p>
+</div>
+</li>
+<li>
+<h4 id="feature-learner-notebooks-enterprise-edition">Feature Learner Notebooks (Enterprise Edition)</h4>
+<p>Demonstrate the advanced feature engineering capabilities available in the <a href="https://www.getml.com/pricing" target="_blank" rel="noopener">Enterprise edition</a>, including sophisticated algorithms like <a href="https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#multirel" target="_blank" rel="noopener">Multirel</a>, <a href="https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relboost" target="_blank" rel="noopener">Relboost</a>, and <a href="https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relmt" target="_blank" rel="noopener">RelMT</a>. They provide insights into achieving superior predictive performance on real-world data.</p>
+<div class="admonition example">
+<p class="admonition-title"><strong>Key Examples of Enterprise Features:</strong></p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/adventure_works.ipynb" target="_blank" rel="noopener">AdventureWorks Customer Churn Prediction</a></strong>: Utilizes Multirel to predict customer churn, demonstrating the benefits of relational learning algorithms.</p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/atherosclerosis.ipynb" target="_blank" rel="noopener">Atherosclerosis Disease Lethality Prediction</a></strong>: Applies Relboost to complex medical datasets, showcasing its ability to manage high-dimensional data efficiently.</p>
+<p><strong><a href="https://github.com/getml/getml-demo/blob/master/baseball.ipynb" target="_blank" rel="noopener">Baseball Salary Prediction</a></strong>: Uses RelMT to predict baseball player salaries, demonstrating advanced feature learners in sports analytics.</p>
+</div>
+</li>
+</ul>
+<h2 id="integrations">Integrations</h2>
+<p>Demonstrations of how to connect getML with other tools and frameworks to enhance its functionality. Currently, we have an example showcasing integration with FastAPI, with more integrations coming soon.</p>
+<h3 id="fastapi">FastAPI</h3>
+<ul>
+<li><strong><a href="/integration/fastapi/fastapi/">Integration with FastAPI</a></strong>: How to integrate getML with FastAPI to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.</li>
+</ul>
 
 <!-- Source file information -->
 
@@ -1011,9 +1149,6 @@
 
 
 
-
-  
-  
 
 
 
