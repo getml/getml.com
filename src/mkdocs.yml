@@ -188,6 +188,7 @@ extra_javascript:
 extra_css:
   # - assets/stylesheets/getml.css - Use for custom styles. Is loaded in header by default in overrides/main.html
 
+<<<<<<< HEAD
 draft_docs: |
   *_.md
   *debug.md
@@ -197,8 +198,18 @@ draft_docs: |
   enterprise/guided-evaluation.md
   home/support/support.md
 
+=======
+# draft_docs: |
+#   *_.md
+#   *debug.md
+#   release-notes.md
+#   install/build.md
+#   enterprise/training-and-support.md
+#   enterprise/guided-evaluation.md
+>>>>>>> 8ecfed2 (fixed stubs for getml.data)
 
 not_in_nav: |
+  *debug.md
   enterprise/trial/trial-download.md
   reference/pipeline/column.md
   reference/pipeline/feature.md
@@ -207,6 +218,7 @@ not_in_nav: |
   reference/pipeline/table.md
 
 nav:
+<<<<<<< HEAD
   - Home: 
     - index.md
     
@@ -229,6 +241,48 @@ nav:
       - Predicting: user_guide/concepts/predicting/index.md
       - Hyperparameter optimization: user_guide/concepts/hyperopt/index.md
       - Deployment: user_guide/concepts/deployment/index.md
+=======
+  - Home: index.md
+
+  - Overview:
+    - Documentation:
+        - Overview: index-documentation.md
+        - Installation:
+          - home/installation/index.md
+          # - macOS: home/installation/mac.md
+          - Windows/Docker: home/installation/windows.md
+          - Linux: home/installation/linux.md
+          - Remote access: home/installation/remote_access.md
+        - How to use this Guide: home/how_to_use_this_guide.md
+        - Getting Started: home/getting_started/getting_started.md
+        - Support: home/support/support.md
+    - User Guide:
+      - user_guide/index.md
+      - Components:
+        - user_guide/getml_suite/index.md
+        - Engine: user_guide/getml_suite/engine.md
+        - Monitor: user_guide/getml_suite/monitor.md
+        - Python API: user_guide/getml_suite/python_api.md
+      - Managing projects: user_guide/project_management/project_management.md
+      - Importing data:
+        - user_guide/importing_data/index.md
+        - CSV interface: user_guide/importing_data/csv_interface.md
+        - Pandas interface: user_guide/importing_data/pandas_interface.md
+        - JSON interface: user_guide/importing_data/json_interface.md
+        - SQLite3 interface: user_guide/importing_data/sqlite3_interface.md
+        - MySQL interface: user_guide/importing_data/mysql_interface.md
+        - MariaDB interface: user_guide/importing_data/mariadb_interface.md
+        - PostgreSQL interface: user_guide/importing_data/postgres_interface.md
+        - Greenplum interface: user_guide/importing_data/greenplum_interface.md
+        - ODBC interface: user_guide/importing_data/odbc_interface.md
+      - Annotating data: user_guide/annotating_data/annotating_data.md
+      - Data model: user_guide/data_model/data_model.md
+      - Preprocessing: user_guide/preprocessing/preprocessing.md
+      - Feature engineering: user_guide/feature_engineering/feature_engineering.md
+      - Predicting: user_guide/predicting/predicting.md
+      - Hyperparameter optimization: user_guide/hyperopt/hyperopt.md
+      - Deployment: user_guide/deployment/deployment.md
+>>>>>>> 8ecfed2 (fixed stubs for getml.data)
 
   - Install:
     - install/index.md
@@ -248,14 +302,15 @@ nav:
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
-    - Training & Support: enterprise/training-and-support.md
-    - Guided Evaluation: enterprise/guided-evaluation.md
-    - DEBUG: enterprise/debug.md
+    - Training & Support (draft): enterprise/training-and-support.md
+    - Guided Evaluation (draft): enterprise/guided-evaluation.md
+    - DEBUG (draft): enterprise/debug.md
 
   - API Reference:
     - reference/index.md
+    # - DEBUG (draft): reference/debug.md
     - Python API:
-      # - reference/index.md
+      - reference/index.md
       - getml.data:
         - reference/data/index.md
         - Container: reference/data/container.md
@@ -277,6 +332,7 @@ nav:
       - getml.database: reference/database/database.md
       - getml.datasets: reference/datasets/datasets.md
       - getml.engine: reference/engine/engine.md
+<<<<<<< HEAD
     - getml.hyperopt:
       - reference/hyperopt/index.md
       - Gaussian Process: reference/hyperopt/gaussian.md
@@ -328,6 +384,56 @@ nav:
       - XGBoostRegressor: reference/predictors/xgboost_regressor.md
     - getml.sqlite3:
       - reference/sqlite3/index.md
+=======
+      - getml.hyperopt:
+        - reference/hyperopt/index.md
+        - Gaussian Process: reference/hyperopt/gaussian.md
+        - Latin Hypercube: reference/hyperopt/latin.md
+        - Random: reference/hyperopt/random.md
+      - getml.feature_learning:
+        - reference/feature_learning/index.md
+        - FastProp: reference/feature_learning/fastprop.md
+        - Fastboost: reference/feature_learning/fastboost.md
+        - Multirel: reference/feature_learning/multirel.md
+        - Relboost: reference/feature_learning/relboost.md
+        - RelMT: reference/feature_learning/relmt.md
+        - aggregations: reference/feature_learning/aggregations.md
+        - loss_functions: reference/feature_learning/loss_functions.md
+      - getml.project:
+        - reference/project/index.md
+        - DataFrames: reference/project/data_frames.md
+        - Hyperopts: reference/project/hyperopts.md
+        - Pipelines: reference/project/pipelines.md
+      - getml.preprocessors:
+        - reference/preprocessors/index.md
+      - getml.pipeline:
+        - reference/pipeline/index.md
+        - Pipeline: reference/pipeline/pipeline.md
+        - Columns: reference/pipeline/columns.md
+        # - Column: reference/pipeline/column.md
+        - Tables: reference/pipeline/tables.md
+        # - Table: reference/pipeline/table.md
+        - Features: reference/pipeline/features.md
+        # - Feature: reference/pipeline/feature.md
+        - Plots: reference/pipeline/plots.md
+        - Scores: reference/pipeline/scores_container.md
+        - Score: reference/pipeline/score.md
+        - SQLCode: reference/pipeline/sql_code.md
+        # - SQLString: reference/pipeline/sql_string.md
+        # - metadata: reference/pipeline/metadata.md
+        - metrics: reference/pipeline/metrics.md
+        - dialect: reference/pipeline/dialect.md
+      - getml.predictors:
+        - reference/predictors/index.md
+        - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
+        - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
+        - LinearRegression: reference/predictors/linear_regression.md
+        - LogisticRegression: reference/predictors/logistic_regression.md
+        - XGBoostClassifier: reference/predictors/xgboost_classifier.md
+        - XGBoostRegressor: reference/predictors/xgboost_regressor.md
+      - getml.sqlite3:
+        - reference/sqlite3/index.md
+>>>>>>> 8ecfed2 (fixed stubs for getml.data)
 
     - Command Line:
       # - reference/cli/index.md
