@@ -1361,18 +1361,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-getml-community-edition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install getML community edition
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install getML community edition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1382,8 +1370,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#macos-windows-linux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1393,8 +1381,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#from-source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1404,28 +1392,12 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#using-versioned-archives" class="md-nav__link">
     <span class="md-ellipsis">
       
         Using versioned archives
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-getml-enterprise" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install getML Enterprise
       
     </span>
   </a>
@@ -1510,46 +1482,29 @@
 
 <!-- Page content -->
 <h1 id="installation">Installation</h1>
-<p>GetML is available for Python 3.8 to 3.12 and supported on the following 64-bit systems and architectures:</p>
+<p>getML is a software suite for automated feature engineering on relational data and time series. It enables you to complete your data science projects in a fraction of their usual time and with better results. </p>
+<p>getML is available for Python 3.8 to 3.12 and supported on the following 64-bit systems and architectures:</p>
 <ul>
-<li>Ubuntu 16.04 or later (amd64/arm)</li>
-<li>macOS 10.12.6 or later (amd64/arm)</li>
-<li>Windows 10 19044 or higher (amd64)</li>
+<li>Linux (amd64/arm) with glibc 2.28 or above (also via docker)</li>
+<li>macOS (amd64/arm) via docker</li>
+<li>Windows (amd64/arm) via docker</li>
 </ul>
-<p>From the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/#the-getml-suite">getML suite</a>, the same <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> is utilized by our community and enterprise versions.</p>
-<h2 id="install-getml-community-edition">Install getML community edition</h2>
-<p>Download the getML community edition to get started with the most advanced software for relational learning.</p>
-<h3 id="linux">Linux</h3>
-<p>Use Python's <code>pip</code> package manager to install both the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a> on your Linux machine.</p>
+<p>The <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/#the-getml-suite">getML suite</a> comprises of <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a>, <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a> and <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/monitor/#the-getml-monitor">monitor</a>. The monitor is shipped along with the engine. </p>
+<p>Both our <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">community</a> and <a href="../enterprise/benefits/">enterprise</a> editions use the same Python API. </p>
+<h2 id="linux">Linux</h2>
+<p>Use Python's <code>pip</code> package manager to install both the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a>.</p>
 <p><a class="md-button md-button--primary" href="packages/linux/">Read the Linux install guide</a></p>
-<h3 id="macos-windows-linux">macOS, Windows &amp; Linux</h3>
-<p>Setup a Docker container to run the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a>. Install <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> with <code>pip</code>. </p>
+<h2 id="macos-windows-linux">macOS, Windows &amp; Linux</h2>
+<p>Setup a Docker container to run the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a>. Install the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> with <code>pip</code>. </p>
 <p><a class="md-button md-button--primary" href="packages/Docker/">Read the Docker install guide</a></p>
-<!-- ## Run a getML container
-
-The [getML Docker images](https://hub.docker.com/r/getml/getml) are already configured to run the getML community edition. A [Docker](https://docs.docker.com/install/) container runs in a virtual environment and is the easiest way to set up a working demo environment.
-
-```bash
-docker pull getml/getml:latest  # Download latest stable image
-docker run ...
-``` -->
-
-<h3 id="from-source">From source</h3>
-<p>Install the Python API from its source files.</p>
+<h2 id="from-source">From source</h2>
+<p>Install the Python API from source.</p>
 <p><a class="md-button md-button--primary" href="source/python-api/">Read the API install guide</a></p>
-<p>Build engine and the API from the source.</p>
+<p>Build engine and the API from source.</p>
 <p><a class="md-button md-button--primary" href="source/build/">Read the engine &amp; API build guide</a></p>
-<h3 id="using-versioned-archives">Using versioned archives</h3>
-<p>In some scenarios, installing getML from an archive might be necessary. Refer to the guide for details.</p>
+<h2 id="using-versioned-archives">Using versioned archives</h2>
+<p>In some scenarios, installing getML from an archive might be necessary. </p>
 <p><a class="md-button md-button--primary" href="packages/archive/">Read the archive install guide</a></p>
-<h2 id="install-getml-enterprise">Install getML Enterprise</h2>
-<p>Need the highest models accuracy in commercial prediction applications and enterprise grade support?</p>
-<p><a class="md-button" href="../enterprise/benefits/">Choose getML enterprise</a></p>
-<p>Once you have downloaded the <a href="../enterprise/book-demo/">trial version</a> or <a href="https://www.getml.com/contact" target="_blank" rel="noopener">purchased the license</a> of getML enterprise edition, you can proceed as follows:</p>
-<ul>
-<li>Install the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a>: <code>pip install getml</code></li>
-<li>Install the <a class="autorefs autorefs-internal" href="../user_guide/getml_suite/engine/#the-getml-engine">engine</a> by following <a class="autorefs autorefs-internal" href="packages/linux/#separate-installation-of-engine_1">instructions for separate installation of it</a>. Start from step 2 and use the <code>tar</code> file you have been provided with.</li>
-</ul>
 
 <!-- Source file information -->
 

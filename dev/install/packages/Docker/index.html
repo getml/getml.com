@@ -1545,12 +1545,23 @@
 
 <!-- Page content -->
 <h1 id="docker-for-macos-windows-linux">Docker for macOS, Windows &amp; Linux</h1>
+<div class="admonition enterprise-adm">
+<p class="admonition-title">Enterprise Edition</p>
+<p>Need the highest models accuracy in commercial prediction applications and enterprise grade support?</p>
+<p><a class="md-button" href="../../../enterprise/benefits/">Choose getML enterprise</a></p>
+<p>Once you have obtained the getML enterprise edition, you can install it as follows:</p>
+<ul>
+<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a>: <code>pip install getml</code></li>
+<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/engine/#the-getml-engine">engine</a> by following the same <a class="autorefs autorefs-internal" href="#engine">instructions as below</a>. Just replace the URL with that of the enterprise <code>docker-compose.yml</code> file you have been provided with.</li>
+</ul>
+</div>
 <p>On macOS and Windows, you can to run the engine in a Docker container. We are working on providing native support for them in the near future.</p>
-<p>Setup the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/engine/#the-getml-engine">engine</a> as follows.</p>
+<p>Setup the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/python_api/#the-getml-python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/engine/#the-getml-engine">engine</a> of the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">getML community edition</a> as follows.</p>
 <h2 id="python-api">Python API</h2>
 <p>Use Python's pip package manager to install the API:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">getml</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">getml</span>
 </code></pre></div>
+<a href="" id="engine-docker-installation"></a></p>
 <h2 id="engine">Engine</h2>
 <p>Make sure that Docker is <a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">installed</a>. For Linux, follow these <a href="https://docs.docker.com/engine/install/linux-postinstall/" target="_blank" rel="noopener">post-installation steps</a> to run Docker without root rights.</p>
 <p>Run the following command in your terminal (macOS &amp; Linux) or PowerShell (Windows):</p>

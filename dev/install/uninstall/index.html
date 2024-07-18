@@ -1058,6 +1058,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#getml-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getml directory
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1523,6 +1534,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#getml-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        getml directory
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1640,7 +1662,7 @@
 <div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-r<span class="w"> </span><span class="nv">$HOME</span>/.getML
 </code></pre></div></p>
 <h2 id="docker">Docker</h2>
-<p>To remove the Docker image and volume defined in the <code>docker-compose.yml</code> file, you can follow these steps:</p>
+<p>To remove the resources defined in the <code>docker-compose.yml</code> file, you can follow these steps:</p>
 <h3 id="docker-image">Docker Image</h3>
 <p>Remove the Docker image <code>getml/getml</code> from your local Docker repository as follows:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>rmi<span class="w"> </span>getml/getml
@@ -1651,6 +1673,14 @@
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>getml
 </code></pre></div>
 <p>Ensure that the volume is not in use by any other containers.</p>
+<h3 id="getml-directory"><code>getml</code> directory</h3>
+<p>Remove your local directory <code>getml</code> as follows:</p>
+<div class="admonition warning">
+<p class="admonition-title">Project data will be deleted</p>
+<p>Your projects data will be deleted when you delete the <code>getml</code> directory.</p>
+</div>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-r<span class="w"> </span>getml
+</code></pre></div>
 
 <!-- Source file information -->
 
