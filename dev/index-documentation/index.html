@@ -18,7 +18,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../home/installation/">
+        <link rel="next" href="../home/getting_started/">
       
       
         
@@ -563,12 +563,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -693,10 +687,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-guide" class="md-nav__link">
+  <a href="#how-to-use-the-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use this guide
+        How to use the documentation
       
     </span>
   </a>
@@ -727,10 +721,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -749,13 +739,13 @@
         
   
   
-    <a href="../home/installation/" class="md-nav__link">
+    <a href="../home/getting_started/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Installation
+    Getting Started
   
 
     
@@ -770,87 +760,6 @@
   
 
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../home/how_to_use_this_guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use this Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../home/getting_started/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting Started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../home/support/support/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Support
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1684,10 +1593,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-guide" class="md-nav__link">
+  <a href="#how-to-use-the-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to use this guide
+        How to use the documentation
       
     </span>
   </a>
@@ -1792,17 +1701,9 @@
 
 <!-- Page content -->
 <h1 id="documentation">Documentation</h1>
-<p>Welcome to the getML technical documentation. This document is written for data
+<p>Welcome to the getML technical documentation. This documentation is written for data
 scientists who want to use the getML software suite for their projects. For
-general information about getML visit <a href="https://getml.com" target="_blank" rel="noopener">getml.com</a>. For a collection of
-demo notebooks, visit <a href="https://github.com/getml/getml-demo" target="_blank" rel="noopener">getml-demo</a>. You can also <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact
-us</a> for any questions or inquiries.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Some components of getML have been open sourced as part of <strong>getML community edition</strong>.  You may have a look at
-<a href="../home/getting_started/getting_started/#community-vs-enterprise-edition">community vs enterprise edition table</a>
-to see the highlights of both the editions.</p>
-</div>
+business information about getML, visit <a href="https://getml.com" target="_blank" rel="noopener">getml.com</a>. You can also <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a> for any questions or inquiries.</p>
 <h2 id="getml-in-one-minute">GetML in one minute</h2>
 <p>getML is an innovative tool for the end-to-end automation of data
 science projects. It covers everything from convenient data loading procedures
@@ -1827,92 +1728,107 @@ knowledge. "Applied machine learning" is basically feature engineering.</em></p>
 <p>The main purpose of getML is to automate this <em>"difficult, time-consuming"</em> process as much
 as possible.</p>
 <p>getML comes with a high-performance <strong>engine</strong> written in C++ and an intuitive
-<strong>Python API</strong>. Completing a data science project with getML consists of seven
+<strong>Python API</strong>. Completing a data science project with getML consists of eight
 simple steps.</p>
+<ol>
+<li>
+<p>Launch the engine
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;one_minute_to_getml&#39;</span><span class="p">)</span>
-</code></pre></div>
-<ol>
-<li>Load the data into the engine</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Load the data into the engine
+<div class="highlight"><pre><span></span><code><span class="n">df_population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population_table&#39;</span><span class="p">)</span>
-<span class="n">peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>
+<span class="n">df_peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s1">&#39;peripheral_table&#39;</span><span class="p">)</span>
-</code></pre></div>
-2. Annotate the data</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
-<span class="n">population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s1">&#39;join_key&#39;</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
-<span class="o">...</span>
-</code></pre></div>
-3. Define the data model</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">dm</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="n">population</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">(</span><span class="s2">&quot;POPULATION&quot;</span><span class="p">))</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">peripheral</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">(</span><span class="s2">&quot;PERIPHERAL&quot;</span><span class="p">))</span>
-<span class="n">dm</span><span class="o">.</span><span class="n">POPULATION</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-   <span class="n">dm</span><span class="o">.</span><span class="n">PERIPHERAL</span><span class="p">,</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Annotate the data
+<div class="highlight"><pre><span></span><code><span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+<span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;join_key&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Define the data model
+<div class="highlight"><pre><span></span><code><span class="n">dm</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">df_peripheral</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
+<span class="n">dm</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+   <span class="n">dm</span><span class="o">.</span><span class="n">peripheral</span><span class="p">,</span>
    <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-</code></pre></div>
-4. Train the feature learning algorithm and the predictor</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Train the feature learning algorithm and the predictor
+<div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">data_model</span><span class="o">=</span><span class="n">dm</span><span class="p">,</span>
-    <span class="n">feature_learners</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">()</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(),</span>
     <span class="n">predictors</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
 <span class="p">)</span>
-
 <span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral</span><span class="p">]</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="p">,</span>
+    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div>
-5. Evaluate</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral_unseen</span><span class="p">]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Evaluate
+<div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
+    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div>
-6. Predict</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">population_unseen</span><span class="p">,</span>
-    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">peripheral_unseen</span><span class="p">]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Predict 
+<div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
+    <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div>
-7. Deploy</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># Allow the pipeline to respond to HTTP requests</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Deploy
+<div class="highlight"><pre><span></span><code><span class="c1"># Allow the pipeline to respond to HTTP requests</span>
 <span class="n">pipe</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-Check out the rest of this documentation to find out how getML achieves top
+</code></pre></div></p>
+</li>
+</ol>
+<p>Check out the rest of this documentation to find out how getML achieves top
 performance on real-world data science projects with many tables and complex
 data schemes.</p>
-<hr />
-<h2 id="how-to-use-this-guide">How to use this guide</h2>
+<h2 id="how-to-use-the-documentation">How to use the documentation</h2>
 <p>If you want to get started with getML right away, we recommend to follow the
 <a class="autorefs autorefs-internal" href="../install/#installation">installation instructions</a> and then go through the
-<a class="autorefs autorefs-internal" href="../home/getting_started/getting_started/#get-started-with-getml">getting started guide</a>.</p>
+<a class="autorefs autorefs-internal" href="../home/getting_started/#get-started-with-getml">getting started guide</a>. </p>
 <p>If you are looking for more detailed information, other sections of this
-documentation are more suitable. There are three major parts:</p>
-<p><a href="https://github.com/getml/getml-demo" target="_blank" rel="noopener">Tutorials</a></p>
-<p>The tutorials section contains examples of how to use getML in
-  real-world projects. All tutorials are based on public data sets
-  so that
-  you can follow along. If you are looking for an intuitive access to
-  getML, the tutorials section is the right place to go. Also, the
-  code examples are explicitly intended to be used as a template for
-  your own projects.</p>
+documentation are more suitable:</p>
+<ul>
+<li>
+<p><a class="autorefs autorefs-internal" href="../examples/#examples">Examples</a></p>
+<p>The examples section contains real-world getML projects using public datasets for easy follow-along. It showcases getML’s capabilities in feature engineering and predictive modeling, with practical demonstrations available in the <a href="https://github.com/getml/getml-demo" target="_blank" rel="noopener">getml-demo</a> repository on GitHub. You’ll find templates for your projects and a guide on integrating getML with FastAPI to create prediction endpoints.</p>
+</li>
+<li>
 <p><a class="autorefs autorefs-internal" href="../user_guide/#user-guide_1">User guide</a></p>
 <p>The user guide explains all conceptional details behind getML in
-  depth. It can serve as a reference guide for experienced users but it's also
-  suitable for first day users who want to get a deeper understanding
-  of how getML works. Each chapter in the
-  user guide represents one step of a typical data science project.</p>
-<p><a class="autorefs autorefs-internal" href="../reference/#python-api_1">API documentation</a></p>
-<p>The API documentation covers everything related to the Python
-  interface to the getML engine. Each module comes with a dedicated
-  section that contains concrete code examples.</p>
-<p>You can also check out our other resources</p>
-<p><a href="https://getml.com" target="_blank" rel="noopener">getML homepage</a></p>
+depth. It can serve as a reference guide for experienced users but it's also
+suitable for first day users who want to get a deeper understanding
+of how getML works. Each chapter in the
+user guide represents one step of a typical data science project.</p>
+</li>
+<li>
+<p><a class="autorefs autorefs-internal" href="../reference/#python-api_1">API reference</a></p>
+<p>The API reference covers everything related to the Python
+interface to the getML engine. Each module comes with a dedicated
+section that contains concrete code examples.</p>
+</li>
+</ul>
+<p>You can also check out our <a href="https://www.getml.com/blog" target="_blank" rel="noopener">blog articles and case studies</a>. </p>
 
 <!-- Source file information -->
 

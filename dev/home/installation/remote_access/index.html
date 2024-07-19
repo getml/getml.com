@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://dev.getml.com/latest/home/installation/remote_access/">
       
       
-        <link rel="prev" href="../linux/">
+        <link rel="prev" href="../../getting_started/">
       
       
-        <link rel="next" href="../../how_to_use_this_guide/">
+        <link rel="next" href="../../../user_guide/">
       
       
         
@@ -565,12 +565,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -663,10 +657,6 @@
       
         
       
-        
-      
-        
-      
     
     
       
@@ -686,13 +676,13 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../getting_started/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
     
   
-    Installation
+    Getting Started
   
 
     
@@ -714,66 +704,12 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Installation
+    Getting Started
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../windows/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows/Docker
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../linux/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Linux
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1007,87 +943,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../how_to_use_this_guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use this Guide
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting_started/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting Started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../support/support/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Support
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2150,10 +2005,10 @@
     
     
       <li class="md-path__item">
-        <a href="../" class="md-path__link">
+        <a href="../../getting_started/" class="md-path__link">
           
   <span class="md-ellipsis">
-    Installation
+    Getting Started
   </span>
 
         </a>
@@ -2203,7 +2058,7 @@
 This will copy the entire bundle into the home folder of your USER on the remote host. Then you need to log onto the server.
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>USER@IP
 </code></pre></div>
-Follow the <a class="autorefs autorefs-internal" href="../linux/#install-getml-on-linux">installation instructions</a> to install getML on the remote host.</p>
+Follow the <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#installation-linux">installation instructions</a> to install getML on the remote host.</p>
 <p><a href="" id="remote-access-start"></a></p>
 <h3 id="starting-engine-and-monitor">Starting Engine and Monitor</h3>
 <p>Start getML using the command-line interface. It is a good idea to <code>disown</code> or <code>nohup</code> the process, so that it keeps running when you close the SSH terminal or if the connection breaks down temporarily.</p>
@@ -2268,7 +2123,7 @@ opened by the monitor comes in.</p>
 <p>followed by 'Proceed to localhost (unsafe)'.</p>
 <p><img alt="Remote Access" src="../../../images/screenshot_login_https_chrome_2.png" /></p>
 <h3 id="opening-the-https-port">Opening the HTTPS Port</h3>
-<p>Telling the getML monitor to serve its web frontend via HTTPS on a specific port usually does not make it accessible from the outside yet. Your computer or the server does not allow arbitrary programs to open connections to the outside world. You need to add the corresponding port number to a whitelist in your system's configuration. Since there are far too many combinations of systems and applications used as firewalls, we won't cover them here. If you have questions or need help concerning this step, please feel free to <a class="autorefs autorefs-internal" href="../../support/support/#support_1">contact us</a>.</p>
+<p>Telling the getML monitor to serve its web frontend via HTTPS on a specific port usually does not make it accessible from the outside yet. Your computer or the server does not allow arbitrary programs to open connections to the outside world. You need to add the corresponding port number to a whitelist in your system's configuration. Since there are far too many combinations of systems and applications used as firewalls, we won't cover them here. If you have questions or need help concerning this step, please feel free to [contact us][support].</p>
 
 <!-- Source file information -->
 

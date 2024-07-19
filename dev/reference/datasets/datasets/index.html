@@ -3238,11 +3238,13 @@ features some artificial data generators.</p>
       <p>Regression dataset on air pollution in Beijing, China</p>
 <p>The dataset consists of a single table split into train and test sets
 around 2014-01-01.</p>
-<p>The original publication is:
-Liang, X., Zou, T., Guo, B., Li, S., Zhang, H., Zhang, S., Huang, H. and
+<div class="admonition abstract">
+<p class="admonition-title">Reference</p>
+<p>Liang, X., Zou, T., Guo, B., Li, S., Zhang, H., Zhang, S., Huang, H. and
 Chen, S. X. (2015). Assessing Beijing's PM2.5 pollution: severity, weather
 impact, APEC and winter heating. Proceedings of the Royal Society A, 471,
 20150257.</p>
+</div>
 
 
 <table>
@@ -3311,8 +3313,9 @@ impact, APEC and winter heating. Proceedings of the Royal Society A, 471,
               <div class="doc-md-description">
                 <p>A DataFrame holding the data described above.</p>
 <p>The following DataFrames are returned:</p>
-<pre><code>* `air_pollution`
-</code></pre>
+<ul>
+<li><code>air_pollution</code></li>
+</ul>
               </div>
             </td>
           </tr>
@@ -3412,11 +3415,11 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 <span class="sd">    The dataset consists of a single table split into train and test sets</span>
 <span class="sd">    around 2014-01-01.</span>
 
-<span class="sd">    The original publication is:</span>
-<span class="sd">    Liang, X., Zou, T., Guo, B., Li, S., Zhang, H., Zhang, S., Huang, H. and</span>
-<span class="sd">    Chen, S. X. (2015). Assessing Beijing&#39;s PM2.5 pollution: severity, weather</span>
-<span class="sd">    impact, APEC and winter heating. Proceedings of the Royal Society A, 471,</span>
-<span class="sd">    20150257.</span>
+<span class="sd">    !!! abstract &quot;Reference&quot;</span>
+<span class="sd">        Liang, X., Zou, T., Guo, B., Li, S., Zhang, H., Zhang, S., Huang, H. and</span>
+<span class="sd">        Chen, S. X. (2015). Assessing Beijing&#39;s PM2.5 pollution: severity, weather</span>
+<span class="sd">        impact, APEC and winter heating. Proceedings of the Royal Society A, 471,</span>
+<span class="sd">        20150257.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        as_pandas:</span>
@@ -3430,7 +3433,7 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 
 <span class="sd">            The following DataFrames are returned:</span>
 
-<span class="sd">                * `air_pollution`</span>
+<span class="sd">            * `air_pollution`</span>
 
 <span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
@@ -3811,11 +3814,13 @@ Relationships) models for the study of the relationships between chemical
 structure and biodegradation of molecules. Biodegradation experimental
 values of 1055 chemicals were collected from the webpage of the National
 Institute of Technology and Evaluation of Japan (NITE).</p>
-<p>The original publication is:
-Mansouri, K., Ringsted, T., Ballabio, D., Todeschini, R., Consonni, V.
+<div class="admonition abstract">
+<p class="admonition-title">Reference</p>
+<p>Mansouri, K., Ringsted, T., Ballabio, D., Todeschini, R., Consonni, V.
 (2013). Quantitative Structure - Activity Relationship models for ready
 biodegradability of chemicals. Journal of Chemical Information and Modeling,
 53, 867-878</p>
+</div>
 <p>The dataset was collected through the <a href="https://relational-data.org/dataset/Biodegradability" target="_blank" rel="noopener">Relational Dataset Repository (former CTU Prague
 Relational Learning Repository)</a></p>
 <p>It contains information on 1309 molecules with 6166 bonds. It consists of 5
@@ -4045,11 +4050,11 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 <span class="sd">    values of 1055 chemicals were collected from the webpage of the National</span>
 <span class="sd">    Institute of Technology and Evaluation of Japan (NITE).</span>
 
-<span class="sd">    The original publication is:</span>
-<span class="sd">    Mansouri, K., Ringsted, T., Ballabio, D., Todeschini, R., Consonni, V.</span>
-<span class="sd">    (2013). Quantitative Structure - Activity Relationship models for ready</span>
-<span class="sd">    biodegradability of chemicals. Journal of Chemical Information and Modeling,</span>
-<span class="sd">    53, 867-878</span>
+<span class="sd">    !!! abstract &quot;Reference&quot;</span>
+<span class="sd">        Mansouri, K., Ringsted, T., Ballabio, D., Todeschini, R., Consonni, V.</span>
+<span class="sd">        (2013). Quantitative Structure - Activity Relationship models for ready</span>
+<span class="sd">        biodegradability of chemicals. Journal of Chemical Information and Modeling,</span>
+<span class="sd">        53, 867-878</span>
 
 <span class="sd">    The dataset was collected through the [Relational Dataset Repository (former CTU Prague</span>
 <span class="sd">    Relational Learning Repository)](https://relational-data.org/dataset/Biodegradability)</span>
@@ -4463,8 +4468,9 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
       <p>Regression dataset on traffic volume prediction</p>
 <p>The interstate94 dataset is a multivariate time series containing the
 hourly traffic volume on I-94 westbound from Minneapolis-St Paul. It is
-based on data provided by the <a href="https://www.dot.state.mn.us/" target="_blank" rel="noopener">MN Department of Transportation
-</a>. Some additional data preparation done by
+based on data provided by the
+<a href="https://www.dot.state.mn.us/" target="_blank" rel="noopener">MN Department of Transportation</a>.
+Some additional data preparation done by
 <a href="https://github.com/dreyco676/Anomaly_Detection_A_to_Z/" target="_blank" rel="noopener">John Hogue</a>. The
 dataset features some particular interesting characteristics common for
 time series, which classical models may struggle to appropriately deal
@@ -4660,7 +4666,8 @@ analysis, a data model needs to be constructed using
 <span class="normal">521</span>
 <span class="normal">522</span>
 <span class="normal">523</span>
-<span class="normal">524</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_interstate94</span><span class="p">(</span>
+<span class="normal">524</span>
+<span class="normal">525</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_interstate94</span><span class="p">(</span>
     <span class="n">roles</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">units</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">as_pandas</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -4670,8 +4677,9 @@ analysis, a data model needs to be constructed using
 
 <span class="sd">    The interstate94 dataset is a multivariate time series containing the</span>
 <span class="sd">    hourly traffic volume on I-94 westbound from Minneapolis-St Paul. It is</span>
-<span class="sd">    based on data provided by the [MN Department of Transportation</span>
-<span class="sd">    ](https://www.dot.state.mn.us/). Some additional data preparation done by</span>
+<span class="sd">    based on data provided by the</span>
+<span class="sd">    [MN Department of Transportation](https://www.dot.state.mn.us/).</span>
+<span class="sd">    Some additional data preparation done by</span>
 <span class="sd">    [John Hogue](https://github.com/dreyco676/Anomaly_Detection_A_to_Z/). The</span>
 <span class="sd">    dataset features some particular interesting characteristics common for</span>
 <span class="sd">    time series, which classical models may struggle to appropriately deal</span>
@@ -4755,8 +4763,10 @@ analysis, a data model needs to be constructed using
       <p>Binary classification dataset on loan default</p>
 <p>The loans dataset is based on a financial dataset from the <a href="https://relational-data.org/dataset/Financial" target="_blank" rel="noopener">Relational Dataset Repository (former CTU Prague
 Relational Learning Repository)</a>.</p>
-<p>The original publication is:
-Berka, Petr (1999). Workshop notes on Discovery Challenge PKDD'99.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Reference</p>
+<p>Berka, Petr (1999). Workshop notes on Discovery Challenge PKDD'99.</p>
+</div>
 <p>The dataset contains information on 606 successful and 76 unsuccessful
 loans. After some preprocessing it contains 5 tables</p>
 <ul>
@@ -4924,8 +4934,7 @@ analysis, a data model needs to be constructed using
 </details>
             <details class="quote">
               <summary>Source code in <code>getml/datasets/base.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">527</span>
-<span class="normal">528</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">528</span>
 <span class="normal">529</span>
 <span class="normal">530</span>
 <span class="normal">531</span>
@@ -5013,7 +5022,8 @@ analysis, a data model needs to be constructed using
 <span class="normal">613</span>
 <span class="normal">614</span>
 <span class="normal">615</span>
-<span class="normal">616</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_loans</span><span class="p">(</span>
+<span class="normal">616</span>
+<span class="normal">617</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_loans</span><span class="p">(</span>
     <span class="n">roles</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">units</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">as_pandas</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -5025,8 +5035,8 @@ analysis, a data model needs to be constructed using
 <span class="sd">    The loans dataset is based on a financial dataset from the [Relational Dataset Repository (former CTU Prague</span>
 <span class="sd">    Relational Learning Repository)](https://relational-data.org/dataset/Financial).</span>
 
-<span class="sd">    The original publication is:</span>
-<span class="sd">    Berka, Petr (1999). Workshop notes on Discovery Challenge PKDD&#39;99.</span>
+<span class="sd">    !!! abstract &quot;Reference&quot;</span>
+<span class="sd">        Berka, Petr (1999). Workshop notes on Discovery Challenge PKDD&#39;99.</span>
 
 <span class="sd">    The dataset contains information on 606 successful and 76 unsuccessful</span>
 <span class="sd">    loans. After some preprocessing it contains 5 tables</span>
@@ -5132,10 +5142,12 @@ from the <a href="https://archive.ics.uci.edu/dataset/357/occupancy+detection" t
 </a>. It is a
 binary classification problem. The task is to predict room occupancy
 from Temperature, Humidity, Light and CO2.</p>
-<p>The original publication is:
-Candanedo, L. M., &amp; Feldheim, V. (2016). Accurate occupancy detection of an
+<div class="admonition abstract">
+<p class="admonition-title">Reference</p>
+<p>Candanedo, L. M., &amp; Feldheim, V. (2016). Accurate occupancy detection of an
 office room from light, temperature, humidity and CO2 measurements using
 statistical learning models. Energy and Buildings, 112, 28-39.</p>
+</div>
 
 
 <table>
@@ -5263,8 +5275,7 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 </details>
             <details class="quote">
               <summary>Source code in <code>getml/datasets/base.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">619</span>
-<span class="normal">620</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">620</span>
 <span class="normal">621</span>
 <span class="normal">622</span>
 <span class="normal">623</span>
@@ -5336,7 +5347,8 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 <span class="normal">689</span>
 <span class="normal">690</span>
 <span class="normal">691</span>
-<span class="normal">692</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_occupancy</span><span class="p">(</span>
+<span class="normal">692</span>
+<span class="normal">693</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">load_occupancy</span><span class="p">(</span>
     <span class="n">roles</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">as_pandas</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">as_dict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -5350,10 +5362,10 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
 <span class="sd">    binary classification problem. The task is to predict room occupancy</span>
 <span class="sd">    from Temperature, Humidity, Light and CO2.</span>
 
-<span class="sd">    The original publication is:</span>
-<span class="sd">    Candanedo, L. M., &amp; Feldheim, V. (2016). Accurate occupancy detection of an</span>
-<span class="sd">    office room from light, temperature, humidity and CO2 measurements using</span>
-<span class="sd">    statistical learning models. Energy and Buildings, 112, 28-39.</span>
+<span class="sd">    !!! abstract &quot;Reference&quot;</span>
+<span class="sd">        Candanedo, L. M., &amp; Feldheim, V. (2016). Accurate occupancy detection of an</span>
+<span class="sd">        office room from light, temperature, humidity and CO2 measurements using</span>
+<span class="sd">        statistical learning models. Energy and Buildings, 112, 28-39.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        roles:</span>

@@ -2857,7 +2857,7 @@
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">Fastboost</span><span class="p">(</span>
     <span class="n">gamma</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="n">loss_function</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span>
-        <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a></span><span class="p">]</span>
+        <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLossType" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLossType">CrossEntropyLossType</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLossType" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLossType">SquareLossType</a></span><span class="p">]</span>
     <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">max_depth</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
     <span class="n">min_child_weights</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
@@ -2885,7 +2885,7 @@ simpler than <a class="autorefs autorefs-internal" href="../relboost/#getml.feat
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -2926,14 +2926,15 @@ algorithm. Range: [0, ∞]</p>
               <div class="doc-md-description">
                 <p>Objective function used by the feature learning algorithm
 to optimize your features. For regression problems use
-<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss"><code>SquareLoss</code></a> and for
+<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.SQUARELOSS"><code>SquareLoss</code></a> and for
 classification problems use
-<a class="autorefs autorefs-internal" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss"><code>CrossEntropyLoss</code></a>.</p>
+[<code>CrossEntropyLoss</code>][
+getml.feature_learning.loss_functions.CROSSENTROPYLOSS].</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLoss" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLoss">CrossEntropyLoss</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLoss" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLoss">SquareLoss</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.CrossEntropyLossType" href="../loss_functions/#getml.feature_learning.loss_functions.CrossEntropyLossType">CrossEntropyLossType</a>, <a class="autorefs autorefs-internal" title="getml.feature_learning.loss_functions.SquareLossType" href="../loss_functions/#getml.feature_learning.loss_functions.SquareLossType">SquareLossType</a>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
