@@ -195,6 +195,8 @@ draft_docs: |
   install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
+  home/support/support.md
+
 
 not_in_nav: |
   enterprise/trial/trial-download.md
@@ -210,15 +212,9 @@ nav:
   - Overview:
     - Documentation:
         - Overview: index-documentation.md
-        - Installation:
-          - home/installation/index.md
-          # - macOS: home/installation/mac.md
-          - Windows/Docker: home/installation/windows.md
-          - Linux: home/installation/linux.md
+        - Getting Started: 
+          - home/getting_started/index.md
           - Remote access: home/installation/remote_access.md
-        - How to use this Guide: home/how_to_use_this_guide.md
-        - Getting Started: home/getting_started/getting_started.md
-        - Support: home/support/support.md
     - User Guide:
       - user_guide/index.md
       - Components:
