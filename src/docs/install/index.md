@@ -1,4 +1,4 @@
-
+[](){#installation}
 # Installation 
 
 getML is a software suite for automated feature engineering on relational data and time series. It enables you to complete your data science projects in a fraction of their usual time and with better results. 
