@@ -117,7 +117,7 @@ If you want to get started with getML right away, we recommend to follow the
 If you are looking for more detailed information, other sections of this
 documentation are more suitable:
 
-- [Examples][examples]
+- [Examples][examples-index]
   
     The examples section contains real-world getML projects using public datasets for easy follow-along. It showcases getML’s capabilities in feature engineering and predictive modeling, with practical demonstrations available in the [getml-demo](https://github.com/getml/getml-demo) repository on GitHub. You’ll find templates for your projects and a guide on integrating getML with FastAPI to create prediction endpoints.
 

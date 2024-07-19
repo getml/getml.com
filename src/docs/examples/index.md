@@ -1,4 +1,4 @@
-[](){#examples}
+[](){#examples-index}
 # Examples
 This section showcases practical demonstrations of getML's capabilities across various domains and use cases, including integrations with other tools and frameworks.
 
