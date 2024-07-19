@@ -41,4 +41,4 @@ This is your choice if shorter development cycles and unprecedented model accura
 Request a meeting to explore the potential of GetML Relational Learning for your business application. Or check out one of our code examples before.
 
 [Let's talk](){ .md-button .md-button--primary }
-[Dive into code](){ .md-button .md-button--primary }
+[Dive into code](){ .md-button }

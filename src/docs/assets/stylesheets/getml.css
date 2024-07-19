@@ -3,8 +3,9 @@
 
 [data-md-color-scheme="default"] > * {
     --md-default-fg-color: #000000eb;
-    --md-typeset-a-color: #6241be;
     --md-default-fg-color--contrast: #0e0e0e;
+    --md-typeset-a-color: #6241be;
+
 }
 
 [data-md-color-scheme="slate"] > * {
@@ -64,6 +65,40 @@
 
 .md-footer-meta {
     background: none;
+}
+
+/* Buttons */
+
+.md-typeset .md-button {
+    border-radius: 6px;
+    line-height: normal;
+    padding: .525em 1em;
+}
+
+[data-md-color-scheme="default"]
+.md-typeset .md-button--primary {
+    --md-primary-fg-color: #7e56c2;
+    --md-primary-bg-color: #fff;
+    background-color: var(--md-primary-fg-color);
+    border-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color)
+}
+
+[data-md-color-scheme="default"] .md-typeset :not(.md-button--primary).md-button:focus,
+[data-md-color-scheme="default"] .md-typeset :not(.md-button--primary).md-button:hover {
+    background-color: white;
+    border-color: var(--md-typeset-a-color);
+    color: var(--md-typeset-a-color);
+}
+
+[data-md-color-primary=black] :not(.md-button--primary).md-button {
+    color: #865ffe;
+}
+
+[data-md-color-primary=black] :not(.md-button--primary).md-button:focus,
+[data-md-color-primary=black] :not(.md-button--primary).md-button:hover {
+    background-color: inherit;
+    border-color: #865ffe;
 }
 
 
