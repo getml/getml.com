@@ -1,14 +1,17 @@
 ---
+template: home.html
 hide:
-  - navigation
   - toc
+  - navigation
+  - feedback
 ---
 
 # Your machine learning suite for relational and time-series data
 
 GetML Relational Learning unlocks a 10x speed-up potential and superior model performance. A game changer in enabling industry leading predictive applications on enterprise data.
 
-### Trusted by industry leaders
+### Powering the world’s best machine learning pipelines.
+From next-gen startups to established enterprises.
 
 ... logos ...
 
