@@ -12,7 +12,7 @@ getML.
    If you are entirely new to getML, and you want to quickly sample its flavour, this is 
    the right place. A minimally viable example is presented, highlighting the 
    unique strengths of getML. It should not take you more than 10 minutes to 
-   implement the example by yourself.
+   go through it.
 
 2. Walkthrough
 
@@ -20,9 +20,11 @@ getML.
    its capabilities, this is the right place. Along a more complex example you 
    will familiarize yourself with the typical structure of a data science project 
    using getML. From provisioning the data set, via data model definition, pipeline 
-   handling, model training and prediction to feature extraction you learn about the 
+   handling, model training and prediction to feature extraction you learn hands on 
+   about the 
    basics of getML’s python API as well as some of the underlying theoretical 
-   concepts. This walkthrough can be accomplished in 2 hours or less.
+   concepts. This walkthrough can be followed through and implemented in 2 hours or 
+   less.
 
 3. Concepts
 
