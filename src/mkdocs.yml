@@ -211,7 +211,7 @@ nav:
     
   - Get started: 
     - How to use our dev Portal:
-      - get_started/how-to-use.md
+      - get_started/index.md
 
     - Install:
       - install/index.md
