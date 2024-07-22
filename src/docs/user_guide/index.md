@@ -16,7 +16,8 @@ Conveniently it is divided in three levels of detail:
 
     ---
 
-    Learn how to support our goal of becoming the leading tool in documentation
+    Witness getML’s automatic feature engineering first-hand by following this 
+    minimally viable example.
 
     ---
 
@@ -27,7 +28,8 @@ Conveniently it is divided in three levels of detail:
 
     ---
 
-    Discover exclusive benefits and features available only to our monthly sponsors
+      By walking through a more involved demonstration, explore getML's capabilities 
+      and get familiar with its Python API.
 
     ---
 
@@ -38,7 +40,8 @@ Conveniently it is divided in three levels of detail:
 
     ---
 
-    Get to know our awesome sponsors, financially backing Material for MkDocs
+    Concepts and API Reference form the core of the getML Dev Portal, detailing 
+    theoretical principles and technical implementations.
 
     ---
 
