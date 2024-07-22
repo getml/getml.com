@@ -1,76 +1,100 @@
----
-title: User Guide
----
+# Quick start
 
-[](){#user-guide}
-# User Guide
+getML is an innovative tool for the end-to-end automation of data
+science projects. It covers everything from convenient data loading procedures
+to the deployment of trained models.
 
-This User Guide offers a detailed exploration of the getML ecosystem, structured to 
-mirror the typical workflow of a data science project. It includes a thorough 
-introduction to the key concepts and continually references the comprehensive 
-Python API documentation.
+Most notably, getML includes advanced algorithms for
+**automated feature engineering** (feature learning) on relational data and time
+series. Feature engineering on relational data is defined as the creation of a
+flat table by merging and aggregating data. It is sometimes also referred to
+as **data wrangling**. Feature engineering is necessary if your data is distributed
+over more than one data table.
 
+Automated feature engineering
 
-### [getML suite][getml-suite]
+* Saves up to 90% of the time spent on a data science project
+* Increases the prediction accuracy over manual feature engineering
 
-This section provides an introduction to the core components of the getML suite: 
-the **engine**, **monitor**, and **Python API**. It explains how these elements work 
-together to 
-support your data science projects.
+Andrew Ng, Professor at Stanford
+University and Co-founder of Google Brain described manual feature engineering as follows:
 
-### [Managing Projects][project-management]
+> *Coming up with features is difficult, time-consuming, requires expert
+> knowledge. "Applied machine learning" is basically feature engineering.*
 
-Learn how to manage your projects within the getML engine. This section covers the 
-functionalities of the project module of the Python API and how it is used to 
-orchestrate project activities.
+The main purpose of getML is to automate this *"difficult, time-consuming"* process as much
+as possible.
 
-### [Importing Data][importing-data]
+getML comes with a high-performance **engine** written in C++ and an intuitive
+**Python API**. Completing a data science project with getML consists of eight
+simple steps.
 
-Data can be imported from variety of sources. In this section the reader learns about 
-the **Unified import interface** and how it encompasses the import from a total of nine 
-different sources. 
+1. Launch the engine
+```python
+import getml
 
-### [Annotating data][annotating-data]
+getml.engine.launch()
+getml.engine.set_project('one_minute_to_getml')
+```
 
-A crucial building block on the way to automated relational feature engineering is 
-the annotation of data. This section explains the **different roles** that exist and 
-when to use them.
+2. Load the data into the engine
+```python
+df_population = getml.data.DataFrame.from_csv('data_population.csv',
+            name='population_table')
+df_peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',
+            name='peripheral_table')
+```
+3. Annotate the data
+```python
+df_population.set_role(cols='target', role=getml.data.role.target)
+df_population.set_role(cols='join_key', role=getml.data.role.join_key)
+```
 
-### [Data Model][data-model]
+4. Define the data model
+```python
+dm = getml.data.DataModel(population=df_population.to_placeholder())
+dm.add(df_peripheral.to_placeholder())
+dm.population.join(
+   dm.peripheral,
+   on="join_key",
+)
+```
 
-Explore the essential concepts of data modeling, including the distinction between 
-population and placeholder tables. This section also discusses how to leverage 
-high-level abstractions like the **star schema**, **snowflake schema**, and **time 
-series** to 
-simplify the data modeling process.
+5. Train the feature learning algorithm and the predictor
+```python
+pipe = getml.pipeline.Pipeline(
+    data_model=dm,
+    feature_learners=getml.feature_learning.FastProp(),
+    predictors=getml.predictors.LinearRegression()
+)
+pipe.fit(
+    population=df_population,
+    peripheral=[df_peripheral]
+)
+```
 
-### [Preprocessing][preprocessing]
+6. Evaluate
+```python
+pipe.score(
+    population=df_population_unseen,
+    peripheral=[df_peripheral_unseen]
+)
+```
 
-Discover how getML's built-in preprocessing functionalities, such as **Mapping** and 
-**Imputation**, can streamline the typically labor-intensive task of data preprocessing.
+7. Predict 
+```python  
+pipe.predict(
+    population=df_population_unseen,
+    peripheral=[df_peripheral_unseen]
+)
+```
 
-### [Feature Engineering][feature-engineering]
+8. Deploy
+```python
+# Allow the pipeline to respond to HTTP requests
+pipe.deploy(True)
+```
 
-At the heart of getML lies Feature Engineering. This section delves into the 
-objectives of feature engineering and introduces the feature learning 
-algorithms of getML: **FastProp**, **Fastboost**, **MultiRel**, **Relboost**, and 
-**RelMT**.
-
-### [Predicting][predicting]
-
-This section introduces the **four built-in predictors** of getML and explains how they 
-integrate into the overall getML pipeline to facilitate efficient predictions.
-
-### [Hyperparameter Optimization][hyperparameter-optimization]
-
-Though default parameters generally yield robust results, this section outlines how to
-enhance model performance through getML’s straightforward hyperparameter optimization 
-routines.
-
-### [Deployment][deployment]
-
-For deploying results and pipelines no external libraries are needed. This section
-explains how the deployment works with built-in getML functionalities.
-
-This guide aims to equip you with all the necessary information to effectively use 
-getML for your data science projects, ensuring a seamless and productive experience.
+Check out the rest of this documentation to find out how getML achieves top
+performance on real-world data science projects with many tables and complex
+data schemes.

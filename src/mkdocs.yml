@@ -208,53 +208,57 @@ not_in_nav: |
 
 nav:
   - Home: index.md
+    
+  - Get started: 
+    - How to use our dev Portal:
+      - get_started/how-to-use.md
 
-  - Overview:
-    - Documentation:
-        - Overview: index-documentation.md
-        - Getting Started: 
-          - home/getting_started/index.md
-          - Remote access: home/installation/remote_access.md
-    - User Guide:
+    - Install:
+      - install/index.md
+      - Platform:
+        - Linux: install/packages/linux.md
+        - Docker: install/packages/Docker.md
+      - From source:
+        - Install API: install/source/python-api.md
+        - Build engine & API: install/source/build.md
+      - Uninstall:
+        - Any platform: install/uninstall.md
+      - Archive:
+        - Archive: install/packages/archive.md
+
+  - User Guide:
+    - Quick Start: 
       - user_guide/index.md
+    - Walkthrough: 
+      - home/getting_started/index.md
+    # - Remote access: home/installation/remote_access.md
+    - Concepts:
+      - user_guide/concepts/index.md
       - Components:
-        - user_guide/getml_suite/index.md
-        - Engine: user_guide/getml_suite/engine.md
-        - Monitor: user_guide/getml_suite/monitor.md
-        - Python API: user_guide/getml_suite/python_api.md
-      - Managing projects: user_guide/project_management/project_management.md
+        - user_guide/concepts/getml_suite/index.md
+        - Engine: user_guide/concepts/getml_suite/engine.md
+        - Monitor: user_guide/concepts/getml_suite/monitor.md
+        - Python API: user_guide/concepts/getml_suite/python_api.md
+      - Managing projects: user_guide/concepts/project_management/project_management.md
       - Importing data:
-        - user_guide/importing_data/index.md
-        - CSV interface: user_guide/importing_data/csv_interface.md
-        - Pandas interface: user_guide/importing_data/pandas_interface.md
-        - JSON interface: user_guide/importing_data/json_interface.md
-        - SQLite3 interface: user_guide/importing_data/sqlite3_interface.md
-        - MySQL interface: user_guide/importing_data/mysql_interface.md
-        - MariaDB interface: user_guide/importing_data/mariadb_interface.md
-        - PostgreSQL interface: user_guide/importing_data/postgres_interface.md
-        - Greenplum interface: user_guide/importing_data/greenplum_interface.md
-        - ODBC interface: user_guide/importing_data/odbc_interface.md
-      - Annotating data: user_guide/annotating_data/annotating_data.md
-      - Data model: user_guide/data_model/data_model.md
-      - Preprocessing: user_guide/preprocessing/preprocessing.md
-      - Feature engineering: user_guide/feature_engineering/feature_engineering.md
-      - Predicting: user_guide/predicting/predicting.md
-      - Hyperparameter optimization: user_guide/hyperopt/hyperopt.md
-      - Deployment: user_guide/deployment/deployment.md
+        - user_guide/concepts/importing_data/index.md
+        - CSV interface: user_guide/concepts/importing_data/csv_interface.md
+        - Pandas interface: user_guide/concepts/importing_data/pandas_interface.md
+        - JSON interface: user_guide/concepts/importing_data/json_interface.md
+        - SQLite3 interface: user_guide/concepts/importing_data/sqlite3_interface.md
+        - MySQL interface: user_guide/concepts/importing_data/mysql_interface.md
+        - MariaDB interface: user_guide/concepts/importing_data/mariadb_interface.md
+        - PostgreSQL interface: user_guide/concepts/importing_data/postgres_interface.md
+        - Greenplum interface: user_guide/concepts/importing_data/greenplum_interface.md
+        - ODBC interface: user_guide/concepts/importing_data/odbc_interface.md
+      - Annotating data: user_guide/concepts/annotating_data/annotating_data.md
+      - Data model: user_guide/concepts/data_model/data_model.md
+      - Preprocessing: user_guide/concepts/preprocessing/preprocessing.md
+      - Feature engineering: user_guide/concepts/feature_engineering/feature_engineering.md
+      - Predicting: user_guide/concepts/predicting/predicting.md
+      - Hyperparameter optimization: user_guide/concepts/hyperopt/hyperopt.md
+      - Deployment: user_guide/concepts/deployment/deployment.md
 
-
-  - Install:
-    - install/index.md
-    - Platform:
-      - Linux: install/packages/linux.md
-      - Docker: install/packages/Docker.md
-    - From source:
-      - Install API: install/source/python-api.md
-      - Build engine & API: install/source/build.md
-    - Uninstall:
-      - Any platform: install/uninstall.md
-    - Archive:
-      - Archive: install/packages/archive.md
 
   - Enterprise:
     - Benefits: enterprise/benefits.md
