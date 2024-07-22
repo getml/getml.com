@@ -2,10 +2,10 @@
 title: User Guide
 ---
 
-[](){#user-guide}
-# User Guide
+[](){#concepts-guide}
+# Concepts
 
-This User Guide offers a detailed exploration of the getML ecosystem, structured to 
+This Concepts section offers a detailed exploration of the getML ecosystem, structured to 
 mirror the typical workflow of a data science project. It includes a thorough 
 introduction to the key concepts and continually references the comprehensive 
 Python API documentation.

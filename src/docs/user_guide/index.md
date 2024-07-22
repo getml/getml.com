@@ -1,100 +1,150 @@
-# Quick start
+# How to use getML Dev Portal
 
-getML is an innovative tool for the end-to-end automation of data
-science projects. It covers everything from convenient data loading procedures
-to the deployment of trained models.
+This Dev Portal provides all the information you need to get you up and running with 
+getML.
 
-Most notably, getML includes advanced algorithms for
-**automated feature engineering** (feature learning) on relational data and time
-series. Feature engineering on relational data is defined as the creation of a
-flat table by merging and aggregating data. It is sometimes also referred to
-as **data wrangling**. Feature engineering is necessary if your data is distributed
-over more than one data table.
 
-Automated feature engineering
+## User Guide
 
-* Saves up to 90% of the time spent on a data science project
-* Increases the prediction accuracy over manual feature engineering
+The User Guide provides a comprehensive overview of getML's features and capabilities.
+Conveniently it is divided in three levels of detail:
 
-Andrew Ng, Professor at Stanford
-University and Co-founder of Google Brain described manual feature engineering as follows:
+<div class="grid cards" markdown>
 
-> *Coming up with features is difficult, time-consuming, requires expert
-> knowledge. "Applied machine learning" is basically feature engineering.*
+-   :fontawesome-solid-circle-question: &nbsp;
+    __Quick start__
 
-The main purpose of getML is to automate this *"difficult, time-consuming"* process as much
-as possible.
+    ---
 
-getML comes with a high-performance **engine** written in C++ and an intuitive
-**Python API**. Completing a data science project with getML consists of eight
-simple steps.
+    Learn how to support our goal of becoming the leading tool in documentation
 
-1. Launch the engine
-```python
-import getml
+    ---
 
-getml.engine.launch()
-getml.engine.set_project('one_minute_to_getml')
-```
+    [More information][quick-start-guide]
 
-2. Load the data into the engine
-```python
-df_population = getml.data.DataFrame.from_csv('data_population.csv',
-            name='population_table')
-df_peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',
-            name='peripheral_table')
-```
-3. Annotate the data
-```python
-df_population.set_role(cols='target', role=getml.data.role.target)
-df_population.set_role(cols='join_key', role=getml.data.role.join_key)
-```
+-   :material-gift: &nbsp;
+    __Walkthrough__
 
-4. Define the data model
-```python
-dm = getml.data.DataModel(population=df_population.to_placeholder())
-dm.add(df_peripheral.to_placeholder())
-dm.population.join(
-   dm.peripheral,
-   on="join_key",
-)
-```
+    ---
 
-5. Train the feature learning algorithm and the predictor
-```python
-pipe = getml.pipeline.Pipeline(
-    data_model=dm,
-    feature_learners=getml.feature_learning.FastProp(),
-    predictors=getml.predictors.LinearRegression()
-)
-pipe.fit(
-    population=df_population,
-    peripheral=[df_peripheral]
-)
-```
+    Discover exclusive benefits and features available only to our monthly sponsors
 
-6. Evaluate
-```python
-pipe.score(
-    population=df_population_unseen,
-    peripheral=[df_peripheral_unseen]
-)
-```
+    ---
 
-7. Predict 
-```python  
-pipe.predict(
-    population=df_population_unseen,
-    peripheral=[df_peripheral_unseen]
-)
-```
+    [More information][walkthrough-guide]
 
-8. Deploy
-```python
-# Allow the pipeline to respond to HTTP requests
-pipe.deploy(True)
-```
+-   :fontawesome-solid-people-group: &nbsp;
+    __Concepts__
 
-Check out the rest of this documentation to find out how getML achieves top
-performance on real-world data science projects with many tables and complex
-data schemes.
+    ---
+
+    Get to know our awesome sponsors, financially backing Material for MkDocs
+
+    ---
+
+    [More information][concepts-guide]
+
+</div>
+
+
+## Examples & API
+
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-solid-circle-question: &nbsp;
+    __Examples__
+
+    ---
+
+    Learn how to support our goal of becoming the leading tool in documentation
+
+    ---
+
+    [More information][examples-index]
+
+-   :material-gift: &nbsp;
+    __API reference__
+
+    ---
+
+    Discover exclusive benefits and features available only to our monthly sponsors
+
+    ---
+
+    [More information][python-api]
+
+
+</div>
+
+
+
+<!-- ---- -->
+
+<!-- 
+-  [Quick start][quick-start-guide] | 5 minutes
+
+    If you are entirely new to getML, and you want to quickly sample its flavour, this is 
+    the right place. A minimally viable example is presented, highlighting the 
+    unique strengths of getML. 
+
+- [Walkthrough][walkthrough-guide] | 2 hours
+
+    If getML has already piqued your interest, and you want to delve deeper into 
+    its capabilities, this is the right place. Along a more complex example you 
+    will familiarize yourself with the typical structure of a data science project 
+    using getML. From provisioning the data set, via data model definition, pipeline 
+    handling, model training and prediction to feature extraction you learn about the 
+    basics of getML’s python API as well as some of the underlying theoretical 
+    concepts. 
+
+- [Concepts][concepts-guide] 
+
+    Together with the API Reference, Concepts forms the core the getML Dev Portal.
+    The getML ecosystem is covered in the context of a typical Data Science project. 
+    Theoretical principles are explained, and how they inform the functionality of 
+    the software. While doing so, Concepts readily references the API 
+    Documentation, which details all the nuts and bolts of getML. Whether novice 
+    or seasoned getML practitioner this section is the #1 source of truth. -->
+
+<!-- ## Examples & API -->
+<!-- 
+- [Examples][examples-index]
+  
+    The examples section contains real-world getML projects using public datasets for easy follow-along. It showcases getML’s capabilities in feature engineering and predictive modeling, with practical demonstrations available in the [getml-demo](https://github.com/getml/getml-demo) repository on GitHub. You’ll find templates for your projects and a guide on integrating getML with FastAPI to create prediction endpoints.
+
+- [API reference][python-api]
+
+    The API reference covers everything related to the Python
+    interface to the getML engine. Each module comes with a dedicated
+    section that contains concrete code examples.
+
+_____________________________________________________
+If you want to get started with getML right away, we recommend to follow the
+[installation instructions][installation-index] and then go through the
+[getting started guide][getting-started]. 
+
+If you are looking for more detailed information, other sections of this
+documentation are more suitable:
+
+- [Examples][examples-index]
+  
+    The examples section contains real-world getML projects using public datasets for easy follow-along. It showcases getML’s capabilities in feature engineering and predictive modeling, with practical demonstrations available in the [getml-demo](https://github.com/getml/getml-demo) repository on GitHub. You’ll find templates for your projects and a guide on integrating getML with FastAPI to create prediction endpoints.
+
+
+- [User guide][user-guide]
+
+    The user guide explains all conceptional details behind getML in
+    depth. It can serve as a reference guide for experienced users but it's also
+    suitable for first day users who want to get a deeper understanding
+    of how getML works. Each chapter in the
+    user guide represents one step of a typical data science project.
+
+- [API reference][python-api]
+
+    The API reference covers everything related to the Python
+    interface to the getML engine. Each module comes with a dedicated
+    section that contains concrete code examples.
+
+
+You can also check out our [blog articles and case studies](https://www.getml.com/blog).  -->

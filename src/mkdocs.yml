@@ -209,28 +209,12 @@ not_in_nav: |
 nav:
   - Home: index.md
     
-  - Get started: 
-    - How to use our dev Portal:
-      - get_started/index.md
-
-    - Install:
-      - install/index.md
-      - Platform:
-        - Linux: install/packages/linux.md
-        - Docker: install/packages/Docker.md
-      - From source:
-        - Install API: install/source/python-api.md
-        - Build engine & API: install/source/build.md
-      - Uninstall:
-        - Any platform: install/uninstall.md
-      - Archive:
-        - Archive: install/packages/archive.md
-
   - User Guide:
+    - user_guide/index.md  
     - Quick Start: 
-      - user_guide/index.md
+      - user_guide/quick_start/index.md
     - Walkthrough: 
-      - home/getting_started/index.md
+      - user_guide/walkthrough/index.md
     # - Remote access: home/installation/remote_access.md
     - Concepts:
       - user_guide/concepts/index.md
@@ -259,6 +243,18 @@ nav:
       - Hyperparameter optimization: user_guide/concepts/hyperopt/hyperopt.md
       - Deployment: user_guide/concepts/deployment/deployment.md
 
+  - Install:
+    - install/index.md
+    - Platform:
+      - Linux: install/packages/linux.md
+      - Docker: install/packages/Docker.md
+    - From source:
+      - Install API: install/source/python-api.md
+      - Build engine & API: install/source/build.md
+    - Uninstall:
+      - Any platform: install/uninstall.md
+    - Archive:
+      - Archive: install/packages/archive.md
 
   - Enterprise:
     - Benefits: enterprise/benefits.md
