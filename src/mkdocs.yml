@@ -302,7 +302,10 @@ nav:
       - Multirel: reference/feature_learning/multirel.md
       - Relboost: reference/feature_learning/relboost.md
       - RelMT: reference/feature_learning/relmt.md
-      - aggregations: reference/feature_learning/aggregations.md
+      - aggregate:
+        - aggregations: reference/feature_learning/aggregate/aggregations.md
+        - sets: reference/feature_learning/aggregate/sets.md
+        - types: reference/feature_learning/aggregate/types.md
       - loss_functions: reference/feature_learning/loss_functions.md
     - getml.project:
       - reference/project/index.md
