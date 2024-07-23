@@ -212,7 +212,7 @@ nav:
     
   - User Guide:
     - user_guide/index.md  
-    - Quick Start: 
+    - Quick start: 
       - user_guide/quick_start/index.md
     - Walkthrough: 
       - user_guide/walkthrough/index.md

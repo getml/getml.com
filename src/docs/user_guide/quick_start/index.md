@@ -1,3 +1,7 @@
+---
+title: Quick start
+---
+
 [](){#quick-start-guide}
 # Quick start
 

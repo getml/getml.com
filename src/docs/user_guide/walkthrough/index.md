@@ -1,7 +1,11 @@
+---
+title: Walkthrough
+---
+
 [](){#walkthrough-guide}
 # Walkthrough
 
-In this example, you will learn about the basic concepts of getML. You will tackle a simple problem using the Python API in order to gain a technical understanding of the benefits of getML. More specifically, you will learn how to do the following:
+In this walkthrough, you will learn about the basic concepts of getML. You will tackle a simple problem using the Python API in order to gain a technical understanding of the benefits of getML. More specifically, you will learn how to do the following:
 
 1. [Start a new project](#starting-a-new-project)
 2. [Define a data model](#defining-the-data-model)
