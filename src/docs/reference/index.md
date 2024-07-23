@@ -11,7 +11,7 @@ information about the interoperation of the different parts of getML can be
 found in the [user guide][user-guide].
 
 If you have never used the Python API, it is probably easiest to start with the
-[getting started guide][getting-started].
+[getml walkthrough][walkthrough-guide].
 
 toc to be added: https://docs.getml.com/latest/api_reference/index.html#python-api
 

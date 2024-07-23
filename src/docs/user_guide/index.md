@@ -3,7 +3,7 @@
 This Dev Portal provides all the information you need to get you up and running with 
 getML.
 
-
+[](){#user-guide-index}
 ## User Guide
 
 The User Guide provides a comprehensive overview of getML's features and capabilities.
