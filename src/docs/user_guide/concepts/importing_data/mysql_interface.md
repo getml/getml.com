@@ -7,9 +7,10 @@ can be connected to the getML engine using the function [`connect_mysql()`][getm
 If you are unsure which port or socket your MySQL is running on, you can start the `mysql` command line interface
 ```bash
 $ mysql
-```
-and use the following queries to get the required insights.
 
+```
+
+Once inside the MySQL interface, use the following queries to get the required insights:
 ```sql
 > SELECT @@port;
 

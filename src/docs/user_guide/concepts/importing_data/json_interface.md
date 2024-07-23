@@ -1,8 +1,7 @@
 [](){#json}
 # JSON interface
 
-The another convenient but slow way to import data into the getML
-engine via its Python API.
+A convenient but slow way to import data into the getML engine via its Python API.
 
 ## Import from JSON
 

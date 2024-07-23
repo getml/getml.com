@@ -63,7 +63,7 @@ pipe.predictors[0].n_estimators = 50
 pipe.fit(...)
 ```
 
-To score the performance of your prediction on a test data set, the getML models come with a [`score()`][getml.pipeline.Pipeline.score] method. The available metrics are documented in [`metrics`][getml.pipeline.metrics].
+To score the performance of your prediction on a test dataset, the getML models come with a [`score()`][getml.pipeline.Pipeline.score] method. The available metrics are documented in [`metrics`][getml.pipeline.metrics].
 
 To use a trained model, including both the trained features and the predictor, to make predictions on new, unseen data, call the [`predict()`][getml.pipeline.Pipeline.predict] method of your model.
 

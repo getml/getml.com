@@ -14,7 +14,8 @@ on, you can start the `mysql` command line interface
 ```bash
 $ mysql
 ```
-and use the following queries to get the required insights.
+
+Once inside the MariaDB interface, use the following queries to get the required insights:
 
 ```sql
 MariaDB [(none)]> SELECT @@port;

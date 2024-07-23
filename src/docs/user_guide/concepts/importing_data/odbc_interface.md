@@ -1,5 +1,11 @@
+---
+status: enterprise
+---
 [](){#odbc}
 # ODBC interface
+
+!!! info "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
 
 [ODBC](https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc) (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
 
@@ -9,7 +15,7 @@ In a nutshell, it works like this:
 - To connect getML or other software to a database using ODBC, you first need to install the ODBC driver provided by your database vendor.
 - In theory, ODBC drivers should translate queries from the SQL 99 standard into the SQL dialect, but this is often ignored in practice. Also, not all ODBC drivers support all ODBC calls.
 
-At getML, native APIs are preferred for connecting to relational databases. ODBC is used when native APIs are not feasible due to licensing or other restrictions, especially for connecting to proprietary databases like Oracle, Microsoft SQL Server, or IBM DB2.
+With getML, native APIs are preferred for connecting to relational databases. ODBC is used when native APIs are not feasible due to licensing or other restrictions, especially for connecting to proprietary databases like Oracle, Microsoft SQL Server, or IBM DB2.
 
 ODBC is pre-installed on modern Windows operating systems, while Linux and macOS can use open-source implementations like unixODBC and iODBC, with getML using unixODBC.
 

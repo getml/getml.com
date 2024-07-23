@@ -1,9 +1,10 @@
 [](){#engine}
 # The getML engine 
 
-
-
 The getML engine is a standalone program written in C++ that does the actual work of feature engineering and prediction.
+
+!!! note
+    If you are using the Python API, there is no need to separately install or manage the engine. It will be installed automatically via `pip install getml`.
 
 [](){#engine-start-engine}
 ## Starting the engine
@@ -16,7 +17,7 @@ instructions][installation] for your operating system.
 
 There are several ways to shut down the getML engine:
 
-- Click the '⏻ Shutdown' tab in the sidebar of the monitor
+- Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor
 - Press `Ctrl-C` (if started via the command line)
 - Run the getML command-line interface (CLI) (see [installation][installation]) using 
   the `-stop` 
