@@ -10,7 +10,7 @@ Conveniently, it is divided in three levels of detail:
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-circle-question: &nbsp;
+-   :material-play-circle: &nbsp;
     __Quick start | 5 min__
 
     ---
@@ -21,7 +21,7 @@ Conveniently, it is divided in three levels of detail:
 
     [Go to Quick Start][quick-start-guide]
 
--   :material-gift: &nbsp;
+-   :fontawesome-solid-person-walking: &nbsp;
     __Walkthrough | 2 hours__
 
     ---
@@ -32,7 +32,7 @@ Conveniently, it is divided in three levels of detail:
 
     [Go to Walkthrough][walkthrough-guide]
 
--   :fontawesome-solid-people-group: &nbsp;
+-   :material-bookshelf: &nbsp;
     __Concepts | In-depth__
 
     ---
