@@ -161,6 +161,23 @@
     /* opacity: 0.8; */
 }
 
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.ul-mt-0 ul {
+    margin-top: 0.5em;
+}
+
+
+.hidden {
+    display: none;
+}
+
 /* Content Partials */
 
 .md-typeset .admonition {

@@ -75,6 +75,96 @@
     display: none;
 }
 
+/* abbr[title]:after
+{
+   content: " (" attr(title) ")";
+}
+
+@media screen and (min-width: 1025px)
+{
+   abbr[title]
+   {
+      border-bottom: 1px dashed #ADADAD;
+      cursor:help;
+   }
+
+   abbr[title]:after
+   {
+      content: "";
+   }
+} */
+
+.logo_grid p {
+    display: flex;
+    position: relative;
+    /* flex-direction: column; */
+}
+
+.logo_grid span {
+    --md-icon-size: auto !important;
+    /* color: var(--md-accent-bg-color); */
+    color: var(--md-default-fg-color--contrast);
+    /* var(--md-code-fg-color); */
+    shape-rendering: auto;
+}
+
+@media screen and (max-width: 719px) {
+    .logo_grid {
+        --Marquee-gap: 24px;
+        display: flex;
+        flex-shrink: 0;
+        gap: var(--Marquee-gap);
+        /* min-width: 100%; */
+        overflow: hidden;
+        /* justify-items: center; */
+    }
+    .logo_grid span {
+        width: 100px !important;
+        /* width: 6rem !important; */
+        max-height: 1.3rem !important;
+        justify-content: center;
+    }
+    .logo_grid span svg {
+        /* max-width: 6rem !important; */
+        /* max-height: 2.8rem !important; */
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 76.23em) {
+    .logo_grid {
+        max-width: 90%;
+        display: grid;
+        /* grid-gap: 24px; */
+        /* gap: 24px; */
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 36px;
+        row-gap: 36px;
+        place-items: center;
+    }
+    .logo_grid span svg {
+        max-width: 5rem !important;
+        max-height: 2rem !important;
+    }
+}
+
+@media screen and (min-width: 76.25em) {
+    .logo_grid {
+        max-width: 70%;
+        display: grid;
+        grid-gap: 24px;
+        gap: 24px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-row-gap: 48px;
+        row-gap: 48px;
+        place-items: center;
+    }
+    .logo_grid span svg {
+        max-width: 5rem !important;
+        max-height: 1.6rem !important;
+    }
+}
+
+
 .spacer > * {
     margin-left: 0.25em;
     margin-right: 0.25em;
@@ -182,6 +272,9 @@
     }
     .mb-4-lg {
         margin-bottom: 4rem !important;
+    }
+    .mb-5-lg {
+        margin-bottom: 5rem !important;
     }
     .mt-0-lg {
         /* margin-top: 0; */

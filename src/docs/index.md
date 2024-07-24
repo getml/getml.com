@@ -34,9 +34,27 @@ A game changer in predictive applications for enterprise applications.
 
 <span class="impact">Powering the world’s best machine learning pipelines.</span><br>
 <span class="mute">From next-gen startups to established enterprises.</span>
-{: .large-lg }
+{: .medium-lg }
 
-... logos ...
+
+/// html | div.logo_grid.mb-5-lg
+:c-ao:
+
+:c-si:
+
+:c-pw:
+
+:c-em:
+
+:c-ge:
+
+:c-pe:
+
+:c-ze:
+
+:c-v:
+///
+
 
 </center>
 
@@ -46,7 +64,7 @@ A game changer in predictive applications for enterprise applications.
 ## Why you should consider getML {: .h2-md }
 
 Finally smooth pipeline
-{: style="display: none;" }
+{: .hidden }
 
 <div class="w-60-lg" markdown>
 
