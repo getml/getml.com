@@ -2922,7 +2922,7 @@
 </h1>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">Multirel</span><span class="p">(</span>
     <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a></span><span class="p">[</span>
-        <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.MultirelAggregations" href="../aggregations/#getml.feature_learning.aggregations.MultirelAggregations">MultirelAggregations</a></span>
+        <span class="n"><span title="getml.feature_learning.aggregate.types.MultirelAggregations">MultirelAggregations</span></span>
     <span class="p">]</span> <span class="o">=</span> <span class="n">MULTIREL</span><span class="o">.</span><span class="n">default</span><span class="p">,</span>
     <span class="n">allow_sets</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">delta_t</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -2983,12 +2983,12 @@ out the User guide: <a class="autorefs autorefs-internal" href="../../../user_gu
               <div class="doc-md-description">
                 <p>It is a class variable holding the available aggregation sets for the
 Multirel feature learner.
-Value: <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations.MULTIREL"><code>MULTIREL</code></a>.</p>
+Value: [<code>MULTIREL</code>][getml.feature_learning.aggregate.sets.MULTIREL].</p>
               </div>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="getml.feature_learning.aggregations.MultirelAggregationsSets">MultirelAggregationsSets</span></code>
+                      <code><span title="getml.feature_learning.aggregate.sets.MultirelAggregationsSets">MultirelAggregationsSets</span></code>
                   </span>
               </p>
             </td>
@@ -3012,16 +3012,16 @@ Value: <a class="autorefs autorefs-internal" href="../aggregations/#getml.featur
                 <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be an aggregation supported by Multirel feature learner
-(<a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS"><code>MULTIREL_AGGREGATIONS</code></a>).</p>
+([<code>MULTIREL_AGGREGATIONS</code>][getml.feature_learning.aggregate.sets.MULTIREL_AGGREGATIONS]).</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.MultirelAggregations" href="../aggregations/#getml.feature_learning.aggregations.MultirelAggregations">MultirelAggregations</a>]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<span title="getml.feature_learning.aggregate.types.MultirelAggregations">MultirelAggregations</span>]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.MULTIREL.default">default</span></code>
+                      <code><span title="getml.feature_learning.aggregate.sets.MULTIREL.default">default</span></code>
                   </span>
               </p>
             </td>

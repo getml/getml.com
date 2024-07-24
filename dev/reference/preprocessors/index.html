@@ -3232,7 +3232,7 @@ that signify whether the original value was imputed.</p>
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">Mapping</span><span class="p">(</span>
     <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a></span><span class="p">[</span>
-        <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.MappingAggregations" href="../feature_learning/aggregations/#getml.feature_learning.aggregations.MappingAggregations">MappingAggregations</a></span>
+        <span class="n"><span title="getml.feature_learning.aggregate.types.MappingAggregations">MappingAggregations</span></span>
     <span class="p">]</span> <span class="o">=</span> <span class="n">MAPPING</span><span class="o">.</span><span class="n">default</span><span class="p">,</span>
     <span class="n">min_freq</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
     <span class="n">multithreading</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -3273,12 +3273,12 @@ by aggregating targets in the relational neighbourhood.</p>
               <div class="doc-md-description">
                 <p>It is a class variable holding the available aggregation sets for the
 mapping preprocessor.
-Value: <a class="autorefs autorefs-internal" href="../feature_learning/aggregations/#getml.feature_learning.aggregations.MAPPING"><code>MAPPING</code></a>.</p>
+Value: [<code>MAPPING</code>][getml.feature_learning.aggregate.sets.MAPPING].</p>
               </div>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="getml.feature_learning.aggregations.MappingAggregationsSets">MappingAggregationsSets</span></code>
+                      <code><span title="getml.feature_learning.aggregate.sets.MappingAggregationsSets">MappingAggregationsSets</span></code>
                   </span>
               </p>
             </td>
@@ -3301,16 +3301,16 @@ Value: <a class="autorefs autorefs-internal" href="../feature_learning/aggregati
               <div class="doc-md-description">
                 <p>The aggregation function to use over the targets.</p>
 <p>Must be an aggregation supported by Mapping preprocessor
-(<a class="autorefs autorefs-internal" href="../feature_learning/aggregations/#getml.feature_learning.aggregations.MAPPING_AGGREGATIONS"><code>MAPPING_AGGREGATIONS</code></a>).</p>
+([<code>MAPPING_AGGREGATIONS</code>][getml.feature_learning.aggregate.sets.MAPPING_AGGREGATIONS]).</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.MappingAggregations" href="../feature_learning/aggregations/#getml.feature_learning.aggregations.MappingAggregations">MappingAggregations</a>]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<span title="getml.feature_learning.aggregate.types.MappingAggregations">MappingAggregations</span>]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.MAPPING.default">default</span></code>
+                      <code><span title="getml.feature_learning.aggregate.sets.MAPPING.default">default</span></code>
                   </span>
               </p>
             </td>
