@@ -203,6 +203,7 @@
 }
 
 
+
 /* box */
 .box {
     padding: 24px;
@@ -211,6 +212,10 @@
 .box-bg {
     background-color: var(--md-bg);
     border-radius: 12px;
+}
+/* Hubspot form fix */
+.box.no-dark{
+    background-color: #f7f6f3 !important;
 }
 @media screen and (min-width: 76.25em) {
     .box {

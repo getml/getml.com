@@ -166,6 +166,8 @@ markdown_extensions:
   - pymdownx.blocks.html
   - pymdownx.caret
   - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.superfences
   - pymdownx.details
