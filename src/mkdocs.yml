@@ -11,19 +11,6 @@ site_description: >-
 repo_name: getml
 # repo_url: https://github.com/getml/getml-community
 
-# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-
-# Project information
-site_name: getML Developer Portal
-site_url: https://dev.getml.com/
-site_author: Code17 GmbH
-site_description: >-
-  ...
-
-# Repository
-repo_name: getml
-# repo_url: https://github.com/getml/getml-community
-
 # Copyright
 copyright: Copyright &copy; 2024 – Code17 GmbH
 
