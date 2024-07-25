@@ -42,6 +42,7 @@ The engine keeps a log about what it is currently doing.
 
 The easiest way to view the log is to click the '<> Log' tab in the sidebar of the getML monitor. The engine will also output its log to the command line when it is started using the command-line interface.
 
+[](){#getml-suite-python-api}
 ## Python API
 
 Control the engine with the getML Python API, which provides handlers to the objects in the engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api-reference].
