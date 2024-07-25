@@ -17,7 +17,7 @@ The getML ecosystem comprises three fundamental components:
 Written in C++, the getML engine is the core of the suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
 
 !!! note
-    If you are using the Python API, there is no need to separately install or manage the engine. It will be installed automatically via `pip install getml`.
+    If you are using the Python API on Linux, there is no need to separately install or manage the engine. It will be installed automatically via `pip install getml`.
 
 [](){#engine-start-engine}
 ### Starting the engine
