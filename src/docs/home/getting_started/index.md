@@ -193,8 +193,8 @@ when building features.
 fastprop = getml.feature_learning.FastProp(
      num_features=10,
      aggregation=[
-         getml.feature_learning.aggregations.Count,
-         getml.feature_learning.aggregations.Sum
+         getml.feature_learning.aggregations.COUNT,
+         getml.feature_learning.aggregations.SUM
      ],
 )
 
@@ -216,7 +216,7 @@ pipe = getml.pipeline.Pipeline(
 
 ```
 
-We have chosen a narrow search field in aggregation space by only letting FastProp use `Count` and `Sum`. For the sake of demonstration, we use a simple `LinearRegression` and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.
+We have chosen a narrow search field in aggregation space by only letting FastProp use `COUNT` and `SUM`. For the sake of demonstration, we use a simple `LinearRegression` and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.
 
 ## Working with a pipeline
 
@@ -384,7 +384,7 @@ GROUP BY t1.rowid;
 
 ```
 
-This very much resembles the ad hoc definition we tried in the beginning. The correct aggregation to use on this data set is `Count`. getML extracted this definition completely autonomously.
+This very much resembles the ad hoc definition we tried in the beginning. The correct aggregation to use on this data set is `COUNT`. getML extracted this definition completely autonomously.
 
 ## Next steps
 
