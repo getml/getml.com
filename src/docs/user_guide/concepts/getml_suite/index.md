@@ -16,25 +16,29 @@ The getML ecosystem comprises three fundamental components:
 
 Written in C++, the getML engine is the core of the suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
 
-!!! note
-    If you are using the Python API on Linux, there is no need to separately install or manage the engine. It will be installed automatically via `pip install getml`.
-
 [](){#engine-start-engine}
 ### Starting the engine
 
-The engine can be started using the dedicated launcher icon or by using the getML 
-command line interface (CLI). For more information, check out the [installation 
-instructions][installation] for your operating system.
+There are two ways to start the getML engine:
+
+- Using the [Python API][python-api]: `getml.engine.launch()`
+- Using the getML [command-line interface (CLI)][separate-installation-of-engine]
+
+!!! note
+    - If you are using `pip install getml` on Linux, the engine will be installed automatically. Just use the [`Python API`][python-api] to start the engine.
+    - If you are using Docker, you can also just use the [`Python API`][python-api] to start the engine.
+    - The command-line interface (CLI) is usually only used for the enterprise edition of the engine.
+
+For more information, refer to the [installation instructions][installation] for your operating system.
 
 ### Shutting down the engine
 
 There are several ways to shut down the getML engine:
 
+- In the Python API: `getml.engine.shutdown()`
 - Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor
 - Press `Ctrl-C` (if started via the command line)
-- Run the getML command-line interface (CLI) (see [installation][installation]) using 
-  the `-stop` 
-  option
+- Run the getML command-line interface (CLI) using the `-stop` option
 
 ### Logging
 
