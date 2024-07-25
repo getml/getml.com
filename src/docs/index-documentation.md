@@ -130,7 +130,7 @@ documentation are more suitable:
     of how getML works. Each chapter in the
     user guide represents one step of a typical data science project.
 
-- [API reference][python-api]
+- [API reference][python-api-reference]
 
     The API reference covers everything related to the Python
     interface to the getML engine. Each module comes with a dedicated

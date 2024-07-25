@@ -44,7 +44,7 @@ The easiest way to view the log is to click the '<> Log' tab in the sidebar of t
 
 ## Python API
 
-Control the engine with the getML Python API, which provides handlers to the objects in the engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api].
+Control the engine with the getML Python API, which provides handlers to the objects in the engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api-reference].
 
 !!! note
     - The classes in the Python API act as handles to objects in the getML engine.
