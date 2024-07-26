@@ -1,7 +1,7 @@
 [](){#preprocessing}
 # Preprocessing
 
-As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and [`propositionalization`](../../feature_engineering/feature_engineering/#feature-learning-vs-propositionalization) deal with *relational data structures* and result in a single-table representation thereof, we categorize all operations that work on *single tables* as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.
+As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and [`propositionalization`][featurelearning-vs-propositionalization] deal with *relational data structures* and result in a single-table representation thereof, we categorize all operations that work on *single tables* as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.
 
 getML's preprocessors allow you to extract domains from email addresses ([`EmailDomain`][getml.preprocessors.EmailDomain]), impute missing values ([`Imputation`][getml.preprocessors.Imputation]), map categorical columns to a continuous representation ([`Mapping`][getml.preprocessors.Mapping]), extract seasonal components from time stamps ([`Seasonal`][getml.preprocessors.Seasonal]), extract sub strings from string-based columns ([`Substring`][getml.preprocessors.Substring]) and split up [`text`][getml.data.roles.text] columns ([`TextFieldSplitter`][getml.preprocessors.TextFieldSplitter]). Preprocessing operations in getML are very efficient and happen really fast. In fact, most of the time you won't even notice the presence of a preprocessor in your pipeline. getML's preprocessors operate on an abstract level without polluting your original data, are evaluated lazily and their set-up requires minimal effort.
 
@@ -109,7 +109,7 @@ While most of getML's preprocessors are straightforward, two of them deserve a m
 ## Mappings
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [`Mappings`][getml.preprocessors.Mapping] are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.
 

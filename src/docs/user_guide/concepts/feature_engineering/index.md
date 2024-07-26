@@ -47,6 +47,7 @@ R, or SQL.
     assumes that the raw data comes in relational form, which is true for
     almost all real-world datasets.
 
+[](){#featurelearning-vs-propositionalization}
 ## Feature learning vs. propositionalization
 
 We follow academia and classify techniques that use simple, merely unconditional
@@ -145,7 +146,7 @@ You may notice that such a feature looks pretty similar to the [Multirel feature
 ### Multirel
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 Simply speaking, [`Multirel`][getml.feature_learning.Multirel] is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
 
@@ -230,7 +231,7 @@ Further information can be found in the API documentation for [`Multirel`][getml
 ### Relboost
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [`Relboost`][getml.feature_learning.Relboost] is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
 
@@ -279,7 +280,7 @@ Further information can be found in the API documentation for [`Relboost`][getml
 ### Fastboost
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 While both are generalizations of the gradient boosting algorithm, the main difference 
 between [`Fastboost`][getml.feature_learning.Fastboost] 
@@ -303,7 +304,7 @@ to learn separate rules and weights for each target.
 ### RelMT
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [`RelMT`][getml.feature_learning.RelMT] is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
 

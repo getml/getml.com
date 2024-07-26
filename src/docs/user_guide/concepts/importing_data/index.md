@@ -13,7 +13,7 @@ your data in data frame objects in the getML engine and will be ready to
 !!! note
 
     If you have imported your data into the engine before and want to restore it,
-    refer to [Lifecycle of a DataFrame][lifecycle-dataframe]
+    refer to [Python API: DataFrame][python-api-lifecycles]
 
 [](){#importing-data-unified-interface}
 ## Unified import interface
@@ -222,7 +222,7 @@ You can also write your results back into the PostgreSQL database. If you provid
 ### **Greenplum**
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
 Software, Inc. It can be connected to the getML engine using the
@@ -255,7 +255,7 @@ the corresponding table.
 ### **ODBC**
 
 !!! info "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits](/enterprise/benefits) and see the [comparion of features](/enterprise/feature-list) between the community and enterprise edition.
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [ODBC](https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc) (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
 

@@ -8,7 +8,7 @@ Each project is linked to a specific instance of the [getML engine][engine], whi
 
 To load an existing project or create a new one, use [`getml.engine.set_project()`][getml.engine.set_project].
 
-To shut down the engine process associated with the current project, call [`getml.project.suspend()`][getml.project.attrs.suspend]. Suspending a project flushes the engine's memory, and any unsaved changes to data frames are lost (refer to [Dataframes][lifecycle-dataframe] for details). All pipelines of the new project are automatically loaded into memory. You can retrieve all your project's pipelines through [`getml.project.pipelines`][getml.project.Pipelines]. 
+To shut down the engine process associated with the current project, call [`getml.project.suspend()`][getml.project.attrs.suspend]. Suspending a project flushes the engine's memory, and any unsaved changes to data frames are lost (refer to [Dataframes][python-api-lifecycles] for details). All pipelines of the new project are automatically loaded into memory. You can retrieve all your project's pipelines through [`getml.project.pipelines`][getml.project.Pipelines]. 
 
 Projects can be deleted by calling [`getml.engine.delete_project()`][getml.engine.delete_project] to delete a project by name or [`getml.project.delete()`][getml.project.attrs.delete] to suspend and delete the currently loaded project.
 
