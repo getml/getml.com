@@ -12,9 +12,10 @@ This chapter contains detailed information on the individual [roles][annotating-
 ## In short
 
 When **building the data model**, you should keep the following things in mind:
+
 - Every [`DataFrame`][getml.data.DataFrame] in a data model needs to have at least one 
   column ([`columns`][getml.data.columns]) with the role [join key][annotating-data-join-keys].
-- The role [time stamp][annotating-data-time-stamp] has to be used to prevent data leaks (refer to [data model time series][data-model-time-series] for details).
+- In case you have time series data, the role [time stamp][annotating-data-time-stamp] has to be used to prevent data leaks (refer to [data model time series][data-model-time-series] for details).
 
 When **learning features**, please keep the following things in mind:
 
@@ -24,9 +25,9 @@ When **learning features**, please keep the following things in mind:
 
 [](){#annotating-data-roles}
 ## Roles
-Roles determine if and how [`columns`][getml.data.columns] are handled during the construction of the [data model][data-model] and how they are interpreted by the [feature learning algorithm][feature-engineering]. The following roles are available in getML:
+Roles determine if and how [`columns`][getml.data.columns] are handled during the construction of the [data model][data-model] and how they are interpreted by the [Feature Learning Algorithm][feature-engineering]. The following roles are available in getML:
 
-| Role                | Class                                             | Included in FL algorithm |
+| Role                | Class                                             | Included in FL Algorithm |
 |---------------------|---------------------------------------------------|--------------------------|
 | [`categorical`][getml.data.roles.categorical]       | [`StringColumn`][getml.data.columns.StringColumn] | yes                      |
 | [`numerical`][getml.data.roles.numerical]         | [`FloatColumn`][getml.data.columns.FloatColumn]   | yes                      |
@@ -37,7 +38,10 @@ Roles determine if and how [`columns`][getml.data.columns] are handled during th
 | [`unused_float`][getml.data.roles.unused_float]      | [`FloatColumn`][getml.data.columns.FloatColumn]   | no                       |
 | [`unused_string`][getml.data.roles.unused_string]     | [`StringColumn`][getml.data.columns.StringColumn] | no                       |
 
-When constructing a [`DataFrame`][getml.data.DataFrame] via the class methods [`from_csv`][getml.data.DataFrame.from_csv], [`from_pandas`][getml.data.DataFrame.from_pandas], [`from_db`][getml.data.DataFrame.from_db], and [`from_json`][getml.data.DataFrame.from_json], all [`columns`][getml.data.columns] will have either the role [unused float][annotating-data-unused-float] or [unused string][annotating-data-unused-string]. Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
+!!! note
+    When constructing a [`DataFrame`][getml.data.DataFrame] via the class methods [`from_csv`][getml.data.DataFrame.from_csv], [`from_pandas`][getml.data.DataFrame.from_pandas], [`from_db`][getml.data.DataFrame.from_db], and [`from_json`][getml.data.DataFrame.from_json], all [`columns`][getml.data.columns] will have either the role [unused float][annotating-data-unused-float] or [unused string][annotating-data-unused-string]. Unused columns will be ignored by the feature learning and machine learning (ML) algorithms.
+
+### Example
 
 ```python
 import pandas as pd
@@ -77,10 +81,9 @@ getml_df
 # | 2019-02-28T00:00:00.000000Z | 512       | parrot      | 5127      | 12.6      |
 # | 2018-12-24T00:00:00.000000Z | 671       | goose       | 65311     | 11.92     |
 ```
-When assigning new roles to existing columns, you might notice that some of
-these calls are completed in an instance while others might take a considerable
-amount of time. What's happening here? A column's role also determines its type. 
-When you set a new role, an implicit type conversion might take place.
+
+!!! note
+    When assigning new roles to existing columns, you might notice that some of these calls are completed in an instance while others might take a considerable amount of time. What's happening here? A column's role also determines its type. When you set a new role, an implicit type conversion might take place.
 
 ## A note on reproducibility and efficiency
 
@@ -116,11 +119,12 @@ Even if your data source is type safe, setting roles is still a good idea becaus
 [](){#annotating-data-join-keys}
 ## Join key
 
-Join keys are required to establish a relation between two [`DataFrame`][getml.data.DataFrame] objects. Please refer to the [data models][data-model] for details.
+[`Join keys`][getml.data.roles.join_key] are required to establish a relation between two [`DataFrame`][getml.data.DataFrame] objects. Please refer to section [Data Model][data-model] for details.
 
 The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.
 
-[`columns`][getml.data.columns] of this role will *not* be aggregated by the feature learning algorithm or used for conditions.
+Columns of role [`join key`][getml.data.roles.join_key] will *not* be aggregated by the feature learning algorithm or used for conditions.
+
 [](){#annotating-data-time-stamp}
 ## Time stamp
 
@@ -176,6 +180,9 @@ that is used to try to interpret the input strings. Possible format options are
 If none of the formats works, the getML engine will try to interpret
 the time stamps as numerical values. If this fails, the time stamp will be set
 to NULL.
+
+### Example
+
 ```python
 data_df = dict(
 date1=[getml.data.time.days(365), getml.data.time.days(366), getml.data.time.days(367)],
@@ -203,11 +210,13 @@ df
 
 The associated [`columns`][getml.data.columns] contain the variables we want to predict. They are not used by the feature learning algorithm unless we explicitly tell it to do so (refer to `allow_lagged_target` in [`join()`][getml.data.Placeholder.join]). However, they are such an important part of the analysis that the population table is required to contain at least one of them (refer to [data model tables][data-model-tables]).
 
-The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be `NULL`.
+!!! note
+    The content of the target columns needs to be numerical. For classification problems, target variables can only assume the values 0 or 1. Target variables can never be `NULL`.
+
 [](){#annotating-data-numerical}
 ## Numerical
 
-This role tells the getML engine to include the associated [`FloatColumn`][getml.data.columns.FloatColumn] during the feature learning.
+This role tells the getML engine to include the associated [`FloatColumn`][getml.data.columns.FloatColumn] during feature learning.
 
 It should be used for all data with an inherent ordering, regardless of whether it is sampled from a continuous quantity, like passed time or the total amount of rainfall, or a discrete one, like the number of sugary mulberries one has eaten since lunch.
 [](){#annotating-data-categorical}

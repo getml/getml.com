@@ -5,72 +5,63 @@ title: Concepts
 [](){#concepts-guide}
 # Concepts
 
-This Concepts section offers a detailed exploration of the getML ecosystem, structured to 
-mirror the typical workflow of a data science project. It includes a thorough 
-introduction to the key concepts and continually references the comprehensive 
-Python API documentation.
+Designed to align with the typical workflow of a Data Science project, this concept section 
+offers detailed insights into key concepts, supported by references to the comprehensive 
+Python API documentation. Its goal is to equip you with all the necessary information to effectively 
+use getML for your projects, ensuring a seamless and productive experience.
 
+### [getML Suite][getml-suite]
 
-### [getML suite][getml-suite]
-
-This section provides an introduction to the core components of the getML suite: 
-the **engine**, **monitor**, and **Python API**. It explains how these elements work 
-together to 
-support your data science projects.
+This section introduces the core components of the getML Suite: the **Engine**, **Monitor**, 
+and **Python API**. It explains how these elements integrate to support your data science 
+projects effectively.
 
 ### [Managing Projects][project-management]
 
-Learn how to manage your projects within the getML engine. This section covers the 
-functionalities of the project module of the Python API and how it is used to 
-orchestrate project activities.
+Learn to manage your projects within the getML Engine. This section covers the 
+functionalities of the project module in the Python API and how to **orchestrate project 
+activities** seamlessly.
+
 
 ### [Importing Data][importing-data]
 
-Data can be imported from variety of sources. In this section the reader learns about 
-the **Unified import interface** and how it encompasses the import from a total of nine 
-different sources. 
+Discover how to import data from a variety of sources using the **Unified Import Interface**. 
+This section covers importing data from nine different sources, providing a comprehensive guide.
 
-### [Annotating data][annotating-data]
+### [Annotating Data][annotating-data]
 
-A crucial building block on the way to automated relational feature engineering is 
-the annotation of data. This section explains the **different roles** that exist and 
-when to use them.
+Understand the importance of data annotation in automated relational feature engineering. 
+This section explains the different roles in data annotation and their appropriate usage.
 
 ### [Data Model][data-model]
 
-Explore the essential concepts of data modeling, including the distinction between 
-population and placeholder tables. This section also discusses how to leverage 
-high-level abstractions like the **star schema**, **snowflake schema**, and **time 
-series** to 
-simplify the data modeling process.
+Explore essential data modeling concepts, including the distinction between population and 
+placeholder tables. Learn to leverage high-level abstractions like the **Star Schema**, 
+**Snowflake Schema**, and **Time Series** to simplify your data modeling process.
 
 ### [Preprocessing][preprocessing]
 
-Discover how getML's built-in preprocessing functionalities, such as **Mapping** and 
-**Imputation**, can streamline the typically labor-intensive task of data preprocessing.
+Learn how getML's built-in preprocessing functionalities, such as **Mapping** and **Imputation**, 
+can streamline the often labor-intensive task of data preprocessing.
 
 ### [Feature Engineering][feature-engineering]
 
-At the heart of getML lies Feature Engineering. This section delves into the 
-objectives of feature engineering and introduces the feature learning 
-algorithms of getML: **FastProp**, **Fastboost**, **MultiRel**, **Relboost**, and 
-**RelMT**.
+Feature Engineering is at the heart of getML. This section delves into its objectives
+and introduces the feature learning algorithms of getML: **FastProp**, **Fastboost**, 
+**MultiRel**, **Relboost**, and **RelMT**.
 
 ### [Predicting][predicting]
 
-This section introduces the **four built-in predictors** of getML and explains how they 
-integrate into the overall getML pipeline to facilitate efficient predictions.
+Explore the six **built-in predictors** of getML and learn how they integrate into the 
+overall getML pipeline to facilitate efficient predictions.
 
 ### [Hyperparameter Optimization][hyperparameter-optimization]
 
-Though default parameters generally yield robust results, this section outlines how to
-enhance model performance through getML’s straightforward hyperparameter optimization 
+Although default parameters generally yield robust results, this section outlines how to 
+enhance **model performance** through getML’s straightforward **hyperparameter optimization** 
 routines.
 
 ### [Deployment][deployment]
 
-For deploying results and pipelines no external libraries are needed. This section
-explains how the deployment works with built-in getML functionalities.
-
-This guide aims to equip you with all the necessary information to effectively use 
-getML for your data science projects, ensuring a seamless and productive experience.
+Deploy results and pipelines without the need for external libraries. 
+This section explains the **deployment process** using built-in getML functionalities.

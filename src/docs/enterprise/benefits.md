@@ -3,6 +3,8 @@ hide:
   - toc
 ---
 
+[](){#enterprise-benefits}
+
 # Why choose getML enterprise?
 
 ML teams working enterprise data, be it relational or time series, face a significat challenge. Building ML applications on top of traditional open-source ML libraries and algorithms take months of work, and results in hard to maintain model code and feature store infrastructure. GetML changes that.

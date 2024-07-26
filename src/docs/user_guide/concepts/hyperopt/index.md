@@ -1,6 +1,9 @@
 [](){#hyperparamter-optimization}
 # Hyperparameter optimization
 
+!!! enterprise-adm "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
+
 In the sections on [feature engineering][feature-engineering] and [predicting]
 [predicting], we learned how to train both the feature learning algorithm and the 
 machine learning algorithm used for prediction in the getML engine. However, there 
@@ -93,8 +96,9 @@ A [`GaussianHyperparameterSearch`][getml.hyperopt.GaussianHyperparameterSearch] 
 
 - It then uses the Gaussian process to predict the expected information (EI). The EI is a measure of how much additional information it might get from evaluating a particular point in the hyperparameter space. The expected information is to be maximized. The point in the hyperparameter space with the maximum expected information is the next point that is actually evaluated (meaning a new pipeline with these hyperparameters is trained). You can control this phase using `optimization_algorithm`, `optimization_burn_ins`, and `optimization_burn_in_algorithm`.
 
-In a nutshell, the GaussianHyperparameterSearch behaves like human data scientists:
+!!! note
 
-- At first, it picks random hyperparameter combinations.
+    In a nutshell, the `GaussianHyperparameterSearch` behaves like human data scientists:
 
-- Once it has gained a better understanding of the hyperparameter space, it starts evaluating hyperparameter combinations that are particularly interesting.
+    - At first, it picks random hyperparameter combinations.
+    - Once it has gained a better understanding of the hyperparameter space, it starts evaluating hyperparameter combinations that are particularly interesting.

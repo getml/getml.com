@@ -2,7 +2,7 @@
 title: API Reference
 ---
 
-[](){#python-api}
+[](){#python-api-reference}
 # Python API
 
 Welcome to the API documentation for Python. The Python API is a convenient,

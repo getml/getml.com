@@ -7,7 +7,7 @@ analysis, feature engineering is still done by hand or using very simple brute
 force methods. Our mission is to change that.
 
 The automation of feature engineering on relational data and time
-series is at the heart of the getML software suite. There are other
+series is at the heart of the getML suite. There are other
 libraries that implement feature engineering tools on top of
 frameworks like `data.tables` in R, `pandas` in Python, or `Apache
 Spark`. In essence, they all use a brute force approach: Generate a
@@ -45,9 +45,9 @@ R, or SQL.
     not, feature engineering is meant to describe numerical transformations or
     encoding techniques on a **single** table. The definition used above
     assumes that the raw data comes in relational form, which is true for
-    almost all real-world data sets.
+    almost all real-world datasets.
 
-
+[](){#featurelearning-vs-propositionalization}
 ## Feature learning vs. propositionalization
 
 We follow academia and classify techniques that use simple, merely unconditional
@@ -108,12 +108,13 @@ To increase transparency relating to the created features, they can be expressed
 
 [](){#feature-engineering-algorithms}
 ## Algorithms
-getML contains five powerful feature learning algorithms: 
-[`FastProp`][getml.feature_learning.FastProp], 
-[`Multirel`][getml.feature_learning.Multirel], 
-[`Relboost`][getml.feature_learning.Relboost], 
-[`Fastboost`][getml.feature_learning.Fastboost], and 
-[`RelMT`][getml.feature_learning.RelMT].
+getML contains five powerful feature learning algorithms:
+
+- [`FastProp`][getml.feature_learning.FastProp]
+- [`Multirel`][getml.feature_learning.Multirel]
+- [`Relboost`][getml.feature_learning.Relboost]
+- [`Fastboost`][getml.feature_learning.Fastboost]
+- [`RelMT`][getml.feature_learning.RelMT]
 
 [](){#feature-engineering-algorithms-fastprop}
 ### FastProp
@@ -135,10 +136,17 @@ GROUP BY t1.rownum,
          t1.join_key,
          t1.time_stamp;
 ```
-You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`][getml.feature_learning.aggregations] with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
+
+!!! note
+     It is recommended that you combine FastProp with [mappings][preprocessing-mappings].
+
+You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`][getml.feature_learning.aggregations] with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. 
 
 [](){#feature-engineering-algorithms-multirel}
 ### Multirel
+
+!!! enterprise-adm "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 Simply speaking, [`Multirel`][getml.feature_learning.Multirel] is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
 
@@ -169,7 +177,7 @@ and
 COUNT the number of `transactions` in the last 91 `days`
 ```
 
-very little changes in between. Multirel only recalculates what has changed and keeps everything else untouched. Therefore, it needs two ingredients that can be incrementally updated: An objective function and the actual aggregation(s).
+there is very little change in between. Multirel only recalculates what has changed and keeps everything else untouched. Therefore, it needs two ingredients that can be incrementally updated: An objective function and the actual aggregation(s).
 
 Our first ingredient is an objective function that must be suited for incremental updates. When we move from 90 to 91 days, presumably only very few lines in the [population table][data-model-population-table] actually change. We do not need to recalculate the entire table. In practice, most commonly used objective functions are fine and this is not much of a limitation. However, there are some, like rank correlation, that cannot be used.
 
@@ -222,6 +230,9 @@ Further information can be found in the API documentation for [`Multirel`][getml
 [](){#feature-engineering-algorithms-relboost}
 ### Relboost
 
+!!! enterprise-adm "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
+
 [`Relboost`][getml.feature_learning.Relboost] is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
 
 The main difference between Relboost and Multirel is that Multirel aggregates columns, whereas Relboost aggregates *learnable weights*.
@@ -268,15 +279,19 @@ Further information can be found in the API documentation for [`Relboost`][getml
 [](){#feature-engineering-algorithms-fastboost}
 ### Fastboost
 
+!!! enterprise-adm "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
+
 While both are generalizations of the gradient boosting algorithm, the main difference 
 between [`Fastboost`][getml.feature_learning.Fastboost] 
-and Relboost is that Fastboost uses a simpler algorithm and is therefore much faster 
+and [`Relboost`][getml.feature_learning.Relboost] is that Fastboost uses a simpler algorithm and is therefore much faster 
 and more scalable. Fastboost is particularly suitable for large datasets or datasets 
 with many cross-joins. However, from a statistical point of view, the Relboost 
 algorithm is theoretically more sound.
 
-For datasets with many columns, Fastboost can even outperform FastProp in terms of 
-speed.
+!!! note
+     - For datasets with many columns, Fastboost can even outperform FastProp in terms of speed.
+     - Unlike the other algorithms, Fastboost makes extensive use of memory mapping, so you will need free disc space to use it.
 
 The features generated by Fastboost are [indistinguishable from Relboost][feature-engineering-relboost-feature] when 
 expressed as SQL code. Much like Relboost features, the features generated by 
@@ -285,11 +300,11 @@ hand, even though they can still be expressed as SQL code. Also, much like Relbo
 it is more difficult to apply Fastboost to multiple targets, because Fastboost has 
 to learn separate rules and weights for each target.
 
-Unlike the other algorithms, Fastboost makes extensive use of memory mapping, so you 
-will need free disc space to use it.
-
 [](){#feature-engineering-algorithms-relmt}
 ### RelMT
+
+!!! enterprise-adm "Enterprise Feature"
+    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [`RelMT`][getml.feature_learning.RelMT] is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
 
