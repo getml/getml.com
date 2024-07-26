@@ -16,35 +16,28 @@ The getML ecosystem comprises three fundamental components:
 
 Written in C++, the getML engine is the core of the suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
 
-[](){#engine-start-engine}
 ### Starting the engine
 
-There are two ways to start the getML engine:
+After [installing the getML engine][installation], either via `pip`, `Docker` or `CLI` there are two ways to start the getML engine:
 
-- Using the [Python API][python-api]: `getml.engine.launch()`
+- Using the [Python API][python-api]
 - Using the getML [command-line interface (CLI)][separate-installation-of-engine]
 
-!!! note
-    - If you are using `pip install getml` on Linux, the engine will be installed automatically. Just use the [`Python API`][python-api] to start the engine.
-    - If you are using Docker, you can also just use the [`Python API`][python-api] to start the engine.
-    - The command-line interface (CLI) is usually only used for the enterprise edition of the engine.
-
-For more information, refer to the [installation instructions][installation] for your operating system.
+Follow the links to learn more about each method.
 
 ### Shutting down the engine
 
-There are several ways to shut down the getML engine:
+Depending on how you started the engine, there are different ways to shut it down:
 
 - In the Python API: `getml.engine.shutdown()`
 - Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor
-- Press `Ctrl-C` (if started via the command line)
-- Run the getML command-line interface (CLI) using the `-stop` option
+- On command-line interface (CLI): Press `Ctrl-C` or run `getML -stop`
 
 ### Logging
 
 The engine keeps a log about what it is currently doing.
 
-The easiest way to view the log is to click the '<> Log' tab in the sidebar of the getML monitor. The engine will also output its log to the command line when it is started using the command-line interface.
+The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML monitor][monitor]. The engine will also output its log to the command line when it is started using the command-line interface.
 
 [](){#getml-suite-python-api}
 ## Python API
