@@ -11,7 +11,7 @@ Helpful resources to get started:
 
 [FastAPI get started](https://fastapi.tiangolo.com/tutorial/first-steps/)  
 [getML example notebooks](https://github.com/getml/getml-demo)  
-[getML documentation][getting-started]  
+[getML user guide][user-guide-index]  
 
 This integration example requires at least v1.4.0 of the [getml package](https://pypi.org/project/getml/) and at least [Python 3.8](https://www.python.org/downloads/).
 
