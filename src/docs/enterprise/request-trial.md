@@ -1,4 +1,9 @@
-# GetML enterprise trial download
+---
+hide:
+  - toc
+---
+
+# **GetML enterprise trial download**
 
 *Test our most advanced algorithms first hand.*
 
@@ -10,6 +15,9 @@ This is best for data scientists and engineers that are already familiar with ou
 - Chance to test drive relational learning
 - Build any model for non-productive use (see [**Terms**](trial/terms.md))
 
+
+/// html | div.box.box-bg
+
 <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
 <script>
   hbspt.forms.create({
@@ -18,3 +26,5 @@ This is best for data scientists and engineers that are already familiar with ou
     formId: "4a16eac8-a709-44dd-b1bc-48b6108af28a"
   });
 </script>
+
+///

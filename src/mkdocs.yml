@@ -25,6 +25,7 @@ theme:
     - announce.dismiss
     # - content.action.edit
     # - content.action.view
+    - content.code.annotate
     - content.code.copy
     # - content.code.annotate
     # - content.code.select
