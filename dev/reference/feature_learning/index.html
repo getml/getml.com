@@ -1495,9 +1495,37 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="aggregations/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="aggregations/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -1510,7 +1538,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2800,6 +2834,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fastboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fastboost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#relmt" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2915,12 +2960,12 @@
 
     </div>
 
-</div><p>Feature Learners are getML's powerhouse leveraging the high performance of C++ to 
-ensure efficient execution and effective memory use.</p>
+</div><p><a class="autorefs autorefs-internal" href="../../user_guide/concepts/feature_engineering/feature_engineering/#algorithms">Feature Learners</a> are getML's powerhouse leveraging 
+the high performance of C++ to ensure efficient execution and effective memory use.</p>
 <p>There are five different algorithms, each capitalizing on unique strengths and 
 suitable for different use cases. Most of them are available in the 
 <a class="autorefs autorefs-internal" href="../../user_guide/walkthrough/#community-vs-enterprise-edition">getML enterprise edition</a>.</p>
-<h2 id="fastprop"><a class="autorefs autorefs-internal" href="fastprop/#getml.feature_learning.FastProp">FastProp</a></h2>
+<h2 id="fastprop"><a class="autorefs autorefs-internal" href="fastprop/#getml.feature_learning.FastProp"><code>FastProp</code></a></h2>
 <ul>
 <li>FastProp utilizes aggregation-based 
 operations, enabling rapid generation of numerous features through simple aggregations. This 
@@ -2929,7 +2974,7 @@ quick, decent results. </li>
 <li>FastProp is available in both, the <a class="autorefs autorefs-internal" href="../../user_guide/walkthrough/#community-vs-enterprise-edition">getML community edition and getML enterprise 
   edition</a>.</li>
 </ul>
-<h2 id="multirel"><a class="autorefs autorefs-internal" href="multirel/#getml.feature_learning.Multirel">Multirel</a></h2>
+<h2 id="multirel"><a class="autorefs autorefs-internal" href="multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a></h2>
 <ul>
 <li>Multirel focuses on minimizing algorithmic redundancies through incremental 
 updates and combining 
@@ -2939,7 +2984,7 @@ significantly increasing efficiency while
 integrating methods such as bagging and gradient boosting.</li>
 <li>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../user_guide/walkthrough/#community-vs-enterprise-edition">getML enterprise edition</a>.</li>
 </ul>
-<h2 id="relboost"><a class="autorefs autorefs-internal" href="relboost/#getml.feature_learning.Relboost">Relboost</a></h2>
+<h2 id="relboost"><a class="autorefs autorefs-internal" href="relboost/#getml.feature_learning.Relboost"><code>Relboost</code></a></h2>
 <ul>
 <li>Relboost extends the gradient boosting approach,
 to relational learning by focusing on aggregating learnable weights rather than
@@ -2950,7 +2995,22 @@ in predictive accuracy and training efficiency, its generated features are less
 intuitive.</li>
 <li>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../user_guide/walkthrough/#community-vs-enterprise-edition">getML enterprise edition</a>.</li>
 </ul>
-<h2 id="relmt"><a class="autorefs autorefs-internal" href="relmt/#getml.feature_learning.RelMT">RelMT</a></h2>
+<h2 id="fastboost"><a class="autorefs autorefs-internal" href="fastboost/#getml.feature_learning.Fastboost"><code>Fastboost</code></a></h2>
+<ul>
+<li>
+<p>Fastboost uses a simpler, faster, and more scalable algorithm than Relboost, making 
+it ideal for large datasets and many cross-joins. Fastboost can outperform FastProp 
+in speed for datasets with many columns.</p>
+</li>
+<li>
+<p>Fastboost requires free disk space due to extensive memory mapping and has 
+difficulty applying to multiple targets as it must learn separate rules for each.</p>
+</li>
+<li>
+<p>This feature learner is available in the <a class="autorefs autorefs-internal" href="../../user_guide/walkthrough/#community-vs-enterprise-edition">getML enterprise edition</a>.</p>
+</li>
+</ul>
+<h2 id="relmt"><a class="autorefs autorefs-internal" href="relmt/#getml.feature_learning.RelMT"><code>RelMT</code></a></h2>
 <ul>
 <li>RelMT adapts linear model trees to relational data, combining linear models at each 
 tree leaf to effectively capture both linear and non-linear relationships, making it 

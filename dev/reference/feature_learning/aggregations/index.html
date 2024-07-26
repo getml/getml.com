@@ -18,7 +18,7 @@
         <link rel="prev" href="../relmt/">
       
       
-        <link rel="next" href="../loss_functions/">
+        <link rel="next" href="types/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>aggregations - getML Developer Portal</title>
+        <title>Aggregation sets and aggregations - getML Developer Portal</title>
       
     
     
@@ -161,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              aggregations
+              Aggregation sets and aggregations
             
           </span>
         </div>
@@ -1497,16 +1497,38 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
       
       
         
       
+    
+    
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_7" checked>
+        
           
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   <span class="md-ellipsis">
     
@@ -1519,16 +1541,42 @@
   
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_5_4_7" id="__nav_5_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    aggregations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    aggregations
+    types
   
 
     
@@ -1537,630 +1585,40 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
     
   
+    sets
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.FASTPROP" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FASTPROP
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MULTIREL" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MULTIREL
-      
-    </span>
-  </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MAPPING" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MAPPING
-      
-    </span>
-  </a>
+
+      </a>
+    </li>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MULTIREL_AGGREGATIONS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FASTPROP_AGGREGATIONS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MAPPING_AGGREGATIONS" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MAPPING_AGGREGATIONS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.AGGREGATIONS" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;AGGREGATIONS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.AVG" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;AVG
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.COUNT" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COUNT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.COUNT_DISTINCT" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COUNT_DISTINCT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.COUNT_DISTINCT_OVER_COUNT" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COUNT_DISTINCT_OVER_COUNT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.COUNT_MINUS_COUNT_DISTINCT" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COUNT_MINUS_COUNT_DISTINCT
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_1S" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_1S
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_1M" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_1M
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_1H" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_1H
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_1D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_1D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_7D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_7D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_30D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_30D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_90D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_90D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_365D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_365D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_1S" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_1S
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_1M" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_1M
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_1H" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_1H
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_1D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_1D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_7D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_7D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_30D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_30D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_90D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_90D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.EWMA_TREND_365D" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;EWMA_TREND_365D
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.FIRST" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FIRST
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.KURTOSIS" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;KURTOSIS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.LAST" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;LAST
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MAX" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MAX
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MEDIAN" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MEDIAN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MIN" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MIN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.MODE" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;MODE
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.NUM_MAX" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;NUM_MAX
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.NUM_MIN" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;NUM_MIN
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_1
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_5
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_10
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_25" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_25
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_75" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_75
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_90" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_90
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_95" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_95
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.Q_99" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;Q_99
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.SKEW" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;SKEW
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.STDDEV" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;STDDEV
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.SUM" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;SUM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.TIME_SINCE_FIRST_MAXIMUM" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;TIME_SINCE_FIRST_MAXIMUM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.TIME_SINCE_FIRST_MINIMUM" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;TIME_SINCE_FIRST_MINIMUM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.TIME_SINCE_LAST_MAXIMUM" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;TIME_SINCE_LAST_MAXIMUM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.TIME_SINCE_LAST_MINIMUM" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;TIME_SINCE_LAST_MINIMUM
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.TREND" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;TREND
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.VAR" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;VAR
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.feature_learning.aggregations.VARIATION_COEFFICIENT" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;VARIATION_COEFFICIENT
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -3408,8 +2866,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3418,6 +2874,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getml.feature_learning.aggregations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;aggregations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" aggregations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.FASTPROP" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3427,8 +2895,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MULTIREL" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3438,8 +2906,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MAPPING" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3449,8 +2917,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3460,8 +2928,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3471,8 +2939,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MAPPING_AGGREGATIONS" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3482,8 +2950,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.AGGREGATIONS" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3493,8 +2961,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.AVG" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3504,8 +2972,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.COUNT" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3515,8 +2983,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.COUNT_DISTINCT" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3526,8 +2994,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.COUNT_DISTINCT_OVER_COUNT" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3537,8 +3005,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.COUNT_MINUS_COUNT_DISTINCT" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3548,8 +3016,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_1S" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3559,8 +3027,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_1M" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3570,8 +3038,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_1H" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3581,8 +3049,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_1D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3592,8 +3060,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_7D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3603,8 +3071,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_30D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3614,8 +3082,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_90D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3625,8 +3093,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_365D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3636,8 +3104,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_1S" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3647,8 +3115,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_1M" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3658,8 +3126,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_1H" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3669,8 +3137,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_1D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3680,8 +3148,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_7D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3691,8 +3159,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_30D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3702,8 +3170,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_90D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3713,8 +3181,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.EWMA_TREND_365D" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3724,8 +3192,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.FIRST" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3735,8 +3203,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.KURTOSIS" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3746,8 +3214,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.LAST" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3757,8 +3225,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MAX" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3768,8 +3236,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MEDIAN" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3779,8 +3247,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MIN" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3790,8 +3258,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.MODE" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3801,8 +3269,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.NUM_MAX" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3812,8 +3280,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.NUM_MIN" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3823,8 +3291,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3834,8 +3302,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_5" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3845,8 +3313,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_10" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3856,8 +3324,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_25" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3867,8 +3335,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_75" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3878,8 +3346,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_90" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3889,8 +3357,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_95" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3900,8 +3368,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.Q_99" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3911,8 +3379,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.SKEW" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3922,8 +3390,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.STDDEV" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3933,8 +3401,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.SUM" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3944,8 +3412,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.TIME_SINCE_FIRST_MAXIMUM" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3955,8 +3423,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.TIME_SINCE_FIRST_MINIMUM" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3966,8 +3434,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.TIME_SINCE_LAST_MAXIMUM" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3977,8 +3445,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.TIME_SINCE_LAST_MINIMUM" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3988,8 +3456,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.TREND" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3999,8 +3467,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.VAR" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4010,8 +3478,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getml.feature_learning.aggregations.VARIATION_COEFFICIENT" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4019,6 +3487,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4076,6 +3549,23 @@
   
 
       
+        
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    aggregations
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
     </ol>
   </nav>
 
@@ -4094,17 +3584,20 @@
   page title (or respectively site name) is used as the main headline.
 -->
 
+    <h1 class="">Aggregation sets and aggregations</h1>
+    
+
 
 <!-- Page content -->
 <div class="doc doc-object doc-module">
 
 
 
-<h1 id="getml.feature_learning.aggregations" class="doc doc-heading">
+<h2 id="getml.feature_learning.aggregations" class="doc doc-heading">
             <span class="doc doc-object-name doc-module-name">getml.feature_learning.aggregations</span>
 
 
-</h1>
+</h2>
 
     <div class="doc doc-contents first">
 
@@ -4122,7 +3615,7 @@
 
 
 
-<h2 id="getml.feature_learning.aggregations.FASTPROP" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.FASTPROP" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">FASTPROP</span>
 
 
@@ -4130,8 +3623,8 @@
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">FASTPROP</span> <span class="o">=</span> <span class="n"><span title="getml.feature_learning.aggregations.sets.FastPropAggregationsSets">FastPropAggregationsSets</span></span><span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">FASTPROP</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.FastPropAggregationsSets" href="sets/#getml.feature_learning.aggregations.sets.FastPropAggregationsSets">FastPropAggregationsSets</a></span><span class="p">(</span>
     <span class="nb">all</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.FASTPROP_AGGREGATIONS" href="#getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS">FASTPROP_AGGREGATIONS</a></span><span class="p">,</span>
     <span class="n">default</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">(</span>
         <span class="p">{</span>
@@ -4167,7 +3660,7 @@ of reasonable default aggregations, <code>minimal</code> is minimal set.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.MULTIREL" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MULTIREL" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MULTIREL</span>
 
 
@@ -4175,8 +3668,8 @@ of reasonable default aggregations, <code>minimal</code> is minimal set.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MULTIREL</span> <span class="o">=</span> <span class="n"><span title="getml.feature_learning.aggregations.sets.MultirelAggregationsSets">MultirelAggregationsSets</span></span><span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MULTIREL</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MultirelAggregationsSets" href="sets/#getml.feature_learning.aggregations.sets.MultirelAggregationsSets">MultirelAggregationsSets</a></span><span class="p">(</span>
     <span class="nb">all</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MULTIREL_AGGREGATIONS" href="#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS">MULTIREL_AGGREGATIONS</a></span><span class="p">,</span>
     <span class="n">default</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">({</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.COUNT" href="#getml.feature_learning.aggregations.COUNT">COUNT</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.MAX" href="#getml.feature_learning.aggregations.MAX">MAX</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.MIN" href="#getml.feature_learning.aggregations.MIN">MIN</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.SUM" href="#getml.feature_learning.aggregations.SUM">SUM</a></span><span class="p">}),</span>
     <span class="n">minimal</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">([</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.COUNT" href="#getml.feature_learning.aggregations.COUNT">COUNT</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.SUM" href="#getml.feature_learning.aggregations.SUM">SUM</a></span><span class="p">]),</span>
@@ -4196,7 +3689,7 @@ of reasonable default aggregations, <code>minimal</code> is minimal set.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.MAPPING" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MAPPING" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MAPPING</span>
 
 
@@ -4204,8 +3697,8 @@ of reasonable default aggregations, <code>minimal</code> is minimal set.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAPPING</span> <span class="o">=</span> <span class="n"><span title="getml.feature_learning.aggregations.sets.MappingAggregationsSets">MappingAggregationsSets</span></span><span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAPPING</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MappingAggregationsSets" href="sets/#getml.feature_learning.aggregations.sets.MappingAggregationsSets">MappingAggregationsSets</a></span><span class="p">(</span>
     <span class="nb">all</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MAPPING_AGGREGATIONS" href="#getml.feature_learning.aggregations.MAPPING_AGGREGATIONS">MAPPING_AGGREGATIONS</a></span><span class="p">,</span>
     <span class="n">default</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">({</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">}),</span>
     <span class="n">minimal</span><span class="o">=</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">({</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">}),</span>
@@ -4226,7 +3719,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MULTIREL_AGGREGATIONS</span>
 
 
@@ -4234,8 +3727,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MULTIREL_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MULTIREL_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MultirelAggregations" href="types/#getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">(</span>
         <span class="p">{</span>
             <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">,</span>
@@ -4266,7 +3759,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">FASTPROP_AGGREGATIONS</span>
 
 
@@ -4274,8 +3767,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">FASTPROP_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.FastPropAggregations">FastPropAggregations</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">FASTPROP_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.FastPropAggregations" href="types/#getml.feature_learning.aggregations.types.FastPropAggregations">FastPropAggregations</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">(</span>
         <span class="p">{</span>
             <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">,</span>
@@ -4342,7 +3835,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.MAPPING_AGGREGATIONS" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MAPPING_AGGREGATIONS" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MAPPING_AGGREGATIONS</span>
 
 
@@ -4350,8 +3843,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAPPING_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.MappingAggregations">MappingAggregations</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAPPING_AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MappingAggregations" href="types/#getml.feature_learning.aggregations.types.MappingAggregations">MappingAggregations</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">(</span>
         <span class="p">{</span>
             <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.aggregations.AVG" href="#getml.feature_learning.aggregations.AVG">AVG</a></span><span class="p">,</span>
@@ -4395,7 +3888,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.AGGREGATIONS" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.AGGREGATIONS" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">AGGREGATIONS</span>
 
 
@@ -4403,8 +3896,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Aggregations">Aggregations</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">AGGREGATIONS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Aggregations" href="types/#getml.feature_learning.aggregations.types.Aggregations">Aggregations</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MULTIREL_AGGREGATIONS" href="#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS">MULTIREL_AGGREGATIONS</a></span>
     <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.FASTPROP_AGGREGATIONS" href="#getml.feature_learning.aggregations.FASTPROP_AGGREGATIONS">FASTPROP_AGGREGATIONS</a></span>
     <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.MAPPING_AGGREGATIONS" href="#getml.feature_learning.aggregations.MAPPING_AGGREGATIONS">MAPPING_AGGREGATIONS</a></span>
@@ -4422,7 +3915,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.AVG" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.AVG" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">AVG</span>
 
 
@@ -4430,8 +3923,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">AVG</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Avg">Avg</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;AVG&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">AVG</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Avg" href="types/#getml.feature_learning.aggregations.types.Avg">Avg</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;AVG&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4445,7 +3938,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.COUNT" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.COUNT" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">COUNT</span>
 
 
@@ -4453,8 +3946,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Count">Count</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;COUNT&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Count" href="types/#getml.feature_learning.aggregations.types.Count">Count</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;COUNT&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4468,7 +3961,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.COUNT_DISTINCT" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.COUNT_DISTINCT" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">COUNT_DISTINCT</span>
 
 
@@ -4476,8 +3969,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT_DISTINCT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.CountDistinct">CountDistinct</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;COUNT DISTINCT&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT_DISTINCT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.CountDistinct" href="types/#getml.feature_learning.aggregations.types.CountDistinct">CountDistinct</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;COUNT DISTINCT&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4491,7 +3984,7 @@ recommended setting for classification problems.</p>
 
 
 
-<h2 id="getml.feature_learning.aggregations.COUNT_DISTINCT_OVER_COUNT" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.COUNT_DISTINCT_OVER_COUNT" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">COUNT_DISTINCT_OVER_COUNT</span>
 
 
@@ -4499,8 +3992,8 @@ recommended setting for classification problems.</p>
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT_DISTINCT_OVER_COUNT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.CountDistinctOverCount">CountDistinctOverCount</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT_DISTINCT_OVER_COUNT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.CountDistinctOverCount" href="types/#getml.feature_learning.aggregations.types.CountDistinctOverCount">CountDistinctOverCount</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;COUNT DISTINCT OVER COUNT&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -4517,7 +4010,7 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
 
 
 
-<h2 id="getml.feature_learning.aggregations.COUNT_MINUS_COUNT_DISTINCT" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.COUNT_MINUS_COUNT_DISTINCT" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">COUNT_MINUS_COUNT_DISTINCT</span>
 
 
@@ -4525,9 +4018,9 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
+</h3>
 <div class="doc-signature highlight"><pre><span></span><code><span class="n">COUNT_MINUS_COUNT_DISTINCT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span>
-    <span class="n"><span title="getml.feature_learning.aggregations.types.CountMinusCountDistinct">CountMinusCountDistinct</span></span>
+    <span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.CountMinusCountDistinct" href="types/#getml.feature_learning.aggregations.types.CountMinusCountDistinct">CountMinusCountDistinct</a></span>
 <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;COUNT MINUS COUNT DISTINCT&quot;</span>
 </code></pre></div>
 
@@ -4542,7 +4035,7 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_1S" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_1S" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_1S</span>
 
 
@@ -4550,8 +4043,8 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1S</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_1s">EWMA_1s</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1S&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1S</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_1s" href="types/#getml.feature_learning.aggregations.types.EWMA_1s">EWMA_1s</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1S&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4565,7 +4058,7 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_1M" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_1M" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_1M</span>
 
 
@@ -4573,8 +4066,8 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1M</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_1m">EWMA_1m</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1M&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1M</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_1m" href="types/#getml.feature_learning.aggregations.types.EWMA_1m">EWMA_1m</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1M&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4590,7 +4083,7 @@ that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_1H" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_1H" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_1H</span>
 
 
@@ -4598,8 +4091,8 @@ that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1H</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_1h">EWMA_1h</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1H&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1H</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_1h" href="types/#getml.feature_learning.aggregations.types.EWMA_1h">EWMA_1h</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1H&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4614,7 +4107,7 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_1D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_1D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_1D</span>
 
 
@@ -4622,8 +4115,8 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_1d">EWMA_1d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_1D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_1d" href="types/#getml.feature_learning.aggregations.types.EWMA_1d">EWMA_1d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_1D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4638,7 +4131,7 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_7D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_7D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_7D</span>
 
 
@@ -4646,8 +4139,8 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_7D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_7d">EWMA_7d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_7D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_7D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_7d" href="types/#getml.feature_learning.aggregations.types.EWMA_7d">EWMA_7d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_7D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4662,7 +4155,7 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_30D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_30D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_30D</span>
 
 
@@ -4670,8 +4163,8 @@ this aggregation is not supported by <a class="autorefs autorefs-internal" href=
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_30D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_30d">EWMA_30d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_30D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_30D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_30d" href="types/#getml.feature_learning.aggregations.types.EWMA_30d">EWMA_30d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_30D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4687,7 +4180,7 @@ that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_90D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_90D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_90D</span>
 
 
@@ -4695,8 +4188,8 @@ that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_90D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_90d">EWMA_90d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_90D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_90D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_90d" href="types/#getml.feature_learning.aggregations.types.EWMA_90d">EWMA_90d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_90D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4712,7 +4205,7 @@ that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_365D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_365D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_365D</span>
 
 
@@ -4720,8 +4213,8 @@ that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_365D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_365d">EWMA_365d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_365D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_365D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_365d" href="types/#getml.feature_learning.aggregations.types.EWMA_365d">EWMA_365d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_365D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4737,7 +4230,7 @@ that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_1S" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_1S" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_1S</span>
 
 
@@ -4745,8 +4238,8 @@ that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1S</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_1s">EWMA_TREND_1s</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1S&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1S</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_1s" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_1s">EWMA_TREND_1s</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1S&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4760,7 +4253,7 @@ that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_1M" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_1M" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_1M</span>
 
 
@@ -4768,8 +4261,8 @@ that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1M</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_1m">EWMA_TREND_1m</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1M&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1M</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_1m" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_1m">EWMA_TREND_1m</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1M&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4784,7 +4277,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_1H" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_1H" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_1H</span>
 
 
@@ -4792,8 +4285,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1H</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_1h">EWMA_TREND_1h</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1H&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1H</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_1h" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_1h">EWMA_TREND_1h</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1H&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4808,7 +4301,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_1D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_1D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_1D</span>
 
 
@@ -4816,8 +4309,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_1d">EWMA_TREND_1d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_1D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_1d" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_1d">EWMA_TREND_1d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_1D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4832,7 +4325,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_7D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_7D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_7D</span>
 
 
@@ -4840,8 +4333,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_7D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_7d">EWMA_TREND_7d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_7D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_7D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_7d" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_7d">EWMA_TREND_7d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_7D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4856,7 +4349,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_30D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_30D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_30D</span>
 
 
@@ -4864,8 +4357,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_30D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_30d">EWMA_TREND_30d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_30D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_30D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_30d" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_30d">EWMA_TREND_30d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_30D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4880,7 +4373,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_90D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_90D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_90D</span>
 
 
@@ -4888,8 +4381,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_90D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_90d">EWMA_TREND_90d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_90D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_90D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_90d" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_90d">EWMA_TREND_90d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_90D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4904,7 +4397,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.EWMA_TREND_365D" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.EWMA_TREND_365D" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">EWMA_TREND_365D</span>
 
 
@@ -4912,8 +4405,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_365D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.EWMA_TREND_365d">EWMA_TREND_365d</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_365D&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">EWMA_TREND_365D</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.EWMA_TREND_365d" href="types/#getml.feature_learning.aggregations.types.EWMA_TREND_365d">EWMA_TREND_365d</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;EWMA_TREND_365D&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4928,7 +4421,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.FIRST" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.FIRST" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">FIRST</span>
 
 
@@ -4936,8 +4429,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">FIRST</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.First">First</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;FIRST&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">FIRST</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.First" href="types/#getml.feature_learning.aggregations.types.First">First</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;FIRST&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4951,7 +4444,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.KURTOSIS" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.KURTOSIS" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">KURTOSIS</span>
 
 
@@ -4959,8 +4452,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">KURTOSIS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Kurtosis">Kurtosis</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;KURTOSIS&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">KURTOSIS</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Kurtosis" href="types/#getml.feature_learning.aggregations.types.Kurtosis">Kurtosis</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;KURTOSIS&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4975,7 +4468,7 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
 
 
 
-<h2 id="getml.feature_learning.aggregations.LAST" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.LAST" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">LAST</span>
 
 
@@ -4983,8 +4476,8 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">LAST</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Last">Last</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;LAST&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">LAST</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Last" href="types/#getml.feature_learning.aggregations.types.Last">Last</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;LAST&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4998,7 +4491,7 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
 
 
 
-<h2 id="getml.feature_learning.aggregations.MAX" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MAX" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MAX</span>
 
 
@@ -5006,8 +4499,8 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAX</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Max">Max</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MAX&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MAX</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Max" href="types/#getml.feature_learning.aggregations.types.Max">Max</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MAX&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5021,7 +4514,7 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
 
 
 
-<h2 id="getml.feature_learning.aggregations.MEDIAN" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MEDIAN" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MEDIAN</span>
 
 
@@ -5029,8 +4522,8 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MEDIAN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Median">Median</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MEDIAN&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MEDIAN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Median" href="types/#getml.feature_learning.aggregations.types.Median">Median</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MEDIAN&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5044,7 +4537,7 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
 
 
 
-<h2 id="getml.feature_learning.aggregations.MIN" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MIN" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MIN</span>
 
 
@@ -5052,8 +4545,8 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MIN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Min">Min</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MIN&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MIN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Min" href="types/#getml.feature_learning.aggregations.types.Min">Min</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MIN&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5067,7 +4560,7 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
 
 
 
-<h2 id="getml.feature_learning.aggregations.MODE" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.MODE" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">MODE</span>
 
 
@@ -5075,8 +4568,8 @@ by <a class="autorefs autorefs-internal" href="../multirel/#getml.feature_learni
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">MODE</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Mode">Mode</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MODE&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">MODE</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Mode" href="types/#getml.feature_learning.aggregations.types.Mode">Mode</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MODE&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5091,7 +4584,7 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
 
 
 
-<h2 id="getml.feature_learning.aggregations.NUM_MAX" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.NUM_MAX" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">NUM_MAX</span>
 
 
@@ -5099,8 +4592,8 @@ supported by <a class="autorefs autorefs-internal" href="../multirel/#getml.feat
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">NUM_MAX</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.NumMax">NumMax</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NUM MAX&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">NUM_MAX</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.NumMax" href="types/#getml.feature_learning.aggregations.types.NumMax">NumMax</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NUM MAX&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5115,7 +4608,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.NUM_MIN" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.NUM_MIN" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">NUM_MIN</span>
 
 
@@ -5123,8 +4616,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">NUM_MIN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.NumMin">NumMin</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NUM MIN&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">NUM_MIN</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.NumMin" href="types/#getml.feature_learning.aggregations.types.NumMin">NumMin</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NUM MIN&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5139,7 +4632,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_1" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_1" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_1</span>
 
 
@@ -5147,8 +4640,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_1</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q1">Q1</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q1&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_1</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q1" href="types/#getml.feature_learning.aggregations.types.Q1">Q1</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q1&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5163,7 +4656,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_5" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_5" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_5</span>
 
 
@@ -5171,8 +4664,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_5</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q5">Q5</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q5&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_5</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q5" href="types/#getml.feature_learning.aggregations.types.Q5">Q5</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q5&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5187,7 +4680,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_10" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_10" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_10</span>
 
 
@@ -5195,8 +4688,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_10</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q10">Q10</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q10&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_10</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q10" href="types/#getml.feature_learning.aggregations.types.Q10">Q10</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q10&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5211,7 +4704,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_25" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_25" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_25</span>
 
 
@@ -5219,8 +4712,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_25</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q25">Q25</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q25&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_25</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q25" href="types/#getml.feature_learning.aggregations.types.Q25">Q25</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q25&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5235,7 +4728,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_75" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_75" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_75</span>
 
 
@@ -5243,8 +4736,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_75</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q75">Q75</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q75&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_75</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q75" href="types/#getml.feature_learning.aggregations.types.Q75">Q75</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q75&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5259,7 +4752,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_90" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_90" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_90</span>
 
 
@@ -5267,8 +4760,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_90</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q90">Q90</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q90&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_90</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q90" href="types/#getml.feature_learning.aggregations.types.Q90">Q90</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q90&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5283,7 +4776,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_95" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_95" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_95</span>
 
 
@@ -5291,8 +4784,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_95</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q95">Q95</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q95&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_95</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q95" href="types/#getml.feature_learning.aggregations.types.Q95">Q95</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q95&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5307,7 +4800,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.Q_99" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.Q_99" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">Q_99</span>
 
 
@@ -5315,8 +4808,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_99</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Q99">Q99</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q99&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">Q_99</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Q99" href="types/#getml.feature_learning.aggregations.types.Q99">Q99</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Q99&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5331,7 +4824,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.SKEW" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.SKEW" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">SKEW</span>
 
 
@@ -5339,8 +4832,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">SKEW</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Skew">Skew</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SKEW&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">SKEW</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Skew" href="types/#getml.feature_learning.aggregations.types.Skew">Skew</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SKEW&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5355,7 +4848,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.STDDEV" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.STDDEV" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">STDDEV</span>
 
 
@@ -5363,8 +4856,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">STDDEV</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Stddev">Stddev</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;STDDEV&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">STDDEV</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Stddev" href="types/#getml.feature_learning.aggregations.types.Stddev">Stddev</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;STDDEV&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5378,7 +4871,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.SUM" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.SUM" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">SUM</span>
 
 
@@ -5386,8 +4879,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">SUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Sum">Sum</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SUM&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">SUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Sum" href="types/#getml.feature_learning.aggregations.types.Sum">Sum</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SUM&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5401,7 +4894,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.TIME_SINCE_FIRST_MAXIMUM" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.TIME_SINCE_FIRST_MAXIMUM" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">TIME_SINCE_FIRST_MAXIMUM</span>
 
 
@@ -5409,8 +4902,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_FIRST_MAXIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.TimeSinceFirstMaximum">TimeSinceFirstMaximum</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_FIRST_MAXIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.TimeSinceFirstMaximum" href="types/#getml.feature_learning.aggregations.types.TimeSinceFirstMaximum">TimeSinceFirstMaximum</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;TIME SINCE FIRST MAXIMUM&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -5428,7 +4921,7 @@ stamp in the population table. Please note that this aggregation is not supporte
 
 
 
-<h2 id="getml.feature_learning.aggregations.TIME_SINCE_FIRST_MINIMUM" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.TIME_SINCE_FIRST_MINIMUM" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">TIME_SINCE_FIRST_MINIMUM</span>
 
 
@@ -5436,8 +4929,8 @@ stamp in the population table. Please note that this aggregation is not supporte
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_FIRST_MINIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.TimeSinceFirstMinimum">TimeSinceFirstMinimum</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_FIRST_MINIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.TimeSinceFirstMinimum" href="types/#getml.feature_learning.aggregations.types.TimeSinceFirstMinimum">TimeSinceFirstMinimum</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;TIME SINCE FIRST MINIMUM&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -5455,7 +4948,7 @@ stamp in the population table. Please note that this aggregation is not supporte
 
 
 
-<h2 id="getml.feature_learning.aggregations.TIME_SINCE_LAST_MAXIMUM" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.TIME_SINCE_LAST_MAXIMUM" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">TIME_SINCE_LAST_MAXIMUM</span>
 
 
@@ -5463,8 +4956,8 @@ stamp in the population table. Please note that this aggregation is not supporte
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_LAST_MAXIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.TimeSinceLastMaximum">TimeSinceLastMaximum</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_LAST_MAXIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.TimeSinceLastMaximum" href="types/#getml.feature_learning.aggregations.types.TimeSinceLastMaximum">TimeSinceLastMaximum</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;TIME SINCE LAST MAXIMUM&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -5482,7 +4975,7 @@ stamp in the population table. Please note that this aggregation is not supporte
 
 
 
-<h2 id="getml.feature_learning.aggregations.TIME_SINCE_LAST_MINIMUM" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.TIME_SINCE_LAST_MINIMUM" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">TIME_SINCE_LAST_MINIMUM</span>
 
 
@@ -5490,8 +4983,8 @@ stamp in the population table. Please note that this aggregation is not supporte
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_LAST_MINIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.TimeSinceLastMinimum">TimeSinceLastMinimum</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">TIME_SINCE_LAST_MINIMUM</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.TimeSinceLastMinimum" href="types/#getml.feature_learning.aggregations.types.TimeSinceLastMinimum">TimeSinceLastMinimum</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;TIME SINCE LAST MINIMUM&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -5509,7 +5002,7 @@ stamp in the population table. Please note that this aggregation is not supporte
 
 
 
-<h2 id="getml.feature_learning.aggregations.TREND" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.TREND" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">TREND</span>
 
 
@@ -5517,8 +5010,8 @@ stamp in the population table. Please note that this aggregation is not supporte
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">TREND</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Trend">Trend</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;TREND&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">TREND</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Trend" href="types/#getml.feature_learning.aggregations.types.Trend">Trend</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;TREND&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5534,7 +5027,7 @@ the current time stamp. Please note that this aggregation is not supported by
 
 
 
-<h2 id="getml.feature_learning.aggregations.VAR" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.VAR" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">VAR</span>
 
 
@@ -5542,8 +5035,8 @@ the current time stamp. Please note that this aggregation is not supported by
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">VAR</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.Var">Var</span></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;VAR&#39;</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">VAR</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Var" href="types/#getml.feature_learning.aggregations.types.Var">Var</a></span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;VAR&#39;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5558,7 +5051,7 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
-<h2 id="getml.feature_learning.aggregations.VARIATION_COEFFICIENT" class="doc doc-heading">
+<h3 id="getml.feature_learning.aggregations.VARIATION_COEFFICIENT" class="doc doc-heading">
             <span class="doc doc-object-name doc-attribute-name">VARIATION_COEFFICIENT</span>
 
 
@@ -5566,8 +5059,8 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
 
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">VARIATION_COEFFICIENT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><span title="getml.feature_learning.aggregations.types.VariationCoefficient">VariationCoefficient</span></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">VARIATION_COEFFICIENT</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Final" href="https://docs.python.org/3/library/typing.html#typing.Final" target="_blank" rel="noopener">Final</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.VariationCoefficient" href="types/#getml.feature_learning.aggregations.types.VariationCoefficient">VariationCoefficient</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
     <span class="s2">&quot;VARIATION COEFFICIENT&quot;</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -5597,6 +5090,9 @@ aggregation is not supported by <a class="autorefs autorefs-internal" href="../m
 
 
 
+
+  
+  
 
 
 

@@ -12,32 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/latest/reference/data/relationship/">
+        <link rel="canonical" href="https://dev.getml.com/latest/reference/feature_learning/aggregations/sets/">
       
       
-        <link rel="prev" href="../columns/">
+        <link rel="prev" href="../types/">
       
       
-        <link rel="next" href="../roles/">
+        <link rel="next" href="../../loss_functions/">
       
       
         
       
       
-      <link rel="icon" href="../../../images/favicon.png">
+      <link rel="icon" href="../../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>relationship - getML Developer Portal</title>
+        <title>sets - getML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="../../../assets/stylesheets/custom.css"
+    href="../../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="../../../assets/stylesheets/getml.css"
+    href="../../../../assets/stylesheets/getml.css"
   />
 
     
@@ -62,14 +62,14 @@
         
         
         
-        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getml.data.relationship" class="md-skip">
+        <a href="#getml.feature_learning.aggregations.sets" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
 
     <!-- Link to home -->
     <a
-      href="../../.."
+      href="../../../.."
       title="getML Developer Portal"
       class="md-header__button md-logo"
       aria-label="getML Developer Portal"
@@ -139,8 +139,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -161,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              relationship
+              sets
             
           </span>
         </div>
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../../../.." class="md-tabs__link">
           
   
     
@@ -302,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../user_guide/" class="md-tabs__link">
+        <a href="../../../../user_guide/" class="md-tabs__link">
           
   
     
@@ -322,7 +322,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../install/" class="md-tabs__link">
+        <a href="../../../../install/" class="md-tabs__link">
           
   
     
@@ -342,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../enterprise/benefits/" class="md-tabs__link">
+        <a href="../../../../enterprise/benefits/" class="md-tabs__link">
           
   
     
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../examples/" class="md-tabs__link">
+        <a href="../../../../examples/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../about/company/" class="md-tabs__link">
+        <a href="../../../../about/company/" class="md-tabs__link">
           
   
     
@@ -439,11 +439,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
+    <a href="../../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     getML Developer Portal
@@ -482,7 +482,7 @@
         
   
   
-    <a href="../../.." class="md-nav__link">
+    <a href="../../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -544,7 +544,7 @@
         
   
   
-    <a href="../../../user_guide/" class="md-nav__link">
+    <a href="../../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -608,7 +608,7 @@
         
   
   
-    <a href="../../../install/" class="md-nav__link">
+    <a href="../../../../install/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -674,7 +674,7 @@
         
   
   
-    <a href="../../../enterprise/benefits/" class="md-nav__link">
+    <a href="../../../../enterprise/benefits/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -754,7 +754,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -794,8 +794,6 @@
                 
   
   
-    
-  
   
   
     
@@ -822,11 +820,13 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
@@ -846,7 +846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -861,8 +861,6 @@
                 
   
   
-    
-  
   
   
     
@@ -913,18 +911,17 @@
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+    <a href="../../../data/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -937,447 +934,12 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.data
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../container/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Container
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_frame/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DataFrame
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DataModel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../placeholder/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Placeholder
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../roles_obj/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Roles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../star_schema/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    StarSchema
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../subset/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Subset
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../time_series/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TimeSeries
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../view/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    View
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../columns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    columns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    
-  
-    relationship
+    </a>
   
 
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    relationship
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.many_to_many" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;many_to_many
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.many_to_one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;many_to_one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.one_to_many" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;one_to_many
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.one_to_one" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;one_to_one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.propositionalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;propositionalization
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1391,123 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../roles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    roles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../split/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    split
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    time
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../subroles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    subroles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../database/database/" class="md-nav__link">
+      <a href="../../../database/database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1534,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/datasets/" class="md-nav__link">
+      <a href="../../../datasets/datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1561,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../engine/engine/" class="md-nav__link">
+      <a href="../../../engine/engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1632,7 +1078,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../hyperopt/" class="md-nav__link ">
+            <a href="../../../hyperopt/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1683,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hyperopt/gaussian/" class="md-nav__link">
+      <a href="../../../hyperopt/gaussian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1718,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hyperopt/latin/" class="md-nav__link">
+      <a href="../../../hyperopt/latin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1753,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hyperopt/random/" class="md-nav__link">
+      <a href="../../../hyperopt/random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,8 +1239,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1829,18 +1277,16 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../feature_learning/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1863,7 +1309,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1883,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/fastprop/" class="md-nav__link">
+      <a href="../../fastprop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1910,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/fastboost/" class="md-nav__link">
+      <a href="../../fastboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/multirel/" class="md-nav__link">
+      <a href="../../multirel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1980,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/relboost/" class="md-nav__link">
+      <a href="../../relboost/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2015,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/relmt/" class="md-nav__link">
+      <a href="../../relmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2047,6 +1493,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2069,17 +1517,18 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../feature_learning/aggregations/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     
@@ -2092,12 +1541,174 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4_7" id="__nav_5_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    aggregations
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    
+  
+    sets
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getml.feature_learning.aggregations.sets.AggregationsSets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AggregationsSets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getml.feature_learning.aggregations.sets.FastPropAggregationsSets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FastPropAggregationsSets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getml.feature_learning.aggregations.sets.MultirelAggregationsSets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;MultirelAggregationsSets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getml.feature_learning.aggregations.sets.MappingAggregationsSets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;MappingAggregationsSets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2111,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_learning/loss_functions/" class="md-nav__link">
+      <a href="../../loss_functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2182,7 +1793,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../project/" class="md-nav__link ">
+            <a href="../../../project/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2225,7 +1836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project/data_frames/" class="md-nav__link">
+      <a href="../../../project/data_frames/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2252,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project/hyperopts/" class="md-nav__link">
+      <a href="../../../project/hyperopts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2279,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project/pipelines/" class="md-nav__link">
+      <a href="../../../project/pipelines/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,7 +1955,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../preprocessors/" class="md-nav__link ">
+            <a href="../../../preprocessors/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2440,7 +2051,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pipeline/" class="md-nav__link ">
+            <a href="../../../pipeline/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2483,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/pipeline/" class="md-nav__link">
+      <a href="../../../pipeline/pipeline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2510,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/columns/" class="md-nav__link">
+      <a href="../../../pipeline/columns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2537,7 +2148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/tables/" class="md-nav__link">
+      <a href="../../../pipeline/tables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2564,7 +2175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/features/" class="md-nav__link">
+      <a href="../../../pipeline/features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2591,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/plots/" class="md-nav__link">
+      <a href="../../../pipeline/plots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2618,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/scores_container/" class="md-nav__link">
+      <a href="../../../pipeline/scores_container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2645,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/score/" class="md-nav__link">
+      <a href="../../../pipeline/score/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2672,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/sql_code/" class="md-nav__link">
+      <a href="../../../pipeline/sql_code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2699,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/metrics/" class="md-nav__link">
+      <a href="../../../pipeline/metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2726,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pipeline/dialect/" class="md-nav__link">
+      <a href="../../../pipeline/dialect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2811,7 +2422,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../predictors/" class="md-nav__link ">
+            <a href="../../../predictors/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2854,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/scale_gbm_classifier/" class="md-nav__link">
+      <a href="../../../predictors/scale_gbm_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2889,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/scale_gbm_regressor/" class="md-nav__link">
+      <a href="../../../predictors/scale_gbm_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2924,7 +2535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/linear_regression/" class="md-nav__link">
+      <a href="../../../predictors/linear_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2951,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/logistic_regression/" class="md-nav__link">
+      <a href="../../../predictors/logistic_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2978,7 +2589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/xgboost_classifier/" class="md-nav__link">
+      <a href="../../../predictors/xgboost_classifier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3005,7 +2616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predictors/xgboost_regressor/" class="md-nav__link">
+      <a href="../../../predictors/xgboost_regressor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3070,7 +2681,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../sqlite3/" class="md-nav__link ">
+            <a href="../../../sqlite3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3177,7 +2788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli/engine/" class="md-nav__link">
+      <a href="../../../cli/engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3245,7 +2856,7 @@
         
   
   
-    <a href="../../../examples/" class="md-nav__link">
+    <a href="../../../../examples/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -3303,7 +2914,7 @@
         
   
   
-    <a href="../../../about/company/" class="md-nav__link">
+    <a href="../../../../about/company/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -3355,10 +2966,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getml.data.relationship.many_to_many" class="md-nav__link">
+  <a href="#getml.feature_learning.aggregations.sets.AggregationsSets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;many_to_many
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;AggregationsSets
       
     </span>
   </a>
@@ -3366,10 +2977,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getml.data.relationship.many_to_one" class="md-nav__link">
+  <a href="#getml.feature_learning.aggregations.sets.FastPropAggregationsSets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;many_to_one
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FastPropAggregationsSets
       
     </span>
   </a>
@@ -3377,10 +2988,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getml.data.relationship.one_to_many" class="md-nav__link">
+  <a href="#getml.feature_learning.aggregations.sets.MultirelAggregationsSets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;one_to_many
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;MultirelAggregationsSets
       
     </span>
   </a>
@@ -3388,21 +2999,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getml.data.relationship.one_to_one" class="md-nav__link">
+  <a href="#getml.feature_learning.aggregations.sets.MappingAggregationsSets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;one_to_one
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getml.data.relationship.propositionalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;propositionalization
+        <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;MappingAggregationsSets
       
     </span>
   </a>
@@ -3434,7 +3034,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
+        <a href="../../../" class="md-path__link">
           
   <span class="md-ellipsis">
     API Reference
@@ -3450,22 +3050,15 @@
   
     
     
-      
-  
-    
-    
       <li class="md-path__item">
-        <a href="../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Python API
+    getml.feature_learning
   </span>
 
         </a>
       </li>
-    
-  
-
     
   
 
@@ -3478,7 +3071,7 @@
         <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    getml.data
+    aggregations
   </span>
 
         </a>
@@ -3511,15 +3104,13 @@
 
 
 
-<h1 id="getml.data.relationship" class="doc doc-heading">
-            <span class="doc doc-object-name doc-module-name">getml.data.relationship</span>
+<h1 id="getml.feature_learning.aggregations.sets" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">getml.feature_learning.aggregations.sets</span>
 
 
 </h1>
 
     <div class="doc doc-contents first">
-
-      <p>Marks the relationship between joins in <a class="autorefs autorefs-internal" href="../placeholder/#getml.data.Placeholder"><code>Placeholder</code></a></p>
 
 
 
@@ -3531,154 +3122,196 @@
 
 
 
-<div class="doc doc-object doc-attribute">
+
+<div class="doc doc-object doc-class">
 
 
 
-<h2 id="getml.data.relationship.many_to_many" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">many_to_many</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">many_to_many</span><span class="p">:</span> <span class="n"><span title="getml.data.relationship.ManyToMany">ManyToMany</span></span> <span class="o">=</span> <span class="s1">&#39;many-to-many&#39;</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-      <p>Used for one-to-many or many-to-many relationships.</p>
-<p>When there is such a relationship, feature learning
-is necessary and meaningful. If you mark a join as
-a default relationship, but that assumption is violated
-for the training data, the pipeline will raise a
-warning.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="getml.data.relationship.many_to_one" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">many_to_one</span>
+<h2 id="getml.feature_learning.aggregations.sets.AggregationsSets" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AggregationsSets</span>
 
 
   <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
   </span>
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">many_to_one</span><span class="p">:</span> <span class="n"><span title="getml.data.relationship.ManyToONE">ManyToONE</span></span> <span class="o">=</span> <span class="s1">&#39;many-to-one&#39;</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-      <p>Used for many-to-one relationships.</p>
-<p>If two tables are guaranteed to be in a
-many-to-one relationship, then feature
-learning is not necessary as they can
-simply be joined. If a relationship is
-marked many-to-one, but the assumption is
-violated, the pipeline will raise
-an exception.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="getml.data.relationship.one_to_many" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">one_to_many</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">one_to_many</span><span class="p">:</span> <span class="n"><span title="getml.data.relationship.OneToMany">OneToMany</span></span> <span class="o">=</span> <span class="s1">&#39;one-to-many&#39;</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-      <p>Used for one-to-many or many-to-many relationships.</p>
-<p>When there is such a relationship, feature learning
-is necessary and meaningful. If you mark a join as
-a default relationship, but that assumption is violated
-for the training data, the pipeline will raise a
-warning.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="getml.data.relationship.one_to_one" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">one_to_one</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">one_to_one</span><span class="p">:</span> <span class="n"><span title="getml.data.relationship.OneToOne">OneToOne</span></span> <span class="o">=</span> <span class="s1">&#39;one-to-one&#39;</span>
-</code></pre></div>
-
-    <div class="doc doc-contents ">
-
-      <p>Used for one-to-one relationships.</p>
-<p>If two tables are guaranteed to be in a
-one-to-one relationship, then feature
-learning is not necessary as they can
-simply be joined. If a relationship is
-marked one-to-one, but the assumption is
-violated, the pipeline will raise
-an exception. If you are unsure whether
-you want to use many_to_one or one_to_one,
-user many_to_one.</p>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h2 id="getml.data.relationship.propositionalization" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">propositionalization</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">propositionalization</span><span class="p">:</span> <span class="n"><span title="getml.data.relationship.Propositionalization">Propositionalization</span></span> <span class="o">=</span> <span class="p">(</span>
-    <span class="s2">&quot;propositionalization&quot;</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">AggregationsSets</span><span class="p">(</span>
+    <span class="nb">all</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Aggregations" href="../types/#getml.feature_learning.aggregations.types.Aggregations">Aggregations</a></span><span class="p">],</span>
+    <span class="n">default</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Aggregations" href="../types/#getml.feature_learning.aggregations.types.Aggregations">Aggregations</a></span><span class="p">],</span>
+    <span class="n">minimal</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.Aggregations" href="../types/#getml.feature_learning.aggregations.types.Aggregations">Aggregations</a></span><span class="p">],</span>
 <span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>Used for one-to-many or many-to-many relationships.</p>
-<p>The flag means that you want a propositionalization
-algorithm to be used for this particular join.
-This is recommended when there are very many matches
-within the join and normal algorithms would take
-too long.</p>
+
+      <p>Base Class for aggregations sets</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
     </div>
 
 </div>
 
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="getml.feature_learning.aggregations.sets.FastPropAggregationsSets" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">FastPropAggregationsSets</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">FastPropAggregationsSets</span><span class="p">(</span>
+    <span class="nb">all</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.FastPropAggregations" href="../types/#getml.feature_learning.aggregations.types.FastPropAggregations">FastPropAggregations</a></span><span class="p">],</span>
+    <span class="n">default</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.FastPropAggregations" href="../types/#getml.feature_learning.aggregations.types.FastPropAggregations">FastPropAggregations</a></span><span class="p">],</span>
+    <span class="n">minimal</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.FastPropAggregations" href="../types/#getml.feature_learning.aggregations.types.FastPropAggregations">FastPropAggregations</a></span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.AggregationsSets" href="#getml.feature_learning.aggregations.sets.AggregationsSets">AggregationsSets</a></code></p>
+
+
+      <p>Base class for FastProp aggregation sets</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="getml.feature_learning.aggregations.sets.MultirelAggregationsSets" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">MultirelAggregationsSets</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">MultirelAggregationsSets</span><span class="p">(</span>
+    <span class="nb">all</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MultirelAggregations" href="../types/#getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</a></span><span class="p">],</span>
+    <span class="n">default</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MultirelAggregations" href="../types/#getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</a></span><span class="p">],</span>
+    <span class="n">minimal</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MultirelAggregations" href="../types/#getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</a></span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.AggregationsSets" href="#getml.feature_learning.aggregations.sets.AggregationsSets">AggregationsSets</a></code></p>
+
+
+      <p>Base class for Multirel aggregation sets</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="getml.feature_learning.aggregations.sets.MappingAggregationsSets" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">MappingAggregationsSets</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-dataclass"><code>dataclass</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">MappingAggregationsSets</span><span class="p">(</span>
+    <span class="nb">all</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MappingAggregations" href="../types/#getml.feature_learning.aggregations.types.MappingAggregations">MappingAggregations</a></span><span class="p">],</span>
+    <span class="n">default</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MappingAggregations" href="../types/#getml.feature_learning.aggregations.types.MappingAggregations">MappingAggregations</a></span><span class="p">],</span>
+    <span class="n">minimal</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.types.MappingAggregations" href="../types/#getml.feature_learning.aggregations.types.MappingAggregations">MappingAggregations</a></span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.sets.AggregationsSets" href="#getml.feature_learning.aggregations.sets.AggregationsSets">AggregationsSets</a></code></p>
+
+
+      <p>Base class for Mapping aggregation sets</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
@@ -3806,18 +3439,18 @@ too long.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
-        <script src="../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="../../../assets/javascripts/custom.js"></script>
+  <script src="../../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">

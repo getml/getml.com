@@ -211,11 +211,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/reference/feature_learning/aggregations/</loc>
-         <lastmod>2024-07-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://dev.getml.com/latest/reference/feature_learning/fastboost/</loc>
          <lastmod>2024-07-26</lastmod>
          <changefreq>daily</changefreq>
@@ -242,6 +237,21 @@
     </url>
     <url>
          <loc>https://dev.getml.com/latest/reference/feature_learning/relmt/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/reference/feature_learning/aggregations/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/reference/feature_learning/aggregations/sets/</loc>
+         <lastmod>2024-07-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/reference/feature_learning/aggregations/types/</loc>
          <lastmod>2024-07-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
