@@ -752,23 +752,43 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -837,44 +857,14 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../concepts/getml_suite/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../concepts/getml_suite/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
   
-    Components
+    getML Suite
   
 
     
@@ -882,13 +872,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -901,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/project_management/project_management/" class="md-nav__link">
+      <a href="../concepts/project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,51 +911,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../concepts/importing_data/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../concepts/importing_data/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
@@ -984,13 +926,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -1003,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../concepts/annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/data_model/data_model/" class="md-nav__link">
+      <a href="../concepts/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/preprocessing/preprocessing/" class="md-nav__link">
+      <a href="../concepts/preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/feature_engineering/feature_engineering/" class="md-nav__link">
+      <a href="../concepts/feature_engineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/predicting/predicting/" class="md-nav__link">
+      <a href="../concepts/predicting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/hyperopt/hyperopt/" class="md-nav__link">
+      <a href="../concepts/hyperopt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/deployment/deployment/" class="md-nav__link">
+      <a href="../concepts/deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1955,13 +1891,13 @@ when building features.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">fastprop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(</span>
      <span class="n">num_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
      <span class="n">aggregation</span><span class="o">=</span><span class="p">[</span>
-         <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
-         <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span>
+         <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
+         <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">SUM</span>
      <span class="p">],</span>
 <span class="p">)</span>
 </code></pre></div>
 getML bundles the sequential operations of a data science project
-(<a class="autorefs autorefs-internal" href="../concepts/preprocessing/preprocessing/#preprocessing_1">preprocessing</a>, <a class="autorefs autorefs-internal" href="../concepts/feature_engineering/feature_engineering/#feature-engineering_1">feature engineering</a>, and <a class="autorefs autorefs-internal" href="../concepts/predicting/predicting/#predicting_1">predicting</a>) into
+(<a class="autorefs autorefs-internal" href="../concepts/preprocessing/#preprocessing_1">preprocessing</a>, <a class="autorefs autorefs-internal" href="../concepts/feature_engineering/#feature-engineering_1">feature engineering</a>, and <a class="autorefs autorefs-internal" href="../concepts/predicting/#predicting_1">predicting</a>) into
 <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> objects. In addition to the
 <code>Placeholders</code> representing the
 <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrames</code></a> you also have to provide a feature learner
@@ -1973,7 +1909,7 @@ getML bundles the sequential operations of a data science project
      <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()],</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>We have chosen a narrow search field in aggregation space by only letting FastProp use <code>Count</code> and <code>Sum</code>. For the sake of demonstration, we use a simple <code>LinearRegression</code> and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.</p>
+<p>We have chosen a narrow search field in aggregation space by only letting FastProp use <code>COUNT</code> and <code>SUM</code>. For the sake of demonstration, we use a simple <code>LinearRegression</code> and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.</p>
 <h2 id="working-with-a-pipeline">Working with a pipeline</h2>
 <p>Now, that we have defined a <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, we can let getML do the heavy lifting of your typical data science project. With a well-defined <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, you can, i.a.:</p>
 <ul>
@@ -2113,7 +2049,7 @@ getML bundles the sequential operations of a data science project
 <span class="k">WHERE</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="ss">&quot;time_stamp&quot;</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="ss">&quot;time_stamp&quot;</span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">rowid</span><span class="p">;</span>
 </code></pre></div>
-<p>This very much resembles the ad hoc definition we tried in the beginning. The correct aggregation to use on this data set is <code>Count</code>. getML extracted this definition completely autonomously.</p>
+<p>This very much resembles the ad hoc definition we tried in the beginning. The correct aggregation to use on this data set is <code>COUNT</code>. getML extracted this definition completely autonomously.</p>
 <h2 id="next-steps">Next steps</h2>
 <p>This guide has shown you the very basics of getML. Starting with raw data, you have completed a full project including feature engineering and linear regression using an automated end-to-end pipeline. The most tedious part of this process - finding the right aggregations and subconditions to construct a feature table from the relational data model - was also included in this pipeline.</p>
 <p>But there’s more! <a href="https://www.getml.com/blog" target="_blank" rel="noopener">Related articles</a> show application

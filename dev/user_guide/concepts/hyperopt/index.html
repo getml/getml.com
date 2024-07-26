@@ -12,32 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/preprocessing/preprocessing/">
+        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/hyperopt/">
       
       
-        <link rel="prev" href="../../data_model/data_model/">
+        <link rel="prev" href="../predicting/">
       
       
-        <link rel="next" href="../../feature_engineering/feature_engineering/">
+        <link rel="next" href="../deployment/">
       
       
         
       
       
-      <link rel="icon" href="../../../../images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>Preprocessing - getML Developer Portal</title>
+        <title>Hyperparameter optimization - getML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/getml.css"
+    href="../../../assets/stylesheets/getml.css"
   />
 
     
@@ -62,14 +62,14 @@
         
         
         
-        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preprocessing_1" class="md-skip">
+        <a href="#hyperparameter-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
 
     <!-- Link to home -->
     <a
-      href="../../../.."
+      href="../../.."
       title="getML Developer Portal"
       class="md-header__button md-logo"
       aria-label="getML Developer Portal"
@@ -139,8 +139,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -161,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Preprocessing
+              Hyperparameter optimization
             
           </span>
         </div>
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -304,7 +304,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../install/" class="md-tabs__link">
+        <a href="../../../install/" class="md-tabs__link">
           
   
     
@@ -344,7 +344,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../enterprise/benefits/" class="md-tabs__link">
+        <a href="../../../enterprise/benefits/" class="md-tabs__link">
           
   
     
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
     
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../examples/" class="md-tabs__link">
+        <a href="../../../examples/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../about/company/" class="md-tabs__link">
+        <a href="../../../about/company/" class="md-tabs__link">
           
   
     
@@ -439,11 +439,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
+    <a href="../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     getML Developer Portal
@@ -482,7 +482,7 @@
         
   
   
-    <a href="../../../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -623,7 +623,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../quick_start/" class="md-nav__link ">
+            <a href="../../quick_start/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -699,7 +699,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../walkthrough/" class="md-nav__link ">
+            <a href="../../walkthrough/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -754,23 +754,43 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -795,7 +815,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -837,44 +857,14 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../getml_suite/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../getml_suite/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
   
-    Components
+    getML Suite
   
 
     
@@ -882,13 +872,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -901,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/project_management/" class="md-nav__link">
+      <a href="../project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,51 +911,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../importing_data/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../importing_data/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
@@ -984,13 +926,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -1003,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,13 +966,94 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_model/data_model/" class="md-nav__link">
+      <a href="../data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Data model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature_engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../predicting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Predicting
   
 
     
@@ -1072,7 +1089,7 @@
   <span class="md-ellipsis">
     
   
-    Preprocessing
+    Hyperparameter optimization
   
 
     
@@ -1089,7 +1106,7 @@
   <span class="md-ellipsis">
     
   
-    Preprocessing
+    Hyperparameter optimization
   
 
     
@@ -1115,33 +1132,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
+  <a href="#tuning-routines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mappings
+        Tuning routines
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-of-free-form-text" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handling of free form text
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling of free form text">
+    <nav class="md-nav" aria-label="Tuning routines">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-row-of-a-table-with-a-text-field" class="md-nav__link">
+  <a href="#tuning-recipes-for-predictors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        One row of a table with a text field
+        Tuning recipes for predictors
       
     </span>
   </a>
@@ -1149,10 +1155,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-implicit-peripheral-table-that-results-from-splitting" class="md-nav__link">
+  <a href="#tuning-recipes-for-feature-learners" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The (implicit) peripheral table that results from splitting
+        Tuning recipes for feature learners
       
     </span>
   </a>
@@ -1161,6 +1167,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latin-hypercube-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latin hypercube search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaussian-hyperparameter-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaussian hyperparameter search
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1180,88 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_engineering/feature_engineering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Feature engineering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../predicting/predicting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Predicting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../hyperopt/hyperopt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperparameter optimization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../deployment/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1335,7 +1293,7 @@
         
   
   
-    <a href="../../../../install/" class="md-nav__link">
+    <a href="../../../install/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1401,7 +1359,7 @@
         
   
   
-    <a href="../../../../enterprise/benefits/" class="md-nav__link">
+    <a href="../../../enterprise/benefits/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1475,7 +1433,7 @@
         
   
   
-    <a href="../../../../reference/" class="md-nav__link">
+    <a href="../../../reference/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1533,7 +1491,7 @@
         
   
   
-    <a href="../../../../examples/" class="md-nav__link">
+    <a href="../../../examples/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1591,7 +1549,7 @@
         
   
   
-    <a href="../../../../about/company/" class="md-nav__link">
+    <a href="../../../about/company/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1643,33 +1601,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
+  <a href="#tuning-routines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mappings
+        Tuning routines
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-of-free-form-text" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handling of free form text
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling of free form text">
+    <nav class="md-nav" aria-label="Tuning routines">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#one-row-of-a-table-with-a-text-field" class="md-nav__link">
+  <a href="#tuning-recipes-for-predictors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        One row of a table with a text field
+        Tuning recipes for predictors
       
     </span>
   </a>
@@ -1677,10 +1624,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-implicit-peripheral-table-that-results-from-splitting" class="md-nav__link">
+  <a href="#tuning-recipes-for-feature-learners" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The (implicit) peripheral table that results from splitting
+        Tuning recipes for feature learners
       
     </span>
   </a>
@@ -1689,6 +1636,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latin-hypercube-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latin hypercube search
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaussian-hyperparameter-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaussian hyperparameter search
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1717,7 +1697,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
     User Guide
@@ -1734,7 +1714,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
     Concepts
@@ -1766,189 +1746,259 @@
 
 
 <!-- Page content -->
-<p><a href="" id="preprocessing"></a></p>
-<h1 id="preprocessing_1">Preprocessing</h1>
-<p>As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and propositionalization deal with <em>relational data structures</em> and result in a single-table representation thereof, we categorize all operations that work on <em>single tables</em> as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.</p>
-<p>getML's preprocessors allow you to extract domains from email addresses (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.EmailDomain"><code>EmailDomain</code></a>), impute missing values (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Imputation"><code>Imputation</code></a>), map categorical columns to a continuous representation (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a>), extract seasonal components from time stamps (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a>), extract sub strings from string-based columns (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Substring"><code>Substring</code></a>) and split up <a class="autorefs autorefs-internal" href="../../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns (<a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>). Preprocessing operations in getML are very efficient and happen really fast. In fact, most of the time you won't even notice the presence of a preprocessor in your pipeline. getML's preprocessors operate on an abstract level without polluting your original data, are evaluated lazily and their set-up requires minimal effort.</p>
-<p>Here is a small example that shows the <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a> preprocessor in action.
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
-
-<span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
-
-<span class="n">traffic</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_interstate94</span><span class="p">()</span>
-
-<span class="c1"># traffic explicitly holds seasonal components (hour, day, month, ...)</span>
-<span class="c1"># extracted from column ds; we copy traffic and delete all those components</span>
-<span class="n">traffic2</span> <span class="o">=</span> <span class="n">traffic</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;hour&quot;</span><span class="p">,</span> <span class="s2">&quot;weekday&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">])</span>
-
-<span class="n">start_test</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
-
-<span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">time</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
-    <span class="n">test</span><span class="o">=</span><span class="n">start_test</span><span class="p">,</span>
-    <span class="n">time_stamp</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">time_series1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">traffic</span><span class="p">,</span>
-    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
-    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
-    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
-    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">time_series2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">TimeSeries</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">traffic2</span><span class="p">,</span>
-    <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">,</span>
-    <span class="n">time_stamps</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
-    <span class="n">horizon</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">hours</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-    <span class="n">memory</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">days</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
-    <span class="n">lagged_targets</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">fast_prop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(</span>
-    <span class="n">loss_function</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">loss_function</span><span class="o">.</span><span class="n">SquareLoss</span><span class="p">)</span>
-
-<span class="n">pipe1</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
-    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series1</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
-    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
-    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
-<span class="p">)</span>
-
-<span class="n">pipe2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
-    <span class="n">data_model</span><span class="o">=</span><span class="n">time_series2</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
-    <span class="n">preprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Seasonal</span><span class="p">()],</span>
-    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">],</span>
-    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">()]</span>
-<span class="p">)</span>
-
-<span class="c1"># pipe1 includes no preprocessor but receives the data frame with the components</span>
-<span class="n">pipe1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series1</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
-
-<span class="c1"># pipe2 includes the preprocessor; receives data w/o components</span>
-<span class="n">pipe2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">time_series2</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
-
-<span class="n">month_based1</span> <span class="o">=</span> <span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
-<span class="n">month_based2</span> <span class="o">=</span> <span class="n">pipe2</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
-    <span class="k">lambda</span> <span class="n">feat</span><span class="p">:</span> <span class="s2">&quot;COUNT( DISTINCT t2.</span><span class="se">\&quot;</span><span class="s2">strftime(&#39;%m&#39;&quot;</span> <span class="ow">in</span> <span class="n">feat</span><span class="o">.</span><span class="n">sql</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">month_based1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_10&quot;;</span>
-<span class="c1"># </span>
-<span class="c1"># CREATE TABLE &quot;FEATURE_1_10&quot; AS</span>
-<span class="c1"># SELECT COUNT( t2.&quot;month&quot;  ) - COUNT( DISTINCT t2.&quot;month&quot; ) AS &quot;feature_1_10&quot;,</span>
-<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
-<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
-<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
-<span class="c1"># ON 1 = 1</span>
-<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
-<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
-<span class="c1"># GROUP BY t1.rowid;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">month_based2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span><span class="p">)</span>
-<span class="c1"># Output:</span>
-<span class="c1"># DROP TABLE IF EXISTS &quot;FEATURE_1_5&quot;;</span>
-<span class="c1"># </span>
-<span class="c1"># CREATE TABLE &quot;FEATURE_1_5&quot; AS</span>
-<span class="c1"># SELECT COUNT( t2.&quot;strftime(&#39;%m&#39;, ds )&quot;  ) - COUNT( DISTINCT t2.&quot;strftime(&#39;%m&#39;, ds )&quot; ) AS &quot;feature_1_5&quot;,</span>
-<span class="c1">#     t1.rowid AS &quot;rownum&quot;</span>
-<span class="c1"># FROM &quot;POPULATION__STAGING_TABLE_1&quot; t1</span>
-<span class="c1"># LEFT JOIN &quot;POPULATION__STAGING_TABLE_2&quot; t2</span>
-<span class="c1"># ON 1 = 1</span>
-<span class="c1"># WHERE t2.&quot;ds, &#39;+1.000000 hours&#39;&quot; &lt;= t1.&quot;ds&quot;</span>
-<span class="c1"># AND ( t2.&quot;ds, &#39;+7.041667 days&#39;&quot; &gt; t1.&quot;ds&quot; OR t2.&quot;ds, &#39;+7.041667 days&#39;&quot; IS NULL )</span>
-<span class="c1"># GROUP BY t1.rowid;</span>
-</code></pre></div></p>
-<p>If you compare both of the features above, you will notice they are exactly the same: <code>COUNT - COUNT(DISTINCT)</code> on the month component conditional on the time-based restrictions introduced through memory and horizon.</p>
-<p>Pipelines can include more than one preprocessor.</p>
-<p>While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a> and <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>.
-<a href="" id="preprocessing-mappings"></a></p>
-<h2 id="mappings">Mappings</h2>
-<p><a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a>s are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.</p>
-<p>Mappings are a simple and interpretable alternative representation for categorical data. By introducing a continuous representation, mappings allow getML's feature learning algorithms to apply arbitrary aggregations to categorical columns. Further, mappings enable huge gains in efficiency when learning patterns from categorical data. You can control the extent mappings are utilized by specifying the minimum number of matching rows required for categories that constitutes a mapping through the <code>min_freq</code> parameter.</p>
-<p>Here is an example mapping from the <a href="https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb" target="_blank" rel="noopener">CORA notebook</a>:
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">;</span>
-<span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">);</span>
-<span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;CATEGORICAL_MAPPING_1_1_1&quot;</span><span class="p">(</span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;Case_Based&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">7109826589595376</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Rule_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">07368421052631578</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Reinforcement_Learning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0576923076923077</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Theory&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">0547945205479452</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Genetic_Algorithms&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">03157894736842105</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Neural_Networks&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">02088772845953003</span><span class="p">),</span>
-<span class="w">       </span><span class="p">(</span><span class="s1">&#39;Probabilistic_Methods&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">01293103448275862</span><span class="p">);</span>
-</code></pre></div>
-Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
-<a href="" id="preprocessing-free-form-text"></a></p>
-<h2 id="handling-of-free-form-text">Handling of free form text</h2>
-<p>getML provides the role <a class="autorefs autorefs-internal" href="../../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> to annotate free form text fields within relational data structures. Learning from <a class="autorefs autorefs-internal" href="../../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns works as follows: First, for each of the <a class="autorefs autorefs-internal" href="../../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter <code>vocab_size</code>. If a text field contains words that belong to the vocabulary, getML deals with columns of role <a class="autorefs autorefs-internal" href="../../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> preprocessor. Opting for the second approach is as easy as adding the <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> to the list of <code>preprocessors</code> on your <a class="autorefs autorefs-internal" href="../../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>. The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.</p>
-<h3 id="one-row-of-a-table-with-a-text-field">One row of a table with a text field</h3>
+<p><a href="" id="hyperparamter-optimization"></a></p>
+<h1 id="hyperparameter-optimization">Hyperparameter optimization</h1>
+<div class="admonition enterprise-adm">
+<p class="admonition-title">Enterprise Feature</p>
+<p>This is an enterprise feature and not available in the community edition. Learn more about the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#why-choose-getml-enterprise">benefits</a> and see the <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">comparion of features</a> between the community and enterprise edition.</p>
+</div>
+<p>In the sections on <a class="autorefs autorefs-internal" href="../feature_engineering/#feature-engineering_1">feature engineering</a> and <a class="autorefs autorefs-internal" href="../predicting/#predicting_1">predicting</a>, we learned how to train both the feature learning algorithm and the 
+machine learning algorithm used for prediction in the getML engine. However, there 
+are lots of parameters involved. <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a>, 
+<a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relboost/#getml.feature_learning.Relboost"><code>Relboost</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relmt/#getml.feature_learning.RelMT"><code>RelMT</code></a>, 
+<a class="autorefs autorefs-internal" href="../../../reference/feature_learning/fastprop/#getml.feature_learning.FastProp"><code>FastProp</code></a>, 
+<a class="autorefs autorefs-internal" href="../../../reference/predictors/linear_regression/#getml.predictors.LinearRegression"><code>LinearRegression</code></a>, 
+<a class="autorefs autorefs-internal" href="../../../reference/predictors/logistic_regression/#getml.predictors.LogisticRegression"><code>LogisticRegression</code></a>, 
+<a class="autorefs autorefs-internal" href="../../../reference/predictors/xgboost_classifier/#getml.predictors.XGBoostClassifier"><code>XGBoostClassifier</code></a>, 
+and <a class="autorefs autorefs-internal" href="../../../reference/predictors/xgboost_regressor/#getml.predictors.XGBoostRegressor"><code>XGBoostRegressor</code></a> all have their own 
+settings. That is why you might want to use hyperparameter optimization.</p>
+<p>The most relevant parameters of these classes can be chosen to constitute individual 
+dimensions of a parameter space. For each parameter, a lower and upper bound has to 
+be provided and the hyperparameter optimization will search the space within these 
+bounds. This will be done iteratively by drawing a specific parameter combination, overwriting the corresponding parameters in a base pipeline, and then fitting and scoring it. The algorithm used to draw from the parameter space is represented by the different classes of <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/#getml.hyperopt"><code>hyperopt</code></a>.</p>
+<p>While <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/random/#getml.hyperopt.RandomSearch"><code>RandomSearch</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/latin/#getml.hyperopt.LatinHypercubeSearch"><code>LatinHypercubeSearch</code></a> are purely statistical approaches, <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/gaussian/#getml.hyperopt.GaussianHyperparameterSearch"><code>GaussianHyperparameterSearch</code></a> uses prior knowledge obtained from evaluations of previous parameter combinations to select the next one.</p>
+<h2 id="tuning-routines">Tuning routines</h2>
+<p>The easiest way to conduct a hyperparameter optimization in getML are the tuning routines <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/#getml.hyperopt.tune_feature_learners"><code>tune_feature_learners()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/#getml.hyperopt.tune_predictors"><code>tune_predictors()</code></a>. They roughly work as follows:</p>
+<ul>
+<li>
+<p>They begin with a base pipeline, in which the default parameters for the feature learner or the predictor are used.</p>
+</li>
+<li>
+<p>They then proceed by optimizing 2 or 3 parameters at a time using a <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/gaussian/#getml.hyperopt.GaussianHyperparameterSearch"><code>GaussianHyperparameterSearch</code></a>. If the best pipeline outperforms the base pipeline, the best pipeline becomes the new base pipeline.</p>
+</li>
+<li>
+<p>Taking the base pipeline from the previous steps, the tuning routine then optimizes the next 2 or 3 hyperparameters. If the best pipeline from that hyperparameter optimization outperforms the current base pipeline, that pipeline becomes the new base pipeline.</p>
+</li>
+<li>
+<p>These steps are then repeated for more hyperparameters.</p>
+</li>
+</ul>
+<p>The following tables list the tuning recipes and hyperparameter subspaces for each step:</p>
+<h3 id="tuning-recipes-for-predictors">Tuning recipes for predictors</h3>
 <table>
 <thead>
 <tr>
-<th>rownum</th>
-<th>text field</th>
+<th>Predictor</th>
+<th>Stage</th>
+<th>Hyperparameter</th>
+<th>Subspace</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>52</td>
-<td>The quick brown fox jumps over the lazy dog</td>
+<td><a class="autorefs autorefs-internal" href="../../../reference/predictors/linear_regression/#getml.predictors.LinearRegression"><code>LinearRegression</code></a>; <a class="autorefs autorefs-internal" href="../../../reference/predictors/logistic_regression/#getml.predictors.LogisticRegression"><code>LogisticRegression</code></a></td>
+<td>1 (base parameters)</td>
+<td>reg_lambda</td>
+<td>[1E-11, 100]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>learning_rate</td>
+<td>[0.5, 0.99]</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="../../../reference/predictors/xgboost_classifier/#getml.predictors.XGBoostClassifier"><code>XGBoostClassifier</code></a>; <a class="autorefs autorefs-internal" href="../../../reference/predictors/xgboost_regressor/#getml.predictors.XGBoostRegressor"><code>XGBoostRegressor</code></a></td>
+<td>1 (base parameters)</td>
+<td>learning_rate</td>
+<td>[0.05, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_depth</td>
+<td>[1, 15]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_child_weights</td>
+<td>[1, 6]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>gamma</td>
+<td>[0, 5]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (sampling parameters)</td>
+<td>colsample_bytree</td>
+<td>[0.75, 0.9]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>subsample</td>
+<td>[0.75, 0.9]</td>
+</tr>
+<tr>
+<td></td>
+<td>4 (regularization parameters)</td>
+<td>reg_alpha</td>
+<td>[0, 5]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>reg_lambda</td>
+<td>[0, 10]</td>
 </tr>
 </tbody>
 </table>
-<h3 id="the-implicit-peripheral-table-that-results-from-splitting">The (implicit) peripheral table that results from splitting</h3>
+<h3 id="tuning-recipes-for-feature-learners">Tuning recipes for feature learners</h3>
 <table>
 <thead>
 <tr>
-<th>rownum</th>
-<th>words</th>
+<th>Feature Learner</th>
+<th>Stage</th>
+<th>Hyperparameter</th>
+<th>Subspace</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>52</td>
-<td>the</td>
+<td><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/fastprop/#getml.feature_learning.FastProp"><code>FastProp</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[50, 500]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>quick</td>
+<td></td>
+<td></td>
+<td>n_most_frequent</td>
+<td>[0, 20]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>brown</td>
+<td><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>fox</td>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>jumps</td>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_length</td>
+<td>[0, 10]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>over</td>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>the</td>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>share_aggregations</td>
+<td>[0.1, 0.5]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>lazy</td>
+<td><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relboost/#getml.feature_learning.Relboost"><code>Relboost</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
 </tr>
 <tr>
-<td>52</td>
-<td>dog</td>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_length</td>
+<td>[0, 10]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>share_aggregations</td>
+<td>[0.1, 0.5]</td>
+</tr>
+<tr>
+<td><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relmt/#getml.feature_learning.RelMT"><code>RelMT</code></a></td>
+<td>1 (base parameters)</td>
+<td>num_features</td>
+<td>[10, 50]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>shrinkage</td>
+<td>[0, 0.3]</td>
+</tr>
+<tr>
+<td></td>
+<td>2 (tree parameters)</td>
+<td>max_depth</td>
+<td>[1, 8]</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>min_num_samples</td>
+<td>[1, 500]</td>
+</tr>
+<tr>
+<td></td>
+<td>3 (regularization parameters)</td>
+<td>reg_lambda</td>
+<td>[0, 0.0001]</td>
 </tr>
 </tbody>
 </table>
-<p>As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (<code>COUNT WHERE words IN ('quick', 'jumps')</code>). Further, by utilizing <a class="autorefs autorefs-internal" href="#mappings">mappings</a>, any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.</p>
-<p>Note that the splitting of text fields can be computationally expensive. If performance suffers too much, you may resort to the default behavior by removing the <a class="autorefs autorefs-internal" href="../../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> from your <a class="autorefs autorefs-internal" href="../../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
+<p>The advantage of the tuning routines is that they provide a convenient out-of-the-box experience for hyperparameter tuning. For most use cases, it is sufficient to tune the XGBoost predictor.</p>
+<p>More advanced users can rely on the more low-level hyperparameter optimization routines.</p>
+<h2 id="random-search">Random search</h2>
+<p>A <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/random/#getml.hyperopt.RandomSearch"><code>RandomSearch</code></a> draws random hyperparameter sets from the hyperparameter space.</p>
+<h2 id="latin-hypercube-search">Latin hypercube search</h2>
+<p>A <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/latin/#getml.hyperopt.LatinHypercubeSearch"><code>LatinHypercubeSearch</code></a> draws almost random hyperparameter sets from the hyperparameter space, but ensures that they are sufficiently different from each other.</p>
+<h2 id="gaussian-hyperparameter-search">Gaussian hyperparameter search</h2>
+<p>A <a class="autorefs autorefs-internal" href="../../../reference/hyperopt/gaussian/#getml.hyperopt.GaussianHyperparameterSearch"><code>GaussianHyperparameterSearch</code></a> works like this:</p>
+<ul>
+<li>
+<p>It begins with a burn-in phase, usually about 70% to 90% of all iterations. During that burn-in phase, the hyperparameter space is sampled more or less at random, using either a random search or a latin hypercube search. You can control this phase using <code>ratio_iter</code> and <code>surrogate_burn_in_algorithm</code>.</p>
+</li>
+<li>
+<p>Once enough information has been collected, it fits a Gaussian process on the hyperparameters with the score we want to maximize or minimize as the predicted variable. Note that the Gaussian process has hyperparameters itself, which are also optimized. You can control this phase using <code>gaussian_kernel</code>, <code>gaussian_optimization_algorithm</code>, <code>gaussian_optimization_burn_in_algorithm</code>, and <code>gaussian_optimization_burn_ins</code>.</p>
+</li>
+<li>
+<p>It then uses the Gaussian process to predict the expected information (EI). The EI is a measure of how much additional information it might get from evaluating a particular point in the hyperparameter space. The expected information is to be maximized. The point in the hyperparameter space with the maximum expected information is the next point that is actually evaluated (meaning a new pipeline with these hyperparameters is trained). You can control this phase using <code>optimization_algorithm</code>, <code>optimization_burn_ins</code>, and <code>optimization_burn_in_algorithm</code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a nutshell, the <code>GaussianHyperparameterSearch</code> behaves like human data scientists:</p>
+<ul>
+<li>At first, it picks random hyperparameter combinations.</li>
+<li>Once it has gained a better understanding of the hyperparameter space, it starts evaluating hyperparameter combinations that are particularly interesting.</li>
+</ul>
+</div>
 
 <!-- Source file information -->
 
@@ -2070,18 +2120,18 @@ Inspecting the actual values, it's highly likely, that this mapping stems from a
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
-        <script src="../../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="../../../../assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">

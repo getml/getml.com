@@ -12,32 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/getml_suite/monitor/">
+        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/project_management/">
       
       
-        <link rel="prev" href="../engine/">
+        <link rel="prev" href="../getml_suite/">
       
       
-        <link rel="next" href="../python_api/">
+        <link rel="next" href="../importing_data/">
       
       
         
       
       
-      <link rel="icon" href="../../../../images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>Monitor - getML Developer Portal</title>
+        <title>Managing projects - getML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/getml.css"
+    href="../../../assets/stylesheets/getml.css"
   />
 
     
@@ -62,14 +62,14 @@
         
         
         
-        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-getml-monitor" class="md-skip">
+        <a href="#managing-projects" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
 
     <!-- Link to home -->
     <a
-      href="../../../.."
+      href="../../.."
       title="getML Developer Portal"
       class="md-header__button md-logo"
       aria-label="getML Developer Portal"
@@ -139,8 +139,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -161,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Monitor
+              Managing projects
             
           </span>
         </div>
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -304,7 +304,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../install/" class="md-tabs__link">
+        <a href="../../../install/" class="md-tabs__link">
           
   
     
@@ -344,7 +344,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../enterprise/benefits/" class="md-tabs__link">
+        <a href="../../../enterprise/benefits/" class="md-tabs__link">
           
   
     
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
     
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../examples/" class="md-tabs__link">
+        <a href="../../../examples/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../about/company/" class="md-tabs__link">
+        <a href="../../../about/company/" class="md-tabs__link">
           
   
     
@@ -439,11 +439,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
+    <a href="../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     getML Developer Portal
@@ -482,7 +482,7 @@
         
   
   
-    <a href="../../../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -623,7 +623,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../quick_start/" class="md-nav__link ">
+            <a href="../../quick_start/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -699,7 +699,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../walkthrough/" class="md-nav__link ">
+            <a href="../../walkthrough/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -754,23 +754,43 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -795,7 +815,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -835,92 +855,16 @@
                 
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    Components
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Components
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../engine/" class="md-nav__link">
+      <a href="../getml_suite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
-    Engine
+    getML Suite
   
 
     
@@ -956,7 +900,7 @@
   <span class="md-ellipsis">
     
   
-    Monitor
+    Managing projects
   
 
     
@@ -973,7 +917,7 @@
   <span class="md-ellipsis">
     
   
-    Monitor
+    Managing projects
   
 
     
@@ -999,10 +943,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-monitor" class="md-nav__link">
+  <a href="#relationship-between-projects-and-engine-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Accessing the monitor
+        Relationship between Projects and Engine Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-data-using-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Data Using Projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-project-module-to-manage-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Project Module to Manage Your Project
       
     </span>
   </a>
@@ -1025,112 +991,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_api/" class="md-nav__link">
+      <a href="../importing_data/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Python API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../project_management/project_management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Managing projects
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../importing_data/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
@@ -1143,13 +1005,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -1162,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_model/data_model/" class="md-nav__link">
+      <a href="../data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../preprocessing/preprocessing/" class="md-nav__link">
+      <a href="../preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature_engineering/feature_engineering/" class="md-nav__link">
+      <a href="../feature_engineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../predicting/predicting/" class="md-nav__link">
+      <a href="../predicting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hyperopt/hyperopt/" class="md-nav__link">
+      <a href="../hyperopt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,7 +1254,7 @@
         
   
   
-    <a href="../../../../install/" class="md-nav__link">
+    <a href="../../../install/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1464,7 +1320,7 @@
         
   
   
-    <a href="../../../../enterprise/benefits/" class="md-nav__link">
+    <a href="../../../enterprise/benefits/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1538,7 +1394,7 @@
         
   
   
-    <a href="../../../../reference/" class="md-nav__link">
+    <a href="../../../reference/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1596,7 +1452,7 @@
         
   
   
-    <a href="../../../../examples/" class="md-nav__link">
+    <a href="../../../examples/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1654,7 +1510,7 @@
         
   
   
-    <a href="../../../../about/company/" class="md-nav__link">
+    <a href="../../../about/company/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1706,10 +1562,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-the-monitor" class="md-nav__link">
+  <a href="#relationship-between-projects-and-engine-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Accessing the monitor
+        Relationship between Projects and Engine Processes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-data-using-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing Data Using Projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-project-module-to-manage-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Project Module to Manage Your Project
       
     </span>
   </a>
@@ -1741,7 +1619,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
     User Guide
@@ -1758,27 +1636,10 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Concepts
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-    
-    
-      <li class="md-path__item">
         <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Components
+    Concepts
   </span>
 
         </a>
@@ -1807,23 +1668,18 @@
 
 
 <!-- Page content -->
-<p><a href="" id="monitor"></a></p>
-<h1 id="the-getml-monitor">The getML monitor</h1>
-<p>The getML monitor contains information on the data imported into the engine as well as the trained pipelines and their performance. It is written in Go and compiled into a binary that is separate from the getML engine.</p>
-<h2 id="accessing-the-monitor">Accessing the monitor</h2>
-<p>The monitor is always started on the same machine as the engine. The engine and the monitor use sockets to communicate. The monitor opens an HTTP port - 1709 by default - for you to access it via your favorite internet browser. Entering the following address into the navigation bar will point your browser to the monitor:</p>
-<p><a href="http://localhost:1709" style="text-align: center; display: block" target="_blank" rel="noopener">http://localhost:1709</a></p>
-<p>The HTTP port can only be accessed from within the host the getML suite is running on.</p>
-<p>The main purpose of the monitor is to help you with your data science project by providing visual feedback.</p>
-<div class="admonition note">
-<p class="admonition-title">Tip</p>
-<p>If you experience any issues opening the monitor, try any of these steps:</p>
-<ul>
-<li>Manually shutdown the engine and restart it: <code>getml.engine.shutdown()</code> and <code>getml.engine.launch()</code></li>
-<li>Kill the associated background process in the terminal and restart the engine</li>
-<li>Close all tabs and windows in which the monitor ran previously and try again</li>
-</ul>
-</div>
+<p><a href="" id="project-management"></a></p>
+<h1 id="managing-projects">Managing Projects</h1>
+<p>When working with getML, all data is organized into <em>projects.</em> These projects are managed through the <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project"><code>getml.project</code></a> module.</p>
+<h2 id="relationship-between-projects-and-engine-processes">Relationship between Projects and Engine Processes</h2>
+<p>Each project is linked to a specific instance of the <a class="autorefs autorefs-internal" href="../getml_suite/#engine_1">getML engine</a>, which runs as a global process, independent of your Python session. This setup allows multiple users to share a single getML instance and work on different projects. When switching projects using <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.switch"><code>getml.project.switch()</code></a>, the Python API spawns a new process and connects to it, while the current project's process moves to the background (unless explicitly suspended via <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.suspend"><code>getml.project.suspend()</code></a>). You can also work on multiple projects simultaneously from different Python sessions, which is particularly useful when using <a href="https://jupyter.org/" target="_blank" rel="noopener">Jupyter Lab</a> to manage multiple notebooks and Python kernels concurrently.</p>
+<p>To load an existing project or create a new one, use <a class="autorefs autorefs-internal" href="../../../reference/engine/engine/#getml.engine.set_project"><code>getml.engine.set_project()</code></a>.</p>
+<p>To shut down the engine process associated with the current project, call <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.suspend"><code>getml.project.suspend()</code></a>. Suspending a project flushes the engine's memory, and any unsaved changes to data frames are lost (refer to <a class="autorefs autorefs-internal" href="../getml_suite/#dataframes">Dataframes</a> for details). All pipelines of the new project are automatically loaded into memory. You can retrieve all your project's pipelines through <a class="autorefs autorefs-internal" href="../../../reference/project/pipelines/#getml.project.Pipelines"><code>getml.project.pipelines</code></a>. </p>
+<p>Projects can be deleted by calling <a class="autorefs autorefs-internal" href="../../../reference/engine/engine/#getml.engine.delete_project"><code>getml.engine.delete_project()</code></a> to delete a project by name or <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.delete"><code>getml.project.delete()</code></a> to suspend and delete the currently loaded project.</p>
+<h2 id="managing-data-using-projects">Managing Data Using Projects</h2>
+<p>Each project has its own folder in <code>~/.getML/getml-VERSION/projects</code> (for Linux and macOS) where all its data and pipelines are stored. On Windows, the projects folder is located in the same directory as <code>getML.exe</code>. These folders can be easily shared between different getML instances and even across different operating systems. However, individual pipelines or data frames cannot be simply copied to another project folder as they are tied to the project. Projects can be bundled, exported, and imported.</p>
+<h2 id="using-the-project-module-to-manage-your-project">Using the Project Module to Manage Your Project</h2>
+<p>The <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project"><code>getml.project</code></a> module is the entry point for managing your projects. From here, you can query project-specific data (<a class="autorefs autorefs-internal" href="../../../reference/project/#data_frames"><code>data_frames</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#hyperopts"><code>hyperopts</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#pipelines"><code>pipelines</code></a>), manage the state of the current project (<a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.delete"><code>delete()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.restart"><code>restart()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.switch"><code>switch()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.suspend"><code>suspend()</code></a>), and import or export projects as <code>.getml</code> bundles to disk (<a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.load"><code>load()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/project/#getml.project.attrs.save"><code>save()</code></a>).</p>
 
 <!-- Source file information -->
 
@@ -1945,18 +1801,18 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
-        <script src="../../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="../../../../assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">

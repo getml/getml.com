@@ -2972,14 +2972,14 @@ regression:</p>
 \hat{y} = w_0 + w_1 * feature_1 + w_2 * feature_2 + ...
 \]</div>
 <p>The weights are optimized by minimizing the squared loss of the
-predictions <span class="arithmatex">\(\hat{y}\)</span> w.r.t. the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#target">target</a> <span class="arithmatex">\(y\)</span>.</p>
+predictions <span class="arithmatex">\(\hat{y}\)</span> w.r.t. the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/#target">target</a> <span class="arithmatex">\(y\)</span>.</p>
 <div class="arithmatex">\[
 L(y,\hat{y}) = \frac{1}{n} \sum_{i=1}^{n} (y_i -\hat{y}_i)^2
 \]</div>
 <p>Linear regressions can be trained arithmetically or numerically.
 Training arithmetically is more accurate, but suffers worse
 scalability.</p>
-<p>If you decide to pass <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#categorical">categorical features</a> to the
+<p>If you decide to pass <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/#categorical">categorical features</a> to the
 <a class="autorefs autorefs-internal" href="#getml.predictors.LinearRegression"><code>LinearRegression</code></a>, it will be trained
 numerically. Otherwise, it will be trained arithmetically.</p>
 

@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/importing_data/">
       
       
-        <link rel="prev" href="../project_management/project_management/">
+        <link rel="prev" href="../project_management/">
       
       
-        <link rel="next" href="csv_interface/">
+        <link rel="next" href="../annotating_data/">
       
       
         
@@ -754,23 +754,43 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -837,44 +857,14 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../getml_suite/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../getml_suite/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
   
-    Components
+    getML Suite
   
 
     
@@ -882,13 +872,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -901,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project_management/project_management/" class="md-nav__link">
+      <a href="../project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,52 +913,16 @@
   
   
   
-    
-    
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
         
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
   
   <span class="md-ellipsis">
     
@@ -987,273 +935,192 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_4_4">
-            <span class="md-nav__icon md-icon"></span>
-            
+  
+  <span class="md-ellipsis">
+    
   
     Importing data
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="csv_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CSV interface
-  
-
     
   </span>
   
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pandas_interface/" class="md-nav__link">
+      
         
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-  <span class="md-ellipsis">
+  
+  
     
   
-    Pandas interface
   
-
-    
-  </span>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unified-import-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified import interface
+      
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Frames
+      
+    </span>
+  </a>
   
-
-      </a>
-    </li>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-of-null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling of NULL values
+      
+    </span>
+  </a>
   
-
-              
-            
-              
-                
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Formats
+      
+    </span>
+  </a>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="json_interface/" class="md-nav__link">
+    <nav class="md-nav" aria-label="Import Formats">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    JSON interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="sqlite3_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#pandas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pandas
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    SQLite3 interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="mysql_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    MySQL interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="mariadb_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#sqlite3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite3
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    MariaDB interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="postgres_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#mysql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    PostgreSQL interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="greenplum_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#mariadb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MariaDB
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
-  
-    Greenplum interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="odbc_interface/" class="md-nav__link">
+</li>
         
+          <li class="md-nav__item">
+  <a href="#postgresql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL
+      
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greenplum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenplum
+      
+    </span>
+  </a>
   
-    ODBC interface
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odbc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ODBC
+      
+    </span>
+  </a>
   
-
-    
-  </span>
+</li>
+        
+      </ul>
+    </nav>
   
+</li>
+      
+    </ul>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
+</nav>
       
     </li>
   
@@ -1267,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_model/data_model/" class="md-nav__link">
+      <a href="../data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../preprocessing/preprocessing/" class="md-nav__link">
+      <a href="../preprocessing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../feature_engineering/feature_engineering/" class="md-nav__link">
+      <a href="../feature_engineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1375,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../predicting/predicting/" class="md-nav__link">
+      <a href="../predicting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hyperopt/hyperopt/" class="md-nav__link">
+      <a href="../hyperopt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1429,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deployment/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1843,6 +1710,122 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#import-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Formats
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pandas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MySQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mariadb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MariaDB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greenplum_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenplum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#odbc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ODBC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1897,23 +1880,6 @@
   
 
       
-        
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Importing data
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
     </ol>
   </nav>
 
@@ -1936,53 +1902,36 @@
 <!-- Page content -->
 <p><a href="" id="importing-data"></a></p>
 <h1 id="importing-data_1">Importing data</h1>
-<p>Before being able to analyze and process your data using the getML software,
+<p>Before being able to analyze and process your data using the getML Suite,
 you have to import it into the engine. At the end of this step, you will have
 your data in data frame objects in the getML engine and will be ready to
-<a class="autorefs autorefs-internal" href="../annotating_data/annotating_data/#annotating-data_1">annotate them</a>.</p>
+<a class="autorefs autorefs-internal" href="../annotating_data/#annotating-data_1">annotate them</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have imported your data into the engine before and want to restore it,
-refer to <a class="autorefs autorefs-internal" href="../getml_suite/python_api/#lifecycle-dataframe">Lifecycle of a DataFrame</a></p>
+refer to <a class="autorefs autorefs-internal" href="../getml_suite/#dataframes">Python API: DataFrame</a></p>
 </div>
 <p><a href="" id="importing-data-unified-interface"></a></p>
 <h2 id="unified-import-interface">Unified import interface</h2>
 <p>The getML Python API provides a unified import interface requiring
 similar arguments and resulting in the same output format, regardless
 of the data source.</p>
-<p>You can use one of the dedicated
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a>, and
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a> class methods to construct a
-data frame object in the getML engine, fill it with the provided data,
-and retrieve a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handle in the Python
-API. </p>
-<p>If you already have a data frame object in place, you
-can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_csv"><code>read_csv()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_pandas"><code>read_pandas()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a>, or
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_json"><code>read_json()</code></a> methods of the corresponding
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handle to either replace its content
-with new data or append to it.</p>
-<p>All those functions also have their counterparts for exporting called
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_csv"><code>to_csv()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_pandas"><code>to_pandas()</code></a>,
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_db"><code>to_db()</code></a>, and
-<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_json"><code>to_json()</code></a>.</p>
-<p>The particularities of the individual formats will be covered in the
-following sections:</p>
-<ul>
-<li><a class="autorefs autorefs-internal" href="csv_interface/#csv-interface">CSV interface</a></li>
-<li><a class="autorefs autorefs-internal" href="pandas_interface/#pandas-interface">Pandas interface</a></li>
-<li><a class="autorefs autorefs-internal" href="json_interface/#json-interface">JSON interface</a></li>
-<li><a class="autorefs autorefs-internal" href="sqlite3_interface/#sqlite3-interface">SQLite3 interface</a></li>
-<li><a class="autorefs autorefs-internal" href="mysql_interface/#mysql-interface">MySQL interface</a></li>
-<li><a class="autorefs autorefs-internal" href="mariadb_interface/#mariadb-interface">MariaDB interface</a></li>
-<li><a class="autorefs autorefs-internal" href="postgres_interface/#postgresql-interface">PostgreSQL interface</a></li>
-<li><a class="autorefs autorefs-internal" href="greenplum_interface/#greenplum-interface">Greenplum interface</a></li>
-<li><a class="autorefs autorefs-internal" href="odbc_interface/#odbc-interface">ODBC interface</a></li>
-</ul>
+<p>You can use one of the dedicated class methods (e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a>) 
+to construct a data frame object in the getML engine, fill it with the provided data, and retrieve 
+a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handle in the Python API.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Example demonstrating the use of <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a>
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
+    <span class="s2">&quot;path/to/my/data.csv&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;my_data&quot;</span>
+<span class="p">)</span>
+</code></pre></div></p>
+</div>
+<p>If you already have a data frame object in place, you can use the methods of the corresponding 
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handle (e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_csv"><code>read_csv()</code></a>) 
+to either replace its content with new data or append to it.</p>
+<p>All those functions also have their counterparts for exporting (e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_csv"><code>to_csv()</code></a>).</p>
 <h2 id="data-frames">Data Frames</h2>
 <p>The resulting <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance in the Python
 API represents a handle to the corresponding data frame object in the
@@ -1994,15 +1943,209 @@ unique within the data frame they are associated with.</p>
 <p>Unfortunately, data sources often 
 contain missing or corrupt data - also called NULL
 values. getML is able to work with missing values except for the
-<a class="autorefs autorefs-internal" href="../annotating_data/annotating_data/#target">target variable</a>, which must not
+<a class="autorefs autorefs-internal" href="../annotating_data/#target">target variable</a>, which must not
 contain any NULL values (because having NULL targets does not
 make any sense). Please refer to the section on 
-<a class="autorefs autorefs-internal" href="../annotating_data/annotating_data/#join-key">join keys</a> for
+<a class="autorefs autorefs-internal" href="../annotating_data/#join-key">join keys</a> for
 details about their handling during the construction of the data
 model.</p>
 <p>During import, a NULL value is automatically inserted at all
 occurrences of the strings "nan", "None", "NA", or an empty string as
 well as at all occurrences of <code>None</code> and <code>NaN</code>.</p>
+<h2 id="import-formats">Import Formats</h2>
+<p><a href="" id="csv"></a></p>
+<h3 id="csv_1"><strong>CSV</strong></h3>
+<p>The fastest way to import data into the getML engine is to read it
+directly from CSV files.</p>
+<p>Import from CSV</p>
+<p>Using the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a> class method, you can
+create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> based on a table stored in
+the provided file(s). The <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_csv"><code>read_csv()</code></a>
+method will replace the content of the current
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows.</p>
+<p>Export to CSV</p>
+<p>In addition to reading data from a CSV file, you can also write an
+existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> back into one using
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_csv"><code>to_csv()</code></a>.</p>
+<p><a href="" id="pandas"></a></p>
+<h3 id="pandas_1"><strong>Pandas</strong></h3>
+<p><a href="https://pandas.pydata.org/" target="_blank" rel="noopener">Pandas</a> is one of the key packages used in most data science projects done in Python. The associated import interface is one of the slowest, but you can harness the good data exploration and manipulation capabilities of this Python package.</p>
+<p>Import from Pandas</p>
+<p>Using the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>DataFrame.from_pandas()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> based on the provided <code>pandas.DataFrame</code>. The <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_pandas"><code>read_pandas()</code></a> method will replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows.</p>
+<p>Export to Pandas</p>
+<p>In addition to reading data from a <code>pandas.DataFrame</code>, you can also write an existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> back into a <code>pandas.DataFrame</code> using <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_pandas"><code>DataFrame.to_pandas()</code></a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to the way data is stored within the getML engine, the dtypes of the original <code>pandas.DataFrame</code> cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.</p>
+</div>
+<p><a href="" id="json"></a></p>
+<h3 id="json_1"><strong>JSON</strong></h3>
+<p>A convenient but slow way to import data into the getML engine via its Python API.</p>
+<p>Import from JSON</p>
+<p>Using the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a> class method, you
+can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> based on a JSON
+string. The <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_json"><code>read_json()</code></a> method will
+replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>
+instance or append further rows.</p>
+<p>Export to JSON</p>
+<p>In addition to reading data from a JSON string, you can also convert an
+existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> into one using
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_json"><code>to_json()</code></a>.</p>
+<p><a href="" id="sqlite3"></a></p>
+<h3 id="sqlite3_1"><strong>SQLite3</strong></h3>
+<p><a href="https://sqlite.org/index.html" target="_blank" rel="noopener">SQLite3</a> is a popular in-memory database. It is faster than classical relational databases like PostgreSQL but less stable under massive parallel access. It requires all contained datasets to be loaded into memory, which might use up too much RAM, especially for large datasets.</p>
+<p>As with all other databases in the unified import interface of the getML Python API, 
+you first need to connect to it using <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_sqlite3.connect_sqlite3"><code>connect_sqlite3()</code></a>.</p>
+<p>Import from SQLite3</p>
+<p>By selecting an existing table from your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<p>Export to SQLite3</p>
+<p>You can also write your results back into the SQLite3 database. By providing a name for the destination table in <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+<p><a href="" id="mysql"></a></p>
+<h3 id="mysql_1"><strong>MySQL</strong></h3>
+<p><a href="https://www.mysql.com" target="_blank" rel="noopener">MySQL</a> is one of the most popular databases in use today. It 
+can be connected to the getML engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_mysql.connect_mysql"><code>connect_mysql()</code></a>. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.</p>
+<p>If you are unsure which port or socket your MySQL is running on, you can start the <code>mysql</code> command line interface
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mysql
+</code></pre></div></p>
+<p>Once inside the MySQL interface, use the following queries to get the required insights:
+<div class="highlight"><pre><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">@@</span><span class="n">port</span><span class="p">;</span>
+
+<span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">@@</span><span class="n">socket</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Import from MySQL</p>
+<p>By selecting an existing table of your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<p>Export to MySQL</p>
+<p>You can also write your results back into the MySQL database. By providing a name for the destination table in <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+<p><a href="" id="mariadb"></a></p>
+<h3 id="mariadb_1"><strong>MariaDB</strong></h3>
+<p><a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a> is a popular open source fork of MySQL. It can be
+connected to the getML engine using the function
+<a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_mariadb.connect_mariadb"><code>connect_mariadb()</code></a>. But first, make sure your
+database is running, you have the corresponding hostname, port as well
+as your username and password ready, and you can reach it from your command line.</p>
+<p>If you are unsure which port or socket your MariaDB is running
+on, you can start the <code>mysql</code> command line interface </p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mysql
+</code></pre></div>
+<p>Once inside the MariaDB interface, use the following queries to get the required insights:</p>
+<div class="highlight"><pre><span></span><code><span class="n">MariaDB</span><span class="w"> </span><span class="p">[(</span><span class="k">none</span><span class="p">)]</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">@@</span><span class="n">port</span><span class="p">;</span>
+
+<span class="n">MariaDB</span><span class="w"> </span><span class="p">[(</span><span class="k">none</span><span class="p">)]</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">@@</span><span class="n">socket</span><span class="p">;</span>
+</code></pre></div>
+<p>Import from MariaDB</p>
+<p>By selecting an existing table of your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<p>Export to MariaDB</p>
+<p>You can also write your results back into the MariaDB database. By providing a name for the destination table in <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+<p><a href="" id="postgresql"></a></p>
+<h3 id="postgresql_1"><strong>PostgreSQL</strong></h3>
+<p><a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> is a powerful and well-established open 
+source database system. It can be connected to the getML engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_postgres.connect_postgres"><code>connect_postgres()</code></a>. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.</p>
+<p>Import from PostgreSQL</p>
+<p>By selecting an existing table from your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<p>Export to PostgreSQL</p>
+<p>You can also write your results back into the PostgreSQL database. If you provide a name for the destination table in <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
+<p><a href="" id="greenplum"></a></p>
+<h3 id="greenplum_1"><strong>Greenplum</strong></h3>
+<div class="admonition enterprise-adm">
+<p class="admonition-title">Enterprise Feature</p>
+<p>This is an enterprise feature and not available in the community edition. Learn more about the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#why-choose-getml-enterprise">benefits</a> and see the <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">comparion of features</a> between the community and enterprise edition.</p>
+</div>
+<p><a href="https://greenplum.org/" target="_blank" rel="noopener">Greenplum</a> is an open source database system maintained by Pivotal
+Software, Inc. It can be connected to the getML engine using the
+function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_greenplum.connect_greenplum"><code>connect_greenplum()</code></a>. But first, make
+sure your database is running, you have the corresponding hostname,
+port as well as your user name and password ready, and you can reach
+it from your command line.</p>
+<p>Import from Greenplum</p>
+<p>By selecting an existing table of your database in the
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a> class method, you can create a
+new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a>
+and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the
+content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or
+append further rows based on either a table or a specific query.</p>
+<p>Export to Greenplum</p>
+<p>You can also write your results back into the Greenplum database. By
+providing a name for the destination table in
+<a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>Pipeline.transform()</code></a>, the features generated
+from your raw data will be written back. Passing it into
+<a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>Pipeline.predict()</code></a> generates predictions
+of the target variables to new, unseen data and stores the result into
+the corresponding table.</p>
+<p><a href="" id="odbc"></a></p>
+<h3 id="odbc_1"><strong>ODBC</strong></h3>
+<div class="admonition enterprise-adm">
+<p class="admonition-title">Enterprise Feature</p>
+<p>This is an enterprise feature and not available in the community edition. Learn more about the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#why-choose-getml-enterprise">benefits</a> and see the <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">comparion of features</a> between the community and enterprise edition.</p>
+</div>
+<p><a href="https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc" target="_blank" rel="noopener">ODBC</a> (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.</p>
+<p>In a nutshell, it works like this:</p>
+<ul>
+<li>Any database of relevance has an ODBC driver that translates calls from the ODBC API into a format the database can understand, returning the query results in a format understood by the ODBC API.</li>
+<li>To connect getML or other software to a database using ODBC, you first need to install the ODBC driver provided by your database vendor.</li>
+<li>In theory, ODBC drivers should translate queries from the SQL 99 standard into the SQL dialect, but this is often ignored in practice. Also, not all ODBC drivers support all ODBC calls.</li>
+</ul>
+<p>With getML, native APIs are preferred for connecting to relational databases. ODBC is used when native APIs are not feasible due to licensing or other restrictions, especially for connecting to proprietary databases like Oracle, Microsoft SQL Server, or IBM DB2.</p>
+<p>ODBC is pre-installed on modern Windows operating systems, while Linux and macOS can use open-source implementations like unixODBC and iODBC, with getML using unixODBC.</p>
+<p><strong>An example: Microsoft SQL Server</strong></p>
+<p>To connect to Microsoft SQL Server using ODBC:</p>
+<ol>
+<li>If you do not have a Microsoft SQL Server instance, you can <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank" rel="noopener">download</a> a trial or development version.</li>
+<li>Download the <a href="https://docs.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server" target="_blank" rel="noopener">ODBC driver for SQL Server</a>.</li>
+<li>Configure the ODBC driver. Many drivers provide customized scripts for this, so manual configuration might not be necessary.</li>
+</ol>
+<p>For Linux and macOS, create a <code>.odbc.ini</code> file in your home directory with the following contents:</p>
+<p><div class="highlight"><pre><span></span><code>[ANY-NAME-YOU-WANT]
+Driver = /opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
+Server = 123.45.67.890
+Port = 1433
+User = YOUR-USERNAME
+Password = YOUR-PASSWORD
+Database = YOUR-DATABASE
+Language = us_english
+NeedODBCTypesOnly = 1
+</code></pre></div>
+On <strong>Docker</strong>, you can make appropriate changes to the Dockerfile and then rerun <code>./setup.sh</code> or <code>bash setup.sh</code>.</p>
+<p>You will need to set the following parameters:</p>
+<ul>
+<li>The first line is the <em>server name</em> or <em>data source name</em>. You can use this name to tell getML that this is the server you want to connect to.</li>
+<li>The <em>Driver</em> is the location of the ODBC driver you have just downloaded. The location or file name might be different on your system.</li>
+<li>The <em>Server</em> is the IP address of the server. If the server is on the same machine as getML, just write "localhost".</li>
+<li>The <em>Port</em> is the port on which to connect the server. The default port for SQL Server is 1433.</li>
+<li><em>User</em> and <em>Password</em> are the user name and password that allow access to the server.</li>
+<li>The <em>Database</em> is the database inside the server you want to connect to.</li>
+</ul>
+<p>You can now connect getML to the database:</p>
+<div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_odbc</span><span class="p">(</span>
+    <span class="n">server_name</span><span class="o">=</span><span class="s2">&quot;ANY-NAME-YOU-WANT&quot;</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;YOUR-USERNAME&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;YOUR-PASSWORD&quot;</span><span class="p">,</span>
+    <span class="n">escape_chars</span><span class="o">=</span><span class="s2">&quot;[]&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Important: Always pass <em>escape_chars</em></strong></p>
+<p>Earlier we mentioned that ODBC drivers are <em>supposed</em> to translate standard SQL queries into the specific SQL dialects, but this requirement is often ignored.</p>
+<p>A typical issue is <em>escape characters</em>, needed when the names of your schemas, tables, or columns are SQL keywords, like the loans dataset containing a table named <em>ORDER</em>.</p>
+<p>To avoid this problem, you can envelop the schema, table, and column names in <em>escape characters</em>. 
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="ss">&quot;some_column&quot;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;SOME_SCHEMA&quot;</span><span class="p">.</span><span class="ss">&quot;SOME_TABLE&quot;</span><span class="p">;</span>
+</code></pre></div>
+getML always uses escape characters for its automatically generated queries.</p>
+<p>The SQL standard requires that the quotation mark (") be used as the escape character. However, many SQL dialects do not follow this requirement, e.g., SQL Server uses "[]":</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="n">some_column</span><span class="p">]</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">SOME_SCHEMA</span><span class="p">].[</span><span class="n">SOME_TABLE</span><span class="p">];</span>
+</code></pre></div>
+MySQL and MariaDB work like this:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">`</span><span class="n">some_column</span><span class="o">`</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">SOME_SCHEMA</span><span class="o">`</span><span class="p">.</span><span class="o">`</span><span class="n">SOME_TABLE</span><span class="o">`</span><span class="p">;</span>
+</code></pre></div>
+To avoid frustration, determine your server's escape characters and explicitly pass 
+them to <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_odbc.connect_odbc"><code>connect_odbc()</code></a>.</p>
+<p>Import data using ODBC</p>
+<p>By selecting an existing table from your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
+Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
+<p>Export data using ODBC</p>
+<p>You can also write your results back into the database using ODBC. When you provide a name for the destination table in <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>transform()</code></a>, the features generated from your raw data will be written back. Passing it into <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict()</code></a> generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.</p>
 
 <!-- Source file information -->
 

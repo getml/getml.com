@@ -12,32 +12,32 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/data_model/data_model/">
+        <link rel="canonical" href="https://dev.getml.com/latest/user_guide/concepts/deployment/">
       
       
-        <link rel="prev" href="../../annotating_data/annotating_data/">
+        <link rel="prev" href="../hyperopt/">
       
       
-        <link rel="next" href="../../preprocessing/preprocessing/">
+        <link rel="next" href="../../../install/">
       
       
         
       
       
-      <link rel="icon" href="../../../../images/favicon.png">
+      <link rel="icon" href="../../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
     
     
       
-        <title>Data model - getML Developer Portal</title>
+        <title>Deployment - getML Developer Portal</title>
       
     
     
   
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d5b5f0fd.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d5b5f0fd.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,11 +47,11 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/custom.css"
+    href="../../../assets/stylesheets/custom.css"
   />
   <link
     rel="stylesheet"
-    href="../../../../assets/stylesheets/getml.css"
+    href="../../../assets/stylesheets/getml.css"
   />
 
     
@@ -62,14 +62,14 @@
         
         
         
-        <link rel="stylesheet" href="../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-model_1" class="md-skip">
+        <a href="#deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
 
     <!-- Link to home -->
     <a
-      href="../../../.."
+      href="../../.."
       title="getML Developer Portal"
       class="md-header__button md-logo"
       aria-label="getML Developer Portal"
@@ -139,8 +139,8 @@
     >
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
 
@@ -161,7 +161,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data model
+              Deployment
             
           </span>
         </div>
@@ -282,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -304,7 +304,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../install/" class="md-tabs__link">
+        <a href="../../../install/" class="md-tabs__link">
           
   
     
@@ -344,7 +344,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../enterprise/benefits/" class="md-tabs__link">
+        <a href="../../../enterprise/benefits/" class="md-tabs__link">
           
   
     
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../reference/" class="md-tabs__link">
+        <a href="../../../reference/" class="md-tabs__link">
           
   
     
@@ -384,7 +384,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../examples/" class="md-tabs__link">
+        <a href="../../../examples/" class="md-tabs__link">
           
   
     
@@ -404,7 +404,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../about/company/" class="md-tabs__link">
+        <a href="../../../about/company/" class="md-tabs__link">
           
   
     
@@ -439,11 +439,11 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
+    <a href="../../.." title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component="logo">
       <!-- Logo -->
 
-  <img id="logo_light_mode" src="../../../../assets/brand/getml-light.svg" alt="logo" />
-  <img id="logo_dark_mode" src="../../../../assets/brand/getml-dark.svg" alt="logo">
+  <img id="logo_light_mode" src="../../../assets/brand/getml-light.svg" alt="logo" />
+  <img id="logo_dark_mode" src="../../../assets/brand/getml-dark.svg" alt="logo">
 
     </a>
     getML Developer Portal
@@ -482,7 +482,7 @@
         
   
   
-    <a href="../../../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -623,7 +623,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../quick_start/" class="md-nav__link ">
+            <a href="../../quick_start/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -699,7 +699,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../walkthrough/" class="md-nav__link ">
+            <a href="../../walkthrough/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -754,23 +754,43 @@
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
-      
+          
         
       
         
+          
+        
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
     
@@ -795,7 +815,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -837,44 +857,14 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../getml_suite/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../getml_suite/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
   
-    Components
+    getML Suite
   
 
     
@@ -882,13 +872,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -901,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project_management/project_management/" class="md-nav__link">
+      <a href="../project_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,51 +911,9 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../importing_data/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../importing_data/" class="md-nav__link">
-      
   
   <span class="md-ellipsis">
     
@@ -984,13 +926,7 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -1003,13 +939,148 @@
   
   
     <li class="md-nav__item">
-      <a href="../../annotating_data/annotating_data/" class="md-nav__link">
+      <a href="../annotating_data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     
   
     Annotating data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Data model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Preprocessing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../feature_engineering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Feature engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../predicting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Predicting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hyperopt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Hyperparameter optimization
   
 
     
@@ -1045,7 +1116,7 @@
   <span class="md-ellipsis">
     
   
-    Data model
+    Deployment
   
 
     
@@ -1062,7 +1133,7 @@
   <span class="md-ellipsis">
     
   
-    Data model
+    Deployment
   
 
     
@@ -1088,83 +1159,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+  <a href="#batch-prediction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tables
+        Batch prediction
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tables">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Endpoints">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-population-table" class="md-nav__link">
+  <a href="#request-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The population table
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#peripheral-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Peripheral tables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#placeholders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Placeholders
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#joins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Joins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-schemata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data schemata
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data schemata">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-star-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The star schema
+        Request Format
       
     </span>
   </a>
@@ -1172,38 +1193,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-snowflake-schema" class="md-nav__link">
+  <a href="#time-stamp-formats-in-requests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The snowflake schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#time-series" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Time series
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Time series">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#self-joining-a-single-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Self-joining a single table
+        Time stamp formats in requests
       
     </span>
   </a>
@@ -1211,10 +1204,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#horizon-and-memory" class="md-nav__link">
+  <a href="#using-an-existing-dataframe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Horizon and Memory
+        Using an existing DataFrame
       
     </span>
   </a>
@@ -1222,10 +1215,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#time_stamps-and-on" class="md-nav__link">
+  <a href="#using-data-from-a-database" class="md-nav__link">
     <span class="md-ellipsis">
       
-        time_stamps and on
+        Using data from a database
       
     </span>
   </a>
@@ -1233,10 +1226,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lagged-target-and-horizon" class="md-nav__link">
+  <a href="#transform-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lagged Target and horizon
+        Transform Endpoint
       
     </span>
   </a>
@@ -1244,10 +1237,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#features-based-on-time-stamps" class="md-nav__link">
+  <a href="#predict-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features based on time stamps
+        Predict Endpoint
       
     </span>
   </a>
@@ -1263,141 +1256,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../preprocessing/preprocessing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Preprocessing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../feature_engineering/feature_engineering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Feature engineering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../predicting/predicting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Predicting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../hyperopt/hyperopt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperparameter optimization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../deployment/deployment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Deployment
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1457,7 +1315,7 @@
         
   
   
-    <a href="../../../../install/" class="md-nav__link">
+    <a href="../../../install/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1523,7 +1381,7 @@
         
   
   
-    <a href="../../../../enterprise/benefits/" class="md-nav__link">
+    <a href="../../../enterprise/benefits/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1597,7 +1455,7 @@
         
   
   
-    <a href="../../../../reference/" class="md-nav__link">
+    <a href="../../../reference/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1655,7 +1513,7 @@
         
   
   
-    <a href="../../../../examples/" class="md-nav__link">
+    <a href="../../../examples/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1713,7 +1571,7 @@
         
   
   
-    <a href="../../../../about/company/" class="md-nav__link">
+    <a href="../../../about/company/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1765,83 +1623,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+  <a href="#batch-prediction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tables
+        Batch prediction
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Tables">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP Endpoints">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-population-table" class="md-nav__link">
+  <a href="#request-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The population table
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#peripheral-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Peripheral tables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#placeholders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Placeholders
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#joins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Joins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-schemata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data schemata
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data schemata">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-star-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The star schema
+        Request Format
       
     </span>
   </a>
@@ -1849,38 +1657,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-snowflake-schema" class="md-nav__link">
+  <a href="#time-stamp-formats-in-requests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The snowflake schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#time-series" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Time series
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Time series">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#self-joining-a-single-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Self-joining a single table
+        Time stamp formats in requests
       
     </span>
   </a>
@@ -1888,10 +1668,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#horizon-and-memory" class="md-nav__link">
+  <a href="#using-an-existing-dataframe" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Horizon and Memory
+        Using an existing DataFrame
       
     </span>
   </a>
@@ -1899,10 +1679,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#time_stamps-and-on" class="md-nav__link">
+  <a href="#using-data-from-a-database" class="md-nav__link">
     <span class="md-ellipsis">
       
-        time_stamps and on
+        Using data from a database
       
     </span>
   </a>
@@ -1910,10 +1690,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lagged-target-and-horizon" class="md-nav__link">
+  <a href="#transform-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lagged Target and horizon
+        Transform Endpoint
       
     </span>
   </a>
@@ -1921,10 +1701,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#features-based-on-time-stamps" class="md-nav__link">
+  <a href="#predict-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features based on time stamps
+        Predict Endpoint
       
     </span>
   </a>
@@ -1961,7 +1741,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../../" class="md-path__link">
+        <a href="../../" class="md-path__link">
           
   <span class="md-ellipsis">
     User Guide
@@ -1978,7 +1758,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
     Concepts
@@ -2010,73 +1790,165 @@
 
 
 <!-- Page content -->
-<p><a href="" id="data-model"></a></p>
-<h1 id="data-model_1">Data model</h1>
-<p>Defining the data model is a crucial step before training one of getML's <a class="autorefs autorefs-internal" href="../../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>s. You typically deal with this step after having <a class="autorefs autorefs-internal" href="../../importing_data/#importing-data_1">imported your data</a> and <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#roles">specified the roles</a> of each column.</p>
-<p>When working with getML, the raw data usually comes in the form of relational data. That means the information relevant for a prediction is spread over several tables. The data model is the definition of the relationships between all of them.</p>
-<p>Most relational machine learning problems can be represented in the form of a star schema, in which case you can use the <a class="autorefs autorefs-internal" href="../../../../reference/data/star_schema/#getml.data.StarSchema"><code>StarSchema</code></a> abstraction. If your data set is a time series, you can use the <a class="autorefs autorefs-internal" href="../../../../reference/data/time_series/#getml.data.TimeSeries"><code>TimeSeries</code></a> abstraction.
-<a href="" id="data-model-tables"></a></p>
-<h2 id="tables">Tables</h2>
-<p>When defining the data model, we distinguish between a population table and one or more peripheral tables. In the context of this tutorial, we will use the term "table" as a catch-all for <a class="autorefs autorefs-internal" href="../../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>s and <a class="autorefs autorefs-internal" href="../../../../reference/data/view/#getml.data.View"><code>View</code></a>s.
-<a href="" id="data-model-population-table"></a></p>
-<h3 id="the-population-table">The population table</h3>
-<p>The population table is the main table of the analysis. It defines the statistical 
-population of your machine learning problem and contains the <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#target">target</a> variable(s), which we want to predict. Furthermore, the table usually also contains one or more columns with the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#join-key">join_key</a>. These are keys used to establish a relationship – also called <a class="autorefs autorefs-internal" href="#joins">joins</a> – with one or more peripheral tables.</p>
-<p>The example below contains the population table of a customer churn analysis. The target variable is <code>churn</code> – whether a person stops using the services and products of a company. It also contains the information whether or not a given customer has churned after a certain reference date. The join key <code>customer_id</code> is used to establish relations with a <a class="autorefs autorefs-internal" href="#peripheral-tables">peripheral table</a>. Additionally, the date the customer joined the company is contained in the column <code>date_joined</code>, which we have assigned the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#time-stamp">time_stamp</a>.</p>
-<p><img alt="Population table example" class="centered-image" src="../../../../images/population_table.png" style="width: 300px;" /></p>
-<p><a href="" id="data-model-peripheral-tables"></a></p>
-<h2 id="peripheral-tables">Peripheral tables</h2>
-<p>Peripheral tables contain additional information relevant for the prediction of the target variable in the <a class="autorefs autorefs-internal" href="#the-population-table">population table</a>. Each of them is related to the latter (or another peripheral table, refer to <a class="autorefs autorefs-internal" href="#the-snowflake-schema">the snowflake schema</a>) via a <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#join-key">join_key</a>.</p>
-<p>The images below represent two peripheral tables that could be used for our customer churn analysis. One table represents complaints a customer made with a certain agent, and the other represents the transactions the customer made using their account.</p>
-<p><img alt="Peripheral tables example" class="centered-image" src="../../../../images/peripheral_tables.png" style="width: 600px;" /></p>
-<p><a href="" id="data-model-placeholders"></a></p>
-<h2 id="placeholders">Placeholders</h2>
-<p>In getML, <a class="autorefs autorefs-internal" href="../../../../reference/data/placeholder/#getml.data.Placeholder"><code>Placeholder</code></a>s are used to construct the <a class="autorefs autorefs-internal" href="../../../../reference/data/data_model/#getml.data.DataModel"><code>DataModel</code></a>. They are abstract representations of <a class="autorefs autorefs-internal" href="../../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>s or <a class="autorefs autorefs-internal" href="../../../../reference/data/view/#getml.data.View"><code>View</code></a>s and the relationships among each other, but do not contain any data themselves.</p>
-<p>The idea behind the placeholder concept is that they allow constructing an abstract data model without any reference to an actual data set. This data model serves as input for the <a class="autorefs autorefs-internal" href="../../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>. Later on, the <a class="autorefs autorefs-internal" href="../../../../reference/feature_learning/#getml.feature_learning"><code>feature_learning</code></a> algorithms can be trained and applied on any data set that follows this data model.</p>
-<p>More information on how to construct placeholders and build a data model can be found in the API documentation for <a class="autorefs autorefs-internal" href="../../../../reference/data/placeholder/#getml.data.Placeholder"><code>Placeholder</code></a> and <a class="autorefs autorefs-internal" href="../../../../reference/data/data_model/#getml.data.DataModel"><code>DataModel</code></a>.
-<a href="" id="data-model-joins"></a></p>
-<h2 id="joins">Joins</h2>
-<p>Joins are used to establish relationships between placeholders. To join two placeholders, the data frames used to derive them should both have at least one <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#join-key">join_key</a>. The joining itself is done using the <a class="autorefs autorefs-internal" href="../../../../reference/data/placeholder/#getml.data.Placeholder.join"><code>join()</code></a> method.</p>
-<p>All columns corresponding to time stamps have to be given the role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#time-stamp">time_stamp</a>, and one of them in both the population and peripheral 
-table is usually passed to the <a class="autorefs autorefs-internal" href="../../../../reference/data/placeholder/#getml.data.Placeholder.join"><code>join()</code></a> method. This 
-approach ensures that no information from the future is considered during training by including only those rows of the peripheral table in the join operation for which the time stamp of the corresponding row in the population table is either the same or more recent.</p>
-<p><a href="" id="data-model-data-schemata"></a></p>
-<h2 id="data-schemata">Data schemata</h2>
-<p>After creating placeholders for all data frames in an analysis, we are ready to create the actual data schema. A data schema is a certain way of assembling population and peripheral tables.</p>
-<h3 id="the-star-schema">The star schema</h3>
-<p>The <a class="autorefs autorefs-internal" href="../../../../reference/data/star_schema/#getml.data.StarSchema"><code>StarSchema</code></a> is the simplest way of establishing relations between the population and the peripheral tables, sufficient for the majority of data science projects.</p>
-<p>In the star schema, the population table is surrounded by any number of peripheral tables, all joined via a certain join key. However, no joins between peripheral tables are allowed.</p>
-<p>Because this is a very popular schema in many machine learning problems on relational data, getML contains a special class for these sorts of problems: <a class="autorefs autorefs-internal" href="../../../../reference/data/star_schema/#getml.data.StarSchema"><code>StarSchema</code></a>.</p>
-<p>The population table and two peripheral tables introduced in <a class="autorefs autorefs-internal" href="#tables">Tables</a> can be arranged in a star schema like this:</p>
-<p><img alt="Star schema example" class="centered-image" src="../../../../images/star_scheme.png" style="width: 750px;" /></p>
-<p><a href="" id="data-model-snowflake-schema"></a></p>
-<h3 id="the-snowflake-schema">The snowflake schema</h3>
-<p>In some cases, the star schema is not enough to represent the complexity of a data set. This is where the snowflake schema comes in: In a snowflake schema, peripheral tables can have peripheral tables of their own.</p>
-<p>Assume that in the customer churn analysis shown earlier, there is an additional table containing information about the calls a certain agent made in customer service. It can be joined to the <code>COMPLAINTS</code> table using the key <code>agent_id</code>.</p>
-<p><img alt="Snowflake schema example" class="centered-image" src="../../../../images/snowflake_schema.png" style="width: 750px;" /></p>
-<p>To model snowflake schemata, you need to use the <a class="autorefs autorefs-internal" href="../../../../reference/data/data_model/#getml.data.DataModel"><code>DataModel</code></a> and <a class="autorefs autorefs-internal" href="../../../../reference/data/container/#getml.data.Container"><code>Container</code></a> classes.</p>
-<p><a href="" id="data-model-time-series"></a></p>
-<h2 id="time-series">Time series</h2>
-<p>Time series can be handled by a self-join. In addition, some extra parameters and considerations are required when building features based on time stamps.
-<a href="" id="data-model-self-join"></a></p>
-<h3 id="self-joining-a-single-table">Self-joining a single table</h3>
-<p>If you are dealing with a classical (multivariate) time series and all your data is contained in a single table, all the concepts covered so far still apply. You just have to perform a so-called self-join by providing your table as both the population and peripheral table and <a class="autorefs autorefs-internal" href="#joins">join</a> them.</p>
-<p>The process works as follows: Whenever a row in the population table - a single measurement - is taken, it will be combined with all the content of the peripheral table - the same time series - for which the time stamps are smaller than the one in the line we picked.</p>
-<p>You can also use the <a class="autorefs autorefs-internal" href="../../../../reference/data/time_series/#getml.data.TimeSeries"><code>TimeSeries</code></a> abstraction, which abstracts away the self-join. In this case, you do not have to think about self-joins too much.</p>
-<h3 id="horizon-and-memory">Horizon and Memory</h3>
-<p>Crucial concepts of time series analysis are horizon and memory. In the context of getML's time series analysis, horizon is defined as a point forecast. That means the prediction of the target variable at the point as far in the future as defined by the horizon.   </p>
-<p>Memory, on the other hand is the time duration into the past, that is considered when making a prediction. The memory is used to define the time window of data entering the model between the past and <em>now</em>. The horizon defines the point in the future that the predictions is being made for.   </p>
-<h3 id="time_stamps-and-on"><code>time_stamps</code> and <code>on</code></h3>
-<p>Two parameters in the time series signature determine how the self join is carried out. The <code>time_stamps</code> parameter defines what column is the underlying time dimension to which memory and horizon are applied to. The chosen column must also be of role <a class="autorefs autorefs-internal" href="../../annotating_data/annotating_data/#time-stamp">time_stamp</a>.  </p>
-<p><code>on</code> simply provides an extra handle to control, what subset of the data is part of any given time series. For example if you have a time series of sales data, you might want to only consider the sales data of a certain product category. In this case you would specify the <code>on</code> parameter to be the column containing the product category.</p>
+<h1 id="deployment">Deployment</h1>
+<p>The results of the <a class="autorefs autorefs-internal" href="../feature_engineering/#feature-engineering_1">feature learning</a> and the <a class="autorefs autorefs-internal" href="../predicting/#predicting_1">prediction</a> can be retrieved in different ways and formats.</p>
+<p><strong>Transpiling pipelines</strong></p>
+<blockquote>
+<p>Using <a class="autorefs autorefs-internal" href="../../../reference/pipeline/sql_code/#getml.pipeline.SQLCode.save"><code>SQLCode.save()</code></a>, you can transpile Pipelines to SQL code, which can be used without any proprietary components.</p>
+</blockquote>
+<p><strong>Returning Python objects</strong></p>
+<blockquote>
+<p>Using the <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>Pipeline.transform</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>Pipeline.predict</code></a> methods of a trained <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, you can access both the features and the predictions as <code>numpy.ndarray</code> via the Python API.</p>
+</blockquote>
+<p><strong>Writing into a database</strong></p>
+<blockquote>
+<p>You can also write both features and prediction results back into a new table of the connected database by providing the <code>table_name</code> argument in the <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.transform"><code>Pipeline.transform</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>Pipeline.predict</code></a> methods. Please refer to the <a class="autorefs autorefs-internal" href="../importing_data/#unified-import-interface">unified import interface</a> for information on how to connect to a database.</p>
+</blockquote>
+<p><strong>Responding to a HTTP POST request</strong></p>
+<blockquote>
+<p>The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.</p>
+</blockquote>
+<h2 id="batch-prediction">Batch prediction</h2>
+<p>Batch prediction pipelines are the most common way of productionizing machine learning pipelines on relational data. These pipelines are usually set to run regularly (once a month, once a week, once a day...) to create a batch of predictions on the newest data. They are typically inserted into a <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> container and scheduled using tools like <a href="https://www.jenkins.io/" target="_blank" rel="noopener">Jenkins</a> and/or <a href="https://airflow.apache.org/" target="_blank" rel="noopener">Airflow</a>.</p>
+<p>If you are looking for a pure Python, 100% open-source way to productionize getML's <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>s, you can transpile all the features into sqlite3 code. sqlite3 is part of the Python standard library, and you can use getML's 100% open source and pure Python <a class="autorefs autorefs-internal" href="../../../reference/sqlite3/#getml.sqlite3"><code>sqlite3</code></a> which provides some useful extra functionality not included in Python's standard library.</p>
+<h2 id="http-endpoints">HTTP Endpoints</h2>
+<p>As soon as you have trained a pipeline, whitelisted it for external access using its 
+<a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.deploy"><code>deploy</code></a> method, and configured the getML monitor 
+for <a class="autorefs autorefs-internal" href="../../../home/installation/remote_access/#remote-access_1">remote access</a>, you can transform new data into 
+features or make predictions on them using these endpoints:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#transform-endpoint">Transform endpoint: <code>http://localhost:1709/transform/PIPELINE_NAME</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#predict-endpoint">Predict endpoint: <code>http://localhost:1709/predict/PIPELINE_NAME</code></a></li>
+</ul>
+<p>To each of them, you must send a POST request containing the new data as a JSON string in a specific <a class="autorefs autorefs-internal" href="#request-format">request format</a>.</p>
 <div class="admonition note">
-<p class="admonition-title">Tip</p>
-<p>If you assign a column to the <code>on</code> parameter, then this column will not enter the model as a predictor. If you have reason to believe that this column is relevant to the model (i.e. the actual product category), duplicate that column in advance and assign the duplicate to the <code>on</code> parameter. (see class method <a class="autorefs autorefs-internal" href="../../../../reference/data/data_frame/#getml.data.DataFrame.add"><code>add()</code></a>)</p>
+<p class="admonition-title">Note</p>
+<p>For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  <a href="http://localhost:1709/predict/PIPELINE_NAME" target="_blank" rel="noopener">http://localhost:1709/predict/PIPELINE_NAME</a></p>
 </div>
-<h3 id="lagged-target-and-horizon">Lagged Target and horizon</h3>
-<p>Another useful parameter in time series analysis is <code>lagged_target</code>. This boolean controls whether the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until and including <em>now</em> is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.</p>
-<h3 id="features-based-on-time-stamps">Features based on time stamps</h3>
-<p>The getML engine is able to automatically generate features based on aggregations over time windows. Both the length of the time window and the aggregation itself will be determined by the feature learning algorithm. The only requirement is to provide the temporal resolution your time series is sampled with in the <code>delta_t</code> parameter in any feature learning algorithm.</p>
+<p><a href="" id="deployment-request-format"></a></p>
+<h3 id="request-format">Request Format</h3>
+<p>In all POST requests to the endpoints, a JSON string with the following syntax has to be provided in the body:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;column_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;column_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">},{</span>
+<span class="w">    </span><span class="nt">&quot;column_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;column_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;column_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;column_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>It has to have exactly two keys in the top level called
+<code>population</code> and <code>peripheral</code>. These will contain the new
+input data.</p>
+<p>The order of the columns is irrelevant. They will be matched according to their
+names. However, the order of the
+individual peripheral tables is very important and has to exactly
+match the order the corresponding <a class="autorefs autorefs-internal" href="../../../reference/data/placeholder/#getml.data.Placeholder">Placeholder</a>
+have been provided in the constructor of <code>pipeline</code>.</p>
+<p>In our example above, we
+could post a JSON string like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.4</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.65</span><span class="p">,</span><span class="w"> </span><span class="mf">0.81</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="time-stamp-formats-in-requests">Time stamp formats in requests</h3>
+<p>You might have noticed that the time stamps in the example above have been
+passed as numerical values and not as their string representations
+shown in the beginning. Both ways are
+supported by the getML monitor. But if you choose to pass the
+string representation, you also have to specify the particular format
+in order for the getML engine to interpret your data properly.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2010-01-01 00:15:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2010-01-01 08:00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2010-01-01 09:30:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2010-01-01 13:00:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2010-01-01 23:35:00&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2010-01-01 12:30:00&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2010-01-01 23:30:00&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;timeFormats&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;%Y-%m-%d %H:%M:%S&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>All special characters available for specifying the format of the time
+stamps are listed and described in
+e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_csv"><code>read_csv()</code></a>.</p>
+<h3 id="using-an-existing-dataframe">Using an existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a></h3>
+<p>You can also use a
+<a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> that already 
+exists on the getML engine:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;df&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;peripheral_table&quot;</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.65</span><span class="p">,</span><span class="w"> </span><span class="mf">0.81</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="using-data-from-a-database">Using data from a database</h3>
+<p>You can also read the data from the connected database
+(see <a class="autorefs autorefs-internal" href="../importing_data/#unified-import-interface">unified import interface</a>) 
+by passing an arbitrary query to the <code>query</code> key:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SELECT * FROM PERIPHERAL WHERE join_key = &#39;0&#39;;&quot;</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;join_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;time_stamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.65</span><span class="p">,</span><span class="w"> </span><span class="mf">0.81</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="" id="deployment-transform"></a></p>
+<h3 id="transform-endpoint">Transform Endpoint</h3>
+<p>The transform endpoint returns the generated features.</p>
+<p><a href="http://localhost:1709/transform/PIPELINE_NAME" target="_blank" rel="noopener">http://localhost:1709/transform/PIPELINE_NAME</a></p>
+<p>Such an HTTP request can be sent in many languages. For
+illustration purposes, we will use the command line tool <code>curl</code>,
+which comes preinstalled on both Linux and macOS. Also, we will use
+the HTTP port via localhost (only possible for terminals running on
+the same machine as the getML monitor) for better reproducibility.</p>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">           </span><span class="se">\</span>
+<span class="w">     </span>--request<span class="w"> </span>POST<span class="w">                                      </span><span class="se">\</span>
+<span class="w">     </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;peripheral&quot;:[{&quot;column_01&quot;:[2.4,3.0,1.2,1.4,2.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.1,0.2,0.3,0.4,0.8]}],&quot;population&quot;:{&quot;column_01&quot;:[2.2,3.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.65,0.81]}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>http://localhost:1709/transform/PIPELINE_NAME
+</code></pre></div>
+<a href="" id="deployment-predict"></a></p>
+<h3 id="predict-endpoint">Predict Endpoint</h3>
+<p>When using getML as an end-to-end data science pipeline, you can use
+the predict endpoint to upload new, unseen data and receive the
+resulting predictions as a response via HTTP.</p>
+<p><a href="http://localhost:1709/predict/PIPELINE_NAME" target="_blank" rel="noopener">http://localhost:1709/predict/PIPELINE_NAME</a></p>
+<p>Such an HTTP request can be sent in many languages. For
+illustration purposes, we will use the command line tool <code>curl</code>,
+which comes preinstalled on both Linux and macOS. Also, we will use
+the HTTP port via localhost (only possible for terminals running on
+the same machine as the getML monitor) for better reproducibility.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">           </span><span class="se">\</span>
+<span class="w">     </span>--request<span class="w"> </span>POST<span class="w">                                      </span><span class="se">\</span>
+<span class="w">     </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;peripheral&quot;:[{&quot;column_01&quot;:[2.4,3.0,1.2,1.4,2.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.1,0.2,0.3,0.4,0.8]}],&quot;population&quot;:{&quot;column_01&quot;:[2.2,3.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.65,0.81]}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>http://localhost:1709/predict/PIPELINE_NAME
+</code></pre></div>
 
 <!-- Source file information -->
 
@@ -2198,18 +2070,18 @@ approach ensures that no information from the future is considered during traini
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.0d59af3e.min.js"></script>
       
-        <script src="../../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
-  <script src="../../../../assets/javascripts/custom.js"></script>
+  <script src="../../../assets/javascripts/custom.js"></script>
 
   <!-- Test JSON-LD -->
   <!-- <script type="application/ld+json">
