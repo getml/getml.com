@@ -14,7 +14,7 @@ hide:
 </center>
 
 
-# Your <span class="accent">ML suite</span> for relational <br>and time-series data.
+# Your <span class="accent">ML suite</span> for relational <br>and time-series data. {: .h1-lg }
 
 GetML Relational Learning unlocks a 10x speed-up potential and superior model performance. <br class="show-lg">
 A game changer in predictive applications for enterprise applications.

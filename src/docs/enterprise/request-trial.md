@@ -1,6 +1,8 @@
 ---
 hide:
   - toc
+palette:
+  - scheme: default
 ---
 
 # **GetML enterprise trial download**
@@ -25,7 +27,7 @@ This is best for data scientists and engineers that are already familiar with ou
 ///
 
 
-/// html | div.box.box-bg.no-dark.col-2-lg.right
+/// html | div.box.box-bg.col-2-lg.right
 
 <script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
 <script>
