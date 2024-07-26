@@ -53,7 +53,7 @@ and introduces the feature learning algorithms of getML: **FastProp**, **Fastboo
 
 ### [Predicting][predicting]
 
-Explore the four **built-in predictors** of getML and learn how they integrate into the 
+Explore the six **built-in predictors** of getML and learn how they integrate into the 
 overall getML pipeline to facilitate efficient predictions.
 
 ### [Hyperparameter Optimization][hyperparameter-optimization]
