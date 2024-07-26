@@ -108,7 +108,7 @@ While most of getML's preprocessors are straightforward, two of them deserve a m
 [](){#preprocessing-mappings}
 ## Mappings
 
-!!! info "Enterprise Feature"
+!!! enterprise-adm "Enterprise Feature"
     This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [`Mappings`][getml.preprocessors.Mapping] are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.

@@ -221,7 +221,7 @@ You can also write your results back into the PostgreSQL database. If you provid
 [](){#greenplum}
 ### **Greenplum**
 
-!!! info "Enterprise Feature"
+!!! enterprise-adm "Enterprise Feature"
     This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
@@ -254,7 +254,7 @@ the corresponding table.
 [](){#odbc}
 ### **ODBC**
 
-!!! info "Enterprise Feature"
+!!! enterprise-adm "Enterprise Feature"
     This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
 
 [ODBC](https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc) (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
