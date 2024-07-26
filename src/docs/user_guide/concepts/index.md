@@ -1,15 +1,14 @@
 ---
-title: User Guide
+title: Concepts
 ---
 
-[](){#user-guide}
+[](){#concepts-guide}
 # Concepts
 
-Designed to align with the typical workflow of a Data Science project, this guide offers detailed insights into key concepts, 
-supported by references to the comprehensive Python API documentation. Its goal is to equip 
-you with all the necessary information to effectively use getML for your projects, ensuring 
-a seamless and productive experience.
-
+Designed to align with the typical workflow of a Data Science project, this concept section 
+offers detailed insights into key concepts, supported by references to the comprehensive 
+Python API documentation. Its goal is to equip you with all the necessary information to effectively 
+use getML for your projects, ensuring a seamless and productive experience.
 
 ### [getML Suite][getml-suite]
 
