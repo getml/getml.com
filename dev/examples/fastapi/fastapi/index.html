@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../../index-documentation/" class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../../index-documentation/" class="md-nav__link">
+    <a href="../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -1096,46 +1121,6 @@
 
 
 
-  
-
-
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-    
-    
-      <li class="md-path__item">
-        <a href="../../" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    Examples
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
 
               
               <article class="md-content__inner md-typeset">
@@ -1165,7 +1150,7 @@
 <p>Helpful resources to get started:</p>
 <p><a href="https://fastapi.tiangolo.com/tutorial/first-steps/" target="_blank" rel="noopener">FastAPI get started</a><br />
 <a href="https://github.com/getml/getml-demo" target="_blank" rel="noopener">getML example notebooks</a><br />
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#get-started-with-getml">getML documentation</a>  </p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/#user-guide">getML user guide</a>  </p>
 <p>This integration example requires at least v1.4.0 of the <a href="https://pypi.org/project/getml/" target="_blank" rel="noopener">getml package</a> and at least <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python 3.8</a>.</p>
 <h3 id="example-data">Example Data</h3>
 <p>As an example project we first run the demo notebook <a href="https://notebooks.getml.com/github/getml/getml-demo/blob/master/loans.ipynb" target="_blank" rel="noopener">"Loan default prediction"</a> which creates a project named "loans" in the getML engine.</p>
@@ -1240,7 +1225,7 @@ the previously created pipeline has the id <code>a1b2c3</code>.</p>
 <p>To create the prediction endpoint the data scheme for the request body needs to
 be created first. For a prediction the getML engine requires multiple data sets,
 the population data set <code>population</code> and any related peripheral data set
-<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#data-model_1">Data model</a> of the pipeline. The
+<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/data_model/data_model/#data-model_1">Data model</a> of the pipeline. The
 peripheral data sets can be either a list or a dictionary where the order of the
 data sets in the list needs to match the order returned by
 <code>[_.name for _ in getml.pipeline.metadata.peripheral]</code>. This information

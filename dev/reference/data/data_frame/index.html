@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../../index-documentation/" class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../../index-documentation/" class="md-nav__link">
+    <a href="../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -4575,25 +4600,9 @@
 
 
 
-  
-
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
       
       
         
@@ -4703,7 +4712,7 @@ of the <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_cs
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_db"><code>from_db</code></a>,
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_json"><code>from_json</code></a>, or
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_pandas"><code>from_pandas</code></a> class methods. The
-<a class="autorefs autorefs-internal" href="../../../user_guide/importing_data/#importing-data_1">Importing Data</a> section in the user guide explains the
+<a class="autorefs autorefs-internal" href="../../../user_guide/concepts/importing_data/#importing-data_1">Importing Data</a> section in the user guide explains the
 particularities of each of those flavors of the unified
 import interface.</p>
 <p>If the data frame object is already present in the engine -
@@ -4713,7 +4722,7 @@ either in memory as a temporary object or on disk when
 handler without altering the underlying data. For more information
 about the lifecycle of the data in the getML engine and its
 synchronization with the Python API please see the
-corresponding <a class="autorefs autorefs-internal" href="../../../user_guide/getml_suite/python_api/#lifecycles-and-synchronization-between-engine-and-api">User Guide</a>.</p>
+corresponding <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/python_api/#lifecycles-and-synchronization-between-engine-and-api">User Guide</a>.</p>
 
 
 <table>
@@ -8854,7 +8863,7 @@ the CSV file(s), and return a corresponding
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -11567,7 +11576,7 @@ header with the column names.</p>
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -13580,8 +13589,8 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
       <p>Assigns a new role to one or more columns.</p>
 <p>When switching from a role based on type float to a role based on type
 string or vice verse, an implicit type conversion will be conducted.
-The <code>time_formats</code> argument is used to interpret <a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#time-stamp">Time Stamps</a>. For more information on
-roles, please refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#annotating-data_1">User Guide</a>.</p>
+The <code>time_formats</code> argument is used to interpret <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#time-stamp">Time Stamps</a>. For more information on
+roles, please refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#annotating-data_1">User Guide</a>.</p>
 
 
 <table>
@@ -15247,7 +15256,7 @@ located in an S3 bucket.</p>
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -16309,7 +16318,7 @@ like <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.set_role"
 string or vice verse, an implicit type conversion will be conducted.
 The <code>time_formats</code> argument is used to interpret time
 format string: <code>annotating_roles_time_stamp</code>. For more information on
-roles, please refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#annotating-data_1">User Guide</a>.</p>
+roles, please refer to the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#annotating-data_1">User Guide</a>.</p>
 
 
 <table>
@@ -16705,7 +16714,7 @@ only be used in comparison to other columns of the same unit.</p>
 is hardly interesting, but it might be useful to know how often
 we have seen that same bank account number in another table.</p>
 <p>For more information on units, please refer to the
-<a class="autorefs autorefs-internal" href="../../../user_guide/annotating_data/annotating_data/#units">User Guide</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/annotating_data/#units">User Guide</a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">

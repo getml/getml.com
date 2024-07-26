@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../../index-documentation/" class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../../index-documentation/" class="md-nav__link">
+    <a href="../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -3110,25 +3135,9 @@
 
 
 
-  
-
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
       
       
         
@@ -5442,7 +5451,7 @@ using <a class="autorefs autorefs-internal" href="../../data/placeholder/#getml.
     <span class="n">random_state</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -5607,7 +5616,7 @@ column.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -5815,7 +5824,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with categorical variables</span>
@@ -5994,7 +6003,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -6159,7 +6168,7 @@ column.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -6365,7 +6374,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with categorical variables</span>
@@ -6542,7 +6551,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -6706,7 +6715,7 @@ column.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -6912,7 +6921,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with continuous numerical variables</span>
@@ -7089,7 +7098,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -7254,7 +7263,7 @@ column.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -7490,7 +7499,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with categorical variables</span>
@@ -7697,7 +7706,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -7861,7 +7870,7 @@ column.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -8091,7 +8100,7 @@ column.</p>
     <span class="n">random_state</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with continuous numerical variables</span>
@@ -8294,8 +8303,8 @@ column.</p>
     <span class="n">population_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name1</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name2</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation1</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span><span class="p">,</span>
-    <span class="n">aggregation2</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation1</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">SUM</span><span class="p">,</span>
+    <span class="n">aggregation2</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../../data/data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">]</span>
 </code></pre></div>
 
@@ -8515,7 +8524,7 @@ column in the first peripheral table.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Sum">Sum</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.SUM" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.SUM">SUM</a></code>
                   </span>
               </p>
             </td>
@@ -8534,7 +8543,7 @@ column in the second peripheral table.</p>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregations.Count">Count</span></code>
+                      <code><a class="autorefs autorefs-internal" title="getml.feature_learning.aggregations.COUNT" href="../../feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT">COUNT</a></code>
                   </span>
               </p>
             </td>
@@ -8839,8 +8848,8 @@ column in the second peripheral table.</p>
     <span class="n">population_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">peripheral_name2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">aggregation1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span><span class="p">,</span>
-    <span class="n">aggregation2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
+    <span class="n">aggregation1</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">SUM</span><span class="p">,</span>
+    <span class="n">aggregation2</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a random dataset with continuous numerical variables</span>

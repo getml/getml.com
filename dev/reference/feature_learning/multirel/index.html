@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../../index-documentation/" class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../../index-documentation/" class="md-nav__link">
+    <a href="../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -2832,25 +2857,9 @@
 
 
 
-  
-
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
       
       
         
@@ -2922,7 +2931,7 @@
 </h1>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">Multirel</span><span class="p">(</span>
     <span class="n">aggregation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a></span><span class="p">[</span>
-        <span class="n"><span title="getml.feature_learning.aggregate.types.MultirelAggregations">MultirelAggregations</span></span>
+        <span class="n"><span title="getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</span></span>
     <span class="p">]</span> <span class="o">=</span> <span class="n">MULTIREL</span><span class="o">.</span><span class="n">default</span><span class="p">,</span>
     <span class="n">allow_sets</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">delta_t</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -2959,13 +2968,13 @@
 for relational data and time series. It is based on an efficient
 variation of the Multi-Relational Decision Tree Learning (MRDTL).</p>
 <p>For more information on the underlying feature learning algorithm, check
-out the User guide: <a class="autorefs autorefs-internal" href="../../../user_guide/feature_engineering/feature_engineering/#multirel">Multirel</a>.</p>
+out the User guide: <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/feature_engineering/feature_engineering/#multirel">Multirel</a>.</p>
 
 
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -2983,12 +2992,12 @@ out the User guide: <a class="autorefs autorefs-internal" href="../../../user_gu
               <div class="doc-md-description">
                 <p>It is a class variable holding the available aggregation sets for the
 Multirel feature learner.
-Value: [<code>MULTIREL</code>][getml.feature_learning.aggregate.sets.MULTIREL].</p>
+Value: <a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations.MULTIREL"><code>MULTIREL</code></a>.</p>
               </div>
               <p>
                   <span class="doc-attribute-annotation">
                     <b>TYPE:</b>
-                      <code><span title="getml.feature_learning.aggregate.sets.MultirelAggregationsSets">MultirelAggregationsSets</span></code>
+                      <code><span title="getml.feature_learning.aggregations.sets.MultirelAggregationsSets">MultirelAggregationsSets</span></code>
                   </span>
               </p>
             </td>
@@ -3012,16 +3021,16 @@ Value: [<code>MULTIREL</code>][getml.feature_learning.aggregate.sets.MULTIREL].<
                 <p>Mathematical operations used by the automated feature
 learning algorithm to create new features.</p>
 <p>Must be an aggregation supported by Multirel feature learner
-([<code>MULTIREL_AGGREGATIONS</code>][getml.feature_learning.aggregate.sets.MULTIREL_AGGREGATIONS]).</p>
+(<a class="autorefs autorefs-internal" href="../aggregations/#getml.feature_learning.aggregations.MULTIREL_AGGREGATIONS"><code>MULTIREL_AGGREGATIONS</code></a>).</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<span title="getml.feature_learning.aggregate.types.MultirelAggregations">MultirelAggregations</span>]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/3/library/typing.html#typing.Iterable" target="_blank" rel="noopener">Iterable</a>[<span title="getml.feature_learning.aggregations.types.MultirelAggregations">MultirelAggregations</span>]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
-                      <code><span title="getml.feature_learning.aggregate.sets.MULTIREL.default">default</span></code>
+                      <code><span title="getml.feature_learning.aggregations.sets.MULTIREL.default">default</span></code>
                   </span>
               </p>
             </td>
@@ -3059,7 +3068,7 @@ overfitting when the <code>sampling_factor</code> is too low.</p>
 time series setting. When set to 0.0, there will be no lag
 variables.</p>
 <p>For more information please refer to
-<a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#time-series">Time Series</a> in the User Guide. Range: [0, ∞]</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/concepts/data_model/data_model/#time-series">Time Series</a> in the User Guide. Range: [0, ∞]</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -3210,7 +3219,7 @@ algorithm. Range: [1, ∞]</p>
               <div class="doc-md-description">
                 <p>The number of subfeatures you would like to extract in a
 subensemble (for snowflake data model only). See
-<a class="autorefs autorefs-internal" href="../../../user_guide/data_model/data_model/#the-snowflake-schema">Snowflake Schema</a> for more
+<a class="autorefs autorefs-internal" href="../../../user_guide/concepts/data_model/data_model/#the-snowflake-schema">Snowflake Schema</a> for more
 information. Range: [1, ∞]</p>
               </div>
               <p>

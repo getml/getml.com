@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../index-documentation/" class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../index-documentation/" class="md-nav__link">
+    <a href="../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -3330,25 +3355,9 @@
 
 
 
-  
-
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
       
       
         
@@ -3457,10 +3466,10 @@ version of the underlying data model, which is represented by the
 <p>In general, working with data within the getML suite is organized in
 three different steps.</p>
 <ul>
-<li><a class="autorefs autorefs-internal" href="../../user_guide/importing_data/#importing-data_1">Importing the data</a> into the getML engine .</li>
-<li><a class="autorefs autorefs-internal" href="../../user_guide/annotating_data/annotating_data/#annotating-data_1">Annotating the data</a> by assigning
+<li><a class="autorefs autorefs-internal" href="../../user_guide/concepts/importing_data/#importing-data_1">Importing the data</a> into the getML engine .</li>
+<li><a class="autorefs autorefs-internal" href="../../user_guide/concepts/annotating_data/annotating_data/#annotating-data_1">Annotating the data</a> by assigning
   <a class="autorefs autorefs-internal" href="roles/#getml.data.roles"><code>roles</code></a> to the individual <a class="autorefs autorefs-internal" href="columns/#getml.data.columns"><code>columns</code></a></li>
-<li><a class="autorefs autorefs-internal" href="../../user_guide/data_model/data_model/#data-model_1">Constructing the data model</a> by deriving
+<li><a class="autorefs autorefs-internal" href="../../user_guide/concepts/data_model/data_model/#data-model_1">Constructing the data model</a> by deriving
   <a class="autorefs autorefs-internal" href="placeholder/#getml.data.Placeholder"><code>Placeholder</code></a> from the data and joining them to
   represent the data schema.</li>
 </ul>
@@ -3474,7 +3483,7 @@ data is done by one of the class methods
 <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas</code></a>.</p>
 <p>In this example we chose to directly load data from a public
 database in the internet. But, firstly, we have to connect the
-getML engine to the database (see <a class="autorefs autorefs-internal" href="../../user_guide/importing_data/mysql_interface/#mysql-interface">MySQL interface</a> in the user
+getML engine to the database (see <a class="autorefs autorefs-internal" href="../../user_guide/concepts/importing_data/mysql_interface/#mysql-interface">MySQL interface</a> in the user
 guide for further details).</p>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_mysql</span><span class="p">(</span>
     <span class="n">host</span><span class="o">=</span><span class="s2">&quot;db.relational-data.org&quot;</span><span class="p">,</span>
@@ -3507,7 +3516,7 @@ In order to construct the data model and for the feature
 learning algorithm to get the most out of your data, you have
 to assign roles to columns using the
 <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame.set_role"><code>set_role</code></a> method (see
-<a class="autorefs autorefs-internal" href="../../user_guide/annotating_data/annotating_data/#annotating-data_1">Annotating data</a> for details).</p>
+<a class="autorefs autorefs-internal" href="../../user_guide/concepts/annotating_data/annotating_data/#annotating-data_1">Annotating data</a> for details).</p>
 <p>(For demonstration purposes, we assign <code>payments</code> the <a class="autorefs autorefs-internal" href="roles/#getml.data.roles.target"><code>target role</code></a>. In reality, you would want to
 forecast the defaulting behaviour, which is encoded in the <code>status</code> column. See the <a href="https://github.com/getml/getml-demo/blob/master/loans.ipynb" target="_blank" rel="noopener">loans notebook</a>.)</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">loan</span><span class="o">.</span><span class="n">set_role</span><span class="p">([</span><span class="s2">&quot;duration&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">],</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>

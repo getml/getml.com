@@ -279,44 +279,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
-        
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-    
-      
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../../../index-documentation/" class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
   
-  Overview
+  Home
 
         </a>
       </li>
     
   
 
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user_guide/" class="md-tabs__link">
+          
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
     
   
 
@@ -463,9 +457,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     
@@ -478,7 +496,13 @@
   
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -491,6 +515,12 @@
   
     
     
+      
+        
+          
+        
+      
+        
       
         
       
@@ -514,16 +544,13 @@
         
   
   
-    
-  
-  
-    <a href="../../../index-documentation/" class="md-nav__link">
+    <a href="../../../user_guide/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
     
   
-    Overview
+    User Guide
   
 
     
@@ -535,8 +562,6 @@
         <span class="md-nav__icon md-icon"></span>
       
     </a>
-  
-
   
 
       
@@ -3008,25 +3033,9 @@
 
 
 
-  
-
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-      
-        
-  
-    <li class="md-path__item">
-      <a href="../../.." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
       
       
         
@@ -3116,7 +3125,7 @@ bound for each dimension of <code>param_space</code> independently.</p>
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
   <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../home/getting_started/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
+<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
 <p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
 </details>
 
@@ -3290,8 +3299,8 @@ either <a class="autorefs autorefs-internal" href="../../predictors/xgboost_regr
 
 <span class="n">fe1</span> <span class="o">=</span> <span class="n">feature_learning</span><span class="o">.</span><span class="n">Multirel</span><span class="p">(</span>
     <span class="n">aggregation</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">aggregations</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span>
-        <span class="n">aggregations</span><span class="o">.</span><span class="n">Sum</span>
+        <span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
+        <span class="n">aggregations</span><span class="o">.</span><span class="n">SUM</span>
     <span class="p">],</span>
     <span class="n">loss_function</span><span class="o">=</span><span class="n">loss_functions</span><span class="o">.</span><span class="n">SquareLoss</span><span class="p">,</span>
     <span class="n">num_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
