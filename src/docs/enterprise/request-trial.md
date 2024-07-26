@@ -18,10 +18,10 @@ This is best for data scientists and engineers that are already familiar with ou
 **What you will get:**
 {: .mb-0 }
 
-/// html | div.ul-mt-0[markdown]
-- Access to getML enterprise binaries
-- Chance to test drive relational learning
-- Build any model for non-productive use (see [**terms**](trial/terms.md))
+/// html | div.indicator-primary
+- [x] Access to getML enterprise binaries
+- [x] Chance to test drive relational learning
+- [x] Build any model for non-productive use (see [**terms**](trial/terms.md))
 ///
 
 ///
