@@ -2,6 +2,14 @@
     filter: invert(1) saturate(0.5) hue-rotate(65deg) contrast(0.9);
 }
 
+@media screen and (min-width: 76.25em) {
+.box.full .hbspt-form iframe {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
 [dir=ltr] .md-typeset .hbspt-form ol li, [dir=ltr] .md-typeset .hbspt-form ul li {
     margin-left: initial;
 }

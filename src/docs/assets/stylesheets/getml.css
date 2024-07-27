@@ -434,7 +434,11 @@ nav.md-tabs {
 }
 
 .accent {
-    color: var(--md-typeset-a-color);
+    color: var(--md-typeset-a-color) !important;
+}
+
+.spacing-1-5 {
+    letter-spacing: 0.1em !important;
 }
 
 .impact {
@@ -689,6 +693,9 @@ nav.md-tabs {
     .medium-lg {
         font-size: 1.15em;
     }
+    .small-lg {
+        font-size: 1.05em;
+    }
     .show-lg {
         display: block;
     }
@@ -718,6 +725,9 @@ nav.md-tabs {
     }
     .w-60-lg {
         width: 60%;
+    }
+    .w-75-lg {
+        width: 70%;
     }
     h1.h2-lg, h2.h2-lg {
         font-size: 2.8em;
