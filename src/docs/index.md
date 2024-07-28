@@ -23,8 +23,8 @@ A game changer in predictive applications for enterprise applications.
 
 <center class="mb-3-lg">
 
-[Request a demo](){ .md-button .md-button--primary }
-[API Reference](){ .md-button }
+[Request a demo](enterprise/book-demo){ .md-button .md-button--primary }
+[API Reference](reference){ .md-button }
 {: .spacer }
 
 </center>
@@ -61,7 +61,7 @@ A game changer in predictive applications for enterprise applications.
 <center>
 <div class="box box-bg why-getml mb-4-lg" markdown>
 
-## Why you should consider getML {: .h2-md }
+## :fontawesome-pro-duotone-layer-plus:{.accent} Why you should consider getML {: .h2-md }
 
 Finally smooth pipeline
 {: .hidden }
@@ -99,16 +99,16 @@ There are two different getML flavoour out there. We give you all you need.
 <div class="container mb-4-lg" markdown>
 <div class="box box-bg box-50" markdown>
 
-### Community Edition
+### :fontawesome-pro-duotone-user-group:{.accent} Community Edition
 For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a more memory and run-time efficient solution. GetML Community is the leading open source implementation of the propositionalization framework.
 
 
-[Get started](){ .md-button .md-button--primary }
+[Get started](install){ .md-button .md-button--primary }
 
 </div>
 <div class="box box-bg box-50" markdown>
 
-### Enterprise Edition
+### :fontawesome-pro-duotone-industry:{.accent} Enterprise Edition
 This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
 
 [Learn more](enterprise/benefits.md){ .md-button .md-button--primary }
@@ -126,8 +126,8 @@ This is your choice if shorter development cycles and unprecedented model accura
 <div class="box box-50 p-sm-0" markdown>
 Request a meeting to explore the potential of GetML Relational Learning for your business application. Or check out one of our code examples before.
 
-[Talk to sales](){ .md-button .md-button--primary }
-[Get started](){ .md-button  }
+[Talk to sales](contact){ .md-button .md-button--primary }
+[Get started](user_guide){ .md-button  }
 </div>
 
 </div>

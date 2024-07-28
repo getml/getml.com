@@ -28,18 +28,50 @@
 
 :root {
   --md-status--enterprise: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star</title><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>');
-  --md-admonition-icon--enterprise-adm: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star</title><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>');
+  /* --md-status--enterprise: url('.icons/fontawesome/brands/youtube.svg'); */
+  --md-status--enterprise: url('../images/sharp-solid-star.svg');
+  /* --md-admonition-icon--enterprise-adm: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>star</title><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>'); */
+  --md-admonition-icon--enterprise-adm: url('../images/sharp-solid-star.svg');;
+}
+
+.md-typeset .duotone svg .fa-primary {
+    color: blue;
+}
+
+.md-typeset .duotone svg .fa-secondary {
+    color: green;
 }
 
 .md-status--enterprise::after {
   mask-image: var(--md-status--enterprise);
   -webkit-mask-image: var(--md-status--enterprise);
+  background-color: var(--md-typeset-a-color);
+  opacity: .7;
+}
+
+.md-status--beta::after {
+    background-color: var(--md-bg);
+    border-radius: 6px;
+    color: white;
+    content: "PRO";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.2em 0.5em 0.1em;
+    letter-spacing: .5px;
+    color: var(--md-typeset-color);
+    -webkit-mask-image: none;
+    width: auto;
+}
+
+.md-status:hover:after {
+   background-color: var(--md-typeset-a-color);
+   color: #fff;
 }
 
 .md-typeset .enterprise-adm > summary {}
 .md-typeset .enterprise-adm > .admonition-title::before,
 .md-typeset .enterprise-adm > summary::before {
-          mask-image: var(--md-admonition-icon--enterprise-adm);
+    mask-image: var(--md-admonition-icon--enterprise-adm);
 }
 
 .centered-image {
@@ -560,8 +592,9 @@ nav.md-tabs {
 }
 @media screen and  (max-width: 76.23em) {
 .md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li {
-    padding-left: 0;
-    padding-right: 0;
+    /* ? */
+    /* padding-left: 0; */
+    /* padding-right: 0; */
 }
 .md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li>hr {
     display: none;
@@ -755,5 +788,14 @@ nav.md-tabs {
     }
     .box p:last-child {
         margin-bottom: 0;
+    }
+
+    .full-width-div_ {
+        position: absolute;
+        left: 50%; /* Position it in the center horizontally */
+        transform: translateX(-50%); /* Adjust its position to start from the center */
+        width: 100vw; /* Full viewport width */
+        background-color: lightblue; /* Example styling */
+        height: 100px; /* Example height */
     }
 }

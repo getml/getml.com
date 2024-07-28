@@ -62,21 +62,24 @@ theme:
     # accent color is used to denote elements that can be interacted with, e.g. hovered links, buttons and scrollbars (default: indigo)
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-5
+        # icon: material/brightness-5
+        icon: fontawesome-pro/solid/sun-2
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white
       accent: deep purple
       toggle:
-        icon: material/brightness-2
+        # icon: material/brightness-2
+        icon: fontawesome-pro/duotone/moon
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: deep purple
       toggle:
-        icon: material/brightness-6
+        # icon: material/brightness-6
+        icon: fontawesome-pro/duotone/sun-horizon
         name: Switch to system preference
   font:
     text: Roboto
@@ -137,6 +140,7 @@ extra:
     new: Recently added
     deprecated: Deprecated
     enterprise: Enterprise feature
+    beta: This feature is in beta
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
