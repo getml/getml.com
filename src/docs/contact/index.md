@@ -8,8 +8,8 @@ hide:
 
 # **How can we help you?** {: .h2-lg .center-lg .mb-1-lg }
 
-Want to get in touch with us? Choose an option below and we’ll be happy to show you how Gatsby can be transform your company’s web experience.
-{: .medium-lg .mute .center-lg .mb-3-lg .w-60-lg}
+Want to get in touch with us? Choose an option below and we’ll be happy to show you how getML can transform your company’s approach to machine learning on enterprise data.
+{: .medium-lg .mute .center-lg .mb-3-lg .w-75-lg}
 
 
 /// html | div.grid.cards.cards-clear.mb-4-lg
