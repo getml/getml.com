@@ -175,10 +175,10 @@
 }
 
 
-.page-pointer {
+.jump-top {
   position: absolute;
   top: 0;
-  left: 0; /* Optional for horizontal alignment */
+  left: 0;
 }
 
 /* Types */
