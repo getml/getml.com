@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 [](){#enterprise-feature-list}
 ## Community vs Enterprise edition
 
