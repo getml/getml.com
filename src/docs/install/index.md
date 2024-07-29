@@ -1,7 +1,7 @@
-# Installation
-[](){#installation-index .jump-top}
+[](){#installation-index}
+# Installation 
 
-getML is a software suite for automated feature engineering on relational data and time series. It enables you to complete your data science projects in a fraction of their usual time and with better results.
+getML is a software suite for automated feature engineering on relational data and time series. It enables you to complete your data science projects in a fraction of their usual time and with better results. 
 
 getML is available for Python 3.8 to 3.12 and supported on the following 64-bit systems and architectures:
 
@@ -9,9 +9,9 @@ getML is available for Python 3.8 to 3.12 and supported on the following 64-bit 
 - macOS (amd64/arm) via docker
 - Windows (amd64/arm) via docker
 
-The [getML suite][getml-suite] comprises of [Python API][getml-suite-python-api], [engine][] and [monitor][]. The monitor is shipped along with the engine.
+The [getML suite][getml-suite] comprises of [Python API][getml-suite-python-api], [engine][] and [monitor][]. The monitor is shipped along with the engine. 
 
-Both our [community](https://github.com/getml/getml-community) and [enterprise](../enterprise/benefits.md) editions use the same Python API.
+Both our [community](https://github.com/getml/getml-community) and [enterprise](../enterprise/benefits.md) editions use the same Python API. 
 
 
 ## Linux
@@ -22,7 +22,7 @@ Use Python's `pip` package manager to install both the [Python API][getml-suite-
 
 ## macOS, Windows & Linux
 
-Setup a Docker container to run the [engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`.
+Setup a Docker container to run the [engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`. 
 
 [Read the Docker install guide](packages/Docker.md){ .md-button .md-button--primary }
 
@@ -41,6 +41,9 @@ Build engine and the API from source.
 
 ## Using versioned archives
 
-In some scenarios, installing getML from an archive might be necessary.
+In some scenarios, installing getML from an archive might be necessary. 
 
 [Read the archive install guide](packages/archive.md){ .md-button .md-button--primary }
+
+
+
