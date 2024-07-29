@@ -25,6 +25,7 @@ theme:
     - announce.dismiss
     # - content.action.edit
     # - content.action.view
+    - content.code.annotate
     - content.code.copy
     # - content.code.annotate
     # - content.code.select
@@ -56,23 +57,29 @@ theme:
     # - toc.follow
     # - toc.integrate
   palette:
+    # two color schemes: a light mode, which is just called default, and a dark mode, which is called slate
+    # primary color is used for the header, the sidebar, text links and several other components (default: indigo)
+    # accent color is used to denote elements that can be interacted with, e.g. hovered links, buttons and scrollbars (default: indigo)
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-5
+        # icon: material/brightness-5
+        icon: fontawesome-pro/solid/sun-2
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
+      primary: white
       accent: deep purple
       toggle:
-        icon: material/brightness-2
+        # icon: material/brightness-2
+        icon: fontawesome-pro/duotone/moon
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: deep purple
       toggle:
-        icon: material/brightness-6
+        # icon: material/brightness-6
+        icon: fontawesome-pro/duotone/sun-horizon
         name: Switch to system preference
   font:
     text: Roboto
@@ -133,6 +140,7 @@ extra:
     new: Recently added
     deprecated: Deprecated
     enterprise: Enterprise feature
+    beta: This feature is in beta
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -154,6 +162,7 @@ extra:
 markdown_extensions:
   - abbr
   - md_in_html
+  - def_list
   - attr_list
   - admonition
   - footnotes
@@ -161,6 +170,8 @@ markdown_extensions:
   - pymdownx.blocks.html
   - pymdownx.caret
   - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.superfences
   - pymdownx.details
@@ -169,6 +180,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - material.extensions.preview:
       #     sources:
       #       include:
@@ -197,8 +211,8 @@ draft_docs: |
   enterprise/guided-evaluation.md
   home/support/support.md
 
-
 not_in_nav: |
+  *debug.md
   enterprise/trial/trial-download.md
   reference/pipeline/column.md
   reference/pipeline/feature.md
@@ -207,14 +221,14 @@ not_in_nav: |
   reference/pipeline/table.md
 
 nav:
-  - Home: 
+  - Home:
     - index.md
-    
+
   - User Guide:
-    - user_guide/index.md  
-    - Quick start: 
+    - user_guide/index.md
+    - Quick start:
       - user_guide/quick_start/index.md
-    - Walkthrough: 
+    - Walkthrough:
       - user_guide/walkthrough/index.md
     # - Remote access: home/installation/remote_access.md
     - Concepts:
@@ -248,14 +262,16 @@ nav:
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
-    - Training & Support: enterprise/training-and-support.md
-    - Guided Evaluation: enterprise/guided-evaluation.md
-    - DEBUG: enterprise/debug.md
+    - Training & Support (draft): enterprise/training-and-support.md
+    - Guided Evaluation (draft): enterprise/guided-evaluation.md
+    - DEBUG (draft): enterprise/debug.md
+
 
   - API Reference:
     - reference/index.md
+    # - DEBUG (draft): reference/debug.md
     - Python API:
-      # - reference/index.md
+      - reference/index.md
       - getml.data:
         - reference/data/index.md
         - Container: reference/data/container.md
@@ -277,57 +293,57 @@ nav:
       - getml.database: reference/database/database.md
       - getml.datasets: reference/datasets/datasets.md
       - getml.engine: reference/engine/engine.md
-    - getml.hyperopt:
-      - reference/hyperopt/index.md
-      - Gaussian Process: reference/hyperopt/gaussian.md
-      - Latin Hypercube: reference/hyperopt/latin.md
-      - Random: reference/hyperopt/random.md
-    - getml.feature_learning:
-      - reference/feature_learning/index.md
-      - FastProp: reference/feature_learning/fastprop.md
-      - Fastboost: reference/feature_learning/fastboost.md
-      - Multirel: reference/feature_learning/multirel.md
-      - Relboost: reference/feature_learning/relboost.md
-      - RelMT: reference/feature_learning/relmt.md
-      - aggregations:
-          - reference/feature_learning/aggregations/index.md
-          - types: reference/feature_learning/aggregations/types.md
-          - sets: reference/feature_learning/aggregations/sets.md
-      - loss_functions: reference/feature_learning/loss_functions.md
-    - getml.project:
-      - reference/project/index.md
-      - DataFrames: reference/project/data_frames.md
-      - Hyperopts: reference/project/hyperopts.md
-      - Pipelines: reference/project/pipelines.md
-    - getml.preprocessors:
-      - reference/preprocessors/index.md
-    - getml.pipeline:
-      - reference/pipeline/index.md
-      - Pipeline: reference/pipeline/pipeline.md
-      - Columns: reference/pipeline/columns.md
-      # - Column: reference/pipeline/column.md
-      - Tables: reference/pipeline/tables.md
-      # - Table: reference/pipeline/table.md
-      - Features: reference/pipeline/features.md
-      # - Feature: reference/pipeline/feature.md
-      - Plots: reference/pipeline/plots.md
-      - Scores: reference/pipeline/scores_container.md
-      - Score: reference/pipeline/score.md
-      - SQLCode: reference/pipeline/sql_code.md
-      # - SQLString: reference/pipeline/sql_string.md
-      # - metadata: reference/pipeline/metadata.md
-      - metrics: reference/pipeline/metrics.md
-      - dialect: reference/pipeline/dialect.md
-    - getml.predictors:
-      - reference/predictors/index.md
-      - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
-      - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
-      - LinearRegression: reference/predictors/linear_regression.md
-      - LogisticRegression: reference/predictors/logistic_regression.md
-      - XGBoostClassifier: reference/predictors/xgboost_classifier.md
-      - XGBoostRegressor: reference/predictors/xgboost_regressor.md
-    - getml.sqlite3:
-      - reference/sqlite3/index.md
+      - getml.hyperopt:
+        - reference/hyperopt/index.md
+        - Gaussian Process: reference/hyperopt/gaussian.md
+        - Latin Hypercube: reference/hyperopt/latin.md
+        - Random: reference/hyperopt/random.md
+      - getml.feature_learning:
+        - reference/feature_learning/index.md
+        - FastProp: reference/feature_learning/fastprop.md
+        - Fastboost: reference/feature_learning/fastboost.md
+        - Multirel: reference/feature_learning/multirel.md
+        - Relboost: reference/feature_learning/relboost.md
+        - RelMT: reference/feature_learning/relmt.md
+        - aggregations:
+            - reference/feature_learning/aggregations/index.md
+            - types: reference/feature_learning/aggregations/types.md
+            - sets: reference/feature_learning/aggregations/sets.md
+        - loss_functions: reference/feature_learning/loss_functions.md
+      - getml.project:
+        - reference/project/index.md
+        - DataFrames: reference/project/data_frames.md
+        - Hyperopts: reference/project/hyperopts.md
+        - Pipelines: reference/project/pipelines.md
+      - getml.preprocessors:
+        - reference/preprocessors/index.md
+      - getml.pipeline:
+        - reference/pipeline/index.md
+        - Pipeline: reference/pipeline/pipeline.md
+        - Columns: reference/pipeline/columns.md
+        # - Column: reference/pipeline/column.md
+        - Tables: reference/pipeline/tables.md
+        # - Table: reference/pipeline/table.md
+        - Features: reference/pipeline/features.md
+        # - Feature: reference/pipeline/feature.md
+        - Plots: reference/pipeline/plots.md
+        - Scores: reference/pipeline/scores_container.md
+        - Score: reference/pipeline/score.md
+        - SQLCode: reference/pipeline/sql_code.md
+        # - SQLString: reference/pipeline/sql_string.md
+        # - metadata: reference/pipeline/metadata.md
+        - metrics: reference/pipeline/metrics.md
+        - dialect: reference/pipeline/dialect.md
+      - getml.predictors:
+        - reference/predictors/index.md
+        - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
+        - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
+        - LinearRegression: reference/predictors/linear_regression.md
+        - LogisticRegression: reference/predictors/logistic_regression.md
+        - XGBoostClassifier: reference/predictors/xgboost_classifier.md
+        - XGBoostRegressor: reference/predictors/xgboost_regressor.md
+      - getml.sqlite3:
+        - reference/sqlite3/index.md
 
     - Command Line:
       # - reference/cli/index.md
