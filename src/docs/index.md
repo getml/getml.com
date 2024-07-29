@@ -139,12 +139,45 @@ This is your choice if shorter development cycles and unprecedented model accura
 : Comes with a nice python API
 
 
-``` py hl_lines="2 3" linenums="1"
-def bubble_sort(items): # (1)!
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i): # (2)!
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` py linenums="1"
+# Launch the engine
+import getml
+getml.engine.launch() # (1)!
+getml.engine.set_project('quick_rundown')
+
+# Load the data into the engine
+df_population = getml.data.DataFrame.from_csv('data_population.csv', name='population_table')
+df_peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',name='peripheral_table')
+
+# Annotate the data
+df_population.set_role(cols='target', role=getml.data.role.target)
+df_population.set_role(cols='join_key', role=getml.data.role.join_key)
+
+# Define the data model
+dm = getml.data.DataModel(population=df_population.to_placeholder())
+dm.add(df_peripheral.to_placeholder())
+dm.population.join(dm.peripheral, on="join_key")
+
+# Define the feature learners
+fast_prop = getml.feature_learning.FastProp()
+relboost = getml.feature_learning.Relboost()
+
+# Train the feature learning algorithm and the predictor
+pipe = getml.pipeline.Pipeline(
+    data_model=dm,
+    feature_learners=[fast_prop, relboost],
+    predictors=getml.predictors.LinearRegression()
+)
+pipe.fit(population=df_population, peripheral=[df_peripheral])
+
+# Evaluate
+pipe.score(population=df_population_unseen, peripheral=[df_peripheral_unseen])
+
+# Predict
+pipe.predict(population=df_population_unseen, peripheral=[df_peripheral_unseen])
+
+# Allow the pipeline to respond to HTTP requests
+pipe.deploy(True)
 ```
 
 1.  Look ma, less line noise!
