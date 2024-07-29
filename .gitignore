@@ -164,6 +164,3 @@ cython_debug/
 
 # ZED
 .zed/*
-
-ignore
-src/overrides/.icons/fontawesome-pro/*
