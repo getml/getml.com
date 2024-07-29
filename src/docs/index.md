@@ -56,88 +56,78 @@ A game changer in predictive applications for enterprise applications.
 ///
 
 
-</center>
-
-<center>
 <div class="box box-bg why-getml mb-4-lg" markdown>
 
-## :fontawesome-pro-duotone-layer-plus:{.accent} Why you should consider getML {: .h2-md .w-25-lg }
+<div class="w-75-lg" markdown>
+
+## :fontawesome-pro-duotone-layer-plus: {.accent .hidden}
+
+Built for the data in enterprise data warehouse
+{: .hidden }
+
+
+##### Built for enterprise data {.accent .h5-lg .w-60-lg_ .mt-0-lg}
+## Why you should consider getML {.h2-l .w-60-lg_}
 
 Finally smooth pipeline
 {: .hidden }
 
-<div class="w-75-lg medium-lg" markdown>
+<div class="w-60-lg_ large-lg mute" markdown>
 
-GetML introduces new ML algorithms that empower data scientists to achieve superior model performance without the burden of manual feature engineering and building complex feature pipelines. By generalizing gradient boosting to multi-relational decision trees, getML brings supervised learning to raw relational data, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
+GetML introduces new ML algorithms that <span class="impact">empower data scientists to achieve superior model performance</span> without the burden of manual feature engineering and building complex feature pipelines.
 
-GetML is developed by Code17 GmbH, and is used across industries, from finance and manufacturing to healthcare and beyond.
+By generalizing gradient boosting to multi-relational decision trees, getML <span class="impact">brings supervised learning to raw relational data</span>, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
 
+GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used across industries, from finance and manufacturing to healthcare</span> and beyond.
+
+</div>
 </div>
 
 </div>
 </center>
 
 
-## The right getML flavor for your application {: .h2-lg .center-lg .mb-1-lg }
+## The better solution for predictive analytics on enterprise data {.h2-l .center-lg .mb-1-lg}
 
-There are two different getML flavoour out there. We give you all you need.
-{: .medium-lg .mute .center-lg .mb-3-lg }
+/// html | div.grid.cards.cards-lead.cards-clear.mb-3-lg
 
+-   <span class="top">GetML is</span>
+    <span class="focus">easy to use</span>
+    <span class="sub">helping you deliver<br> better models faster.</span>
 
-/// html | div
+-   <span class="top">Delivered</span>
+    <span class="focus">10x</span>
+    <span class="sub">speedup in past<br> customer projects</span>
 
-## The better solution for enterprise grade predictive analytics applications
-
-### Makes Data Science fun again
-
-High perfomance models require 10x less code. Howl new feeling of purpose.
-
-
-### Sheer performance
-
-### Range of evaluated features
-
-Good models require hundreds of features and they can change all the time.
-Good feature stores contain 100 of features. but what if they change? getML is your push button solution to learn form billions of features and search new any time.
-GetML learns from billions of features
-
-1bn
-range of evaluated features
+-   <span class="top">Prediction accuracy by</span>
+    <span class="focus">30%</span>
+    <span class="sub">increased compared<br> to past baseline models</span>
 
 ///
 
 
-<div class="container mb-4-lg" markdown>
-<div class="box box-bg box-50" markdown>
-
-### :fontawesome-pro-duotone-user-group:{.accent} Community Edition
-For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a more memory and run-time efficient solution. GetML Community is the leading open source implementation of the propositionalization framework.
 
 
-[Get started](install){ .md-button }
 
-</div>
-<div class="box box-bg box-50" markdown>
 
-### :fontawesome-pro-duotone-industry:{.accent} Enterprise Edition
-This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
+<div class="full-width-bg-lg" markdown>
 
-[Learn more](enterprise/benefits.md){ .md-button }
+<div class="hidden clear-lg mb-4-lg"></div>
 
-</div>
-</div>
+<div class="w-75-lg margin-auto-lg mb-4-lg" markdown>
 
-/// html | div.full-width-bg-lg
+##### Your Feature Learning Superpower {.accent .center-lg .mb-0}
+## Whats under the hood? {.h2-lg .center-lg .mb-1-lg .mt-0}
 
-<div class="hidden clear-lg"></div>
+Think of getML as Tensorflow - just for relational data.
+{.center-lg .medium-lg}
 
-#### FOR THOSE WHO CODE {.accent}
-## Whats under the hood? {.h2-lg .center-lg .mb-1-lg}
+getML is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. It comes with an easy-to-use Python API that allows to build end-to-end ML pipelines on terabytes of input data.
+{.center-lg}
 
-: For performance reason everything is written in C++
 
-: Comes with a nice python API
 
+<div class="w-80-lg margin-auto-lg" markdown>
 
 ``` py hl_lines="2 3" linenums="1"
 def bubble_sort(items): # (1)!
@@ -150,8 +140,7 @@ def bubble_sort(items): # (1)!
 1.  Look ma, less line noise!
 2.  Annotation on first line (appended)
 
-
-dont care about specifics and just want top performing models?
+</div>
 
 
 ### **Getting started is easy**
@@ -161,15 +150,48 @@ dont care about specifics and just want top performing models?
 3. `checkout our example repository` to get started with our getML community edition
 
 
+</div>
+
 <div class="hidden clear-lg"></div>
 
-///
+</div>
+
+
+
+## The right getML flavor for your ML application {.h2-lg .center-lg .mb-1-lg }
+
+Both editions share the same :material-language-python: Python API.
+{: .medium-lg .mute .center-lg .mb-3-lg }
+
+<div class="container mb-4-lg_" markdown>
+<div class="box box-bg box-50 center-lg_" markdown>
+
+### :fontawesome-pro-duotone-user-group:{ .lg .middle .mb-1-lg .accent}<br> Community Edition {.h2-lg}
+
+For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a more memory and run-time efficient solution. GetML Community is the leading open source implementation of the propositionalization framework.
+{.small-lg}
+
+
+[Get started :octicons-arrow-right-24:](install){ .md-button_ }
+
+</div>
+<div class="box box-bg box-50 center-lg_" markdown>
+
+### :fontawesome-pro-duotone-industry:{ .lg .middle .mb-1-lg .accent}<br> Enterprise Edition {.h2-lg}
+
+This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
+{.small-lg}
+
+[Learn more :octicons-arrow-right-24:](enterprise/benefits.md){ .md-button_ }
+
+</div>
+</div>
 
 
 <div class="container mb-4-lg pt-4-lg" markdown>
 <div class="box box-lg box-50 p-sm-0 mb-sm-0" markdown>
 
-## Interested in getML Relational Learning? {: .h2-big .mb-sm-0}
+## Interested in getML Relational Learning? {.h2-big .mb-sm-0}
 
 </div>
 <div class="box box-50 p-sm-0" markdown>

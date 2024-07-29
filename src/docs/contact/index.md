@@ -12,7 +12,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 {: .medium-lg .mute .center-lg .mb-3-lg .w-75-lg}
 
 
-/// html | div.grid.cards.cards-clear.mb-4-lg
+/// html | div.grid.cards.cards-clear.mb-5-lg
 
 
 -   ## :fontawesome-pro-duotone-gem:{ .lg .middle .mb-1-lg .accent}<br> **Book a 30-min demo** {:.mb-0 .sm}
@@ -57,7 +57,7 @@ Talk to an expert on our team about our products, pricing, or learn about our cu
 ///
 
 
-## **From the engineers of getML** {: .h2-md .center-lg .mb-2-lg }
+## **From the engineers of getML** {: .h2-l .center-lg .mb-2-lg .mt-4-lg }
 
 /// html | div.grid.lg.cards.cards-clear.cards-background.no-first-card.li-check-primary.mb-4-lg
 
