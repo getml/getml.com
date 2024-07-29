@@ -175,6 +175,7 @@
 }
 
 
+h1 + p:has(a[id]:only-child),
 .jump-top {
   position: absolute;
   top: 0;
