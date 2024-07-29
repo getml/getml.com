@@ -27,7 +27,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
     Schedule a getML demo and learn about our unique advantages
     {.hidden}
 
-    [ :octicons-arrow-right-24: Request a demo ](../enterprise/book-demo)
+    [:octicons-arrow-right-24: Request a demo ](../enterprise/book-demo)
 
 
 -   ## :fontawesome-pro-duotone-users-gear:{ .lg .middle .mb-1-lg .accent }<br> **Talk to engineering** {:.mb-0 .sm}

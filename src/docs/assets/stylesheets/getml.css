@@ -175,6 +175,12 @@
 }
 
 
+.page-pointer {
+  position: absolute;
+  top: 0;
+  left: 0; /* Optional for horizontal alignment */
+}
+
 /* Types */
 
 .md-typeset h1,
