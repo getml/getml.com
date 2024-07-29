@@ -6,8 +6,8 @@ hide:
 
 /// html | div.box.full.box-bg
 
-[](){#message-us}
 # **Talk to an expert** {.h2-lg .center-lg .mb-1-lg}
+[](){#message-us}
 
 Please let us know how we can help and our team will get back to you as soon as possible.
 You can also reach us directly via email at [team@getml.com](mailto:team@getml.com).
