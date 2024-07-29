@@ -769,6 +769,9 @@ nav.md-tabs {
     .w-75-lg {
         width: 70%;
     }
+    .w-25-lg {
+        width: 20%;
+    }
     h1.h2-lg, h2.h2-lg {
         font-size: 2.8em;
         line-height: 1.1;
@@ -797,12 +800,29 @@ nav.md-tabs {
         margin-bottom: 0;
     }
 
-    .full-width-div_ {
+    .full-width-bg-lg {
+        position: relative;
+    }
+
+    .clear-lg {
+        display: table !important;
+        clear: both;
+    }
+
+    .full-width-bg-lg::before {
+        content: '';
         position: absolute;
-        left: 50%; /* Position it in the center horizontally */
-        transform: translateX(-50%); /* Adjust its position to start from the center */
-        width: 100vw; /* Full viewport width */
-        background-color: lightblue; /* Example styling */
-        height: 100px; /* Example height */
+        top: 0;
+        left: 50%;         /* Position from center */
+        transform: translateX(-50%); /* Shift left to cover */
+        width: 100vw;      /* Full viewport width */
+        height: 100%;      /* Full section height */
+        z-index: -1;
+        background-color: var(--md-bg);
+    }
+
+
+    h1 > span.twemoji, h2 > span.twemoji, h3 > span.twemoji {
+        padding-right: 0.2em;
     }
 }

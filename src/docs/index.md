@@ -61,28 +61,16 @@ A game changer in predictive applications for enterprise applications.
 <center>
 <div class="box box-bg why-getml mb-4-lg" markdown>
 
-## :fontawesome-pro-duotone-layer-plus:{.accent} Why you should consider getML {: .h2-md }
+## :fontawesome-pro-duotone-layer-plus:{.accent} Why you should consider getML {: .h2-md .w-25-lg }
 
 Finally smooth pipeline
 {: .hidden }
 
-<div class="w-60-lg" markdown>
+<div class="w-75-lg medium-lg" markdown>
 
 GetML introduces new ML algorithms that empower data scientists to achieve superior model performance without the burden of manual feature engineering and building complex feature pipelines. By generalizing gradient boosting to multi-relational decision trees, getML brings supervised learning to raw relational data, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
 
 GetML is developed by Code17 GmbH, and is used across industries, from finance and manufacturing to healthcare and beyond.
-
-``` py hl_lines="2 3" linenums="1"
-def bubble_sort(items): # (1)!
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i): # (2)!
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-
-1.  Look ma, less line noise!
-2.  Annotation on first line (appended)
-
 
 </div>
 
@@ -96,6 +84,29 @@ There are two different getML flavoour out there. We give you all you need.
 {: .medium-lg .mute .center-lg .mb-3-lg }
 
 
+/// html | div
+
+## The better solution for enterprise grade predictive analytics applications
+
+### Makes Data Science fun again
+
+High perfomance models require 10x less code. Howl new feeling of purpose.
+
+
+### Sheer performance
+
+### Range of evaluated features
+
+Good models require hundreds of features and they can change all the time.
+Good feature stores contain 100 of features. but what if they change? getML is your push button solution to learn form billions of features and search new any time.
+GetML learns from billions of features
+
+1bn
+range of evaluated features
+
+///
+
+
 <div class="container mb-4-lg" markdown>
 <div class="box box-bg box-50" markdown>
 
@@ -103,7 +114,7 @@ There are two different getML flavoour out there. We give you all you need.
 For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a more memory and run-time efficient solution. GetML Community is the leading open source implementation of the propositionalization framework.
 
 
-[Get started](install){ .md-button .md-button--primary }
+[Get started](install){ .md-button }
 
 </div>
 <div class="box box-bg box-50" markdown>
@@ -111,10 +122,48 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 ### :fontawesome-pro-duotone-industry:{.accent} Enterprise Edition
 This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. GetML Enterprise gives you access to the most advanced Relational Learning algorithms.
 
-[Learn more](enterprise/benefits.md){ .md-button .md-button--primary }
+[Learn more](enterprise/benefits.md){ .md-button }
 
 </div>
 </div>
+
+/// html | div.full-width-bg-lg
+
+<div class="hidden clear-lg"></div>
+
+#### FOR THOSE WHO CODE {.accent}
+## Whats under the hood? {.h2-lg .center-lg .mb-1-lg}
+
+: For performance reason everything is written in C++
+
+: Comes with a nice python API
+
+
+``` py hl_lines="2 3" linenums="1"
+def bubble_sort(items): # (1)!
+    for i in range(len(items)):
+        for j in range(len(items) - 1 - i): # (2)!
+            if items[j] > items[j + 1]:
+                items[j], items[j + 1] = items[j + 1], items[j]
+```
+
+1.  Look ma, less line noise!
+2.  Annotation on first line (appended)
+
+
+dont care about specifics and just want top performing models?
+
+
+### **Getting started is easy**
+
+1. read through our user guide
+2. `pip install getml`
+3. `checkout our example repository` to get started with our getML community edition
+
+
+<div class="hidden clear-lg"></div>
+
+///
 
 
 <div class="container mb-4-lg pt-4-lg" markdown>
