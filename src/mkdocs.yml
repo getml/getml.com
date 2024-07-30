@@ -221,8 +221,7 @@ not_in_nav: |
   reference/pipeline/table.md
 
 nav:
-  - Home:
-    - index.md
+  - Home: index.md
 
   - User Guide:
     - user_guide/index.md
