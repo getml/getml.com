@@ -140,49 +140,37 @@ This is your choice if shorter development cycles and unprecedented model accura
 
 
 ``` py linenums="1"
-# Launch the engine
-import getml
-getml.engine.launch() # (1)!
-getml.engine.set_project('quick_rundown')
+# ...
 
-# Load the data into the engine
-df_population = getml.data.DataFrame.from_csv('data_population.csv', name='population_table')
-df_peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',name='peripheral_table')
+# Define the feature learners 
+fast_prop = getml.feature_learning.FastProp() # (1)!
+relboost = getml.feature_learning.Relboost() #(2)!
 
-# Annotate the data
-df_population.set_role(cols='target', role=getml.data.role.target)
-df_population.set_role(cols='join_key', role=getml.data.role.join_key)
+# Define the predictor
+predictor = getml.predictors.ScaleGBMRegressor() #(3)!
 
-# Define the data model
-dm = getml.data.DataModel(population=df_population.to_placeholder())
-dm.add(df_peripheral.to_placeholder())
-dm.population.join(dm.peripheral, on="join_key")
-
-# Define the feature learners
-fast_prop = getml.feature_learning.FastProp()
-relboost = getml.feature_learning.Relboost()
-
-# Train the feature learning algorithm and the predictor
-pipe = getml.pipeline.Pipeline(
+# Define the pipeline
+pipe = getml.pipeline.Pipeline( #(4)!
     data_model=dm,
     feature_learners=[fast_prop, relboost],
-    predictors=getml.predictors.LinearRegression()
+    predictors=predictor
 )
-pipe.fit(population=df_population, peripheral=[df_peripheral])
 
-# Evaluate
-pipe.score(population=df_population_unseen, peripheral=[df_peripheral_unseen])
+# Train the feature learnings and the predictor
+pipe.fit(data_container.train) #(5)!
 
-# Predict
-pipe.predict(population=df_population_unseen, peripheral=[df_peripheral_unseen])
-
-# Allow the pipeline to respond to HTTP requests
-pipe.deploy(True)
+# ...
 ```
 
-1.  Look ma, less line noise!
-2.  Annotation on first line (appended)
+1.  [`FastProp`][feature-engineering-algorithms-fastprop] comes with our [community](https://github.com/getml/getml-community) edition. It is fast and generates substantial number of important features based on simple aggregations.
 
+2.  [`Relboost`][feature-engineering-algorithms-relboost] is part our [enterprise][enterprise-benefits] edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.
+
+3. [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor] is our memory-mapped predictor that can handle big datasets that do not fit into memory.
+
+4. [`Pipeline`][getml.pipeline.Pipeline] bundle together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's `fit` is called next.
+
+5. Inspired by libraries like `scikit-learn`, the [`fit`][getml.pipeline.Pipeline.fit], [`score`][getml.pipeline.Pipeline.score], and [`predict`][getml.pipeline.Pipeline.predict] methods of a pipeline make the machine learning process a breeze.
 
 dont care about specifics and just want top performing models?
 
