@@ -129,16 +129,38 @@ getML is a high-performance machine learning framework to build regression and p
 
 <div class="w-80-lg margin-auto-lg" markdown>
 
-``` py hl_lines="2 3" linenums="1"
-def bubble_sort(items): # (1)!
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i): # (2)!
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` py linenums="1"
+# ...
+
+# Define the feature learners 
+fast_prop = getml.feature_learning.FastProp() # (1)!
+relboost = getml.feature_learning.Relboost() #(2)!
+
+# Define the predictor
+predictor = getml.predictors.ScaleGBMRegressor() #(3)!
+
+# Define the pipeline
+pipe = getml.pipeline.Pipeline( #(4)!
+    data_model=star_schema.data_model,
+    feature_learners=[fast_prop, relboost],
+    predictors=predictor
+)
+
+# Train the feature learnings and the predictor
+pipe.fit(data_container.train) #(5)!
+
+# ...
 ```
 
-1.  Look ma, less line noise!
-2.  Annotation on first line (appended)
+1.  [`FastProp`][feature-engineering-algorithms-fastprop] comes with our [community](https://github.com/getml/getml-community) edition. It is fast and generates substantial number of important features based on simple aggregations.
+
+2.  [`Relboost`][feature-engineering-algorithms-relboost] is part our [enterprise][enterprise-benefits] edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.
+
+3. [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor] is our memory-mapped predictor that can handle big datasets that do not fit into memory.
+
+4. [`Pipeline`][getml.pipeline.Pipeline] bundle together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's `fit` is called next.
+
+5. Inspired by libraries like `scikit-learn`, the [`fit`][getml.pipeline.Pipeline.fit], [`score`][getml.pipeline.Pipeline.score], and [`predict`][getml.pipeline.Pipeline.predict] methods of a pipeline make the machine learning process a breeze.
 
 </div>
 
