@@ -12,6 +12,3 @@ found in the [user guide][user-guide-index].
 
 If you have never used the Python API, it is probably easiest to start with the
 [walkthrough][walkthrough-guide].
-
-
-

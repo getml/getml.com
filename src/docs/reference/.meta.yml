@@ -1,0 +1,9 @@
+# Configuration
+# theme:
+#   features:
+#     - navigation.expand
+
+# navigation:
+#   - expand
+
+template: api-reference.html

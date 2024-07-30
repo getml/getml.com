@@ -1,0 +1,20 @@
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: var(--md-code-bg-color--lighter);
+    padding: 16px 8px 8px 6px;
+    border-radius: 6px;
+}
+
+
+@media screen and (min-width: 76.25em) {
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    background: none !important;
+    box-shadow: none !important;
+    margin-top: 0;
+    position: relative;
+    /* top: 0; */
+    z-index: 1
+}
+
+}

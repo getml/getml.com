@@ -93,7 +93,7 @@ GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 
 -   <span class="top">GetML is</span>
     <span class="focus">easy to use</span>
-    <span class="sub">helping you deliver<br> better models faster.</span>
+    <span class="sub">helping you deliver<br> better models faster</span>
 
 -   <span class="top">Delivered</span>
     <span class="focus">10x</span>
@@ -120,7 +120,7 @@ GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 ## Whats under the hood? {.h2-lg .center-lg .mb-1-lg .mt-0}
 
 Think of getML as Tensorflow - just for relational data.
-{.center-lg .medium-lg}
+{.center-lg .large-lg_ .mute}
 
 getML is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. It comes with an easy-to-use Python API that allows to build end-to-end ML pipelines on terabytes of input data.
 {.center-lg}

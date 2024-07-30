@@ -33,4 +33,4 @@ GetML Enterprise offers a suite of cutting-edge ML algorithms that surpass both 
 
 Request a meeting to explore the potential of GetML Relational Learning for your business application.
 
-[Let's talk](/contact/message-us){.md-button .md-button--primary}
+[Let's talk](../contact/message-us){.md-button .md-button--primary}

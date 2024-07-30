@@ -110,6 +110,6 @@ Talk to an expert on our team about our products, pricing, or learn about our cu
 
     ///
 
-    [Get in touch](/contact/message-us){: .md-button .md-button--primary }
+    [Get in touch](message-us){: .md-button .md-button--primary }
     {: .m-lg}
 ///
