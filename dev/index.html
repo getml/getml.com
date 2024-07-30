@@ -1456,19 +1456,62 @@ A game changer in predictive applications for enterprise applications.</p>
 <p class="center-lg large-lg_ mute">Think of getML as Tensorflow - just for relational data.</p>
 <p class="center-lg">getML is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. It comes with an easy-to-use Python API that allows to build end-to-end ML pipelines on terabytes of input data.</p>
 <div class="w-80-lg margin-auto-lg">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span> <span class="c1"># (1)!</span>
-<span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
-</span><span class="hll">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span> <span class="c1"># (2)!</span>
-</span>            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ...</span>
+
+<span class="c1"># Define the feature learners </span>
+<span class="n">fast_prop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">()</span> <span class="c1"># (1)!</span>
+<span class="n">relboost</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">Relboost</span><span class="p">()</span> <span class="c1">#(2)!</span>
+
+<span class="c1"># Define the predictor</span>
+<span class="n">predictor</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">ScaleGBMRegressor</span><span class="p">()</span> <span class="c1">#(3)!</span>
+
+<span class="c1"># Define the pipeline</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span> <span class="c1">#(4)!</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">star_schema</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="n">fast_prop</span><span class="p">,</span> <span class="n">relboost</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="n">predictor</span>
+<span class="p">)</span>
+
+<span class="c1"># Train the feature learnings and the predictor</span>
+<span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_container</span><span class="o">.</span><span class="n">train</span><span class="p">)</span> <span class="c1">#(5)!</span>
+
+<span class="c1"># ...</span>
 </code></pre></div></td></tr></table></div>
 <ol>
-<li>Look ma, less line noise!</li>
-<li>Annotation on first line (appended)</li>
+<li>
+<p><a class="autorefs autorefs-internal" href="user_guide/concepts/feature_engineering/#fastprop"><code>FastProp</code></a> comes with our <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">community</a> edition. It is fast and generates substantial number of important features based on simple aggregations.</p>
+</li>
+<li>
+<p><a class="autorefs autorefs-internal" href="user_guide/concepts/feature_engineering/#relboost"><code>Relboost</code></a> is part our <a class="autorefs autorefs-internal" href="enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">enterprise</a> edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.</p>
+</li>
+<li>
+<p><a class="autorefs autorefs-internal" href="reference/predictors/scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor"><code>ScaleGBMRegressor</code></a> is our memory-mapped predictor that can handle big datasets that do not fit into memory.</p>
+</li>
+<li>
+<p><a class="autorefs autorefs-internal" href="reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> bundle together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's <code>fit</code> is called next.</p>
+</li>
+<li>
+<p>Inspired by libraries like <code>scikit-learn</code>, the <a class="autorefs autorefs-internal" href="reference/pipeline/pipeline/#getml.pipeline.Pipeline.fit"><code>fit</code></a>, <a class="autorefs autorefs-internal" href="reference/pipeline/pipeline/#getml.pipeline.Pipeline.score"><code>score</code></a>, and <a class="autorefs autorefs-internal" href="reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict"><code>predict</code></a> methods of a pipeline make the machine learning process a breeze.</p>
+</li>
 </ol>
 </div>
 <h3 id="getting-started-is-easy"><strong>Getting started is easy</strong></h3>
