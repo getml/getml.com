@@ -19,7 +19,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     ---
 
-    Learn how getML Relational Learning is working and details about successfull applications in many cross-industry ML applications.
+    Learn how getML Relational Learning is working and details about successful applications in many cross-industry ML applications.
 
     Install [`mkdocs-material`](#) with [`pip`](#) and get up
     and running in minutes
@@ -35,7 +35,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
     ---
 
     Need support in building ML enabled data products or service?
-    Connect with our full-serivce team to discuss how we can help.
+    Connect with our full-service team to discuss how we can help.
 
     [:octicons-arrow-right-24: Get in touch](message-us)
 

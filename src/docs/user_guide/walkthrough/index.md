@@ -36,9 +36,9 @@ In this article, we start with a brief glimpse of different toolsets offered by 
 [](){#getting-started-community-vs-enterprise}
 ## Community vs Enterprise edition
 
-!!! enterprise-adm "Enterprise Edition"
-    To purchase a licence for the Enterprise Edition, technical support and
-    more information, please [contact us](https://www.getml.com/contact)!
+!!! enterprise-adm "Enterprise edition"
+    To purchase a license for the Enterprise edition, technical support and
+    more information, please [contact us](https://www.getml.com/contact).
 
 Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
 
