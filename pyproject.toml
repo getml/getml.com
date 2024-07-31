@@ -10,14 +10,12 @@ version = "0.0.1"
 
 [tool.hatch.envs.default]
 dependencies = [
-  "mkdocs",
-  "mkdocs-gen-files",
-  "mkdocstrings-python",
-  "docstring-to-markdown",
+  "mkdocs~=1.6",
+  "mkdocstrings-python~=1.10",
   "mkdocs-material @ git+ssh://git@code17devgit/squidfunk/mkdocs-material-insiders.git@9.5.20-insiders-4.53.8",
-  "mkdocs-table-reader-plugin",
-  "black",
-  "mike",
-  "mkdocs-redirects"
+  "mkdocs-table-reader-plugin~=2.2",
+  "black~=24.4",
+  "mike~=2.1",
+  "mkdocs-redirects~=1.2"
 ]
 python = "3.11"
