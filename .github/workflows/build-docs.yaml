@@ -51,7 +51,7 @@ jobs:
 
       - name: Install Hatch & create environment
         run: |
-          pip install hatch 
+          pip install hatch~=1.12 
           hatch env create
 
       - name: Clone monorepo & install getML
