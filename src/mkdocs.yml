@@ -260,9 +260,9 @@ nav:
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
-    - Training & Support (draft): enterprise/training-and-support.md
-    - Guided Evaluation (draft): enterprise/guided-evaluation.md
-    - DEBUG (draft): enterprise/debug.md
+    # - Training & Support (draft): enterprise/training-and-support.md
+    # - Guided Evaluation (draft): enterprise/guided-evaluation.md
+    # - DEBUG (draft): enterprise/debug.md
 
 
   - API Reference:
