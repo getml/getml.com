@@ -1,8 +1,10 @@
 [](){#hyperparamter-optimization}
 # Hyperparameter optimization
 
-!!! enterprise-adm "Enterprise Feature"
-    This is an enterprise feature and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
+!!! enterprise-adm "Enterprise edition"
+    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
+
+    For licensing information and technical support, please [contact us][contact-page].
 
 In the sections on [feature engineering][feature-engineering] and [predicting]
 [predicting], we learned how to train both the feature learning algorithm and the 

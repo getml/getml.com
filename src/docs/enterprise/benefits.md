@@ -3,15 +3,15 @@ hide:
   - toc
 ---
 
-# **Why choose getML enterprise?**
+# **Why choose getML Enterprise?**
 [](){#enterprise-benefits}
 
-ML teams working enterprise data, be it relational or time series, face a significat challenge. Building ML applications on top of traditional open-source ML libraries and algorithms take months of work, and results in hard to maintain model code and feature store infrastructure. GetML changes that.
+ML teams working enterprise data, be it relational or time series, face a significant challenge. Building ML applications on top of traditional open-source ML libraries and algorithms take months of work, and results in hard to maintain model code and feature store infrastructure. GetML changes that.
 
 
 ## **Unprecedented value at a fraction of the cost**
 
-GetML Enterprise is your choice if your business applicaton demands high model accuracies and short development cycles. Using getML, Data Science Teams will experience:
+GetML Enterprise is your choice if your business application demands high model accuracies and short development cycles. Using getML, Data Science Teams will experience:
 
 - **No Coding Overhead:** GetML Relational Learning eliminates the need for writing and maintaining extensive feature logic code, allowing your data science teams to accelerate development timelines and focus on business impact.
 
@@ -22,7 +22,7 @@ GetML Enterprise is your choice if your business applicaton demands high model a
 
 ## **An Edge for ML-Driven Enterprises**
 
-GetML Enterprise offers a suite of cutting-edge ML algorithms that surpass both the GetML community edition and other propositionalization libraries. The unique capabilities of GetML Enterprise algorithms provide several key advantages:
+GetML Enterprise offers a suite of cutting-edge ML algorithms that surpass both the GetML Community edition and other propositionalization libraries. The unique capabilities of GetML Enterprise algorithms provide several key advantages:
 
 - **More Accurate Models:** Achieve double-digit accuracy gains across various use cases.
 - **Robust Against Feature Drift:** Ensure consistent performance despite data pattern changes.

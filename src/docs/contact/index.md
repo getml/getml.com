@@ -5,7 +5,7 @@ hide:
 
 ---
 
-
+[](){#contact-page}
 # **How can we help you?** {: .h2-lg .center-lg .mb-1-lg }
 
 Want to get in touch with us? Choose an option below and we’ll be happy to show you how getML can transform your company’s approach to machine learning on enterprise data.
@@ -19,7 +19,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     ---
 
-    Learn how getML Relational Learning is working and details about successfull applications in many cross-industry ML applications.
+    Learn how getML Relational Learning is working and details about successful applications in many cross-industry ML applications.
 
     [:octicons-arrow-right-24: Request a demo ](../enterprise/book-demo)
 
@@ -29,7 +29,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
     ---
 
     Need support in building ML enabled data products or service?
-    Connect with our full-serivce team to discuss how we can help.
+    Connect with our full-service team to discuss how we can help.
 
     [:octicons-arrow-right-24: Get in touch](message-us)
 

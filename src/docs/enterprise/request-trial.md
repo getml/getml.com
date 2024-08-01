@@ -5,21 +5,21 @@ palette:
   - scheme: default
 ---
 
-# **GetML enterprise trial download**
+# **GetML Enterprise trial download**
 
 *Test our most advanced algorithms first hand.*
 
 /// html | div.col-2-lg.left.bold
 
-We invite you to a free test of getML Enterprise. Experience the impace of your data and our most andvances algortihms for relational learning.
+We invite you to a free test of getML Enterprise. Experience the impact of your data and our most advanced algorithms for relational learning.
 
-This is best for data scientists and engineers that are already familiar with our api from our users of our getML community edition.
+This is best for data scientists and engineers that are already familiar with our API from our users of our getML Community edition.
 
 **What you will get:**
 {: .mb-0 }
 
 /// html | div.indicator-primary
-- [x] Access to getML enterprise binaries
+- [x] Access to getML Enterprise binaries
 - [x] Chance to test drive relational learning
 - [x] Build any model for non-productive use (see [**terms**](trial/terms.md))
 ///
