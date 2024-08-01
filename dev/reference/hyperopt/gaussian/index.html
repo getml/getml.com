@@ -2292,9 +2292,8 @@ combinations will be done using the expected information (EI).</p>
 
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
-  <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
-<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
+  <p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </details>
 
 <table>
@@ -2848,7 +2847,9 @@ of the fitting of the Gaussian process. Range: [3,
 
                   <details class="quote">
                     <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">742</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">740</span>
+<span class="normal">741</span>
+<span class="normal">742</span>
 <span class="normal">743</span>
 <span class="normal">744</span>
 <span class="normal">745</span>
@@ -2886,9 +2887,7 @@ of the fitting of the Gaussian process. Range: [3,
 <span class="normal">777</span>
 <span class="normal">778</span>
 <span class="normal">779</span>
-<span class="normal">780</span>
-<span class="normal">781</span>
-<span class="normal">782</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">780</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">param_space</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
@@ -3580,11 +3579,11 @@ but the best pipeline.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">798</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">796</span>
+<span class="normal">797</span>
+<span class="normal">798</span>
 <span class="normal">799</span>
-<span class="normal">800</span>
-<span class="normal">801</span>
-<span class="normal">802</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">800</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validate the parameters of the hyperparameter optimization.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

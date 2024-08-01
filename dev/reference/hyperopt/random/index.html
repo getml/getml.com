@@ -2280,9 +2280,8 @@ bound for each dimension of <code>param_space</code> independently.</p>
 
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
-  <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
-<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
+  <p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </details>
 
 <table>
@@ -2536,7 +2535,13 @@ either <a class="autorefs autorefs-internal" href="../../predictors/xgboost_regr
 
                   <details class="quote">
                     <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1257</span>
+                    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1251</span>
+<span class="normal">1252</span>
+<span class="normal">1253</span>
+<span class="normal">1254</span>
+<span class="normal">1255</span>
+<span class="normal">1256</span>
+<span class="normal">1257</span>
 <span class="normal">1258</span>
 <span class="normal">1259</span>
 <span class="normal">1260</span>
@@ -2552,13 +2557,7 @@ either <a class="autorefs autorefs-internal" href="../../predictors/xgboost_regr
 <span class="normal">1270</span>
 <span class="normal">1271</span>
 <span class="normal">1272</span>
-<span class="normal">1273</span>
-<span class="normal">1274</span>
-<span class="normal">1275</span>
-<span class="normal">1276</span>
-<span class="normal">1277</span>
-<span class="normal">1278</span>
-<span class="normal">1279</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1273</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">param_space</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
     <span class="n">pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span>
@@ -3232,17 +3231,17 @@ but the best pipeline.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/hyperopt/hyperopt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1294</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1288</span>
+<span class="normal">1289</span>
+<span class="normal">1290</span>
+<span class="normal">1291</span>
+<span class="normal">1292</span>
+<span class="normal">1293</span>
+<span class="normal">1294</span>
 <span class="normal">1295</span>
 <span class="normal">1296</span>
 <span class="normal">1297</span>
-<span class="normal">1298</span>
-<span class="normal">1299</span>
-<span class="normal">1300</span>
-<span class="normal">1301</span>
-<span class="normal">1302</span>
-<span class="normal">1303</span>
-<span class="normal">1304</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">1298</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Validate the parameters of the hyperparameter optimization.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

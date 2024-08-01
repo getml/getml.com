@@ -1460,6 +1460,102 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-launch-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Launch the engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-load-the-data-into-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Load data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-annotate-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Annotate the data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-define-the-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Define the data model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-train-the-feature-learning-algorithm-and-the-predictor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Model training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-evaluate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Evaluate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-predict" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Predict
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Deploy
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1575,41 +1671,31 @@ as possible.</p>
 <p>getML comes with a high-performance <strong>engine</strong> written in C++ and an intuitive
 <strong>Python API</strong>. Completing a data science project with getML consists of eight
 simple steps.</p>
-<ol>
-<li>
-<p>Launch the engine
+<h4 id="1-launch-the-engine">1. Launch the engine</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;one_minute_to_getml&#39;</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Load the data into the engine
+</code></pre></div>
+<h4 id="2-load-the-data-into-the-engine">2. Load the data into the engine</h4>
 <div class="highlight"><pre><span></span><code><span class="n">df_population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population_table&#39;</span><span class="p">)</span>
 <span class="n">df_peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s1">&#39;peripheral_table&#39;</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Annotate the data
+</code></pre></div>
+<h4 id="3-annotate-the-data">3. Annotate the data</h4>
 <div class="highlight"><pre><span></span><code><span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 <span class="n">df_population</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="s1">&#39;join_key&#39;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">role</span><span class="o">.</span><span class="n">join_key</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Define the data model
+</code></pre></div>
+<h4 id="4-define-the-data-model">4. Define the data model</h4>
 <div class="highlight"><pre><span></span><code><span class="n">dm</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
 <span class="n">dm</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">df_peripheral</span><span class="o">.</span><span class="n">to_placeholder</span><span class="p">())</span>
 <span class="n">dm</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
    <span class="n">dm</span><span class="o">.</span><span class="n">peripheral</span><span class="p">,</span>
    <span class="n">on</span><span class="o">=</span><span class="s2">&quot;join_key&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Train the feature learning algorithm and the predictor
+</code></pre></div>
+<h4 id="5-train-the-feature-learning-algorithm-and-the-predictor">5. Train the feature learning algorithm and the predictor</h4>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
     <span class="n">data_model</span><span class="o">=</span><span class="n">dm</span><span class="p">,</span>
     <span class="n">feature_learners</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(),</span>
@@ -1619,31 +1705,23 @@ simple steps.</p>
     <span class="n">population</span><span class="o">=</span><span class="n">df_population</span><span class="p">,</span>
     <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Evaluate
+</code></pre></div>
+<h4 id="6-evaluate">6. Evaluate</h4>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
     <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Predict 
+</code></pre></div>
+<h4 id="7-predict">7. Predict</h4>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
     <span class="n">population</span><span class="o">=</span><span class="n">df_population_unseen</span><span class="p">,</span>
     <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="n">df_peripheral_unseen</span><span class="p">]</span>
 <span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>Deploy
+</code></pre></div>
+<h4 id="8-deploy">8. Deploy</h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># Allow the pipeline to respond to HTTP requests</span>
 <span class="n">pipe</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-</ol>
+</code></pre></div>
 <p>Check out the rest of this documentation to find out how getML achieves top
 performance on real-world data science projects with many tables and complex
 data schemes.</p>

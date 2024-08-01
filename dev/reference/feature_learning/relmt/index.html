@@ -2267,9 +2267,8 @@ algorithm, check out the User Guide: <a class="autorefs autorefs-internal" href=
 
 <details class="enterprise-adm" open>
   <summary>Enterprise edition</summary>
-  <p>This feature is available in the getML
-<a class="autorefs autorefs-internal" href="../../../user_guide/walkthrough/#community-vs-enterprise-edition">Enterprise edition</a>.</p>
-<p>For licences, technical support and more information, feel free to <a href="https://www.getml.com/contact" target="_blank" rel="noopener">contact us</a>!</p>
+  <p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </details>
 
 <table>
@@ -2713,7 +2712,9 @@ the own parameters will be validated.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/feature_learning/relmt.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">183</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
 <span class="normal">186</span>
@@ -2749,9 +2750,7 @@ the own parameters will be validated.</p>
 <span class="normal">216</span>
 <span class="normal">217</span>
 <span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks both the types and the values of all instance</span>
 <span class="sd">    variables and raises an exception if something is off.</span>
