@@ -12,11 +12,11 @@ In this walkthrough, you will learn about the basic concepts of getML. You will 
 3. [Building a pipeline](#building-a-pipeline)
 4. [Working with a pipeline](#working-with-a-pipeline)
 
-The guide is applicable to both the enterprise and the community editions of getML. The highlights of the two are mentioned under [community vs enterprise edition](#community-vs-enterprise-edition) section below.
+The guide is applicable to both the Enterprise and the Community editions of getML. The highlights of the two are mentioned under [Community vs Enterprise edition](#community-vs-enterprise-edition) section below.
 
 You have not installed getML on your machine yet? Before you get started, head over
-to the installation instructions: for the enterprise edition [here][installation] or
-for the community edition [here](https://github.com/getml/getml-community#installation).
+to the installation instructions: for the Enterprise edition [here][installation] or
+for the Community edition [here](https://github.com/getml/getml-community#installation).
 
 
 ## Introduction
@@ -29,23 +29,10 @@ While it is often claimed that AutoML covers the complete workflow of a data sci
 
 getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors. This topic is covered in other material.
 
-All functionality of getML is implemented in the so-called *getML engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with engine. In addition, the *getML monitor* (available in enterprise edition) provides a Go-based graphical user interface to ease working with getML and significantly accelerate your workflow.
+All functionality of getML is implemented in the so-called *getML engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with engine. In addition, the *getML monitor* (available in Enterprise edition) provides a Go-based graphical user interface to ease working with getML and significantly accelerate your workflow.
 
-In this article, we start with a brief glimpse of different toolsets offered by getML community and enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.
+In this article, we start with a brief glimpse of different toolsets offered by getML community and Enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.
 
-[](){#getting-started-community-vs-enterprise}
-## Community vs Enterprise edition
-
-!!! enterprise-adm "Enterprise edition"
-    To purchase a license for the Enterprise edition, technical support and
-    more information, please [contact us][contact-page].
-
-Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
-
-{{ read_csv('docs/assets/csv/community_vs_enterprise_edition.csv') }}
-
-*The Enterprise edition contains all features of the Community edition plus the
-features listed in the column.
 
 ## Starting a new project
 
@@ -68,7 +55,7 @@ Alternatively, you can also launch the getML engine and the monitor as follows:
 
 Now, inside Python, execute ``import getml`` to import the API.
 
-The getML Monitor, available in the enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python. We will cover the getML monitor in a later tutorial, but feel free to check what is going on while following this guide.
+The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python. We will cover the getML monitor in a later tutorial, but feel free to check what is going on while following this guide.
 
 The entry-point for your project is the `getml.project` module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a ``.getml`` bundle to disk or load a ``.getml`` bundle from disk. To see the running projects, you can execute:
 
@@ -367,7 +354,7 @@ print(features)
    2.00000000e+00 -3.53700424e-01]]
 ```
 
-If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of one of the features:
+If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of one of the features:
 ```python
 pipe.features[1].sql
 ```

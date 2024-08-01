@@ -3,7 +3,7 @@
 
 On macOS and Windows, you can to run the engine in a Docker container. We are working on providing native support for them in the near future.
 
-Setup the [Python API][getml-suite-python-api] and the [engine][engine] of the [getML community edition](https://github.com/getml/getml-community) as follows.
+Setup the [Python API][getml-suite-python-api] and the [engine][engine] of the [getML Community edition](https://github.com/getml/getml-community) as follows.
 
 ## Python API
 
@@ -22,7 +22,7 @@ Make sure that Docker is [installed](https://docs.docker.com/get-docker/). For L
 
     [Choose getML enterprise](../../enterprise/benefits.md){ .md-button }
 
-    Once you have obtained the getML enterprise edition, you can install it as follows:
+    Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][getml-suite-python-api]: `pip install getml`
     - Install the [engine][engine] by following the same [instructions as below][engine-docker-installation]. Just replace the URL with that of the enterprise `docker-compose.yml` file you have been provided with.
