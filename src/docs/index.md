@@ -117,13 +117,12 @@ GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 <div class="w-80-lg margin-auto-lg mb-4-lg" markdown>
 
 ##### Whats under the hood? {.accent .center-lg_ }
-## Learning from billions of features with getML and a few lines of Python {.h2-lg .center-lg_ .mb-1-lg_ .mt-0}
+## Billions of Features with a few lines of code {.h2-lg .center-lg_ .mb-1-lg_ .mt-0}
 
 Think of getML as Tensorflow - just for relational data.
 {.center-lg_ .large-lg .impact .hidden}
 
-GetML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are four novel feature learning algorithms that automate manual feature engineering using supervised.
-GetML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, enabling unparalleled model accuracy within days worth of work.
+getML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are four novel feature learning algorithms that automate manual feature engineering using supervised learning. getML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, achieving unparalleled model accuracy within days' worth of work.
 {.center-lg_ .medium-lg .mb-2-lg}
 
 <div class="w-80-lg margin-auto-lg" markdown>
