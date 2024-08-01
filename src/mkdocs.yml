@@ -173,6 +173,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.snippets:
+      check_paths: true
+      base_path:
+        - src/docs/assets/snippets
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.arithmatex:
@@ -183,18 +188,12 @@ markdown_extensions:
       options:
         custom_icons:
           - src/overrides/.icons
-  - material.extensions.preview:
-      #     sources:
-      #       include:
-      #         - ...
-      #       exclude:
-      #         - ...
+  - material.extensions.preview: # not working as expected
       targets:
         include:
           - reference/*
           - user_guide/*
-  #       exclude:
-  #         - ...
+
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -219,6 +218,7 @@ not_in_nav: |
   reference/pipeline/metadata.md
   reference/pipeline/sql_string.md
   reference/pipeline/table.md
+  assets/snippets/*
 
 nav:
   - Home: index.md

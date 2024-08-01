@@ -5,7 +5,8 @@
     --md-default-fg-color: #000000eb;
     --md-default-fg-color--contrast: #0e0e0e;
     --md-typeset-a-color: #6241be;
-
+    --md-code-hl-color: #8350b8;
+    --md-code-hl-color--light: #a26dff1a
 }
 
 [data-md-color-scheme="slate"] > * {
@@ -13,6 +14,8 @@
     --md-primary-fg-color: var(--md-default-bg-color);
     --md-typeset-a-color: #784ff4;
     --md-default-fg-color--contrast: #f6f6f6;
+    --md-code-hl-color: #5f41d4;
+    --md-code-hl-color--light: #a96cec26
 }
 
 [data-md-color-scheme="default"] > * {
@@ -237,7 +240,7 @@ h1 + p:has(a[id]:only-child),
     box-shadow: none !important;
 }
 
-.cards-background li {
+.cards-background >ul >li {
     background-color: var(--md-bg);
     border-radius: 12px !important;
 }
@@ -751,6 +754,9 @@ nav.md-tabs {
     .md-typeset .mb-1-lg {
         margin-bottom: 0.4em;
     }
+    .md-typeset .mb-1rem-lg {
+        margin-bottom: 1rem !important;
+    }
     .mb-2-lg {
         margin-bottom: 2rem !important;
     }
@@ -915,4 +921,19 @@ nav.md-tabs {
     height: 100%;      /* Full section height */
     z-index: -1;
     background-color: var(--md-bg);
+}
+
+
+.md-typeset .full-width-bg-lg code,
+.md-typeset .full-width-bg-lg .highlighttable .linenos{
+    background-color: var(--md-default-bg-color);
+}
+
+
+[data-md-color-scheme="slate"] .md-tooltip {
+    background-color: #14161b !important;
+}
+
+[data-md-color-scheme="default"] .md-tooltip {
+    background-color: #fdfdfd !important;
 }

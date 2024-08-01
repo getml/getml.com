@@ -66,7 +66,7 @@ Built for the data in enterprise data warehouse
 {: .hidden }
 
 
-##### Built for enterprise data {.accent .h5-lg .w-60-lg_ .mt-0-lg}
+##### Machine Learning for enterprise data {.accent .h5-lg .w-60-lg_ .mt-0-lg}
 ## Why you should consider getML {.h2-l .w-60-lg_}
 
 Finally smooth pipeline
@@ -93,15 +93,15 @@ GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 
 -   <span class="top">GetML is</span>
     <span class="focus">easy to use</span>
-    <span class="sub">helping you deliver<br> better models faster</span>
+    <span class="sub">helping you deliver<br class="show-lg"> better models faster</span>
 
 -   <span class="top">Delivered</span>
     <span class="focus">10x</span>
-    <span class="sub">speedup in past<br> customer projects</span>
+    <span class="sub">speedup in past<br class="show-lg"> customer projects</span>
 
 -   <span class="top">Prediction accuracy by</span>
     <span class="focus">30%</span>
-    <span class="sub">increased compared<br> to past baseline models</span>
+    <span class="sub">increased compared<br class="show-lg"> to past baseline models</span>
 
 ///
 
@@ -114,62 +114,62 @@ GetML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 
 <div class="hidden clear-lg mb-4-lg"></div>
 
-<div class="w-75-lg margin-auto-lg mb-4-lg" markdown>
+<div class="w-80-lg margin-auto-lg mb-4-lg" markdown>
 
-##### Your Feature Learning Superpower {.accent .center-lg .mb-0}
-## Whats under the hood? {.h2-lg .center-lg .mb-1-lg .mt-0}
+##### Whats under the hood? {.accent .center-lg_ }
+## Learning from billions of features with getML and a few lines of Python {.h2-lg .center-lg_ .mb-1-lg_ .mt-0}
 
 Think of getML as Tensorflow - just for relational data.
-{.center-lg .large-lg_ .mute}
+{.center-lg_ .large-lg .impact .hidden}
 
-getML is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. It comes with an easy-to-use Python API that allows to build end-to-end ML pipelines on terabytes of input data.
-{.center-lg}
-
-
+GetML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are four novel feature learning algorithms that automate manual feature engineering using supervised.
+GetML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, enabling unparalleled model accuracy within days worth of work.
+{.center-lg_ .medium-lg .mb-2-lg}
 
 <div class="w-80-lg margin-auto-lg" markdown>
 
-``` py linenums="1"
-# ...
+**Three magic lines of :material-language-python:{: style="opacity:0.8;"} Python `#!python code`{.usp} to learn from billions of features. <br class="show-lg"> Press :material-plus-circle:{: style="opacity:0.8;"} for more details.**
+{.large-lg .center-lg .mb-3-lg}
 
-# Define the feature learners 
-fast_prop = getml.feature_learning.FastProp() # (1)!
-relboost = getml.feature_learning.Relboost() #(2)!
+/// html | div.mb-5-lg
+--8<-- "whats_inside.md"
+///
 
-# Define the predictor
-predictor = getml.predictors.ScaleGBMRegressor() #(3)!
 
-# Define the pipeline
-pipe = getml.pipeline.Pipeline( #(4)!
-    data_model=star_schema.data_model,
-    feature_learners=[fast_prop, relboost],
-    predictors=predictor
-)
 
-# Train the feature learnings and the predictor
-pipe.fit(data_container.train) #(5)!
+**With getML we want to make data science fun again**
+{.large-lg .center-lg .mb-1rem-lg .hidden}
 
-# ...
-```
-
-1.  [`FastProp`][feature-engineering-algorithms-fastprop] comes with our [community](https://github.com/getml/getml-community) edition. It is fast and generates substantial number of important features based on simple aggregations.
-
-2.  [`Relboost`][feature-engineering-algorithms-relboost] is part our [enterprise][enterprise-benefits] edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.
-
-3. [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor] is our memory-mapped predictor that can handle big datasets that do not fit into memory.
-
-4. [`Pipeline`][getml.pipeline.Pipeline] bundle together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's `fit` is called next.
-
-5. Inspired by libraries like `scikit-learn`, the [`fit`][getml.pipeline.Pipeline.fit], [`score`][getml.pipeline.Pipeline.score], and [`predict`][getml.pipeline.Pipeline.predict] methods of a pipeline make the machine learning process a breeze.
+/// html | div.lg.horizontal-list.indicator-primary.mb-4-lg.hidden
+- [X] No complex infrastructure
+- [X] No feature code
+- [X] No long waiting times
+///
 
 </div>
 
+/// html | div.grid.lg.cards.cards-clear.cards-background.cards-box.no-first-card.li-check-primary.mb-2-lg
 
-### **Getting started is easy**
+-   #### Mission of getML {: .mb-0 .accent }
+    ## Making Data Science Fun Again: {: .mt-0 }
 
-1. read through our user guide
-2. `pip install getml`
-3. `checkout our example repository` to get started with our getML community edition
+    /// html | div.lg.indicator-primary.mb-4-lg_.font-size-1-2-lg
+    - [X] No complex infrastructure
+    - [X] No feature code
+    - [X] No long waiting times
+    ///
+
+
+-   #### Getting started is easy
+
+    1. Read through our [user guide][user-guide-index]
+    2. Install getML Community `pip install getml`
+    3. Clone [getml-demo](https://github.com/getml/getml-demo) and explore our example notebooks
+
+    *Need help along the way? Here are our [support options](contact).*
+
+
+///
 
 
 </div>
