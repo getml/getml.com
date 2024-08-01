@@ -1,4 +1,4 @@
-chec---
+---
 template: home.html
 hide:
   - toc
