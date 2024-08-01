@@ -1,4 +1,8 @@
 
+details.enterprise-feature {
+    display: none;
+}
+
 .md-sidebar--primary .md-sidebar__scrollwrap {
     background-color: var(--md-code-bg-color--lighter);
     padding: 16px 8px 8px 6px;
