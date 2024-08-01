@@ -204,7 +204,6 @@ extra_css:
 draft_docs: |
   *_.md
   *debug.md
-  release-notes.md
   install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
