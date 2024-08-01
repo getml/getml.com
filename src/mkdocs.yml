@@ -207,7 +207,6 @@ draft_docs: |
   install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
-  home/support/support.md
 
 not_in_nav: |
   *debug.md
