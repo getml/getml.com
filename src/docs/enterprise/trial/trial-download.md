@@ -3,9 +3,9 @@ search:
   exclude: true
 ---
 
-# getML enterprise trial download
+# getML Enterprise trial download
 
-Thank you for your interest and trust in GetML. Download the getML enterprise trial binary to get started with the most advanced feature learning algorithms.
+Thank you for your interest and trust in GetML. Download the getML Enterprise trial binary to get started with the most advanced feature learning algorithms.
 
 ## Choose your OS:
 
@@ -21,7 +21,7 @@ Thank you for your interest and trust in GetML. Download the getML enterprise tr
 ### Windows
 [Windows](#){ .md-button .md-button--primary }
 
-By downloading and using getML enterprise, I agree to the [Privacy Policy](https://www.notion.so/code17-io/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a) and [Terms](terms.md).
+By downloading and using getML Enterprise, I agree to the [Privacy Policy](https://www.notion.so/code17-io/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a) and [Terms](terms.md).
 
 [Release Notes ->](../../release-notes.md)
 

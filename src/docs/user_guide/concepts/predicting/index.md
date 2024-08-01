@@ -14,8 +14,10 @@ getML comes with six built-in machine learning predictors:
 - [`ScaleGBMClassifier`][getml.predictors.ScaleGBMClassifier]
 - [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor]
 
-!!! enterprise-adm "Enterprise Feature"
-    [`ScaleGBMClassifier`][getml.predictors.ScaleGBMClassifier] and [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor] are enterprise features and not available in the community edition. Learn more about the [benefits][enterprise-benefits] and see the [comparion of features][enterprise-feature-list] between the community and enterprise edition.
+!!! enterprise-adm "Enterprise edition"
+    [`ScaleGBMClassifier`][getml.predictors.ScaleGBMClassifier] and [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor] are exclusive to the Enterprise edition and are not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
+
+    For licensing information and technical support, please [contact us][contact-page].
 
 Using one of them in your analysis is very simple. Just pass one as the `predictor` argument to either [`Pipeline`][getml.pipeline.Pipeline]
 on initialization. As a list, more than one predictor can be passed to the pipeline.
