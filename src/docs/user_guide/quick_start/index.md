@@ -34,7 +34,7 @@ getML comes with a high-performance **engine** written in C++ and an intuitive
 **Python API**. Completing a data science project with getML consists of eight
 simple steps.
 
-1. Launch the engine
+#### 1. Launch the engine
 ```python
 import getml
 
@@ -42,20 +42,21 @@ getml.engine.launch()
 getml.engine.set_project('one_minute_to_getml')
 ```
 
-2. Load the data into the engine
+#### 2. Load the data into the engine { data-toc-label='2. Load data' }
 ```python
 df_population = getml.data.DataFrame.from_csv('data_population.csv',
             name='population_table')
 df_peripheral = getml.data.DataFrame.from_csv('data_peripheral.csv',
             name='peripheral_table')
 ```
-3. Annotate the data
+
+#### 3. Annotate the data
 ```python
 df_population.set_role(cols='target', role=getml.data.role.target)
 df_population.set_role(cols='join_key', role=getml.data.role.join_key)
 ```
 
-4. Define the data model
+#### 4. Define the data model
 ```python
 dm = getml.data.DataModel(population=df_population.to_placeholder())
 dm.add(df_peripheral.to_placeholder())
@@ -65,7 +66,7 @@ dm.population.join(
 )
 ```
 
-5. Train the feature learning algorithm and the predictor
+#### 5. Train the feature learning algorithm and the predictor { data-toc-label='5. Model training' }
 ```python
 pipe = getml.pipeline.Pipeline(
     data_model=dm,
@@ -78,7 +79,7 @@ pipe.fit(
 )
 ```
 
-6. Evaluate
+#### 6. Evaluate
 ```python
 pipe.score(
     population=df_population_unseen,
@@ -86,15 +87,15 @@ pipe.score(
 )
 ```
 
-7. Predict 
-```python  
+#### 7. Predict
+```python
 pipe.predict(
     population=df_population_unseen,
     peripheral=[df_peripheral_unseen]
 )
 ```
 
-8. Deploy
+#### 8. Deploy
 ```python
 # Allow the pipeline to respond to HTTP requests
 pipe.deploy(True)
