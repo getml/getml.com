@@ -1804,8 +1804,9 @@
 <a href="" id="preprocessing-mappings"></a></p>
 <h2 id="mappings">Mappings</h2>
 <div class="admonition enterprise-adm">
-<p class="admonition-title">Enterprise Feature</p>
-<p>This is an enterprise feature and not available in the community edition. Learn more about the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits</a> and see the <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">comparion of features</a> between the community and enterprise edition.</p>
+<p class="admonition-title">Enterprise edition</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p><a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mappings</code></a> are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.</p>
 <p>Mappings are a simple and interpretable alternative representation for categorical data. By introducing a continuous representation, mappings allow getML's feature learning algorithms to apply arbitrary aggregations to categorical columns. Further, mappings enable huge gains in efficiency when learning patterns from categorical data. You can control the extent mappings are utilized by specifying the minimum number of matching rows required for categories that constitutes a mapping through the <code>min_freq</code> parameter.</p>
