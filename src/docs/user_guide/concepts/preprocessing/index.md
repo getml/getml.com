@@ -111,7 +111,7 @@ While most of getML's preprocessors are straightforward, two of them deserve a m
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
+    For licensing information and technical support, please [contact us][contact-page].
 
 [`Mappings`][getml.preprocessors.Mapping] are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.
 

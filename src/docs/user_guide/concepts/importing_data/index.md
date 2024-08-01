@@ -224,7 +224,7 @@ You can also write your results back into the PostgreSQL database. If you provid
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
+    For licensing information and technical support, please [contact us][contact-page].
 
 [Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
 Software, Inc. It can be connected to the getML engine using the
@@ -259,7 +259,7 @@ the corresponding table.
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
+    For licensing information and technical support, please [contact us][contact-page].
 
 [ODBC](https://docs.microsoft.com/en-us/sql/odbc/reference/what-is-odbc) (Open Database Connectivity) is an API specification for connecting software programming language to a database, developed by Microsoft.
 

@@ -170,7 +170,7 @@ pipe = getml.pipeline.load(NAME_OF_THE_PIPELINE)
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
+    For licensing information and technical support, please [contact us][contact-page].
 
 The monitor provides information on the data imported into the engine, as well as on the trained pipelines and their performance. It is written in Go and compiled into a binary separate from the getML engine.
 

@@ -4,7 +4,7 @@
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
+    For licensing information and technical support, please [contact us][contact-page].
 
 In the sections on [feature engineering][feature-engineering] and [predicting]
 [predicting], we learned how to train both the feature learning algorithm and the 
