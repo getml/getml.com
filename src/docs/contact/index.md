@@ -21,12 +21,6 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     Learn how getML Relational Learning is working and details about successfull applications in many cross-industry ML applications.
 
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-    Talk to an expert on our team about our products, pricing, or schedule a demo.
-    Schedule a getML demo and learn about our unique advantages
-    {.hidden}
-
     [:octicons-arrow-right-24: Request a demo ](../enterprise/book-demo)
 
 
@@ -47,11 +41,6 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
     Have an agency? Partner with getML for technical or sales support or to discuss co-marketing opportunities.
 
     [:octicons-arrow-right-24: Tell us more](message-us)
-
-
-**Talk to Sales**
-Talk to an expert on our team about our products, pricing, or learn about our custom engineering support.
-{:.hidden}
 
 
 ///
