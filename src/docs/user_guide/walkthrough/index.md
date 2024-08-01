@@ -38,7 +38,7 @@ In this article, we start with a brief glimpse of different toolsets offered by 
 
 !!! enterprise-adm "Enterprise edition"
     To purchase a license for the Enterprise edition, technical support and
-    more information, please [contact us](https://www.getml.com/contact).
+    more information, please [contact us](dev.getml.com/dev/contact).
 
 Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:
 
@@ -397,4 +397,4 @@ This guide has shown you the very basics of getML. Starting with raw data, you h
 But there’s more! [Related articles](https://www.getml.com/blog) show application
 of getML on real world data sets.
 
-Also, don’t hesitate to [contact us](https://www.getml.com/contact) with your feedback.
+Also, don’t hesitate to [contact us](dev.getml.com/dev/contact) with your feedback.

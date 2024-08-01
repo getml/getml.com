@@ -146,9 +146,9 @@ You may notice that such a feature looks pretty similar to the [Multirel feature
 ### Multirel
 
 !!! enterprise-adm "Enterprise edition"
-    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare the features][enterprise-feature-list].
+    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](https://www.getml.com/contact).
+    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
 
 Simply speaking, [`Multirel`][getml.feature_learning.Multirel] is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.
 
@@ -233,9 +233,9 @@ Further information can be found in the API documentation for [`Multirel`][getml
 ### Relboost
 
 !!! enterprise-adm "Enterprise edition"
-    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare the features][enterprise-feature-list].
+    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](https://www.getml.com/contact).
+    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
 
 
 [`Relboost`][getml.feature_learning.Relboost] is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.
@@ -285,9 +285,9 @@ Further information can be found in the API documentation for [`Relboost`][getml
 ### Fastboost
 
 !!! enterprise-adm "Enterprise edition"
-    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare the features][enterprise-feature-list].
+    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](https://www.getml.com/contact).
+    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
 
 While both are generalizations of the gradient boosting algorithm, the main difference 
 between [`Fastboost`][getml.feature_learning.Fastboost] 
@@ -310,9 +310,9 @@ to learn separate rules and weights for each target.
 [](){#feature-engineering-algorithms-relmt}
 ### RelMT
 !!! enterprise-adm "Enterprise edition"
-    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare the features][enterprise-feature-list].
+    This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 
-    For licensing information and technical support, please [contact us](https://www.getml.com/contact).
+    For licensing information and technical support, please [contact us](dev.getml.com/dev/contact).
 
 
 [`RelMT`][getml.feature_learning.RelMT] is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).
