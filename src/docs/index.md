@@ -8,7 +8,7 @@ hide:
 
 <center>
 
-[**What's new?** | getML 1.5 release &rarr;](#)
+[**What's new?** | getML 1.5 release &rarr;][release-notes]
 {: .pill }
 
 </center>
@@ -60,19 +60,12 @@ A game changer in predictive applications for enterprise applications.
 
 <div class="w-75-lg" markdown>
 
-## :fontawesome-pro-duotone-layer-plus: {.accent .hidden}
 
-Built for the data in enterprise data warehouse
-{: .hidden }
+##### Machine Learning for enterprise data {.accent .h5-lg .mt-0-lg}
+## Why you should consider getML {.h2-l}
 
 
-##### Machine Learning for enterprise data {.accent .h5-lg .w-60-lg_ .mt-0-lg}
-## Why you should consider getML {.h2-l .w-60-lg_}
-
-Finally smooth pipeline
-{: .hidden }
-
-<div class="w-60-lg_ large-lg mute" markdown>
+<div class="large-lg mute" markdown>
 
 getML introduces new ML algorithms that <span class="impact">empower data scientists to achieve superior model performance</span> without the burden of manual feature engineering and building complex feature pipelines.
 
@@ -116,14 +109,12 @@ getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 
 <div class="w-80-lg margin-auto-lg mb-4-lg" markdown>
 
-##### Whats under the hood? {.accent .center-lg_ }
-## Billions of Features with a few lines of code {.h2-lg .center-lg_ .mb-1-lg_ .mt-0}
+##### Whats under the hood? {.accent }
+## Billions of Features with a few lines of code {.h2-lg .mt-0}
 
-Think of getML as Tensorflow - just for relational data.
-{.center-lg_ .large-lg .impact .hidden}
 
 getML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are four novel feature learning algorithms that automate manual feature engineering using supervised learning. getML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, achieving unparalleled model accuracy within days not months.
-{.center-lg_ .medium-lg .mb-2-lg}
+{.medium-lg .mb-2-lg}
 
 <div class="w-80-lg margin-auto-lg" markdown>
 
@@ -136,15 +127,6 @@ getML is a high-performance machine learning software for predictive analytics o
 
 
 
-**With getML we want to make data science fun again**
-{.large-lg .center-lg .mb-1rem-lg .hidden}
-
-/// html | div.lg.horizontal-list.indicator-primary.mb-4-lg.hidden
-- [X] No complex infrastructure
-- [X] No feature code
-- [X] No long waiting times
-///
-
 </div>
 
 /// html | div.grid.lg.cards.cards-clear.cards-background.cards-box.no-first-card.li-check-primary.mb-2-lg
@@ -152,7 +134,7 @@ getML is a high-performance machine learning software for predictive analytics o
 -   #### Mission of getML {: .mb-0 .accent }
     ## Making Data Science Fun Again: {: .mt-0 }
 
-    /// html | div.lg.indicator-primary.mb-4-lg_.font-size-1-2-lg
+    /// html | div.lg.indicator-primary.font-size-1-2-lg
     - [X] No complex infrastructure
     - [X] No feature code
     - [X] No long waiting times
@@ -184,8 +166,8 @@ getML is a high-performance machine learning software for predictive analytics o
 Both editions share the same :material-language-python: Python API.
 {: .medium-lg .mute .center-lg .mb-3-lg }
 
-<div class="container mb-4-lg_" markdown>
-<div class="box box-bg box-50 center-lg_" markdown>
+<div class="container" markdown>
+<div class="box box-bg box-50" markdown>
 
 ### :fontawesome-pro-duotone-user-group:{ .lg .middle .mb-1-lg .accent}<br> Community edition {.h2-lg}
 
@@ -193,17 +175,17 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 {.small-lg}
 
 
-[Get started :octicons-arrow-right-24:](install){ .md-button_ }
+[Get started :octicons-arrow-right-24:](install){: }
 
 </div>
-<div class="box box-bg box-50 center-lg_" markdown>
+<div class="box box-bg box-50" markdown>
 
 ### :fontawesome-pro-duotone-industry:{ .lg .middle .mb-1-lg .accent}<br> Enterprise edition {.h2-lg}
 
 This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. getML Enterprise gives you access to the most advanced Relational Learning algorithms.
 {.small-lg}
 
-[Learn more :octicons-arrow-right-24:](enterprise/benefits.md){ .md-button_ }
+[Learn more :octicons-arrow-right-24:](enterprise/benefits.md){: }
 
 </div>
 </div>

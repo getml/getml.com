@@ -204,11 +204,9 @@ extra_css:
 draft_docs: |
   *_.md
   *debug.md
-  release-notes.md
   install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
-  home/support/support.md
 
 not_in_nav: |
   *debug.md
@@ -261,9 +259,9 @@ nav:
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
-    - Training & Support (draft): enterprise/training-and-support.md
-    - Guided Evaluation (draft): enterprise/guided-evaluation.md
-    - DEBUG (draft): enterprise/debug.md
+    # - Training & Support (draft): enterprise/training-and-support.md
+    # - Guided Evaluation (draft): enterprise/guided-evaluation.md
+    # - DEBUG (draft): enterprise/debug.md
 
 
   - API Reference:
