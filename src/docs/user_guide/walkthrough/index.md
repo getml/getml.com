@@ -27,11 +27,13 @@ While it is often claimed that AutoML covers the complete workflow of a data sci
 
 ![Getting Started](../../images/getting_started_4_0.png)
 
-getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors. This topic is covered in other material.
+getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, and RelMT find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors.
 
-All functionality of getML is implemented in the so-called *getML engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with engine. In addition, the *getML monitor* (available in Enterprise edition) provides a Go-based graphical user interface to ease working with getML and significantly accelerate your workflow.
+All functionality of getML is implemented in the so-called *getML engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with the engine. 
+In addition, the *getML monitor,* a graphical web interface available in the Enterprise edition, provides you with an overview of your current projects and pipelines.
 
-In this article, we start with a brief glimpse of different toolsets offered by getML community and Enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.
+In this walkthrough, we start with an overview of the toolsets offered by the getML Community and Enterprise edition.
+Subsequently, employing an example data set, we demonstrate how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. By the end of this tutorial you are ready to tackle your own use cases with getML and dive deeper into our software using a variety of follow-up material.
 
 
 ## Starting a new project
@@ -84,9 +86,9 @@ getting_started
 
 ## Data Set
 
-The data set used in this tutorial consists of 2 tables. The so-called population table represents the entities we want to make a prediction about in the analysis. The peripheral table contains additional information and is related to the population table via a join key. Such a data set could appear, for example, in a customer churn analysis where each row in the population table represents a customer and each row in the peripheral table represents a transaction. It could also be part of a predictive maintenance campaign where each row in the population table corresponds to a particular machine in a production line and each row in the peripheral table to a measurement from a certain sensor.
+The data set used in this tutorial consists of 2 tables: (I) the so-called population table represents the entities we want to make a prediction about in the analysis and (II) the peripheral table contains additional information and is related to the population table via a join key. Such a data set could appear, for example, in a customer churn analysis where each row in the population table represents a customer and each row in the peripheral table represents a transaction. It could also be part of a predictive maintenance campaign where each row in the population table corresponds to a particular machine in a production line and each row in the peripheral table to a measurement from a certain sensor.
 
-In this guide, however, we do not assume any particular use case. After all, getML is applicable to a wide range of problems from different domains. Use cases from specific fields are covered in other articles.
+In this guide, however, we do not assume any particular use case. After all, getML is applicable to a wide range of problems from different domains. Domain specific examples can be found in the [notebooks](https://github.com/getml/getml-demo/tree/master).
 
 ```python
 population_table, peripheral_table = getml.datasets.make_numerical(
