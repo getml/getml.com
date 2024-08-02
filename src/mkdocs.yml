@@ -132,6 +132,12 @@ plugins:
 
   - mike:
       canonical_version: latest
+      alias_type: symlink
+      # redirect_template: null
+      # deploy_prefix: ''
+      # version_selector: true
+      # css_dir: css
+      javascript_dir: src/docs/assets/javascripts/mike
 
 # Additional configuration
 extra:
@@ -174,7 +180,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets:
-      check_paths: true
+      # check_paths: true
       base_path:
         - src/docs/assets/snippets
   - pymdownx.inlinehilite
