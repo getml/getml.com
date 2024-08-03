@@ -133,11 +133,11 @@ plugins:
   - mike:
       canonical_version: latest
       alias_type: symlink
+      javascript_dir: src/docs/assets/javascripts/mike
+      # css_dir: src/docs/assets/stylesheets/mike
+      # version_selector: true
       # redirect_template: null
       # deploy_prefix: ''
-      # version_selector: true
-      # css_dir: css
-      javascript_dir: src/docs/assets/javascripts/mike
 
 # Additional configuration
 extra:
