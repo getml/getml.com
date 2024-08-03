@@ -937,3 +937,49 @@ nav.md-tabs {
 [data-md-color-scheme="default"] .md-tooltip {
     background-color: #fdfdfd !important;
 }
+
+
+.md-header__version {
+    flex-grow: initial;
+    font-size: .9rem;
+    /* height: 2.4rem; */
+    /* line-height: 2.4rem; */
+    padding: .2rem 0;
+}
+
+.md-header__version .md-button {
+    position: inherit;
+    color: inherit;
+}
+
+.md-header__version .md-version {
+    flex-shrink: initial;
+    font-size: inherit;
+    height: initial;
+}
+
+.md-header__version .md-button:first-child {
+    font-weight: initial;
+    /* opacity: 1 !important; */
+}
+
+.md-header__version .md-version__current:after {
+    margin-left: .2rem;
+}
+
+.md-header__version .md-version__current {
+    top:initial;
+    margin:0;
+}
+
+.md-header__version .md-button {
+    border: 1px solid var(--md-default-fg-color--lighter);
+    padding: calc(.525em - 1px) .6rem;
+}
+
+/*
+@media screen and (min-width: 76.25em) {
+    .md-search {
+        padding: .2rem 0;
+    }
+} */

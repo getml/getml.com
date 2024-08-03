@@ -33,7 +33,7 @@
     <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
-        <div class="md-header__topic hidden" data-md-component="header-topic">
+        <div class="md-header__topic_" data-md-component="header-topic">
           <span class="md-ellipsis">
             {% if page.meta and page.meta.title %}
               {{ page.meta.title }}
@@ -62,6 +62,30 @@
       {% include "partials/javascripts/palette.html" %}
     {% endif %}
 
+    <div class="md-header__version">
+        <div class="md-header__topic md-header__button md-button">
+        </div>
+    </div>
+
+    <div class="md-header__version">
+        <div class="md-header__topic md-header__button md-button">
+            <div class="md-version">
+                <button class="md-version__current" aria-label="Select version">
+                    dev
+                </button>
+                <ul class="md-version__list">
+                    <li class="md-version__item">
+                        <a href="http://localhost:8000/rc/" class="md-version__link">rc</a>
+                    </li>
+                    <li class="md-version__item">
+                        <a href="http://localhost:8000/dev/" class="md-version__link">dev</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Button to open search modal -->
     {% if "material/search" in config.plugins %}
       <label class="md-header__button md-icon" for="__search">
@@ -72,6 +96,7 @@
       <!-- Search interface -->
       {% include "partials/search.html" %}
     {% endif %}
+
 
     <!-- Repository information -->
     {% if config.repo_url %}
