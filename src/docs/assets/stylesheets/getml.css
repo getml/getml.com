@@ -941,6 +941,7 @@ nav.md-tabs {
 
 
 /* Version selector */
+/* @media off { */
 
 .md-header__version {
     flex-grow: initial;
@@ -949,6 +950,14 @@ nav.md-tabs {
     /* line-height: 2.4rem; */
     padding: .2rem 0;
     padding: 0;
+    position: static;
+}
+
+[data-md-toggle=search]:checked~.md-header .md-header__version {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0ms, opacity 0ms;
+
 }
 
 .md-header__version .md-button,
@@ -979,21 +988,27 @@ nav.md-tabs {
     font-size: .7rem;
     /* font-weight: bold; */
     letter-spacing: 0.5px;
-    margin: .4rem .2rem .4rem 0rem;
+    /* margin: .4rem .2rem .4rem 0rem; */
+    margin: .4rem 0 .4rem 0rem;
     /* margin: 0; */
-    color: var(--md-default-fg-color--light);
+    color: var(--md-default-fg-color);
 }
 
 .md-header__topic.version-button {
-    min-width: 87.76px;
+    /* min-width: 87.76px; */
+    position: relative;
 }
+
 
 @media screen and (min-width: 76.25em) {
     .md-header__version .version-button .md-version .md-version__current {
-        margin-right: .5rem;
+        /* margin-right: .5rem; */
     }
     .md-version__list {
-        margin-left: -.5rem;
+        /* margin-left: -.5rem; */
+    }
+    .md-search {
+        /* margin-left: .6rem; */
     }
 }
 
@@ -1007,7 +1022,10 @@ nav.md-tabs {
 
 .md-header__version .version-button .md-version:hover .md-version__current,
 .md-header__version .version-button .md-version:focus-within .md-version__current{
-    border-color: var(--md-default-fg-color--lighter);
+    border-color: var(--md-default-fg-color--lightest);
+    /* background: var(--md-code-bg-color); */
+    background: var(--md-code-bg-color);
+    color: var(--md-default-fg-color);
 }
 
 
@@ -1015,12 +1033,14 @@ nav.md-tabs {
     margin: 0;
     padding: 0;
     background-color: var(--md-default-bg-color);
+    /* background-color: var(--md-bg); */
+    /* border-radius :8px; */
     border-radius: .1rem;
     box-shadow: var(--md-shadow-z2);
     color: var(--md-default-fg-color);
     left: 50%;
     margin-top: .2rem;
-    margin-left: -.2rem;
+    /* margin-left: -.2rem; */
     max-height: 0;
     opacity: 0;
     position: absolute;
@@ -1047,6 +1067,8 @@ nav.md-tabs {
 .md-header__version .md-version__current {
     top:initial;
     margin:0;
+    /* background: var(--md-code-bg-color); */
+    border-color: var(--md-default-fg-color--lightest);
 }
 
 .md-header__version .md-button {
@@ -1060,3 +1082,6 @@ nav.md-tabs {
         padding: .2rem 0;
     }
 } */
+
+
+/* } */
