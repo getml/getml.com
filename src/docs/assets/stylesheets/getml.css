@@ -772,6 +772,9 @@ nav.md-tabs {
     .mt-0-lg {
         margin-top: 0 !important;
     }
+    .mt-4-lg {
+        margin-top: 4rem !important;
+    }
     .pt-4-lg {
         padding-top: 4rem !important;
     }
@@ -951,6 +954,14 @@ nav.md-tabs {
     white-space: nowrap;
 }
 
+.md-header__title--active .md-header__topic__nover {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-1.25rem);
+    transition: transform .4s cubic-bezier(1,.7,.1,.1), opacity .15s;
+    z-index: -1;
+}
+
 .md-header__version {
     flex-grow: initial;
     font-size: .9rem;
@@ -1104,3 +1115,50 @@ nav.md-tabs {
 
 
 /* } */
+
+
+/* Join widget */
+
+/* background container */
+div#join-widget > div {
+    background: transparent !important;
+    padding: none !important;
+}
+
+/* job category selector */
+div#join-widget > div > div {
+    display: none !important;
+}
+
+/* job card */
+[data-md-color-scheme="slate"] div#join-widget > div > a {
+    box-shadow: none !important;
+    background-color: var(--md-bg) !important;
+}
+
+@media screen and (min-width: 76.25em) {
+    [data-md-color-scheme="slate"] div#join-widget > div > a {
+        padding-left: 28px !important;
+    }
+}
+
+/* job card company icon */
+[data-md-color-scheme="slate"] div#join-widget > div > a > img {
+    display: none !important;
+    /* box-shadow: none !important; */
+    /* background-color: var(--md-bg) !important; */
+}
+
+/* job card title */
+[data-md-color-scheme="slate"] div#join-widget > div > a > div > div:first-child {
+    color: var(--md-default-fg-color) !important;
+}
+
+/* job card details */
+[data-md-color-scheme="slate"] div#join-widget > div > a > div > div:last-child > * {
+    color: var(--md-default-fg-color--light) !important;
+}
+
+[data-md-color-scheme="slate"] div#join-widget svg {
+    fill: currentColor !important;
+}
