@@ -129,15 +129,9 @@ plugins:
   - table-reader
   - tags
   - meta
-
   - mike:
       canonical_version: latest
       alias_type: symlink
-      # javascript_dir: src/docs/assets/javascripts/mike
-      # css_dir: src/docs/assets/stylesheets/mike
-      # version_selector: true
-      # redirect_template: null
-      # deploy_prefix: ''
 
 # Additional configuration
 extra:
@@ -164,46 +158,6 @@ extra:
   version:
     provider: mike
 
-  # alternate:
-  #   - name: English
-  #     link: /en/
-  #     lang: en
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
-  #   - name: Deutsch
-  #     link: /de/
-  #     lang: de
 
 # Extensions
 markdown_extensions:
