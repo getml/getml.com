@@ -20,7 +20,7 @@ If you’re looking for somewhere you can learn quickly, make a meaningful impac
 
 
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-6837515d-7017-499a-9ffc-b2d40c609458 mb-5-lg" data-elfsight-app-lazy></div>
+<div class="elfsight-app-6837515d-7017-499a-9ffc-b2d40c609458 mb-5-lg eapps-widget" data-elfsight-app-lazy></div>
 
 
 ## Putting People First {: .h2-l .center-lg .mb-2-lg .mt-4-lg }
@@ -68,11 +68,17 @@ If you’re looking for somewhere you can learn quickly, make a meaningful impac
 ///
 
 
+<div class="full-width-bg-lg" markdown>
+
+<div class="hidden clear-lg mb-4-lg"></div>
+
+<div class="w-80-lg margin-auto-lg mb-4-lg" markdown>
+
 
 ## Our open positions {: .h2-l .center-lg .mb-1-lg .mt-4-lg }
 
 
-/// html | div#join-widget.w-75-lg.center-lg
+<div id="join-widget" class="center-lg margin-auto-lg mb-4-lg">
 
   <script>
   ;(function () {
@@ -97,5 +103,8 @@ If you’re looking for somewhere you can learn quickly, make a meaningful impac
       p.appendChild(s);
     })()
   </script>
+</div>
 
-///
+<div class="hidden clear-lg"></div>
+
+</div>
