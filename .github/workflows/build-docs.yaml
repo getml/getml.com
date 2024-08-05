@@ -105,7 +105,7 @@ jobs:
         run: |
           git checkout gh-pages
           if [ ! -f CNAME ]; then
-          echo "dev.getml.com" > CNAME
+          echo "getml.com" > CNAME
 
           git add CNAME
           git commit -m "Add CNAME file if it doesn't exist"

@@ -129,9 +129,9 @@ plugins:
   - table-reader
   - tags
   - meta
-
   - mike:
       canonical_version: latest
+      alias_type: symlink
 
 # Additional configuration
 extra:
@@ -158,6 +158,7 @@ extra:
   version:
     provider: mike
 
+
 # Extensions
 markdown_extensions:
   - abbr
@@ -174,7 +175,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.snippets:
-      check_paths: true
+      # check_paths: true
       base_path:
         - src/docs/assets/snippets
   - pymdownx.inlinehilite
@@ -204,11 +205,9 @@ extra_css:
 draft_docs: |
   *_.md
   *debug.md
-  release-notes.md
   install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
-  home/support/support.md
 
 not_in_nav: |
   *debug.md
@@ -261,9 +260,9 @@ nav:
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
-    - Training & Support (draft): enterprise/training-and-support.md
-    - Guided Evaluation (draft): enterprise/guided-evaluation.md
-    - DEBUG (draft): enterprise/debug.md
+    # - Training & Support (draft): enterprise/training-and-support.md
+    # - Guided Evaluation (draft): enterprise/guided-evaluation.md
+    # - DEBUG (draft): enterprise/debug.md
 
 
   - API Reference:
@@ -354,5 +353,8 @@ nav:
 
   - About:
     - Company: about/company.md
+    - Careers: about/careers.md
     - Imprint: about/imprint.md
     - Privacy: https://getml.notion.site/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a
+
+  - getML 1.4 doc: https://docs.getml.com
