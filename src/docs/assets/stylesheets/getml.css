@@ -1162,3 +1162,5 @@ div#join-widget > div > div {
 [data-md-color-scheme="slate"] div#join-widget svg {
     fill: currentColor !important;
 }
+
+.highlight.no-copy .md-clipboard { display: none; }

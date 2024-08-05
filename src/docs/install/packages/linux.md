@@ -11,7 +11,7 @@ The will install both the [Python API][getml-suite-python-api] and the [engine][
 !!! enterprise-adm "Enterprise Edition"
     Need the highest models accuracy in commercial prediction applications and enterprise grade support?
 
-    [Choose getML enterprise](../../enterprise/benefits.md){ .md-button }
+    [Choose getML Enterprise](../../enterprise/benefits.md){ .md-button }
 
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 

@@ -200,6 +200,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
+  # - assets/css/custom.css
   # - assets/stylesheets/getml.css - Use for custom styles. Is loaded in header by default in overrides/main.html
 
 draft_docs: |

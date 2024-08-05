@@ -44,10 +44,12 @@ After you’ve successfully installed getML ([enterprise][installation] or [comm
 import getml
 print(f"getML API version: {getml.__version__}\n")
 getml.engine.launch()
+```
+```{: .optional-language-as-class .no-copy}
     Launched the getML engine. The log output will be stored in
     /home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.
 ```
-This will import the getML Python API, launch the engine, and the monitor.
+This will import the getML Python API, launch the engine, and (in the Enterprise edition) the getML Monitor.
 
 Alternatively, you can also launch the getML engine and the monitor as follows:
 
@@ -56,12 +58,14 @@ Alternatively, you can also launch the getML engine and the monitor as follows:
 
 Now, inside Python, execute ``import getml`` to import the API.
 
-The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python. We will cover the getML monitor in a later tutorial, but feel free to check what is going on while following this guide.
+The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python.
 
 The entry-point for your project is the `getml.project` module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a ``.getml`` bundle to disk or load a ``.getml`` bundle from disk. To see the running projects, you can execute:
 
 ```python
 getml.project
+```
+```{: .optional-language-as-class .no-copy}
 Cannot reach the getML engine. Please make sure you have set a project.
 To set: `getml.engine.set_project`
 Available projects:
@@ -72,6 +76,8 @@ This message tells us that we have no running engine instance because we have no
 ```python
 
 getml.engine.set_project("getting_started")
+```
+```{: .optional-language-as-class .no-copy}
 Connected to project 'getting_started'
 http://localhost:1709/#/listprojects/getting_started/
 ```
@@ -79,6 +85,8 @@ Now, when you check the current projects:
 
 ```python
 getml.project
+```
+```{: .optional-language-as-class .no-copy}
 Current project:
 getting_started
 ```
@@ -95,7 +103,9 @@ population_table, peripheral_table = getml.datasets.make_numerical(
      n_rows_peripheral=100000,
      random_state=1709
 )
+```
 
+```{: .optional-language-as-class .no-copy}
 getml.project.data_frames
     name                        rows     columns   memory usage
 0   numerical_peripheral_1709   100000         3           2.00 MB
@@ -150,7 +160,7 @@ GROUP BY t1.join_key,
 
 ```
 
-Unfortunately, neither the right aggregation nor the right subconditions are clear a priori. The feature that allows us to predict the target best could very well be e.g. the average of all values in ``column_01`` that fall below a certain threshold, or something completely different. If you were to tackle this problem with classical machine learning tools, you would have to write many SQL features by hand and find the best ones in a trial-and-error-like fashion. At best, you could apply some domain knowledge that guides you towards the right direction. This approach, however, bears two major disadvantages that prevent you from finding the best-performing features.
+Unfortunately, neither the right aggregation nor the right subconditions are clear a priori. The feature that allows us to predict the target best could very well be e.g. the average of all values in ``column_01`` that fall below a certain threshold, or something completely different. If you were to tackle this problem with classical machine learning tools, you would have to write many SQL features by hand and find the best ones in a trial-and-error-like fashion. At best, you could apply some domain knowledge that guides you towards the right direction. This approach, however, bears __two major disadvantages__ that prevent you from finding the best-performing features.
 
 1. You might not have sufficient domain knowledge.
 2. You might not have sufficient resources for such a time-consuming, tedious, and error-prone process.
@@ -194,7 +204,7 @@ fastprop = getml.feature_learning.FastProp(
 getML bundles the sequential operations of a data science project
 ([preprocessing][preprocessing], [feature engineering][feature-engineering], and [predicting][predicting]) into
 [`Pipeline`][getml.pipeline.Pipeline] objects. In addition to the
-`Placeholders` representing the
+[`Placeholders`][getml.data.Placeholder] representing the
 [`DataFrames`][getml.data.DataFrame] you also have to provide a feature learner
 (from [`getml.feature_learning`][getml.feature_learning]) and a predictor (from
 [`getml.predictors`][getml.predictors]).
@@ -207,8 +217,8 @@ pipe = getml.pipeline.Pipeline(
 )
 
 ```
-
-We have chosen a narrow search field in aggregation space by only letting FastProp use `COUNT` and `SUM`. For the sake of demonstration, we use a simple `LinearRegression` and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.
+!!! note
+    For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use `COUNT` and `SUM`, we use a simple `LinearRegression` and construct only 10 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like ```aggregation=getml.feature_learning.aggregations.FASTPROP.default```, you would construct at least 100 features and you could consider using a [more powerful predictor][getml.predictors] to get results significantly better than what we will achieve here.
 
 ## Working with a pipeline
 
@@ -228,6 +238,9 @@ When fitting the model, we pass the handlers to the actual data residing in the 
 ```python
 
 pipe.fit(star_schema.train)
+```
+returns
+```{: .optional-language-as-class .no-copy}
 Checking data model...
 
 Staging...
@@ -276,6 +289,9 @@ We can also score our algorithms on the test set.
 
 ```python
 pipe.score(star_schema.test)
+```
+which yields
+```{: .optional-language-as-class .no-copy}
 
 Staging...
 [========================================] 100%
@@ -295,7 +311,7 @@ Our model is able to predict the target variable in the newly generated data set
 
 ## Making predictions
 
-Let’s simulate the arrival of unseen data and generate another population table. Since the data model is already stored in the pipeline, we do not need to recreate it and can just use a [`Container`][getml.data.Container] instead of a [`StarSchema`][getml.data.StarSchema].
+Let’s simulate the arrival of unseen data and generate another population table. The data model is already defined and the pipeline trained. All we need to do is to add data to a [`Container`][getml.data.Container] and pass it to the existing `pipe` object. 
 
 ```python
 population_table_unseen, peripheral_table_unseen = getml.datasets.make_numerical(
@@ -310,6 +326,10 @@ container_unseen.add(peripheral=peripheral_table_unseen)
 
 yhat = pipe.predict(container_unseen.full)
 
+print(yhat[:10])
+```
+```{: .optional-language-as-class .no-copy}
+
 Staging...
 [========================================] 100%
 
@@ -319,7 +339,6 @@ Preprocessing...
 FastProp: Building features...
 [========================================] 100%
 
-print(yhat[:10])
 [[ 4.16876676]
  [17.32933   ]
  [26.62467516]
@@ -340,6 +359,8 @@ Of course, you can also transform a specific data set into the corresponding fea
 features = pipe.transform(container_unseen.full)
 
 print(features)
+```
+```{: .optional-language-as-class .no-copy}
 [[-7.14232213e-01  2.39745475e-01  2.62855261e-01  1.28462060e-02
    5.00000000e+00 -3.18568319e-01]
  [-1.17601634e-01  3.42472663e+00  3.61423201e+00  3.24305583e-02
