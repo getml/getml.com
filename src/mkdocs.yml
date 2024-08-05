@@ -129,15 +129,9 @@ plugins:
   - table-reader
   - tags
   - meta
-
   - mike:
       canonical_version: latest
       alias_type: symlink
-      # redirect_template: null
-      # deploy_prefix: ''
-      # version_selector: true
-      # css_dir: css
-      javascript_dir: src/docs/assets/javascripts/mike
 
 # Additional configuration
 extra:
@@ -163,6 +157,7 @@ extra:
       link: https://www.linkedin.com/company/code17-gmbh
   version:
     provider: mike
+
 
 # Extensions
 markdown_extensions:

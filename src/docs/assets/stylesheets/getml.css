@@ -937,3 +937,170 @@ nav.md-tabs {
 [data-md-color-scheme="default"] .md-tooltip {
     background-color: #fdfdfd !important;
 }
+
+
+
+/* Version selector */
+/* @media off { */
+
+.md-header__topic__nover {
+    display: flex;
+    max-width: 100%;
+    position: absolute;
+    transition: transform .4s cubic-bezier(.1,.7,.1,1), opacity .15s;
+    white-space: nowrap;
+}
+
+.md-header__version {
+    flex-grow: initial;
+    font-size: .9rem;
+    /* height: 2.4rem; */
+    /* line-height: 2.4rem; */
+    padding: .2rem 0;
+    padding: 0;
+    position: static;
+}
+
+[data-md-toggle=search]:checked~.md-header .md-header__version {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0ms, opacity 0ms;
+
+}
+
+.md-header__version .md-button,
+.md-header__version .version-button{
+    position: inherit;
+    color: inherit;
+}
+
+.md-header__version .md-version {
+    flex-shrink: initial;
+    font-size: inherit;
+    height: initial;
+    position: relative;
+}
+
+.md-header__version .version-button .md-version .md-version__current {
+    position: relative;
+    top:initial;
+    flex-shrink: initial;
+    font-size: inherit;
+    height: initial;
+    /* border: 1px solid transparent; */
+    padding: calc(.525em - 1px) .6rem;
+    border-radius: 6px;
+    line-height: normal;
+    /* padding: .525em 1em; */
+    /* padding-left: .6rem; */
+    /* padding-right: .6rem; */
+    font-size: .7rem;
+    /* font-weight: bold; */
+    letter-spacing: 0.5px;
+    /* margin: .4rem .2rem .4rem 0rem; */
+    /* margin: .4rem 0 .4rem 0rem; */
+    /* margin: 0; */
+    color: var(--md-default-fg-color);
+    color: var(--md-primary-bg-color);
+    margin: .2rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    font-weight: bold;
+    /* opacity: 0.7; */
+    color: var(--md-default-fg-color--light);
+}
+
+.md-header__topic.version-button {
+    /* min-width: 87.76px; */
+    position: relative;
+}
+
+
+@media screen and (min-width: 76.25em) {
+    .md-header__version .version-button .md-version .md-version__current {
+        /* margin-right: .5rem; */
+    }
+    .md-version__list {
+        /* margin-left: -.5rem; */
+    }
+    .md-search {
+        margin-left: .4rem;
+    }
+}
+
+.md-version:focus-within .md-version__list,
+.md-version:hover .md-version__list {
+    max-height: 10rem;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+    transition: transform .25s cubic-bezier(.1,.7,.1,1), opacity .25s, max-height 0ms;
+}
+
+.md-header__version .version-button .md-version:hover .md-version__current,
+.md-header__version .version-button .md-version:focus-within .md-version__current{
+    border-color: var(--md-default-fg-color--lightest);
+    /* background: var(--md-code-bg-color); */
+    /* background: var(--md-code-bg-color); */
+    /* color: var(--md-default-fg-color); */
+    opacity: 0.7;
+}
+
+
+.md-version__list {
+    margin: 0;
+    padding: 0;
+    background-color: var(--md-default-bg-color);
+    /* background-color: var(--md-bg); */
+    /* border-radius :8px; */
+    border-radius: .1rem;
+    box-shadow: var(--md-shadow-z2);
+    color: var(--md-default-fg-color);
+    left: 50%;
+    margin-top: .2rem;
+    /* margin-left: -.2rem; */
+    max-height: 0;
+    opacity: 0;
+    position: absolute;
+    top: calc(100% - .2rem);
+    transform: translate3d(-50%, .3rem, 0);
+    transition: transform .25s 375ms, opacity .25s .25s, max-height 0ms .5s;
+}
+
+.md-version__list .md-version__link {
+    font-weight: normal;
+    font-size: initial;
+    /* color: var(--md-default-fg-color--light); */
+}
+
+.md-header__version .md-button:first-child {
+    font-weight: initial;
+    /* opacity: 1 !important; */
+}
+
+.md-header__version .md-version__current:after {
+    margin-left: .2rem;
+    /* opacity: 0.4; */
+    /* opacity: 1 !important; */
+    color: var(--md-primary-bg-color);
+}
+
+.md-header__version .md-version__current {
+    /* top:initial; */
+    /* margin:0; */
+    /* background: var(--md-code-bg-color); */
+}
+
+.md-header__version .md-button {
+    border: 1px solid var(--md-default-fg-color--lighter);
+    padding: calc(.525em - 1px) .6rem;
+}
+
+/*
+@media screen and (min-width: 76.25em) {
+    .md-search {
+        padding: .2rem 0;
+    }
+} */
+
+
+/* } */
