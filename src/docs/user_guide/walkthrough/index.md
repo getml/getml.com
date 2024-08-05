@@ -12,7 +12,7 @@ In this walkthrough, you will learn about the basic concepts of getML. You will 
 3. [Building a pipeline](#building-a-pipeline)
 4. [Working with a pipeline](#working-with-a-pipeline)
 
-The guide is applicable to both the Enterprise and the Community editions of getML. The highlights of the two are mentioned under [Community vs Enterprise edition](#community-vs-enterprise-edition) section below.
+The guide is applicable to both the Enterprise and the Community editions of getML. The differences between the two are highlighted [here][enterprise-feature-list].
 
 You have not installed getML on your machine yet? Before you get started, head over
 to the installation instructions: for the Enterprise edition [here][installation] or
@@ -51,9 +51,8 @@ This will import the getML Python API, launch the engine, and the monitor.
 
 Alternatively, you can also launch the getML engine and the monitor as follows:
 
-- On Mac, execute  ``getml-cli`` inside a terminal or double-click the application icon.
-- On Windows/docker, execute ``run.sh`` in Git Bash.
-- On Linux, execute ``getML`` inside a terminal.
+- On Linux, execute ``~/.getML/<getML-distribution>/getML`` inside a terminal.
+- For Mac and Windows check out the [docker installation guide][macos-windows-docker]
 
 Now, inside Python, execute ``import getml`` to import the API.
 

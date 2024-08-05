@@ -1,3 +1,4 @@
+[](){#macos-windows-docker}
 # Docker for macOS, Windows & Linux
 
 
@@ -20,12 +21,12 @@ Make sure that Docker is [installed](https://docs.docker.com/get-docker/). For L
 !!! enterprise-adm "Enterprise Edition"
     Need the highest models accuracy in commercial prediction applications and enterprise grade support?
 
-    [Choose getML enterprise](../../enterprise/benefits.md){ .md-button }
+    [Choose getML Enterprise](../../enterprise/benefits.md){ .md-button }
 
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][getml-suite-python-api]: `pip install getml`
-    - Install the [engine][engine] by following the same [instructions as below][engine-docker-installation]. Just replace the URL with that of the enterprise `docker-compose.yml` file you have been provided with.
+    - Install the [engine][engine] by following the same [instructions as below][engine-docker-installation]. Just replace the URL with that of the Enterprise `docker-compose.yml` file you have been provided with.
 
 
 Run the following command in your terminal (macOS & Linux) or PowerShell (Windows):
