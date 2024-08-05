@@ -943,6 +943,14 @@ nav.md-tabs {
 /* Version selector */
 /* @media off { */
 
+.md-header__topic__nover {
+    display: flex;
+    max-width: 100%;
+    position: absolute;
+    transition: transform .4s cubic-bezier(.1,.7,.1,1), opacity .15s;
+    white-space: nowrap;
+}
+
 .md-header__version {
     flex-grow: initial;
     font-size: .9rem;
