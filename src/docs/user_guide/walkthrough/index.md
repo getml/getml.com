@@ -103,15 +103,20 @@ population_table, peripheral_table = getml.datasets.make_numerical(
      n_rows_peripheral=100000,
      random_state=1709
 )
+print("Data Frames")
+print(getml.project.data_frames)
+
+print("Population table")
+print(population_table)
 ```
 
 ```{: .optional-language-as-class .no-copy}
-getml.project.data_frames
+Data Frames
     name                        rows     columns   memory usage
 0   numerical_peripheral_1709   100000         3           2.00 MB
 1   numerical_population_1709      500         4           0.01 MB
 
-population_table
+Population table
 Name   time_stamp                    join_key   targets   column_01
 Role   time_stamp                    join_key    target   numerical
 Units   time stamp, comparison only
@@ -356,7 +361,7 @@ FastProp: Building features...
 Of course, you can also transform a specific data set into the corresponding features in order to insert them into another machine learning algorithm.
 
 ```python
-features = pipe.transform(container_unseen.full)
+features =  pipe.transform(container_unseen.full)
 
 print(features)
 ```
