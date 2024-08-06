@@ -123,6 +123,37 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+              </button>
+            
+            
+<style>
+div[data-md-component="announce"] button.md-banner__button {
+    display: none !important; // if we dont have anything to announce
+}
+</style>
+<!-- <div class="md-banner__announcement">
+    <b>getML 1.5 is live!</b> Download getML Community from <a href="github.com/getml/getml-community">GitHub</a> today.
+</div> -->
+<div class="md-banner__static">
+    <span class="chip">We are hiring</span> Join us in our <strong>Leipzig/DE</strong> offices. <a class="md-banner__static_cta" href="about/careers"><strong>Open positions</strong></a>
+    <div class="right">
+        <a class="md-banner__static_link" href="contact#how-can-we-help-you" target="_blank">Support</a>
+        <a class="md-banner__static_link" href="#" target="_blank">Log In</a>
+    </div>
+</div>
+
+          </div>
+          
+            <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
@@ -1789,22 +1820,6 @@ A game changer in predictive applications for enterprise applications.</p>
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
   <script src="assets/javascripts/custom.js"></script>
 
-  <!-- Test JSON-LD -->
-  <!-- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://squidfunk.github.io/mkdocs-material/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://squidfunk.github.io/mkdocs-material/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-  </script> -->
 
   </body>
 </html>
