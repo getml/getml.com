@@ -1120,6 +1120,13 @@ nav.md-tabs {
 /* Join widget */
 
 /* background container */
+
+
+
+div#join-widget {
+    min-height: 350px !important;
+}
+
 div#join-widget > div {
     background: transparent !important;
     padding: none !important;
@@ -1133,7 +1140,7 @@ div#join-widget > div > div {
 /* job card */
 [data-md-color-scheme="slate"] div#join-widget > div > a {
     box-shadow: none !important;
-    background-color: var(--md-bg) !important;
+    background-color: var(--md-default-bg-color) !important;
 }
 
 @media screen and (min-width: 76.25em) {
@@ -1163,4 +1170,18 @@ div#join-widget > div > div {
     fill: currentColor !important;
 }
 
+/* Photo widget */
+
+
+[data-md-color-scheme="default"] button.es-load-more-button {
+    color: var(--md-default-fg-color) !important;
+    border-color: var(--md-default-fg-color) !important;
+    background-color: var(--md-default-bg-color) !important;
+}
+
+.eapps-widget {
+    min-height: 350px !important;
+}
+
 .highlight.no-copy .md-clipboard { display: none; }
+
