@@ -1185,6 +1185,7 @@ div#join-widget > div > a > img {
     min-height: 350px !important;
 }
 
+
 @media screen and (min-width: 76.25em) {
     .es-grid-layout {
         gap: 16px !important;
