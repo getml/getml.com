@@ -1016,7 +1016,7 @@ nav.md-tabs {
     margin: .2rem;
     padding-left: .4rem;
     padding-right: .4rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* opacity: 0.7; */
     color: var(--md-default-fg-color--light);
 }
@@ -1150,7 +1150,7 @@ div#join-widget > div > div {
 }
 
 /* job card company icon */
-[data-md-color-scheme="slate"] div#join-widget > div > a > img {
+div#join-widget > div > a > img {
     display: none !important;
     /* box-shadow: none !important; */
     /* background-color: var(--md-bg) !important; */
@@ -1183,4 +1183,120 @@ div#join-widget > div > div {
 
 .eapps-widget {
     min-height: 350px !important;
+}
+
+@media screen and (min-width: 76.25em) {
+    .es-grid-layout {
+        gap: 16px !important;
+    }
+}
+
+
+/* Banner */
+
+.md-header__button_ {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.md-banner__inner {
+    font-size: .7rem;
+    /* margin: .4rem auto; */
+    padding: 0 .8rem;
+}
+
+/* Announce Bar Visible */
+.md-banner {
+    /* background-color: var(--md-primary-fg-color); */
+    background-color: var(--md-typeset-a-color);
+    color: var(--md-default-fg-color--contrast);
+}
+
+/* div[data-md-component="announce"]:not([hidden]) > .md-banner,
+div[data-md-component="announce"]:not([hidden]) > .md-banner a{
+    background-color: var(--md-typeset-a-color);
+    color: white !important;
+} */
+
+div[data-md-component="announce"]:not([hidden]) div.md-banner__announcement + div.md-banner__static {
+    display: none !important;
+}
+
+
+/* Static Bar Visible */
+div[data-md-component="announce"] {
+    display: block;
+}
+
+div[data-md-component="announce"][hidden] button.md-banner__button,
+div[data-md-component="announce"][hidden] div.md-banner__announcement {
+    display: none !important;
+}
+
+.md-banner__static .right {
+    float: right;
+}
+
+[data-md-color-scheme="default"] .md-banner
+{
+    background-color: var(--md-primary-fg-color);
+    border-bottom: .05rem solid var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-banner
+{
+    /* border-bottom: .05rem solid var(--md-default-fg-color--lightest); */
+    /* background-color: var(--md-bg); */
+    background-color: var(--md-footer-bg-color);
+}
+
+a.md-banner__static_link {
+    color: var(--md-typeset-color);
+    /* color: var(--md-default-fg-color); */
+    /* color: var(--md-default-fg-color--light); */
+    opacity: .85;
+    padding: 4px 8px;
+}
+
+
+.md-banner__static {
+    color: var(--md-typeset-color);
+}
+
+.md-banner__static .chip {
+    /* background-color: #f6edfa; */
+    /* background-color: var(--md-accent-fg-color--transparent); */
+    background-color: var(--md-code-hl-color--light);
+    border-radius: 4px;
+    /* color: #542c85; */
+    color: var(--md-typeset-a-color);
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-right: 12px;
+    padding: 4px 8px;
+    text-transform: uppercase;
+}
+
+.md-banner__static_cta {
+    text-decoration: underline;
+    color: var(--md-typeset-a-color);
+}
+
+@media screen and (max-width: 60em) {
+    a.md-banner__static_link {
+        display: none;
+    }
+}
+
+
+
+
+
+/* Hide "Home >" from Navigation Path */
+nav.md-path li.md-path__item:first-child {
+    display: none;
+}
+
+nav.md-path li.md-path__item:nth-child(2)::before {
+    display: none;
 }
