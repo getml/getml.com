@@ -15,8 +15,7 @@ In this walkthrough, you will learn about the basic concepts of getML. You will 
 The guide is applicable to both the Enterprise and the Community editions of getML. The differences between the two are highlighted [here][enterprise-feature-list].
 
 You have not installed getML on your machine yet? Before you get started, head over
-to the installation instructions: for the Enterprise edition [here][installation] or
-for the Community edition [here](https://github.com/getml/getml-community#installation).
+to the [installation instructions][installation-index].
 
 
 ## Introduction
@@ -27,34 +26,29 @@ While it is often claimed that AutoML covers the complete workflow of a data sci
 
 ![Getting Started](../../images/getting_started_4_0.png)
 
-getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, and RelMT find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors.
+getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms Multirel, Relboost, and RelMT find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors.
 
-All functionality of getML is implemented in the so-called *getML engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with the engine. 
-In addition, the *getML monitor,* a graphical web interface available in the Enterprise edition, provides you with an overview of your current projects and pipelines.
+All functionality of getML is implemented in the so-called *getML Engine*. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with the Engine. 
+In addition, the *getML Monitor,* a graphical web interface available in the Enterprise edition, provides you with an overview of your current projects and pipelines.
 
-In this walkthrough, we start with an overview of the toolsets offered by the getML Community and Enterprise edition.
-Subsequently, employing an example data set, we demonstrate how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. By the end of this tutorial you are ready to tackle your own use cases with getML and dive deeper into our software using a variety of follow-up material.
+In this walkthrough you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will show how an example data set would have been dealt with using classical data science tools. In contrast, we demonstrate on the same example data set how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. By the end of this tutorial you are ready to tackle your own use cases with getML and dive deeper into our software using a variety of follow-up material.
 
 
 ## Starting a new project
 
-After you’ve successfully installed getML ([enterprise][installation] or [community](https://github.com/getml/getml-community#installation)), you can begin by executing the following in a jupyter-notebook:
+After you’ve successfully [installed getML][installation-index], you can begin by executing the following in a jupyter-notebook:
 
 ```python
-import getml
+import getml 
 print(f"getML API version: {getml.__version__}\n")
-getml.engine.launch()
-```
-```{: .optional-language-as-class .no-copy}
-    Launched the getML engine. The log output will be stored in
-    /home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.
-```
-This will import the getML Python API, launch the engine, and (in the Enterprise edition) the getML Monitor.
+getml.engine.launch() #not needed in docker based installations
 
-Alternatively, you can also launch the getML engine and the monitor as follows:
-
-- On Linux, execute ``~/.getML/<getML-distribution>/getML`` inside a terminal.
-- For Mac and Windows check out the [docker installation guide][macos-windows-docker]
+"""
+Launched the getML engine. The log output will be stored in
+/home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.
+"""
+```
+This will import the getML Python API, launch the Engine, and (in the Enterprise edition) the Monitor.
 
 Now, inside Python, execute ``import getml`` to import the API.
 
@@ -64,11 +58,11 @@ The entry-point for your project is the `getml.project` module. From here, you c
 
 ```python
 getml.project
-```
-```{: .optional-language-as-class .no-copy}
+"""
 Cannot reach the getML engine. Please make sure you have set a project.
-To set: `getml.engine.set_project`
+To set: `getml.set_project(...)`
 Available projects:
+"""
 ```
 
 This message tells us that we have no running engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in ``~/.getML/projects``.
@@ -76,19 +70,19 @@ This message tells us that we have no running engine instance because we have no
 ```python
 
 getml.engine.set_project("getting_started")
-```
-```{: .optional-language-as-class .no-copy}
+"""
 Connected to project 'getting_started'
-http://localhost:1709/#/listprojects/getting_started/
+"""
 ```
 Now, when you check the current projects:
 
 ```python
 getml.project
-```
-```{: .optional-language-as-class .no-copy}
+"""
 Current project:
+
 getting_started
+"""
 ```
 
 ## Data Set
@@ -108,9 +102,8 @@ print(getml.project.data_frames)
 
 print("Population table")
 print(population_table)
-```
 
-```{: .optional-language-as-class .no-copy}
+"""
 Data Frames
     name                        rows     columns   memory usage
 0   numerical_peripheral_1709   100000         3           2.00 MB
@@ -135,10 +128,8 @@ Units   time stamp, comparison only
 
   500 rows x 4 columns
   memory usage: 0.01 MB
-  name: numerical_population_1709
   type: getml.data.DataFrame
-  url: http://localhost:1709/#/getdataframe/getting_started/numerical_population_1709/
-
+"""
 ```
 
 
@@ -243,47 +234,32 @@ When fitting the model, we pass the handlers to the actual data residing in the 
 ```python
 
 pipe.fit(star_schema.train)
-```
-returns
-```{: .optional-language-as-class .no-copy}
+
+"""
 Checking data model...
-
-Staging...
-[========================================] 100%
-
-Checking...
-[========================================] 100%
-
+Staging...  100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+Checking... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
 
 OK.
-
-Staging...
-[========================================] 100%
-
-FastProp: Training 5 features...
-[========================================] 100%
-
-FastProp: Building features...
-[========================================] 100%
-
-LinearRegression: Training as predictor...
-[========================================] 100%
+Staging...                                 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+FastProp: Trying 5 features...             100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+FastProp: Building features...             100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+LinearRegression: Training as predictor... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
 
 Trained pipeline.
-Time taken: 0h:0m:0.049154
+Time taken: 0h:0m:0.023915
 
 Pipeline(data_model='population',
-        feature_learners=['FastProp'],
-        feature_selectors=[],
-        include_categorical=False,
-        loss_function='SquareLoss',
-        peripheral=['peripheral'],
-        predictors=['LinearRegression'],
-        preprocessors=[],
-        share_selected_features=0.5,
-        tags=['container-s0mKB6'])
-
-url: http://localhost:1709/#/getpipeline/getting_started/MXzNDT/0/
+         feature_learners=['FastProp'],
+         feature_selectors=[],
+         include_categorical=False,
+         loss_function='SquareLoss',
+         peripheral=['peripheral'],
+         predictors=['LinearRegression'],
+         preprocessors=[],
+         share_selected_features=0.5,
+         tags=['container-cjCqZq'])
+"""
 ```
 
 That’s it. The features learned by [`FastProp`][getml.feature_learning.FastProp] as well as the [`LinearRegression`][getml.predictors.LinearRegression] are now trained on our data set.
@@ -294,22 +270,16 @@ We can also score our algorithms on the test set.
 
 ```python
 pipe.score(star_schema.test)
-```
-which yields
-```{: .optional-language-as-class .no-copy}
 
-Staging...
-[========================================] 100%
+"""
+Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
 
-Preprocessing...
-[========================================] 100%
-
-FastProp: Building features...
-[========================================] 100%
-
-    date time             set used    target         mae      rmse   rsquared
-0   2022-09-02 10:14:12   train       targets     3.3721    4.1891     0.9853
-1   2022-09-02 10:14:12   test        targets     3.7548    4.7093     0.981
+    date time             set used   target        mae      rmse   rsquared
+0   2024-08-08 12:14:11   train      targets    3.3721    4.1891     0.9853
+1   2024-08-08 12:21:35   test       targets    3.7548    4.7093     0.981 
+"""
 ```
 
 Our model is able to predict the target variable in the newly generated data set pretty accurately. Though, the enterprise feature learner [`Multirel`][getml.feature_learning.Multirel] performs even better here with R<sup>2</sup> of 0.9995 and MAE and RMSE of 0.07079 and 0.1638 respectively.
@@ -332,18 +302,13 @@ container_unseen.add(peripheral=peripheral_table_unseen)
 yhat = pipe.predict(container_unseen.full)
 
 print(yhat[:10])
-```
-```{: .optional-language-as-class .no-copy}
 
-Staging...
-[========================================] 100%
+"""
+Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
 
-Preprocessing...
-[========================================] 100%
-
-FastProp: Building features...
-[========================================] 100%
-
+>>> print(yhat[:10])
 [[ 4.16876676]
  [17.32933   ]
  [26.62467516]
@@ -354,6 +319,7 @@ FastProp: Building features...
  [ 5.2784719 ]
  [20.5992354 ]
  [26.20538556]]
+ """
 ```
 
 ## Extracting features
@@ -361,11 +327,14 @@ FastProp: Building features...
 Of course, you can also transform a specific data set into the corresponding features in order to insert them into another machine learning algorithm.
 
 ```python
-features =  pipe.transform(container_unseen.full)
-
+features = pipe.transform(container_unseen.full)
 print(features)
-```
-```{: .optional-language-as-class .no-copy}
+
+"""
+Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00
+
 [[-7.14232213e-01  2.39745475e-01  2.62855261e-01  1.28462060e-02
    5.00000000e+00 -3.18568319e-01]
  [-1.17601634e-01  3.42472663e+00  3.61423201e+00  3.24305583e-02
@@ -379,11 +348,12 @@ print(features)
    1.50000000e+01 -7.27880243e-01]
  [ 2.72804029e-02  2.87302783e-02  5.36035230e-02  2.77103542e-02
    2.00000000e+00 -3.53700424e-01]]
+"""
 ```
 
-If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of one of the features:
+If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of the feature with the highest importance, run:
 ```python
-pipe.features[1].sql
+pipe.features.sort(key=lambda feature: feature.importance, descending = True)[0].sql
 ```
 
 That should return something like this:
