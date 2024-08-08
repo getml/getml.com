@@ -53,7 +53,7 @@
 
 ### 0.12.0 <small>Oct 1, 2020</small> {id="0.12.0"}
 - Extend dataframe handling: [delete][getml.data.DataFrame.delete], [exists][getml.data.exists]
-Data set provisioning: [load_air_pollution][getml.datasets.load_air_pollution], [load_atherosclerosis][getml.datasets.load_atherosclerosis], [load_biodegradability][getml.datasets.load_biodegradability], [load_consumer_expenditures][getml.datasets.load_consumer_expenditures], [load_interstate94][getml.datasets.load_interstate94], [load_loans][getml.datasets.load_loans], [load_occupancy][getml.datasets.load_occupancy]
+- Data set provisioning: [load_air_pollution][getml.datasets.load_air_pollution], [load_atherosclerosis][getml.datasets.load_atherosclerosis], [load_biodegradability][getml.datasets.load_biodegradability], [load_consumer_expenditures][getml.datasets.load_consumer_expenditures], [load_interstate94][getml.datasets.load_interstate94], [load_loans][getml.datasets.load_loans], [load_occupancy][getml.datasets.load_occupancy]
 - High-level hyperopt handlers: [tune_feature_learners][getml.hyperopt.tune_feature_learners], [tune_predictors][getml.hyperopt.tune_predictors]
 - Improve pipeline functionality: [delete][getml.pipeline.delete], [exists][getml.pipeline.exists], [Columns][getml.pipeline.Columns] 
 - Introduce preprocessors: [EmailDomain][getml.preprocessors.EmailDomain], [Imputation][getml.preprocessors.Imputation], [Seasonal][getml.preprocessors.Seasonal], [Substring][getml.preprocessors.Substring] 
