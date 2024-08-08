@@ -22,7 +22,7 @@ to the [installation instructions][installation-index].
 
 Automated machine learning (AutoML) has attracted a great deal of attention in recent years. The goal is to simplify the application of traditional machine learning methods to real-world business problems by automating key steps of a data science project, such as feature extraction, model selection, and hyperparameter optimization. With AutoML, data scientists are able to develop and compare dozens of models, gain insights, generate predictions, and solve more business problems in less time.
 
-While it is often claimed that AutoML covers the complete workflow of a data science project - from the raw data set to the deployable machine learning models - current solutions have one major drawback: They cannot handle *real world* business data. This data typically comes in the form relational data. The relevant information is scattered over a multitude of tables that are related via so-called join keys. In order to start an AutoML pipeline, a flat feature table has to be created from the raw relational data by hand. This step is called feature engineering and is a tedious and error-prone process that accounts for up to 90% of the time in a data science project.
+While it is often claimed that AutoML covers the complete workflow of a data science project - from the raw data set to the deployable machine learning models - current solutions have one major drawback: They cannot handle *real world* business data. This data typically comes in the form of relational data. The relevant information is scattered over a multitude of tables that are related via so-called join keys. In order to start an AutoML pipeline, a flat feature table has to be created from the raw relational data by hand. This step is called feature engineering and is a tedious and error-prone process that accounts for up to 90% of the time in a data science project.
 
 ![Getting Started](../../images/getting_started_4_0.png)
 
@@ -50,8 +50,6 @@ Launched the getML engine. The log output will be stored in
 ```
 This will import the getML Python API, launch the Engine, and (in the Enterprise edition) the Monitor.
 
-Now, inside Python, execute ``import getml`` to import the API.
-
 The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python.
 
 The entry-point for your project is the `getml.project` module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a ``.getml`` bundle to disk or load a ``.getml`` bundle from disk. To see the running projects, you can execute:
@@ -60,7 +58,7 @@ The entry-point for your project is the `getml.project` module. From here, you c
 getml.project
 """
 Cannot reach the getML engine. Please make sure you have set a project.
-To set: `getml.set_project(...)`
+To set: `getml.engine.set_project(...)`
 Available projects:
 """
 ```
@@ -128,7 +126,7 @@ Units   time stamp, comparison only
 
   500 rows x 4 columns
   memory usage: 0.01 MB
-  type: getml.data.DataFrame
+  type: getml.DataFrame
 """
 ```
 
