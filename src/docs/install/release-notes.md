@@ -43,10 +43,11 @@
 - Added the Fastprop feature learner
 - Overhauled the way RelMT and Relboost generate features, making them more efficient
 
+### 0.14.0 <small>Jan 18, 2021</small> {id="0.14.0"}
+- Added the RelMT feature learner
 
 /// html | div.hidden
 
-### 0.14.0 <small>Jan 18, 2021</small> {id="0.14.0"}
 ### 0.13.0 <small>Nov 13, 2020</small> {id="0.13.0"}
 ### 0.12.0 <small>Oct 1, 2020</small> {id="0.12.0"}
 ### 0.11.1 <small>Jul 13, 2020</small> {id="0.11.1"}

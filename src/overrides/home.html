@@ -17,8 +17,8 @@
   <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
   <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
   <style>
-      .md-search, .md-header__option {
-          /* display: none !important; */
+      .md-header__ellipsis, .md-header__version {
+          display: none !important;
       }
   </style>
 
@@ -30,8 +30,22 @@
 {% endblock %}
 
 <!-- Announcement bar -->
-{% block announce_ %}
-    Callout to home
+{% block announce %}
+<style>
+div[data-md-component="announce"] button.md-banner__button {
+    display: none !important; // if we dont have anything to announce
+}
+</style>
+<!-- <div class="md-banner__announcement">
+    <b>getML 1.5 is live!</b> Download getML Community from <a href="github.com/getml/getml-community">GitHub</a> today.
+</div> -->
+<div class="md-banner__static">
+    <span class="chip">We are hiring</span> Join us in our <strong>Leipzig/DE</strong> offices. <a class="md-banner__static_cta" href="{{ 'about/careers' | url }}"><strong>Open positions</strong></a>
+    <div class="right">
+        <a class="md-banner__static_link" href="contact#how-can-we-help-you" target="_blank">Support</a>
+        <a class="md-banner__static_link" href="#" target="_blank">Log In</a>
+    </div>
+</div>
 {% endblock %}
 
 <!-- Parallax container with contents -->
