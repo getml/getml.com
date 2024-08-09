@@ -139,6 +139,18 @@ plugins:
       # css_dir: css
       javascript_dir: src/docs/assets/javascripts/mike
 
+  - mkdocs-jupyter:
+      ignore_h1_titles: False
+      include_source: True
+      include: [!ENV [NOTEBOOKS_INCLUDE, "None"]]
+      ignore: ["*.py"]
+      remove_tag_config:
+        remove_cell_tags:
+          - remove_cell_on_docs
+
+hooks:
+  - docs/examples/get_notebooks.py
+
 # Additional configuration
 extra:
   generator: false
@@ -199,7 +211,6 @@ markdown_extensions:
         include:
           - reference/*
           - user_guide/*
-
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -268,7 +279,6 @@ nav:
     # - Training & Support (draft): enterprise/training-and-support.md
     # - Guided Evaluation (draft): enterprise/guided-evaluation.md
     # - DEBUG (draft): enterprise/debug.md
-
 
   - API Reference:
     - reference/index.md
@@ -354,7 +364,48 @@ nav:
 
   - Examples:
     - examples/index.md
-    - FastAPI: examples/fastapi/fastapi.md
+    - Demo Notebooks:
+      - Community Edition:
+        - examples/getml-community/index.md
+        - AdventureWorks: examples/getml-community/adventure_works.ipynb
+        - Formula 1: examples/getml-community/formula1.ipynb
+        - Interstate94: examples/getml-community/interstate94.ipynb
+        - Loans: examples/getml-community/loans.ipynb
+        - Robot: examples/getml-community/robot.ipynb
+        - Seznam: examples/getml-community/seznam.ipynb
+
+        - Benchmarks:
+          - examples/getml-demo/fastprop_benchmark/index.md
+          - Air Pollution: examples/getml-demo/fastprop_benchmark/air_pollution_prop.ipynb
+          - Dodgers: examples/getml-demo/fastprop_benchmark/dodgers_prop.ipynb
+          - Interstate94: examples/getml-demo/fastprop_benchmark/interstate94_prop.ipynb
+          - Occupancy: examples/getml-demo/fastprop_benchmark/occupancy_prop.ipynb
+          - Robot: examples/getml-demo/fastprop_benchmark/robot_prop.ipynb
+
+      - Enterprise Edition:
+        - examples/getml-demo/index.md
+        - AdventureWorks: examples/getml-demo/adventure_works.ipynb
+        - Air Pollution: examples/getml-demo/air_pollution.ipynb
+        - Atherosclerosis: examples/getml-demo/atherosclerosis.ipynb
+        - Baseball: examples/getml-demo/baseball.ipynb
+        - Consumer Expenditures: examples/getml-demo/consumer_expenditures.ipynb
+        - CORA: examples/getml-demo/cora.ipynb
+        - Dodgers: examples/getml-demo/dodgers.ipynb
+        - Formula 1: examples/getml-demo/formula1.ipynb
+        - IMDb: examples/getml-demo/imdb.ipynb
+        - Interstate94: examples/getml-demo/interstate94.ipynb
+        - Loans: examples/getml-demo/loans.ipynb
+        - Movie Lens: examples/getml-demo/movie_lens.ipynb
+        - Occupancy: examples/getml-demo/occupancy.ipynb
+        - Online Retail: examples/getml-demo/online_retail.ipynb
+        - Robot: examples/getml-demo/robot.ipynb
+        - Seznam: examples/getml-demo/seznam.ipynb
+        - SFscores: examples/getml-demo/sfscores.ipynb
+        - Stats: examples/getml-demo/stats.ipynb
+
+    - Integrations:
+      - FastAPI: examples/fastapi/fastapi.md
+      - VertexAI: examples/vertexai/vertexai.ipynb
 
   - About:
     - Company: about/company.md
