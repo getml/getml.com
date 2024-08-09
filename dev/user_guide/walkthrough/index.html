@@ -1522,17 +1522,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#community-vs-enterprise-edition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Community vs Enterprise edition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#starting-a-new-project" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1741,157 +1730,93 @@
 <li><a data-preview="" href="#building-a-pipeline">Building a pipeline</a></li>
 <li><a data-preview="" href="#working-with-a-pipeline">Working with a pipeline</a></li>
 </ol>
-<p>The guide is applicable to both the enterprise and the community editions of getML. The highlights of the two are mentioned under <a data-preview="" href="#community-vs-enterprise-edition">community vs enterprise edition</a> section below.</p>
+<p>The guide is applicable to both the Enterprise and the Community editions of getML. The differences between the two are highlighted <a class="autorefs autorefs-internal" href="../../enterprise/feature-list/#community-vs-enterprise-edition">here</a>.</p>
 <p>You have not installed getML on your machine yet? Before you get started, head over
-to the installation instructions: for the enterprise edition <a class="autorefs autorefs-internal" href="../../install/#installation">here</a> or
-for the community edition <a href="https://github.com/getml/getml-community#installation" target="_blank" rel="noopener">here</a>.</p>
+to the <a class="autorefs autorefs-internal" href="../../install/#installation-index">installation instructions</a>.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Automated machine learning (AutoML) has attracted a great deal of attention in recent years. The goal is to simplify the application of traditional machine learning methods to real-world business problems by automating key steps of a data science project, such as feature extraction, model selection, and hyperparameter optimization. With AutoML, data scientists are able to develop and compare dozens of models, gain insights, generate predictions, and solve more business problems in less time.</p>
-<p>While it is often claimed that AutoML covers the complete workflow of a data science project - from the raw data set to the deployable machine learning models - current solutions have one major drawback: They cannot handle <em>real world</em> business data. This data typically comes in the form relational data. The relevant information is scattered over a multitude of tables that are related via so-called join keys. In order to start an AutoML pipeline, a flat feature table has to be created from the raw relational data by hand. This step is called feature engineering and is a tedious and error-prone process that accounts for up to 90% of the time in a data science project.</p>
+<p>While it is often claimed that AutoML covers the complete workflow of a data science project - from the raw data set to the deployable machine learning models - current solutions have one major drawback: They cannot handle <em>real world</em> business data. This data typically comes in the form of relational data. The relevant information is scattered over a multitude of tables that are related via so-called join keys. In order to start an AutoML pipeline, a flat feature table has to be created from the raw relational data by hand. This step is called feature engineering and is a tedious and error-prone process that accounts for up to 90% of the time in a data science project.</p>
 <p><img alt="Getting Started" src="../../images/getting_started_4_0.png" /></p>
-<p>getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms, Multirel and Relboost, find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors. This topic is covered in other material.</p>
-<p>All functionality of getML is implemented in the so-called <em>getML engine</em>. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with engine. In addition, the <em>getML monitor</em> (available in enterprise edition) provides a Go-based graphical user interface to ease working with getML and significantly accelerate your workflow.</p>
-<p>In this article, we start with a brief glimpse of different toolsets offered by getML community and enterprise editions. Later on, you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will also touch how an example data set like the one used here would have been dealt with using classical data science tools. In contrast, we will show how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. At the end of this tutorial you are ready to tackle your own use cases with getML or dive deeper into our software using a variety of follow-up material.</p>
-<p><a href="" id="getting-started-community-vs-enterprise"></a></p>
-<h2 id="community-vs-enterprise-edition">Community vs Enterprise edition</h2>
-<div class="admonition enterprise-adm">
-<p class="admonition-title">Enterprise edition</p>
-<p>To purchase a license for the Enterprise edition, technical support and
-more information, please <a class="autorefs autorefs-internal" href="../../contact/#how-can-we-help-you">contact us</a>.</p>
-</div>
-<p>Before you start the tutorial, here are the highlights of the open-source getML community edition and full-featured getML enterprise edition:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"></th>
-<th style="text-align: left;">Community edition</th>
-<th style="text-align: left;">Enterprise edition*</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">License</td>
-<td style="text-align: left;">Elastic Licence v2</td>
-<td style="text-align: left;">Proprietary</td>
-</tr>
-<tr>
-<td style="text-align: left;">Platform</td>
-<td style="text-align: left;">Linux &amp; Docker</td>
-<td style="text-align: left;">macOS</td>
-</tr>
-<tr>
-<td style="text-align: left;">Preprocessors</td>
-<td style="text-align: left;">EmailDomain, Imputation, Seasonal, Substring, TextFieldSplitter</td>
-<td style="text-align: left;">Mapping</td>
-</tr>
-<tr>
-<td style="text-align: left;">Feature learners</td>
-<td style="text-align: left;">FastProp</td>
-<td style="text-align: left;">Multirel, Relboost, RelMT, Fastboost</td>
-</tr>
-<tr>
-<td style="text-align: left;">Predictors</td>
-<td style="text-align: left;">LinearRegression, LogisticRegression, XGBoostClassifier, XGBoostRegressor</td>
-<td style="text-align: left;">ScaleGBMClassifier, ScaleGBMRegressor</td>
-</tr>
-<tr>
-<td style="text-align: left;">Productionization</td>
-<td style="text-align: left;">Transpilation to human-readable SQL</td>
-<td style="text-align: left;">Transpilation to MySQL, PostgreSQL, SQLite, Spark SQL, SAP HANA, BigQuery, TSQL. Built-in HTTP Endpoints.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Hyperparameter optimization</td>
-<td style="text-align: left;">Not supported</td>
-<td style="text-align: left;">RandomSearch, LatinHypercube, GaussianOptimization, Customized tuning routines</td>
-</tr>
-<tr>
-<td style="text-align: left;">Database connectors</td>
-<td style="text-align: left;">SQLite, MySQL, MariaDB, PostgreSQL</td>
-<td style="text-align: left;">Greenplum, ODBC, SAP HANA, BigQuery</td>
-</tr>
-<tr>
-<td style="text-align: left;">Other data sources</td>
-<td style="text-align: left;">CSV, Parquet, Pandas, Arrow, Pyspark, JSON</td>
-<td style="text-align: left;">S3</td>
-</tr>
-<tr>
-<td style="text-align: left;">Other functionalities</td>
-<td style="text-align: left;">Memory mapping</td>
-<td style="text-align: left;">Web Frontend</td>
-</tr>
-</tbody>
-</table>
-<p>*The Enterprise edition contains all features of the Community edition plus the
-features listed in the column.</p>
+<p>getML adds automated feature engineering on relational data and time series to AutoML. The getML algorithms Multirel, Relboost, and RelMT find the right aggregations and subconditions needed to construct meaningful features from the raw relational data. This is done by performing a sophisticated, gradient-boosting-based heuristic. In doing so, getML brings the vision of end-to-end automation of machine learning within reach for the first time. Note that getML also includes automated model deployment via a HTTP endpoint or database connectors.</p>
+<p>All functionality of getML is implemented in the so-called <em>getML Engine</em>. It is written in C++ to achieve the highest performance and efficiency possible and is responsible for all the heavy lifting. The getML Python API acts as a bridge to communicate with the Engine. 
+In addition, the <em>getML Monitor,</em> a graphical web interface available in the Enterprise edition, provides you with an overview of your current projects and pipelines.</p>
+<p>In this walkthrough you will learn the basic steps and commands to tackle your data science projects using the Python API. For illustration purpose we will show how an example data set would have been dealt with using classical data science tools. In contrast, we demonstrate on the same example data set how the most tedious part of a data science project - merging and aggregating a relation data set - is automated using getML. By the end of this tutorial you are ready to tackle your own use cases with getML and dive deeper into our software using a variety of follow-up material.</p>
 <h2 id="starting-a-new-project">Starting a new project</h2>
-<p>After you’ve successfully installed getML (<a class="autorefs autorefs-internal" href="../../install/#installation">enterprise</a> or <a href="https://github.com/getml/getml-community#installation" target="_blank" rel="noopener">community</a>), you can begin by executing the following in a jupyter-notebook:</p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
+<p>After you’ve successfully <a class="autorefs autorefs-internal" href="../../install/#installation-index">installed getML</a>, you can begin by executing the following in a jupyter-notebook:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span> 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;getML API version: </span><span class="si">{</span><span class="n">getml</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-    <span class="n">Launched</span> <span class="n">the</span> <span class="n">getML</span> <span class="n">engine</span><span class="o">.</span> <span class="n">The</span> <span class="n">log</span> <span class="n">output</span> <span class="n">will</span> <span class="n">be</span> <span class="n">stored</span> <span class="ow">in</span>
-    <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">xxxxx</span><span class="o">/.</span><span class="n">getML</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">xxxxxxxxxxxxxx</span><span class="o">.</span><span class="n">log</span><span class="o">.</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span> <span class="c1">#not needed in docker based installations</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Launched the getML engine. The log output will be stored in</span>
+<span class="sd">/home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
-This will import the getML Python API, launch the engine, and the monitor.</p>
-<p>Alternatively, you can also launch the getML engine and the monitor as follows:</p>
-<ul>
-<li>On Mac, execute  <code>getml-cli</code> inside a terminal or double-click the application icon.</li>
-<li>On Windows/docker, execute <code>run.sh</code> in Git Bash.</li>
-<li>On Linux, execute <code>getML</code> inside a terminal.</li>
-</ul>
-<p>Now, inside Python, execute <code>import getml</code> to import the API.</p>
-<p>The getML Monitor, available in the enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit <a href="http://localhost:1709/" target="_blank" rel="noopener">http://localhost:1709/</a> to open it. From now on, the entire analysis is run from Python. We will cover the getML monitor in a later tutorial, but feel free to check what is going on while following this guide.</p>
+This will import the getML Python API, launch the Engine, and (in the Enterprise edition) the Monitor.</p>
+<p>The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit <a href="http://localhost:1709/" target="_blank" rel="noopener">http://localhost:1709/</a> to open it. From now on, the entire analysis is run from Python.</p>
 <p>The entry-point for your project is the <code>getml.project</code> module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a <code>.getml</code> bundle to disk or load a <code>.getml</code> bundle from disk. To see the running projects, you can execute:</p>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span>
-<span class="n">Cannot</span> <span class="n">reach</span> <span class="n">the</span> <span class="n">getML</span> <span class="n">engine</span><span class="o">.</span> <span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="nb">set</span> <span class="n">a</span> <span class="n">project</span><span class="o">.</span>
-<span class="n">To</span> <span class="nb">set</span><span class="p">:</span> <span class="err">`</span><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="err">`</span>
-<span class="n">Available</span> <span class="n">projects</span><span class="p">:</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Cannot reach the getML engine. Please make sure you have set a project.</span>
+<span class="sd">To set: `getml.engine.set_project(...)`</span>
+<span class="sd">Available projects:</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <p>This message tells us that we have no running engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in <code>~/.getML/projects</code>.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s2">&quot;getting_started&quot;</span><span class="p">)</span>
-<span class="n">Connected</span> <span class="n">to</span> <span class="n">project</span> <span class="s1">&#39;getting_started&#39;</span>
-<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">1709</span><span class="o">/</span><span class="c1">#/listprojects/getting_started/</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Connected to project &#39;getting_started&#39;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 Now, when you check the current projects:</p>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span>
-<span class="n">Current</span> <span class="n">project</span><span class="p">:</span>
-<span class="n">getting_started</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Current project:</span>
+
+<span class="sd">getting_started</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <h2 id="data-set">Data Set</h2>
-<p>The data set used in this tutorial consists of 2 tables. The so-called population table represents the entities we want to make a prediction about in the analysis. The peripheral table contains additional information and is related to the population table via a join key. Such a data set could appear, for example, in a customer churn analysis where each row in the population table represents a customer and each row in the peripheral table represents a transaction. It could also be part of a predictive maintenance campaign where each row in the population table corresponds to a particular machine in a production line and each row in the peripheral table to a measurement from a certain sensor.</p>
-<p>In this guide, however, we do not assume any particular use case. After all, getML is applicable to a wide range of problems from different domains. Use cases from specific fields are covered in other articles.</p>
+<p>The data set used in this tutorial consists of 2 tables: (I) the so-called population table represents the entities we want to make a prediction about in the analysis and (II) the peripheral table contains additional information and is related to the population table via a join key. Such a data set could appear, for example, in a customer churn analysis where each row in the population table represents a customer and each row in the peripheral table represents a transaction. It could also be part of a predictive maintenance campaign where each row in the population table corresponds to a particular machine in a production line and each row in the peripheral table to a measurement from a certain sensor.</p>
+<p>In this guide, however, we do not assume any particular use case. After all, getML is applicable to a wide range of problems from different domains. Domain specific examples can be found in the <a href="https://github.com/getml/getml-demo/tree/master" target="_blank" rel="noopener">notebooks</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">population_table</span><span class="p">,</span> <span class="n">peripheral_table</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">(</span>
      <span class="n">n_rows_population</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
      <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span>
      <span class="n">random_state</span><span class="o">=</span><span class="mi">1709</span>
 <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Frames&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="p">)</span>
 
-<span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span>
-    <span class="n">name</span>                        <span class="n">rows</span>     <span class="n">columns</span>   <span class="n">memory</span> <span class="n">usage</span>
-<span class="mi">0</span>   <span class="n">numerical_peripheral_1709</span>   <span class="mi">100000</span>         <span class="mi">3</span>           <span class="mf">2.00</span> <span class="n">MB</span>
-<span class="mi">1</span>   <span class="n">numerical_population_1709</span>      <span class="mi">500</span>         <span class="mi">4</span>           <span class="mf">0.01</span> <span class="n">MB</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Population table&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">population_table</span><span class="p">)</span>
 
-<span class="n">population_table</span>
-<span class="n">Name</span>   <span class="n">time_stamp</span>                    <span class="n">join_key</span>   <span class="n">targets</span>   <span class="n">column_01</span>
-<span class="n">Role</span>   <span class="n">time_stamp</span>                    <span class="n">join_key</span>    <span class="n">target</span>   <span class="n">numerical</span>
-<span class="n">Units</span>   <span class="n">time</span> <span class="n">stamp</span><span class="p">,</span> <span class="n">comparison</span> <span class="n">only</span>
-    <span class="mi">0</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.470834</span>           <span class="mi">0</span>       <span class="mi">101</span>     <span class="o">-</span><span class="mf">0.6295</span>
-    <span class="mi">1</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.899782</span>           <span class="mi">1</span>        <span class="mi">88</span>     <span class="o">-</span><span class="mf">0.9622</span>
-    <span class="mi">2</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.085734</span>           <span class="mi">2</span>        <span class="mi">17</span>      <span class="mf">0.7326</span>
-    <span class="mi">3</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.365223</span>           <span class="mi">3</span>        <span class="mi">74</span>     <span class="o">-</span><span class="mf">0.4627</span>
-    <span class="mi">4</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.442957</span>           <span class="mi">4</span>        <span class="mi">96</span>     <span class="o">-</span><span class="mf">0.8374</span>
-        <span class="o">...</span>                                <span class="o">...</span>       <span class="o">...</span>     <span class="o">...</span>
-  <span class="mi">495</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.945288</span>         <span class="mi">495</span>        <span class="mi">93</span>      <span class="mf">0.4998</span>
-  <span class="mi">496</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.518100</span>         <span class="mi">496</span>       <span class="mi">101</span>     <span class="o">-</span><span class="mf">0.4657</span>
-  <span class="mi">497</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.312872</span>         <span class="mi">497</span>        <span class="mi">59</span>      <span class="mf">0.9932</span>
-  <span class="mi">498</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.973845</span>         <span class="mi">498</span>        <span class="mi">92</span>      <span class="mf">0.1197</span>
-  <span class="mi">499</span>   <span class="mi">1970</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.688690</span>         <span class="mi">499</span>       <span class="mi">101</span>     <span class="o">-</span><span class="mf">0.1274</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Data Frames</span>
+<span class="sd">    name                        rows     columns   memory usage</span>
+<span class="sd">0   numerical_peripheral_1709   100000         3           2.00 MB</span>
+<span class="sd">1   numerical_population_1709      500         4           0.01 MB</span>
+
+<span class="sd">Population table</span>
+<span class="sd">Name   time_stamp                    join_key   targets   column_01</span>
+<span class="sd">Role   time_stamp                    join_key    target   numerical</span>
+<span class="sd">Units   time stamp, comparison only</span>
+<span class="sd">    0   1970-01-01 00:00:00.470834           0       101     -0.6295</span>
+<span class="sd">    1   1970-01-01 00:00:00.899782           1        88     -0.9622</span>
+<span class="sd">    2   1970-01-01 00:00:00.085734           2        17      0.7326</span>
+<span class="sd">    3   1970-01-01 00:00:00.365223           3        74     -0.4627</span>
+<span class="sd">    4   1970-01-01 00:00:00.442957           4        96     -0.8374</span>
+<span class="sd">        ...                                ...       ...     ...</span>
+<span class="sd">  495   1970-01-01 00:00:00.945288         495        93      0.4998</span>
+<span class="sd">  496   1970-01-01 00:00:00.518100         496       101     -0.4657</span>
+<span class="sd">  497   1970-01-01 00:00:00.312872         497        59      0.9932</span>
+<span class="sd">  498   1970-01-01 00:00:00.973845         498        92      0.1197</span>
+<span class="sd">  499   1970-01-01 00:00:00.688690         499       101     -0.1274</span>
 
 
-  <span class="mi">500</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">4</span> <span class="n">columns</span>
-  <span class="n">memory</span> <span class="n">usage</span><span class="p">:</span> <span class="mf">0.01</span> <span class="n">MB</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">numerical_population_1709</span>
-  <span class="nb">type</span><span class="p">:</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">1709</span><span class="o">/</span><span class="c1">#/getdataframe/getting_started/numerical_population_1709/</span>
+<span class="sd">  500 rows x 4 columns</span>
+<span class="sd">  memory usage: 0.01 MB</span>
+<span class="sd">  type: getml.DataFrame</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <p>The population table contains 4 columns. The column called <code>column_01</code> contains a random numerical value. The next column, <code>targets</code>, is the one we want to predict in the analysis. To this end, we also need to use the information from the peripheral table.</p>
 <p>The relationship between the population and peripheral table is established using the <code>join_key</code> and <code>time_stamp</code> columns: Join keys are used to connect one or more rows from one table with one or more rows from the other table. Time stamps are used to limit these joins by enforcing causality and thus ensuring that no data from the future is used during the training.</p>
@@ -1908,7 +1833,7 @@ Now, when you check the current projects:</p>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="n">join_key</span><span class="p">,</span>
 <span class="w">    </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
 </code></pre></div>
-<p>Unfortunately, neither the right aggregation nor the right subconditions are clear a priori. The feature that allows us to predict the target best could very well be e.g. the average of all values in <code>column_01</code> that fall below a certain threshold, or something completely different. If you were to tackle this problem with classical machine learning tools, you would have to write many SQL features by hand and find the best ones in a trial-and-error-like fashion. At best, you could apply some domain knowledge that guides you towards the right direction. This approach, however, bears two major disadvantages that prevent you from finding the best-performing features.</p>
+<p>Unfortunately, neither the right aggregation nor the right subconditions are clear a priori. The feature that allows us to predict the target best could very well be e.g. the average of all values in <code>column_01</code> that fall below a certain threshold, or something completely different. If you were to tackle this problem with classical machine learning tools, you would have to write many SQL features by hand and find the best ones in a trial-and-error-like fashion. At best, you could apply some domain knowledge that guides you towards the right direction. This approach, however, bears <strong>two major disadvantages</strong> that prevent you from finding the best-performing features.</p>
 <ol>
 <li>You might not have sufficient domain knowledge.</li>
 <li>You might not have sufficient resources for such a time-consuming, tedious, and error-prone process.</li>
@@ -1943,7 +1868,7 @@ when building features.</p>
 getML bundles the sequential operations of a data science project
 (<a class="autorefs autorefs-internal" href="../concepts/preprocessing/#preprocessing_1">preprocessing</a>, <a class="autorefs autorefs-internal" href="../concepts/feature_engineering/#feature-engineering_1">feature engineering</a>, and <a class="autorefs autorefs-internal" href="../concepts/predicting/#predicting_1">predicting</a>) into
 <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a> objects. In addition to the
-<code>Placeholders</code> representing the
+<a class="autorefs autorefs-internal" href="../../reference/data/placeholder/#getml.data.Placeholder"><code>Placeholders</code></a> representing the
 <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrames</code></a> you also have to provide a feature learner
 (from <a class="autorefs autorefs-internal" href="../../reference/feature_learning/#getml.feature_learning"><code>getml.feature_learning</code></a>) and a predictor (from
 <a class="autorefs autorefs-internal" href="../../reference/predictors/#getml.predictors"><code>getml.predictors</code></a>).</p>
@@ -1953,7 +1878,10 @@ getML bundles the sequential operations of a data science project
      <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()],</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>We have chosen a narrow search field in aggregation space by only letting FastProp use <code>COUNT</code> and <code>SUM</code>. For the sake of demonstration, we use a simple <code>LinearRegression</code> and construct only 10 different features. In real world projects you would construct at least ten times this number and get results significantly better than what we will achieve here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use <code>COUNT</code> and <code>SUM</code>, we use a simple <code>LinearRegression</code> and construct only 10 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like <code>aggregation=getml.feature_learning.aggregations.FASTPROP.default</code>, you would construct at least 100 features and you could consider using a <a class="autorefs autorefs-internal" href="../../reference/predictors/#getml.predictors">more powerful predictor</a> to get results significantly better than what we will achieve here.</p>
+</div>
 <h2 id="working-with-a-pipeline">Working with a pipeline</h2>
 <p>Now, that we have defined a <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, we can let getML do the heavy lifting of your typical data science project. With a well-defined <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, you can, i.a.:</p>
 <ul>
@@ -1966,66 +1894,51 @@ getML bundles the sequential operations of a data science project
 <h2 id="training">Training</h2>
 <p>When fitting the model, we pass the handlers to the actual data residing in the getML engine – the <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>s.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
-<span class="n">Checking</span> <span class="n">data</span> <span class="n">model</span><span class="o">...</span>
 
-<span class="n">Staging</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Checking data model...</span>
+<span class="sd">Staging...  100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">Checking... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
 
-<span class="n">Checking</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
+<span class="sd">OK.</span>
+<span class="sd">Staging...                                 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">FastProp: Trying 5 features...             100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">FastProp: Building features...             100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">LinearRegression: Training as predictor... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
 
+<span class="sd">Trained pipeline.</span>
+<span class="sd">Time taken: 0h:0m:0.023915</span>
 
-<span class="n">OK</span><span class="o">.</span>
-
-<span class="n">Staging</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">FastProp</span><span class="p">:</span> <span class="n">Training</span> <span class="mi">5</span> <span class="n">features</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">FastProp</span><span class="p">:</span> <span class="n">Building</span> <span class="n">features</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">LinearRegression</span><span class="p">:</span> <span class="n">Training</span> <span class="k">as</span> <span class="n">predictor</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">Trained</span> <span class="n">pipeline</span><span class="o">.</span>
-<span class="n">Time</span> <span class="n">taken</span><span class="p">:</span> <span class="mi">0</span><span class="n">h</span><span class="p">:</span><span class="mi">0</span><span class="n">m</span><span class="p">:</span><span class="mf">0.049154</span>
-
-<span class="n">Pipeline</span><span class="p">(</span><span class="n">data_model</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span>
-        <span class="n">feature_learners</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;FastProp&#39;</span><span class="p">],</span>
-        <span class="n">feature_selectors</span><span class="o">=</span><span class="p">[],</span>
-        <span class="n">include_categorical</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">loss_function</span><span class="o">=</span><span class="s1">&#39;SquareLoss&#39;</span><span class="p">,</span>
-        <span class="n">peripheral</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;peripheral&#39;</span><span class="p">],</span>
-        <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LinearRegression&#39;</span><span class="p">],</span>
-        <span class="n">preprocessors</span><span class="o">=</span><span class="p">[],</span>
-        <span class="n">share_selected_features</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-        <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;container-s0mKB6&#39;</span><span class="p">])</span>
-
-<span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">1709</span><span class="o">/</span><span class="c1">#/getpipeline/getting_started/MXzNDT/0/</span>
+<span class="sd">Pipeline(data_model=&#39;population&#39;,</span>
+<span class="sd">         feature_learners=[&#39;FastProp&#39;],</span>
+<span class="sd">         feature_selectors=[],</span>
+<span class="sd">         include_categorical=False,</span>
+<span class="sd">         loss_function=&#39;SquareLoss&#39;,</span>
+<span class="sd">         peripheral=[&#39;peripheral&#39;],</span>
+<span class="sd">         predictors=[&#39;LinearRegression&#39;],</span>
+<span class="sd">         preprocessors=[],</span>
+<span class="sd">         share_selected_features=0.5,</span>
+<span class="sd">         tags=[&#39;container-cjCqZq&#39;])</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <p>That’s it. The features learned by <a class="autorefs autorefs-internal" href="../../reference/feature_learning/fastprop/#getml.feature_learning.FastProp"><code>FastProp</code></a> as well as the <a class="autorefs autorefs-internal" href="../../reference/predictors/linear_regression/#getml.predictors.LinearRegression"><code>LinearRegression</code></a> are now trained on our data set.</p>
 <h2 id="scoring">Scoring</h2>
 <p>We can also score our algorithms on the test set.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">test</span><span class="p">)</span>
 
-<span class="n">Staging</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
 
-<span class="n">Preprocessing</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">FastProp</span><span class="p">:</span> <span class="n">Building</span> <span class="n">features</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-    <span class="n">date</span> <span class="n">time</span>             <span class="nb">set</span> <span class="n">used</span>    <span class="n">target</span>         <span class="n">mae</span>      <span class="n">rmse</span>   <span class="n">rsquared</span>
-<span class="mi">0</span>   <span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">02</span> <span class="mi">10</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">12</span>   <span class="n">train</span>       <span class="n">targets</span>     <span class="mf">3.3721</span>    <span class="mf">4.1891</span>     <span class="mf">0.9853</span>
-<span class="mi">1</span>   <span class="mi">2022</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">02</span> <span class="mi">10</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">12</span>   <span class="n">test</span>        <span class="n">targets</span>     <span class="mf">3.7548</span>    <span class="mf">4.7093</span>     <span class="mf">0.981</span>
+<span class="sd">    date time             set used   target        mae      rmse   rsquared</span>
+<span class="sd">0   2024-08-08 12:14:11   train      targets    3.3721    4.1891     0.9853</span>
+<span class="sd">1   2024-08-08 12:21:35   test       targets    3.7548    4.7093     0.981 </span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <p>Our model is able to predict the target variable in the newly generated data set pretty accurately. Though, the enterprise feature learner <a class="autorefs autorefs-internal" href="../../reference/feature_learning/multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a> performs even better here with R<sup>2</sup> of 0.9995 and MAE and RMSE of 0.07079 and 0.1638 respectively.</p>
 <h2 id="making-predictions">Making predictions</h2>
-<p>Let’s simulate the arrival of unseen data and generate another population table. Since the data model is already stored in the pipeline, we do not need to recreate it and can just use a <a class="autorefs autorefs-internal" href="../../reference/data/container/#getml.data.Container"><code>Container</code></a> instead of a <a class="autorefs autorefs-internal" href="../../reference/data/star_schema/#getml.data.StarSchema"><code>StarSchema</code></a>.</p>
+<p>Let’s simulate the arrival of unseen data and generate another population table. The data model is already defined and the pipeline trained. All we need to do is to add data to a <a class="autorefs autorefs-internal" href="../../reference/data/container/#getml.data.Container"><code>Container</code></a> and pass it to the existing <code>pipe</code> object. </p>
 <div class="highlight"><pre><span></span><code><span class="n">population_table_unseen</span><span class="p">,</span> <span class="n">peripheral_table_unseen</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">(</span>
     <span class="n">n_rows_population</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
     <span class="n">n_rows_peripheral</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span>
@@ -2038,48 +1951,53 @@ getML bundles the sequential operations of a data science project
 
 <span class="n">yhat</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">container_unseen</span><span class="o">.</span><span class="n">full</span><span class="p">)</span>
 
-<span class="n">Staging</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">Preprocessing</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
-<span class="n">FastProp</span><span class="p">:</span> <span class="n">Building</span> <span class="n">features</span><span class="o">...</span>
-<span class="p">[</span><span class="o">========================================</span><span class="p">]</span> <span class="mi">100</span><span class="o">%</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="n">yhat</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
-<span class="p">[[</span> <span class="mf">4.16876676</span><span class="p">]</span>
- <span class="p">[</span><span class="mf">17.32933</span>   <span class="p">]</span>
- <span class="p">[</span><span class="mf">26.62467516</span><span class="p">]</span>
- <span class="p">[</span><span class="o">-</span><span class="mf">5.30655759</span><span class="p">]</span>
- <span class="p">[</span><span class="mf">27.4984785</span> <span class="p">]</span>
- <span class="p">[</span><span class="mf">21.48631811</span><span class="p">]</span>
- <span class="p">[</span><span class="mf">18.16896219</span><span class="p">]</span>
- <span class="p">[</span> <span class="mf">5.2784719</span> <span class="p">]</span>
- <span class="p">[</span><span class="mf">20.5992354</span> <span class="p">]</span>
- <span class="p">[</span><span class="mf">26.20538556</span><span class="p">]]</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+
+<span class="sd">&gt;&gt;&gt; print(yhat[:10])</span>
+<span class="sd">[[ 4.16876676]</span>
+<span class="sd"> [17.32933   ]</span>
+<span class="sd"> [26.62467516]</span>
+<span class="sd"> [-5.30655759]</span>
+<span class="sd"> [27.4984785 ]</span>
+<span class="sd"> [21.48631811]</span>
+<span class="sd"> [18.16896219]</span>
+<span class="sd"> [ 5.2784719 ]</span>
+<span class="sd"> [20.5992354 ]</span>
+<span class="sd"> [26.20538556]]</span>
+<span class="sd"> &quot;&quot;&quot;</span>
 </code></pre></div>
 <h2 id="extracting-features">Extracting features</h2>
 <p>Of course, you can also transform a specific data set into the corresponding features in order to insert them into another machine learning algorithm.</p>
 <div class="highlight"><pre><span></span><code><span class="n">features</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">container_unseen</span><span class="o">.</span><span class="n">full</span><span class="p">)</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
-<span class="p">[[</span><span class="o">-</span><span class="mf">7.14232213e-01</span>  <span class="mf">2.39745475e-01</span>  <span class="mf">2.62855261e-01</span>  <span class="mf">1.28462060e-02</span>
-   <span class="mf">5.00000000e+00</span> <span class="o">-</span><span class="mf">3.18568319e-01</span><span class="p">]</span>
- <span class="p">[</span><span class="o">-</span><span class="mf">1.17601634e-01</span>  <span class="mf">3.42472663e+00</span>  <span class="mf">3.61423201e+00</span>  <span class="mf">3.24305583e-02</span>
-   <span class="mf">1.40000000e+01</span>  <span class="mf">3.94656676e-01</span><span class="p">]</span>
- <span class="p">[</span><span class="o">-</span><span class="mf">2.48645436e+00</span>  <span class="mf">1.27495266e+01</span>  <span class="mf">1.33228011e+01</span>  <span class="mf">1.99520872e-02</span>
-   <span class="mf">3.60000000e+01</span>  <span class="mf">1.24700392e-01</span><span class="p">]</span>
- <span class="o">...</span>
- <span class="p">[</span> <span class="mf">9.55124379e-01</span>  <span class="mf">9.16437833e-01</span>  <span class="mf">9.40897830e-01</span>  <span class="mf">2.73040074e-02</span>
-   <span class="mf">8.00000000e+00</span> <span class="o">-</span><span class="mf">7.49963688e-01</span><span class="p">]</span>
- <span class="p">[</span><span class="o">-</span><span class="mf">3.56023429e+00</span>  <span class="mf">3.37346772e+00</span>  <span class="mf">2.11562428e+00</span>  <span class="mf">2.53698895e-02</span>
-   <span class="mf">1.50000000e+01</span> <span class="o">-</span><span class="mf">7.27880243e-01</span><span class="p">]</span>
- <span class="p">[</span> <span class="mf">2.72804029e-02</span>  <span class="mf">2.87302783e-02</span>  <span class="mf">5.36035230e-02</span>  <span class="mf">2.77103542e-02</span>
-   <span class="mf">2.00000000e+00</span> <span class="o">-</span><span class="mf">3.53700424e-01</span><span class="p">]]</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Staging...                     100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">Preprocessing...               100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+<span class="sd">FastProp: Building features... 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ • 0:00:00 • 0:00:00</span>
+
+<span class="sd">[[-7.14232213e-01  2.39745475e-01  2.62855261e-01  1.28462060e-02</span>
+<span class="sd">   5.00000000e+00 -3.18568319e-01]</span>
+<span class="sd"> [-1.17601634e-01  3.42472663e+00  3.61423201e+00  3.24305583e-02</span>
+<span class="sd">   1.40000000e+01  3.94656676e-01]</span>
+<span class="sd"> [-2.48645436e+00  1.27495266e+01  1.33228011e+01  1.99520872e-02</span>
+<span class="sd">   3.60000000e+01  1.24700392e-01]</span>
+<span class="sd"> ...</span>
+<span class="sd"> [ 9.55124379e-01  9.16437833e-01  9.40897830e-01  2.73040074e-02</span>
+<span class="sd">   8.00000000e+00 -7.49963688e-01]</span>
+<span class="sd"> [-3.56023429e+00  3.37346772e+00  2.11562428e+00  2.53698895e-02</span>
+<span class="sd">   1.50000000e+01 -7.27880243e-01]</span>
+<span class="sd"> [ 2.72804029e-02  2.87302783e-02  5.36035230e-02  2.77103542e-02</span>
+<span class="sd">   2.00000000e+00 -3.53700424e-01]]</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
-<p>If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (enterprise edition only) or by inspecting the sql attribute on a feature. A <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s features are held by the <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features"><code>Features</code></a> container. For example, to inspect the SQL code of one of the features:
-<div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span>
+<p>If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s features are held by the <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features"><code>Features</code></a> container. For example, to inspect the SQL code of the feature with the highest importance, run:
+<div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">importance</span><span class="p">,</span> <span class="n">descending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span>
 </code></pre></div></p>
 <p>That should return something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;FEATURE_1_5&quot;</span><span class="p">;</span>
