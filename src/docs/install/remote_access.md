@@ -1,6 +1,6 @@
-[](){#remote-access-anchor}
 
 # Remote Access
+[](){#remote-access-anchor}
 
 This guide helps you set up getML on a remote server and access it from your local machine.
 
