@@ -91,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/install/remote_access/</loc>
+         <lastmod>2024-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/install/uninstall/</loc>
          <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
