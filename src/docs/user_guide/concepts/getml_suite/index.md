@@ -14,20 +14,20 @@ The getML ecosystem comprises three fundamental components:
 [](){#engine}
 ## Engine
 
-Written in C++, the getML engine is the core of the suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
+Written in C++, the getML Engine is the core of the Suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
 
-### Starting the engine
+### Starting the Engine
 
-After [installing the getML engine][installation], either via `pip`, `Docker` or `CLI` there are two ways to start the getML engine:
+After [installing the getML Engine][installation], either via `pip`, `Docker` or `CLI` there are two ways to start the getML Engine:
 
 - Using the [Python API][python-api]
 - Using the getML [command-line interface (CLI)][separate-installation-of-engine]
 
 Follow the links to learn more about each method.
 
-### Shutting down the engine
+### Shutting down the Engine
 
-Depending on how you started the engine, there are different ways to shut it down:
+Depending on how you started the Engine, there are different ways to shut it down:
 
 - In the Python API: `getml.engine.shutdown()`
 - Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor
@@ -35,23 +35,23 @@ Depending on how you started the engine, there are different ways to shut it dow
 
 ### Logging
 
-The engine keeps a log about what it is currently doing.
+The Engine keeps a log about what it is currently doing.
 
-The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML monitor][monitor]. The engine will also output its log to the command line when it is started using the command-line interface.
+The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML Monitor][Monitor]. The Engine will also output its log to the command line when it is started using the command-line interface.
 
 [](){#getml-suite-python-api}
 ## Python API
 
-Control the engine with the getML Python API, which provides handlers to the objects in the engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api-reference].
+Control the Engine with the getML Python API, which provides handlers to the objects in the Engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api-reference].
 
 !!! note
-    - The classes in the Python API act as handles to objects in the getML engine.
+    - The classes in the Python API act as handles to objects in the getML Engine.
     - When you connect to or create a project:
-        - The API establishes a socket connection to the engine through a determined port.
-        - All subsequent commands are sent to the engine via this connection.
+        - The API establishes a socket connection to the Engine through a determined port.
+        - All subsequent commands are sent to the Engine via this connection.
 
 ### Setup new project
-Set a project in the getML engine using [`set_project()`][getml.engine.set_project].
+Set a project in the getML Engine using [`set_project()`][getml.engine.set_project].
 
 ```python
 import getml
@@ -86,14 +86,14 @@ data = getml.data.DataFrame.from_csv(
 )
 ```
 
-This creates a data frame object in the getML engine, imports the provided data, and returns a handler to the object as a [`DataFrame`][getml.data.DataFrame] in the Python API.
+This creates a data frame object in the getML Engine, imports the provided data, and returns a handler to the object as a [`DataFrame`][getml.data.DataFrame] in the Python API.
 
 !!! note
     There are many other methods to create a [`DataFrame`][getml.data.DataFrame], including [`from_db()`][getml.data.DataFrame.from_db], [`from_json()`][getml.data.DataFrame.from_json], or [`from_pandas()`][getml.data.DataFrame.from_pandas]. For a full list of available methods, refer to the [Importing data][importing-data] section.
 
 **Synchronization**
 
-When you apply any method, like [`add()`][getml.data.DataFrame.add], the changes will be automatically reflected in both the engine and Python. Under the hood, the Python API sends a command to create a new column to the getML engine. The moment the engine is done, it informs the Python API and the latter triggers the [`refresh()`][getml.data.DataFrame.refresh] method to update the Python handler.
+When you apply any method, like [`add()`][getml.data.DataFrame.add], the changes will be automatically reflected in both the Engine and Python. Under the hood, the Python API sends a command to create a new column to the getML engine. The moment the Engine is done, it informs the Python API and the latter triggers the [`refresh()`][getml.data.DataFrame.refresh] method to update the Python handler.
 
 **Saving**
 
@@ -145,12 +145,12 @@ getml.project.data_frames.load()
 
 ### Pipelines
 
-The lifecycle of a [`Pipeline`][getml.pipeline.Pipeline] is straightforward and streamlined by the getML engine, which automatically saves all changes made to a pipeline and loads all pipelines within a project. Pipelines are created within the Python API using constructors, where they are defined by a set of hyperparameters.
+The lifecycle of a [`Pipeline`][getml.pipeline.Pipeline] is straightforward and streamlined by the getML Engine, which automatically saves all changes made to a pipeline and loads all pipelines within a project. Pipelines are created within the Python API using constructors, where they are defined by a set of hyperparameters.
 
 !!! note
-    The actual weights of the machine learning algorithms are stored exclusively in the getML engine and are not transferred to the Python API.
+    The actual weights of the machine learning algorithms are stored exclusively in the getML Engine and are not transferred to the Python API.
 
-Any changes made through methods such as [`fit()`][getml.pipeline.Pipeline.fit] are automatically updated in both the engine and the Python API.
+Any changes made through methods such as [`fit()`][getml.pipeline.Pipeline.fit] are automatically updated in both the Engine and the Python API.
 
 By using [`set_project()`][getml.engine.set_project], you can load an existing project, and all associated pipelines will be automatically loaded into memory. To view all pipelines in the current project, access the Pipelines container via [`getml.project.Pipelines`][getml.project.Pipelines].
 
@@ -172,25 +172,25 @@ pipe = getml.pipeline.load(NAME_OF_THE_PIPELINE)
 
     For licensing information and technical support, please [contact us][contact-page].
 
-The monitor provides information on the data imported into the engine, as well as on the trained pipelines and their performance. It is written in Go and compiled into a binary separate from the getML engine.
+The Monitor provides information on the data imported into the Engine, as well as on the trained pipelines and their performance. It is written in Go and compiled into a binary separate from the getML Engine.
 
 **Accessing the Monitor**
 
-The monitor runs on the same machine as the engine, using sockets for communication. By default, it opens an HTTP port (1709) for browser access. To view the monitor, enter the following address in your browser's navigation bar:
+The Monitor runs on the same machine as the Engine, using sockets for communication. By default, it opens an HTTP port (1709) for browser access. To view the Monitor, enter the following address in your browser's navigation bar:
 
 [http://localhost:1709](http://localhost:1709){: style="text-align: center; display: block"}
 
-Please note, the HTTP port is only accessible from within the host machine running the getML suite.
+Please note, the HTTP port is only accessible from within the host machine running the getML Suite.
 
-The main purpose of the monitor is to provide visual feedback to support your data science projects.
+The main purpose of the Monitor is to provide visual feedback to support your data science projects.
 
 !!! note "Tip"
     
-    If you experience issues opening the monitor, try the following steps:
+    If you experience issues opening the Monitor, try the following steps:
     
-    - Manually shut down and restart the engine using `getml.engine.shutdown()` and `getml.engine.launch()`.
-    - Kill the associated background process in the terminal and restart the engine.
-    - Close all tabs and windows where the monitor was previously running and try again.
+    - Manually shut down and restart the Engine using `getml.engine.shutdown()` and `getml.engine.launch()`.
+    - Kill the associated background process in the terminal and restart the Engine.
+    - Close all tabs and windows where the Monitor was previously running and try again.
 
 
 To get started, head over to the [installation instructions][installation].

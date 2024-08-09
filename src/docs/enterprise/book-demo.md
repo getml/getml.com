@@ -9,11 +9,11 @@ hide:
 
 /// html | div.col-2-lg.left.bold
 
-Join us for a personalized walkthrough of GetML.
+Join us for a personalized walkthrough of getML.
 
 We will demonstrate getML’s core functionality, touch on the benefits of our novel feature learning algorithms and answer all your questions.
 
-Book and appointment with our engineering team today.
+Book an appointment with our engineering team today.
 
 /// html | div.indicator-primary
 - [x] Discover if getML is the right fit for you
