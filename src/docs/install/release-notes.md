@@ -1,5 +1,5 @@
+[](){#release-notes}
 # Release Notes
-[](){release-notes}
 
 ## For getML Enterprise & Community editions { data-toc-label="getML" }
 
@@ -31,7 +31,6 @@
 - Early stopping
 - Trend aggregation
 - Better progress logging
-- Arange support in our virtual columns
 
 ### 1.0.0	<small>Sep 23, 2021</small> {id="1.0.0"}
 - Complete overhaul of the API, including [Views][getml.data.View], [StarSchema][getml.data.StarSchema], [TimeSeries][getml.data.TimeSeries]
@@ -49,7 +48,7 @@
 
 ### 0.13.0 <small>Nov 13, 2020</small> {id="0.13.0"}
 
-- Introduce new feature learner: RelMTModel, now [RelMT][getml.feature_learning.RelMT], RelMTTimeSeries [deprecated]
+- Introduce new feature learner: RelMTModel, now [RelMT][getml.feature_learning.RelMT], RelMTTimeSeries [now deprecated]
 
 ### 0.12.0 <small>Oct 1, 2020</small> {id="0.12.0"}
 - Extend dataframe handling: [delete][getml.data.DataFrame.delete], [exists][getml.data.exists]
@@ -63,20 +62,20 @@
 - Handling of time stamps: [time][getml.data.time]
 - Improve database I/O: [connect_odbc][getml.database.connect_odbc.connect_odbc], [copy_table][getml.database.copy_table.copy_table], [list_connections][getml.database.list_connections.list_connections], [read_s3][getml.data.DataFrame.read_s3], [sniff_s3][getml.database.sniff_s3.sniff_s3]
 - Enable S3 access: [set_s3_access_key_id][getml.data.access.set_s3_access_key_id], [set_s3_secret_access_key][getml.data.access.set_s3_secret_access_key]
-- New Feature Learner: MultirelTimeSeries [deprecated], RelboostTimeSeries [deprecated]
+- New Feature Learner: MultirelTimeSeries [now deprecated], RelboostTimeSeries [now deprecated]
 
 ### 0.10.0 <small>Mar 17, 2020</small> {id="0.10.0"}
 - Overhaul of documentation 
-    - Introduction of "getML in one minute" (now [Quickstart][quick-start-guide]) and "How to use this guide"
-    - Introduction of User Guide to include data annotation, feature engineering, hyperparameter optimization and more
+    - Introduction of "getML in one minute" (now [Quickstart][quick-start-guide]) and "How to use this guide" (now [User Guide][user-guide-index])
+    - Introduction of User Guide (now [Concepts][concepts-guide]) to include data annotation, feature engineering, hyperparameter optimization and more
 - Integration with additional databases like [Greenplum][getml.database.connect_greenplum.connect_greenplum], [MariaDB][getml.database.connect_mariadb.connect_mariadb], [MySQL][getml.database.connect_mysql.connect_mysql], and extended [PostgreSQL][getml.database.connect_postgres.connect_postgres] support.
 ### 0.9.1	<small>Mar 17, 2020</small> {id="0.9.1"}
 - Include hotfix for new domain getml.com
 ### 0.9	<small>Dec 9, 2019</small>  {id="0.9"}
 
 ### 0.8	<small>Oct 22, 2019</small> {id="0.8"}
-- Renamed autosql to multirel
-- Moved from closed beta to pip
+- Renamed Autosql to [Multirel][getml.feature_learning.Multirel]
+- Moved from closed beta to [pip](https://pypi.org/project/getml/)
 - Introduce basic hyperopt algorithms: [LatinHypercubeSearch][getml.hyperopt.LatinHypercubeSearch], [RandomSearch][getml.hyperopt.RandomSearch]
 
 
