@@ -1170,8 +1170,6 @@ div#join-widget > div > a > img {
     fill: currentColor !important;
 }
 
-
-
 /* Photo widget */
 
 
@@ -1301,3 +1299,5 @@ nav.md-path li.md-path__item:first-child {
 nav.md-path li.md-path__item:nth-child(2)::before {
     display: none;
 }
+
+

@@ -1,6 +1,6 @@
 
 [](){#installation-linux}
-Install [getML community edition](https://github.com/getml/getml-community) with Python's pip package manager.
+Install [getML Community edition](https://github.com/getml/getml-community) with Python's pip package manager.
 
 ```py
 pip install getml
@@ -11,9 +11,9 @@ The will install both the [Python API][getml-suite-python-api] and the [engine][
 !!! enterprise-adm "Enterprise Edition"
     Need the highest models accuracy in commercial prediction applications and enterprise grade support?
 
-    [Choose getML enterprise](../../enterprise/benefits.md){ .md-button }
+    [Choose getML Enterprise](../../enterprise/benefits.md){ .md-button }
 
-    Once you have obtained the getML enterprise edition, you can install it as follows:
+    Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][getml-suite-python-api]: `pip install getml`
     - Install the [engine][engine] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
@@ -21,7 +21,7 @@ The will install both the [Python API][getml-suite-python-api] and the [engine][
 [](){#separate-installation-of-engine}
 ### Separate installation of engine
 
-In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the [enterprise edition](../../enterprise/benefits.md) of the engine.
+In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the [Enterprise edition](../../enterprise/benefits.md) of the engine.
 
 
 Please execute the following commands, replacing `ARCH` with either `x64` or `arm64`, depending on your architecture.
