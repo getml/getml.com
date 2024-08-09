@@ -23,8 +23,8 @@ A game changer in predictive applications for enterprise applications.
 
 <center class="mb-3-lg">
 
-[Request a demo](enterprise/book-demo){ .md-button .md-button--primary }
-[API Reference](reference){ .md-button }
+[Request a demo](enterprise/book-demo.md){ .md-button .md-button--primary }
+[API Reference](reference/index.md){ .md-button }
 {: .spacer }
 
 </center>
@@ -147,7 +147,7 @@ getML is a high-performance machine learning software for predictive analytics o
     2. Install getML Community `pip install getml`
     3. Clone [getml-demo](https://github.com/getml/getml-demo) and explore our example notebooks
 
-    *Need help along the way? Here are our [support options](contact).*
+    *Need help along the way? Here are our [support options](contact/index.md).*
 
 
 ///
@@ -175,7 +175,7 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 {.small-lg}
 
 
-[Get started :octicons-arrow-right-24:](install){: }
+[Get started :octicons-arrow-right-24:](install/index.md){: }
 
 </div>
 <div class="box box-bg box-50" markdown>
@@ -200,8 +200,8 @@ This is your choice if shorter development cycles and unprecedented model accura
 <div class="box box-50 p-sm-0" markdown>
 Request a meeting to explore the potential of getML Relational Learning for your business application. Or check out one of our code examples before.
 
-[Talk to sales](contact){ .md-button .md-button--primary }
-[Get started](user_guide){ .md-button  }
+[Talk to sales](contact/index.md){ .md-button .md-button--primary }
+[Get started](user_guide/index.md){ .md-button  }
 </div>
 
 </div>

@@ -205,19 +205,23 @@ extra_css:
 draft_docs: |
   *_.md
   *debug.md
-  install/build.md
   enterprise/training-and-support.md
   enterprise/guided-evaluation.md
 
 not_in_nav: |
   *debug.md
   enterprise/trial/trial-download.md
+  enterprise/trial/terms.md
   reference/pipeline/column.md
   reference/pipeline/feature.md
   reference/pipeline/metadata.md
   reference/pipeline/sql_string.md
   reference/pipeline/table.md
   assets/snippets/*
+  install/remote_access.md
+  install/release-notes.md
+  contact/index.md
+  contact/message-us.md
 
 nav:
   - Home: index.md
