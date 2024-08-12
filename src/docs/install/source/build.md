@@ -1,7 +1,7 @@
 
 [](){#compiling-from-source}
 
-Because getML is complex software, we use [Docker](https://www.docker.com/) for our build environment. If you want to compile our community edition from source, you can start with cloning its repository:
+Because getML is complex software, we use [Docker](https://www.docker.com/) for our build environment. If you want to compile our Community edition from source, you can start with cloning its repository:
 
 ```bash
 git clone https://github.com/getml/getml-community.git

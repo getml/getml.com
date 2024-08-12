@@ -32,4 +32,4 @@ Our [getml-demo](https://github.com/getml/getml-demo) repository on GitHub featu
 Demonstrations of how to connect getML with other tools and frameworks to enhance its functionality. Currently, we have an example showcasing integration with FastAPI, with more integrations coming soon.
 
 ### FastAPI
-- **[Integration with FastAPI](/integration/fastapi/fastapi/)**: How to integrate getML with FastAPI to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.
+- **[Integration with FastAPI][fastapi]**: How to integrate getML with FastAPI to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.
