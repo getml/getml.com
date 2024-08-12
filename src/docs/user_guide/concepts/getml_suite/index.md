@@ -30,7 +30,7 @@ Follow the links to learn more about each method.
 Depending on how you started the Engine, there are different ways to shut it down:
 
 - In the Python API: `getml.engine.shutdown()`
-- Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor
+- Click the ':material-power-standby: Shutdown' tab in the sidebar of the Monitor
 - On command-line interface (CLI): Press `Ctrl-C` or run `getML -stop`
 
 ### Logging
@@ -93,12 +93,12 @@ This creates a data frame object in the getML Engine, imports the provided data,
 
 **Synchronization**
 
-When you apply any method, like [`add()`][getml.data.DataFrame.add], the changes will be automatically reflected in both the Engine and Python. Under the hood, the Python API sends a command to create a new column to the getML engine. The moment the Engine is done, it informs the Python API and the latter triggers the [`refresh()`][getml.data.DataFrame.refresh] method to update the Python handler.
+When you apply any method, like [`add()`][getml.data.DataFrame.add], the changes will be automatically reflected in both the Engine and Python. Under the hood, the Python API sends a command to create a new column to the getML Engine. The moment the Engine is done, it informs the Python API and the latter triggers the [`refresh()`][getml.data.DataFrame.refresh] method to update the Python handler.
 
 **Saving**
 
 !!! warning
-    DataFrames are **never saved automatically** and **never loaded automatically**. All unsaved changes to a [`DataFrame`][getml.data.DataFrame] will be lost when restarting the engine. 
+    DataFrames are **never saved automatically** and **never loaded automatically**. All unsaved changes to a [`DataFrame`][getml.data.DataFrame] will be lost when restarting the Engine. 
 
 To get a list of all your current data_frames, access the container via:
 

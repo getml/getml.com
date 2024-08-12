@@ -202,7 +202,7 @@ prediction = pipeline_.predict(
 if prediction:
     return prediction.tolist()
 
-raise HTTPException(status_code=500, detail='getML ngine didn\'t return a result.')
+raise HTTPException(status_code=500, detail='getML Engine didn\'t return a result.')
 
 ```
 

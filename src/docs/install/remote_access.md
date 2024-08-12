@@ -18,7 +18,7 @@ To run the getML software on a remote server, you should ensure the following:
 
 ### Remote Installation
 
-If all conditions are met, download the Linux version of the getML suite from [getml.com](https://www.getml.com/download) and copy it to the remote server.
+If all conditions are met, download the Linux version of the getML Suite from [getml.com](https://www.getml.com/download) and copy it to the remote server.
 ```bash
 scp getml-VERSION-linux.tar.gz USER@IP:
 ```
@@ -43,15 +43,15 @@ nohup ./getML &
 ```
 
 
-Both methods will pipe the log of the engine into a file - either *run.log* or *nohup.out*.
+Both methods will pipe the log of the Engine into a file - either *run.log* or *nohup.out*.
 
 ### Login
 
-Now the getML engine and monitor are running. To view the monitor, use port forwarding via SSH.
+Now the getML Engine and Monitor are running. To view the Monitor, use port forwarding via SSH.
 ```bash
 ssh -L 2222:localhost:1709 USER@IP
 ```
-This collects all traffic on port 1709 of the remote host—the HTTP port of the getML monitor—and binds it to port 2222 of your local computer. By entering [localhost:2222](http://localhost:2222) into the navigation bar of your web browser, you can log into the remote instance. Note that this connection is only available as long as the SSH session started with the previous command is still active and running.
+This collects all traffic on port 1709 of the remote host—the HTTP port of the getML Monitor—and binds it to port 2222 of your local computer. By entering [localhost:2222](http://localhost:2222) into the navigation bar of your web browser, you can log into the remote instance. Note that this connection is only available as long as the SSH session started with the previous command is still active and running.
 
 ### Running Analyses Using the Python API
 
@@ -66,7 +66,7 @@ It lists all running processes and filters only those containing the letters 'py
 Running an interactive session using `IPython` is also possible but should not be done directly (since you will lose all progress the moment you get disconnected). Instead, we recommend using third-party helper programs, like [GNU screen](https://www.gnu.org/software/screen/) or [tmux](https://github.com/tmux/tmux/wiki).
 
 !!! note 
-    It is usually NOT a good idea to forward the port of the getML engine to your local computer and then run the Python API locally. If you decide to do so anyway, make sure to always use absolute paths for data loading.
+    It is usually NOT a good idea to forward the port of the getML Engine to your local computer and then run the Python API locally. If you decide to do so anyway, make sure to always use absolute paths for data loading.
 
 ### Retrieving Results
 
@@ -83,32 +83,32 @@ If you want to shutdown getML, you can use the appropriate command.
 
 ## Accessing the getML Monitor Via the Internet
 
-Up to now you only have used the HTTP port of the monitor and required no
+Up to now you only have used the HTTP port of the Monitor and required no
 encryption. Isn't this insecure?
 
-Not at all. The getML monitor is implemented in such a way the HTTP
+Not at all. The getML Monitor is implemented in such a way the HTTP
 port can only be accessed from a browser located at the same machine
-the monitor is running on. No one else will have access to it. In the
+the Monitor is running on. No one else will have access to it. In the
 scenario discussed in the [previous section][remote-access-start] all communication with the remote host had
 been encrypted using the strong SSH protocol and all queries of the
-getML suite to authenticate your login were encrypted too.
+getML Suite to authenticate your login were encrypted too.
 
-But allowing access to the monitor over the internet is not a bad idea 
+But allowing access to the Monitor over the internet is not a bad idea 
 in principle. It allows you to omit the port forwarding step
 and grants other entities permission to view the results of your
 analysis in e.g. your company's intranet. This is where the HTTPS port
-opened by the monitor comes in.
+opened by the Monitor comes in.
 ### What is Accessible and What is Not?
 
-Only the getML monitor is accessible via the HTTPS port. There is no way to connect to the getML engine via the internet (the engine will reject any command sent remotely).
+Only the getML Monitor is accessible via the HTTPS port. There is no way to connect to the getML Engine via the internet (the Engine will reject any command sent remotely).
 
-After having started the engine and monitor on your server, connect to the latter by entering `https://host-ip:1710` into the navigation bar of your web browser. Every user still needs to log into the getML monitor using a valid getML account and needs to be whitelisted in order to have access to the monitor.
+After having started the Engine and Monitor on your server, connect to the latter by entering `https://host-ip:1710` into the navigation bar of your web browser. Every user still needs to log into the getML Monitor using a valid getML account and needs to be whitelisted in order to have access to the Monitor.
 
 ### Creating and Using TLS Certificates
 
-The encryption via HTTPS requires a valid TLS certificate. The TLS certificate is created when you start getML for the first time. You can discard the current certificate and generate a new one in the configuration tab of the getML monitor. When doing so, you can choose whether the certificate should be self-signed or not. This is because HTTPS encryption is based on the so-called web of trust. Every certificate has to be checked and validated by a Certificate Authority (CA). If your browser knows and trusts the CA, it will display a closed lock in the left part of its navigation bar. If not, it will warn you and not establish the connection right away. But since a certificate must include the exact hostname including the subdomain it is used for, almost every certificate for every getML monitor will look different and they all have to be validated by a CA somehow. This is neither cheap nor feasible. That's why the monitor can act as a CA itself.
+The encryption via HTTPS requires a valid TLS certificate. The TLS certificate is created when you start getML for the first time. You can discard the current certificate and generate a new one in the configuration tab of the getML Monitor. When doing so, you can choose whether the certificate should be self-signed or not. This is because HTTPS encryption is based on the so-called web of trust. Every certificate has to be checked and validated by a Certificate Authority (CA). If your browser knows and trusts the CA, it will display a closed lock in the left part of its navigation bar. If not, it will warn you and not establish the connection right away. But since a certificate must include the exact hostname including the subdomain it is used for, almost every certificate for every getML Monitor will look different and they all have to be validated by a CA somehow. This is neither cheap nor feasible. That's why the Monitor can act as a CA itself.
 
-When accessing the getML monitor via HTTPS (even locally on [https://localhost:1710](https://localhost:1710)), your browser will be alarmed, refuse to access the page at first, and tell you it doesn't know the CA. You have to allow an exception manually. Since every monitor will be a different CA, there is no loss in security either.
+When accessing the getML Monitor via HTTPS (even locally on [https://localhost:1710](https://localhost:1710)), your browser will be alarmed, refuse to access the page at first, and tell you it doesn't know the CA. You have to allow an exception manually. Since every Monitor will be a different CA, there is no loss in security either.
 
 ### Adding an Exception in Browsers
 
@@ -130,5 +130,5 @@ followed by 'Proceed to localhost (unsafe)'.
 
 ### Opening the HTTPS Port
 
-Telling the getML monitor to serve its web frontend via HTTPS on a specific port usually does not make it accessible from the outside yet. Your computer or the server does not allow arbitrary programs to open connections to the outside world. You need to add the corresponding port number to a whitelist in your system's configuration. Since there are far too many combinations of systems and applications used as firewalls, we won't cover them here. If you have questions or need help concerning this step, please feel free to [contact us][contact-page].
+Telling the getML Monitor to serve its web frontend via HTTPS on a specific port usually does not make it accessible from the outside yet. Your computer or the server does not allow arbitrary programs to open connections to the outside world. You need to add the corresponding port number to a whitelist in your system's configuration. Since there are far too many combinations of systems and applications used as firewalls, we won't cover them here. If you have questions or need help concerning this step, please feel free to [contact us][contact-page].
 
