@@ -96,7 +96,7 @@ passed as numerical values and not as their string representations
 shown in the beginning. Both ways are
 supported by the getML Monitor. But if you choose to pass the
 string representation, you also have to specify the particular format
-in order for the getMLEngineto interpret your data properly.
+in order for the getML Engine to interpret your data properly.
 
 ```json
 {

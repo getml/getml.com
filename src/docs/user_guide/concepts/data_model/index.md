@@ -113,4 +113,4 @@ Another useful parameter in time series analysis is `lagged_target`. This boolea
 
 ### Features based on time stamps
 
-The getMLEngineis able to automatically generate features based on aggregations over time windows. Both the length of the time window and the aggregation itself will be determined by the feature learning algorithm. The only requirement is to provide the temporal resolution your time series is sampled with in the `delta_t` parameter in any feature learning algorithm.
+The getML Engine is able to automatically generate features based on aggregations over time windows. Both the length of the time window and the aggregation itself will be determined by the feature learning algorithm. The only requirement is to provide the temporal resolution your time series is sampled with in the `delta_t` parameter in any feature learning algorithm.
