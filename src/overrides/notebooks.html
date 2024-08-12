@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+<!-- Inject header for notebooks in Examples-->
+{% block content %}
+<!-- page.nb_url is provided by mkdocs-jupyter plugin
+     page.meta.path_repository is set by .meta.yml within each examples sub_folder
+-->
+
+{% if page.nb_url %}
+  {% set current_filename = page.nb_url.split('/')[-1] %}
+  {% set path_repository_full = page.meta.path_repository + "/" + current_filename %}
+
+  <a href="https://colab.research.google.com/github/{{ path_repository_full }}">
+    <div class="badges">
+      <img class="inline-icon" src="https://colab.research.google.com/img/colab_favicon.ico">
+      <strong>Google Colab</strong>
+    </div>
+  </a>
+
+  <a href="https://github.com/{{ path_repository_full }}">
+    <div class="badges">
+      <img class="inline-icon" src="https://github.com/favicon.ico">
+      <strong>GitHub source</strong>
+    </div>
+  </a>
+{% endif %}
+
+{{ super() }}
+{% endblock content %}

@@ -1,0 +1,32 @@
+.jupyter-wrapper .jp-OutputArea-output pre {
+    font-size: 0.85em !important;
+}
+
+.jupyter-wrapper .jp-OutputArea-output {
+    font-size: 0.8em !important;
+}
+
+.jp-OutputArea-executeResult>span {
+    font-size: 1.5em !important;
+}
+
+.inline-icon {
+    height: 1rem !important;
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.badges {
+    font-size: 0.7em;
+    background-color: rgb(98 65 190 / 35%);
+    color: hsla(var(--md-hue),0%,100%,1);
+    text-decoration: none;
+    padding: 4px 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.badges:hover {
+    background-color: rgb(98 65 190 / 80%);
+}
