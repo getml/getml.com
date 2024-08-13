@@ -10,12 +10,23 @@
   {% set current_filename = page.nb_url.split('/')[-1] %}
   {% set path_repository_full = page.meta.path_repository + "/" + current_filename %}
 
-  <a href="https://colab.research.google.com/github/{{ path_repository_full }}">
-    <div class="badges">
-      <img class="inline-icon" src="https://colab.research.google.com/img/colab_favicon.ico">
-      <strong>Google Colab</strong>
-    </div>
-  </a>
+  {% if current_filename == 'vertexai.ipynb' %}
+    <!-- Only display the Workbench badge for 'vertexai.ipynb' -->
+    <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https://raw.githubusercontent.com/{{ path_repository_full }}">
+      <div class="badges">
+        <img class="inline-icon" src="https://lh3.googleusercontent.com/UiNooY4LUgW_oTvpsNhPpQzsstV5W8F7rYgxgGBD85cWJoLmrOzhVs_ksK_vgx40SHs7jCqkTkCk=e14-rj-sc0xffffff-h130-w32">
+        <strong>Workbench</strong>
+      </div>
+    </a>
+  {% else %}
+    <!-- Display the Google Colab badge for all other notebooks -->
+    <a href="https://colab.research.google.com/github/{{ path_repository_full }}">
+      <div class="badges">
+        <img class="inline-icon" src="https://colab.research.google.com/img/colab_favicon.ico">
+        <strong>Google Colab</strong>
+      </div>
+    </a>
+  {% endif %}
 
   <a href="https://github.com/{{ path_repository_full }}">
     <div class="badges">

@@ -1,2 +1,4 @@
 path_repository: getml/getml-demo/blob/master
 template: notebooks.html
+search:
+  boost: 0.8
