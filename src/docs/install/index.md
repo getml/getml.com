@@ -9,14 +9,14 @@ getML is available for Python 3.8 to 3.12 and supported on the following 64-bit 
 - macOS (amd64/arm) via docker
 - Windows (amd64/arm) via docker
 
-The [getML suite][getml-suite] comprises of [Python API][getml-suite-python-api], [engine][] and [monitor][]. The monitor is shipped along with the engine.
+The [getML Suite][getml-suite] comprises of [Python API][getml-suite-python-api], [engine][] and [monitor][]. The monitor is shipped along with the engine.
 
 Both our [community](https://github.com/getml/getml-community) and [enterprise](../enterprise/benefits.md) editions use the same Python API.
 
 
 ## Linux
 
-Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [engine][].
+Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [engine][] on Linux natively.
 
 [Read the Linux install guide](packages/linux.md){ .md-button .md-button--primary }
 
