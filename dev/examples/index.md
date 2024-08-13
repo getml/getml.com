@@ -31,5 +31,8 @@ Our [getml-demo](https://github.com/getml/getml-demo) repository on GitHub featu
 ## Integrations
 Demonstrations of how to connect getML with other tools and frameworks to enhance its functionality. Currently, we have an example showcasing integration with FastAPI, with more integrations coming soon.
 
-### FastAPI
-- **[Integration with FastAPI][fastapi]**: How to integrate getML with FastAPI to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.
+- ### [FastAPI][fastapi]
+How to integrate getML with [FastAPI](https://fastapi.tiangolo.com/) to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.
+
+- ### [VertexAI](integrations/vertexai/vertexai.ipynb)
+A step-by-step guide on how to deploy getML models on [Google Cloud Vertex AI](https://cloud.google.com/vertex-ai), enabling scalable and powerful machine learning workflows on Google Cloud Platform.
