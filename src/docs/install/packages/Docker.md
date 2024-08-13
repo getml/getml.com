@@ -37,6 +37,14 @@ curl https://raw.githubusercontent.com/getml/getml-community/1.5.0/runtime/docke
 
 This will download `docker-compose.yml` configuration file and use `docker compose` to run a getML service.
 
-In addition, a local directory `getml` will be created if it doesn't exist and mounted into the container. This directory will contain the files of projects. The ports required for the Python API to communicate with the engine will be mapped to the host system.
+In addition, a docker volume `getml` will be created and mounted into the container. This volume will contain the files of projects. The ports required for the Python API to communicate with the engine will be mapped to the host system.
 
 To shut down the service after you are done, press `Ctrl+c`.
+
+
+## Where to go next
+
+To get started with getML, you may check out:
+
+- [User Guide][user-guide-index], which provides a comprehensive introduction to getML at varying levels of detail
+- [Examples][examples-index], where we demonstrate practical examples inside Jupyter Notebooks

@@ -47,15 +47,3 @@ docker volume rm getml
 ```
 
 Ensure that the volume is not in use by any other containers.
-
-### `getml` directory
-
-Remove your local directory `getml` as follows:
-
-!!! warning "Project data will be deleted"
-
-    Your projects data will be deleted when you delete the `getml` directory.
-
-```bash
-rm -r getml
-```
