@@ -30,3 +30,7 @@
 .badges:hover {
     background-color: rgb(98 65 190 / 80%);
 }
+
+.jupyter-wrapper .highlight pre{
+    font-size: 0.8em !important;
+}

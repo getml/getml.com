@@ -1,4 +1,6 @@
 path_repository: getml/getml-demo/blob/master
+badges:
+  - github
 template: notebooks.html
 search:
   boost: 0.8
