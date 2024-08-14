@@ -1,4 +1,7 @@
 path_repository: getml/getml-community/blob/main/demo-notebooks
+badges:
+  - github
+  - colab
 template: notebooks.html
 search:
   boost: 0.9

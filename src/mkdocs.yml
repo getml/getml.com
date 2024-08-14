@@ -366,13 +366,6 @@ nav:
     - Demo Notebooks:
       - Community Edition:
         - examples/community-notebooks/index.md
-        - AdventureWorks: examples/community-notebooks/adventure_works.ipynb
-        - Formula 1: examples/community-notebooks/formula1.ipynb
-        - Interstate94: examples/community-notebooks/interstate94.ipynb
-        - Loans: examples/community-notebooks/loans.ipynb
-        - Robot: examples/community-notebooks/robot.ipynb
-        - Seznam: examples/community-notebooks/seznam.ipynb
-
         - FastProp Benchmarks:
           - examples/enterprise-notebooks/fastprop_benchmark/index.md
           - Air Pollution: examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb
@@ -380,6 +373,12 @@ nav:
           - Interstate94: examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb
           - Occupancy: examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop.ipynb
           - Robot: examples/enterprise-notebooks/fastprop_benchmark/robot_prop.ipynb
+        - AdventureWorks: examples/community-notebooks/adventure_works.ipynb
+        - Formula 1: examples/community-notebooks/formula1.ipynb
+        - Interstate94: examples/community-notebooks/interstate94.ipynb
+        - Loans: examples/community-notebooks/loans.ipynb
+        - Robot: examples/community-notebooks/robot.ipynb
+        - Seznam: examples/community-notebooks/seznam.ipynb
 
       - Enterprise Edition:
         - examples/enterprise-notebooks/index.md
@@ -403,8 +402,7 @@ nav:
         - Stats: examples/enterprise-notebooks/stats.ipynb
 
     - Integrations:
-      - examples/integrations/index.md
-      - FastAPI: examples/integrations/fastapi/index.md
+      - FastAPI: examples/integrations/fastapi/fastapi.md
       - VertexAI: examples/integrations/vertexai/vertexai.ipynb
 
   - About:
