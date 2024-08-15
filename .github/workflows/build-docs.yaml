@@ -16,7 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: dev
-
+    env:
+      NOTEBOOKS_INCLUDE: '*.ipynb'
     steps:
       - name: Checkout getml-docs repo
         uses: actions/checkout@v4

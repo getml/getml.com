@@ -133,6 +133,18 @@ plugins:
       canonical_version: latest
       alias_type: symlink
 
+  - mkdocs-jupyter:
+      ignore_h1_titles: False
+      include_source: True
+      include: [!ENV [NOTEBOOKS_INCLUDE, "None"]]
+      ignore: ["*.py"]
+      remove_tag_config:
+        remove_cell_tags:
+          - remove_cell_on_docs
+
+hooks:
+  - docs/examples/get_notebooks.py
+
 # Additional configuration
 extra:
   generator: false
@@ -194,7 +206,6 @@ markdown_extensions:
         include:
           - reference/*
           - user_guide/*
-
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -267,7 +278,6 @@ nav:
     # - Training & Support (draft): enterprise/training-and-support.md
     # - Guided Evaluation (draft): enterprise/guided-evaluation.md
     # - DEBUG (draft): enterprise/debug.md
-
 
   - API Reference:
     - reference/index.md
@@ -353,7 +363,47 @@ nav:
 
   - Examples:
     - examples/index.md
-    - FastAPI: examples/fastapi/fastapi.md
+    - Demo Notebooks:
+      - Community Edition:
+        - examples/community-notebooks/index.md
+        - FastProp Benchmarks:
+          - examples/enterprise-notebooks/fastprop_benchmark/index.md
+          - Air Pollution: examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb
+          - Dodgers: examples/enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb
+          - Interstate94: examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb
+          - Occupancy: examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop.ipynb
+          - Robot: examples/enterprise-notebooks/fastprop_benchmark/robot_prop.ipynb
+        - AdventureWorks: examples/community-notebooks/adventure_works.ipynb
+        - Formula 1: examples/community-notebooks/formula1.ipynb
+        - Interstate94: examples/community-notebooks/interstate94.ipynb
+        - Loans: examples/community-notebooks/loans.ipynb
+        - Robot: examples/community-notebooks/robot.ipynb
+        - Seznam: examples/community-notebooks/seznam.ipynb
+
+      - Enterprise Edition:
+        - examples/enterprise-notebooks/index.md
+        - AdventureWorks: examples/enterprise-notebooks/adventure_works.ipynb
+        - Air Pollution: examples/enterprise-notebooks/air_pollution.ipynb
+        - Atherosclerosis: examples/enterprise-notebooks/atherosclerosis.ipynb
+        - Baseball: examples/enterprise-notebooks/baseball.ipynb
+        - Consumer Expenditures: examples/enterprise-notebooks/consumer_expenditures.ipynb
+        - CORA: examples/enterprise-notebooks/cora.ipynb
+        - Dodgers: examples/enterprise-notebooks/dodgers.ipynb
+        - Formula 1: examples/enterprise-notebooks/formula1.ipynb
+        - IMDb: examples/enterprise-notebooks/imdb.ipynb
+        - Interstate94: examples/enterprise-notebooks/interstate94.ipynb
+        - Loans: examples/enterprise-notebooks/loans.ipynb
+        - Movie Lens: examples/enterprise-notebooks/movie_lens.ipynb
+        - Occupancy: examples/enterprise-notebooks/occupancy.ipynb
+        - Online Retail: examples/enterprise-notebooks/online_retail.ipynb
+        - Robot: examples/enterprise-notebooks/robot.ipynb
+        - Seznam: examples/enterprise-notebooks/seznam.ipynb
+        - SFscores: examples/enterprise-notebooks/sfscores.ipynb
+        - Stats: examples/enterprise-notebooks/stats.ipynb
+
+    - Integrations:
+      - FastAPI: examples/integrations/fastapi/fastapi.md
+      - VertexAI: examples/integrations/vertexai/vertexai.ipynb
 
   - About:
     - Company: about/company.md

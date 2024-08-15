@@ -167,3 +167,6 @@ cython_debug/
 
 ignore
 src/overrides/.icons/fontawesome-pro/*
+
+# VS Code Workspace
+.vscode/

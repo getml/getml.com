@@ -13,6 +13,13 @@
     rel="stylesheet"
     href="{{ 'assets/stylesheets/getml.css' | url }}"
   />
+  <!-- Only include within notebooks-->
+  {% if page.nb_url %}
+    <link
+      rel="stylesheet"
+      href="{{ 'assets/stylesheets/notebooks.css' | url }}"
+    />
+  {% endif %}
 {% endblock %}
 
 <!-- Announcement bar -->
