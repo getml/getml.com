@@ -376,7 +376,7 @@ This very much resembles the ad hoc definition we tried in the beginning. The co
 
 This guide has shown you the very basics of getML. Starting with raw data, you have completed a full project including feature engineering and linear regression using an automated end-to-end pipeline. The most tedious part of this process - finding the right aggregations and subconditions to construct a feature table from the relational data model - was also included in this pipeline.
 
-But there’s more! [Related articles](https://www.getml.com/blog) show application
+But there’s more! [Examples][examples-index] show application
 of getML on real world data sets.
 
 Also, don’t hesitate to [contact us][contact-page] with your feedback.
