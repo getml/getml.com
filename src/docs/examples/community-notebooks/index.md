@@ -1,3 +1,6 @@
+---
+icon: material/folder-outline
+---
 # Community Edition Notebooks
 
 A collection of Jupyter notebooks that demonstrate the extensive features and 

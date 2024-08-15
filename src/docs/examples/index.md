@@ -5,7 +5,7 @@ This section showcases practical demonstrations of getML's capabilities across v
 
 ## [Community Edition Notebooks](community-notebooks/index.md)
 
-A collection of Jupyter notebooks published on the [getml-community](https://github.com/getml/getml-community/tree/main/demo-notebooks) repository, showcasing the features of the getML Community edition across various data types, prediction tasks, and application domains. These notebooks can be run locally or on Google Colab without any restrictions (certain features in the [Enterprise edition](/enterprise/benefits) require a license).
+A collection of Jupyter notebooks published on the [getml-community](https://github.com/getml/getml-community/tree/main/demo-notebooks) repository, showcasing the features of the getML Community edition across various data types, prediction tasks, and application domains. These notebooks can be run locally or on Google Colab without any restrictions (certain features in the [Enterprise edition](/enterprise/benefits.md) require a license).
 
 ### [FastProp Benchmarks](enterprise-notebooks/fastprop_benchmark/index.md)
 Showcase the performance of getML's [FastProp algorithm](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#fastprop), designed for efficient feature engineering and typically outperforming competing tools in runtime and resource requirements. These benchmarks help you understand how getML handles large datasets and complex feature engineering tasks.
@@ -19,7 +19,7 @@ Showcase the performance of getML's [FastProp algorithm](https://docs.getml.com/
     **[Interstate 94 Traffic Volume Prediction](enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb)**: Highlights FastProp's efficiency and predictive power compared to traditional methods.
 
 ## [Enterprise Edition Notebooks](enterprise-notebooks/index.md)
-Published on the [getml-demo](https://github.com/getml/getml-demo) repository, these notebooks demonstrate the advanced feature engineering capabilities available in the [Enterprise edition](/enterprise/benefits), including sophisticated algorithms like [Multirel](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#multirel), [Relboost](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relboost), and [RelMT](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relmt). They provide insights into achieving superior predictive performance on real-world data. Here are some interesting sections to get you started:
+Published on the [getml-demo](https://github.com/getml/getml-demo) repository, these notebooks demonstrate the advanced feature engineering capabilities available in the [Enterprise edition](/enterprise/benefits.md), including sophisticated algorithms like [Multirel](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#multirel), [Relboost](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relboost), and [RelMT](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relmt). They provide insights into achieving superior predictive performance on real-world data. Here are some interesting sections to get you started:
 
 !!! example "**Key Examples of Enterprise Features:**"
 
