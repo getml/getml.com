@@ -37,7 +37,7 @@ Depending on how you started the Engine, there are different ways to shut it dow
 
 The Engine keeps a log about what it is currently doing.
 
-The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML Monitor][Monitor]. The Engine will also output its log to the command line when it is started using the command-line interface.
+The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML Monitor][monitor]. The Engine will also output its log to the command line when it is started using the command-line interface.
 
 [](){#getml-suite-python-api}
 ## Python API
