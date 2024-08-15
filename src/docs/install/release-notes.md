@@ -13,13 +13,13 @@
 - Minor bugfixes
 
 ### 1.3.1	<small>Dec 20, 2022</small> {id="1.3.1"}
-- Implemented `tqdm` for progress bars
+- Implement `tqdm` for progress bars
 - Minor bugfixes
 
 ### 1.3.0	<small>Aug 28, 2022</small> {id="1.3.0"}
 - Use websockets instead of polling
 - Size [threshold][getml.pipeline.Features.to_sql] for better visualization of feature code
-- Significantly sped up reading of memory-mapped data, relevant for all feature learners and predictors
+- Faster reading of memory-mapped data, relevant for all feature learners and predictors
 - Introduce [CategoryTrimmer][getml.preprocessors.CategoryTrimmer] as preprocessor
 
 ### 1.2.0	<small>May 20, 2022</small> {id="1.2.0"}
@@ -28,32 +28,32 @@
 
 ### 1.1.0	<small>Nov 21, 2021</small> {id="1.1.0"}
 - Enhance data processing by introducing Spark (e.g. [spark_sql][getml.pipeline.dialect.spark_sql]) and Arrow (e.g. [from_arrow()][getml.data.DataFrame.from_arrow])
-- Integrated Vcpkg for dependency management
-- Improved code transpilation for seasonal variables
+- Integrate Vcpkg for dependency management
+- Improve code transpilation for seasonal variables
 - Better control of predictor training and hyperparamter optimization through introduction of early stopping (e.g. in [ScaleGBMClassifier][getml.predictors.ScaleGBMClassifier])
-- Introduced [TREND][getml.feature_learning.aggregations.TREND] aggregation
+- Introduce [TREND][getml.feature_learning.aggregations.TREND] aggregation
 - Better progress logging
 
 ### 1.0.0	<small>Sep 23, 2021</small> {id="1.0.0"}
 - Introduction of [Containers][getml.data.Container] for data storage
 - Complete overhaul of the API including [Views][getml.data.View], [StarSchema][getml.data.StarSchema], [TimeSeries][getml.data.TimeSeries]
-- Added [subroles][getml.data.subroles] for fine grained data control
-- Improved Model evaluation through [Plots][getml.pipeline.Plots] and [Scores][getml.pipeline.Scores] container
-- Introduced [slicing][getml.data.View.where] of Views
-- Added [datetime()][getml.data.time.datetime] utility
+- Add [subroles][getml.data.subroles] for fine grained data control
+- Improved model evaluation through [Plots][getml.pipeline.Plots] and [Scores][getml.pipeline.Scores] container
+- Introduce [slicing][getml.data.View.where] of Views
+- Add [datetime()][getml.data.time.datetime] utility
 
 ### 0.16.0 <small>May 25, 2021</small> {id="0.16.0"}
-- Added the [Mapping][getml.preprocessors.Mapping] and [TextFieldSplitter][getml.preprocessors.TextFieldSplitter] preprocessors
+- Add the [Mapping][getml.preprocessors.Mapping] and [TextFieldSplitter][getml.preprocessors.TextFieldSplitter] preprocessors
 
 ### 0.15.0 <small>Feb 23, 2021</small> {id="0.15.0"}
-- Added the [Fastprop][getml.feature_learning.FastProp] feature learner
-- Overhauled the way RelMT and Relboost generate features, making them more efficient
+- Add the [Fastprop][getml.feature_learning.FastProp] feature learner
+- Overhaul the way RelMT and Relboost generate features, making them more efficient
 
 ### 0.14.0 <small>Jan 18, 2021</small> {id="0.14.0"}
 - Significant improvement of  project management:
     -  [project.restart()][getml.project.attrs.restart], [project.suspend()][getml.project.attrs.suspend], and [project.switch()][getml.project.attrs.switch]
     - multiple project support
-- Added custom `__getattr__` and `__dir__` methods to DataFrame, enabling column retrieval through autocomplete
+- Add custom `__getattr__` and `__dir__` methods to DataFrame, enabling column retrieval through autocomplete
 
 ### 0.13.0 <small>Nov 13, 2020</small> {id="0.13.0"}
 
@@ -69,14 +69,14 @@
 - Introduce preprocessors: [EmailDomain][getml.preprocessors.EmailDomain], [Imputation][getml.preprocessors.Imputation], [Seasonal][getml.preprocessors.Seasonal], [Substring][getml.preprocessors.Substring] 
 ### 0.11.1 <small>Jul 13, 2020</small> {id="0.11.1"}
 - Add pipeline functionality: [Pipeline][getml.pipeline.Pipeline], [list_pipelines()][getml.pipeline.list_pipelines], [Features][getml.pipeline.Features], [Metrics][getml.pipeline.metrics], [SQLCode][getml.pipeline.SQLCode], [Scores][getml.pipeline.Scores]
-- Better control of Hyperparameter optimization: [burn_in][getml.hyperopt.burn_in], [kernels][getml.hyperopt.kernels], [optimization][getml.hyperopt.burn_in.random]
+- Better control of hyperparameter optimization: [burn_in][getml.hyperopt.burn_in], [kernels][getml.hyperopt.kernels], [optimization][getml.hyperopt.burn_in.random]
 - Handling of time stamps: [time][getml.data.time]
 - Improve database I/O: [connect_odbc()][getml.database.connect_odbc.connect_odbc], [copy_table()][getml.database.copy_table.copy_table], [list_connections()][getml.database.list_connections.list_connections], [read_s3()][getml.data.DataFrame.read_s3], [sniff_s3()][getml.database.sniff_s3.sniff_s3]
 - Enable S3 access: [set_s3_access_key_id()][getml.data.access.set_s3_access_key_id], [set_s3_secret_access_key()][getml.data.access.set_s3_secret_access_key]
 - New Feature Learner: MultirelTimeSeries, RelboostTimeSeries [now both integrated in [TimeSeries][getml.data.TimeSeries]]
 
 ### 0.10.0 <small>Mar 17, 2020</small> {id="0.10.0"}
-- Added [XGBoostClassifier][getml.predictors.XGBoostClassifier] and [XGBoostRegressor][getml.predictors.XGBoostRegressor] for improved predictive power
+- Add [XGBoostClassifier][getml.predictors.XGBoostClassifier] and [XGBoostRegressor][getml.predictors.XGBoostRegressor] for improved predictive power
 - Overhaul of documentation 
     - Introduction of "getML in one minute" (now [Quickstart][quick-start-guide]) and "How to use this guide" (now [User Guide][user-guide-index])
     - Introduction of User Guide (now [Concepts][concepts-guide]) to include data annotation, feature engineering, hyperparameter optimization and more
@@ -86,15 +86,15 @@
 - Include hotfix for new domain getml.com
 
 ### 0.9	<small>Dec 9, 2019</small>  {id="0.9"}
-- Reworked hyperopt design and handling, added [load_hyperopt()][getml.hyperopt.load_hyperopt.load_hyperopt]
-- Improved dataframe handling: added [to_placeholder()][getml.data.DataFrame.to_placeholder] and [nrows()][getml.data.DataFrame.nrows]
+- Rework hyperopt design and handling, added [load_hyperopt()][getml.hyperopt.load_hyperopt.load_hyperopt]
+- Improved dataframe handling: add [to_placeholder()][getml.data.DataFrame.to_placeholder] and [nrows()][getml.data.DataFrame.nrows]
 
 ### 0.8	<small>Oct 22, 2019</small> {id="0.8"}
-- Renamed Autosql to [Multirel][getml.feature_learning.Multirel]
-- Boolean and Categorical Columns: Added support for boolean columns and operators, along with enhanced categorical column handling.
+- Rename Autosql to [Multirel][getml.feature_learning.Multirel]
+- Boolean and categorical columns: Add support for boolean columns and operators, along with enhanced categorical column handling.
 - Introduce API improvements: fitting, saving/loading of models, data transformation
-- Added support for various aggregation functions such as [MEDIAN][getml.feature_learning.aggregations.MEDIAN], [VAR][getml.feature_learning.aggregations.VAR], [STDDEV][getml.feature_learning.aggregations.STDDEV], and [COUNT_DISTINCT][getml.feature_learning.aggregations.COUNT_DISTINCT]
-- Moved from closed beta to [pip](https://pypi.org/project/getml/)
+- Add support for various aggregation functions such as [MEDIAN][getml.feature_learning.aggregations.MEDIAN], [VAR][getml.feature_learning.aggregations.VAR], [STDDEV][getml.feature_learning.aggregations.STDDEV], and [COUNT_DISTINCT][getml.feature_learning.aggregations.COUNT_DISTINCT]
+- Move from closed beta to [pip](https://pypi.org/project/getml/)
 - Introduce basic hyperopt algorithms: [LatinHypercubeSearch][getml.hyperopt.LatinHypercubeSearch], [RandomSearch][getml.hyperopt.RandomSearch]
 
 
