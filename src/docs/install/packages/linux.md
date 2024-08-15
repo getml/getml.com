@@ -5,7 +5,7 @@ Install [getML Community edition](https://github.com/getml/getml-community) with
 ```py
 pip install getml
 ```
-The will install both the [Python API][getml-suite-python-api] and the [engine][engine] on your Linux machine.
+The will install both the [Python API][getml-suite-python-api] and the [Engine][engine] on your Linux machine.
 
 
 !!! enterprise-adm "Enterprise Edition"
@@ -16,12 +16,12 @@ The will install both the [Python API][getml-suite-python-api] and the [engine][
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][getml-suite-python-api]: `pip install getml`
-    - Install the [engine][engine] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
+    - Install the [Engine][engine] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
 
 [](){#separate-installation-of-engine}
-### Separate installation of engine
+### Separate installation of Engine
 
-In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the [Enterprise edition](../../enterprise/benefits.md) of the engine.
+In some cases it might be preferred to install the Engine separately on Linux machines. For example, if you want to use the [Enterprise edition](../../enterprise/benefits.md) of the Engine.
 
 
 Please execute the following commands, replacing `ARCH` with either `x64` or `arm64`, depending on your architecture.
@@ -30,7 +30,7 @@ You can also use `uname -m` to figure out the architecture.
 If it says something like `aarch64` or `arm64`, you need to use [`arm64`](https://static.getml.com/download/1.5.0/getml-1.5.0-arm64-community-edition-linux.tar.gz), otherwise go with [`x64`](https://static.getml.com/download/1.5.0/getml-1.5.0-x64-community-edition-linux.tar.gz).
 
 ```bash
-# 1. Download the tar file of the engine
+# 1. Download the tar file of the Engine
 wget https://static.getml.com/download/1.5.0/getml-1.5.0-ARCH-community-edition-linux.tar.gz
 
 # 2. Extract the tar file
@@ -39,11 +39,11 @@ tar -xzf getml-1.5.0-ARCH-community-edition-linux.tar.gz
 # 3. Change directory 
 cd getml-1.5.0-ARCH-community-edition-linux
 
-# 4. Install the engine
+# 4. Install the Engine
 ./getML install
 ```
 
-The output of the `install` command will tell you where the engine has been installed.
+The output of the `install` command will tell you where the Engine has been installed.
 It will look something like this:
 
 ```bash
@@ -57,12 +57,12 @@ Installation successful. To be able to call 'getML' from anywhere, add the follo
 /home/getml/.getML/getml-1.5.0-arm64-community-edition-linux
 ```
 
-To run the engine, execute:
+To run the Engine, execute:
 ```bash
 ./getML
 ```
 
-If the engine was installed to the user home directory, you can add the installation directory to your PATH if you want to call the getML CLI from anywhere.
+If the Engine was installed to the user home directory, you can add the installation directory to your PATH if you want to call the getML CLI from anywhere.
 
 ```bash
 export PATH=$PATH:/path/to/getml-1.5.0-ARCH-community-edition-linux

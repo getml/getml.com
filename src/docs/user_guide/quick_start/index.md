@@ -30,11 +30,11 @@ University and Co-founder of Google Brain described manual feature engineering a
 The main purpose of getML is to automate this *"difficult, time-consuming"* process as much
 as possible.
 
-getML comes with a high-performance **engine** written in C++ and an intuitive
+getML comes with a high-performance **Engine** written in C++ and an intuitive
 **Python API**. Completing a data science project with getML consists of eight
 simple steps.
 
-#### 1. Launch the engine
+#### 1. Launch the Engine
 ```python
 import getml
 
@@ -42,7 +42,7 @@ getml.engine.launch()
 getml.engine.set_project('one_minute_to_getml')
 ```
 
-#### 2. Load the data into the engine { data-toc-label='2. Load data' }
+#### 2. Load the data into the Engine { data-toc-label='2. Load data' }
 ```python
 df_population = getml.data.DataFrame.from_csv('data_population.csv',
             name='population_table')
