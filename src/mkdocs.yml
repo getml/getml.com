@@ -145,6 +145,14 @@ plugins:
 hooks:
   - docs/examples/get_notebooks.py
 
+# Allows to use absolute links (relative to the docs folder)
+# e.g. [Enterprise edition](/enterprise/benefits.md)
+validation:
+  links:
+    absolute_links: relative_to_docs
+    anchors: warn
+    unrecognized_links: warn
+
 # Additional configuration
 extra:
   generator: false
