@@ -13,6 +13,7 @@
 - Minor bugfixes
 
 ### 1.3.1	<small>Dec 20, 2022</small> {id="1.3.1"}
+- Implemented `tqdm` for progress bars
 - Minor bugfixes
 
 ### 1.3.0	<small>Aug 28, 2022</small> {id="1.3.0"}
@@ -22,7 +23,7 @@
 - Introduce [CategoryTrimmer][getml.preprocessors.CategoryTrimmer] as preprocessor
 
 ### 1.2.0	<small>May 20, 2022</small> {id="1.2.0"}
-- Support for [SQL transpilation][getml.pipeline.dialect]: TSQL, Postgre, MySQL, BigQuery, Spark
+- Support for [SQL transpilation][getml.pipeline.dialect]: TSQL, Postgres, MySQL, BigQuery, Spark
 - Support for memory mapping
 
 ### 1.1.0	<small>Nov 21, 2021</small> {id="1.1.0"}
@@ -30,14 +31,14 @@
 - Integrated Vcpkg for dependency management
 - Improved code transpilation for seasonal variables
 - Better control of predictor training and hyperparamter optimization through introduction of early stopping (e.g. in [ScaleGBMClassifier][getml.predictors.ScaleGBMClassifier])
-- Introduced [Trend aggregation][getml.feature_learning.aggregations.TREND]
+- Introduced [TREND][getml.feature_learning.aggregations.TREND] aggregation
 - Better progress logging
 
 ### 1.0.0	<small>Sep 23, 2021</small> {id="1.0.0"}
 - Introduction of [Containers][getml.data.Container] for data storage
 - Complete overhaul of the API including [Views][getml.data.View], [StarSchema][getml.data.StarSchema], [TimeSeries][getml.data.TimeSeries]
 - Added [subroles][getml.data.subroles] for fine grained data control
-- Improved Model evaluation through [Plots][getml.pipeline.Plots]
+- Improved Model evaluation through [Plots][getml.pipeline.Plots] and [Scores][getml.pipeline.Scores] container
 - Introduced [slicing][getml.data.View.where] of Views
 - Added [datetime()][getml.data.time.datetime] utility
 
@@ -52,7 +53,7 @@
 - Significant improvement of  project management:
     -  [project.restart()][getml.project.attrs.restart], [project.suspend()][getml.project.attrs.suspend], and [project.switch()][getml.project.attrs.switch]
     - multiple project support
-- Added custom `__getattr__` and `__dir__` methods to DataFrame, enabling column retrieval through autocomplete.
+- Added custom `__getattr__` and `__dir__` methods to DataFrame, enabling column retrieval through autocomplete
 
 ### 0.13.0 <small>Nov 13, 2020</small> {id="0.13.0"}
 
@@ -79,7 +80,7 @@
 - Overhaul of documentation 
     - Introduction of "getML in one minute" (now [Quickstart][quick-start-guide]) and "How to use this guide" (now [User Guide][user-guide-index])
     - Introduction of User Guide (now [Concepts][concepts-guide]) to include data annotation, feature engineering, hyperparameter optimization and more
-- Integration with additional databases like [Greenplum][getml.database.connect_greenplum.connect_greenplum], [MariaDB][getml.database.connect_mariadb.connect_mariadb], [MySQL][getml.database.connect_mysql.connect_mysql], and extended [PostgreSQL][getml.database.connect_postgres.connect_postgres] support.
+- Integration with additional databases like [Greenplum][getml.database.connect_greenplum.connect_greenplum], [MariaDB][getml.database.connect_mariadb.connect_mariadb], [MySQL][getml.database.connect_mysql.connect_mysql], and extended [PostgreSQL][getml.database.connect_postgres.connect_postgres] support
 
 ### 0.9.1	<small>Mar 17, 2020</small> {id="0.9.1"}
 - Include hotfix for new domain getml.com
