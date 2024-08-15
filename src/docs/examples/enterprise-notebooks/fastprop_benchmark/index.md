@@ -1,3 +1,6 @@
+---
+icon: material/folder-outline
+---
 # FastProp Benchmarks
 
 A compilation of benchmark notebooks that demonstrate and compare the performance of getML's [`FastProp`][getml.feature_learning.FastProp] algorithm against various implementations of other propositionalization algorithms across different datasets.

@@ -3,3 +3,4 @@ badges:
   - github
   - workbench
 template: notebooks.html
+icon: material/file-document-outline
