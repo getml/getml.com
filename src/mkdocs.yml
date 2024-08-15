@@ -261,7 +261,7 @@ nav:
     - install/index.md
     - Platform:
       - Linux: install/packages/linux.md
-      - Docker: install/packages/Docker.md
+      - Docker: install/packages/docker.md
     - From source:
       - Install API: install/source/python-api.md
       - Build engine & API: install/source/build.md

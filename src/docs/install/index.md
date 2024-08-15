@@ -24,7 +24,7 @@ Use Python's `pip` package manager to install both the [Python API][getml-suite-
 
 Setup a Docker container to run the [engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`.
 
-[Read the Docker install guide](packages/Docker.md){ .md-button .md-button--primary }
+[Read the Docker install guide](packages/docker.md){ .md-button .md-button--primary }
 
 
 ## From source
