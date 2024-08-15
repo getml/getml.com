@@ -264,7 +264,7 @@ nav:
       - Docker: install/packages/Docker.md
     - From source:
       - Install API: install/source/python-api.md
-      - Build engine & API: install/source/build.md
+      - Build Engine & API: install/source/build.md
     - Uninstall:
       - Any platform: install/uninstall.md
     - Archive:

@@ -7,7 +7,7 @@ analysis, feature engineering is still done by hand or using very simple brute
 force methods. Our mission is to change that.
 
 The automation of feature engineering on relational data and time
-series is at the heart of the getML suite. There are other
+series is at the heart of the getML Suite. There are other
 libraries that implement feature engineering tools on top of
 frameworks like `data.tables` in R, `pandas` in Python, or `Apache
 Spark`. In essence, they all use a brute force approach: Generate a
@@ -167,7 +167,7 @@ COUNT the number of `transactions` in the last X `days`
 ```
 As we iterate through different values for the threshold $X$, we are forced to repeat the same operations on the same data over and over again. Tasks like this bring traditional database engines to their knees.
 
-The core idea of getML's Multirel algorithm is to minimize redundancies through `incremental updates`. To allow for incremental updates and maximal efficiency, we developed a database engine from scratch in C++. When we evaluate a feature like:
+The core idea of getML's Multirel algorithm is to minimize redundancies through `incremental updates`. To allow for incremental updates and maximal efficiency, we developed a database Engine from scratch in C++. When we evaluate a feature like:
 
 ```sql
 COUNT the number of `transactions` in the last 90 `days`

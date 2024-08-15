@@ -9,26 +9,38 @@ A collection of Jupyter notebooks published on the [getml-community](https://git
 
 ### [FastProp Benchmarks](enterprise-notebooks/fastprop_benchmark/index.md)
 Showcase the performance of getML's [FastProp algorithm](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#fastprop), designed for efficient feature engineering and typically outperforming competing tools in runtime and resource requirements. These benchmarks help you understand how getML handles large datasets and complex feature engineering tasks.
+### [FastProp Benchmarks](enterprise-notebooks/fastprop_benchmark/index.md)
+Showcase the performance of getML's [FastProp algorithm](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#fastprop), designed for efficient feature engineering and typically outperforming competing tools in runtime and resource requirements. These benchmarks help you understand how getML handles large datasets and complex feature engineering tasks.
 
+!!! example "Key Examples of FastProp Benchmarks:"
 !!! example "Key Examples of FastProp Benchmarks:"
 
     **[Air Pollution Prediction](enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb)**: Demonstrates the superiority of FastProp over featuretools and tsfresh in runtime and predictive accuracy.
+    **[Air Pollution Prediction](enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb)**: Demonstrates the superiority of FastProp over featuretools and tsfresh in runtime and predictive accuracy.
 
     **[Dodgers Traffic Volume Prediction](enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb)**: Showcases FastProp's handling of high-frequency time series data, outperforming Prophet and tsfresh.
+    **[Dodgers Traffic Volume Prediction](enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb)**: Showcases FastProp's handling of high-frequency time series data, outperforming Prophet and tsfresh.
 
+    **[Interstate 94 Traffic Volume Prediction](enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb)**: Highlights FastProp's efficiency and predictive power compared to traditional methods.
     **[Interstate 94 Traffic Volume Prediction](enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb)**: Highlights FastProp's efficiency and predictive power compared to traditional methods.
 
 ## [Enterprise Edition Notebooks](enterprise-notebooks/index.md)
 Published on the [getml-demo](https://github.com/getml/getml-demo) repository, these notebooks demonstrate the advanced feature engineering capabilities available in the [Enterprise edition](/enterprise/benefits.md), including sophisticated algorithms like [Multirel](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#multirel), [Relboost](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relboost), and [RelMT](https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#relmt). They provide insights into achieving superior predictive performance on real-world data. Here are some interesting sections to get you started:
 
 !!! example "**Key Examples of Enterprise Features:**"
+!!! example "**Key Examples of Enterprise Features:**"
 
+    **[AdventureWorks Customer Churn Prediction](enterprise-notebooks/adventure_works.ipynb)**: Utilizes Multirel to predict customer churn, demonstrating the benefits of relational learning algorithms.
+
+    **[Atherosclerosis Disease Lethality Prediction](enterprise-notebooks/atherosclerosis.ipynb)**: Applies Relboost to complex medical datasets, showcasing its ability to manage high-dimensional data efficiently.
     **[AdventureWorks Customer Churn Prediction](enterprise-notebooks/adventure_works.ipynb)**: Utilizes Multirel to predict customer churn, demonstrating the benefits of relational learning algorithms.
 
     **[Atherosclerosis Disease Lethality Prediction](enterprise-notebooks/atherosclerosis.ipynb)**: Applies Relboost to complex medical datasets, showcasing its ability to manage high-dimensional data efficiently.
 
     **[Baseball Salary Prediction](enterprise-notebooks/baseball.ipynb)**: Uses RelMT to predict baseball player salaries, demonstrating advanced feature learners in sports analytics.
+    **[Baseball Salary Prediction](enterprise-notebooks/baseball.ipynb)**: Uses RelMT to predict baseball player salaries, demonstrating advanced feature learners in sports analytics.
 
+For more details and a full list of notebooks, checkout the  on GitHub.
 For more details and a full list of notebooks, checkout the  on GitHub.
 
 ## Integrations

@@ -8,7 +8,7 @@
 
 In the sections on [feature engineering][feature-engineering] and [predicting]
 [predicting], we learned how to train both the feature learning algorithm and the 
-machine learning algorithm used for prediction in the getML engine. However, there 
+machine learning algorithm used for prediction in the getML Engine. However, there 
 are lots of parameters involved. [`Multirel`][getml.feature_learning.Multirel], 
 [`Relboost`][getml.feature_learning.Relboost], [`RelMT`][getml.feature_learning.RelMT], 
 [`FastProp`][getml.feature_learning.FastProp], 
