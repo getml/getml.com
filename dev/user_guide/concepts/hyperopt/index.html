@@ -505,23 +505,36 @@
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Home
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -531,12 +544,20 @@
     
       
       
+
+  <!-- Determine classes -->
   
   
     
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -551,69 +572,126 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
         
         
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
         
       
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
+
+      <!-- Prune item if it is not a section and not active -->
       
     
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_2"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a
+              href="../../"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    User Guide
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        User Guide
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label
+                class="md-nav__link "
+                for="__nav_2"
+                id="__nav_2_label"
+                tabindex=""
+              >
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_2_label"
+          aria-expanded="true"
+        >
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    User Guide
-  
-
+            User Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -622,74 +700,130 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
         
           
           
         
       
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
+
+      <!-- Prune item if it is not a section and not active -->
       
     
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle md-toggle--indeterminate"
+          type="checkbox"
+          id="__nav_2_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../quick_start/" class="md-nav__link ">
+            <a
+              href="../../quick_start/"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    Quick start
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Quick start
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_2_2_label"
+          aria-expanded="false"
+        >
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Quick start
-  
-
+            Quick start
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -698,76 +832,132 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
         
           
           
         
       
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
+
+      <!-- Prune item if it is not a section and not active -->
       
     
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle md-toggle--indeterminate"
+          type="checkbox"
+          id="__nav_2_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../walkthrough/" class="md-nav__link ">
+            <a
+              href="../../walkthrough/"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    Walkthrough
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Walkthrough
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_2_3_label"
+          aria-expanded="false"
+        >
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Walkthrough
-  
-
+            Walkthrough
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
     
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -816,82 +1006,144 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
         
           
           
         
       
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
+
+      <!-- Prune item if it is not a section and not active -->
       
     
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_2_4"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a
+              href="../"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    Concepts
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Concepts
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+              <label
+                class="md-nav__link "
+                for="__nav_2_4"
+                id="__nav_2_4_label"
+                tabindex=""
+              >
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_2_4_label"
+          aria-expanded="true"
+        >
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Concepts
-  
-
+            Concepts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../getml_suite/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    getML Suite
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getML Suite
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -902,23 +1154,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../project_management/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Managing projects
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Managing projects
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -929,23 +1194,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../importing_data/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Importing data
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Importing data
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -956,23 +1234,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../annotating_data/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Annotating data
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Annotating data
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -983,23 +1274,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../data_model/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Data model
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Data model
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -1010,23 +1314,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../preprocessing/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Preprocessing
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Preprocessing
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -1037,23 +1354,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../feature_engineering/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Feature engineering
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Feature engineering
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -1064,23 +1394,36 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../predicting/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Predicting
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Predicting
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -1091,52 +1434,87 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
     
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
       
       
         
       
+
+      <!-- Navigation link to table of contents -->
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperparameter optimization
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Hyperparameter optimization
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperparameter optimization
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Hyperparameter optimization
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
+
+      <!-- Table of contents -->
       
         
 
@@ -1230,29 +1608,44 @@
 </nav>
       
     </li>
+
+  <!-- Navigation item -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../deployment/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    Deployment
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Deployment
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -1263,25 +1656,41 @@
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1298,37 +1707,64 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
         
       
     
-    
-      
-        
-        
-      
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
+
+  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../../install/" class="md-nav__link">
       
-  
-  <span class="md-ellipsis">
-    
-  
-    Install
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Install
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1337,15 +1773,25 @@
 
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1358,37 +1804,64 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
         
       
     
-    
-      
-        
-        
-      
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
+
+  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../../enterprise/benefits/" class="md-nav__link">
       
-  
-  <span class="md-ellipsis">
-    
-  
-    Enterprise
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Enterprise
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1397,15 +1870,25 @@
 
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1418,37 +1901,64 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
         
       
     
-    
-      
-        
-        
-      
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
+
+  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../../reference/" class="md-nav__link">
       
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        API Reference
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1457,15 +1967,25 @@
 
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1478,37 +1998,64 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
         
       
     
-    
-      
-        
-        
-      
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
+
+  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../../examples/" class="md-nav__link">
       
-  
-  <span class="md-ellipsis">
-    
-  
-    Examples
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Examples
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1517,15 +2064,25 @@
 
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1538,37 +2095,64 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
         
       
     
-    
-      
-        
-        
-      
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
+
+  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../../about/company/" class="md-nav__link">
       
-  
-  <span class="md-ellipsis">
-    
-  
-    About
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        About
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1577,28 +2161,43 @@
 
       
     </li>
+
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
-  
-  <span class="md-ellipsis">
-    
-  
-    getML 1.4 doc
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getML 1.4 doc
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
       </a>
