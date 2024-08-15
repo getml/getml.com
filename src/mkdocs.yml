@@ -348,12 +348,12 @@ nav:
         - dialect: reference/pipeline/dialect.md
       - getml.predictors:
         - reference/predictors/index.md
-        - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
-        - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
         - LinearRegression: reference/predictors/linear_regression.md
         - LogisticRegression: reference/predictors/logistic_regression.md
-        - XGBoostClassifier: reference/predictors/xgboost_classifier.md
         - XGBoostRegressor: reference/predictors/xgboost_regressor.md
+        - XGBoostClassifier: reference/predictors/xgboost_classifier.md
+        - ScaleGBMRegressor: reference/predictors/scale_gbm_regressor.md
+        - ScaleGBMClassifier: reference/predictors/scale_gbm_classifier.md
       - getml.sqlite3:
         - reference/sqlite3/index.md
 
