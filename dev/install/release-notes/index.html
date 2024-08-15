@@ -25,7 +25,7 @@
     
     
       
-        <title>Release Notes - getML Developer Portal</title>
+        <title>Release notes - getML Developer Portal</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes" class="md-skip">
+        <a href="#release-notes_1" class="md-skip">
           Skip to content
         </a>
       
@@ -159,7 +159,7 @@
         <div class="md-header__topic__nover" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release Notes
+              Release notes
             
           </span>
         </div>
@@ -1188,14 +1188,14 @@
 
 
 <!-- Page content -->
-<h1 id="release-notes">Release Notes</h1>
-<p><a href="" release-notes="release-notes"></a></p>
+<p><a href="" id="release-notes"></a></p>
+<h1 id="release-notes_1">Release Notes</h1>
 <h2 id="for-getml-enterprise-community-editions">For getML Enterprise &amp; Community editions</h2>
 <h3 id="1.4.0">1.4.0   <small>Oct 17, 2023</small></h3>
 <ul>
-<li>Added <a class="autorefs autorefs-internal" href="../../reference/feature_learning/fastboost/#getml.feature_learning.Fastboost">Fastboost</a> feature learner</li>
-<li>Added new predictor: <a class="autorefs autorefs-internal" href="../../reference/predictors/scale_gbm_classifier/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a> and <a class="autorefs autorefs-internal" href="../../reference/predictors/scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a></li>
-<li>Added the <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations">EWMATrend aggregations</a></li>
+<li>Accelerated feature learning through <a class="autorefs autorefs-internal" href="../../reference/feature_learning/fastboost/#getml.feature_learning.Fastboost">Fastboost</a></li>
+<li>Improved modelling on huge datasets through <a class="autorefs autorefs-internal" href="../../reference/predictors/scale_gbm_classifier/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a> and <a class="autorefs autorefs-internal" href="../../reference/predictors/scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor">ScaleGBMRegressor</a></li>
+<li>Advanced trend aggregations using <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.EWMA_1S">EWMATrend aggregations</a></li>
 <li>Faster JSON parsing using YYJSON</li>
 </ul>
 <h3 id="1.3.2">1.3.2   <small>Jan 26, 2023</small></h3>
@@ -1204,55 +1204,110 @@
 </ul>
 <h3 id="1.3.1">1.3.1   <small>Dec 20, 2022</small></h3>
 <ul>
+<li>Implement <code>tqdm</code> for progress bars</li>
 <li>Minor bugfixes</li>
 </ul>
 <h3 id="1.3.0">1.3.0   <small>Aug 28, 2022</small></h3>
 <ul>
 <li>Use websockets instead of polling</li>
 <li>Size <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features.to_sql">threshold</a> for better visualization of feature code</li>
-<li>Significantly sped up reading of memory-mapped data, relevant for all feature learners and predictors</li>
+<li>Faster reading of memory-mapped data, relevant for all feature learners and predictors</li>
+<li>Introduce <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.CategoryTrimmer">CategoryTrimmer</a> as preprocessor</li>
 </ul>
 <h3 id="1.2.0">1.2.0   <small>May 20, 2022</small></h3>
 <ul>
-<li>Support for SQL transpilation: TSQL, Postgre, MySQL, BigQuery, Spark</li>
+<li>Support for <a class="autorefs autorefs-internal" href="../../reference/pipeline/dialect/#getml.pipeline.dialect">SQL transpilation</a>: TSQL, Postgres, MySQL, BigQuery, Spark</li>
 <li>Support for memory mapping</li>
 </ul>
 <h3 id="1.1.0">1.1.0   <small>Nov 21, 2021</small></h3>
 <ul>
-<li>Spark support</li>
-<li>Arrow support</li>
-<li>Improved code transpilation for seasonal variables</li>
-<li>Early stopping</li>
-<li>Trend aggregation</li>
+<li>Enhance data processing by introducing Spark (e.g. <a class="autorefs autorefs-internal" href="../../reference/pipeline/dialect/#getml.pipeline.dialect.spark_sql">spark_sql</a>) and Arrow (e.g. <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame.from_arrow">from_arrow()</a>)</li>
+<li>Integrate Vcpkg for dependency management</li>
+<li>Improve code transpilation for seasonal variables</li>
+<li>Better control of predictor training and hyperparamter optimization through introduction of early stopping (e.g. in <a class="autorefs autorefs-internal" href="../../reference/predictors/scale_gbm_classifier/#getml.predictors.ScaleGBMClassifier">ScaleGBMClassifier</a>)</li>
+<li>Introduce <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.TREND">TREND</a> aggregation</li>
 <li>Better progress logging</li>
-<li>Arange support in our virtual columns</li>
 </ul>
 <h3 id="1.0.0">1.0.0   <small>Sep 23, 2021</small></h3>
 <ul>
-<li>Complete overhaul of the API, including <a class="autorefs autorefs-internal" href="../../reference/data/view/#getml.data.View">Views</a>, <a class="autorefs autorefs-internal" href="../../reference/data/star_schema/#getml.data.StarSchema">StarSchema</a>, <a class="autorefs autorefs-internal" href="../../reference/data/time_series/#getml.data.TimeSeries">TimeSeries</a></li>
+<li>Introduction of <a class="autorefs autorefs-internal" href="../../reference/data/container/#getml.data.Container">Containers</a> for data storage</li>
+<li>Complete overhaul of the API including <a class="autorefs autorefs-internal" href="../../reference/data/view/#getml.data.View">Views</a>, <a class="autorefs autorefs-internal" href="../../reference/data/star_schema/#getml.data.StarSchema">StarSchema</a>, <a class="autorefs autorefs-internal" href="../../reference/data/time_series/#getml.data.TimeSeries">TimeSeries</a></li>
+<li>Add <a class="autorefs autorefs-internal" href="../../reference/data/subroles/#getml.data.subroles">subroles</a> for fine grained data control</li>
+<li>Improved model evaluation through <a class="autorefs autorefs-internal" href="../../reference/pipeline/plots/#getml.pipeline.Plots">Plots</a> and <a class="autorefs autorefs-internal" href="../../reference/pipeline/scores_container/#getml.pipeline.Scores">Scores</a> container</li>
+<li>Introduce <a class="autorefs autorefs-internal" href="../../reference/data/view/#getml.data.View.where">slicing</a> of Views</li>
+<li>Add <a class="autorefs autorefs-internal" href="../../reference/data/time/#getml.data.time.datetime">datetime()</a> utility</li>
 </ul>
 <h3 id="0.16.0">0.16.0 <small>May 25, 2021</small></h3>
 <ul>
-<li>Added the <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.Mapping">Mapping preprocessor</a></li>
+<li>Add the <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.Mapping">Mapping</a> and <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter">TextFieldSplitter</a> preprocessors</li>
 </ul>
 <h3 id="0.15.0">0.15.0 <small>Feb 23, 2021</small></h3>
 <ul>
-<li>Added the Fastprop feature learner</li>
-<li>Overhauled the way RelMT and Relboost generate features, making them more efficient</li>
+<li>Add the <a class="autorefs autorefs-internal" href="../../reference/feature_learning/fastprop/#getml.feature_learning.FastProp">Fastprop</a> feature learner</li>
+<li>Overhaul the way RelMT and Relboost generate features, making them more efficient</li>
 </ul>
 <h3 id="0.14.0">0.14.0 <small>Jan 18, 2021</small></h3>
 <ul>
-<li>Added the RelMT feature learner</li>
+<li>Significant improvement of  project management:<ul>
+<li><a class="autorefs autorefs-internal" href="../../reference/project/#getml.project.attrs.restart">project.restart()</a>, <a class="autorefs autorefs-internal" href="../../reference/project/#getml.project.attrs.suspend">project.suspend()</a>, and <a class="autorefs autorefs-internal" href="../../reference/project/#getml.project.attrs.switch">project.switch()</a></li>
+<li>multiple project support</li>
 </ul>
-<div class="hidden">
+</li>
+<li>Add custom <code>__getattr__</code> and <code>__dir__</code> methods to DataFrame, enabling column retrieval through autocomplete</li>
+</ul>
 <h3 id="0.13.0">0.13.0 <small>Nov 13, 2020</small></h3>
+<ul>
+<li>Introduce new feature learner: <ul>
+<li>RelMTModel [now <a class="autorefs autorefs-internal" href="../../reference/feature_learning/relmt/#getml.feature_learning.RelMT">RelMT</a>], </li>
+<li>RelMTTimeSeries [now integrated in <a class="autorefs autorefs-internal" href="../../reference/data/time_series/#getml.data.TimeSeries">TimeSeries</a>]</li>
+</ul>
+</li>
+</ul>
 <h3 id="0.12.0">0.12.0 <small>Oct 1, 2020</small></h3>
+<ul>
+<li>Extend dataframe handling: <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame.delete">delete()</a>, <a class="autorefs autorefs-internal" href="../../reference/data/#getml.data.exists">exists()</a></li>
+<li>Data set provisioning: <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_air_pollution">load_air_pollution()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_atherosclerosis">load_atherosclerosis()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_biodegradability">load_biodegradability()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_consumer_expenditures">load_consumer_expenditures()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_interstate94">load_interstate94()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_loans">load_loans()</a>, <a class="autorefs autorefs-internal" href="../../reference/datasets/datasets/#getml.datasets.load_occupancy">load_occupancy()</a></li>
+<li>High-level hyperopt handlers: <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.tune_feature_learners">tune_feature_learners()</a>, <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.tune_predictors">tune_predictors()</a></li>
+<li>Improve pipeline functionality: <a class="autorefs autorefs-internal" href="../../reference/pipeline/#getml.pipeline.delete">delete()</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/#getml.pipeline.exists">exists()</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/columns/#getml.pipeline.Columns">Columns</a> </li>
+<li>Introduce preprocessors: <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.EmailDomain">EmailDomain</a>, <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.Imputation">Imputation</a>, <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.Seasonal">Seasonal</a>, <a class="autorefs autorefs-internal" href="../../reference/preprocessors/#getml.preprocessors.Substring">Substring</a> </li>
+</ul>
 <h3 id="0.11.1">0.11.1 <small>Jul 13, 2020</small></h3>
+<ul>
+<li>Add pipeline functionality: <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline">Pipeline</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/#getml.pipeline.list_pipelines">list_pipelines()</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features">Features</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/metrics/#getml.pipeline.metrics">Metrics</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/sql_code/#getml.pipeline.SQLCode">SQLCode</a>, <a class="autorefs autorefs-internal" href="../../reference/pipeline/scores_container/#getml.pipeline.Scores">Scores</a></li>
+<li>Better control of hyperparameter optimization: <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.burn_in">burn_in</a>, <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.kernels">kernels</a>, <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.burn_in.random">optimization</a></li>
+<li>Handling of time stamps: <a class="autorefs autorefs-internal" href="../../reference/data/time/#getml.data.time">time</a></li>
+<li>Improve database I/O: <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.connect_odbc.connect_odbc">connect_odbc()</a>, <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.copy_table.copy_table">copy_table()</a>, <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.list_connections.list_connections">list_connections()</a>, <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame.read_s3">read_s3()</a>, <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.sniff_s3.sniff_s3">sniff_s3()</a></li>
+<li>Enable S3 access: <a class="autorefs autorefs-internal" href="../../reference/data/access/#getml.data.access.set_s3_access_key_id">set_s3_access_key_id()</a>, <a class="autorefs autorefs-internal" href="../../reference/data/access/#getml.data.access.set_s3_secret_access_key">set_s3_secret_access_key()</a></li>
+<li>New Feature Learner: MultirelTimeSeries, RelboostTimeSeries [now both integrated in <a class="autorefs autorefs-internal" href="../../reference/data/time_series/#getml.data.TimeSeries">TimeSeries</a>]</li>
+</ul>
 <h3 id="0.10.0">0.10.0 <small>Mar 17, 2020</small></h3>
+<ul>
+<li>Add <a class="autorefs autorefs-internal" href="../../reference/predictors/xgboost_classifier/#getml.predictors.XGBoostClassifier">XGBoostClassifier</a> and <a class="autorefs autorefs-internal" href="../../reference/predictors/xgboost_regressor/#getml.predictors.XGBoostRegressor">XGBoostRegressor</a> for improved predictive power</li>
+<li>Overhaul of documentation <ul>
+<li>Introduction of "getML in one minute" (now <a class="autorefs autorefs-internal" href="../../user_guide/quick_start/#quick-start">Quickstart</a>) and "How to use this guide" (now <a class="autorefs autorefs-internal" href="../../user_guide/#user-guide">User Guide</a>)</li>
+<li>Introduction of User Guide (now <a class="autorefs autorefs-internal" href="../../user_guide/concepts/#concepts">Concepts</a>) to include data annotation, feature engineering, hyperparameter optimization and more</li>
+</ul>
+</li>
+<li>Integration with additional databases like <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.connect_greenplum.connect_greenplum">Greenplum</a>, <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.connect_mariadb.connect_mariadb">MariaDB</a>, <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.connect_mysql.connect_mysql">MySQL</a>, and extended <a class="autorefs autorefs-internal" href="../../reference/database/database/#getml.database.connect_postgres.connect_postgres">PostgreSQL</a> support</li>
+</ul>
 <h3 id="0.9.1">0.9.1   <small>Mar 17, 2020</small></h3>
+<ul>
+<li>Include hotfix for new domain getml.com</li>
+</ul>
 <h3 id="0.9">0.9 <small>Dec 9, 2019</small></h3>
+<ul>
+<li>Rework hyperopt design and handling, added <a class="autorefs autorefs-internal" href="../../reference/hyperopt/#getml.hyperopt.load_hyperopt.load_hyperopt">load_hyperopt()</a></li>
+<li>Improved dataframe handling: add <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame.to_placeholder">to_placeholder()</a> and <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame.nrows">nrows()</a></li>
+</ul>
 <h3 id="0.8">0.8 <small>Oct 22, 2019</small></h3>
-</div>
+<ul>
+<li>Rename Autosql to <a class="autorefs autorefs-internal" href="../../reference/feature_learning/multirel/#getml.feature_learning.Multirel">Multirel</a></li>
+<li>Boolean and categorical columns: Add support for boolean columns and operators, along with enhanced categorical column handling.</li>
+<li>Introduce API improvements: fitting, saving/loading of models, data transformation</li>
+<li>Add support for various aggregation functions such as <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.MEDIAN">MEDIAN</a>, <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.VAR">VAR</a>, <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.STDDEV">STDDEV</a>, and <a class="autorefs autorefs-internal" href="../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations.COUNT_DISTINCT">COUNT_DISTINCT</a></li>
+<li>Move from closed beta to <a href="https://pypi.org/project/getml/" target="_blank" rel="noopener">pip</a></li>
+<li>Introduce basic hyperopt algorithms: <a class="autorefs autorefs-internal" href="../../reference/hyperopt/latin/#getml.hyperopt.LatinHypercubeSearch">LatinHypercubeSearch</a>, <a class="autorefs autorefs-internal" href="../../reference/hyperopt/random/#getml.hyperopt.RandomSearch">RandomSearch</a></li>
+</ul>
 
 <!-- Source file information -->
 
