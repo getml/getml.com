@@ -5,3 +5,4 @@ badges:
 template: notebooks.html
 search:
   boost: 0.9
+icon: material/file-document-outline
