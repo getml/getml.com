@@ -29,7 +29,7 @@
     
     
       
-        <title>Build engine & API - getML Developer Portal</title>
+        <title>Build Engine & API - getML Developer Portal</title>
       
     
     
@@ -163,7 +163,7 @@
         <div class="md-header__topic__nover" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build engine & API
+              Build Engine & API
             
           </span>
         </div>
@@ -909,7 +909,7 @@
   <span class="md-ellipsis">
     
   
-    Build engine & API
+    Build Engine & API
   
 
     
@@ -926,7 +926,7 @@
   <span class="md-ellipsis">
     
   
-    Build engine & API
+    Build Engine & API
   
 
     
@@ -1705,7 +1705,7 @@
   page title (or respectively site name) is used as the main headline.
 -->
 
-    <h1 class="">Build engine & API</h1>
+    <h1 class="">Build Engine & API</h1>
     
 
 
@@ -1714,7 +1714,7 @@
 <p>Because getML is complex software, we use <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> for our build environment. If you want to compile our Community edition from source, you can start with cloning its repository:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/getml/getml-community.git
 </code></pre></div>
-<p>We provide a set of wrappers to ease local development. They are located inside <code>bin</code> directory of the repository. You can use them with <code>getml</code> command and <code>build</code> subcommand:</p>
+<p>We provide a set of wrappers to ease local development. They are located inside the <code>bin</code> directory of the repository. You can use them with the <code>getml</code> command and the <code>build</code> subcommand:</p>
 <div class="highlight"><pre><span></span><code>./bin/getml
 
 Usage:
@@ -1737,7 +1737,7 @@ Usage:
 Subcommands:
 <span class="w">  </span><span class="o">[</span>a<span class="o">]</span>ll<span class="w">       </span>Build<span class="w"> </span>all<span class="w"> </span><span class="o">(</span>whole<span class="w"> </span>package,<span class="w"> </span><span class="o">[</span>p<span class="o">]</span>ackage<span class="w"> </span>+<span class="w"> </span><span class="o">[</span>py<span class="o">]</span>thon<span class="w"> </span>API<span class="w"> </span>+<span class="w"> </span>tar+gz<span class="w"> </span><span class="o">[</span>ar<span class="o">]</span>chive<span class="o">)</span>
 <span class="w">  </span><span class="o">[</span>c<span class="o">]</span>li<span class="w">       </span>Build<span class="w"> </span>CLI
-<span class="w">  </span><span class="o">[</span>e<span class="o">]</span>ngine<span class="w">    </span>Build<span class="w"> </span>engine
+<span class="w">  </span><span class="o">[</span>e<span class="o">]</span>ngine<span class="w">    </span>Build<span class="w"> </span>Engine
 <span class="w">  </span><span class="o">[</span>p<span class="o">]</span>ackage<span class="w">   </span>Export<span class="w"> </span>runnable<span class="w"> </span><span class="o">[</span>e<span class="o">]</span>ngine<span class="w"> </span>+<span class="w"> </span><span class="o">[</span>c<span class="o">]</span>li<span class="w"> </span>package
 <span class="w">  </span><span class="o">[</span>py<span class="o">]</span>thon<span class="w">    </span>Package<span class="w"> </span>Python<span class="w"> </span>API
 <span class="w">  </span><span class="o">[</span>ar<span class="o">]</span>chive<span class="w">   </span>Create<span class="w"> </span>tar.gz<span class="w"> </span>archive<span class="w"> </span>of<span class="w"> </span><span class="o">[</span>p<span class="o">]</span>ackage
@@ -1747,7 +1747,7 @@ Options:
 <span class="w">  </span>-h<span class="w">          </span>Show<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="o">(</span>this<span class="w"> </span>message<span class="o">)</span>
 <span class="w">  </span>-o<span class="w"> </span>&lt;path&gt;<span class="w">   </span>Set<span class="w"> </span>output<span class="w"> </span>path<span class="w"> </span><span class="o">(</span>default:<span class="w"> </span>build<span class="o">)</span><span class="p">;</span><span class="w"> </span>passed<span class="w"> </span>to<span class="w"> </span>docker<span class="w"> </span>build
 </code></pre></div>
-<p>Most of the time you probably want to build the (C++) engine:</p>
+<p>Most of the time you probably want to build the (C++) Engine:</p>
 <div class="highlight"><pre><span></span><code>./bin/getml<span class="w"> </span>build<span class="w"> </span>engine
 </code></pre></div>
 <p>If you are calling <code>getml build package</code>, all build artifacts will be packaged inside the specified output folder. With <code>archive</code>, a compressed tarball (<code>getml-&lt;version&gt;-&lt;arch&gt;-linux.tar.gz</code>) will be created inside the folder.</p>
@@ -1767,7 +1767,7 @@ Options:
 <ul>
 <li>One for CLI, wheel, and packaging located in the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">repository</a>'s root:
   <code>./Dockerfile</code></li>
-<li>One related to the engine and its dependencies located in the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">repository</a>'s <code>src/engine</code> subfolder:
+<li>One related to the Engine and its dependencies located in the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">repository</a>'s <code>src/engine</code> subfolder:
   <code>./src/engine/Dockerfile</code></li>
 </ul>
 <p>As the second <code>Dockerfile</code> is a dependency for the first, we use <a href="https://docs.docker.com/build/bake/" target="_blank" rel="noopener">bake</a> to orchestrate the builds. The bake file (<code>./docker-bake.hcl</code>) holds definitions for all build targets and ensures the appropriate build contexts are set.</p>

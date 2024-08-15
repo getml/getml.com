@@ -1867,7 +1867,7 @@ images and sound data. Yet, for relational data and classical time series
 analysis, feature engineering is still done by hand or using very simple brute
 force methods. Our mission is to change that.</p>
 <p>The automation of feature engineering on relational data and time
-series is at the heart of the getML suite. There are other
+series is at the heart of the getML Suite. There are other
 libraries that implement feature engineering tools on top of
 frameworks like <code>data.tables</code> in R, <code>pandas</code> in Python, or <code>Apache
 Spark</code>. In essence, they all use a brute force approach: Generate a
@@ -1996,7 +1996,7 @@ will be engineered automatically as well. Again, no input from the user is requi
 <p><div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
 </code></pre></div>
 As we iterate through different values for the threshold <span class="arithmatex">\(X\)</span>, we are forced to repeat the same operations on the same data over and over again. Tasks like this bring traditional database engines to their knees.</p>
-<p>The core idea of getML's Multirel algorithm is to minimize redundancies through <code>incremental updates</code>. To allow for incremental updates and maximal efficiency, we developed a database engine from scratch in C++. When we evaluate a feature like:</p>
+<p>The core idea of getML's Multirel algorithm is to minimize redundancies through <code>incremental updates</code>. To allow for incremental updates and maximal efficiency, we developed a database Engine from scratch in C++. When we evaluate a feature like:</p>
 <div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
 </code></pre></div>
 <p>and</p>

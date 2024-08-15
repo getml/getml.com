@@ -2399,12 +2399,12 @@
 <a class="autorefs autorefs-internal" href="#getml.database.connect_mysql.connect_mysql"><code>connect_mysql</code></a>,
 <a class="autorefs autorefs-internal" href="#getml.database.connect_postgres.connect_postgres"><code>connect_postgres</code></a>, and
 <a class="autorefs autorefs-internal" href="#getml.database.connect_sqlite3.connect_sqlite3"><code>connect_sqlite3</code></a> functions establish a
-connection between a database and the getML engine. During the data
+connection between a database and the getML Engine. During the data
 import using either the <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.read_db"><code>read_db</code></a> or
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.read_query"><code>read_query</code></a> methods of a
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or the corresponding
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.from_db"><code>from_db</code></a> class method all data will be
-directly loaded from the database into the engine without ever passing
+directly loaded from the database into the Engine without ever passing
 the Python interpreter.</p>
 <p>In addition, several auxiliary functions that might be handy during
 the analysis and interaction with the database are provided.</p>
@@ -2435,7 +2435,7 @@ the analysis and interaction with the database are provided.</p>
     <div class="doc doc-contents ">
 
 
-      <p>A handle to a database connection on the getML engine.</p>
+      <p>A handle to a database connection on the getML Engine.</p>
 
 
 <table>
@@ -2569,7 +2569,7 @@ This feature is exclusive to the Enterprise edition and is not available in the 
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The path of the Google application credentials.
-(Must be located on the machine hosting the getML engine).</p>
+(Must be located on the machine hosting the getML Engine).</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2787,7 +2787,7 @@ If you do not pass anything, this will create a new default connection.</p>
 
 <span class="sd">        google_application_credentials:</span>
 <span class="sd">            The path of the Google application credentials.</span>
-<span class="sd">            (Must be located on the machine hosting the getML engine).</span>
+<span class="sd">            (Must be located on the machine hosting the getML Engine).</span>
 
 <span class="sd">        time_formats:</span>
 <span class="sd">            The list of formats tried when parsing time stamps.</span>
@@ -5037,7 +5037,7 @@ tuning might be necessary.</p>
   [TABLE_NAME].[COLUMN_NAME] (MS SQL Server style).</p>
 </li>
 <li>
-<p>If you pass more than two characters, the engine will throw an exception.</p>
+<p>If you pass more than two characters, the Engine will throw an exception.</p>
 </li>
 </ul>
               </div>
@@ -5402,7 +5402,7 @@ If you do not pass anything, this will create a new default connection.</p>
 <span class="sd">              the produced queries look as follows:</span>
 <span class="sd">              [TABLE_NAME].[COLUMN_NAME] (MS SQL Server style).</span>
 
-<span class="sd">            * If you pass more than two characters, the engine will throw an exception.</span>
+<span class="sd">            * If you pass more than two characters, the Engine will throw an exception.</span>
 
 <span class="sd">        double_precision:</span>
 <span class="sd">            The keyword used for double precision columns.</span>
@@ -6742,7 +6742,7 @@ be any name you see fit.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -6800,7 +6800,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># -------------------------------------------</span>
@@ -6870,7 +6870,7 @@ get results, use database.get(...) instead.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -6932,7 +6932,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="ow">or</span> <span class="n">Connection</span><span class="p">()</span>
@@ -7001,7 +7001,7 @@ a pandas dataframe.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -7088,7 +7088,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        The result of the query as a pandas dataframe.</span>
@@ -7161,7 +7161,7 @@ the engine will use the default connection.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -7246,7 +7246,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        A list of strings containing the names of the columns in the table.</span>
@@ -7287,7 +7287,7 @@ the engine will use the default connection.</p>
     <div class="doc doc-contents first">
 
       <p>Returns a list handles to all connections
-that are currently active on the engine.</p>
+that are currently active on the Engine.</p>
 
 
 <table>
@@ -7338,7 +7338,7 @@ that are currently active on the engine.</p>
 <span class="normal">42</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_connections</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Connection</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a list handles to all connections</span>
-<span class="sd">    that are currently active on the engine.</span>
+<span class="sd">    that are currently active on the Engine.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        A list of Connection objects.</span>
@@ -7392,7 +7392,7 @@ that are currently active on the engine.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -7468,7 +7468,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        A list of strings containing the names of the tables and views.</span>
@@ -7653,7 +7653,7 @@ explicitly pass them.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -7811,7 +7811,7 @@ using the following commands:</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
@@ -8025,7 +8025,7 @@ explicitly pass them.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -8045,7 +8045,7 @@ the engine will use the default connection.</p>
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
-import their data into the getML engine using the following
+import their data into the getML Engine using the following
 commands:
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 
@@ -8070,7 +8070,7 @@ commands:
 <span class="p">)</span>
 </code></pre></div>
 You can also set the access credential as environment variables
-before you launch the getML engine.</p>
+before you launch the getML Engine.</p>
 </details>
 
             <details class="quote">
@@ -8225,12 +8225,12 @@ before you launch the getML engine.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
-<span class="sd">        import their data into the getML engine using the following</span>
+<span class="sd">        import their data into the getML Engine using the following</span>
 <span class="sd">        commands:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.engine.set_s3_access_key_id(&quot;YOUR-ACCESS-KEY-ID&quot;)</span>
@@ -8256,7 +8256,7 @@ before you launch the getML engine.</p>
 <span class="sd">        )</span>
 <span class="sd">        ```</span>
 <span class="sd">        You can also set the access credential as environment variables</span>
-<span class="sd">        before you launch the getML engine.</span>
+<span class="sd">        before you launch the getML Engine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># -------------------------------------------</span>
@@ -8450,7 +8450,7 @@ explicitly pass them.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -8591,7 +8591,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        Appropriate `CREATE TABLE` statement.</span>
@@ -8784,7 +8784,7 @@ explicitly pass them.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -8828,7 +8828,7 @@ the engine will use the default connection.</p>
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
-import their data into the getML engine using the following
+import their data into the getML Engine using the following
 commands:
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 
@@ -8843,7 +8843,7 @@ commands:
 <span class="p">)</span>
 </code></pre></div>
 You can also set the access credential as environment variables
-before you launch the getML engine.</p>
+before you launch the getML Engine.</p>
 </details>
 
             <details class="quote">
@@ -8988,7 +8988,7 @@ before you launch the getML engine.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        Appropriate `CREATE TABLE` statement.</span>
@@ -8996,7 +8996,7 @@ before you launch the getML engine.</p>
 <span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
-<span class="sd">        import their data into the getML engine using the following</span>
+<span class="sd">        import their data into the getML Engine using the following</span>
 <span class="sd">        commands:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.engine.set_s3_access_key_id(&quot;YOUR-ACCESS-KEY-ID&quot;)</span>
@@ -9012,7 +9012,7 @@ before you launch the getML engine.</p>
 <span class="sd">        )</span>
 <span class="sd">        ```</span>
 <span class="sd">        You can also set the access credential as environment variables</span>
-<span class="sd">        before you launch the getML engine.</span>
+<span class="sd">        before you launch the getML Engine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 

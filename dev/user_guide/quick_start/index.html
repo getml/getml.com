@@ -1518,7 +1518,7 @@
   <a href="#1-launch-the-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Launch the engine
+        1. Launch the Engine
       
     </span>
   </a>
@@ -1716,16 +1716,16 @@ knowledge. "Applied machine learning" is basically feature engineering.</em></p>
 </blockquote>
 <p>The main purpose of getML is to automate this <em>"difficult, time-consuming"</em> process as much
 as possible.</p>
-<p>getML comes with a high-performance <strong>engine</strong> written in C++ and an intuitive
+<p>getML comes with a high-performance <strong>Engine</strong> written in C++ and an intuitive
 <strong>Python API</strong>. Completing a data science project with getML consists of eight
 simple steps.</p>
-<h4 id="1-launch-the-engine">1. Launch the engine</h4>
+<h4 id="1-launch-the-engine">1. Launch the Engine</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;one_minute_to_getml&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="2-load-the-data-into-the-engine">2. Load the data into the engine</h4>
+<h4 id="2-load-the-data-into-the-engine">2. Load the data into the Engine</h4>
 <div class="highlight"><pre><span></span><code><span class="n">df_population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_population.csv&#39;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population_table&#39;</span><span class="p">)</span>
 <span class="n">df_peripheral</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="s1">&#39;data_peripheral.csv&#39;</span><span class="p">,</span>

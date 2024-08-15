@@ -801,7 +801,7 @@
   <a href="#separate-installation-of-engine_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Separate installation of engine
+        Separate installation of Engine
       
     </span>
   </a>
@@ -955,7 +955,7 @@
   <span class="md-ellipsis">
     
   
-    Build engine & API
+    Build Engine & API
   
 
     
@@ -1472,7 +1472,7 @@
   <a href="#separate-installation-of-engine_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Separate installation of engine
+        Separate installation of Engine
       
     </span>
   </a>
@@ -1580,7 +1580,7 @@
 Install <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">getML Community edition</a> with Python's pip package manager.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">getml</span>
 </code></pre></div>
-The will install both the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">engine</a> on your Linux machine.</p>
+The will install both the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> on your Linux machine.</p>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise Edition</p>
 <p>Need the highest models accuracy in commercial prediction applications and enterprise grade support?</p>
@@ -1588,17 +1588,17 @@ The will install both the <a class="autorefs autorefs-internal" href="../../../u
 <p>Once you have obtained the getML Enterprise edition, you can install it as follows:</p>
 <ul>
 <li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a>: <code>pip install getml</code></li>
-<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">engine</a> by following <a class="autorefs autorefs-internal" href="#separate-installation-of-engine_1">instructions for separate installation of it</a> below. Start from step 2 and use the enterprise <code>tar</code> file you have been provided with.</li>
+<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> by following <a class="autorefs autorefs-internal" href="#separate-installation-of-engine_1">instructions for separate installation of it</a> below. Start from step 2 and use the enterprise <code>tar</code> file you have been provided with.</li>
 </ul>
 </div>
 <p><a href="" id="separate-installation-of-engine"></a></p>
-<h3 id="separate-installation-of-engine_1">Separate installation of engine</h3>
-<p>In some cases it might be preferred to install the engine separately on Linux machines. For example, if you want to use the <a href="../../../enterprise/benefits/">Enterprise edition</a> of the engine.</p>
+<h3 id="separate-installation-of-engine_1">Separate installation of Engine</h3>
+<p>In some cases it might be preferred to install the Engine separately on Linux machines. For example, if you want to use the <a href="../../../enterprise/benefits/">Enterprise edition</a> of the Engine.</p>
 <p>Please execute the following commands, replacing <code>ARCH</code> with either <code>x64</code> or <code>arm64</code>, depending on your architecture.
 If you are unsure, <code>x64</code> is probably the right choice.
 You can also use <code>uname -m</code> to figure out the architecture.
 If it says something like <code>aarch64</code> or <code>arm64</code>, you need to use <a href="https://static.getml.com/download/1.5.0/getml-1.5.0-arm64-community-edition-linux.tar.gz" target="_blank" rel="noopener"><code>arm64</code></a>, otherwise go with <a href="https://static.getml.com/download/1.5.0/getml-1.5.0-x64-community-edition-linux.tar.gz" target="_blank" rel="noopener"><code>x64</code></a>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download the tar file of the engine</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Download the tar file of the Engine</span>
 wget<span class="w"> </span>https://static.getml.com/download/1.5.0/getml-1.5.0-ARCH-community-edition-linux.tar.gz
 
 <span class="c1"># 2. Extract the tar file</span>
@@ -1607,10 +1607,10 @@ tar<span class="w"> </span>-xzf<span class="w"> </span>getml-1.5.0-ARCH-communit
 <span class="c1"># 3. Change directory </span>
 <span class="nb">cd</span><span class="w"> </span>getml-1.5.0-ARCH-community-edition-linux
 
-<span class="c1"># 4. Install the engine</span>
+<span class="c1"># 4. Install the Engine</span>
 ./getML<span class="w"> </span>install
 </code></pre></div>
-<p>The output of the <code>install</code> command will tell you where the engine has been installed.
+<p>The output of the <code>install</code> command will tell you where the Engine has been installed.
 It will look something like this:</p>
 <div class="highlight"><pre><span></span><code>getml@laptop<span class="w"> </span>src<span class="w"> </span>%<span class="w"> </span>./getML<span class="w"> </span>install<span class="w">        </span>
 Installing<span class="w"> </span>getML...
@@ -1621,10 +1621,10 @@ Successfully<span class="w"> </span>installed<span class="w"> </span>getML<span 
 Installation<span class="w"> </span>successful.<span class="w"> </span>To<span class="w"> </span>be<span class="w"> </span>able<span class="w"> </span>to<span class="w"> </span>call<span class="w"> </span><span class="s1">&#39;getML&#39;</span><span class="w"> </span>from<span class="w"> </span>anywhere,<span class="w"> </span>add<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>PATH:
 /home/getml/.getML/getml-1.5.0-arm64-community-edition-linux
 </code></pre></div>
-<p>To run the engine, execute:
+<p>To run the Engine, execute:
 <div class="highlight"><pre><span></span><code>./getML
 </code></pre></div></p>
-<p>If the engine was installed to the user home directory, you can add the installation directory to your PATH if you want to call the getML CLI from anywhere.</p>
+<p>If the Engine was installed to the user home directory, you can add the installation directory to your PATH if you want to call the getML CLI from anywhere.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/path/to/getml-1.5.0-ARCH-community-edition-linux
 </code></pre></div>
 <p>To make the changes permanent, you will have to add the line to your <code>.bashrc</code> or <code>.bash_profile</code> file. </p>

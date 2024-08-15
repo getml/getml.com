@@ -1,9 +1,9 @@
 [](){#fastapi}
 ## Provide generic prediction endpoint via FastAPI
 
-A common way to communicate with resources is via REST-APIs. Under Python [FastAPI](https://fastapi.tiangolo.com/) is a well known web framework package to build web-APIs.
+A common way to communicate with resources is via REST-APIs. In Python, [FastAPI](https://fastapi.tiangolo.com/) is a well known web framework package to build web-APIs.
 
-The following shows an example how easy pipelines in a project can be made accessible via endpoints in FastAPI.
+The following shows an example how easily, pipelines in a project can be made accessible via endpoints in FastAPI.
 
 It is assumed that you have some basic knowledge of FastAPI and the getML framework.
 
@@ -17,15 +17,15 @@ This integration example requires at least v1.4.0 of the [getml package](https:/
 
 ### Example Data
 
-As an example project we first run the demo notebook ["Loan default prediction"](https://notebooks.getml.com/github/getml/getml-demo/blob/master/loans.ipynb) which creates a project named "loans" in the getML engine.
+As an example project we first run the demo notebook ["Loan default prediction"](https://notebooks.getml.com/github/getml/getml-demo/blob/master/loans.ipynb) which creates a project named "loans" in the getML Engine.
 
 ### Code Explained
 
-First, import the necessary packages, create a FastAPI-App `app`. If the engine isn't running yet 
-([`getml.engine.is_engine_alive()`][getml.engine.is_engine_alive]) launch the getML engine 
+First, import the necessary packages and create a FastAPI-App `app`. If the Engine isn't running yet 
+([`getml.engine.is_engine_alive()`][getml.engine.is_engine_alive]) launch it 
 ([`getml.engine.launch()`][getml.engine.launch]). The `launch_browser=False` 
 option prevents the browser to be opened 
-when the engine spins up. Further, direct the engine to load and set the previously created 
+when the Engine spins up. Further, direct the Engine to load and set the previously created 
 [`project`][getml.project] "loans". ([`getml.engine.set_project()`][getml.engine.set_project])
 
 ```python
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 To expand the functionality, add another informative GET endpoint for a single
 pipeline. The `pipeline_id` can be retrieved from the previously
 created GET endpoint. The existence of the pipeline can be checked using
-[`exists()`][getml.pipeline.exists]. After the existence validation the engine must be
+[`exists()`][getml.pipeline.exists]. After validating its existence, the Engine must be
 directed to load the pipeline identified with the provided
 `pipeline_id`. Information of interest could be the
 name of the population data frame and peripheral data frames, the applied
@@ -103,7 +103,7 @@ async def get_pipeline_pipeline_id(pipeline_id: str) -> Dict[str, Union[str, Lis
 ```
 
 To create the prediction endpoint the data scheme for the request body needs to
-be created first. For a prediction the getML engine requires multiple data sets,
+be created first. For a prediction the getML Engine requires multiple data sets,
 the population data set `population` and any related peripheral data set
 `peripheral` based on the [Data model][data-model] of the pipeline. The
 peripheral data sets can be either a list or a dictionary where the order of the
@@ -117,7 +117,7 @@ class PredictionBody(BaseModel):
     population: Dict[str, List]
 ```
 
-Next up, implement the POST endpoint which accepts data to task the engine to
+Next up, implement the POST endpoint which accepts data to task the Engine to
 make a prediction. Validate that the pipeline exist, load the pipeline
 ([`load()`][getml.pipeline.load]), and validate that the pipeline has been
 finalized.
@@ -156,7 +156,7 @@ population_data_frame = DataFrame.from_dict(name='future',
 The peripheral can be submitted in the request body both as list and dictionary.
 Check that in case the peripheral data sets are received as dictionaries that
 the names of all required peripheral data sets exist in the dictionary keys, and
-in case the peripheral data sets are received as a list check that the length of
+in case the peripheral data sets are received as a list, check that the length of
 the list matches the number of peripheral data sets in the pipeline. After,
 create a list of data frames of the peripheral data. Again, ensure that the
 names of the created data frames do not collide with existing data frames and
@@ -188,7 +188,7 @@ peripheral_data_frames = [
 
 ```
 
-This leaves the actual call to the engine to make a prediction
+This leaves the actual call to the Engine to make a prediction
 ([`predict()`][getml.Pipeline.predict]) using the previously created population data
 frame and peripheral data frames. The predicted target value is a numpy array
 and returned transformed to a list as request response. 
@@ -202,12 +202,12 @@ prediction = pipeline_.predict(
 if prediction:
     return prediction.tolist()
 
-raise HTTPException(status_code=500, detail='getML engine didn\'t return a result.')
+raise HTTPException(status_code=500, detail='getML Engine didn\'t return a result.')
 
 ```
 
 This endpoint can be called on
-[localhost:8080/pipeline/a1b2c3/predict](localhost:8080/pipeline/a1b2c3/predict).
+[localhost:8080/pipeline/a1b2c3/predict](localhost:8080/pipeline/a1b2c3/predict),
 where the body needs the form: 
 
 ```json

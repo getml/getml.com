@@ -1854,16 +1854,16 @@
 </blockquote>
 <p><strong>Responding to a HTTP POST request</strong></p>
 <blockquote>
-<p>The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.</p>
+<p>The getML Suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.</p>
 </blockquote>
 <h2 id="batch-prediction">Batch prediction</h2>
 <p>Batch prediction pipelines are the most common way of productionizing machine learning pipelines on relational data. These pipelines are usually set to run regularly (once a month, once a week, once a day...) to create a batch of predictions on the newest data. They are typically inserted into a <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> container and scheduled using tools like <a href="https://www.jenkins.io/" target="_blank" rel="noopener">Jenkins</a> and/or <a href="https://airflow.apache.org/" target="_blank" rel="noopener">Airflow</a>.</p>
 <p>If you are looking for a pure Python, 100% open-source way to productionize getML's <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>s, you can transpile all the features into sqlite3 code. sqlite3 is part of the Python standard library, and you can use getML's 100% open source and pure Python <a class="autorefs autorefs-internal" href="../../../reference/sqlite3/#getml.sqlite3"><code>sqlite3</code></a> which provides some useful extra functionality not included in Python's standard library.</p>
 <h2 id="http-endpoints">HTTP Endpoints</h2>
 <p>As soon as you have trained a pipeline, whitelisted it for external access using its 
-<a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.deploy"><code>deploy</code></a> method, and configured the getML monitor 
-for <a class="autorefs autorefs-internal" href="../../../install/remote_access/#running-the-getml-suite-remotely">remote access</a>, you can transform new data into 
-features or make predictions on them using these endpoints:</p>
+<a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.deploy"><code>deploy</code></a> method, and configured the getML Monitor 
+for <a class="autorefs autorefs-internal" href="../../../install/remote_access/#running-the-getml-suite-remotely">remote access</a>, you can transform new data into </p>
+<p>features or make predictions on them using these endpoints:</p>
 <ul>
 <li><a class="autorefs autorefs-internal" href="#transform-endpoint">Transform endpoint: <code>http://localhost:1709/transform/PIPELINE_NAME</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#predict-endpoint">Predict endpoint: <code>http://localhost:1709/predict/PIPELINE_NAME</code></a></li>
@@ -1871,7 +1871,7 @@ features or make predictions on them using these endpoints:</p>
 <p>To each of them, you must send a POST request containing the new data as a JSON string in a specific <a class="autorefs autorefs-internal" href="#request-format">request format</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  <a href="http://localhost:1709/predict/PIPELINE_NAME" target="_blank" rel="noopener">http://localhost:1709/predict/PIPELINE_NAME</a></p>
+<p>For testing and developing purposes, you can also use the HTTP port of the Monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  <a href="http://localhost:1709/predict/PIPELINE_NAME" target="_blank" rel="noopener">http://localhost:1709/predict/PIPELINE_NAME</a></p>
 </div>
 <p><a href="" id="deployment-request-format"></a></p>
 <h3 id="request-format">Request Format</h3>
@@ -1917,9 +1917,9 @@ could post a JSON string like this:</p>
 <p>You might have noticed that the time stamps in the example above have been
 passed as numerical values and not as their string representations
 shown in the beginning. Both ways are
-supported by the getML monitor. But if you choose to pass the
+supported by the getML Monitor. But if you choose to pass the
 string representation, you also have to specify the particular format
-in order for the getML engine to interpret your data properly.</p>
+in order for the getML Engine to interpret your data properly.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
 <span class="w">    </span><span class="nt">&quot;column_01&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">2.4</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">],</span>
@@ -1940,7 +1940,7 @@ e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_fr
 <h3 id="using-an-existing-dataframe">Using an existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a></h3>
 <p>You can also use a
 <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> that already 
-exists on the getML engine:</p>
+exists on the getML Engine:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;peripheral&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
 <span class="w">    </span><span class="nt">&quot;df&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;peripheral_table&quot;</span>
@@ -1975,7 +1975,7 @@ by passing an arbitrary query to the <code>query</code> key:</p>
 illustration purposes, we will use the command line tool <code>curl</code>,
 which comes preinstalled on both Linux and macOS. Also, we will use
 the HTTP port via localhost (only possible for terminals running on
-the same machine as the getML monitor) for better reproducibility.</p>
+the same machine as the getML Monitor) for better reproducibility.</p>
 <p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">           </span><span class="se">\</span>
 <span class="w">     </span>--request<span class="w"> </span>POST<span class="w">                                      </span><span class="se">\</span>
 <span class="w">     </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;peripheral&quot;:[{&quot;column_01&quot;:[2.4,3.0,1.2,1.4,2.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.1,0.2,0.3,0.4,0.8]}],&quot;population&quot;:{&quot;column_01&quot;:[2.2,3.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.65,0.81]}}&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -1991,7 +1991,7 @@ resulting predictions as a response via HTTP.</p>
 illustration purposes, we will use the command line tool <code>curl</code>,
 which comes preinstalled on both Linux and macOS. Also, we will use
 the HTTP port via localhost (only possible for terminals running on
-the same machine as the getML monitor) for better reproducibility.</p>
+the same machine as the getML Monitor) for better reproducibility.</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">           </span><span class="se">\</span>
 <span class="w">     </span>--request<span class="w"> </span>POST<span class="w">                                      </span><span class="se">\</span>
 <span class="w">     </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;peripheral&quot;:[{&quot;column_01&quot;:[2.4,3.0,1.2,1.4,2.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.1,0.2,0.3,0.4,0.8]}],&quot;population&quot;:{&quot;column_01&quot;:[2.2,3.2],&quot;join_key&quot;:[&quot;0&quot;,&quot;0&quot;],&quot;time_stamp&quot;:[0.65,0.81]}}&#39;</span><span class="w"> </span><span class="se">\</span>

@@ -1951,12 +1951,12 @@
 <p><a href="" id="importing-data"></a></p>
 <h1 id="importing-data_1">Importing data</h1>
 <p>Before being able to analyze and process your data using the getML Suite,
-you have to import it into the engine. At the end of this step, you will have
-your data in data frame objects in the getML engine and will be ready to
+you have to import it into the Engine. At the end of this step, you will have
+your data in data frame objects in the getML Engine and will be ready to
 <a class="autorefs autorefs-internal" href="../annotating_data/#annotating-data_1">annotate them</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you have imported your data into the engine before and want to restore it,
+<p>If you have imported your data into the Engine before and want to restore it,
 refer to <a class="autorefs autorefs-internal" href="../getml_suite/#dataframes">Python API: DataFrame</a></p>
 </div>
 <p><a href="" id="importing-data-unified-interface"></a></p>
@@ -1965,7 +1965,7 @@ refer to <a class="autorefs autorefs-internal" href="../getml_suite/#dataframes"
 similar arguments and resulting in the same output format, regardless
 of the data source.</p>
 <p>You can use one of the dedicated class methods (e.g. <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a>) 
-to construct a data frame object in the getML engine, fill it with the provided data, and retrieve 
+to construct a data frame object in the getML Engine, fill it with the provided data, and retrieve 
 a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handle in the Python API.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1983,7 +1983,7 @@ to either replace its content with new data or append to it.</p>
 <h2 id="data-frames">Data Frames</h2>
 <p>The resulting <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance in the Python
 API represents a handle to the corresponding data frame object in the
-getML engine. The mapping between the two is done based on
+getML Engine. The mapping between the two is done based on
 the name of the object, which has to be unique. Similarly, the names of 
 the <a class="autorefs autorefs-internal" href="../../../reference/data/columns/#getml.data.columns"><code>columns</code></a> are required to be
 unique within the data frame they are associated with.</p>
@@ -2003,7 +2003,7 @@ well as at all occurrences of <code>None</code> and <code>NaN</code>.</p>
 <h2 id="import-formats">Import Formats</h2>
 <p><a href="" id="csv"></a></p>
 <h3 id="csv_1"><strong>CSV</strong></h3>
-<p>The fastest way to import data into the getML engine is to read it
+<p>The fastest way to import data into the getML Engine is to read it
 directly from CSV files.</p>
 <p>Import from CSV</p>
 <p>Using the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_csv"><code>from_csv()</code></a> class method, you can
@@ -2024,11 +2024,11 @@ existing <a class="autorefs autorefs-internal" href="../../../reference/data/dat
 <p>In addition to reading data from a <code>pandas.DataFrame</code>, you can also write an existing <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> back into a <code>pandas.DataFrame</code> using <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.to_pandas"><code>DataFrame.to_pandas()</code></a>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Due to the way data is stored within the getML engine, the dtypes of the original <code>pandas.DataFrame</code> cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.</p>
+<p>Due to the way data is stored within the getML Engine, the dtypes of the original <code>pandas.DataFrame</code> cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.</p>
 </div>
 <p><a href="" id="json"></a></p>
 <h3 id="json_1"><strong>JSON</strong></h3>
-<p>A convenient but slow way to import data into the getML engine via its Python API.</p>
+<p>A convenient but slow way to import data into the getML Engine via its Python API.</p>
 <p>Import from JSON</p>
 <p>Using the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a> class method, you
 can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> based on a JSON
@@ -2052,7 +2052,7 @@ Alternatively, you can use the <a class="autorefs autorefs-internal" href="../..
 <p><a href="" id="mysql"></a></p>
 <h3 id="mysql_1"><strong>MySQL</strong></h3>
 <p><a href="https://www.mysql.com" target="_blank" rel="noopener">MySQL</a> is one of the most popular databases in use today. It 
-can be connected to the getML engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_mysql.connect_mysql"><code>connect_mysql()</code></a>. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.</p>
+can be connected to the getML Engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_mysql.connect_mysql"><code>connect_mysql()</code></a>. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.</p>
 <p>If you are unsure which port or socket your MySQL is running on, you can start the <code>mysql</code> command line interface
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>mysql
 </code></pre></div></p>
@@ -2069,7 +2069,7 @@ Alternatively, you can use the <a class="autorefs autorefs-internal" href="../..
 <p><a href="" id="mariadb"></a></p>
 <h3 id="mariadb_1"><strong>MariaDB</strong></h3>
 <p><a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a> is a popular open source fork of MySQL. It can be
-connected to the getML engine using the function
+connected to the getML Engine using the function
 <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_mariadb.connect_mariadb"><code>connect_mariadb()</code></a>. But first, make sure your
 database is running, you have the corresponding hostname, port as well
 as your username and password ready, and you can reach it from your command line.</p>
@@ -2090,7 +2090,7 @@ Alternatively, you can use the <a class="autorefs autorefs-internal" href="../..
 <p><a href="" id="postgresql"></a></p>
 <h3 id="postgresql_1"><strong>PostgreSQL</strong></h3>
 <p><a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> is a powerful and well-established open 
-source database system. It can be connected to the getML engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_postgres.connect_postgres"><code>connect_postgres()</code></a>. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.</p>
+source database system. It can be connected to the getML Engine using the function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_postgres.connect_postgres"><code>connect_postgres()</code></a>. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.</p>
 <p>Import from PostgreSQL</p>
 <p>By selecting an existing table from your database in the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>DataFrame.from_db()</code></a> class method, you can create a new <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> containing all its data.
 Alternatively, you can use the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_db"><code>read_db()</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.read_query"><code>read_query()</code></a> methods to replace the content of the current <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instance or append further rows based on either a table or a specific query.</p>
@@ -2104,7 +2104,7 @@ Alternatively, you can use the <a class="autorefs autorefs-internal" href="../..
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p><a href="https://greenplum.org/" target="_blank" rel="noopener">Greenplum</a> is an open source database system maintained by Pivotal
-Software, Inc. It can be connected to the getML engine using the
+Software, Inc. It can be connected to the getML Engine using the
 function <a class="autorefs autorefs-internal" href="../../../reference/database/database/#getml.database.connect_greenplum.connect_greenplum"><code>connect_greenplum()</code></a>. But first, make
 sure your database is running, you have the corresponding hostname,
 port as well as your user name and password ready, and you can reach

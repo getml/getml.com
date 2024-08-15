@@ -2065,7 +2065,7 @@ approach ensures that no information from the future is considered during traini
 <h3 id="lagged-target-and-horizon">Lagged Target and horizon</h3>
 <p>Another useful parameter in time series analysis is <code>lagged_target</code>. This boolean controls whether the target variable is used as a predictor. Including the target variable as a predictor can be useful in time series analysis, when at time of prediction, the target variable up until and including <em>now</em> is known. In turn, this means lagged target variables are only permissible if the target variable is predicted for some when in the future. That is, the horizon must be assigned a positive value.</p>
 <h3 id="features-based-on-time-stamps">Features based on time stamps</h3>
-<p>The getML engine is able to automatically generate features based on aggregations over time windows. Both the length of the time window and the aggregation itself will be determined by the feature learning algorithm. The only requirement is to provide the temporal resolution your time series is sampled with in the <code>delta_t</code> parameter in any feature learning algorithm.</p>
+<p>The getML Engine is able to automatically generate features based on aggregations over time windows. Both the length of the time window and the aggregation itself will be determined by the feature learning algorithm. The only requirement is to provide the temporal resolution your time series is sampled with in the <code>delta_t</code> parameter in any feature learning algorithm.</p>
 
 <!-- Source file information -->
 

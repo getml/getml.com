@@ -970,7 +970,7 @@
   <span class="md-ellipsis">
     
   
-    Build engine & API
+    Build Engine & API
   
 
     
@@ -1603,8 +1603,8 @@
 <!-- Page content -->
 <p><a href="" id="macos-windows-docker"></a></p>
 <h1 id="docker-for-macos-windows-linux">Docker for macOS, Windows &amp; Linux</h1>
-<p>On macOS and Windows, you can to run the engine in a Docker container. We are working on providing native support for them in the near future.</p>
-<p>Setup the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">engine</a> of the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">getML Community edition</a> as follows.</p>
+<p>On macOS and Windows, you can to run the Engine in a Docker container. We are working on providing native support for them in the near future.</p>
+<p>Setup the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> of the <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">getML Community edition</a> as follows.</p>
 <h2 id="python-api">Python API</h2>
 <p>Use Python's pip package manager to install the API:</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">getml</span>
@@ -1619,14 +1619,14 @@
 <p>Once you have obtained the getML Enterprise edition, you can install it as follows:</p>
 <ul>
 <li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a>: <code>pip install getml</code></li>
-<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">engine</a> by following the same <a class="autorefs autorefs-internal" href="#engine">instructions as below</a>. Just replace the URL with that of the Enterprise <code>docker-compose.yml</code> file you have been provided with.</li>
+<li>Install the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> by following the same <a class="autorefs autorefs-internal" href="#engine">instructions as below</a>. Just replace the URL with that of the Enterprise <code>docker-compose.yml</code> file you have been provided with.</li>
 </ul>
 </div>
 <p>Run the following command in your terminal (macOS &amp; Linux) or PowerShell (Windows):</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://raw.githubusercontent.com/getml/getml-community/1.5.0/runtime/docker-compose.yml<span class="w"> </span><span class="p">|</span><span class="w"> </span>docker-compose<span class="w"> </span>up<span class="w"> </span>-f<span class="w"> </span>-
 </code></pre></div>
 <p>This will download <code>docker-compose.yml</code> configuration file and use <code>docker compose</code> to run a getML service.</p>
-<p>In addition, a local directory <code>getml</code> will be created if it doesn't exist and mounted into the container. This directory will contain the files of projects. The ports required for the Python API to communicate with the engine will be mapped to the host system.</p>
+<p>In addition, a local directory <code>getml</code> will be created if it doesn't exist and mounted into the container. This directory will contain the files of projects. The ports required for the Python API to communicate with the Engine will be mapped to the host system.</p>
 <p>To shut down the service after you are done, press <code>Ctrl+c</code>.</p>
 
 <!-- Source file information -->

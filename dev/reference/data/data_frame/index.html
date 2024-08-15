@@ -3749,9 +3749,9 @@
     <div class="doc doc-contents first">
 
 
-      <p>Handler for the data stored in the getML engine.</p>
+      <p>Handler for the data stored in the getML Engine.</p>
 <p>The <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> class represents a data frame
-object in the getML engine but does not contain any actual data
+object in the getML Engine but does not contain any actual data
 itself. To create such a data frame object, fill it with data via
 the Python API, and to retrieve a handler for it, you can use one
 of the <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_csv"><code>from_csv</code></a>,
@@ -3761,12 +3761,12 @@ of the <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_cs
 <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/importing_data/#importing-data_1">Importing Data</a> section in the user guide explains the
 particularities of each of those flavors of the unified
 import interface.</p>
-<p>If the data frame object is already present in the engine -
+<p>If the data frame object is already present in the Engine -
 either in memory as a temporary object or on disk when
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.save"><code>save</code></a> was called earlier -, the
 <a class="autorefs autorefs-internal" href="../#getml.data.load_data_frame"><code>load_data_frame</code></a> function will create a new
 handler without altering the underlying data. For more information
-about the lifecycle of the data in the getML engine and its
+about the lifecycle of the data in the getML Engine and its
 synchronization with the Python API please see the
 corresponding <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#dataframes">User Guide</a>.</p>
 
@@ -3784,7 +3784,7 @@ corresponding <a class="autorefs autorefs-internal" href="../../../user_guide/co
             <td class="doc-attribute-details">
               <div class="doc-md-description">
                 <p>Unique identifier used to link the handler with
-the underlying data frame object in the engine.</p>
+the underlying data frame object in the Engine.</p>
               </div>
               <p>
               </p>
@@ -3810,7 +3810,7 @@ Otherwise, you can use the <a class="autorefs autorefs-internal" href="../roles_
     </table>
       <details class="example">
 <summary>Example</summary>
-<p>Creating a new data frame object in the getML engine and importing
+<p>Creating a new data frame object in the getML Engine and importing
 data is done by one the class functions
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_csv"><code>from_csv</code></a>,
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_db"><code>from_db</code></a>,
@@ -3827,7 +3827,7 @@ data is done by one the class functions
 <span class="n">df_table</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;table&#39;</span><span class="p">)</span>
 </code></pre></div>
 In addition to creating a new data frame object in the getML
-engine and filling it with all the content of <code>table</code>, the
+Engine and filling it with all the content of <code>table</code>, the
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_pandas"><code>from_pandas</code></a> function also
 returns a <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handler to the
 underlying data.</p>
@@ -3835,10 +3835,10 @@ underlying data.</p>
 session. You can use their <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.save"><code>save</code></a>
 method to write them to disk, the
 <a class="autorefs autorefs-internal" href="../#getml.data.list_data_frames"><code>list_data_frames</code></a> function to list all
-available objects in the engine, and
+available objects in the Engine, and
 <a class="autorefs autorefs-internal" href="../#getml.data.load_data_frame"><code>load_data_frame</code></a> to create a
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handler for a data set already
-present in the getML engine (see
+present in the getML Engine (see
 <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">User Guide</a> for details).</p>
 <div class="highlight"><pre><span></span><code><span class="n">df_table</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 
@@ -4904,7 +4904,7 @@ but operations like <a class="autorefs autorefs-internal" href="#getml.data.Data
 
       <p>Create a DataFrame from an Arrow Table.</p>
 <p>This is one of the fastest way to get data into the
-getML engine.</p>
+getML Engine.</p>
 
 
 <table>
@@ -5120,7 +5120,7 @@ will return the inffered roles.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from an Arrow Table.</span>
 
 <span class="sd">    This is one of the fastest way to get data into the</span>
-<span class="sd">    getML engine.</span>
+<span class="sd">    getML Engine.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        table:</span>
@@ -5220,8 +5220,8 @@ will return the inffered roles.</p>
     <div class="doc doc-contents ">
 
       <p>Create a DataFrame from CSV files.</p>
-<p>The getML engine will construct a data
-frame object in the engine, fill it with the data read from
+<p>The getML Engine will construct a data
+frame object in the Engine, fill it with the data read from
 the CSV file(s), and return a corresponding
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -5497,7 +5497,7 @@ contains a header with the column names.</p>
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the current working directory. You can
-import their data into the getML engine using.
+import their data into the getML Engine using.
 <div class="highlight"><pre><span></span><code><span class="n">df_expd</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
     <span class="n">fnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;file1.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;file2.csv&quot;</span><span class="p">],</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MY DATA FRAME&quot;</span><span class="p">,</span>
@@ -5749,8 +5749,8 @@ can now hard-code this.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Roles</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from CSV files.</span>
 
-<span class="sd">    The getML engine will construct a data</span>
-<span class="sd">    frame object in the engine, fill it with the data read from</span>
+<span class="sd">    The getML Engine will construct a data</span>
+<span class="sd">    frame object in the Engine, fill it with the data read from</span>
 <span class="sd">    the CSV file(s), and return a corresponding</span>
 <span class="sd">    [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -5820,7 +5820,7 @@ can now hard-code this.</p>
 <span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the current working directory. You can</span>
-<span class="sd">        import their data into the getML engine using.</span>
+<span class="sd">        import their data into the getML Engine using.</span>
 <span class="sd">        ```python</span>
 <span class="sd">        df_expd = data.DataFrame.from_csv(</span>
 <span class="sd">            fnames=[&quot;file1.csv&quot;, &quot;file2.csv&quot;],</span>
@@ -5960,7 +5960,7 @@ can now hard-code this.</p>
     <div class="doc doc-contents ">
 
       <p>Create a DataFrame from a table in a database.</p>
-<p>It will construct a data frame object in the engine, fill it
+<p>It will construct a data frame object in the Engine, fill it
 with the data read from table <code>table_name</code> in the connected
 database (see <a class="autorefs autorefs-internal" href="../../database/database/#getml.database"><code>database</code></a>), and return a
 corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
@@ -6076,7 +6076,7 @@ will return the inffered roles.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The database connection to be used.
-If you don't explicitly pass a connection, the engine
+If you don't explicitly pass a connection, the Engine
 will use the default connection.</p>
               </div>
               <p>
@@ -6256,7 +6256,7 @@ will use the default connection.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Roles</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from a table in a database.</span>
 
-<span class="sd">    It will construct a data frame object in the engine, fill it</span>
+<span class="sd">    It will construct a data frame object in the Engine, fill it</span>
 <span class="sd">    with the data read from table `table_name` in the connected</span>
 <span class="sd">    database (see [`database`][getml.database]), and return a</span>
 <span class="sd">    corresponding [`DataFrame`][getml.DataFrame] handle.</span>
@@ -6292,7 +6292,7 @@ will use the default connection.</p>
 
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
-<span class="sd">            If you don&#39;t explicitly pass a connection, the engine</span>
+<span class="sd">            If you don&#39;t explicitly pass a connection, the Engine</span>
 <span class="sd">            will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
@@ -6640,7 +6640,7 @@ will return the inffered roles.</p>
     <div class="doc doc-contents ">
 
       <p>Create a new DataFrame from a JSON string.</p>
-<p>It will construct a data frame object in the engine, fill it
+<p>It will construct a data frame object in the Engine, fill it
 with the data read from the JSON string, and return a
 corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -6848,7 +6848,7 @@ will return the inffered roles.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Roles</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a new DataFrame from a JSON string.</span>
 
-<span class="sd">    It will construct a data frame object in the engine, fill it</span>
+<span class="sd">    It will construct a data frame object in the Engine, fill it</span>
 <span class="sd">    with the data read from the JSON string, and return a</span>
 <span class="sd">    corresponding [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -6930,7 +6930,7 @@ will return the inffered roles.</p>
     <div class="doc doc-contents ">
 
       <p>Create a DataFrame from a <code>pandas.DataFrame</code>.</p>
-<p>It will construct a data frame object in the engine, fill it
+<p>It will construct a data frame object in the Engine, fill it
 with the data read from the <code>pandas.DataFrame</code>, and
 return a corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -7151,7 +7151,7 @@ will return the inffered roles.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Roles</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from a `pandas.DataFrame`.</span>
 
-<span class="sd">    It will construct a data frame object in the engine, fill it</span>
+<span class="sd">    It will construct a data frame object in the Engine, fill it</span>
 <span class="sd">    with the data read from the `pandas.DataFrame`, and</span>
 <span class="sd">    return a corresponding [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -7251,7 +7251,7 @@ will return the inffered roles.</p>
 
       <p>Create a DataFrame from parquet files.</p>
 <p>This is one of the fastest way to get data into the
-getML engine.</p>
+getML Engine.</p>
 
 
 <table>
@@ -7472,7 +7472,7 @@ will return the inffered roles.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from parquet files.</span>
 
 <span class="sd">    This is one of the fastest way to get data into the</span>
-<span class="sd">    getML engine.</span>
+<span class="sd">    getML Engine.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        fnames:</span>
@@ -7568,7 +7568,7 @@ will return the inffered roles.</p>
     <div class="doc doc-contents ">
 
       <p>Create a DataFrame from a <code>pyspark.sql.DataFrame</code>.</p>
-<p>It will construct a data frame object in the engine, fill it
+<p>It will construct a data frame object in the Engine, fill it
 with the data read from the <code>pyspark.sql.DataFrame</code>, and
 return a corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -7789,7 +7789,7 @@ will return the inffered roles.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Roles</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from a `pyspark.sql.DataFrame`.</span>
 
-<span class="sd">    It will construct a data frame object in the engine, fill it</span>
+<span class="sd">    It will construct a data frame object in the Engine, fill it</span>
 <span class="sd">    with the data read from the `pyspark.sql.DataFrame`, and</span>
 <span class="sd">    return a corresponding [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -7895,7 +7895,7 @@ will return the inffered roles.</p>
 
       <p>Create a DataFrame from CSV files located in an S3 bucket.</p>
 <p>This classmethod will construct a data
-frame object in the engine, fill it with the data read from
+frame object in the Engine, fill it with the data read from
 the CSV file(s), and return a corresponding
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -8162,7 +8162,7 @@ will return the inffered roles.</p>
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
-import their data into the getML engine using the following
+import their data into the getML Engine using the following
 commands:
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="s2">&quot;YOUR-SECRET-ACCESS-KEY&quot;</span><span class="p">)</span>
@@ -8176,7 +8176,7 @@ commands:
 <span class="p">)</span>
 </code></pre></div></p>
 <p>You can also set the access credential as environment variables
-before you launch the getML engine.</p>
+before you launch the getML Engine.</p>
 <p>Also refer to the documentation on <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_csv"><code>from_csv</code></a>
 for further information on overriding the CSV sniffer for greater
 type safety.</p>
@@ -8383,7 +8383,7 @@ type safety.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from CSV files located in an S3 bucket.</span>
 
 <span class="sd">    This classmethod will construct a data</span>
-<span class="sd">    frame object in the engine, fill it with the data read from</span>
+<span class="sd">    frame object in the Engine, fill it with the data read from</span>
 <span class="sd">    the CSV file(s), and return a corresponding</span>
 <span class="sd">    [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -8453,7 +8453,7 @@ type safety.</p>
 <span class="sd">    ??? example</span>
 <span class="sd">        Let&#39;s assume you have two CSV files - *file1.csv* and</span>
 <span class="sd">        *file2.csv* - in the bucket. You can</span>
-<span class="sd">        import their data into the getML engine using the following</span>
+<span class="sd">        import their data into the getML Engine using the following</span>
 <span class="sd">        commands:</span>
 <span class="sd">        ```python</span>
 <span class="sd">        getml.engine.set_s3_access_key_id(&quot;YOUR-ACCESS-KEY-ID&quot;)</span>
@@ -8469,7 +8469,7 @@ type safety.</p>
 <span class="sd">        ```</span>
 
 <span class="sd">        You can also set the access credential as environment variables</span>
-<span class="sd">        before you launch the getML engine.</span>
+<span class="sd">        before you launch the getML Engine.</span>
 
 <span class="sd">        Also refer to the documentation on [`from_csv`][getml.DataFrame.from_csv]</span>
 <span class="sd">        for further information on overriding the CSV sniffer for greater</span>
@@ -8572,7 +8572,7 @@ type safety.</p>
 
       <p>Create a DataFrame from a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
 <p>This classmethod will construct a data
-frame object in the engine, fill it with the data read from
+frame object in the Engine, fill it with the data read from
 the <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>, and return a corresponding
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
 
@@ -8721,7 +8721,7 @@ will return an empty data frame with the roles set as inferred.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a DataFrame from a [`View`][getml.data.View].</span>
 
 <span class="sd">    This classmethod will construct a data</span>
-<span class="sd">    frame object in the engine, fill it with the data read from</span>
+<span class="sd">    frame object in the Engine, fill it with the data read from</span>
 <span class="sd">    the [`View`][getml.data.View], and return a corresponding</span>
 <span class="sd">    [`DataFrame`][getml.DataFrame] handle.</span>
 
@@ -8784,7 +8784,7 @@ will return an empty data frame with the roles set as inferred.</p>
       <p>Loads saved data from disk.</p>
 <p>The data frame object holding the same name as the current
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> instance will be loaded from
-disk into the getML engine and updates the current handler
+disk into the getML Engine and updates the current handler
 using <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.refresh"><code>refresh</code></a>.</p>
 <details class="example">
 <summary>Example</summary>
@@ -8796,7 +8796,7 @@ using <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.refresh"
 can find our underlying data frame object 'test' listed
 under the 'in_memory' key (it was created and imported by
 <a class="autorefs autorefs-internal" href="../../datasets/datasets/#getml.datasets.make_numerical"><code>make_numerical</code></a>). This means the
-getML engine does only hold it in memory (RAM) yet, and we
+getML Engine does only hold it in memory (RAM) yet, and we
 still have to <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.save"><code>save</code></a> it to
 disk in order to <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.load"><code>load</code></a> it
 again or to prevent any loss of information between
@@ -8836,7 +8836,7 @@ different sessions.
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>engine.</p>
+                <p>Engine.</p>
               </div>
             </td>
           </tr>
@@ -8869,7 +8869,7 @@ will throw an exception</p>
 <p>Alternatively, <a class="autorefs autorefs-internal" href="../#getml.data.load_data_frame"><code>load_data_frame</code></a>
 offers an easier way of creating
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handlers to data in the
-getML engine.</p>
+getML Engine.</p>
 </details>
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
@@ -8946,7 +8946,7 @@ getML engine.</p>
 
 <span class="sd">    The data frame object holding the same name as the current</span>
 <span class="sd">    [`DataFrame`][getml.DataFrame] instance will be loaded from</span>
-<span class="sd">    disk into the getML engine and updates the current handler</span>
+<span class="sd">    disk into the getML Engine and updates the current handler</span>
 <span class="sd">    using [`refresh`][getml.DataFrame.refresh].</span>
 
 <span class="sd">    ??? example</span>
@@ -8960,7 +8960,7 @@ getML engine.</p>
 <span class="sd">        can find our underlying data frame object &#39;test&#39; listed</span>
 <span class="sd">        under the &#39;in_memory&#39; key (it was created and imported by</span>
 <span class="sd">        [`make_numerical`][getml.datasets.make_numerical]). This means the</span>
-<span class="sd">        getML engine does only hold it in memory (RAM) yet, and we</span>
+<span class="sd">        getML Engine does only hold it in memory (RAM) yet, and we</span>
 <span class="sd">        still have to [`save`][getml.DataFrame.save] it to</span>
 <span class="sd">        disk in order to [`load`][getml.DataFrame.load] it</span>
 <span class="sd">        again or to prevent any loss of information between</span>
@@ -8973,7 +8973,7 @@ getML engine.</p>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Updated handle the underlying data frame in the getML</span>
-<span class="sd">            engine.</span>
+<span class="sd">            Engine.</span>
 
 <span class="sd">    Note:</span>
 <span class="sd">        When invoking [`load`][getml.DataFrame.load] all</span>
@@ -9001,7 +9001,7 @@ getML engine.</p>
 <span class="sd">        Alternatively, [`load_data_frame`][getml.data.load_data_frame]</span>
 <span class="sd">        offers an easier way of creating</span>
 <span class="sd">        [`DataFrame`][getml.DataFrame] handlers to data in the</span>
-<span class="sd">        getML engine.</span>
+<span class="sd">        getML Engine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -9030,7 +9030,7 @@ getML engine.</p>
     <div class="doc doc-contents ">
 
       <p>Size of the data stored in the underlying data frame in the getML
-engine.</p>
+Engine.</p>
 
 
 <table>
@@ -9080,7 +9080,7 @@ engine.</p>
 <span class="normal">2257</span>
 <span class="normal">2258</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">nbytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">uint64</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Size of the data stored in the underlying data frame in the getML</span>
-<span class="sd">    engine.</span>
+<span class="sd">    Engine.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Size of the underlying object in bytes.</span>
@@ -9269,9 +9269,9 @@ engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Uploads a <code>pyarrow.Table</code> or <code>pyarrow.RecordBatch</code> to the getML engine.</p>
+      <p>Uploads a <code>pyarrow.Table</code> or <code>pyarrow.RecordBatch</code> to the getML Engine.</p>
 <p>Replaces the actual content of the underlying data frame in
-the getML engine with <code>table</code>.</p>
+the getML Engine with <code>table</code>.</p>
 
 
 <table>
@@ -9301,7 +9301,7 @@ the getML engine with <code>table</code>.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>If a data frame object holding the same <code>name</code> is
-already present in the getML engine, should the content in
+already present in the getML Engine, should the content in
 <code>query</code> be appended or replace the existing data?</p>
               </div>
               <p>
@@ -9348,7 +9348,7 @@ already present in the getML engine, should the content in
   <summary>Note</summary>
   <p>For columns containing <code>pandas.Timestamp</code> there can
 be small inconsistencies in the order of microseconds
-when sending the data to the getML engine. This is due to
+when sending the data to the getML Engine. This is due to
 the way the underlying information is stored.</p>
 </details>
             <details class="quote">
@@ -9408,10 +9408,10 @@ the way the underlying information is stored.</p>
     <span class="n">table</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pa</span><span class="o">.</span><span class="n">RecordBatch</span><span class="p">,</span> <span class="n">pa</span><span class="o">.</span><span class="n">Table</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">pa</span><span class="o">.</span><span class="n">RecordBatch</span><span class="p">]],</span>
     <span class="n">append</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Uploads a `pyarrow.Table` or `pyarrow.RecordBatch` to the getML engine.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Uploads a `pyarrow.Table` or `pyarrow.RecordBatch` to the getML Engine.</span>
 
 <span class="sd">    Replaces the actual content of the underlying data frame in</span>
-<span class="sd">    the getML engine with `table`.</span>
+<span class="sd">    the getML Engine with `table`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        table:</span>
@@ -9419,7 +9419,7 @@ the way the underlying information is stored.</p>
 
 <span class="sd">        append:</span>
 <span class="sd">            If a data frame object holding the same `name` is</span>
-<span class="sd">            already present in the getML engine, should the content in</span>
+<span class="sd">            already present in the getML Engine, should the content in</span>
 <span class="sd">            `query` be appended or replace the existing data?</span>
 
 <span class="sd">    Returns:</span>
@@ -9428,7 +9428,7 @@ the way the underlying information is stored.</p>
 <span class="sd">    Note:</span>
 <span class="sd">        For columns containing `pandas.Timestamp` there can</span>
 <span class="sd">        be small inconsistencies in the order of microseconds</span>
-<span class="sd">        when sending the data to the getML engine. This is due to</span>
+<span class="sd">        when sending the data to the getML Engine. This is due to</span>
 <span class="sd">        the way the underlying information is stored.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -11420,7 +11420,7 @@ already present in the getML, should the content of
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -11546,7 +11546,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Handler of the underlying data.</span>
@@ -11613,7 +11613,7 @@ the engine will use the default connection.</p>
 
       <p>Uploads a <code>pandas.DataFrame</code>.</p>
 <p>Replaces the actual content of the underlying data frame in
-the getML engine with <code>pandas_df</code>.</p>
+the getML Engine with <code>pandas_df</code>.</p>
 
 
 <table>
@@ -11629,7 +11629,7 @@ the getML engine with <code>pandas_df</code>.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Data the underlying data frame object in the getML
-engine should obtain.</p>
+Engine should obtain.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -11644,7 +11644,7 @@ engine should obtain.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>If a data frame object holding the same <code>name</code> is
-already present in the getML engine, should the content in
+already present in the getML Engine, should the content in
 <code>query</code> be appended or replace the existing data?</p>
               </div>
               <p>
@@ -11688,7 +11688,7 @@ already present in the getML engine, should the content in
       <p>Note:
     For columns containing <code>pandas.Timestamp</code> there can
     occur small inconsistencies in the order of microseconds
-    when sending the data to the getML engine. This is due to
+    when sending the data to the getML Engine. This is due to
     the way the underlying information is stored.</p>
 
             <details class="quote">
@@ -11738,16 +11738,16 @@ already present in the getML engine, should the content in
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Uploads a `pandas.DataFrame`.</span>
 
 <span class="sd">    Replaces the actual content of the underlying data frame in</span>
-<span class="sd">    the getML engine with `pandas_df`.</span>
+<span class="sd">    the getML Engine with `pandas_df`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        pandas_df:</span>
 <span class="sd">            Data the underlying data frame object in the getML</span>
-<span class="sd">            engine should obtain.</span>
+<span class="sd">            Engine should obtain.</span>
 
 <span class="sd">        append:</span>
 <span class="sd">            If a data frame object holding the same ``name`` is</span>
-<span class="sd">            already present in the getML engine, should the content in</span>
+<span class="sd">            already present in the getML Engine, should the content in</span>
 <span class="sd">            `query` be appended or replace the existing data?</span>
 
 <span class="sd">    Returns:</span>
@@ -11755,7 +11755,7 @@ already present in the getML engine, should the content in
 <span class="sd">    Note:</span>
 <span class="sd">        For columns containing `pandas.Timestamp` there can</span>
 <span class="sd">        occur small inconsistencies in the order of microseconds</span>
-<span class="sd">        when sending the data to the getML engine. This is due to</span>
+<span class="sd">        when sending the data to the getML Engine. This is due to</span>
 <span class="sd">        the way the underlying information is stored.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -11799,7 +11799,7 @@ already present in the getML engine, should the content in
 
       <p>Uploads a <code>pyspark.sql.DataFrame</code>.</p>
 <p>Replaces the actual content of the underlying data frame in
-the getML engine with <code>pandas_df</code>.</p>
+the getML Engine with <code>pandas_df</code>.</p>
 
 
 <table>
@@ -11815,7 +11815,7 @@ the getML engine with <code>pandas_df</code>.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>Data the underlying data frame object in the getML
-engine should obtain.</p>
+Engine should obtain.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -11830,7 +11830,7 @@ engine should obtain.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>If a data frame object holding the same <code>name</code> is
-already present in the getML engine, should the content in
+already present in the getML Engine, should the content in
 <code>query</code> be appended or replace the existing data?</p>
               </div>
               <p>
@@ -11920,16 +11920,16 @@ already present in the getML engine, should the content in
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Uploads a `pyspark.sql.DataFrame`.</span>
 
 <span class="sd">    Replaces the actual content of the underlying data frame in</span>
-<span class="sd">    the getML engine with `pandas_df`.</span>
+<span class="sd">    the getML Engine with `pandas_df`.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        spark_df:</span>
 <span class="sd">            Data the underlying data frame object in the getML</span>
-<span class="sd">            engine should obtain.</span>
+<span class="sd">            Engine should obtain.</span>
 
 <span class="sd">        append:</span>
 <span class="sd">            If a data frame object holding the same ``name`` is</span>
-<span class="sd">            already present in the getML engine, should the content in</span>
+<span class="sd">            already present in the getML Engine, should the content in</span>
 <span class="sd">            `query` be appended or replace the existing data?</span>
 
 <span class="sd">    Returns:</span>
@@ -12009,7 +12009,7 @@ already present in the getML engine, should the content in
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>If a data frame object holding the same <code>name</code> is
-already present in the getML engine, should the content in
+already present in the getML Engine, should the content in
 <code>query</code> be appended or replace the existing data?</p>
               </div>
               <p>
@@ -12030,7 +12030,7 @@ already present in the getML engine, should the content in
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -12154,13 +12154,13 @@ the engine will use the default connection.</p>
 
 <span class="sd">        append:</span>
 <span class="sd">            If a data frame object holding the same ``name`` is</span>
-<span class="sd">            already present in the getML engine, should the content in</span>
+<span class="sd">            already present in the getML Engine, should the content in</span>
 <span class="sd">            `query` be appended or replace the existing data?</span>
 
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Handler of the underlying data.</span>
@@ -12224,7 +12224,7 @@ the engine will use the default connection.</p>
     <div class="doc doc-contents ">
 
       <p>Aligns meta-information of the current instance with the
-corresponding data frame in the getML engine.</p>
+corresponding data frame in the getML Engine.</p>
 <p>This method can be used to avoid encoding conflicts. Note that
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.load"><code>load</code></a> as well as several other
 methods automatically call <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.refresh"><code>refresh</code></a>.</p>
@@ -12258,7 +12258,7 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>engine.</p>
+                <p>Engine.</p>
               </div>
             </td>
           </tr>
@@ -12297,7 +12297,7 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
 <span class="normal">3150</span>
 <span class="normal">3151</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Aligns meta-information of the current instance with the</span>
-<span class="sd">    corresponding data frame in the getML engine.</span>
+<span class="sd">    corresponding data frame in the getML Engine.</span>
 
 <span class="sd">    This method can be used to avoid encoding conflicts. Note that</span>
 <span class="sd">    [`load`][getml.DataFrame.load] as well as several other</span>
@@ -12305,7 +12305,7 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Updated handle the underlying data frame in the getML</span>
-<span class="sd">            engine.</span>
+<span class="sd">            Engine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -12529,7 +12529,7 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data in the getML engine to disk.</p>
+      <p>Writes the underlying data in the getML Engine to disk.</p>
 
 
 <table>
@@ -12573,7 +12573,7 @@ methods automatically call <a class="autorefs autorefs-internal" href="#getml.da
 <span class="normal">3240</span>
 <span class="normal">3241</span>
 <span class="normal">3242</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Writes the underlying data in the getML engine to disk.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Writes the underlying data in the getML Engine to disk.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            The current instance.</span>
@@ -13238,7 +13238,7 @@ we have seen that same bank account number in another table.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pyarrow.Table</code> from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a <code>pyarrow.Table</code>.</p>
 
 
@@ -13279,7 +13279,7 @@ a <code>pyarrow.Table</code>.</p>
 <span class="normal">3454</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_arrow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pa</span><span class="o">.</span><span class="n">Table</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pyarrow.Table` from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a `pyarrow.Table`.</span>
 
 <span class="sd">    Returns:</span>
@@ -13578,7 +13578,7 @@ replaced.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -13644,7 +13644,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="ow">or</span> <span class="n">database</span><span class="o">.</span><span class="n">Connection</span><span class="p">()</span>
@@ -13775,7 +13775,7 @@ iPython notebook.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a JSON string from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a JSON string.</p>
 
             <details class="quote">
@@ -13789,7 +13789,7 @@ a JSON string.</p>
 <span class="normal">3575</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a JSON string from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a JSON string.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
@@ -13813,7 +13813,7 @@ a JSON string.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pandas.DataFrame</code> from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 <code>pandas.DataFrame</code>.</p>
 
 
@@ -13868,7 +13868,7 @@ a JSON string.</p>
 <span class="normal">3590</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pandas.DataFrame` from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    `pandas.DataFrame`.</span>
 
 <span class="sd">    Returns:</span>
@@ -14121,7 +14121,7 @@ be identical to the name of the current data frame.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pyspark.sql.DataFrame</code> from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a <code>pyspark.sql.DataFrame</code>.</p>
 
 
@@ -14232,7 +14232,7 @@ If none is passed, then the name of this
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pyspark.sql.DataFrame` from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a `pyspark.sql.DataFrame`.</span>
 
 <span class="sd">    Args:</span>

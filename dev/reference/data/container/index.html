@@ -3265,7 +3265,8 @@ has been changed.</p>
 
     <div class="doc doc-contents ">
 
-      <p>TODO</p>
+      <p>Returns a <code>Container</code>'s contents as a dictionary of <code>pandas.DataFrame</code>s.
+<code>key</code> holds the data frame's <code>name</code>, value the data converted to a <code>pandas.DataFrame</code>.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/container.py</code></summary>
@@ -3286,9 +3287,11 @@ has been changed.</p>
 <span class="normal">578</span>
 <span class="normal">579</span>
 <span class="normal">580</span>
-<span class="normal">581</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+<span class="normal">581</span>
+<span class="normal">582</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    TODO</span>
+<span class="sd">    Returns a `Container`&#39;s contents as a dictionary of `pandas.DataFrame`s.</span>
+<span class="sd">    `key` holds the data frame&#39;s `name`, value the data converted to a `pandas.DataFrame`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">subsets</span> <span class="o">=</span> <span class="p">(</span>
         <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_subsets</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>

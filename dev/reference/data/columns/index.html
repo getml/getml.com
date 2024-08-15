@@ -3132,7 +3132,7 @@
       <p>Handlers for 1-d arrays storing the data of an individual variable.</p>
 <p>Like the <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, the
 <a class="autorefs autorefs-internal" href="#getml.data.columns"><code>columns</code></a> do not contain any actual data themselves
-but are only handlers to objects within the getML engine. These
+but are only handlers to objects within the getML Engine. These
 containers store data of a single variable in a one-dimensional array
 of a uniform type.</p>
 <p>Columns are <em>immutable</em> and <em>lazily evaluated</em>.</p>
@@ -3461,8 +3461,8 @@ or to update other columns.</p>
               Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
 
-      <p>Handle for numerical data in the engine.</p>
-<p>This is a handler for all numerical data in the getML engine,
+      <p>Handle for numerical data in the Engine.</p>
+<p>This is a handler for all numerical data in the getML Engine,
 including time stamps.</p>
 
 
@@ -3722,7 +3722,7 @@ evaluated when necessary.</p>
               Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
 
-      <p>Handle for categorical data that is kept in the getML engine</p>
+      <p>Handle for categorical data that is kept in the getML Engine</p>
 
 
 <table>
@@ -3934,7 +3934,7 @@ evaluated when necessary.</p>
 <span class="c1"># executed yet.</span>
 <span class="n">col2</span> <span class="o">=</span> <span class="n">col1</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-<span class="c1"># This is where the engine executes</span>
+<span class="c1"># This is where the Engine executes</span>
 <span class="c1"># the substring operation.</span>
 <span class="n">my_df</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">col2</span><span class="p">,</span> <span class="s2">&quot;short_names&quot;</span><span class="p">,</span> <span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
 

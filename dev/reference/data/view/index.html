@@ -3153,7 +3153,7 @@
   possible. Any operation on a view will result in a new view.</p>
 </li>
 <li>
-<p>Views have no direct representation on the getML engine, and
+<p>Views have no direct representation on the getML Engine, and
   therefore they do not need to have an identifying name.</p>
 </li>
 </ul>
@@ -4101,7 +4101,7 @@ after the creation of the view.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>If the number of rows is unknown,
-do you want to force the engine to calculate it anyway?
+do you want to force the Engine to calculate it anyway?
 This is a relatively expensive operation, therefore
 you might not necessarily want this.</p>
               </div>
@@ -4195,7 +4195,7 @@ you might not necessarily want this.</p>
 <span class="sd">    Args:</span>
 <span class="sd">        force:</span>
 <span class="sd">            If the number of rows is unknown,</span>
-<span class="sd">            do you want to force the engine to calculate it anyway?</span>
+<span class="sd">            do you want to force the Engine to calculate it anyway?</span>
 <span class="sd">            This is a relatively expensive operation, therefore</span>
 <span class="sd">            you might not necessarily want this.</span>
 
@@ -4251,7 +4251,7 @@ you might not necessarily want this.</p>
     <div class="doc doc-contents ">
 
       <p>Aligns meta-information of the current instance with the
-corresponding data frame in the getML engine.</p>
+corresponding data frame in the getML Engine.</p>
 
 
 <table>
@@ -4282,7 +4282,7 @@ corresponding data frame in the getML engine.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>engine.</p>
+                <p>Engine.</p>
               </div>
             </td>
           </tr>
@@ -4303,11 +4303,11 @@ corresponding data frame in the getML engine.</p>
 <span class="normal">557</span>
 <span class="normal">558</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">View</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Aligns meta-information of the current instance with the</span>
-<span class="sd">    corresponding data frame in the getML engine.</span>
+<span class="sd">    corresponding data frame in the getML Engine.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Updated handle the underlying data frame in the getML</span>
-<span class="sd">            engine.</span>
+<span class="sd">            Engine.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_base</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_base&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">refresh</span><span class="p">()</span>
@@ -4332,7 +4332,7 @@ corresponding data frame in the getML engine.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pyarrow.Table</code> from the view.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a <code>pyarrow.Table</code>.</p>
 
 
@@ -4386,7 +4386,7 @@ a <code>pyarrow.Table</code>.</p>
 <span class="normal">646</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_arrow</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pyarrow</span><span class="o">.</span><span class="n">Table</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pyarrow.Table` from the view.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a `pyarrow.Table`.</span>
 
 <span class="sd">    Returns:</span>
@@ -4414,7 +4414,7 @@ a <code>pyarrow.Table</code>.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a JSON string from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a JSON string.</p>
 
 
@@ -4468,7 +4468,7 @@ a JSON string.</p>
 <span class="normal">660</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a JSON string from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a JSON string.</span>
 
 <span class="sd">    Returns:</span>
@@ -4768,7 +4768,7 @@ replaced.</p>
               <div class="doc-md-description">
                 <p>The database connection to be used.
 If you don't explicitly pass a connection,
-the engine will use the default connection.</p>
+the Engine will use the default connection.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -4837,7 +4837,7 @@ the engine will use the default connection.</p>
 <span class="sd">        conn:</span>
 <span class="sd">            The database connection to be used.</span>
 <span class="sd">            If you don&#39;t explicitly pass a connection,</span>
-<span class="sd">            the engine will use the default connection.</span>
+<span class="sd">            the Engine will use the default connection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="ow">or</span> <span class="n">Connection</span><span class="p">()</span>
@@ -4914,7 +4914,7 @@ the engine will use the default connection.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pandas.DataFrame</code> from the view.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a <code>pandas.DataFrame</code>.</p>
 
 
@@ -4968,7 +4968,7 @@ a <code>pandas.DataFrame</code>.</p>
 <span class="normal">775</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pandas.DataFrame` from the view.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a `pandas.DataFrame`.</span>
 
 <span class="sd">    Returns:</span>
@@ -5220,7 +5220,7 @@ Supported values are "brotli", "gzip", "lz4", "snappy", "zstd"</p>
     <div class="doc doc-contents ">
 
       <p>Creates a <code>pyspark.sql.DataFrame</code> from the current instance.</p>
-<p>Loads the underlying data from the getML engine and constructs
+<p>Loads the underlying data from the getML Engine and constructs
 a <code>pyspark.sql.DataFrame</code>.</p>
 
 
@@ -5344,7 +5344,7 @@ If none is passed, then the name of this
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a `pyspark.sql.DataFrame` from the current instance.</span>
 
-<span class="sd">    Loads the underlying data from the getML engine and constructs</span>
+<span class="sd">    Loads the underlying data from the getML Engine and constructs</span>
 <span class="sd">    a `pyspark.sql.DataFrame`.</span>
 
 <span class="sd">    Args:</span>

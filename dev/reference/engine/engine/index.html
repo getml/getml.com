@@ -2150,21 +2150,21 @@
     <div class="doc doc-contents first">
 
       <p>This module is a collection of utility functions for the overall
-communication and the session management of the getML engine.</p>
-<p>In order to log into the engine, you have to open your favorite
+communication and the session management of the getML Engine.</p>
+<p>In order to log into the Engine, you have to open your favorite
 internet browser and enter <a href="http://localhost:1709" target="_blank" rel="noopener">http://localhost:1709</a> in the navigation bar. This tells it to
 connect to a local TCP socket at port 1709 opened by the getML
-monitor. This will only be possible from within the same device!</p>
+Monitor. This will only be possible from within the same device!</p>
 <details class="example">
 <summary>Example</summary>
-<p>First of all, you need to start the getML engine.
+<p>First of all, you need to start the getML Engine.
 Next, you need to create a new project or
 load an existing one.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">list_projects</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
 </code></pre></div>
 After doing all calculations for today you can shut down the getML
-engine.</p>
+Engine.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">is_alive</span><span class="p">())</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 </code></pre></div>
@@ -2173,9 +2173,9 @@ engine.</p>
 
 <details class="note" open>
   <summary>Note</summary>
-  <p>The Python process and the getML engine must be located on
+  <p>The Python process and the getML Engine must be located on
 the same machine. If you
-intend to run the engine on a remote host, make sure to start your
+intend to run the Engine on a remote host, make sure to start your
 Python session on that device as well. Also, when using SSH sessions,
 make sure to start Python using <code>python &amp;</code> followed by <code>disown</code> or
 using <code>nohup python</code>. This ensures the Python process and all the
@@ -2183,9 +2183,9 @@ script it has to run won't be killed the moment your remote
 connection becomes unstable, and
 you are able to recover them later on (see
 <a class="autorefs autorefs-internal" href="../../../install/remote_access/#running-the-getml-suite-remotely"><code>remote_access</code></a>).</p>
-<p>All data frame objects and models in the getML engine are
+<p>All data frame objects and models in the getML Engine are
 bundled in projects. When loading an existing project, the
-current memory of the engine will be flushed and all changes
+current memory of the Engine will be flushed and all changes
 applied to <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> instances after
 calling their <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.save"><code>save</code></a> method will
 be lost. Afterwards, all
@@ -2196,7 +2196,7 @@ more
 memory than the pipelines. They can be loaded manually using
 <a class="autorefs autorefs-internal" href="../../data/#getml.data.load_data_frame"><code>load_data_frame</code></a> or
 <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.load"><code>load</code></a>.</p>
-<p>The getML engine reflects the separation of data into individual
+<p>The getML Engine reflects the separation of data into individual
 projects on the level of the filesystem too. All data
 belonging to a single project is stored in a dedicated folder in
 the 'projects' directory located in '.getML' in your home
@@ -2310,7 +2310,7 @@ permanently lost.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Checks if the getML engine is running.</p>
+      <p>Checks if the getML Engine is running.</p>
 
 
 <table>
@@ -2329,7 +2329,7 @@ permanently lost.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML engine is running and ready to accept</p>
+                <p>True if the getML Engine is running and ready to accept</p>
               </div>
             </td>
           </tr>
@@ -2371,10 +2371,10 @@ permanently lost.</p>
 <span class="normal">112</span>
 <span class="normal">113</span>
 <span class="normal">114</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_engine_alive</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if the getML engine is running.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if the getML Engine is running.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">            True if the getML engine is running and ready to accept</span>
+<span class="sd">            True if the getML Engine is running and ready to accept</span>
 <span class="sd">            commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2410,7 +2410,7 @@ permanently lost.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Checks if the getML engine is running.</p>
+      <p>Checks if the getML Engine is running.</p>
 
 
 <table>
@@ -2429,7 +2429,7 @@ permanently lost.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML engine is running and ready to accept</p>
+                <p>True if the getML Engine is running and ready to accept</p>
               </div>
             </td>
           </tr>
@@ -2471,10 +2471,10 @@ permanently lost.</p>
 <span class="normal">112</span>
 <span class="normal">113</span>
 <span class="normal">114</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_engine_alive</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if the getML engine is running.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks if the getML Engine is running.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">            True if the getML engine is running and ready to accept</span>
+<span class="sd">            True if the getML Engine is running and ready to accept</span>
 <span class="sd">            commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -2522,7 +2522,7 @@ permanently lost.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Launches the getML engine.</p>
+      <p>Launches the getML Engine.</p>
 
 
 <table>
@@ -2537,7 +2537,7 @@ permanently lost.</p>
             <td><code>allow_push_notifications</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Whether you want to allow the getML monitor to send push notifications to your desktop.</p>
+                <p>Whether you want to allow the getML Monitor to send push notifications to your desktop.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2593,7 +2593,7 @@ All binaries will be installed there.</p>
             <td><code>http_port</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>The local port of the getML monitor.
+                <p>The local port of the getML Monitor.
 This port can only be accessed from your local computer,
 unless you set <code>allow_remote_ips=True</code>.</p>
               </div>
@@ -2613,7 +2613,7 @@ unless you set <code>allow_remote_ips=True</code>.</p>
             <td><code>in_memory</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Whether you want the engine to process everything in memory.</p>
+                <p>Whether you want the Engine to process everything in memory.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2667,8 +2667,8 @@ unless you set <code>allow_remote_ips=True</code>.</p>
             <td><code>log</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>Whether you want the engine log to appear in the logfile (more detailed logging).
-The engine log also appears in the 'Log' page of the monitor.</p>
+                <p>Whether you want the Engine log to appear in the logfile (more detailed logging).
+The Engine log also appears in the 'Log' page of the Monitor.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2704,7 +2704,7 @@ The engine log also appears in the 'Log' page of the monitor.</p>
             <td><code>proxy_url</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>The URL of any proxy server that that redirects to the getML monitor.</p>
+                <p>The URL of any proxy server that that redirects to the getML Monitor.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
@@ -2723,7 +2723,7 @@ The engine log also appears in the 'Log' page of the monitor.</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>The token used for authentication.
-Authentication is required when remote IPs are allowed to access the monitor.
+Authentication is required when remote IPs are allowed to access the Monitor.
 If authentication is required and no token is passed,
 a random hexcode will be generated as the token.</p>
               </div>
@@ -2849,11 +2849,11 @@ a random hexcode will be generated as the token.</p>
     <span class="n">token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Launches the getML engine.</span>
+<span class="sd">    Launches the getML Engine.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">      allow_push_notifications:</span>
-<span class="sd">        Whether you want to allow the getML monitor to send push notifications to your desktop.</span>
+<span class="sd">        Whether you want to allow the getML Monitor to send push notifications to your desktop.</span>
 
 <span class="sd">      allow_remote_ips:</span>
 <span class="sd">        Whether you want to allow remote IPs to access the http-port.</span>
@@ -2864,12 +2864,12 @@ a random hexcode will be generated as the token.</p>
 <span class="sd">        All binaries will be installed there.</span>
 
 <span class="sd">      http_port:</span>
-<span class="sd">        The local port of the getML monitor.</span>
+<span class="sd">        The local port of the getML Monitor.</span>
 <span class="sd">        This port can only be accessed from your local computer,</span>
 <span class="sd">        unless you set `allow_remote_ips=True`.</span>
 
 <span class="sd">      in_memory:</span>
-<span class="sd">        Whether you want the engine to process everything in memory.</span>
+<span class="sd">        Whether you want the Engine to process everything in memory.</span>
 
 <span class="sd">      install:</span>
 <span class="sd">        Reinstalls getML, even if it is already installed.</span>
@@ -2878,23 +2878,23 @@ a random hexcode will be generated as the token.</p>
 <span class="sd">        Whether you want to automatically launch your browser.</span>
 
 <span class="sd">      log:</span>
-<span class="sd">        Whether you want the engine log to appear in the logfile (more detailed logging).</span>
-<span class="sd">        The engine log also appears in the &#39;Log&#39; page of the monitor.</span>
+<span class="sd">        Whether you want the Engine log to appear in the logfile (more detailed logging).</span>
+<span class="sd">        The Engine log also appears in the &#39;Log&#39; page of the Monitor.</span>
 
 <span class="sd">      project_directory:</span>
 <span class="sd">        The directory in which to store all of your projects.</span>
 
 <span class="sd">      proxy_url:</span>
-<span class="sd">        The URL of any proxy server that that redirects to the getML monitor.</span>
+<span class="sd">        The URL of any proxy server that that redirects to the getML Monitor.</span>
 
 <span class="sd">      token:</span>
 <span class="sd">        The token used for authentication.</span>
-<span class="sd">        Authentication is required when remote IPs are allowed to access the monitor.</span>
+<span class="sd">        Authentication is required when remote IPs are allowed to access the Monitor.</span>
 <span class="sd">        If authentication is required and no token is passed,</span>
 <span class="sd">        a random hexcode will be generated as the token.&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="n">_is_monitor_alive</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;getML engine is already running.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;getML Engine is already running.&quot;</span><span class="p">)</span>
         <span class="k">return</span>
     <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">!=</span> <span class="n">System</span><span class="o">.</span><span class="n">LINUX</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span>
@@ -2926,7 +2926,7 @@ a random hexcode will be generated as the token.</p>
     <span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">cwd</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">logfile</span><span class="p">,</span> <span class="n">stdin</span><span class="o">=</span><span class="n">logfile</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">logfile</span><span class="p">)</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">_is_monitor_alive</span><span class="p">():</span>
         <span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Launched the getML engine. The log output will be stored in </span><span class="si">{</span><span class="n">log_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Launched the getML Engine. The log output will be stored in </span><span class="si">{</span><span class="n">log_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -2946,7 +2946,7 @@ a random hexcode will be generated as the token.</p>
 
     <div class="doc doc-contents ">
 
-      <p>List all projects on the getML engine.</p>
+      <p>List all projects on the getML Engine.</p>
 
 
 <table>
@@ -2983,7 +2983,7 @@ a random hexcode will be generated as the token.</p>
 <span class="normal">56</span>
 <span class="normal">57</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_projects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    List all projects on the getML engine.</span>
+<span class="sd">    List all projects on the getML Engine.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            Lists the name of all the projects.</span>
@@ -3008,7 +3008,7 @@ a random hexcode will be generated as the token.</p>
 
     <div class="doc doc-contents ">
 
-      <p>List all projects on the getML engine that are currently running.</p>
+      <p>List all projects on the getML Engine that are currently running.</p>
 
 
 <table>
@@ -3045,7 +3045,7 @@ a random hexcode will be generated as the token.</p>
 <span class="normal">69</span>
 <span class="normal">70</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">list_running_projects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    List all projects on the getML engine that are currently running.</span>
+<span class="sd">    List all projects on the getML Engine that are currently running.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        Lists the name of all the projects currently running.</span>
@@ -3071,7 +3071,7 @@ a random hexcode will be generated as the token.</p>
     <div class="doc doc-contents ">
 
       <p>Creates a new project or loads an existing one.</p>
-<p>If there is no project called <code>name</code> present on the engine, a new one will
+<p>If there is no project called <code>name</code> present on the Engine, a new one will
 be created.</p>
 
 
@@ -3114,7 +3114,7 @@ be created.</p>
 <span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">set_project</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Creates a new project or loads an existing one.</span>
 
-<span class="sd">    If there is no project called `name` present on the engine, a new one will</span>
+<span class="sd">    If there is no project called `name` present on the Engine, a new one will</span>
 <span class="sd">    be created.</span>
 
 <span class="sd">    Args:</span>
@@ -3140,7 +3140,7 @@ be created.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Shuts down the getML engine.</p>
+      <p>Shuts down the getML Engine.</p>
 
 
 <details class="note" open>
@@ -3161,7 +3161,7 @@ method will be lost.</p>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">shutdown</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Shuts down the getML engine.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Shuts down the getML Engine.</span>
 
 <span class="sd">    Note:</span>
 <span class="sd">        All changes applied to the [`DataFrame`][getml.DataFrame]</span>

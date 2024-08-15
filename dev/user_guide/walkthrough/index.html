@@ -1752,21 +1752,21 @@ In addition, the <em>getML Monitor,</em> a graphical web interface available in 
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span> <span class="c1">#not needed in docker based installations</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Launched the getML engine. The log output will be stored in</span>
+<span class="sd">Launched the getML Engine. The log output will be stored in</span>
 <span class="sd">/home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 This will import the getML Python API, launch the Engine, and (in the Enterprise edition) the Monitor.</p>
-<p>The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit <a href="http://localhost:1709/" target="_blank" rel="noopener">http://localhost:1709/</a> to open it. From now on, the entire analysis is run from Python.</p>
+<p>The getML Monitor, available in the Enterprise edition, is the frontend to the Engine. It should open automatically by launching the Engine. In case it does not, visit <a href="http://localhost:1709/" target="_blank" rel="noopener">http://localhost:1709/</a> to open it. From now on, the entire analysis is run from Python.</p>
 <p>The entry-point for your project is the <code>getml.project</code> module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a <code>.getml</code> bundle to disk or load a <code>.getml</code> bundle from disk. To see the running projects, you can execute:</p>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">project</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Cannot reach the getML engine. Please make sure you have set a project.</span>
+<span class="sd">Cannot reach the getML Engine. Please make sure you have set a project.</span>
 <span class="sd">To set: `getml.engine.set_project(...)`</span>
 <span class="sd">Available projects:</span>
 <span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
-<p>This message tells us that we have no running engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in <code>~/.getML/projects</code>.</p>
+<p>This message tells us that we have no running Engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in <code>~/.getML/projects</code>.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s2">&quot;getting_started&quot;</span><span class="p">)</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Connected to project &#39;getting_started&#39;</span>
@@ -1896,7 +1896,7 @@ getML bundles the sequential operations of a data science project
 <li><a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.deploy"><code>deploy()</code></a> the pipeline to an http endpoint.</li>
 </ul>
 <h2 id="training">Training</h2>
-<p>When fitting the model, we pass the handlers to the actual data residing in the getML engine – the <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>s.</p>
+<p>When fitting the model, we pass the handlers to the actual data residing in the getML Engine – the <a class="autorefs autorefs-internal" href="../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>s.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -2000,7 +2000,7 @@ getML bundles the sequential operations of a data science project
 <span class="sd">   2.00000000e+00 -3.53700424e-01]]</span>
 <span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
-<p>If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s features are held by the <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features"><code>Features</code></a> container. For example, to inspect the SQL code of the feature with the highest importance, run:
+<p>If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the Monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s features are held by the <a class="autorefs autorefs-internal" href="../../reference/pipeline/features/#getml.pipeline.Features"><code>Features</code></a> container. For example, to inspect the SQL code of the feature with the highest importance, run:
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="n">feature</span><span class="o">.</span><span class="n">importance</span><span class="p">,</span> <span class="n">descending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sql</span>
 </code></pre></div></p>
 <p>That should return something like this:</p>
