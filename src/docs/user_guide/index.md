@@ -45,4 +45,4 @@ Conveniently, it is divided in three levels of detail:
 
 </div>
 
-In addition, you can also check out our [blog articles and case studies](https://www.getml.com/blog) where we share insights from our latest projects. 
+

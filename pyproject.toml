@@ -17,6 +17,7 @@ dependencies = [
   "black~=24.4",
   "mike~=2.1",
   "mkdocs-redirects~=1.2",
-  "mkdocs-jupyter~=0.24.8"
+  "mkdocs-jupyter~=0.24.8",
+  "mkdocs-htmlproofer-plugin~=1.2"
 ]
 python = "3.11"

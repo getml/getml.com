@@ -140,6 +140,14 @@ plugins:
       remove_tag_config:
         remove_cell_tags:
           - remove_cell_on_docs
+  - htmlproofer:
+      enabled: !ENV [ENABLED_HTMLPROOFER, False]
+      raise_error_after_finish: True
+      ignore_urls:
+        - https://static.getml.com/download/1.5.0/*
+        - https://storage.googleapis.com/static.getml.com/download/1.5.0/*
+        - localhost:8080/*
+        - mailto:*
 
 hooks:
   - docs/examples/get_notebooks.py
