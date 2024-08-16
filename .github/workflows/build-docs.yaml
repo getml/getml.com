@@ -18,7 +18,7 @@ jobs:
     environment: dev
     env:
       NOTEBOOKS_INCLUDE: '*.ipynb'
-      ENABLED_HTMLPROOFER: True
+      ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
     steps:
       - name: Checkout getml-docs repo
         uses: actions/checkout@v4
