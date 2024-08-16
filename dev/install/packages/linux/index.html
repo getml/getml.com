@@ -18,7 +18,7 @@
         <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../Docker/">
+        <link rel="next" href="../docker/">
       
       
         
@@ -1002,6 +1002,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Separate installation of Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launching the engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go next
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1028,7 +1056,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../Docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2083,6 +2111,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Separate installation of Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launching the engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go next
+      
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -2186,7 +2242,7 @@
 Install <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">getML Community edition</a> with Python's pip package manager.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">getml</span>
 </code></pre></div>
-The will install both the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> on your Linux machine.</p>
+The will install both the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#python-api">Python API</a> and the <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#engine_1">Engine</a> on your Linux machine. You are done.</p>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise Edition</p>
 <p>Need the highest models accuracy in commercial prediction applications and enterprise grade support?</p>
@@ -2198,8 +2254,8 @@ The will install both the <a class="autorefs autorefs-internal" href="../../../u
 </ul>
 </div>
 <p><a href="" id="separate-installation-of-engine"></a></p>
-<h3 id="separate-installation-of-engine_1">Separate installation of Engine</h3>
-<p>In some cases it might be preferred to install the Engine separately on Linux machines. For example, if you want to use the <a href="../../../enterprise/benefits/">Enterprise edition</a> of the Engine.</p>
+<h2 id="separate-installation-of-engine_1">Separate installation of Engine</h2>
+<p>In some cases, it might be preferred to install the Engine separately on Linux using <a class="autorefs autorefs-internal" href="../../../reference/cli/engine/#command-line-interface">CLI</a>. For example, if you want to use the <a href="../../../enterprise/benefits/">Enterprise edition</a> of the Engine.</p>
 <p>Please execute the following commands, replacing <code>ARCH</code> with either <code>x64</code> or <code>arm64</code>, depending on your architecture.
 If you are unsure, <code>x64</code> is probably the right choice.
 You can also use <code>uname -m</code> to figure out the architecture.
@@ -2213,7 +2269,7 @@ tar<span class="w"> </span>-xzf<span class="w"> </span>getml-1.5.0-ARCH-communit
 <span class="c1"># 3. Change directory </span>
 <span class="nb">cd</span><span class="w"> </span>getml-1.5.0-ARCH-community-edition-linux
 
-<span class="c1"># 4. Install the Engine</span>
+<span class="c1"># 4. Install the Engine using CLI</span>
 ./getML<span class="w"> </span>install
 </code></pre></div>
 <p>The output of the <code>install</code> command will tell you where the Engine has been installed.
@@ -2225,15 +2281,22 @@ Global<span class="w"> </span>installation<span class="w"> </span>failed,<span c
 Installing<span class="w"> </span>getML...
 Successfully<span class="w"> </span>installed<span class="w"> </span>getML<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;/Users/getml/.getML/getml-1.5.0-arm64-community-edition-linux&#39;</span>.
 Installation<span class="w"> </span>successful.<span class="w"> </span>To<span class="w"> </span>be<span class="w"> </span>able<span class="w"> </span>to<span class="w"> </span>call<span class="w"> </span><span class="s1">&#39;getML&#39;</span><span class="w"> </span>from<span class="w"> </span>anywhere,<span class="w"> </span>add<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>path<span class="w"> </span>to<span class="w"> </span>PATH:
-/home/getml/.getML/getml-1.5.0-arm64-community-edition-linux
+/home/user/.getML/getml-1.5.0-arm64-community-edition-linux
 </code></pre></div>
-<p>To run the Engine, execute:
+<h3 id="launching-the-engine">Launching the engine</h3>
+<p>To run the engine, execute:
 <div class="highlight"><pre><span></span><code>./getML
 </code></pre></div></p>
-<p>If the Engine was installed to the user home directory, you can add the installation directory to your PATH if you want to call the getML CLI from anywhere.</p>
+<p>If the Engine was installed to the user home directory, you can add the installation directory to your <code>PATH</code> variable if you want to call the getML <a class="autorefs autorefs-internal" href="../../../reference/cli/engine/#command-line-interface">CLI</a> from anywhere.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/path/to/getml-1.5.0-ARCH-community-edition-linux
 </code></pre></div>
 <p>To make the changes permanent, you will have to add the line to your <code>.bashrc</code> or <code>.bash_profile</code> file. </p>
+<h2 id="where-to-go-next">Where to go next</h2>
+<p>To get started with getML, you may check out:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../../user_guide/#user-guide">User Guide</a>, which provides a comprehensive introduction to getML at varying levels of detail</li>
+<li><a class="autorefs autorefs-internal" href="../../../examples/#community-edition-notebooks">Examples</a>, where we demonstrate practical examples inside Jupyter Notebooks</li>
+</ul>
 
 <!-- Source file information -->
 

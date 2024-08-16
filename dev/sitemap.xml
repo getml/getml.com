@@ -266,12 +266,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/install/packages/Docker/</loc>
+         <loc>https://dev.getml.com/latest/install/packages/archive/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/latest/install/packages/archive/</loc>
+         <loc>https://dev.getml.com/latest/install/packages/docker/</loc>
          <lastmod>2024-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

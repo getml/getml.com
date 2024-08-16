@@ -2655,16 +2655,15 @@
 <h1 id="command-line-interface">Command Line Interface</h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You do not need to launch getML with the command line if you are using <a class="autorefs autorefs-internal" href="../../engine/engine/#getml.engine.launch">getml.engine.launch()</a>.</p>
+<p>You do not need to launch getML Engine with the command line if you installed getML Suite using <code>pip</code> on Linux. You can execute <a class="autorefs autorefs-internal" href="../../engine/engine/#getml.engine.launch">getml.engine.launch()</a> inside Python code to launch the Engine.</p>
 </div>
-<p>getML can be launched via the command line. The command line interface is called <code>getML</code> on Linux, <code>getml-cli</code> on macOS, and <code>getML.exe</code> on Windows.</p>
-<p>Refer to the <a class="autorefs autorefs-internal" href="../../../install/#installation">installation section</a>, for instructions on how to set up 
-the command line interface.</p>
+<p>On Linux, getML Engine can also <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#separate-installation-of-engine_1">installed and used via the command line interface (CLI)</a> called <code>getML</code>.</p>
 <p>Some parameters can be set via command line flags. If you do not explicitly set them,
 the values from your <em>config.json</em> are taken instead. The <em>config.json</em> is located 
-in <code>$HOME/.getML/getml-VERSION</code> on Linux and macOS. On Windows, it is located in the 
-same directory as <code>getML.exe</code>. The most elegant way to edit your config.json is via 
-the configuration view in the getML <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#monitor_1">Monitor</a>:</p>
+in <code>$HOME/.getML/getml-VERSION</code>. For <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">Enterprise edition</a> users, 
+the most elegant way to edit your config.json is via 
+the configuration view in the getML <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/getml_suite/#monitor_1">Monitor</a>. Community edition users can edit 
+the file via a text editor.</p>
 <p>The help menu can also be displayed by passing the flag <code>-help</code> or <code>-h</code>. The default values displayed in the help menu are the values in the <em>config.json</em> (therefore, they are not hard-coded).</p>
 <div class="highlight"><pre><span></span><code>usage: ./getML &lt;command&gt; [&lt;args&gt;] or ./getML [&lt;args&gt;].
 </code></pre></div>
@@ -2672,30 +2671,38 @@ the configuration view in the getML <a class="autorefs autorefs-internal" href="
  run        Runs getML. Type &quot;./getML -h&quot; or &quot;./getML run -h&quot; to display the arguments. &quot;run&quot; is executed by default.
  install    Installs getML.
  stop       Stops a running instance of getML. Type &quot;./getML stop -h&quot; to display the arguments.
- uninstall  Uninstalls getml-0.14-beta-macos.
- version    Prints the version (getml-0.14-beta-macos).
+ uninstall  Uninstalls getML
+ version    Prints the version of getML (getml-VERSION-ARCH-PLATFORM)
 </code></pre></div>
 <p><div class="highlight"><pre><span></span><code>Usage of run:
   -allow-push-notifications
         Whether you want to allow the getML Monitor to send push notifications to your desktop. (default true)
-  -http-port int
-        The local port of the getML Monitor. This port can only be accessed from your local computer. (default 1709)
+  -allow-remote-ips
+        Whether you want to allow remote IPs to access the http-port.
+  -home-directory string
+        The directory which should be treated as the home directory by getML. getML will create a hidden folder named &#39;.getML&#39; in said directory. This is where the binaries are installed, if the install process does not have root rights. (default &quot;/root&quot;)
   -https-port int
-        The remote and encrypted port of the getML Monitor. This port can be accessed remotely, but it is encrypted. (default 1710)
+        The local port of the getML Monitor. This port can only be accessed from your local computer, unless you set allow-remote-ips=True. (default 1709)
+  -in-memory
+        Whether you want the Engine to process everything in memory. (default true)
   -install
-        Installs getml-0.14-beta-macos, even if it is already installed.
+        Installs getML, even if it is already installed. (default true)
   -launch-browser
         Whether you want to automatically launch your browser. (default true)
+  -log
+        Whether you want the Engine log to appear in the command line. The Engine log also appears in the &#39;Log&#39; page of the monitor.
   -project-directory string
-        The directory in which to store all of your projects. (default &quot;~/.getML/getml-0.14-beta-macos/projects&quot;)
+        The directory in which to store all of your projects. (default &quot;~/.getML/projects&quot;)
   -proxy-url string
         The URL of any proxy server that that redirects to the getML Monitor.
   -tcp-port int
         Local TCP port which serves as the communication point for the Engine. This port can only be accessed from your local computer. (default 1711)
+  -token string
+        The token used for authentication. Authentication is required when remote IPs are allowed to access the monitor. If authentication is required and no token is passed, a random hexcode will be generated as the token.
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Usage of stop:
   -tcp-port int
-        The TCP port of the getML instance you would like to stop. (default 1711)
+      The TCP port of the getML instance you would like to stop. (default 1711)
 </code></pre></div></p>
 
 <!-- Source file information -->

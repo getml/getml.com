@@ -2505,18 +2505,20 @@
 <h2 id="engine_1">Engine</h2>
 <p>Written in C++, the getML Engine is the core of the Suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.</p>
 <h3 id="starting-the-engine">Starting the Engine</h3>
-<p>After <a class="autorefs autorefs-internal" href="../../../install/#installation">installing the getML Engine</a>, either via <code>pip</code>, <code>Docker</code> or <code>CLI</code> there are two ways to start the getML Engine:</p>
+<p>Depending on the method used for the <a class="autorefs autorefs-internal" href="../../../install/#installation">installation of getML Suite</a>, the Engine can be started by executing:</p>
 <ul>
-<li>Using the <a class="autorefs autorefs-internal" href="#python-api">Python API</a></li>
-<li>Using the getML <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#separate-installation-of-engine_1">command-line interface (CLI)</a></li>
+<li><code>getml.engine.launch()</code> in the <a class="autorefs autorefs-internal" href="#python-api">Python API</a> for the <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#installation-linux">pip-based installation</a></li>
+<li><code>./getML</code> in terminal for <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#separate-installation-of-engine_1">CLI-based installation</a></li>
+<li><code>docker compose up</code> in terminal for <a class="autorefs autorefs-internal" href="../../../install/packages/docker/#docker-for-macos-windows-linux">docker-based installation</a></li>
 </ul>
-<p>Follow the links to learn more about each method.</p>
+<p>Follow the links to learn more about each method. </p>
 <h3 id="shutting-down-the-engine">Shutting down the Engine</h3>
 <p>Depending on how you started the Engine, there are different ways to shut it down:</p>
 <ul>
 <li>In the Python API: <code>getml.engine.shutdown()</code></li>
-<li>Click the '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3m4.83 2.17-1.42 1.42A6.944 6.944 0 0 1 19 12a7 7 0 0 1-7 7A6.995 6.995 0 0 1 7.58 6.58L6.17 5.17a9.001 9.001 0 0 0-1.03 12.69c3.22 3.78 8.9 4.24 12.69 1.02A9.003 9.003 0 0 0 21 12c0-2.63-1.16-5.13-3.17-6.83Z"/></svg></span> Shutdown' tab in the sidebar of the Monitor</li>
 <li>On command-line interface (CLI): Press <code>Ctrl-C</code> or run <code>getML -stop</code></li>
+<li>For a docker container: Press <code>Ctrl-C</code></li>
+<li>Click the '<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3m4.83 2.17-1.42 1.42A6.944 6.944 0 0 1 19 12a7 7 0 0 1-7 7A6.995 6.995 0 0 1 7.58 6.58L6.17 5.17a9.001 9.001 0 0 0-1.03 12.69c3.22 3.78 8.9 4.24 12.69 1.02A9.003 9.003 0 0 0 21 12c0-2.63-1.16-5.13-3.17-6.83Z"/></svg></span> Shutdown' tab in the sidebar of the monitor (Enterprise edition).</li>
 </ul>
 <h3 id="logging">Logging</h3>
 <p>The Engine keeps a log about what it is currently doing.</p>

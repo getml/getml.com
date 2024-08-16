@@ -12,7 +12,7 @@
         <meta name="author" content="Code17 GmbH">
       
       
-        <link rel="canonical" href="https://dev.getml.com/latest/install/packages/Docker/">
+        <link rel="canonical" href="https://dev.getml.com/latest/install/packages/docker/">
       
       
         <link rel="prev" href="../linux/">
@@ -1053,6 +1053,17 @@
     <span class="md-ellipsis">
       
         Engine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go next
       
     </span>
   </a>
@@ -2113,6 +2124,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#where-to-go-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to go next
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2232,8 +2254,14 @@
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://raw.githubusercontent.com/getml/getml-community/1.5.0/runtime/docker-compose.yml<span class="w"> </span><span class="p">|</span><span class="w"> </span>docker-compose<span class="w"> </span>up<span class="w"> </span>-f<span class="w"> </span>-
 </code></pre></div>
 <p>This will download <code>docker-compose.yml</code> configuration file and use <code>docker compose</code> to run a getML service.</p>
-<p>In addition, a local directory <code>getml</code> will be created if it doesn't exist and mounted into the container. This directory will contain the files of projects. The ports required for the Python API to communicate with the Engine will be mapped to the host system.</p>
+<p>In addition, a docker volume <code>getml</code> will be created and mounted into the container. This volume will contain the files of projects. The ports required for the Python API to communicate with the Engine will be mapped to the host system.</p>
 <p>To shut down the service after you are done, press <code>Ctrl+c</code>.</p>
+<h2 id="where-to-go-next">Where to go next</h2>
+<p>To get started with getML, you may check out:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../../user_guide/#user-guide">User Guide</a>, which provides a comprehensive introduction to getML at varying levels of detail</li>
+<li><a class="autorefs autorefs-internal" href="../../../examples/#community-edition-notebooks">Examples</a>, where we demonstrate practical examples inside Jupyter Notebooks</li>
+</ul>
 
 <!-- Source file information -->
 
