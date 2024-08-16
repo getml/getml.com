@@ -16,7 +16,7 @@ Both our [Community](https://github.com/getml/getml-community) and [Enterprise](
 
 ## Linux
 
-Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [Engine][engine].
+Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [Engine][engine] on Linux natively.
 
 [Read the Linux install guide](packages/linux.md){ .md-button .md-button--primary }
 
@@ -24,7 +24,7 @@ Use Python's `pip` package manager to install both the [Python API][getml-suite-
 
 Setup a Docker container to run the [Engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`.
 
-[Read the Docker install guide](packages/Docker.md){ .md-button .md-button--primary }
+[Read the Docker install guide](packages/docker.md){ .md-button .md-button--primary }
 
 
 ## From source

@@ -18,20 +18,22 @@ Written in C++, the getML Engine is the core of the Suite and does all the heavy
 
 ### Starting the Engine
 
-After [installing the getML Engine][installation], either via `pip`, `Docker` or `CLI` there are two ways to start the getML Engine:
+Depending on the method used for the [installation of getML Suite][installation], the Engine can be started by executing:
 
-- Using the [Python API][python-api]
-- Using the getML [command-line interface (CLI)][separate-installation-of-engine]
+- `getml.engine.launch()` in the [Python API][getml-suite-python-api] for the [pip-based installation][installation-linux]
+- `./getML` in terminal for [CLI-based installation][separate-installation-of-engine]
+-  `docker compose up` in terminal for [docker-based installation][macos-windows-docker]
 
-Follow the links to learn more about each method.
+Follow the links to learn more about each method. 
 
 ### Shutting down the Engine
 
 Depending on how you started the Engine, there are different ways to shut it down:
 
 - In the Python API: `getml.engine.shutdown()`
-- Click the ':material-power-standby: Shutdown' tab in the sidebar of the Monitor
 - On command-line interface (CLI): Press `Ctrl-C` or run `getML -stop`
+- For a docker container: Press `Ctrl-C`
+- Click the ':material-power-standby: Shutdown' tab in the sidebar of the monitor (Enterprise edition).
 
 ### Logging
 
