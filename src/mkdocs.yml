@@ -132,7 +132,6 @@ plugins:
   - mike:
       canonical_version: latest
       alias_type: symlink
-
   - mkdocs-jupyter:
       ignore_h1_titles: True
       include_source: True

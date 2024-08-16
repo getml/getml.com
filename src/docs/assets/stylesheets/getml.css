@@ -1016,7 +1016,8 @@ nav.md-tabs {
     margin: .2rem;
     padding-left: .4rem;
     padding-right: .4rem;
-    /* font-weight: bold; */
+    font-weight: bold;
+
     /* opacity: 0.7; */
     color: var(--md-default-fg-color--light);
 }
@@ -1115,7 +1116,6 @@ nav.md-tabs {
 
 
 /* } */
-
 
 /* Join widget */
 
@@ -1287,10 +1287,6 @@ a.md-banner__static_link {
     }
 }
 
-
-
-
-
 /* Hide "Home >" from Navigation Path */
 nav.md-path li.md-path__item:first-child {
     display: none;
@@ -1299,5 +1295,3 @@ nav.md-path li.md-path__item:first-child {
 nav.md-path li.md-path__item:nth-child(2)::before {
     display: none;
 }
-
-
