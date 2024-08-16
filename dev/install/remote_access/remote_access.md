@@ -18,7 +18,7 @@ To run the getML software on a remote server, you should ensure the following:
 
 ### Remote Installation
 
-If all conditions are met, download the Linux version of the getML Suite from [getml.com](https://www.getml.com/download) and copy it to the remote server.
+If all conditions are met, download the Linux version of the getML Suite from [archives](packages/archive.md) and copy it to the remote server.
 ```bash
 scp getml-VERSION-linux.tar.gz USER@IP:
 ```
