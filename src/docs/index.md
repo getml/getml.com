@@ -80,21 +80,21 @@ getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 </center>
 
 
-## The better solution for predictive analytics on enterprise data {.h2-l .center-lg .mb-1-lg}
+## The better solution for predictive analytics on your enterprise data {.h2-l .center-lg .mb-1-lg}
 
 /// html | div.grid.cards.cards-lead.cards-clear.mb-3-lg
 
 -   <span class="top">getML is</span>
     <span class="focus">easy to use</span>
-    <span class="sub">helping you deliver<br class="show-lg"> better models faster</span>
+    <span class="sub">helping you deliver<br class="show-lg">better models faster</span>
 
--   <span class="top">Delivers</span>
+-   <span class="top">Delivered</span>
     <span class="focus">10x</span>
-    <span class="sub">speedup in<br class="show-lg"> customer projects</span>
+    <span class="sub">speedup in<br class="show-lg">customer projects</span>
 
--   <span class="top">Increases of</span>
-    <span class="focus">30%</span>
-    <span class="sub">in prediction accuracy compared<br class="show-lg"> to baseline models</span>
+-   <span class="top">Up to</span>
+    <span class="focus">65%</span>
+    <span class="sub">gain in prediction accuracy<br class="show-lg">over baseline models</span>
 
 ///
 

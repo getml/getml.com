@@ -27,19 +27,20 @@ pipeline.fit(data_container.train) # (5)!
 pipeline.predict(data_container.test)
 ```
 
-1.  [`FastProp`][feature-engineering-algorithms-fastprop]{ data-preview_ } comes with our [Community](https://github.com/getml/getml-community) edition. It is fast and generates a substantial number of important features based on simple aggregations.
+1.  [`FastProp`][feature-engineering-algorithms-fastprop]{ data-preview } comes with our [Community](https://github.com/getml/getml-community) edition. It is fast and generates a substantial number of important features based on simple aggregations.
 
-2.  [`Relboost`][feature-engineering-algorithms-relboost]{ data-preview_ } is part our [Enterprise][enterprise-benefits] edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.
+2.  [`Relboost`][feature-engineering-algorithms-relboost]{ data-preview } is part our [Enterprise][enterprise-benefits] edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.
 
-3. [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor]{ data-preview_ } is our memory-mapped predictor that can handle big datasets that do not fit into memory.
+3. [`ScaleGBMRegressor`][getml.predictors.ScaleGBMRegressor]{ data-preview } is our memory-mapped predictor that can handle big datasets that do not fit into memory.
 
-4. [`Pipeline`][getml.pipeline.Pipeline]{ data-preview_ } bundles together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's `fit` is called next.
+4. [`Pipeline`][getml.pipeline.Pipeline]{ data-preview } bundles together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's `fit` is called next.
 
-5. Inspired by libraries like `scikit-learn`, the [`fit()`][getml.pipeline.Pipeline.fit]{ data-preview_ }, [`score()`][getml.pipeline.Pipeline.score]{ data-preview_ }, and [`predict()`][getml.pipeline.Pipeline.predict]{ data-preview_ } methods of a pipeline make the machine learning process a breeze.
+5. Inspired by libraries like `scikit-learn`, the [`fit()`][getml.pipeline.Pipeline.fit]{ data-preview }, [`score()`][getml.pipeline.Pipeline.score]{ data-preview }, and [`predict()`][getml.pipeline.Pipeline.predict]{ data-preview } methods of a pipeline make the machine learning process a breeze.
 
-6. [`Container`][getml.data.Container]{ data-preview_ } holds data that is assigned to any given data model.
+6. [`Container`][getml.data.Container]{ data-preview } holds data and train-test-validation split, reliably ensuring reproducibility.
 
-7. [`StarSchema`][getml.data.StarSchema]{ data-preview_ } is one of our go-to data model abstractions that covers the vast majority of relational data use cases.
+7. [`StarSchema`][getml.data.StarSchema]{ data-preview } captures population tables and their adjacent peripheral tables and is our go-to data model abstraction. 
+In contrast, unlimited relationship complexity can be modelled with [`Placeholder`][getml.data.Placeholder]{ data-preview }.
 
 /// html | div.hidden
 To find the best set of aggregation functions and conditions, getML’s supervised learning algorithms perform an iterative, tree-based search inside relational data. This allows for the automatic generation of complex features for a given target variable on a scale and accuracy that no manual or brute-force approach can match.
