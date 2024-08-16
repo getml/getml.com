@@ -54,7 +54,7 @@ Global installation failed, most likely due to missing root rights. Trying local
 Installing getML...
 Successfully installed getML into '/Users/getml/.getML/getml-1.5.0-arm64-community-edition-linux'.
 Installation successful. To be able to call 'getML' from anywhere, add the following path to PATH:
-/home/getml/.getML/getml-1.5.0-arm64-community-edition-linux
+/home/user/.getML/getml-1.5.0-arm64-community-edition-linux
 ```
 
 ### Launching the engine

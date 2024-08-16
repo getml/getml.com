@@ -49,7 +49,7 @@ Usage of run:
   -log
     	Whether you want the Engine log to appear in the command line. The Engine log also appears in the 'Log' page of the monitor.
   -project-directory string
-    	The directory in which to store all of your projects. (default "/root/.getML/projects")
+    	The directory in which to store all of your projects. (default "~/.getML/projects")
   -proxy-url string
     	The URL of any proxy server that that redirects to the getML Monitor.
   -tcp-port int
