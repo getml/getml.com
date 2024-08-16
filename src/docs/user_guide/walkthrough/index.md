@@ -44,26 +44,26 @@ print(f"getML API version: {getml.__version__}\n")
 getml.engine.launch() #not needed in docker based installations
 
 """
-Launched the getML engine. The log output will be stored in
+Launched the getML Engine. The log output will be stored in
 /home/xxxxx/.getML/logs/xxxxxxxxxxxxxx.log.
 """
 ```
 This will import the getML Python API, launch the Engine, and (in the Enterprise edition) the Monitor.
 
-The getML Monitor, available in the Enterprise edition, is the frontend to the engine. It should open automatically by launching the engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python.
+The getML Monitor, available in the Enterprise edition, is the frontend to the Engine. It should open automatically by launching the Engine. In case it does not, visit [http://localhost:1709/](http://localhost:1709/) to open it. From now on, the entire analysis is run from Python.
 
 The entry-point for your project is the `getml.project` module. From here, you can start projects and control running projects. Further, you have access to all project-specific entities, and you can export a project as a ``.getml`` bundle to disk or load a ``.getml`` bundle from disk. To see the running projects, you can execute:
 
 ```python
 getml.project
 """
-Cannot reach the getML engine. Please make sure you have set a project.
+Cannot reach the getML Engine. Please make sure you have set a project.
 To set: `getml.engine.set_project(...)`
 Available projects:
 """
 ```
 
-This message tells us that we have no running engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in ``~/.getML/projects``.
+This message tells us that we have no running Engine instance because we have not set a project. So, we follow the advice and create a new project. All datasets and models belonging to a project will be stored in ``~/.getML/projects``.
 
 ```python
 
@@ -226,7 +226,7 @@ Now, that we have defined a [`Pipeline`][getml.pipeline.Pipeline], we can let ge
 
 ## Training
 
-When fitting the model, we pass the handlers to the actual data residing in the getML engine – the [`DataFrame`][getml.data.DataFrame]s.
+When fitting the model, we pass the handlers to the actual data residing in the getML Engine – the [`DataFrame`][getml.data.DataFrame]s.
 
 
 ```python
@@ -349,7 +349,7 @@ FastProp: Building features... 100% ━━━━━━━━━━━━━━�
 """
 ```
 
-If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of the feature with the highest importance, run:
+If you want to see a SQL transpilation of a feature's logic, you can do so by clicking on the feature in the Monitor (Enterprise edition only) or by inspecting the sql attribute on a feature. A [`Pipeline`][getml.pipeline.Pipeline]'s features are held by the [`Features`][getml.pipeline.Features] container. For example, to inspect the SQL code of the feature with the highest importance, run:
 ```python
 pipe.features.sort(key=lambda feature: feature.importance, descending = True)[0].sql
 ```

@@ -9,20 +9,20 @@ getML is available for Python 3.8 to 3.12 and supported on the following 64-bit 
 - macOS (amd64/arm) via docker
 - Windows (amd64/arm) via docker
 
-The [getML Suite][getml-suite] comprises of [Python API][getml-suite-python-api], [engine][] and [monitor][]. The monitor is shipped along with the engine.
+The [getML Suite][getml-suite] is comprised of [Python API][getml-suite-python-api], [Engine][engine] and [Monitor][monitor]. The Monitor is shipped along with the Engine.
 
-Both our [community](https://github.com/getml/getml-community) and [enterprise](../enterprise/benefits.md) editions use the same Python API.
+Both our [Community](https://github.com/getml/getml-community) and [Enterprise](../enterprise/benefits.md) editions use the same Python API.
 
 
 ## Linux
 
-Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [engine][] on Linux natively.
+Use Python's `pip` package manager to install both the [Python API][getml-suite-python-api] and the [Engine][engine] on Linux natively.
 
 [Read the Linux install guide](packages/linux.md){ .md-button .md-button--primary }
 
 ## macOS, Windows & Linux
 
-Setup a Docker container to run the [engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`.
+Setup a Docker container to run the [Engine][engine]. Install the [Python API][getml-suite-python-api] with `pip`.
 
 [Read the Docker install guide](packages/docker.md){ .md-button .md-button--primary }
 
@@ -33,9 +33,9 @@ Install the Python API from source.
 
 [Read the API install guide](source/python-api.md){ .md-button .md-button--primary }
 
-Build engine and the API from source.
+Build Engine and the API from source.
 
-[Read the engine & API build guide](source/build.md){ .md-button .md-button--primary }
+[Read the Engine & API build guide](source/build.md){ .md-button .md-button--primary }
 
 
 

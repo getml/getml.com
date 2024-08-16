@@ -4,7 +4,7 @@
 
 !!! warning "Project data might be deleted"
 
-    If you have not [installed the engine separately][separate-installation-of-engine] and have not set the home directory to a custom location on the engine launch, projects data will be deleted when you uninstall the Python API.
+    If you have not [installed the Engine separately][separate-installation-of-engine] and have not set the home directory to a custom location on the Engine launch, project data will be deleted when you uninstall the Python API.
 
 To uninstall the Python API, execute the following command in a terminal:
 
@@ -16,7 +16,7 @@ pip uninstall getml
 
 !!! warning "Project data might be deleted"
 
-    If you have not set the home directory to a custom location on the engine launch, projects data will be deleted when you remove the `.getML` directory.
+    If you have not set the home directory to a custom location on the Engine launch, project data will be deleted when you remove the `.getML` directory.
 
 You will have to remove the folder `.getML` from your home directory. In a terminal, execute: 
 ```bash

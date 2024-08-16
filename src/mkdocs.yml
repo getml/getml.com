@@ -134,7 +134,7 @@ plugins:
       alias_type: symlink
 
   - mkdocs-jupyter:
-      ignore_h1_titles: False
+      ignore_h1_titles: True
       include_source: True
       include: [!ENV [NOTEBOOKS_INCLUDE, "None"]]
       ignore: ["*.py"]
@@ -144,6 +144,14 @@ plugins:
 
 hooks:
   - docs/examples/get_notebooks.py
+
+# Allows to use absolute links (relative to the docs folder)
+# e.g. [Enterprise edition](/enterprise/benefits.md)
+validation:
+  links:
+    absolute_links: relative_to_docs
+    anchors: warn
+    unrecognized_links: warn
 
 # Additional configuration
 extra:
@@ -264,7 +272,7 @@ nav:
       - Docker: install/packages/docker.md
     - From source:
       - Install API: install/source/python-api.md
-      - Build engine & API: install/source/build.md
+      - Build Engine & API: install/source/build.md
     - Uninstall:
       - Any platform: install/uninstall.md
     - Archive:
@@ -365,46 +373,45 @@ nav:
     - examples/index.md
     - Demo Notebooks:
       - Community Edition:
-        - examples/getml-community/index.md
-        - AdventureWorks: examples/getml-community/adventure_works.ipynb
-        - Formula 1: examples/getml-community/formula1.ipynb
-        - Interstate94: examples/getml-community/interstate94.ipynb
-        - Loans: examples/getml-community/loans.ipynb
-        - Robot: examples/getml-community/robot.ipynb
-        - Seznam: examples/getml-community/seznam.ipynb
-
+        - examples/community-notebooks/index.md
         - Benchmarks:
-          - examples/getml-demo/fastprop_benchmark/index.md
-          - Air Pollution: examples/getml-demo/fastprop_benchmark/air_pollution_prop.ipynb
-          - Dodgers: examples/getml-demo/fastprop_benchmark/dodgers_prop.ipynb
-          - Interstate94: examples/getml-demo/fastprop_benchmark/interstate94_prop.ipynb
-          - Occupancy: examples/getml-demo/fastprop_benchmark/occupancy_prop.ipynb
-          - Robot: examples/getml-demo/fastprop_benchmark/robot_prop.ipynb
+          - examples/enterprise-notebooks/fastprop_benchmark/index.md
+          - air_pollution_prop.ipynb <span>Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb
+          - dodgers_prop.ipynb <span>Traffic volume prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb
+          - interstate94_prop.ipynb <span>Multivariate time series prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb
+          - occupancy_prop.ipynb <span>A multivariate time series example</span> : examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop.ipynb
+          - robot_prop.ipynb <span>Feature engineering on sensor data</span> : examples/enterprise-notebooks/fastprop_benchmark/robot_prop.ipynb
+        - adventure_works.ipynb <span>Predicting customer churn</span> : examples/community-notebooks/adventure_works.ipynb
+        - formula1.ipynb <span>Predicting the winner of a race</span> : examples/community-notebooks/formula1.ipynb
+        - interstate94.ipynb <span>Multivariate time series prediction</span> : examples/community-notebooks/interstate94.ipynb
+        - loans.ipynb <span>Predicting loan default risk</span> : examples/community-notebooks/loans.ipynb
+        - robot.ipynb <span>Feature engineering on sensor data</span> : examples/community-notebooks/robot.ipynb
+        - seznam.ipynb <span>Predicting transaction volume</span> : examples/community-notebooks/seznam.ipynb
 
       - Enterprise Edition:
-        - examples/getml-demo/index.md
-        - AdventureWorks: examples/getml-demo/adventure_works.ipynb
-        - Air Pollution: examples/getml-demo/air_pollution.ipynb
-        - Atherosclerosis: examples/getml-demo/atherosclerosis.ipynb
-        - Baseball: examples/getml-demo/baseball.ipynb
-        - Consumer Expenditures: examples/getml-demo/consumer_expenditures.ipynb
-        - CORA: examples/getml-demo/cora.ipynb
-        - Dodgers: examples/getml-demo/dodgers.ipynb
-        - Formula 1: examples/getml-demo/formula1.ipynb
-        - IMDb: examples/getml-demo/imdb.ipynb
-        - Interstate94: examples/getml-demo/interstate94.ipynb
-        - Loans: examples/getml-demo/loans.ipynb
-        - Movie Lens: examples/getml-demo/movie_lens.ipynb
-        - Occupancy: examples/getml-demo/occupancy.ipynb
-        - Online Retail: examples/getml-demo/online_retail.ipynb
-        - Robot: examples/getml-demo/robot.ipynb
-        - Seznam: examples/getml-demo/seznam.ipynb
-        - SFscores: examples/getml-demo/sfscores.ipynb
-        - Stats: examples/getml-demo/stats.ipynb
+        - examples/enterprise-notebooks/index.md
+        - adventure_works.ipynb <span>Predicting customer churn</span> : examples/enterprise-notebooks/adventure_works.ipynb
+        - air_pollution.ipynb <span>Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/air_pollution.ipynb
+        - atherosclerosis.ipynb <span>Disease lethality prediction</span> : examples/enterprise-notebooks/atherosclerosis.ipynb
+        - baseball.ipynb <span>Predicting players' salary</span> : examples/enterprise-notebooks/baseball.ipynb
+        - consumer_expenditures.ipynb <span>Why relational learning matters</span> : examples/enterprise-notebooks/consumer_expenditures.ipynb
+        - cora.ipynb <span>Categorizing academic publications</span> : examples/enterprise-notebooks/cora.ipynb
+        - dodgers.ipynb <span>Traffic volume prediction</span> : examples/enterprise-notebooks/dodgers.ipynb
+        - formula1.ipynb <span>Predicting the winner of a race</span> : examples/enterprise-notebooks/formula1.ipynb
+        - imdb.ipynb <span>Predicting actors' gender</span> : examples/enterprise-notebooks/imdb.ipynb
+        - interstate94.ipynb <span>Multivariate time series prediction</span> : examples/enterprise-notebooks/interstate94.ipynb
+        - loans.ipynb <span>Predicting loan default risk</span> : examples/enterprise-notebooks/loans.ipynb
+        - movie_lens.ipynb <span>Predicting a user's gender based on the movies they have watched</span> : examples/enterprise-notebooks/movie_lens.ipynb
+        - occupancy.ipynb <span>A multivariate time series example</span> : examples/enterprise-notebooks/occupancy.ipynb
+        - online_retail.ipynb <span>Predicting order cancellations</span> : examples/enterprise-notebooks/online_retail.ipynb
+        - robot.ipynb <span>Feature engineering on sensor data</span> : examples/enterprise-notebooks/robot.ipynb
+        - seznam.ipynb <span>Predicting transaction volume</span> : examples/enterprise-notebooks/seznam.ipynb
+        - sfscores.ipynb <span>Predicting health inspection scores of restaurants</span> : examples/enterprise-notebooks/sfscores.ipynb
+        - stats.ipynb <span>Predicting users' reputations</span> : examples/enterprise-notebooks/stats.ipynb
 
     - Integrations:
-      - FastAPI: examples/fastapi/fastapi.md
-      - VertexAI: examples/vertexai/vertexai.ipynb
+      - FastAPI: examples/integrations/fastapi/fastapi.md
+      - vertexai.ipynb <span>getML on Vertex AI</span> : examples/integrations/vertexai/vertexai.ipynb
 
   - About:
     - Company: about/company.md

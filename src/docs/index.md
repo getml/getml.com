@@ -14,7 +14,7 @@ hide:
 </center>
 
 
-# Your <span class="accent">ML suite</span> for relational <br>and time-series data. {: .h1-lg }
+# Your <span class="accent">ML Suite</span> for relational <br>and time-series data. {: .h1-lg }
 
 getML Relational Learning unlocks a 10x speed-up potential and superior model performance. <br class="show-lg">
 A game changer in predictive applications for enterprise applications.
@@ -69,7 +69,7 @@ A game changer in predictive applications for enterprise applications.
 
 getML introduces new ML algorithms that <span class="impact">empower data scientists to achieve superior model performance</span> without the burden of manual feature engineering and building complex feature pipelines.
 
-By generalizing gradient boosting to multi-relational decision trees, getML <span class="impact">brings supervised learning to raw relational data</span>, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
+By generalizing gradient boosting to multi-relational decision trees, getML <span class="impact">brings supervised learning to raw relational data</span>, enabling end-to-end prediction pipelines. The getML Suite provides an easy to use Python API, adhering to modern standards.
 
 getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used across industries, from finance and manufacturing to healthcare</span> and beyond.
 

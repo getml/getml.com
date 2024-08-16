@@ -6,13 +6,13 @@ title: Importing Data
 # Importing data
 
 Before being able to analyze and process your data using the getML Suite,
-you have to import it into the engine. At the end of this step, you will have
-your data in data frame objects in the getML engine and will be ready to
+you have to import it into the Engine. At the end of this step, you will have
+your data in data frame objects in the getML Engine and will be ready to
 [annotate them][annotating-data].
 
 !!! note
 
-    If you have imported your data into the engine before and want to restore it,
+    If you have imported your data into the Engine before and want to restore it,
     refer to [Python API: DataFrame][python-api-lifecycles]
 
 [](){#importing-data-unified-interface}
@@ -23,7 +23,7 @@ similar arguments and resulting in the same output format, regardless
 of the data source.
 
 You can use one of the dedicated class methods (e.g. [`from_csv()`][getml.data.DataFrame.from_csv]) 
-to construct a data frame object in the getML engine, fill it with the provided data, and retrieve 
+to construct a data frame object in the getML Engine, fill it with the provided data, and retrieve 
 a [`DataFrame`][getml.data.DataFrame] handle in the Python API.
 
 !!! example
@@ -45,7 +45,7 @@ All those functions also have their counterparts for exporting (e.g. [`to_csv()`
 
 The resulting [`DataFrame`][getml.data.DataFrame] instance in the Python
 API represents a handle to the corresponding data frame object in the
-getML engine. The mapping between the two is done based on
+getML Engine. The mapping between the two is done based on
 the name of the object, which has to be unique. Similarly, the names of 
 the [`columns`][getml.data.columns] are required to be
 unique within the data frame they are associated with.
@@ -72,7 +72,7 @@ well as at all occurrences of `None` and `NaN`.
 [](){#csv}
 ### **CSV**
 
-The fastest way to import data into the getML engine is to read it
+The fastest way to import data into the getML Engine is to read it
 directly from CSV files.
 
 Import from CSV
@@ -103,12 +103,12 @@ Export to Pandas
 In addition to reading data from a `pandas.DataFrame`, you can also write an existing [`DataFrame`][getml.data.DataFrame] back into a `pandas.DataFrame` using [`DataFrame.to_pandas()`][getml.data.DataFrame.to_pandas]. 
 
 !!! note
-    Due to the way data is stored within the getML engine, the dtypes of the original `pandas.DataFrame` cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.
+    Due to the way data is stored within the getML Engine, the dtypes of the original `pandas.DataFrame` cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.
 
 [](){#json}
 ### **JSON**
 
-A convenient but slow way to import data into the getML engine via its Python API.
+A convenient but slow way to import data into the getML Engine via its Python API.
 
 Import from JSON
 
@@ -145,7 +145,7 @@ You can also write your results back into the SQLite3 database. By providing a n
 ### **MySQL**
 
 [MySQL](https://www.mysql.com) is one of the most popular databases in use today. It 
-can be connected to the getML engine using the function [`connect_mysql()`][getml.database.connect_mysql.connect_mysql]. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
+can be connected to the getML Engine using the function [`connect_mysql()`][getml.database.connect_mysql.connect_mysql]. But first, make sure your database is running, you have the corresponding hostname, port as well as your user name and password ready, and you can reach it from via your command line.
 
 If you are unsure which port or socket your MySQL is running on, you can start the `mysql` command line interface
 ```bash
@@ -173,7 +173,7 @@ You can also write your results back into the MySQL database. By providing a nam
 ### **MariaDB**
 
 [MariaDB](https://mariadb.org/) is a popular open source fork of MySQL. It can be
-connected to the getML engine using the function
+connected to the getML Engine using the function
 [`connect_mariadb()`][getml.database.connect_mariadb.connect_mariadb]. But first, make sure your
 database is running, you have the corresponding hostname, port as well
 as your username and password ready, and you can reach it from your command line.
@@ -207,7 +207,7 @@ You can also write your results back into the MariaDB database. By providing a n
 ### **PostgreSQL**
 
 [PostgreSQL](https://www.postgresql.org/) is a powerful and well-established open 
-source database system. It can be connected to the getML engine using the function [`connect_postgres()`][getml.database.connect_postgres.connect_postgres]. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
+source database system. It can be connected to the getML Engine using the function [`connect_postgres()`][getml.database.connect_postgres.connect_postgres]. Make sure your database is running, you have the corresponding hostname, port, user name, and password ready, and you can reach it from your command line.
 
 Import from PostgreSQL
 
@@ -227,7 +227,7 @@ You can also write your results back into the PostgreSQL database. If you provid
     For licensing information and technical support, please [contact us][contact-page].
 
 [Greenplum](https://greenplum.org/) is an open source database system maintained by Pivotal
-Software, Inc. It can be connected to the getML engine using the
+Software, Inc. It can be connected to the getML Engine using the
 function [`connect_greenplum()`][getml.database.connect_greenplum.connect_greenplum]. But first, make
 sure your database is running, you have the corresponding hostname,
 port as well as your user name and password ready, and you can reach

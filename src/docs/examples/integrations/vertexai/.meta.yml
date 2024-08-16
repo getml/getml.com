@@ -1,0 +1,6 @@
+path_repository: getml/getml-demo/blob/vertexai
+badges:
+  - github
+  - workbench
+template: notebooks.html
+icon: material/file-document-outline

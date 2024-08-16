@@ -13,7 +13,7 @@ The results of the [feature learning][feature-engineering] and the [prediction][
 
 **Responding to a HTTP POST request**
 
-> The getML suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.
+> The getML Suite contains HTTP endpoints to post new data via a JSON string and retrieve either the resulting features or the predictions.
 
 ## Batch prediction
 
@@ -24,8 +24,9 @@ If you are looking for a pure Python, 100% open-source way to productionize getM
 ## HTTP Endpoints
 
 As soon as you have trained a pipeline, whitelisted it for external access using its 
-[`deploy`][getml.pipeline.Pipeline.deploy] method, and configured the getML monitor 
+[`deploy`][getml.pipeline.Pipeline.deploy] method, and configured the getML Monitor 
 for [remote access][remote-access-anchor], you can transform new data into 
+
 features or make predictions on them using these endpoints:
 
 - [Transform endpoint: `http://localhost:1709/transform/PIPELINE_NAME`][deployment-transform]
@@ -35,7 +36,7 @@ To each of them, you must send a POST request containing the new data as a JSON 
 
 !!! note
 
-    For testing and developing purposes, you can also use the HTTP port of the monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  [http://localhost:1709/predict/PIPELINE_NAME](http://localhost:1709/predict/PIPELINE_NAME)
+    For testing and developing purposes, you can also use the HTTP port of the Monitor to query the endpoints. Note that this is only possible within the same host. The corresponding syntax is  [http://localhost:1709/predict/PIPELINE_NAME](http://localhost:1709/predict/PIPELINE_NAME)
 
 [](){#deployment-request-format}
 ### Request Format
@@ -92,9 +93,9 @@ could post a JSON string like this:
 You might have noticed that the time stamps in the example above have been
 passed as numerical values and not as their string representations
 shown in the beginning. Both ways are
-supported by the getML monitor. But if you choose to pass the
+supported by the getML Monitor. But if you choose to pass the
 string representation, you also have to specify the particular format
-in order for the getML engine to interpret your data properly.
+in order for the getML Engine to interpret your data properly.
 
 ```json
 {
@@ -120,7 +121,7 @@ e.g. [`read_csv()`][getml.data.DataFrame.read_csv].
 
 You can also use a
 [`DataFrame`][getml.data.DataFrame] that already 
-exists on the getML engine:
+exists on the getML Engine:
 
 ```json
 {
@@ -165,7 +166,7 @@ Such an HTTP request can be sent in many languages. For
 illustration purposes, we will use the command line tool `curl`,
 which comes preinstalled on both Linux and macOS. Also, we will use
 the HTTP port via localhost (only possible for terminals running on
-the same machine as the getML monitor) for better reproducibility.
+the same machine as the getML Monitor) for better reproducibility.
 
 ```bash
 curl --header "Content-Type: application/json"           \
@@ -186,7 +187,7 @@ Such an HTTP request can be sent in many languages. For
 illustration purposes, we will use the command line tool `curl`,
 which comes preinstalled on both Linux and macOS. Also, we will use
 the HTTP port via localhost (only possible for terminals running on
-the same machine as the getML monitor) for better reproducibility.
+the same machine as the getML Monitor) for better reproducibility.
 
 ```bash
 curl --header "Content-Type: application/json"           \

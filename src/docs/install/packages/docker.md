@@ -2,9 +2,9 @@
 # Docker for macOS, Windows & Linux
 
 
-On macOS and Windows, you can to run the engine in a Docker container. We are working on providing native support for them in the near future.
+On macOS and Windows, you can to run the Engine in a Docker container. We are working on providing native support for them in the near future.
 
-Setup the [Python API][getml-suite-python-api] and the [engine][engine] of the [getML Community edition](https://github.com/getml/getml-community) as follows.
+Setup the [Python API][getml-suite-python-api] and the [Engine][engine] of the [getML Community edition](https://github.com/getml/getml-community) as follows.
 
 ## Python API
 
@@ -26,7 +26,7 @@ Make sure that Docker is [installed](https://docs.docker.com/get-docker/). For L
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][getml-suite-python-api]: `pip install getml`
-    - Install the [engine][engine] by following the same [instructions as below][engine-docker-installation]. Just replace the URL with that of the Enterprise `docker-compose.yml` file you have been provided with.
+    - Install the [Engine][engine] by following the same [instructions as below][engine-docker-installation]. Just replace the URL with that of the Enterprise `docker-compose.yml` file you have been provided with.
 
 
 Run the following command in your terminal (macOS & Linux) or PowerShell (Windows):
@@ -37,7 +37,7 @@ curl https://raw.githubusercontent.com/getml/getml-community/1.5.0/runtime/docke
 
 This will download `docker-compose.yml` configuration file and use `docker compose` to run a getML service.
 
-In addition, a docker volume `getml` will be created and mounted into the container. This volume will contain the files of projects. The ports required for the Python API to communicate with the engine will be mapped to the host system.
+In addition, a docker volume `getml` will be created and mounted into the container. This volume will contain the files of projects. The ports required for the Python API to communicate with the Engine will be mapped to the host system.
 
 To shut down the service after you are done, press `Ctrl+c`.
 
