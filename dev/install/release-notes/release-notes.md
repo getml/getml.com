@@ -56,7 +56,6 @@
 - Add custom `__getattr__` and `__dir__` methods to DataFrame, enabling column retrieval through autocomplete
 
 ### 0.13.0 <small>Nov 13, 2020</small> {id="0.13.0"}
-
 - Introduce new feature learner: 
     - RelMTModel [now [RelMT][getml.feature_learning.RelMT]], 
     - RelMTTimeSeries [now integrated in [TimeSeries][getml.data.TimeSeries]]
@@ -67,6 +66,7 @@
 - High-level hyperopt handlers: [tune_feature_learners()][getml.hyperopt.tune_feature_learners], [tune_predictors()][getml.hyperopt.tune_predictors]
 - Improve pipeline functionality: [delete()][getml.pipeline.delete], [exists()][getml.pipeline.exists], [Columns][getml.pipeline.Columns] 
 - Introduce preprocessors: [EmailDomain][getml.preprocessors.EmailDomain], [Imputation][getml.preprocessors.Imputation], [Seasonal][getml.preprocessors.Seasonal], [Substring][getml.preprocessors.Substring] 
+
 ### 0.11.1 <small>Jul 13, 2020</small> {id="0.11.1"}
 - Add pipeline functionality: [Pipeline][getml.pipeline.Pipeline], [list_pipelines()][getml.pipeline.list_pipelines], [Features][getml.pipeline.Features], [Metrics][getml.pipeline.metrics], [SQLCode][getml.pipeline.SQLCode], [Scores][getml.pipeline.Scores]
 - Better control of hyperparameter optimization: [burn_in][getml.hyperopt.burn_in], [kernels][getml.hyperopt.kernels], [optimization][getml.hyperopt.burn_in.random]
@@ -96,5 +96,3 @@
 - Add support for various aggregation functions such as [MEDIAN][getml.feature_learning.aggregations.MEDIAN], [VAR][getml.feature_learning.aggregations.VAR], [STDDEV][getml.feature_learning.aggregations.STDDEV], and [COUNT_DISTINCT][getml.feature_learning.aggregations.COUNT_DISTINCT]
 - Move from closed beta to [pip](https://pypi.org/project/getml/)
 - Introduce basic hyperopt algorithms: [LatinHypercubeSearch][getml.hyperopt.LatinHypercubeSearch], [RandomSearch][getml.hyperopt.RandomSearch]
-
-
