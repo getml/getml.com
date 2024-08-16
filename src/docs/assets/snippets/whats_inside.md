@@ -37,10 +37,10 @@ pipeline.predict(data_container.test)
 
 5. Inspired by libraries like `scikit-learn`, the [`fit()`][getml.pipeline.Pipeline.fit]{ data-preview }, [`score()`][getml.pipeline.Pipeline.score]{ data-preview }, and [`predict()`][getml.pipeline.Pipeline.predict]{ data-preview } methods of a pipeline make the machine learning process a breeze.
 
-6. [`Container`][getml.data.Container]{ data-preview } holds data and train-test-validation split, reliably ensuring reproducibility.
+6. [`Container`][getml.data.Container]{ data-preview } holds the actual data of the population and peripheral tables as well as the train-test-validation split. It smoothly  ensures the reproducibility of results. 
 
-7. [`StarSchema`][getml.data.StarSchema]{ data-preview } captures population tables and their adjacent peripheral tables and is our go-to data model abstraction. 
-In contrast, unlimited relationship complexity can be modelled with [`Placeholder`][getml.data.Placeholder]{ data-preview }.
+7. [`StarSchema`][getml.data.StarSchema]{ data-preview } captures the relationships between population and peripheral tables and is our go-to data model abstraction. 
+In contrast, unlimited relationship complexity such as the snowflake schema can be modelled with [`DataModel`][getml.data.DataModel]{ data-preview }.
 
 /// html | div.hidden
 To find the best set of aggregation functions and conditions, getML’s supervised learning algorithms perform an iterative, tree-based search inside relational data. This allows for the automatic generation of complex features for a given target variable on a scale and accuracy that no manual or brute-force approach can match.
