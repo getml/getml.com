@@ -1,7 +1,7 @@
 [](){#annotating-data}
 # Annotating data
 
-After you have [imported][importing-data] your data into the getML engine, there is one more step to undertake before you can start learning features: You need to assign a **role** to each column. Why is that?
+After you have [imported][importing-data] your data into the getML Engine, there is one more step to undertake before you can start learning features: You need to assign a **role** to each column. Why is that?
 
 First, the general structure of the individual data frames is needed to construct the [relational data model][data-model]. This is done by assigning the roles [join key][annotating-data-join-keys] and [time stamp][annotating-data-time-stamp]. The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).
 
@@ -177,7 +177,7 @@ that is used to try to interpret the input strings. Possible format options are
 * %Z - time zone differential in RFC format (GMT or +NNNN)
 * %% - percent sign 
 
-If none of the formats works, the getML engine will try to interpret
+If none of the formats works, the getML Engine will try to interpret
 the time stamps as numerical values. If this fails, the time stamp will be set
 to NULL.
 
@@ -216,13 +216,13 @@ The associated [`columns`][getml.data.columns] contain the variables we want to 
 [](){#annotating-data-numerical}
 ## Numerical
 
-This role tells the getML engine to include the associated [`FloatColumn`][getml.data.columns.FloatColumn] during feature learning.
+This role tells the getML Engine to include the associated [`FloatColumn`][getml.data.columns.FloatColumn] during feature learning.
 
 It should be used for all data with an inherent ordering, regardless of whether it is sampled from a continuous quantity, like passed time or the total amount of rainfall, or a discrete one, like the number of sugary mulberries one has eaten since lunch.
 [](){#annotating-data-categorical}
 ## Categorical
 
-This role tells the getML engine to include the associated [`StringColumn`][getml.data.columns.StringColumn] during feature learning.
+This role tells the getML Engine to include the associated [`StringColumn`][getml.data.columns.StringColumn] during feature learning.
 
 It should be used for all data with no inherent ordering, even if the categories are encoded as integers instead of strings.
 [](){#annotating-data-text}
@@ -267,7 +267,7 @@ OR categorical_column1 != categorical_column2
 Using [`set_unit()`][getml.data.DataFrame.set_unit] you can set the *unit* of
 a column to an arbitrary, non-empty string. If it matches the string
 of another column, both of them will be compared by the getML
-engine. Please note that a column can not have more than one unit.
+Engine. Please note that a column can not have more than one unit.
 
 There are occasions where *only* a pairwise comparison of columns but
 not a comparison with fixed values is useful. To cope with this problem,

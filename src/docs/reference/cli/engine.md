@@ -14,7 +14,7 @@ Some parameters can be set via command line flags. If you do not explicitly set 
 the values from your *config.json* are taken instead. The *config.json* is located 
 in `$HOME/.getML/getml-VERSION` on Linux and macOS. On Windows, it is located in the 
 same directory as `getML.exe`. The most elegant way to edit your config.json is via 
-the configuration view in the getML [monitor][monitor]:
+the configuration view in the getML [Monitor][monitor]:
 
 The help menu can also be displayed by passing the flag `-help` or `-h`. The default values displayed in the help menu are the values in the *config.json* (therefore, they are not hard-coded).
 
@@ -34,11 +34,11 @@ Possible commands are:
 ```
 Usage of run:
   -allow-push-notifications
-        Whether you want to allow the getML monitor to send push notifications to your desktop. (default true)
+        Whether you want to allow the getML Monitor to send push notifications to your desktop. (default true)
   -http-port int
-        The local port of the getML monitor. This port can only be accessed from your local computer. (default 1709)
+        The local port of the getML Monitor. This port can only be accessed from your local computer. (default 1709)
   -https-port int
-        The remote and encrypted port of the getML monitor. This port can be accessed remotely, but it is encrypted. (default 1710)
+        The remote and encrypted port of the getML Monitor. This port can be accessed remotely, but it is encrypted. (default 1710)
   -install
         Installs getml-0.14-beta-macos, even if it is already installed.
   -launch-browser
@@ -46,9 +46,9 @@ Usage of run:
   -project-directory string
         The directory in which to store all of your projects. (default "~/.getML/getml-0.14-beta-macos/projects")
   -proxy-url string
-        The URL of any proxy server that that redirects to the getML monitor.
+        The URL of any proxy server that that redirects to the getML Monitor.
   -tcp-port int
-        Local TCP port which serves as the communication point for the engine. This port can only be accessed from your local computer. (default 1711)
+        Local TCP port which serves as the communication point for the Engine. This port can only be accessed from your local computer. (default 1711)
 ```
 ```
 Usage of stop:

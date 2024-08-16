@@ -5,7 +5,7 @@ palette:
   - scheme: default
 ---
 
-# **GetML Enterprise trial download**
+# **getML Enterprise trial download**
 
 *Test our most advanced algorithms first hand.*
 
@@ -13,7 +13,7 @@ palette:
 
 We invite you to a free test of getML Enterprise. Experience the impact of your data and our most advanced algorithms for relational learning.
 
-This is best for data scientists and engineers that are already familiar with our API from our users of our getML Community edition.
+This is best for data scientists and engineers that are already familiar with our API from using the getML Community edition.
 
 **What you will get:**
 {: .mb-0 }

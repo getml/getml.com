@@ -14,7 +14,7 @@ hide:
 </center>
 
 
-# Your <span class="accent">ML suite</span> for relational <br>and time-series data. {: .h1-lg }
+# Your <span class="accent">ML Suite</span> for relational <br>and time-series data. {: .h1-lg }
 
 getML Relational Learning unlocks a 10x speed-up potential and superior model performance. <br class="show-lg">
 A game changer in predictive applications for enterprise applications.
@@ -23,8 +23,8 @@ A game changer in predictive applications for enterprise applications.
 
 <center class="mb-3-lg">
 
-[Request a demo](enterprise/book-demo){ .md-button .md-button--primary }
-[API Reference](reference){ .md-button }
+[Request a demo](enterprise/book-demo.md){ .md-button .md-button--primary }
+[API Reference](reference/index.md){ .md-button }
 {: .spacer }
 
 </center>
@@ -69,7 +69,7 @@ A game changer in predictive applications for enterprise applications.
 
 getML introduces new ML algorithms that <span class="impact">empower data scientists to achieve superior model performance</span> without the burden of manual feature engineering and building complex feature pipelines.
 
-By generalizing gradient boosting to multi-relational decision trees, getML <span class="impact">brings supervised learning to raw relational data</span>, enabling end-to-end prediction pipelines. The getML suite provides an easy to use Python API, adhering to modern standards.
+By generalizing gradient boosting to multi-relational decision trees, getML <span class="impact">brings supervised learning to raw relational data</span>, enabling end-to-end prediction pipelines. The getML Suite provides an easy to use Python API, adhering to modern standards.
 
 getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used across industries, from finance and manufacturing to healthcare</span> and beyond.
 
@@ -147,7 +147,7 @@ getML is a high-performance machine learning software for predictive analytics o
     2. Install getML Community `pip install getml`
     3. Clone [getml-demo](https://github.com/getml/getml-demo) and explore our example notebooks
 
-    *Need help along the way? Here are our [support options](contact).*
+    *Need help along the way? Here are our [support options](contact/index.md).*
 
 
 ///
@@ -175,7 +175,7 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 {.small-lg}
 
 
-[Get started :octicons-arrow-right-24:](install){: }
+[Get started :octicons-arrow-right-24:](install/index.md){: }
 
 </div>
 <div class="box box-bg box-50" markdown>
@@ -200,8 +200,8 @@ This is your choice if shorter development cycles and unprecedented model accura
 <div class="box box-50 p-sm-0" markdown>
 Request a meeting to explore the potential of getML Relational Learning for your business application. Or check out one of our code examples before.
 
-[Talk to sales](contact){ .md-button .md-button--primary }
-[Get started](user_guide){ .md-button  }
+[Talk to sales](contact/index.md){ .md-button .md-button--primary }
+[Get started](user_guide/index.md){ .md-button  }
 </div>
 
 </div>

@@ -1,13 +1,13 @@
 
 [](){#compiling-from-source}
 
-Because getML is complex software, we use [Docker](https://www.docker.com/) for our build environment. If you want to compile our community edition from source, you can start with cloning its repository:
+Because getML is complex software, we use [Docker](https://www.docker.com/) for our build environment. If you want to compile our Community edition from source, you can start with cloning its repository:
 
 ```bash
 git clone https://github.com/getml/getml-community.git
 ```
 
-We provide a set of wrappers to ease local development. They are located inside `bin` directory of the repository. You can use them with `getml` command and `build` subcommand:
+We provide a set of wrappers to ease local development. They are located inside the `bin` directory of the repository. You can use them with the `getml` command and the `build` subcommand:
 
 ```bash
 ./bin/getml
@@ -36,7 +36,7 @@ Usage:
 Subcommands:
   [a]ll       Build all (whole package, [p]ackage + [py]thon API + tar+gz [ar]chive)
   [c]li       Build CLI
-  [e]ngine    Build engine
+  [e]ngine    Build Engine
   [p]ackage   Export runnable [e]ngine + [c]li package
   [py]thon    Package Python API
   [ar]chive   Create tar.gz archive of [p]ackage
@@ -47,7 +47,7 @@ Options:
   -o <path>   Set output path (default: build); passed to docker build
 ```
 
-Most of the time you probably want to build the (C++) engine:
+Most of the time you probably want to build the (C++) Engine:
 
 ```bash
 ./bin/getml build engine
@@ -74,7 +74,7 @@ The build pipeline is based on multi-stage Docker builds. There are two `Dockerf
 
 - One for CLI, wheel, and packaging located in the [repository](https://github.com/getml/getml-community)'s root:
   `./Dockerfile`
-- One related to the engine and its dependencies located in the [repository](https://github.com/getml/getml-community)'s `src/engine` subfolder:
+- One related to the Engine and its dependencies located in the [repository](https://github.com/getml/getml-community)'s `src/engine` subfolder:
   `./src/engine/Dockerfile`
 
 As the second `Dockerfile` is a dependency for the first, we use [bake](https://docs.docker.com/build/bake/) to orchestrate the builds. The bake file (`./docker-bake.hcl`) holds definitions for all build targets and ensures the appropriate build contexts are set.

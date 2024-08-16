@@ -21,7 +21,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     Learn how getML Relational Learning is working and details about successful applications in many cross-industry ML applications.
 
-    [:octicons-arrow-right-24: Request a demo ](../enterprise/book-demo)
+    [:octicons-arrow-right-24: Request a demo ](../enterprise/book-demo.md)
 
 
 -   ## :fontawesome-pro-duotone-users-gear:{ .lg .middle .mb-1-lg .accent }<br> **Talk to engineering** {:.mb-0 .sm}
@@ -31,7 +31,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
     Need support in building ML enabled data products or service?
     Connect with our full-service team to discuss how we can help.
 
-    [:octicons-arrow-right-24: Get in touch](message-us)
+    [:octicons-arrow-right-24: Get in touch](message-us.md)
 
 
 -   ## :fontawesome-pro-duotone-building-circle-check:{ .lg .middle .mb-1-lg .accent}<br> **For agencies** {:.mb-0 .sm}
@@ -40,7 +40,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     Have an agency? Partner with getML for technical or sales support or to discuss co-marketing opportunities.
 
-    [:octicons-arrow-right-24: Tell us more](message-us)
+    [:octicons-arrow-right-24: Tell us more](message-us.md)
 
 
 ///
@@ -54,7 +54,7 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     We provide enterprise support packages for companies that rely on getML in production, ensuring 100% product coverage and timely responses.
 
-    [Request a demo][request-demo] or [contact us][message-us] for more information.
+    [Request a demo][request-demo] or [contact us](message-us.md) for more information.
 
 
 -   ##### Free {: .mb-0 }
@@ -99,6 +99,6 @@ Want to get in touch with us? Choose an option below and we’ll be happy to sho
 
     ///
 
-    [Get in touch](message-us){: .md-button .md-button--primary }
+    [Get in touch](message-us.md){: .md-button .md-button--primary }
     {: .m-lg}
 ///
