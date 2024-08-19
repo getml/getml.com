@@ -4048,9 +4048,9 @@ but the best pipeline.</p>
     <span class="p">]</span>
 
     <span class="k">with</span> <span class="n">comm</span><span class="o">.</span><span class="n">send_and_get_socket</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> <span class="k">as</span> <span class="n">sock</span><span class="p">:</span>
-        <span class="n">begin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">begin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="n">comm</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
-        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">msg</span> <span class="o">!=</span> <span class="s2">&quot;Success!&quot;</span><span class="p">:</span>
         <span class="n">comm</span><span class="o">.</span><span class="n">handle_engine_exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>

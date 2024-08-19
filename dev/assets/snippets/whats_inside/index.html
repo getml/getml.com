@@ -1245,7 +1245,7 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">getML</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">getml</span>
 
 <span class="c1"># Staging of data</span>
 <span class="n">data_container</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># (6)!</span>
@@ -1274,25 +1274,26 @@
 </code></pre></div></td></tr></table></div>
 <ol>
 <li>
-<p><a class="autorefs autorefs-internal" href="../../../user_guide/concepts/feature_engineering/#fastprop" data-preview_="data-preview_"><code>FastProp</code></a> comes with our <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">community</a> edition. It is fast and generates substantial number of important features based on simple aggregations.</p>
+<p><a class="autorefs autorefs-internal" href="../../../user_guide/concepts/feature_engineering/#fastprop" data-preview="data-preview"><code>FastProp</code></a> comes with our <a href="https://github.com/getml/getml-community" target="_blank" rel="noopener">Community</a> edition. It is fast and generates a substantial number of important features based on simple aggregations.</p>
 </li>
 <li>
-<p><a class="autorefs autorefs-internal" href="../../../user_guide/concepts/feature_engineering/#relboost" data-preview_="data-preview_"><code>Relboost</code></a> is part our <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">enterprise</a> edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.</p>
+<p><a class="autorefs autorefs-internal" href="../../../user_guide/concepts/feature_engineering/#relboost" data-preview="data-preview"><code>Relboost</code></a> is part our <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">Enterprise</a> edition. A generalization of the gradient boosting algorithm, Relboost can learn really complex interdependencies.</p>
 </li>
 <li>
-<p><a class="autorefs autorefs-internal" href="../../../reference/predictors/scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor" data-preview_="data-preview_"><code>ScaleGBMRegressor</code></a> is our memory-mapped predictor that can handle big datasets that do not fit into memory.</p>
+<p><a class="autorefs autorefs-internal" href="../../../reference/predictors/scale_gbm_regressor/#getml.predictors.ScaleGBMRegressor" data-preview="data-preview"><code>ScaleGBMRegressor</code></a> is our memory-mapped predictor that can handle big datasets that do not fit into memory.</p>
 </li>
 <li>
-<p><a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline" data-preview_="data-preview_"><code>Pipeline</code></a> bundle together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's <code>fit</code> is called next.</p>
+<p><a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline" data-preview="data-preview"><code>Pipeline</code></a> bundles together the data model, feature learners and predictors. Just with this line of code, getML takes care of generation and selection of features, and training of the predictor when the pipeline's <code>fit</code> is called next.</p>
 </li>
 <li>
-<p>Inspired by libraries like <code>scikit-learn</code>, the <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.fit" data-preview_="data-preview_"><code>fit</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.score" data-preview_="data-preview_"><code>score</code></a>, and <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict" data-preview_="data-preview_"><code>predict</code></a> methods of a pipeline make the machine learning process a breeze.</p>
+<p>Inspired by libraries like <code>scikit-learn</code>, the <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.fit" data-preview="data-preview"><code>fit()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.score" data-preview="data-preview"><code>score()</code></a>, and <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline.predict" data-preview="data-preview"><code>predict()</code></a> methods of a pipeline make the machine learning process a breeze.</p>
 </li>
 <li>
-<p>box</p>
+<p><a class="autorefs autorefs-internal" href="../../../reference/data/container/#getml.data.Container" data-preview="data-preview"><code>Container</code></a> holds the actual data of the population and peripheral tables as well as the train-test-validation split. It smoothly ensures the reproducibility of results. </p>
 </li>
 <li>
-<p>box</p>
+<p><a class="autorefs autorefs-internal" href="../../../reference/data/star_schema/#getml.data.StarSchema" data-preview="data-preview"><code>StarSchema</code></a> captures the relationships between population and peripheral tables and is our go-to data model abstraction. 
+In contrast, unlimited relationship complexity such as the snowflake schema can be modelled with <a class="autorefs autorefs-internal" href="../../../reference/data/data_model/#getml.data.DataModel" data-preview="data-preview"><code>DataModel</code></a>.</p>
 </li>
 </ol>
 <div class="hidden">

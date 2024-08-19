@@ -2437,7 +2437,7 @@ Additionally, you can alter some hyperparameters like the number of
 features you want to train or the list of aggregations to select from
 when building features.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">fastprop</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">FastProp</span><span class="p">(</span>
-     <span class="n">num_features</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+     <span class="n">num_features</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
      <span class="n">aggregation</span><span class="o">=</span><span class="p">[</span>
          <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">COUNT</span><span class="p">,</span>
          <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">aggregations</span><span class="o">.</span><span class="n">SUM</span>
@@ -2459,7 +2459,7 @@ getML bundles the sequential operations of a data science project
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use <code>COUNT</code> and <code>SUM</code>, we use a simple <code>LinearRegression</code> and construct only 10 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like <code>aggregation=getml.feature_learning.aggregations.FASTPROP.default</code>, you would construct at least 100 features and you could consider using a <a class="autorefs autorefs-internal" href="../../reference/predictors/#getml.predictors">more powerful predictor</a> to get results significantly better than what we will achieve here.</p>
+<p>For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use <code>COUNT</code> and <code>SUM</code>, we use a simple <code>LinearRegression</code> and construct only 5 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like <code>aggregation=getml.feature_learning.aggregations.FASTPROP.default</code>, you would construct at least 100 features and you could consider using a <a class="autorefs autorefs-internal" href="../../reference/predictors/#getml.predictors">more powerful predictor</a> to get results significantly better than what we will achieve here.</p>
 </div>
 <h2 id="working-with-a-pipeline">Working with a pipeline</h2>
 <p>Now, that we have defined a <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, we can let getML do the heavy lifting of your typical data science project. With a well-defined <a class="autorefs autorefs-internal" href="../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>, you can, i.a.:</p>

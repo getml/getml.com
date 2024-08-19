@@ -6363,11 +6363,11 @@ equivalent to the checks run by <a class="autorefs autorefs-internal" href="#get
         <span class="k">if</span> <span class="n">msg</span> <span class="o">!=</span> <span class="s2">&quot;Found!&quot;</span><span class="p">:</span>
             <span class="n">comm</span><span class="o">.</span><span class="n">handle_engine_exception</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
-        <span class="n">begin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">begin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
 
         <span class="n">msg</span> <span class="o">=</span> <span class="n">comm</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">sock</span><span class="p">)</span>
 
-        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="s2">&quot;Trained&quot;</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">()</span>
