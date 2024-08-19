@@ -37,7 +37,7 @@ pipeline.predict(data_container.test)
 
 5. Inspired by libraries like `scikit-learn`, the [`fit()`][getml.pipeline.Pipeline.fit]{ data-preview }, [`score()`][getml.pipeline.Pipeline.score]{ data-preview }, and [`predict()`][getml.pipeline.Pipeline.predict]{ data-preview } methods of a pipeline make the machine learning process a breeze.
 
-6. [`Container`][getml.data.Container]{ data-preview } holds the actual data of the population and peripheral tables as well as the train-test-validation split. It smoothly  ensures the reproducibility of results. 
+6. [`Container`][getml.data.Container]{ data-preview } holds the actual data of the population and peripheral tables as well as the train-test-validation split. It smoothly ensures the reproducibility of results. 
 
 7. [`StarSchema`][getml.data.StarSchema]{ data-preview } captures the relationships between population and peripheral tables and is our go-to data model abstraction. 
 In contrast, unlimited relationship complexity such as the snowflake schema can be modelled with [`DataModel`][getml.data.DataModel]{ data-preview }.
