@@ -187,7 +187,7 @@ when building features.
 
 ```python
 fastprop = getml.feature_learning.FastProp(
-     num_features=10,
+     num_features=5,
      aggregation=[
          getml.feature_learning.aggregations.COUNT,
          getml.feature_learning.aggregations.SUM
@@ -212,7 +212,7 @@ pipe = getml.pipeline.Pipeline(
 
 ```
 !!! note
-    For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use `COUNT` and `SUM`, we use a simple `LinearRegression` and construct only 10 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like ```aggregation=getml.feature_learning.aggregations.FASTPROP.default```, you would construct at least 100 features and you could consider using a [more powerful predictor][getml.predictors] to get results significantly better than what we will achieve here.
+    For the sake of demonstration, we have chosen a narrow search field in aggregation space by only letting FastProp use `COUNT` and `SUM`, we use a simple `LinearRegression` and construct only 5 different features. In real world projects you have little reason to artificially restrict your aggregation set and would use something more straightforward like ```aggregation=getml.feature_learning.aggregations.FASTPROP.default```, you would construct at least 100 features and you could consider using a [more powerful predictor][getml.predictors] to get results significantly better than what we will achieve here.
 
 ## Working with a pipeline
 

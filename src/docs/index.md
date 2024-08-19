@@ -80,21 +80,21 @@ getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 </center>
 
 
-## The better solution for predictive analytics on enterprise data {.h2-l .center-lg .mb-1-lg}
+## The better solution for predictive analytics on your enterprise data {.h2-l .center-lg .mb-1-lg}
 
 /// html | div.grid.cards.cards-lead.cards-clear.mb-3-lg
 
 -   <span class="top">getML is</span>
     <span class="focus">easy to use</span>
-    <span class="sub">helping you deliver<br class="show-lg"> better models faster</span>
+    <span class="sub">helping you deliver<br class="show-lg">better models faster</span>
 
 -   <span class="top">Delivered</span>
     <span class="focus">10x</span>
-    <span class="sub">speedup in past<br class="show-lg"> customer projects</span>
+    <span class="sub">speedup in<br class="show-lg">customer projects</span>
 
--   <span class="top">Prediction accuracy by</span>
-    <span class="focus">30%</span>
-    <span class="sub">increased compared<br class="show-lg"> to past baseline models</span>
+-   <span class="top">Up to</span>
+    <span class="focus">65%</span>
+    <span class="sub">gain in prediction accuracy<br class="show-lg">over baseline models</span>
 
 ///
 
@@ -109,11 +109,11 @@ getML is developed by Code17 GmbH from Leipzig, and is <span class="impact">used
 
 <div class="w-80-lg margin-auto-lg mb-4-lg" markdown>
 
-##### Whats under the hood? {.accent }
+##### What's under the hood? {.accent }
 ## Billions of Features with a few lines of code {.h2-lg .mt-0}
 
 
-getML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are four novel feature learning algorithms that automate manual feature engineering using supervised learning. getML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, achieving unparalleled model accuracy within days not months.
+getML is a high-performance machine learning software for predictive analytics on relational and time series data. At the heart of getML's innovation are five novel feature learning algorithms that automate manual feature engineering using supervised learning. getML enables the creation of end-to-end prediction pipelines capable of learning from terabytes of raw relational data, achieving unparalleled model accuracy within days not months.
 {.medium-lg .mb-2-lg}
 
 <div class="w-80-lg margin-auto-lg" markdown>
@@ -143,11 +143,11 @@ getML is a high-performance machine learning software for predictive analytics o
 
 -   #### Getting started is easy
 
-    1. Read through our [user guide][user-guide-index]
-    2. Install getML Community `pip install getml`
-    3. Clone [getml-demo](https://github.com/getml/getml-demo) and explore our example notebooks
+    1. Check out our [user guide][user-guide-index].
+    2. Install getML Community `pip install getml`.
+    3. Clone [getml-demo](https://github.com/getml/getml-demo) and explore our example notebooks.
 
-    *Need help along the way? Here are our [support options](contact/index.md).*
+    *Need help along the way? Here are our [support options](contact/index.md)!*
 
 
 ///
