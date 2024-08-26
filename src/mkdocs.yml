@@ -317,8 +317,11 @@ nav:
         - split: reference/data/split.md
         - time: reference/data/time.md
         - subroles: reference/data/subroles.md
+        - types: reference/data/types.md
       - getml.database: reference/database/database.md
-      - getml.datasets: reference/datasets/datasets.md
+      - getml.datasets: 
+        - reference/datasets/index.md
+        - types: reference/datasets/types.md
       - getml.engine: reference/engine/engine.md
       - getml.hyperopt:
         - reference/hyperopt/index.md
@@ -332,11 +335,9 @@ nav:
         - Multirel: reference/feature_learning/multirel.md
         - Relboost: reference/feature_learning/relboost.md
         - RelMT: reference/feature_learning/relmt.md
-        - aggregations:
-            - reference/feature_learning/aggregations/index.md
-            - types: reference/feature_learning/aggregations/types.md
-            - sets: reference/feature_learning/aggregations/sets.md
         - loss_functions: reference/feature_learning/loss_functions.md
+        - aggregations: reference/feature_learning/aggregations.md
+        - types: reference/feature_learning/types.md
       - getml.project:
         - reference/project/index.md
         - DataFrames: reference/project/data_frames.md
