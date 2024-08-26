@@ -600,19 +600,20 @@ nav.md-tabs {
         /* max-height: 2.8rem !important; */
     }
 }
-@media screen and  (max-width: 76.23em) {
-.md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li {
-    /* ? */
-    /* padding-left: 0; */
-    /* padding-right: 0; */
+@media screen and (max-width: 76.23em) {
+    .md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li {
+        /* ? */
+        /* padding-left: 0; */
+        /* padding-right: 0; */
+    }
+    .md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li>hr {
+        display: none;
+    }
+    .md-typeset h2.sm {
+        font-size: 1.25em !important;
+    }
 }
-.md-typeset .grid.cards.cards-clear:not(cards-background)>ul>li>hr {
-    display: none;
-}
-.md-typeset h2.sm {
-    font-size: 1.25em; !important;
-}
-}
+
 @media screen and (min-width: 720px) and (max-width: 76.23em) {
     .logo_grid {
         max-width: 90%;
@@ -946,20 +947,35 @@ nav.md-tabs {
 /* Version selector */
 /* @media off { */
 
-.md-header__topic__nover {
-    display: flex;
-    max-width: 100%;
-    position: absolute;
-    transition: transform .4s cubic-bezier(.1,.7,.1,1), opacity .15s;
-    white-space: nowrap;
-}
 
+.md-header__title--active .md-header__topic__nover+.md-header__topic__nover {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform .4s cubic-bezier(.1,.7,.1,1), opacity .15s;
+    z-index: 0;
+}
 .md-header__title--active .md-header__topic__nover {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-1.25rem);
     transition: transform .4s cubic-bezier(1,.7,.1,.1), opacity .15s;
     z-index: -1;
+}
+
+.md-header__topic__nover+.md-header__topic__nover {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(1.25rem);
+    transition: transform .4s cubic-bezier(1,.7,.1,.1), opacity .15s;
+    z-index: -1;
+}
+.md-header__topic__nover {
+    display: flex;
+    max-width: 100%;
+    position: absolute;
+    transition: transform .4s cubic-bezier(.1,.7,.1,1), opacity .15s;
+    white-space: nowrap;
 }
 
 .md-header__version {
