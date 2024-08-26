@@ -2,6 +2,5 @@ path_repository: getml/getml-demo/blob/master/fastprop_benchmark
 badges:
   - github
   - colab
-template: notebooks.html
 search:
   boost: 0.9

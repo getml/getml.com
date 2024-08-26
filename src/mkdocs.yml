@@ -383,48 +383,49 @@ nav:
         - examples/community-notebooks/index.md
         - Benchmarks:
           - examples/enterprise-notebooks/fastprop_benchmark/index.md
-          - air_pollution_prop.ipynb <span>Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb
-          - dodgers_prop.ipynb <span>Traffic volume prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb
-          - interstate94_prop.ipynb <span>Multivariate time series prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb
-          - occupancy_prop.ipynb <span>A multivariate time series example</span> : examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop.ipynb
-          - robot_prop.ipynb <span>Feature engineering on sensor data</span> : examples/enterprise-notebooks/fastprop_benchmark/robot_prop.ipynb
-        - adventure_works.ipynb <span>Predicting customer churn</span> : examples/community-notebooks/adventure_works.ipynb
-        - formula1.ipynb <span>Predicting the winner of a race</span> : examples/community-notebooks/formula1.ipynb
-        - interstate94.ipynb <span>Multivariate time series prediction</span> : examples/community-notebooks/interstate94.ipynb
-        - loans.ipynb <span>Predicting loan default risk</span> : examples/community-notebooks/loans.ipynb
-        - robot.ipynb <span>Feature engineering on sensor data</span> : examples/community-notebooks/robot.ipynb
-        - seznam.ipynb <span>Predicting transaction volume</span> : examples/community-notebooks/seznam.ipynb
+          - <span class="ntitle">air_pollution_prop.ipynb</span> <span class="ndesc">Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop.ipynb
+          - <span class="ntitle">dodgers_prop.ipynb</span> <span class="ndesc">Traffic volume prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/dodgers_prop.ipynb
+          - <span class="ntitle">interstate94_prop.ipynb</span> <span class="ndesc">Multivariate time series prediction</span> : examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop.ipynb
+          - <span class="ntitle">occupancy_prop.ipynb</span> <span class="ndesc">A multivariate time series example</span> : examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop.ipynb
+          - <span class="ntitle">robot_prop.ipynb</span> <span class="ndesc">Feature engineering on sensor data</span> : examples/enterprise-notebooks/fastprop_benchmark/robot_prop.ipynb
+        - <span class="ntitle">adventure_works.ipynb</span> <span class="ndesc">Predicting customer churn</span> : examples/community-notebooks/adventure_works.ipynb
+        - <span class="ntitle">formula1.ipynb</span> <span class="ndesc">Predicting the winner of a race</span> : examples/community-notebooks/formula1.ipynb
+        - <span class="ntitle">interstate94.ipynb</span> <span class="ndesc">Multivariate time series prediction</span> : examples/community-notebooks/interstate94.ipynb
+        - <span class="ntitle">loans.ipynb</span> <span class="ndesc">Predicting loan default risk</span> : examples/community-notebooks/loans.ipynb
+        - <span class="ntitle">robot.ipynb</span> <span class="ndesc">Feature engineering on sensor data</span> : examples/community-notebooks/robot.ipynb
+        - <span class="ntitle">seznam.ipynb</span> <span class="ndesc">Predicting transaction volume</span> : examples/community-notebooks/seznam.ipynb
 
       - Enterprise Edition:
         - examples/enterprise-notebooks/index.md
-        - adventure_works.ipynb <span>Predicting customer churn</span> : examples/enterprise-notebooks/adventure_works.ipynb
-        - air_pollution.ipynb <span>Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/air_pollution.ipynb
-        - atherosclerosis.ipynb <span>Disease lethality prediction</span> : examples/enterprise-notebooks/atherosclerosis.ipynb
-        - baseball.ipynb <span>Predicting players' salary</span> : examples/enterprise-notebooks/baseball.ipynb
-        - consumer_expenditures.ipynb <span>Why relational learning matters</span> : examples/enterprise-notebooks/consumer_expenditures.ipynb
-        - cora.ipynb <span>Categorizing academic publications</span> : examples/enterprise-notebooks/cora.ipynb
-        - dodgers.ipynb <span>Traffic volume prediction</span> : examples/enterprise-notebooks/dodgers.ipynb
-        - formula1.ipynb <span>Predicting the winner of a race</span> : examples/enterprise-notebooks/formula1.ipynb
-        - imdb.ipynb <span>Predicting actors' gender</span> : examples/enterprise-notebooks/imdb.ipynb
-        - interstate94.ipynb <span>Multivariate time series prediction</span> : examples/enterprise-notebooks/interstate94.ipynb
-        - loans.ipynb <span>Predicting loan default risk</span> : examples/enterprise-notebooks/loans.ipynb
-        - movie_lens.ipynb <span>Predicting a user's gender based on the movies they have watched</span> : examples/enterprise-notebooks/movie_lens.ipynb
-        - occupancy.ipynb <span>A multivariate time series example</span> : examples/enterprise-notebooks/occupancy.ipynb
-        - online_retail.ipynb <span>Predicting order cancellations</span> : examples/enterprise-notebooks/online_retail.ipynb
-        - robot.ipynb <span>Feature engineering on sensor data</span> : examples/enterprise-notebooks/robot.ipynb
-        - seznam.ipynb <span>Predicting transaction volume</span> : examples/enterprise-notebooks/seznam.ipynb
-        - sfscores.ipynb <span>Predicting health inspection scores of restaurants</span> : examples/enterprise-notebooks/sfscores.ipynb
-        - stats.ipynb <span>Predicting users' reputations</span> : examples/enterprise-notebooks/stats.ipynb
+        - <span class="ntitle">adventure_works.ipynb</span> <span class="ndesc">Predicting customer churn</span> : examples/enterprise-notebooks/adventure_works.ipynb
+        - <span class="ntitle">air_pollution.ipynb</span> <span class="ndesc">Why feature learning is better than simple propositionalization</span> : examples/enterprise-notebooks/air_pollution.ipynb
+        - <span class="ntitle">atherosclerosis.ipynb</span> <span class="ndesc">Disease lethality prediction</span> : examples/enterprise-notebooks/atherosclerosis.ipynb
+        - <span class="ntitle">baseball.ipynb</span> <span class="ndesc">Predicting players' salary</span> : examples/enterprise-notebooks/baseball.ipynb
+        - <span class="ntitle">consumer_expenditures.ipynb</span> <span class="ndesc">Why relational learning matters</span> : examples/enterprise-notebooks/consumer_expenditures.ipynb
+        - <span class="ntitle">cora.ipynb</span> <span class="ndesc">Categorizing academic publications</span> : examples/enterprise-notebooks/cora.ipynb
+        - <span class="ntitle">dodgers.ipynb</span> <span class="ndesc">Traffic volume prediction</span> : examples/enterprise-notebooks/dodgers.ipynb
+        - <span class="ntitle">formula1.ipynb</span> <span class="ndesc">Predicting the winner of a race</span> : examples/enterprise-notebooks/formula1.ipynb
+        - <span class="ntitle">imdb.ipynb</span> <span class="ndesc">Predicting actors' gender</span> : examples/enterprise-notebooks/imdb.ipynb
+        - <span class="ntitle">interstate94.ipynb</span> <span class="ndesc">Multivariate time series prediction</span> : examples/enterprise-notebooks/interstate94.ipynb
+        - <span class="ntitle">loans.ipynb</span> <span class="ndesc">Predicting loan default risk</span> : examples/enterprise-notebooks/loans.ipynb
+        - <span class="ntitle">movie_lens.ipynb</span> <span class="ndesc">Predicting a user's gender based on the movies they have watched</span> : examples/enterprise-notebooks/movie_lens.ipynb
+        - <span class="ntitle">occupancy.ipynb</span> <span class="ndesc">A multivariate time series example</span> : examples/enterprise-notebooks/occupancy.ipynb
+        - <span class="ntitle">online_retail.ipynb</span> <span class="ndesc">Predicting order cancellations</span> : examples/enterprise-notebooks/online_retail.ipynb
+        - <span class="ntitle">robot.ipynb</span> <span class="ndesc">Feature engineering on sensor data</span> : examples/enterprise-notebooks/robot.ipynb
+        - <span class="ntitle">seznam.ipynb</span> <span class="ndesc">Predicting transaction volume</span> : examples/enterprise-notebooks/seznam.ipynb
+        - <span class="ntitle">sfscores.ipynb</span> <span class="ndesc">Predicting health inspection scores of restaurants</span> : examples/enterprise-notebooks/sfscores.ipynb
+        - <span class="ntitle">stats.ipynb</span> <span class="ndesc">Predicting users' reputations</span> : examples/enterprise-notebooks/stats.ipynb
 
       - Kaggle:
         - examples/enterprise-notebooks/kaggle_notebooks/index.md
-        - epilepsy_recognition.ipynb <span>Recognizing epilepsy in EEG data</span> : examples/enterprise-notebooks/kaggle_notebooks/epilepsy_recognition.ipynb
-        - cora_getml_vs_gnn.ipynb <span>getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn.ipynb
-        - getml-and-gnns-a-natural-symbiosis.ipynb <span>getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis.ipynb
+        - <span class="ntitle">epilepsy_recognition.ipynb</span> <span class="ndesc">Recognizing epilepsy in EEG data</span> : examples/enterprise-notebooks/kaggle_notebooks/epilepsy_recognition.ipynb
+        - <span class="ntitle">cora_getml_vs_gnn.ipynb</span> <span class="ndesc">getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn.ipynb
+        - <span class="ntitle">getml-and-gnns-a-natural-symbiosis.ipynb</span> <span class="ndesc">getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis.ipynb
 
     - Integrations:
       - FastAPI: examples/integrations/fastapi/fastapi.md
-      - vertexai.ipynb <span>getML on Vertex AI</span> : examples/integrations/vertexai/vertexai.ipynb
+      - Vertex AI:
+        - <span class="ntitle">vertexai.ipynb</span> <span class="ndesc">getML on Vertex AI</span> : examples/integrations/vertexai/vertexai.ipynb
 
   - About:
     - Company: about/company.md

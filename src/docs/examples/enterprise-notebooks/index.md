@@ -1,8 +1,5 @@
----
-icon: material/folder-outline
----
-[](){#enterprise-notebooks}
 # Enterprise Edition Notebooks
+[](){#enterprise-notebooks}
 
 A diverse collection of Jupyter Notebooks that showcase relational datasets across various domains, addressing typical data science challenges like binary classification on time series and regression with complex relational data, using publicly available datasets for benchmarking. 
 

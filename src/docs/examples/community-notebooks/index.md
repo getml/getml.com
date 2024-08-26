@@ -1,5 +1,5 @@
 ---
-icon: material/folder-outline
+icon: ""
 ---
 # Community Edition Notebooks
 

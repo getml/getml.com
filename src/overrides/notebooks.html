@@ -1,5 +1,15 @@
 {% extends "main.html" %}
 
+
+{% block styles %}
+    {{ super() }}
+
+    <link
+      rel="stylesheet"
+      href="{{ 'assets/stylesheets/notebooks.css' | url }}"
+    />
+{% endblock %}
+
 <!-- Inject header for notebooks in Examples-->
 {% block content %}
 <!-- page.nb_url is provided by mkdocs-jupyter plugin
@@ -13,49 +23,31 @@
 
   {% if 'workbench' in page.meta.badges %}
     <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https://raw.githubusercontent.com/{{ path_repository_full }}">
-      <div class="badges">
-        <img class="inline-icon" src="https://lh3.googleusercontent.com/UiNooY4LUgW_oTvpsNhPpQzsstV5W8F7rYgxgGBD85cWJoLmrOzhVs_ksK_vgx40SHs7jCqkTkCk=e14-rj-sc0xffffff-h130-w32">
-        <strong>Workbench</strong>
-      </div>
+      <img src="https://img.shields.io/badge/Vertex%20AI-Workbench-blue?style=for-the-badge&logo=googlecloud" alt="Open in Vertex AI Workbench">
     </a>
   {% endif %}
 
   {% if 'colab' in page.meta.badges %}
     <a href="https://colab.research.google.com/github/{{ path_repository_full }}">
-      <div class="badges">
-        <img class="inline-icon" src="https://colab.research.google.com/img/colab_favicon.ico">
-        <strong>Google Colab</strong>
-      </div>
+      <img src="https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Open in Colab">
     </a>
   {% endif %}
 
   {% if 'github' in page.meta.badges %}
     <a href="https://github.com/{{ path_repository_full }}">
-      <div class="badges">
-        <img class="inline-icon" src="https://github.com/favicon.ico">
-        <strong>GitHub source</strong>
-      </div>
+      <img src="https://img.shields.io/badge/GitHub-Source-181717?style=for-the-badge&logo=github" alt="GitHub Source">
     </a>
   {% endif %}
 
   {% if 'kaggle' in page.meta.badges %}
-    <!-- We need to set the paths here because there is no straight forward way 
-         to pass meta data on 'file level' of notebooks.
-    -->
-    {% set kaggle_paths = {
-        "getml-and-gnns-a-natural-symbiosis.ipynb": "jankmeyer/getml-and-gnns-a-natural-symbiosis",
-        "epilepsy_recognition.ipynb": "tonyfischer/epileptic-seizure-recognition",
-        "cora_getml_vs_gnn.ipynb": "jankmeyer/cora-relational-learning-vs-graph-neural-networks"
-    } %}
-    
+
+    {% set kaggle_paths = page.meta.kaggle_paths if page.meta.kaggle_paths is defined else {} %}
+
     {% set kaggle_url = kaggle_paths[current_filename] if current_filename in kaggle_paths else None %}
 
     {% if kaggle_url %}
       <a href="https://www.kaggle.com/code/{{ kaggle_url }}">
-        <div class="badges">
-          <img class="inline-icon" src="https://kaggle.com/favicon.ico">
-          <strong>Kaggle</strong>
-        </div>
+        <img src="https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Open in Kaggle">
       </a>
     {% endif %}
   {% endif %}
