@@ -47,6 +47,21 @@
     display: none;
 }
 
+/* .md-typeset code, .md-typeset kbd, .md-typeset pre {
+    background: var(--md-code-bg-color);
+} */
+
+.jupyter-wrapper .jp-InputArea-editor {
+    border-color: var(--md-default-fg-color--lightest) !important;
+}
+
+[data-md-color-scheme=slate] table.dataframe tbody tr:nth-child(odd) {
+    background: var(--md-code-bg-color) !important;
+}
+
+* {
+    --jp-cell-editor-background: var(--md-code-bg-color);
+}
 
 @media screen and (min-width: 76.25em) {
 
