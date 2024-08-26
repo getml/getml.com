@@ -33,6 +33,7 @@
       
     
     
+    
   
       <link rel="stylesheet" href="../../../../assets/stylesheets/main.0e8c34cb.min.css">
       
@@ -53,13 +54,12 @@
     rel="stylesheet"
     href="../../../../assets/stylesheets/getml.css"
   />
-  <!-- Only include within notebooks-->
-  
+
+
     <link
       rel="stylesheet"
       href="../../../../assets/stylesheets/notebooks.css"
     />
-  
 
     
       
@@ -168,7 +168,7 @@
         <div class="md-header__topic__nover" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              vertexai.ipynb <span>getML on Vertex AI</span>
+              <span class="ntitle">vertexai.ipynb</span> <span class="ndesc">getML on Vertex AI</span>
             
           </span>
         </div>
@@ -1717,6 +1717,118 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_3_2"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_3_2"
+            id="__nav_6_3_2_label"
+            tabindex="0"
+          >
+            
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Vertex AI
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="3"
+          aria-labelledby="__nav_6_3_2_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_6_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Vertex AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item md-nav__item--active">
       
 
@@ -1740,8 +1852,6 @@
 
   <!-- Navigation link icon -->
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg>
-  
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
@@ -1751,7 +1861,7 @@
       <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
     -->
     
-        vertexai.ipynb <span>getML on Vertex AI</span>
+        <span class="ntitle">vertexai.ipynb</span> <span class="ndesc">getML on Vertex AI</span>
     
   </span>
 
@@ -1769,8 +1879,6 @@
 
   <!-- Navigation link icon -->
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg>
-  
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
@@ -1780,7 +1888,7 @@
       <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
     -->
     
-        vertexai.ipynb <span>getML on Vertex AI</span>
+        <span class="ntitle">vertexai.ipynb</span> <span class="ndesc">getML on Vertex AI</span>
     
   </span>
 
@@ -2398,6 +2506,18 @@
     </li>
 
   <!-- Navigation item -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
   
 
               
@@ -3246,6 +3366,23 @@
   
 
       
+        
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Vertex AI
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
     </ol>
   </nav>
 
@@ -3263,10 +3400,7 @@
 
   
     <a href="https://console.cloud.google.com/vertex-ai/workbench/deploy-notebook?download_url=https://raw.githubusercontent.com/getml/getml-demo/blob/vertexai/vertexai.ipynb" target="_blank" rel="noopener">
-      <div class="badges">
-        <img class="inline-icon" src="../../../../assets/external/lh3.googleusercontent.com/UiNooY4LUgW_oTvpsNhPpQzsstV5W8F7rYgxgGBD85cWJoLmrOzhVs_ksK_vgx40SHs7jCqkTkCk=e14-rj-sc0xffffff-h130-w32.jpg">
-        <strong>Workbench</strong>
-      </div>
+      <img src="../../../../assets/external/img.shields.io/badge/Vertex AI-Workbench-blue.30b6b22f.svg" alt="Open in Vertex AI Workbench">
     </a>
   
 
@@ -3274,10 +3408,7 @@
 
   
     <a href="https://github.com/getml/getml-demo/blob/vertexai/vertexai.ipynb" target="_blank" rel="noopener">
-      <div class="badges">
-        <img class="inline-icon" src="../../../../assets/external/github.com/favicon.ico">
-        <strong>GitHub source</strong>
-      </div>
+      <img src="../../../../assets/external/img.shields.io/badge/GitHub-Source-181717.7ca78766.svg" alt="GitHub Source">
     </a>
   
 

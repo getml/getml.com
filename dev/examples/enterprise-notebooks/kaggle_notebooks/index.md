@@ -1,6 +1,3 @@
----
-icon: material/folder-outline
----
 # Kaggle Notebooks
 
 Explore a curated selection of Jupyter Notebooks that demonstrate the powerful capabilities of getML on Kaggle datasets. These notebooks showcase practical applications, highlighting benchmarks of various machine learning techniques, including Graph Neural Networks (GNNs).
