@@ -2,7 +2,6 @@ path_repository: getml/getml-demo/blob/master/kaggle_notebooks
 badges:
   - github
   - kaggle
-template: notebooks.html
 kaggle_paths:
   getml-and-gnns-a-natural-symbiosis.ipynb: jankmeyer/getml-and-gnns-a-natural-symbiosis
   epilepsy_recognition.ipynb: tonyfischer/epileptic-seizure-recognition
