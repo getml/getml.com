@@ -416,6 +416,12 @@ nav:
         - sfscores.ipynb <span>Predicting health inspection scores of restaurants</span> : examples/enterprise-notebooks/sfscores.ipynb
         - stats.ipynb <span>Predicting users' reputations</span> : examples/enterprise-notebooks/stats.ipynb
 
+      - Kaggle:
+        - examples/enterprise-notebooks/kaggle_notebooks/index.md
+        - epilepsy_recognition.ipynb <span>Recognizing epilepsy in EEG data</span> : examples/enterprise-notebooks/kaggle_notebooks/epilepsy_recognition.ipynb
+        - cora_getml_vs_gnn.ipynb <span>getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn.ipynb
+        - getml-and-gnns-a-natural-symbiosis.ipynb <span>getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis.ipynb
+
     - Integrations:
       - FastAPI: examples/integrations/fastapi/fastapi.md
       - vertexai.ipynb <span>getML on Vertex AI</span> : examples/integrations/vertexai/vertexai.ipynb
