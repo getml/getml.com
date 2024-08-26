@@ -95,4 +95,20 @@
         z-index: 1        
     }
 
+    .jupyter-wrapper .jp-Notebook, .jupyter-wrapper .jp-Cell {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .jupyter-wrapper .jp-Collapser {
+        flex: 0 0 0 !important;
+    }
+
+    .md-content__inner:before {
+        height: 0 !important;
+    }
+
+    .jupyter-wrapper .jp-Notebook {
+        padding-top: 1.5rem !important;
+    }
 }
