@@ -419,8 +419,8 @@ nav:
       - Kaggle:
         - examples/enterprise-notebooks/kaggle_notebooks/index.md
         - <span class="ntitle">epilepsy_recognition.ipynb</span> <span class="ndesc">Recognizing epilepsy in EEG data</span> : examples/enterprise-notebooks/kaggle_notebooks/epilepsy_recognition.ipynb
-        - <span class="ntitle">cora_getml_vs_gnn.ipynb</span> <span class="ndesc">getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn.ipynb
-        - <span class="ntitle">getml-and-gnns-a-natural-symbiosis.ipynb</span> <span class="ndesc">getML and Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis.ipynb
+        - <span class="ntitle">cora_getml_vs_gnn.ipynb</span> <span class="ndesc">Relational Learning vs Graph Neural Networks</span> : examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn.ipynb
+        - '<span class="ntitle">getml-and-gnns-a-natural-symbiosis.ipynb</span> <span class="ndesc">getML and GNNs: A Natural Symbiosis</span>' : examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis.ipynb
 
     - Integrations:
       - FastAPI: examples/integrations/fastapi/fastapi.md
