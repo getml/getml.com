@@ -37,6 +37,28 @@
       </div>
     </a>
   {% endif %}
+
+  {% if 'kaggle' in page.meta.badges %}
+    <!-- We need to set the paths here because there is no straight forward way 
+         to pass meta data on 'file level' of notebooks.
+    -->
+    {% set kaggle_paths = {
+        "getml-and-gnns-a-natural-symbiosis.ipynb": "jankmeyer/getml-and-gnns-a-natural-symbiosis",
+        "epilepsy_recognition.ipynb": "tonyfischer/epileptic-seizure-recognition",
+        "cora_getml_vs_gnn.ipynb": "jankmeyer/cora-relational-learning-vs-graph-neural-networks"
+    } %}
+    
+    {% set kaggle_url = kaggle_paths[current_filename] if current_filename in kaggle_paths else None %}
+
+    {% if kaggle_url %}
+      <a href="https://www.kaggle.com/code/{{ kaggle_url }}">
+        <div class="badges">
+          <img class="inline-icon" src="https://kaggle.com/favicon.ico">
+          <strong>Kaggle</strong>
+        </div>
+      </a>
+    {% endif %}
+  {% endif %}
 {% endif %}
 
 {{ super() }}

@@ -1,0 +1,5 @@
+path_repository: getml/getml-demo/blob/master/kaggle_notebooks
+badges:
+  - github
+  - kaggle
+template: notebooks.html
