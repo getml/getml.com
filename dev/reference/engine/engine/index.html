@@ -3092,19 +3092,8 @@ permanently lost.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML Engine is running and ready to accept</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
-                </span>
-            </td>
-            <td class="doc-returns-details">
-              <div class="doc-md-description">
-                <p>commands and False otherwise.</p>
+                <p>True if the getML Engine is running and ready to accept
+commands and False otherwise.</p>
               </div>
             </td>
           </tr>
@@ -3138,7 +3127,7 @@ permanently lost.</p>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            True if the getML Engine is running and ready to accept</span>
-<span class="sd">            commands and False otherwise.</span>
+<span class="sd">                commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -3192,19 +3181,8 @@ permanently lost.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML Engine is running and ready to accept</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
-                </span>
-            </td>
-            <td class="doc-returns-details">
-              <div class="doc-md-description">
-                <p>commands and False otherwise.</p>
+                <p>True if the getML Engine is running and ready to accept
+commands and False otherwise.</p>
               </div>
             </td>
           </tr>
@@ -3238,7 +3216,7 @@ permanently lost.</p>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            True if the getML Engine is running and ready to accept</span>
-<span class="sd">            commands and False otherwise.</span>
+<span class="sd">                commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -3507,7 +3485,10 @@ a random hexcode will be generated as the token.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/engine/_launch.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">197</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
 <span class="normal">198</span>
 <span class="normal">199</span>
 <span class="normal">200</span>
@@ -3595,10 +3576,7 @@ a random hexcode will be generated as the token.</p>
 <span class="normal">282</span>
 <span class="normal">283</span>
 <span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">launch</span><span class="p">(</span>
+<span class="normal">285</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">launch</span><span class="p">(</span>
     <span class="n">allow_push_notifications</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">allow_remote_ips</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">home_directory</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -3906,8 +3884,8 @@ be created.</p>
       <p>Shuts down the getML Engine.</p>
 
 
-<details class="note" open>
-  <summary>Note</summary>
+<details class="warning" open>
+  <summary>Warning</summary>
   <p>All changes applied to the <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>
 after calling their <a class="autorefs autorefs-internal" href="../../data/data_frame/#getml.data.DataFrame.save"><code>save</code></a>
 method will be lost.</p>
@@ -3926,7 +3904,7 @@ method will be lost.</p>
 <span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">shutdown</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Shuts down the getML Engine.</span>
 
-<span class="sd">    Note:</span>
+<span class="sd">    Warning:</span>
 <span class="sd">        All changes applied to the [`DataFrame`][getml.DataFrame]</span>
 <span class="sd">        after calling their [`save`][getml.DataFrame.save]</span>
 <span class="sd">        method will be lost.</span>

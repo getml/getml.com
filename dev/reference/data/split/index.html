@@ -3482,39 +3482,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>Helps you split data into a training, testing, validation or other sets.</p>
-
-
-<p><span class="doc-section-title">Examples:</span></p>
-    <p>Split at random:</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span>
-    <span class="n">train</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">validation</span><span class="o">=</span><span class="mf">0.1</span>
-<span class="p">)</span>
-
-<span class="n">train_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
-<span class="n">validation_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;validation&#39;</span><span class="p">]</span>
-<span class="n">test_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
-</code></pre></div>
-Split over time:</p>
-<div class="highlight"><pre><span></span><code><span class="n">validation_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">test_begin</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">time</span><span class="p">(</span>
-    <span class="n">population</span><span class="o">=</span><span class="n">data_frame</span><span class="p">,</span>
-    <span class="n">time_stamp</span><span class="o">=</span><span class="s2">&quot;ds&quot;</span><span class="p">,</span>
-    <span class="n">test</span><span class="o">=</span><span class="n">test_begin</span><span class="p">,</span>
-    <span class="n">validation</span><span class="o">=</span><span class="n">validation_begin</span>
-<span class="p">)</span>
-
-<span class="c1"># Contains all data before 2010-01-01 (not included)</span>
-<span class="n">train_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;train&#39;</span><span class="p">]</span>
-
-<span class="c1"># Contains all data between 2010-01-01 (included) and 2011-01-01 (not included)</span>
-<span class="n">validation_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;validation&#39;</span><span class="p">]</span>
-
-<span class="c1"># Contains all data after 2011-01-01 (included)</span>
-<span class="n">test_set</span> <span class="o">=</span> <span class="n">data_frame</span><span class="p">[</span><span class="n">split</span><span class="o">==</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>
-</code></pre></div>
+      <p>Splits data into a training, testing, validation or other sets.</p>
 
 
 
@@ -4092,9 +4060,11 @@ we called it 'other').</p>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">time</span><span class="p">(</span>
     <span class="n">population</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.data_frame.DataFrame" href="../data_frame/#getml.data.DataFrame">DataFrame</a></span><span class="p">,</span>
     <span class="n">time_stamp</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.FloatColumn" href="../columns/#getml.data.columns.FloatColumn">FloatColumn</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.FloatColumnView" href="../columns/#getml.data.columns.FloatColumnView">FloatColumnView</a></span><span class="p">],</span>
-    <span class="n">validation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><span title="getml.data.split.time.TimeStampType">TimeStampType</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">test</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><span title="getml.data.split.time.TimeStampType">TimeStampType</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n"><span title="getml.data.split.time.TimeStampType">TimeStampType</span></span>
+    <span class="n">validation</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span>
+        <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">,</span> <span class="n"><span title="numpy.datetime64">datetime64</span></span><span class="p">]</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">test</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">,</span> <span class="n"><span title="numpy.datetime64">datetime64</span></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class="p">,</span> <span class="n"><span title="numpy.datetime64">datetime64</span></span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.columns.StringColumnView" href="../columns/#getml.data.columns.StringColumnView">StringColumnView</a></span>
 </code></pre></div>
 
@@ -4158,7 +4128,7 @@ then pass "rowid" to <code>time_stamp</code>.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<span title="getml.data.split.time.TimeStampType">TimeStampType</span>]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a>, <span title="numpy.datetime64">datetime64</span>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4176,7 +4146,7 @@ then pass "rowid" to <code>time_stamp</code>.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<span title="getml.data.split.time.TimeStampType">TimeStampType</span>]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a>, <span title="numpy.datetime64">datetime64</span>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4196,7 +4166,7 @@ we called it 'other').</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><span title="getml.data.split.time.TimeStampType">TimeStampType</span></code>
+                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a>, <span title="numpy.datetime64">datetime64</span>]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4237,7 +4207,10 @@ we called it 'other').</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/split/time.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 28</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
 <span class="normal"> 29</span>
 <span class="normal"> 30</span>
 <span class="normal"> 31</span>
@@ -4347,15 +4320,12 @@ we called it 'other').</p>
 <span class="normal">135</span>
 <span class="normal">136</span>
 <span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">time</span><span class="p">(</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">time</span><span class="p">(</span>
     <span class="n">population</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span>
     <span class="n">time_stamp</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FloatColumn</span><span class="p">,</span> <span class="n">FloatColumnView</span><span class="p">],</span>
-    <span class="n">validation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeStampType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">test</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeStampType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">TimeStampType</span><span class="p">,</span>
+    <span class="n">validation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">test</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StringColumnView</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a [`StringColumnView`][getml.data.columns.StringColumnView] that can be used to divide</span>
@@ -4427,7 +4397,7 @@ we called it 'other').</p>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">test</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">validation</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;You have to supply at least one starting point.&quot;</span><span class="p">)</span>
 
-    <span class="n">defaults</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeStampType</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">defaults</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="n">test</span><span class="p">,</span>
         <span class="s2">&quot;validation&quot;</span><span class="p">:</span> <span class="n">validation</span><span class="p">,</span>
     <span class="p">}</span>

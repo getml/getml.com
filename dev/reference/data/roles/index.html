@@ -4030,7 +4030,7 @@ data set.</p>
 <a class="autorefs autorefs-internal" href="../placeholder/#getml.data.Placeholder"><code>Placeholder</code></a>, the abstract representation of the
 <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, by using the
 <a class="autorefs autorefs-internal" href="../placeholder/#getml.data.Placeholder.join"><code>join</code></a> method. Please refer to the
-chapter <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/data_model/#data-model_1">Data Model</a> for details.</p>
+chapter <a class="autorefs autorefs-internal" href="../../../examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn/#data-model">Data Model</a> for details.</p>
 <p>The content of this column is allowed to contain NULL values. But
 beware, columns with NULL in their join keys won't be matched to
 anything, not even to NULL in other join keys.</p>
@@ -4517,7 +4517,9 @@ data model nor during feature learning or prediction.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">NumericalLike</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal" target="_blank" rel="noopener">Literal</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.Numerical" href="#getml.data.roles.types.Numerical">Numerical</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.TimeStamp" href="#getml.data.roles.types.TimeStamp">TimeStamp</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.UnusedFloat" href="#getml.data.roles.types.UnusedFloat">UnusedFloat</a></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">NumericalLike</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal" target="_blank" rel="noopener">Literal</a></span><span class="p">[</span>
+    <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.Numerical" href="#getml.data.roles.types.Numerical">Numerical</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.Target" href="#getml.data.roles.types.Target">Target</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.TimeStamp" href="#getml.data.roles.types.TimeStamp">TimeStamp</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.UnusedFloat" href="#getml.data.roles.types.UnusedFloat">UnusedFloat</a></span>
+<span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4626,7 +4628,7 @@ data model nor during feature learning or prediction.</p>
 
 </h3>
 <div class="doc-signature highlight"><pre><span></span><code><span class="n">numerical</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.NumericalLike" href="#getml.data.roles.types.NumericalLike">NumericalLike</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#frozenset" target="_blank" rel="noopener">frozenset</a></span><span class="p">(</span>
-    <span class="p">{</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.numerical" href="#getml.data.roles.numerical">numerical</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.time_stamp" href="#getml.data.roles.time_stamp">time_stamp</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.unused_float" href="#getml.data.roles.unused_float">unused_float</a></span><span class="p">}</span>
+    <span class="p">{</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.numerical" href="#getml.data.roles.numerical">numerical</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.target" href="#getml.data.roles.target">target</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.time_stamp" href="#getml.data.roles.time_stamp">time_stamp</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.roles.unused_float" href="#getml.data.roles.unused_float">unused_float</a></span><span class="p">}</span>
 <span class="p">)</span>
 </code></pre></div>
 
@@ -4650,7 +4652,7 @@ data model nor during feature learning or prediction.</p>
   </span>
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="n">all_</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.Role" href="#getml.data.roles.types.Role">Role</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.sets.categorical" href="#getml.data.roles.sets.categorical">categorical</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.sets.numerical" href="#getml.data.roles.sets.numerical">numerical</a></span> <span class="o">|</span> <span class="n"><span title="getml.data.roles.sets._target">_target</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">all_</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.FrozenSet" href="https://docs.python.org/3/library/typing.html#typing.FrozenSet" target="_blank" rel="noopener">FrozenSet</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.types.Role" href="#getml.data.roles.types.Role">Role</a></span><span class="p">]</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.sets.categorical" href="#getml.data.roles.sets.categorical">categorical</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title="getml.data.roles.sets.numerical" href="#getml.data.roles.sets.numerical">numerical</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

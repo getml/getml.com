@@ -4450,10 +4450,29 @@ container is sorted by target and name.</p>
     </table>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>A container of sorted Features.</p>
-</details>      <details class="example">
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="getml.pipeline.features.Features" href="#getml.pipeline.Features">Features</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A container of sorted Features.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+      <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_correlation</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;correlation&quot;</span><span class="p">)</span>
 
@@ -4575,7 +4594,7 @@ container is sorted by target and name.</p>
 <span class="sd">        descending:</span>
 <span class="sd">            Whether to sort in descending order.</span>
 
-<span class="sd">    Return:</span>
+<span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted Features.</span>
 
 <span class="sd">    ??? example</span>
@@ -4921,11 +4940,11 @@ for no upper limit.</p>
           </tr>
       </tbody>
     </table>
-
-
-<p><span class="doc-section-title">Examples:</span></p>
-    <div class="highlight"><pre><span></span><code><span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">()</span>
+      <details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><span class="n">my_pipeline</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">()</span>
 </code></pre></div>
+</details>
 
 
 <details class="note" open>
@@ -5138,7 +5157,7 @@ transpilation to human-readable SQL. Passing
 <span class="sd">    Returns:</span>
 <span class="sd">            Object representing the features.</span>
 
-<span class="sd">    Examples:</span>
+<span class="sd">    ??? example</span>
 <span class="sd">        ```python</span>
 <span class="sd">        my_pipeline.features.to_sql()</span>
 <span class="sd">        ```</span>

@@ -2497,8 +2497,8 @@
 <h1 id="the-getml-suite">The getML Suite</h1>
 <p>The getML ecosystem comprises three fundamental components:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" href="#engine_1">getML Engine</a></li>
-<li><a class="autorefs autorefs-internal" href="#python-api">Python API</a></li>
+<li><a class="autorefs autorefs-internal" href="../../../install/packages/docker/#engine">getML Engine</a></li>
+<li><a class="autorefs autorefs-internal" href="../../../install/packages/docker/#python-api">Python API</a></li>
 <li><a class="autorefs autorefs-internal" href="#monitor_1">getML Monitor</a></li>
 </ul>
 <p><a href="" id="engine"></a></p>
@@ -2565,7 +2565,7 @@ To remove an entire project, use <a class="autorefs autorefs-internal" href="../
 <p>This creates a data frame object in the getML Engine, imports the provided data, and returns a handler to the object as a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> in the Python API.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are many other methods to create a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, including <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a>, or <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas()</code></a>. For a full list of available methods, refer to the <a class="autorefs autorefs-internal" href="../importing_data/#importing-data_1">Importing data</a> section.</p>
+<p>There are many other methods to create a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, including <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a>, or <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas()</code></a>. For a full list of available methods, refer to the <a class="autorefs autorefs-internal" href="../#importing-data">Importing data</a> section.</p>
 </div>
 <p><strong>Synchronization</strong></p>
 <p>When you apply any method, like <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.add"><code>add()</code></a>, the changes will be automatically reflected in both the Engine and Python. Under the hood, the Python API sends a command to create a new column to the getML Engine. The moment the Engine is done, it informs the Python API and the latter triggers the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.refresh"><code>refresh()</code></a> method to update the Python handler.</p>

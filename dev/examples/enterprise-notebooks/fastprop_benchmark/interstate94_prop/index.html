@@ -1100,6 +1100,8 @@
       
         
       
+        
+      
     
 
     <!-- Navigation tabs -->
@@ -2292,6 +2294,106 @@
 
               
             
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../kaggle_notebooks/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Kaggle
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
           </ul>
         </nav>
 
@@ -2964,6 +3066,8 @@
         <strong>GitHub source</strong>
       </div>
     </a>
+  
+
   
 
 

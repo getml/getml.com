@@ -3522,10 +3522,29 @@ slicing and is sort- and filterable.</p>
     </table>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>A container of sorted data frames.</p>
-</details>      <details class="example">
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-internal" title="getml.project.containers.data_frames.DataFrames" href="#getml.project.DataFrames">DataFrames</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A container of sorted data frames.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+      <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_num_rows</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">data_frames</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">frame</span><span class="p">:</span> <span class="n">frame</span><span class="o">.</span><span class="n">nrows</span><span class="p">())</span>
 </code></pre></div>
@@ -3565,7 +3584,7 @@ slicing and is sort- and filterable.</p>
 <span class="sd">        descending:</span>
 <span class="sd">            Whether to sort in descending order.</span>
 
-<span class="sd">    Return:</span>
+<span class="sd">    Returns:</span>
 <span class="sd">            A container of sorted data frames.</span>
 
 <span class="sd">    ??? example</span>

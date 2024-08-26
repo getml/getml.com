@@ -1093,6 +1093,8 @@
       
         
       
+        
+      
     
 
     <!-- Navigation tabs -->
@@ -1405,6 +1407,106 @@
     -->
     
         Enterprise Edition
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="enterprise-notebooks/kaggle_notebooks/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Kaggle
     
   </span>
 
@@ -2005,7 +2107,7 @@
 <p>Demonstrations of how to connect getML with other tools and frameworks to enhance its functionality. Currently, we have an example showcasing integration with FastAPI, with more integrations coming soon.</p>
 <ul>
 <li>
-<h3 id="fastapi"><a class="autorefs autorefs-internal" href="integrations/fastapi/fastapi/#provide-generic-prediction-endpoint-via-fastapi">FastAPI</a></h3>
+<h3 id="fastapi"><a class="autorefs autorefs-internal" href="#fastapi">FastAPI</a></h3>
 <p>How to integrate getML with <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a> to create a REST API for your machine learning models. This guide shows how to set up a generic prediction endpoint, making your getML pipelines accessible via web APIs.</p>
 </li>
 <li>

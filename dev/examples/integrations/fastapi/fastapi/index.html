@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://dev.getml.com/latest/examples/integrations/fastapi/fastapi/">
       
       
-        <link rel="prev" href="../../../enterprise-notebooks/stats/">
+        <link rel="prev" href="../../../enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis/">
       
       
         <link rel="next" href="../../vertexai/vertexai/">
@@ -1093,6 +1093,8 @@
       
         
       
+        
+      
     
 
     <!-- Navigation tabs -->
@@ -1405,6 +1407,106 @@
     -->
     
         Enterprise Edition
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../../enterprise-notebooks/kaggle_notebooks/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Kaggle
     
   </span>
 
@@ -2169,7 +2271,7 @@ the previously created pipeline has the id <code>a1b2c3</code>.</p>
 <p>To create the prediction endpoint the data scheme for the request body needs to
 be created first. For a prediction the getML Engine requires multiple data sets,
 the population data set <code>population</code> and any related peripheral data set
-<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../../user_guide/concepts/data_model/#data-model_1">Data model</a> of the pipeline. The
+<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn/#data-model">Data model</a> of the pipeline. The
 peripheral data sets can be either a list or a dictionary where the order of the
 data sets in the list needs to match the order returned by
 <code>[_.name for _ in getml.pipeline.metadata.peripheral]</code>. This information
