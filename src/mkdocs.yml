@@ -143,11 +143,16 @@ plugins:
   - htmlproofer:
       enabled: !ENV [ENABLED_HTMLPROOFER, False]
       raise_error_after_finish: True
+      raise_error_excludes:
+        403: [https://www.sciencedirect.com/science/article/abs/pii/S0378778815304357, 
+              https://www.researchgate.net/publication/228572841_Mining_episode_rules_in_STULONG_dataset]
       ignore_urls:
         - https://static.getml.com/download/1.5.0/*
         - https://storage.googleapis.com/static.getml.com/download/1.5.0/*
         - localhost:8080/*
         - mailto:*
+        - 'data:image/*'
+        - '#*'
 
 hooks:
   - docs/examples/get_notebooks.py
