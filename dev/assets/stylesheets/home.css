@@ -1,0 +1,54 @@
+.usp.highlight {
+    /* background-color: var(--md-code-hl-color--light) !important; */
+    box-shadow: 2px 0 0 0 var(--md-code-hl-color) inset !important;
+    border-radius: 0 !important;
+    padding-left: 0.4em;
+    /* margin-left: 0.16em; */
+}
+
+@media screen and (min-width: 76.25em) {
+
+.horizontal-list.lg {
+    font-size: 1.2em;
+}
+
+.font-size-1-2-lg {
+    font-size: 1.2em;
+}
+
+.horizontal-list ul {
+  display: flex !important; /* Enable flexbox */
+  justify-content: space-between; /* Distribute items equally */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  list-style-type: none; /* Remove bullet points */
+}
+
+.horizontal-list li {
+    /* flex: 1; /* Allow items to grow equally */ */
+    /* display: flex; /* Enable flexbox on li */ */
+    /* align-items: center; /* Center items vertically */ */
+    /* justify-content: center; /* Center items horizontally */ */
+    /* margin: 0 10px; /* Optional: Add some margin between items */ */
+}
+
+[dir=ltr] .md-typeset .task-list-indicator:before {
+    left: initial;
+    margin-left: -1.6em;
+}
+
+
+.no-first-card.cards-box > ul > li:not(:first-child){
+    border: .05rem solid var(--md-default-fg-color--lightest) !important;
+    /* background: var(--md-default-fg-color--lightest); */
+    border-radius: 0 !important;
+}
+
+
+
+}
+
+
+.md-typeset ul ol {
+    list-style-type: decimal;
+}
