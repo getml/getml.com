@@ -81,7 +81,127 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/adventure_works/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/formula1/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/interstate94/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/loans/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/robot/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/community-notebooks/seznam/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/adventure_works/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/air_pollution/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/atherosclerosis/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/baseball/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/consumer_expenditures/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/cora/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/dodgers/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/formula1/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/imdb/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/interstate94/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/loans/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/movie_lens/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/occupancy/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/online_retail/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/robot/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/seznam/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/sfscores/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/stats/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -91,12 +211,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/fastprop_benchmark/air_pollution_prop/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/fastprop_benchmark/dodgers_prop/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/fastprop_benchmark/interstate94_prop/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/fastprop_benchmark/occupancy_prop/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/fastprop_benchmark/robot_prop/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/kaggle_notebooks/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/kaggle_notebooks/epilepsy_recognition/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/enterprise-notebooks/kaggle_notebooks/getml-and-gnns-a-natural-symbiosis/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://dev.getml.com/latest/examples/integrations/fastapi/fastapi/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/latest/examples/integrations/vertexai/vertexai/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
