@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Write your documentation in Markdown and create a professional static site in minutes – searchable, customizable, in 60+ languages, for all devices">
+        <meta name="description" content="...">
       
       
         <meta name="author" content="Code17 GmbH">
@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://dev.getml.com/reference/sqlite3/">
       
       
-        <link rel="prev" href="../predictors/xgboost_regressor/">
+        <link rel="prev" href="../predictors/scale_gbm_classifier/">
       
       
-        <link rel="next" href="../cli/">
+        <link rel="next" href="../cli/engine/">
       
       
         
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20+insiders-4.53.8">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -34,7 +34,8 @@
     
     
   
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d5b5f0fd.min.css">
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e8c34cb.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -54,6 +55,11 @@
     href="../../assets/stylesheets/getml.css"
   />
 
+
+  <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
+  <link rel="stylesheet" href="../../assets/stylesheets/api-reference.css" />
+
+
     
       
     
@@ -61,17 +67,13 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
-    
-      <link rel="stylesheet" href="../../assets/css/custom.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -157,12 +159,12 @@
     <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <!-- <span class="md-ellipsis">
+        <div class="md-header__topic__nover">
+          <span class="md-ellipsis hidden">
             getML Developer Portal
-          </span> -->
+          </span>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
+        <div class="md-header__topic__nover" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Sqlite3
@@ -170,6 +172,11 @@
           </span>
         </div>
       </div>
+    </div>
+
+    <div class="md-header__version">
+        <div class="md-header__topic version-button">
+        </div>
     </div>
 
     <!-- Site language selector -->
@@ -186,17 +193,25 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <path d="M361.5,1.2c5,2.1,8.6,6.6,9.6,11.9l19.9,107.9,107.9,19.8c5.3,1,9.8,4.6,11.9,9.6,2.1,5,1.5,10.7-1.6,15.2l-62.3,90.4,62.3,90.3c3.1,4.5,3.7,10.2,1.6,15.2s-6.6,8.6-11.9,9.6l-107.9,19.9-19.9,107.9c-1,5.3-4.6,9.8-9.6,11.9-5,2.1-10.7,1.5-15.2-1.6l-90.3-62.3-90.3,62.3c-4.5,3.1-10.2,3.7-15.2,1.6s-8.6-6.6-9.6-11.9l-19.9-107.9-107.9-19.9c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7,1.6-15.2l62.3-90.3L2.8,165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6,11.9-9.6l107.9-19.9,19.9-107.9c1-5.3,4.6-9.8,9.6-11.9s10.7-1.5,15.2,1.6l90.3,62.3L346.3,2.8c4.5-3.1,10.2-3.7,15.2-1.6ZM384,256c0-70.7-57.3-128-128-128s-128,57.3-128,128,57.3,128,128,128,128-57.3,128-128Z"/>
+    </g>
+  </g>
+</svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-primary" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
       </label>
     
   
@@ -206,7 +221,26 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+        <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 576 512">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+        opacity: .4;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <path d="M24,355h528c13.3,0,24,10.7,24,24s-10.7,24-24,24H24c-13.3,0-24-10.7-24-24s10.7-24,24-24Z"/>
+        <path class="cls-1" d="M403.1,92.1c-1-5.3-4.6-9.8-9.6-11.9s-10.7-1.5-15.2,1.6l-90.3,62.3-90.3-62.3c-4.5-3.1-10.2-3.7-15.2-1.6s-8.6,6.6-9.6,11.9l-19.9,107.9-107.9,19.9c-5.3,1-9.8,4.6-11.9,9.6s-1.5,10.7,1.6,15.2l51.3,74.3h74.9c7.9-63.1,61.7-112,127-112s119.1,48.9,127,112h74.9l51.3-74.3c3.1-4.5,3.7-10.2,1.6-15.2s-6.6-8.6-11.9-9.6l-107.9-19.9-19.9-107.9h0ZM382.7,319c-7.6-45.4-47.1-80-94.7-80s-87.1,34.6-94.7,80h189.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
       </label>
     
   
@@ -248,7 +282,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -263,6 +297,10 @@
 
     <!-- Repository information -->
     
+
+    <!-- Contact button -->
+    <a class="md-header__button md-button md-button--primary" href="../../contact">Contact</a>
+
   </nav>
 
   <!-- Navigation tabs (sticky) -->
@@ -283,19 +321,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
   
     
   
-  Welcome
+  Home
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -312,6 +347,46 @@
     
   
   User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../install/" class="md-tabs__link">
+          
+  
+    
+  
+  Install
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../enterprise/benefits/" class="md-tabs__link">
+          
+  
+    
+  
+  Enterprise
 
         </a>
       </li>
@@ -368,7 +443,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/" class="md-tabs__link">
+        <a href="../../about/company/" class="md-tabs__link">
           
   
     
@@ -378,6 +453,23 @@
         </a>
       </li>
     
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
+        
+  
+    
+  
+  getML 1.4 doc
+
+      </a>
+    </li>
   
 
       
@@ -417,10 +509,57 @@
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Home
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -435,311 +574,91 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
-    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Prune item if it is not a section and not active -->
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+      
     
-  
-    Welcome
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../user_guide/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        User Guide
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Welcome
-  
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+      <!-- Only render toggle if there's at least one nested item -->
       
-        
-          
-        
+        <span class="md-nav__icon md-icon"></span>
       
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../home/installation/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
+    </a>
   
 
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Installation
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/installation/mac/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    macOS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/installation/windows/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows/Docker
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/installation/linux/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Linux
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/installation/remote_access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Remote access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/getting_started/getting_started/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting Started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../home/support/support/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Support
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
+  <!-- Currently active page -->
   
 
     
       
       
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -755,261 +674,191 @@
       
         
       
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
         
       
-        
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
       
         
-      
-        
-      
-        
-      
         
       
     
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../user_guide/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    User Guide
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../install/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Install
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    User Guide
-  
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+      <!-- Only render toggle if there's at least one nested item -->
       
-        
-          
-        
+        <span class="md-nav__icon md-icon"></span>
       
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../user_guide/getml_suite/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getML suite
+    </a>
   
 
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getML suite
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/getml_suite/engine/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Engine
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/getml_suite/monitor/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Monitor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/getml_suite/python_api/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Python API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
+
+  <!-- Currently active page -->
   
 
-              
-            
-              
-                
+    
+      
+      
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../../user_guide/project_management/project_management/" class="md-nav__link">
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
   
-  <span class="md-ellipsis">
-    
+
+  <!-- Recurse, if the first item has further nested items -->
   
-    Managing projects
+    <a href="../../enterprise/benefits/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Enterprise
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-      </a>
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
+
+  <!-- Currently active page -->
   
 
-              
-            
-              
-                
+    
+      
+      
+
+  <!-- Determine classes -->
   
   
+    
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1021,617 +870,129 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
+
+    <!-- Navigation tabs -->
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../user_guide/importing_data/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    Importing data
-  
 
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Importing data
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/csv_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CSV interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/pandas_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pandas interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/json_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    JSON interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/sqlite3_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    SQLite3 interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/mysql_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    MySQL interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/mariadb_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    MariaDB interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/postgres_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    PostgreSQL interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/greenplum_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Greenplum interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/importing_data/odbc_interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ODBC interface
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/annotating_data/annotating_data/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Annotating data
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/data_model/data_model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Data model
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/preprocessing/preprocessing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Preprocessing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/feature_engineering/feature_engineering/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Feature engineering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/predicting/predicting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Predicting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/hyperopt/hyperopt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperparameter optimization
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../user_guide/deployment/deployment/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Deployment
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
+      <!-- Render 1st level active item as section -->
       
         
         
       
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
       
     
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_5"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a
+              href="../"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    API Reference
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        API Reference
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label
+                class="md-nav__link "
+                for="__nav_5"
+                id="__nav_5_label"
+                tabindex=""
+              >
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    API Reference
-  
 
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_5_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+    
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -1661,513 +1022,127 @@
       
         
       
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+          
+          
         
       
-        
-      
-        
-      
-        
-      
-        
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
       
     
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+
+        <!-- Determine checked and indeterminate state -->
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_5_2"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../data/" class="md-nav__link ">
+            <a
+              href="../"
+              class="md-nav__link "
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.data
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Python API
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
+
+            <!-- Only render toggle if there's at least one more page -->
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label
+                class="md-nav__link "
+                for="__nav_5_2"
+                id="__nav_5_2_label"
+                tabindex=""
+              >
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.data
-  
 
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_5_2_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Python API
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
               
             
               
                 
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/container/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Container
-  
 
-    
-  </span>
+  <!-- Determine classes -->
   
   
 
-      </a>
-    </li>
+  <!-- Determine active page for paginated views -->
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/data_frame/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DataFrame
+  <!-- Navigation item with nested items -->
   
 
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/data_model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DataModel
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/placeholder/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Placeholder
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/roles_obj/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Roles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/star_schema/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    StarSchema
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/subset/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Subset
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/time_series/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    TimeSeries
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/view/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    View
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/access/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    access
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/columns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    columns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/relationship/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    relationship
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/roles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    roles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/split/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    split
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/time/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    time
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data/subroles/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    subroles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -2175,55 +1150,146 @@
           
         
       
-    
-    
+        
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
     
+
+    <!-- Navigation tabs -->
     
-    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../database/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+      
     
-  
-    getml.database
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../data/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.data
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.database
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
               
             
-          </ul>
-        </nav>
-      
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../database/database/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.database
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
     </li>
   
 
@@ -2231,66 +1297,39 @@
             
               
                 
+
+  <!-- Determine classes -->
   
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../datasets/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.datasets
   
 
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../datasets/datasets/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.datasets
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.datasets
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -2298,66 +1337,39 @@
             
               
                 
+
+  <!-- Determine classes -->
   
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../engine/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.engine
   
 
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../engine/engine/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.engine
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.engine
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
+      </a>
     </li>
   
 
@@ -2365,10 +1377,18 @@
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -2383,183 +1403,92 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
-    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Prune item if it is not a section and not active -->
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../hyperopt/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+      
     
-  
-    getml.hyperopt
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../hyperopt/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.hyperopt
     
   </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
+
+  <!-- Navigation link status -->
   
 
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.hyperopt
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hyperopt/gaussian/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Gaussian Process
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
+      
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hyperopt/latin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Latin Hypercube
   
 
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
+  <!-- Determine active page for paginated views -->
   
 
+  <!-- Navigation item with nested items -->
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hyperopt/random/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Random
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -2582,291 +1511,92 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../feature_learning/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.feature_learning
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../feature_learning/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.feature_learning
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.feature_learning
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/fastprop/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    FastProp
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/fastboost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Fastboost
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/multirel/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Multirel
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/relboost/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Relboost
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/relmt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    RelMT
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/aggregations/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    aggregations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../feature_learning/loss_functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    loss_functions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -2881,151 +1611,92 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
-    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Prune item if it is not a section and not active -->
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../project/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+      
     
-  
-    getml.project
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../project/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.project
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.project
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project/data_frames/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    DataFrames
-  
-
-    
-  </span>
-  
-  
-
-      </a>
+      
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project/hyperopts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Hyperopts
-  
 
-    
-  </span>
+  <!-- Determine classes -->
   
   
 
-      </a>
-    </li>
+  <!-- Determine active page for paginated views -->
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project/pipelines/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pipelines
+  <!-- Navigation item with nested items -->
   
 
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -3034,65 +1705,92 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
       
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
     
+
+    <!-- Navigation pruning -->
     
-    <li class="md-nav__item md-nav__item--nested">
+
+      <!-- Prune item if it is not a section and not active -->
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../preprocessors/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
+      
     
-  
-    getml.preprocessors
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../preprocessors/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.preprocessors
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.preprocessors
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -3121,348 +1819,92 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../pipeline/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.pipeline
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../pipeline/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.pipeline
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.pipeline
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/pipeline/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/columns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Columns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/tables/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Tables
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/features/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Features
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/plots/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Plots
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/scores_container/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Scores
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/score/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Score
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/sql_code/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    SQLCode
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/metrics/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    metrics
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/dialect/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    dialect
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -3483,250 +1925,94 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
       
     
-    
-    <li class="md-nav__item md-nav__item--nested">
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../predictors/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.predictors
   
 
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../predictors/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.predictors
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.predictors
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/scale_gbm_classifier/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ScaleGBMClassifier
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/scale_gbm_regressor/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    ScaleGBMRegressor
-  
-
-    
-  </span>
-  
-  
-    
-  
-  
-    <span class="md-status md-status--enterprise" title="Enterprise feature">
-    </span>
-  
-
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/linear_regression/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    LinearRegression
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/logistic_regression/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    LogisticRegression
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/xgboost_classifier/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    XGBoostClassifier
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../predictors/xgboost_regressor/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    XGBoostRegressor
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
+
+  <!-- Currently active page -->
   
 
               
             
               
                 
+
+  <!-- Determine classes -->
   
   
     
   
+
+  <!-- Determine active page for paginated views -->
   
+
+  <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
     
     
       
@@ -3735,178 +2021,270 @@
         
       
     
+
+    <!-- Navigation tabs -->
     
+
+      <!-- Render 1st level active item as section -->
       
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
       
     
-    
+
+    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    getml.sqlite3
-  
 
-    
-  </span>
-  
-  
-
-            </a>
-            
-          </div>
+        <!-- Determine checked and indeterminate state -->
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_12">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    getml.sqlite3
-  
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_5_2_12"
+          checked
+        />
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    CLI
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <!-- Toggle to expand nested items -->
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../examples/" class="md-nav__link ">
+            <a
+              href="./"
+              class="md-nav__link md-nav__link--active"
+            >
               
-  
-  <span class="md-ellipsis">
-    
-  
-    Examples
+
+  <!-- Navigation link icon -->
   
 
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getml.sqlite3
     
   </span>
-  
+
+  <!-- Navigation link status -->
   
 
             </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
+
+            <!-- Only render toggle if there's at least one more page -->
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Examples
-  
 
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="3"
+          aria-labelledby="__nav_5_2_12_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_5_2_12">
+            <span class="md-nav__icon md-icon"></span>
+            getml.sqlite3
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
             
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
               
             
               
                 
+
+  <!-- Determine classes -->
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../integration/fastapi/fastapi/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    FastAPI
   
 
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+          
+          
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+          
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle md-toggle--indeterminate"
+          type="checkbox"
+          id="__nav_5_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_5_3"
+            id="__nav_5_3_label"
+            tabindex=""
+          >
+            
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Command Line
     
   </span>
+
+  <!-- Navigation link status -->
   
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_5_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Command Line
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../cli/engine/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Engine CLI
+    
+  </span>
+
+  <!-- Navigation link status -->
   
 
       </a>
@@ -3917,136 +2295,256 @@
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../about/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    About
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/imprint/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Imprint
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/disclaimer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    
-  
-    Disclaimer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
+  <!-- Currently active page -->
   
 
               
             
           </ul>
         </nav>
+
+      <!-- Pruned navigation item -->
       
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../examples/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Examples
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../about/company/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        About
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        getML 1.4 doc
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
     </li>
   
 
@@ -4191,9 +2689,25 @@
 
 
 
+  
+
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
+      
+        
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
       
       
         
@@ -4205,6 +2719,23 @@
           
   <span class="md-ellipsis">
     API Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Python API
   </span>
 
         </a>
@@ -4270,12 +2801,10 @@ version of your Python distribution, do the following:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sqlite3</span>
 <span class="n">sqlite3</span><span class="o">.</span><span class="n">sqlite_version</span>
 </code></pre></div>
-
-
-<details class="example" open>
-  <summary>Example</summary>
-  <p>For our example we will assume that you want to productionize
-the <a href="https://github.com/getml/getml-demo/blob/master/cora.ipynb">CORA project</a>.</p>
+<details class="example">
+<summary>Example</summary>
+<p>For our example we will assume that you want to productionize
+the <a href="https://github.com/getml/getml-demo/blob/master/cora.ipynb" target="_blank" rel="noopener">CORA project</a>.</p>
 <p>First, we want to transpile the features into SQL code,
 like this:</p>
 <p><div class="highlight"><pre><span></span><code><span class="c1"># Set targets to False, if you want an inference pipeline.</span>
@@ -4320,6 +2849,7 @@ the correct types, avoiding awkward problems in the future.</p>
 </details>
 
 
+
   <div class="doc doc-children">
 
 
@@ -4346,7 +2876,7 @@ the correct types, avoiding awkward problems in the future.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">connect</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">connect</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -4377,7 +2907,7 @@ create an in-memory database.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -4397,7 +2927,7 @@ create an in-memory database.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                    <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -4412,8 +2942,7 @@ functions and aggregations registered.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/connect.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 70</span>
-<span class="normal"> 71</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 71</span>
 <span class="normal"> 72</span>
 <span class="normal"> 73</span>
 <span class="normal"> 74</span>
@@ -4493,7 +3022,8 @@ functions and aggregations registered.</p>
 <span class="normal">148</span>
 <span class="normal">149</span>
 <span class="normal">150</span>
-<span class="normal">151</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">:</span>
+<span class="normal">151</span>
+<span class="normal">152</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates a new sqlite3 connection.</span>
 
@@ -4509,8 +3039,8 @@ functions and aggregations registered.</p>
 <span class="sd">            create an in-memory database.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">            A new sqlite3 connection with all custom</span>
-<span class="sd">                functions and aggregations registered.</span>
+<span class="sd">        A new sqlite3 connection with all custom</span>
+<span class="sd">            functions and aggregations registered.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">database</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -4589,7 +3119,7 @@ functions and aggregations registered.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span> <span class="n">fname</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span> <span class="n">fname</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -4609,12 +3139,12 @@ functions and aggregations registered.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -4629,7 +3159,7 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -4639,8 +3169,7 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/execute.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">35</span>
-<span class="normal">36</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">36</span>
 <span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span>
@@ -4678,13 +3207,14 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
 <span class="normal">71</span>
 <span class="normal">72</span>
 <span class="normal">73</span>
-<span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">fname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">74</span>
+<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">fname</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Executes an SQL script or several SQL scripts on SQLite3.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        fname:</span>
 <span class="sd">            The names of the SQL script or a folder containing SQL scripts.</span>
@@ -4733,15 +3263,15 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
 
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">read_csv</span><span class="p">(</span>
-    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span>
-    <span class="n">fnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]],</span>
-    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
-    <span class="n">header</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">if_exists</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s2">&quot;append&quot;</span><span class="p">,</span>
-    <span class="n">quotechar</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
-    <span class="n">sep</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
-    <span class="n">skip</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">colnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span>
+    <span class="n">fnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">]],</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span>
+    <span class="n">header</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">if_exists</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;append&quot;</span><span class="p">,</span>
+    <span class="n">quotechar</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
+    <span class="n">skip</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">colnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
@@ -4762,12 +3292,12 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -4781,7 +3311,7 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
                   </span>
               </p>
             </td>
@@ -4795,7 +3325,7 @@ If you decide to pass a folder, the SQL scripts must have the ending '.sql'.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -4810,7 +3340,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4828,7 +3358,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4851,7 +3381,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4869,7 +3399,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4887,7 +3417,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4908,7 +3438,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -4922,8 +3452,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/read_csv.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 38</span>
-<span class="normal"> 39</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 39</span>
 <span class="normal"> 40</span>
 <span class="normal"> 41</span>
 <span class="normal"> 42</span>
@@ -5023,7 +3552,8 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 <span class="normal">136</span>
 <span class="normal">137</span>
 <span class="normal">138</span>
-<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_csv</span><span class="p">(</span>
+<span class="normal">139</span>
+<span class="normal">140</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_csv</span><span class="p">(</span>
     <span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span>
     <span class="n">fnames</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span>
     <span class="n">table_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -5039,7 +3569,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        fnames:</span>
 <span class="sd">            The names of the CSV files.</span>
@@ -5140,7 +3670,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">read_list</span><span class="p">(</span>
-    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></span><span class="p">]]</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any" target="_blank" rel="noopener">Any</a></span><span class="p">]]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
@@ -5161,12 +3691,12 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -5180,7 +3710,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -5195,7 +3725,7 @@ Every list represents one row to be read into the table.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any" target="_blank" rel="noopener">Any</a>]]</code>
                   </span>
               </p>
             </td>
@@ -5205,8 +3735,7 @@ Every list represents one row to be read into the table.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/read_list.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
-<span class="normal">20</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
@@ -5247,13 +3776,14 @@ Every list represents one row to be read into the table.</p>
 <span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
-<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_list</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">table_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Reads data into an sqlite3 table.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        table_name:</span>
 <span class="sd">            The name of the table to write to.</span>
@@ -5305,10 +3835,10 @@ Every list represents one row to be read into the table.</p>
 
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">read_pandas</span><span class="p">(</span>
-    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span>
-    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span>
     <span class="n">data_frame</span><span class="p">:</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">,</span>
-    <span class="n">if_exists</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a></span><span class="p">[</span>
+    <span class="n">if_exists</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal" target="_blank" rel="noopener">Literal</a></span><span class="p">[</span>
         <span class="s2">&quot;fail&quot;</span><span class="p">,</span> <span class="s2">&quot;replace&quot;</span><span class="p">,</span> <span class="s2">&quot;append&quot;</span>
     <span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;append&quot;</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
@@ -5331,12 +3861,12 @@ Every list represents one row to be read into the table.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -5350,7 +3880,7 @@ Every list represents one row to be read into the table.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -5386,7 +3916,7 @@ their order is not important.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal">Literal</a>[&#39;fail&#39;, &#39;replace&#39;, &#39;append&#39;]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Literal" href="https://docs.python.org/3/library/typing.html#typing.Literal" target="_blank" rel="noopener">Literal</a>[&#39;fail&#39;, &#39;replace&#39;, &#39;append&#39;]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5400,8 +3930,7 @@ their order is not important.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/read_pandas.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
-<span class="normal">26</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
@@ -5463,7 +3992,8 @@ their order is not important.</p>
 <span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_pandas</span><span class="p">(</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_pandas</span><span class="p">(</span>
     <span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span>
     <span class="n">table_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">data_frame</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
@@ -5474,7 +4004,7 @@ their order is not important.</p>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        table_name:</span>
 <span class="sd">            The name of the table to write to.</span>
@@ -5542,15 +4072,15 @@ their order is not important.</p>
 
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">sniff_csv</span><span class="p">(</span>
-    <span class="n">fnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]],</span>
-    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span>
-    <span class="n">header</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">num_lines_sniffed</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
-    <span class="n">quotechar</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
-    <span class="n">sep</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
-    <span class="n">skip</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">colnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span>
+    <span class="n">fnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">]],</span>
+    <span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span>
+    <span class="n">header</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">num_lines_sniffed</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">quotechar</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>
+    <span class="n">skip</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">colnames</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -5575,7 +4105,7 @@ their order is not important.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
                   </span>
               </p>
             </td>
@@ -5589,7 +4119,7 @@ their order is not important.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -5604,7 +4134,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5622,7 +4152,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5640,7 +4170,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5658,7 +4188,7 @@ is skipped and column names are inferred accordingly.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5677,7 +4207,7 @@ file.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5698,7 +4228,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional">Optional</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>]]</code>
+                      <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>]]</code>
                   </span>
                   <span class="doc-param-default">
                     <b>DEFAULT:</b>
@@ -5722,7 +4252,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -5945,7 +4475,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">sniff_pandas</span><span class="p">(</span><span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n">data_frame</span><span class="p">:</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">sniff_pandas</span><span class="p">(</span><span class="n">table_name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">,</span> <span class="n">data_frame</span><span class="p">:</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -5970,7 +4500,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -6004,7 +4534,7 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -6110,8 +4640,8 @@ CSV files do not contain a header, thus overriding the 'header' variable.</p>
 
 </h2>
 <div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_list</span><span class="p">(</span>
-    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">],</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a></span><span class="p">]]</span>
+    <span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">],</span> <span class="n"><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list" target="_blank" rel="noopener">list</a></span><span class="p">]]</span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -6132,12 +4662,12 @@ a tuple which contains the column names and the actual data.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -6153,7 +4683,7 @@ table will be imported.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -6173,7 +4703,7 @@ table will be imported.</p>
           <tr class="doc-section-item">
             <td>
                 <span class="doc-returns-annotation">
-                    <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>], <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>]]</code>
+                    <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/3/library/typing.html#typing.Tuple" target="_blank" rel="noopener">Tuple</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>], <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/3/library/typing.html#typing.List" target="_blank" rel="noopener">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list" target="_blank" rel="noopener">list</a>]]</code>
                 </span>
             </td>
             <td class="doc-returns-details">
@@ -6187,8 +4717,7 @@ table will be imported.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/to_list.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">28</span>
-<span class="normal">29</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
@@ -6218,14 +4747,15 @@ table will be imported.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">list</span><span class="p">]]:</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">list</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Transforms a query or table into a list of lists. Returns</span>
 <span class="sd">    a tuple which contains the column names and the actual data.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        query:</span>
 <span class="sd">            The query used to get the table. You can also</span>
@@ -6264,7 +4794,7 @@ table will be imported.</p>
 
 
 </h2>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="pandas.DataFrame">DataFrame</span></span>
 </code></pre></div>
 
     <div class="doc doc-contents first">
@@ -6284,12 +4814,12 @@ table will be imported.</p>
             <td><code>conn</code></td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>A sqlite3 connection created by [<code>connect</code>][getml.sqlite3.connect].</p>
+                <p>A sqlite3 connection created by <a class="autorefs autorefs-internal" href="#getml.sqlite3.connect.connect"><code>connect</code></a>.</p>
               </div>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection">Connection</a></code>
+                      <code><a class="autorefs autorefs-external" title="sqlite3.Connection" href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection" target="_blank" rel="noopener">Connection</a></code>
                   </span>
               </p>
             </td>
@@ -6305,7 +4835,7 @@ table will be imported.</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></code>
                   </span>
               </p>
             </td>
@@ -6339,8 +4869,7 @@ table will be imported.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/sqlite3/to_pandas.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
-<span class="normal">21</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -6368,13 +4897,14 @@ table will be imported.</p>
 <span class="normal">46</span>
 <span class="normal">47</span>
 <span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pandas</span><span class="p">(</span><span class="n">conn</span><span class="p">:</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Connection</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns a table as a pandas.DataFrame.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        conn:</span>
-<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect].</span>
+<span class="sd">            A sqlite3 connection created by [`connect`][getml.sqlite3.connect.connect].</span>
 
 <span class="sd">        query:</span>
 <span class="sd">            The query used to get the table. You can also</span>
@@ -6449,7 +4979,7 @@ table will be imported.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2017 - 2024 Code17 GmbH
+      Copyright &copy; 2024 – Code17 GmbH
     </div>
   
   
@@ -6465,7 +4995,7 @@ table will be imported.</p>
       
     
     <a href="https://github.com/getml" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
     
@@ -6476,7 +5006,7 @@ table will be imported.</p>
       
     
     <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
     </a>
   
     
@@ -6487,7 +5017,7 @@ table will be imported.</p>
       
     
     <a href="https://pypi.org/project/getml/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
     </a>
   
     
@@ -6498,7 +5028,7 @@ table will be imported.</p>
       
     
     <a href="https://www.youtube.com/@code17-gmbh" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
     </a>
   
     
@@ -6509,7 +5039,7 @@ table will be imported.</p>
       
     
     <a href="https://www.linkedin.com/company/code17-gmbh" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
     </a>
   
 </div>
@@ -6524,35 +5054,19 @@ table will be imported.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "announce.dismiss", "content.code.copy"], "search": "../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../assets/javascripts/bundle.0d59af3e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d249fdc4.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
 
   <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
   <script src="../../assets/javascripts/custom.js"></script>
 
-  <!-- Test JSON-LD -->
-  <!-- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://squidfunk.github.io/mkdocs-material/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://squidfunk.github.io/mkdocs-material/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-  </script> -->
 
   </body>
 </html>

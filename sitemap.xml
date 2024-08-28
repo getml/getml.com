@@ -2,502 +2,542 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dev.getml.com/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/about/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/about/careers/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/about/disclaimer/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/about/company/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/about/imprint/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/assets/snippets/enterprise_feature_adm/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/assets/snippets/whats_inside/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/contact/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/contact/message-us/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/benefits/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/book-demo/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/feature-list/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/request-trial/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/trial/terms/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/enterprise/trial/trial-download/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/examples/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/examples/community-notebooks/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/getting_started/getting_started/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/examples/enterprise-notebooks/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/installation/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/examples/enterprise-notebooks/fastprop_benchmark/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/installation/linux/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/examples/enterprise-notebooks/kaggle_notebooks/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/installation/mac/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/examples/integrations/fastapi/fastapi/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/installation/remote_access/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/install/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/installation/windows/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/install/release-notes/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/home/support/support/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/install/remote_access/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/integration/fastapi/fastapi/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/install/uninstall/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/install/packages/archive/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/install/packages/docker/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/install/packages/linux/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/install/source/build/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/install/source/python-api/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/reference/cli/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/reference/cli/engine/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/access/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/columns/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/container/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/data_frame/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/data_model/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/placeholder/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/relationship/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/roles/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/roles_obj/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/split/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/star_schema/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/subroles/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/subset/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/time/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/time_series/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/data/view/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/reference/database/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/reference/database/database/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/reference/datasets/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/reference/datasets/datasets/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/reference/engine/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/reference/engine/engine/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/reference/feature_learning/aggregations/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/fastboost/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/fastprop/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/loss_functions/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/multirel/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/relboost/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/feature_learning/relmt/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/reference/feature_learning/aggregations/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/reference/feature_learning/aggregations/sets/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://dev.getml.com/reference/feature_learning/aggregations/types/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/hyperopt/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/hyperopt/gaussian/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/hyperopt/latin/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/hyperopt/random/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/column/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/columns/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/dialect/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/feature/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/features/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/metadata/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/metrics/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/pipeline/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/plots/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/score/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/scores_container/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/sql_code/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/sql_string/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/table/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/pipeline/tables/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/linear_regression/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/logistic_regression/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/scale_gbm_classifier/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/scale_gbm_regressor/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/xgboost_classifier/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/predictors/xgboost_regressor/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/preprocessors/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/project/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/project/data_frames/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/project/hyperopts/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/project/pipelines/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/reference/sqlite3/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://dev.getml.com/user_guide/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/annotating_data/annotating_data/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/data_model/data_model/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/annotating_data/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/deployment/deployment/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/data_model/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/feature_engineering/feature_engineering/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/deployment/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/getml_suite/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/feature_engineering/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/getml_suite/engine/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/getml_suite/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/getml_suite/monitor/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/hyperopt/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/getml_suite/python_api/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/importing_data/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/hyperopt/hyperopt/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/predicting/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/preprocessing/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/csv_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/concepts/project_management/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/greenplum_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/quick_start/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/json_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/mariadb_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/mysql_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/odbc_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/pandas_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/postgres_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/importing_data/sqlite3_interface/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/predicting/predicting/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/preprocessing/preprocessing/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://dev.getml.com/user_guide/project_management/project_management/</loc>
-         <lastmod>2024-07-15</lastmod>
+         <loc>https://dev.getml.com/user_guide/walkthrough/</loc>
+         <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
