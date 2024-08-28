@@ -328,6 +328,7 @@ nav:
         - Gaussian Process: reference/hyperopt/gaussian.md
         - Latin Hypercube: reference/hyperopt/latin.md
         - Random: reference/hyperopt/random.md
+        - types: reference/hyperopt/types.md
       - getml.feature_learning:
         - reference/feature_learning/index.md
         - FastProp: reference/feature_learning/fastprop.md
@@ -362,6 +363,7 @@ nav:
         # - metadata: reference/pipeline/metadata.md
         - metrics: reference/pipeline/metrics.md
         - dialect: reference/pipeline/dialect.md
+        - types: reference/pipeline/types.md
       - getml.predictors:
         - reference/predictors/index.md
         - LinearRegression: reference/predictors/linear_regression.md
