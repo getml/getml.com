@@ -117,7 +117,7 @@ While most of getML's preprocessors are straightforward, two of them deserve a m
 
 Mappings are a simple and interpretable alternative representation for categorical data. By introducing a continuous representation, mappings allow getML's feature learning algorithms to apply arbitrary aggregations to categorical columns. Further, mappings enable huge gains in efficiency when learning patterns from categorical data. You can control the extent mappings are utilized by specifying the minimum number of matching rows required for categories that constitutes a mapping through the `min_freq` parameter.
 
-Here is an example mapping from the [CORA notebook](https://nbviewer.getml.com/github/getml/getml-demo/blob/master/cora.ipynb):
+Here is an example mapping from the [CORA notebook](https://github.com/getml/getml-demo/blob/master/cora.ipynb):
 ```sql
  DROP TABLE IF EXISTS "CATEGORICAL_MAPPING_1_1_1";
  CREATE TABLE "CATEGORICAL_MAPPING_1_1_1"(key TEXT NOT NULL PRIMARY KEY, value NUMERIC);
