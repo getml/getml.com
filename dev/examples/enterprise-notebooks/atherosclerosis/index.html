@@ -3899,12 +3899,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">Markdown</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>  
 
 <span class="kn">import</span> <span class="nn">getml</span>
 
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">home_directory</span><span class="o">=</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s1">'token'</span><span class="p">)</span>
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">'atherosclerosis'</span><span class="p">)</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">home_directory</span><span class="o">=</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s2">"token"</span><span class="p">)</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s2">"atherosclerosis"</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import os
 from pathlib import Path
@@ -3912,12 +3913,13 @@ import numpy as np
 import pandas as pd
 from IPython.display import Image, Markdown
 import matplotlib.pyplot as plt
+
 %matplotlib inline  
 
 import getml
 
-getml.engine.launch(home_directory=Path.home(), allow_remote_ips=True, token='token')
-getml.engine.set_project('atherosclerosis')</div>
+getml.engine.launch(home_directory=Path.home(), allow_remote_ips=True, token="token")
+getml.engine.set_project("atherosclerosis")</div>
 </div>
 </div>
 </div>
@@ -4015,8 +4017,8 @@ Loading contr...
 <h4 id="12-prepare-data-for-getml">1.2 Prepare data for getML<a class="anchor-link" href="#12-prepare-data-for-getml">¶</a></h4><p>The <code>getml.datasets.load_atherosclerosis</code> method took care of the entire data lifting:</p>
 <ul>
 <li>Downloads csv's from our servers in python</li>
-<li>Converts csv's to getML <a href="https://docs.getml.com/latest/api/getml.data.DataFrame.html#getml.data.DataFrame" target="_blank" rel="noopener">DataFrames</a></li>
-<li>Sets <a href="https://docs.getml.com/latest/user_guide/annotating_data/annotating_data.html#roles" target="_blank" rel="noopener">roles</a> to columns inside getML DataFrames</li>
+<li>Converts csv's to getML <a href="https://getml.com/latest/reference/data/data_frame" target="_blank" rel="noopener">DataFrames</a></li>
+<li>Sets <a href="https://getml.com/latest/user_guide/concepts/annotating_data/#roles" target="_blank" rel="noopener">roles</a> to columns inside getML DataFrames</li>
 </ul>
 </div>
 </div>
@@ -7256,7 +7258,7 @@ Loading contr...
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="13-define-relational-model">1.3 Define relational model<a class="anchor-link" href="#13-define-relational-model">¶</a></h4><p>To start with relational learning, we need to specify an abstract data model. Here, we use the <a href="https://docs.getml.com/latest/api/getml.data.StarSchema.html" target="_blank" rel="noopener">high-level star schema API</a> that allows us to define the abstract data model and construct a <a href="https://docs.getml.com/latest/api/getml.data.Container.html" target="_blank" rel="noopener">container</a> with the concrete data at one-go. While a simple <code>StarSchema</code> indeed works in many cases, it is not sufficient for more complex data models like schoflake schemas, where you would have to define the data model and construct the container in separate steps, by utilzing getML's <a href="https://docs.getml.com/latest/api/getml.data.DataModel.html" target="_blank" rel="noopener">full-fledged data model</a> and <a href="https://docs.getml.com/latest/api/getml.data.Container.html" target="_blank" rel="noopener">container</a> APIs respectively.</p>
+<h4 id="13-define-relational-model">1.3 Define relational model<a class="anchor-link" href="#13-define-relational-model">¶</a></h4><p>To start with relational learning, we need to specify an abstract data model. Here, we use the <a href="https://getml.com/latest/reference/data/star_schema" target="_blank" rel="noopener">high-level star schema API</a> that allows us to define the abstract data model and construct a <a href="https://getml.com/latest/reference/data/container" target="_blank" rel="noopener">container</a> with the concrete data at one-go. While a simple <code>StarSchema</code> indeed works in many cases, it is not sufficient for more complex data models like schoflake schemas, where you would have to define the data model and construct the container in separate steps, by utilzing getML's <a href="https://getml.com/latest/reference/data/data_model" target="_blank" rel="noopener">full-fledged data model</a> and <a href="https://getml.com/latest/reference/data/container" target="_blank" rel="noopener">container</a> APIs respectively.</p>
 </div>
 </div>
 </div>
@@ -7308,21 +7310,13 @@ Loading contr...
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">star_schema</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">StarSchema</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="n">split</span><span class="p">)</span>
 
-<span class="n">star_schema</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-    <span class="n">contr</span><span class="p">,</span>
-    <span class="n">on</span><span class="o">=</span><span class="s2">"ICO"</span><span class="p">,</span>
-    <span class="n">time_stamps</span><span class="o">=</span><span class="p">(</span><span class="s2">"REFERENCE_DATE"</span><span class="p">,</span> <span class="s2">"CONTROL_DATE"</span><span class="p">)</span>
-<span class="p">)</span>
+<span class="n">star_schema</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">contr</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">"ICO"</span><span class="p">,</span> <span class="n">time_stamps</span><span class="o">=</span><span class="p">(</span><span class="s2">"REFERENCE_DATE"</span><span class="p">,</span> <span class="s2">"CONTROL_DATE"</span><span class="p">))</span>
 
 <span class="n">star_schema</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-6">star_schema = getml.data.StarSchema(population, split=split)
 
-star_schema.join(
-    contr,
-    on="ICO",
-    time_stamps=("REFERENCE_DATE", "CONTROL_DATE")
-)
+star_schema.join(contr, on="ICO", time_stamps=("REFERENCE_DATE", "CONTROL_DATE"))
 
 star_schema</div>
 </div>
@@ -7541,7 +7535,7 @@ star_schema</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">relmt</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">RelMT</span><span class="p">(</span>
     <span class="n">num_features</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
     <span class="n">loss_function</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">loss_functions</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">,</span>
-    <span class="n">num_threads</span><span class="o">=</span><span class="mi">1</span>
+    <span class="n">num_threads</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">relboost</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">Relboost</span><span class="p">(</span>
@@ -7549,21 +7543,19 @@ star_schema</div>
     <span class="n">loss_function</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">feature_learning</span><span class="o">.</span><span class="n">loss_functions</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">,</span>
     <span class="n">min_num_samples</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
     <span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-    <span class="n">num_threads</span><span class="o">=</span><span class="mi">1</span>
+    <span class="n">num_threads</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">feature_selector</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostClassifier</span><span class="p">()</span>
 
 <span class="n">xgboost</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostClassifier</span><span class="p">(</span>
-    <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-    <span class="n">reg_lambda</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span>
-    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span>
+    <span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">reg_lambda</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.1</span>
 <span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">relmt = getml.feature_learning.RelMT(
     num_features=30,
     loss_function=getml.feature_learning.loss_functions.CrossEntropyLoss,
-    num_threads=1
+    num_threads=1,
 )
 
 relboost = getml.feature_learning.Relboost(
@@ -7571,15 +7563,13 @@ relboost = getml.feature_learning.Relboost(
     loss_function=getml.feature_learning.loss_functions.CrossEntropyLoss,
     min_num_samples=500,
     max_depth=2,
-    num_threads=1
+    num_threads=1,
 )
 
 feature_selector = getml.predictors.XGBoostClassifier()
 
 xgboost = getml.predictors.XGBoostClassifier(
-    max_depth=5,
-    reg_lambda=100.0,
-    learning_rate=0.1
+    max_depth=5, reg_lambda=100.0, learning_rate=0.1
 )</div>
 </div>
 </div>
@@ -7612,7 +7602,7 @@ xgboost = getml.predictors.XGBoostClassifier(
     <span class="n">feature_selectors</span><span class="o">=</span><span class="n">feature_selector</span><span class="p">,</span>
     <span class="n">share_selected_features</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
     <span class="n">predictors</span><span class="o">=</span><span class="n">xgboost</span><span class="p">,</span>
-    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">pipe1</span>
@@ -7624,7 +7614,7 @@ xgboost = getml.predictors.XGBoostClassifier(
     feature_selectors=feature_selector,
     share_selected_features=0.8,
     predictors=xgboost,
-    include_categorical=True
+    include_categorical=True,
 )
 
 pipe1</div>
@@ -7678,9 +7668,9 @@ pipe1</div>
     <span class="n">data_model</span><span class="o">=</span><span class="n">star_schema</span><span class="o">.</span><span class="n">data_model</span><span class="p">,</span>
     <span class="n">feature_learners</span><span class="o">=</span><span class="n">relboost</span><span class="p">,</span>
     <span class="n">feature_selectors</span><span class="o">=</span><span class="n">feature_selector</span><span class="p">,</span>
-    <span class="n">share_selected_features</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>    
+    <span class="n">share_selected_features</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
     <span class="n">predictors</span><span class="o">=</span><span class="n">xgboost</span><span class="p">,</span>
-    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">pipe2</span>
@@ -7690,9 +7680,9 @@ pipe1</div>
     data_model=star_schema.data_model,
     feature_learners=relboost,
     feature_selectors=feature_selector,
-    share_selected_features=0.8,    
+    share_selected_features=0.8,
     predictors=xgboost,
-    include_categorical=True
+    include_categorical=True,
 )
 
 pipe2</div>
@@ -8257,7 +8247,7 @@ Relboost: Building features... 100% |██████████| [elapsed: 0
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"features"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"correlations"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -8271,7 +8261,7 @@ plt.title("feature correlations")
 plt.grid(True)
 plt.xlabel("features")
 plt.ylabel("correlations")
-plt.xticks(rotation='vertical')
+plt.xticks(rotation="vertical")
 
 plt.show()</div>
 </div>
@@ -8320,7 +8310,7 @@ plt.show()</div>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"features"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"importances"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="s1">'vertical'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -8334,7 +8324,7 @@ plt.title("feature importances")
 plt.grid(True)
 plt.xlabel("features")
 plt.ylabel("importances")
-plt.xticks(rotation='vertical')
+plt.xticks(rotation="vertical")
 
 plt.show()</div>
 </div>
@@ -8525,9 +8515,13 @@ pipe2.features.to_sql().save("atherosclerosis_pipeline", remove=True)</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe2</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">dialect</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">spark_sql</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"atherosclerosis_pipeline_spark"</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe2</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">dialect</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">spark_sql</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
+    <span class="s2">"atherosclerosis_pipeline_spark"</span><span class="p">,</span> <span class="n">remove</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-20">pipe2.features.to_sql(dialect=getml.pipeline.dialect.spark_sql).save("atherosclerosis_pipeline_spark", remove=True)</div>
+<div class="clipboard-copy-txt" id="cell-20">pipe2.features.to_sql(dialect=getml.pipeline.dialect.spark_sql).save(
+    "atherosclerosis_pipeline_spark", remove=True
+)</div>
 </div>
 </div>
 </div>

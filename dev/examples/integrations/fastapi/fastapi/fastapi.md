@@ -17,7 +17,7 @@ This integration example requires at least v1.4.0 of the [getml package](https:/
 
 ### Example Data
 
-As an example project we first run the demo notebook ["Loan default prediction"](https://notebooks.getml.com/github/getml/getml-demo/blob/master/loans.ipynb) which creates a project named "loans" in the getML Engine.
+As an example project we first run the demo notebook ["Loan default prediction"](https://github.com/getml/getml-demo/blob/master/loans.ipynb) which creates a project named "loans" in the getML Engine.
 
 ### Code Explained
 

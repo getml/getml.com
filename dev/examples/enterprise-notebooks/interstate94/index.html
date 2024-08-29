@@ -4233,8 +4233,8 @@ Loading traffic...
 <h4 id="12-prepare-data-for-getml">1.2 Prepare data for getML<a class="anchor-link" href="#12-prepare-data-for-getml">¶</a></h4><p>The <code>getml.datasets.load_interstate94</code> method took care of the entire data preparation:</p>
 <ul>
 <li>Downloads csv's from our servers into python</li>
-<li>Converts csv's to getML <a href="https://docs.getml.com/latest/api/getml.data.DataFrame.html#dataframe" target="_blank" rel="noopener">DataFrames</a></li>
-<li>Sets <a href="https://docs.getml.com/latest/user_guide/annotating_data/annotating_data.html#roles" target="_blank" rel="noopener">roles</a> &amp; <a href="https://docs.getml.com/latest/user_guide/annotating_data/annotating_data.html#annotating-units" target="_blank" rel="noopener">units</a> to columns inside getML DataFrames</li>
+<li>Converts csv's to getML <a href="https://getml.com/latest/reference/data/data_frame" target="_blank" rel="noopener">DataFrames</a></li>
+<li>Sets <a href="https://getml.com/latest/user_guide/concepts/annotating_data/#roles" target="_blank" rel="noopener">roles</a> &amp; <a href="https://getml.com/latest/user_guide/concepts/annotating_data/#annotating-units" target="_blank" rel="noopener">units</a> to columns inside getML DataFrames</li>
 </ul>
 </div>
 </div>
@@ -4342,7 +4342,7 @@ traffic_first_week = traffic[(traffic.ds&gt;=start) &amp; (traffic.ds<end)] )<="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Train/test split</strong></p>
-<p>We use <a href="https://docs.getml.com/latest/api/getml.data.split.html" target="_blank" rel="noopener">getML's split functionality</a> to retrieve a lazily evaluated split column, that we can supply to the time series api below.</p>
+<p>We use <a href="https://getml.com/latest/reference/data/split/" target="_blank" rel="noopener">getML's split functionality</a> to retrieve a lazily evaluated split column, that we can supply to the time series api below.</p>
 </div>
 </div>
 </div>
@@ -4588,7 +4588,7 @@ split = getml.data.split.time(traffic, "ds", test=split_date.timestamp())</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="13-define-relational-model">1.3 Define relational model<a class="anchor-link" href="#13-define-relational-model">¶</a></h4><p>To start with relational learning, we need to specify the data model. We manually replicate the appropriate time series structure by setting time series related join conditions (<code>horizon</code>, <code>memory</code> and <code>allow_lagged_targets</code>). We use the <a href="https://docs.getml.com/latest/api/getml.data.TimeSeries.html" target="_blank" rel="noopener">high-level time series api</a> for this.</p>
+<h4 id="13-define-relational-model">1.3 Define relational model<a class="anchor-link" href="#13-define-relational-model">¶</a></h4><p>To start with relational learning, we need to specify the data model. We manually replicate the appropriate time series structure by setting time series related join conditions (<code>horizon</code>, <code>memory</code> and <code>allow_lagged_targets</code>). We use the <a href="https://getml.com/latest/reference/data/time_series" target="_blank" rel="noopener">high-level time series api</a> for this.</p>
 <p>Under the hood, the time series api abstracts away a self cross join of the population table (<code>traffic</code>) that allows getML's feature learning algorithms to learn patterns from past observations.</p>
 </div>
 </div>

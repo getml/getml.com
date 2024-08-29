@@ -3705,7 +3705,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput celltag_hide_input" data-mime-type="text/markdown">
-<h1 id="occupancy-a-multivariate-time-series-example">Occupancy - A multivariate time series example<a class="anchor-link" href="#occupancy-a-multivariate-time-series-example">¶</a></h1><p>In this tutorial, you will learn how to apply getML to multivariate time series. It also demonstrates how to use getML's <a href="https://docs.getml.com/latest/user_guide/hyperopt/hyperopt.html#tuning-routines" target="_blank" rel="noopener">high-level interface for hyperparameter tuning</a>.</p>
+<h1 id="occupancy-a-multivariate-time-series-example">Occupancy - A multivariate time series example<a class="anchor-link" href="#occupancy-a-multivariate-time-series-example">¶</a></h1><p>In this tutorial, you will learn how to apply getML to multivariate time series. It also demonstrates how to use getML's <a href="https://getml.com/latest/user_guide/concepts/hyperopt/#tuning-routines" target="_blank" rel="noopener">high-level interface for hyperparameter tuning</a>.</p>
 <p>Summary:</p>
 <ul>
 <li>Prediction type: <strong>Binary classification</strong></li>
@@ -3819,7 +3819,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 <span class="kn">import</span> <span class="nn">getml</span>
 
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">home_directory</span><span class="o">=</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s1">'token'</span><span class="p">)</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">home_directory</span><span class="o">=</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s2">"token"</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s2">"occupancy"</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import os
@@ -3835,7 +3835,7 @@ from IPython.display import Image, Markdown
 
 import getml
 
-getml.engine.launch(home_directory=Path.home(), allow_remote_ips=True, token='token')
+getml.engine.launch(home_directory=Path.home(), allow_remote_ips=True, token="token")
 getml.engine.set_project("occupancy")</div>
 </div>
 </div>
@@ -4469,7 +4469,7 @@ Loading population_validation...
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We also assign roles to each column. To learn more about what roles do and why we need them, check out the <a href="https://docs.getml.com/latest/user_guide/annotating_data/annotating_data.html" target="_blank" rel="noopener">official documentation</a>.</p>
+<p>We also assign roles to each column. To learn more about what roles do and why we need them, check out the <a href="https://getml.com/latest/user_guide/concepts/annotating_data/" target="_blank" rel="noopener">official documentation</a>.</p>
 </div>
 </div>
 </div>
@@ -4865,7 +4865,7 @@ population</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="21-getml-pipeline">2.1 getML Pipeline<a class="anchor-link" href="#21-getml-pipeline">¶</a></h4><p>We use a <a href="https://docs.getml.com/latest/user_guide/feature_engineering/feature_engineering.html#multirel" target="_blank" rel="noopener">Multirel</a> for generating the features and a simple logistic regression for prediction.</p>
+<h4 id="21-getml-pipeline">2.1 getML Pipeline<a class="anchor-link" href="#21-getml-pipeline">¶</a></h4><p>We use a <a href="https://getml.com/latest/user_guide/concepts/feature_engineering/#multirel" target="_blank" rel="noopener">Multirel</a> for generating the features and a simple logistic regression for prediction.</p>
 <p>We do not spend much effort on the hyperparameters and largely go with the default values. The only exception is that we add some regularization to the XGBoostClassifiers.</p>
 <p>We choose to consider data within the last 15 minutes for creating our features.</p>
 </div>
@@ -5255,7 +5255,7 @@ OK.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="22-model-training">2.2 Model training<a class="anchor-link" href="#22-model-training">¶</a></h4><p>We use a routine for automatic <a href="https://docs.getml.com/latest/api_reference/hyperopt.html" target="_blank" rel="noopener">hyperparameter optimization</a> to find the best parameters for the predictor:</p>
+<h4 id="22-model-training">2.2 Model training<a class="anchor-link" href="#22-model-training">¶</a></h4><p>We use a routine for automatic <a href="https://getml.com/latest/reference/hyperopt" target="_blank" rel="noopener">hyperparameter optimization</a> to find the best parameters for the predictor:</p>
 </div>
 </div>
 </div>
@@ -5693,7 +5693,7 @@ plt.show()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="24-studying-the-features">2.4 Studying the features<a class="anchor-link" href="#24-studying-the-features">¶</a></h4><p>It is always a good idea to study the features the relational learning algorithm has extracted. We can do so in the <a href="https://docs.getml.com/latest/user_guide/getml_suite/monitor.html#the-getml-monitor" target="_blank" rel="noopener">feature view</a> of the getML monitor. Open the monitor and select the models tab in the sidebar. You will see an overview over the trained pipelines. Select a pipeline to see the most essential summary plots.</p>
+<h4 id="24-studying-the-features">2.4 Studying the features<a class="anchor-link" href="#24-studying-the-features">¶</a></h4><p>It is always a good idea to study the features the relational learning algorithm has extracted. We can do so in the feature view of the <a href="https://getml.com/latest/user_guide/concepts/getml_suite/#monitor_1" target="_blank" rel="noopener">getML monitor</a>. Open the monitor and select the models tab in the sidebar. You will see an overview over the trained pipelines. Select a pipeline to see the most essential summary plots.</p>
 <p>If you want to document them inside your notebook, here is how you can do that:</p>
 </div>
 </div>
