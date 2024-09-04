@@ -32,9 +32,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.GITLAB_MONOREPO_SSH_KEY }}" > ~/.ssh/id_ed25519_gitlab_monorepo
-          echo "${{ secrets.GH_CODE17DEV_SSH_KEY }}" > ~/.ssh/id_ed25519_github_code17dev
           chmod 600 ~/.ssh/id_ed25519_gitlab_monorepo
-          chmod 600 ~/.ssh/id_ed25519_github_code17dev
           
           # Set up SSH config
           echo "Host gitlab.com" >> ~/.ssh/config
@@ -42,19 +40,15 @@ jobs:
           echo "  User git" >> ~/.ssh/config
           echo "  IdentityFile ~/.ssh/id_ed25519_gitlab_monorepo" >> ~/.ssh/config
 
-          echo "Host code17devgit" >> ~/.ssh/config
-          echo "  HostName github.com" >> ~/.ssh/config
-          echo "  User git" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/id_ed25519_github_code17dev" >> ~/.ssh/config
-          
-          # Add GitLab and GitHub to known_hosts
+          # Add GitLab to known_hosts
           ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Install Hatch & create environment
         run: |
           pip install hatch~=1.12 
           hatch env create
+        env:
+          GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
 
       - name: Clone monorepo & install getML
         run: |
