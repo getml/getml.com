@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     env:
+      GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
       NOTEBOOKS_INCLUDE: '*.ipynb'
       ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
     steps:
@@ -47,8 +48,6 @@ jobs:
         run: |
           pip install hatch~=1.12 
           hatch env create
-        env:
-          GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
 
       - name: Clone monorepo & install getML
         run: |
