@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -3540,7 +3540,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>A container holds the actual data in the form of a <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> or a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
+        <p>A container holds the actual data in the form of a <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> or a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
 <p>The purpose of a container is twofold:</p>
 <ul>
 <li>
@@ -3676,7 +3676,7 @@ and <em>kwargs</em>.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p>A <a class="autorefs autorefs-internal" href="../data_model/#getml.data.DataModel"><code>DataModel</code></a> only contains abstract data. When we
 fit a pipeline, we need to assign concrete data.</p>
@@ -4022,7 +4022,7 @@ record which container you have used.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Adds new peripheral data frames or views.</p>
+        <p>Adds new peripheral data frames or views.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/container.py</code></summary>
@@ -4116,7 +4116,7 @@ record which container you have used.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Freezes the container, so that changes are no longer possible.</p>
+        <p>Freezes the container, so that changes are no longer possible.</p>
 <p>This is required before you can extract data when <code>deep_copy=True</code>. The idea of
 <code>deep_copy</code> is to ensure that you can always retrace and reproduce your results.
 That is why the container needs to be immutable before it can be
@@ -4164,7 +4164,7 @@ used.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Saves the Container to disk.</p>
+        <p>Saves the Container to disk.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/container.py</code></summary>
@@ -4210,7 +4210,7 @@ used.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Synchronizes the last change with the data to avoid warnings that the data
+        <p>Synchronizes the last change with the data to avoid warnings that the data
 has been changed.</p>
 <p>This is only a problem when <code>deep_copy=False</code>.</p>
 
@@ -4258,7 +4258,7 @@ has been changed.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a <code>Container</code>'s contents as a dictionary of <code>pandas.DataFrame</code>s.
+        <p>Returns a <code>Container</code>'s contents as a dictionary of <code>pandas.DataFrame</code>s.
 <code>key</code> holds the data frame's <code>name</code>, value the data converted to a <code>pandas.DataFrame</code>.</p>
 
             <details class="quote">

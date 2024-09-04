@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -2941,7 +2941,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>Container which holds all pipelines associated with the currently running
+        <p>Container which holds all pipelines associated with the currently running
 project. The container supports slicing and is sort- and filterable.</p>
 <details class="example">
 <summary>Example</summary>
@@ -3004,7 +3004,7 @@ for your project:
 
     <div class="doc doc-contents ">
 
-      <p>Sorts the pipelines container.</p>
+        <p>Sorts the pipelines container.</p>
 
 
 <table>
@@ -3073,7 +3073,7 @@ for your project:
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
 <span class="n">by_fl</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="n">pipe</span><span class="o">.</span><span class="n">feature_learners</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
@@ -3144,7 +3144,7 @@ for your project:
 
     <div class="doc doc-contents ">
 
-      <p>Filters the pipelines container.</p>
+        <p>Filters the pipelines container.</p>
 
 
 <table>
@@ -3195,7 +3195,7 @@ for your project:
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">pipelines_with_tags</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">pipe</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">accurate_pipes</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">pipelines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">pipe</span><span class="p">:</span> <span class="nb">all</span><span class="p">(</span><span class="n">acc</span> <span class="o">&gt;</span> <span class="mf">0.9</span> <span class="k">for</span> <span class="n">acc</span> <span class="ow">in</span> <span class="n">pipe</span><span class="o">.</span><span class="n">accuracy</span><span class="p">))</span>

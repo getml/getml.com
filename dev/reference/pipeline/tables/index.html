@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -3328,7 +3328,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>This container holds a pipeline's tables. These tables are build from the
+        <p>This container holds a pipeline's tables. These tables are build from the
 columns for which importances can be calculated. The motivation behind this
 container is to determine which tables are more important than others.</p>
 <p>Tables can be accessed by name, index or with a NumPy array. The container
@@ -3399,7 +3399,7 @@ holds global methods to request tables' importances.</p>
   <p>The container is an iterable. So, in addition to
 <a class="autorefs autorefs-internal" href="#getml.pipeline.Tables.filter"><code>filter</code></a> you can also use python list
 comprehensions for filtering.</p>
-</details>      <details class="example">
+</details>        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">all_my_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span>
 <span class="n">first_table</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -3481,7 +3481,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Holds the names of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s tables.</p>
+        <p>Holds the names of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s tables.</p>
 
 
 <table>
@@ -3533,7 +3533,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Holds the targets of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s tables.</p>
+        <p>Holds the targets of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s tables.</p>
 
 
 <table>
@@ -3582,7 +3582,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Filters the tables container.</p>
+        <p>Filters the tables container.</p>
 
 
 <table>
@@ -3633,7 +3633,7 @@ comprehensions for filtering.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">important_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">table</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">peripheral_tables</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">marker</span> <span class="o">==</span> <span class="s2">&quot;[PERIPHERAL]&quot;</span><span class="p">)</span>
@@ -3700,7 +3700,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns the importances of tables.</p>
+        <p>Returns the importances of tables.</p>
 <p>Table importances are calculated by summing up the importances of the
 columns belonging to the tables. Each column is assigned an importance
 value that measures its contribution to the predictive performance. For
@@ -3895,7 +3895,7 @@ importances. (Pipelines can have more than one target.)</p>
 
     <div class="doc doc-contents ">
 
-      <p>Sorts the Tables container. If no arguments are provided the
+        <p>Sorts the Tables container. If no arguments are provided the
 container is sorted by target and name.</p>
 
 
@@ -3989,7 +3989,7 @@ container is sorted by target and name.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">table</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
 </code></pre></div>
@@ -4133,7 +4133,7 @@ container is sorted by target and name.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns all information related to the tables in a pandas DataFrame.</p>
+        <p>Returns all information related to the tables in a pandas DataFrame.</p>
 
 
 <table>

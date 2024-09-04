@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -3487,7 +3487,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>Contains functionalities for importing, handling, and retrieving
+        <p>Contains functionalities for importing, handling, and retrieving
 data from the getML Engine.</p>
 <p>All data relevant for the getML Suite has to be present in the getML
 Engine. Its Python API itself does not store any of the data used for
@@ -3626,7 +3626,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 
     <div class="doc doc-contents ">
 
-      <p>Returns evenly spaced variables, within a given interval.</p>
+        <p>Returns evenly spaced variables, within a given interval.</p>
 
 
 <table>
@@ -3804,7 +3804,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 
     <div class="doc doc-contents ">
 
-      <p>Get the row numbers of the table.</p>
+        <p>Get the row numbers of the table.</p>
 
 
 <table>
@@ -3866,7 +3866,7 @@ construct a <a class="autorefs autorefs-internal" href="../pipeline/pipeline/#ge
 
     <div class="doc doc-contents ">
 
-      <p>Lists all available data frames of the project.</p>
+        <p>Lists all available data frames of the project.</p>
 
 
 <table>
@@ -3902,7 +3902,7 @@ the data frames objects</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">list_data_frames</span><span class="p">()</span>
@@ -3999,7 +3999,7 @@ the data frames objects</p>
 
     <div class="doc doc-contents ">
 
-      <p>If a data frame named 'name' exists, it is deleted.</p>
+        <p>If a data frame named 'name' exists, it is deleted.</p>
 
 
 <table>
@@ -4075,7 +4075,7 @@ the data frames objects</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns true if a data frame named 'name' exists.</p>
+        <p>Returns true if a data frame named 'name' exists.</p>
 
 
 <table>
@@ -4151,7 +4151,7 @@ the data frames objects</p>
 
     <div class="doc doc-contents ">
 
-      <p>Retrieves a <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handler of data in the
+        <p>Retrieves a <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> handler of data in the
 getML Engine.</p>
 <p>A data frame object can be loaded regardless if it is held in
 memory or not. It only has to be present in the current project
@@ -4207,7 +4207,7 @@ and thus listed in the output of
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_numerical</span><span class="p">(</span><span class="n">population_name</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">)</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">load_data_frame</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
@@ -4310,7 +4310,7 @@ and thus listed in the output of
 
     <div class="doc doc-contents ">
 
-      <p>Returns a view containing binary target columns.</p>
+        <p>Returns a view containing binary target columns.</p>
 <p>getML expects binary target columns for classification problems. This
 helper function allows you to split up a column into such binary
 target columns.</p>
@@ -4501,7 +4501,7 @@ changes.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Factory function for extracting placeholders from a
+        <p>Factory function for extracting placeholders from a
 <a class="autorefs autorefs-internal" href="data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> or <a class="autorefs autorefs-internal" href="view/#getml.data.View"><code>View</code></a>.</p>
 
 
@@ -4575,7 +4575,7 @@ changes.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p>Suppose we wanted to create a <a class="autorefs autorefs-internal" href="data_model/#getml.data.DataModel"><code>DataModel</code></a>:</p>
 <pre><code>dm = getml.data.DataModel(
@@ -4731,7 +4731,7 @@ the following:
 
     <div class="doc doc-contents first">
 
-      <p>Loads a container and all associated data frames from disk.</p>
+        <p>Loads a container and all associated data frames from disk.</p>
 
 
 <table>
@@ -4897,7 +4897,7 @@ the following:
 
     <div class="doc doc-contents first">
 
-      <p>Creates a new data frame by concatenating a list of existing ones.</p>
+        <p>Creates a new data frame by concatenating a list of existing ones.</p>
 
 
 <table>
@@ -5045,7 +5045,7 @@ Columns will be appended by name, not order.</p>
 
     <div class="doc doc-contents first">
 
-      <p>Create random column.</p>
+        <p>Create random column.</p>
 <p>The numbers will be uniformly distributed from 0.0 to 1.0. This can be
 used to randomly split a population table into a training and a test
 set</p>
@@ -5103,7 +5103,7 @@ set</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
 <span class="n">population</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;column_01&#39;</span><span class="p">)</span>
@@ -5209,7 +5209,7 @@ set</p>
 
     <div class="doc doc-contents first">
 
-      <p>Types that can be passed to the 'on' argument of the 'join' method.</p>
+        <p>Types that can be passed to the 'on' argument of the 'join' method.</p>
     </div>
 
 </div>
@@ -5232,7 +5232,7 @@ set</p>
 
     <div class="doc doc-contents first">
 
-      <p>Types of time stamps used in joins.</p>
+        <p>Types of time stamps used in joins.</p>
     </div>
 
 </div>

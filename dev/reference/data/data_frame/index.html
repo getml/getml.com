@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -4742,7 +4742,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>Handler for the data stored in the getML Engine.</p>
+        <p>Handler for the data stored in the getML Engine.</p>
 <p>The <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> class represents a data frame
 object in the getML Engine but does not contain any actual data
 itself. To create such a data frame object, fill it with data via
@@ -4801,7 +4801,7 @@ Otherwise, you can use the <a class="autorefs autorefs-internal" href="../roles_
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p>Creating a new data frame object in the getML Engine and importing
 data is done by one the class functions
@@ -5009,7 +5009,7 @@ them.</p>
 
     <div class="doc doc-contents ">
 
-      <p>List of the names of all columns.</p>
+        <p>List of the names of all columns.</p>
 
 
 <table>
@@ -5056,7 +5056,7 @@ them.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Alias for <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.colnames"><code>colnames</code></a>.</p>
+        <p>Alias for <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.colnames"><code>colnames</code></a>.</p>
 
 
 <table>
@@ -5103,7 +5103,7 @@ them.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A string describing the last time this data frame has been changed.</p>
+        <p>A string describing the last time this data frame has been changed.</p>
     </div>
 
 </div>
@@ -5126,7 +5126,7 @@ them.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Convenience wrapper that returns the memory usage in MB.</p>
+        <p>Convenience wrapper that returns the memory usage in MB.</p>
     </div>
 
 </div>
@@ -5149,7 +5149,7 @@ them.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The roles of the columns included
+        <p>The roles of the columns included
 in this DataFrame.</p>
     </div>
 
@@ -5173,7 +5173,7 @@ in this DataFrame.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The rowids for this data frame.</p>
+        <p>The rowids for this data frame.</p>
     </div>
 
 </div>
@@ -5196,7 +5196,7 @@ in this DataFrame.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A tuple containing the number of rows and columns of
+        <p>A tuple containing the number of rows and columns of
 the DataFrame.</p>
     </div>
 
@@ -5224,7 +5224,7 @@ the DataFrame.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Adds a column to the current <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a>.</p>
+        <p>Adds a column to the current <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a>.</p>
 
 
 <table>
@@ -5546,7 +5546,7 @@ special characters:</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a deep copy of the data frame under a new name.</p>
+        <p>Creates a deep copy of the data frame under a new name.</p>
 
 
 <table>
@@ -5668,7 +5668,7 @@ special characters:</p>
 
     <div class="doc doc-contents ">
 
-      <p>Permanently deletes the data frame. <code>delete</code> first unloads the data frame
+        <p>Permanently deletes the data frame. <code>delete</code> first unloads the data frame
 from memory and then deletes it from disk.</p>
 
             <details class="quote">
@@ -5718,7 +5718,7 @@ from memory and then deletes it from disk.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> that has one or several columns removed.</p>
+        <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> that has one or several columns removed.</p>
 
 
 <table>
@@ -5834,7 +5834,7 @@ from memory and then deletes it from disk.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Freezes the data frame.</p>
+        <p>Freezes the data frame.</p>
 <p>After you have frozen the data frame, the data frame is immutable
 and in-place operations are no longer possible. However, you can
 still create views. In other words, operations like
@@ -5899,7 +5899,7 @@ but operations like <a class="autorefs autorefs-internal" href="#getml.data.Data
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from an Arrow Table.</p>
+        <p>Create a DataFrame from an Arrow Table.</p>
 <p>This is one of the fastest way to get data into the
 getML Engine.</p>
 
@@ -6218,7 +6218,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from CSV files.</p>
+        <p>Create a DataFrame from CSV files.</p>
 <p>The getML Engine will construct a data
 frame object in the Engine, fill it with the data read from
 the CSV file(s), and return a corresponding
@@ -6534,7 +6534,7 @@ afterwards.</p>
   <summary>Note</summary>
   <p>It is assumed that the first line of each CSV file
 contains a header with the column names.</p>
-</details>      <details class="example">
+</details>        <details class="example">
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the current working directory. You can
@@ -7030,7 +7030,7 @@ can now hard-code this.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from a table in a database.</p>
+        <p>Create a DataFrame from a table in a database.</p>
 <p>It will construct a data frame object in the Engine, fill it
 with the data read from table <code>table_name</code> in the connected
 database (see <a class="autorefs autorefs-internal" href="../../database/database/#getml.database"><code>database</code></a>), and return a
@@ -7188,7 +7188,7 @@ will use the default connection.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">connect_mysql</span><span class="p">(</span>
     <span class="n">host</span><span class="o">=</span><span class="s2">&quot;db.relational-data.org&quot;</span><span class="p">,</span>
@@ -7457,7 +7457,7 @@ will use the default connection.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a new DataFrame from a dict</p>
+        <p>Create a new DataFrame from a dict</p>
 
 
 <table>
@@ -7565,7 +7565,7 @@ will return the inffered roles.</p>
           </tr>
       </tbody>
     </table>
-      <p>Returns:
+        <p>Returns:
         Handler of the underlying data.</p>
 
             <details class="quote">
@@ -7710,7 +7710,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a new DataFrame from a JSON string.</p>
+        <p>Create a new DataFrame from a JSON string.</p>
 <p>It will construct a data frame object in the Engine, fill it
 with the data read from the JSON string, and return a
 corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
@@ -8000,7 +8000,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from a <code>pandas.DataFrame</code>.</p>
+        <p>Create a DataFrame from a <code>pandas.DataFrame</code>.</p>
 <p>It will construct a data frame object in the Engine, fill it
 with the data read from the <code>pandas.DataFrame</code>, and
 return a corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
@@ -8320,7 +8320,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from parquet files.</p>
+        <p>Create a DataFrame from parquet files.</p>
 <p>This is one of the fastest way to get data into the
 getML Engine.</p>
 
@@ -8638,7 +8638,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from a <code>pyspark.sql.DataFrame</code>.</p>
+        <p>Create a DataFrame from a <code>pyspark.sql.DataFrame</code>.</p>
 <p>It will construct a data frame object in the Engine, fill it
 with the data read from the <code>pyspark.sql.DataFrame</code>, and
 return a corresponding <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> handle.</p>
@@ -8964,7 +8964,7 @@ will return the inffered roles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from CSV files located in an S3 bucket.</p>
+        <p>Create a DataFrame from CSV files located in an S3 bucket.</p>
 <p>This classmethod will construct a data
 frame object in the Engine, fill it with the data read from
 the CSV file(s), and return a corresponding
@@ -9229,7 +9229,7 @@ will return the inffered roles.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p>Let's assume you have two CSV files - <em>file1.csv</em> and
 <em>file2.csv</em> - in the bucket. You can
@@ -9641,7 +9641,7 @@ type safety.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Create a DataFrame from a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
+        <p>Create a DataFrame from a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
 <p>This classmethod will construct a data
 frame object in the Engine, fill it with the data read from
 the <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>, and return a corresponding
@@ -9852,7 +9852,7 @@ will return an empty data frame with the roles set as inferred.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Loads saved data from disk.</p>
+        <p>Loads saved data from disk.</p>
 <p>The data frame object holding the same name as the current
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a> instance will be loaded from
 disk into the getML Engine and updates the current handler
@@ -10089,7 +10089,7 @@ getML Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Size of the data stored in the underlying data frame in the getML
+        <p>Size of the data stored in the underlying data frame in the getML
 Engine.</p>
 
 
@@ -10178,7 +10178,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Number of columns in the current instance.</p>
+        <p>Number of columns in the current instance.</p>
 
 
 <table>
@@ -10240,7 +10240,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Number of rows in the current instance.</p>
+        <p>Number of rows in the current instance.</p>
 
 
 <table>
@@ -10329,7 +10329,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Uploads a <code>pyarrow.Table</code> or <code>pyarrow.RecordBatch</code> to the getML Engine.</p>
+        <p>Uploads a <code>pyarrow.Table</code> or <code>pyarrow.RecordBatch</code> to the getML Engine.</p>
 <p>Replaces the actual content of the underlying data frame in
 the getML Engine with <code>table</code>.</p>
 
@@ -10549,7 +10549,7 @@ the way the underlying information is stored.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Read CSV files.</p>
+        <p>Read CSV files.</p>
 <p>It is assumed that the first line of each CSV file contains a
 header with the column names.</p>
 
@@ -11193,7 +11193,7 @@ afterwards.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Fill from JSON</p>
+        <p>Fill from JSON</p>
 <p>Fills the data frame with data from a JSON string.</p>
 <p>Args:</p>
 <pre><code>json_str:
@@ -11503,7 +11503,7 @@ use <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.from_json"
 
     <div class="doc doc-contents ">
 
-      <p>Read a parquet file.</p>
+        <p>Read a parquet file.</p>
 
 
 <table>
@@ -11747,7 +11747,7 @@ stdout during the download.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Read CSV files from an S3 bucket.</p>
+        <p>Read CSV files from an S3 bucket.</p>
 <p>It is assumed that the first line of each CSV file contains a
 header with the column names.</p>
 
@@ -12331,7 +12331,7 @@ special characters:</p>
 
     <div class="doc doc-contents ">
 
-      <p>Read the data from a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
+        <p>Read the data from a <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a>.</p>
 
 
 <table>
@@ -12512,7 +12512,7 @@ existing data?</p>
 
     <div class="doc doc-contents ">
 
-      <p>Fill from Database.</p>
+        <p>Fill from Database.</p>
 <p>The DataFrame will be filled from a table in the database.</p>
 
 
@@ -12755,7 +12755,7 @@ the Engine will use the default connection.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Uploads a <code>pandas.DataFrame</code>.</p>
+        <p>Uploads a <code>pandas.DataFrame</code>.</p>
 <p>Replaces the actual content of the underlying data frame in
 the getML Engine with <code>pandas_df</code>.</p>
 
@@ -12829,7 +12829,7 @@ already present in the getML Engine, should the content in
           </tr>
       </tbody>
     </table>
-      <p>Note:
+        <p>Note:
     For columns containing <code>pandas.Timestamp</code> there can
     occur small inconsistencies in the order of microseconds
     when sending the data to the getML Engine. This is due to
@@ -12949,7 +12949,7 @@ already present in the getML Engine, should the content in
 
     <div class="doc doc-contents ">
 
-      <p>Uploads a <code>pyspark.sql.DataFrame</code>.</p>
+        <p>Uploads a <code>pyspark.sql.DataFrame</code>.</p>
 <p>Replaces the actual content of the underlying data frame in
 the getML Engine with <code>pandas_df</code>.</p>
 
@@ -13130,7 +13130,7 @@ already present in the getML Engine, should the content in
 
     <div class="doc doc-contents ">
 
-      <p>Fill from query</p>
+        <p>Fill from query</p>
 <p>Fills the data frame with data from a table in the database.</p>
 
 
@@ -13375,7 +13375,7 @@ the Engine will use the default connection.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Aligns meta-information of the current instance with the
+        <p>Aligns meta-information of the current instance with the
 corresponding data frame in the getML Engine.</p>
 <p>This method can be used to avoid encoding conflicts. Note that
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.load"><code>load</code></a> as well as several other
@@ -13491,7 +13491,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Removes all <a class="autorefs autorefs-internal" href="../subroles/#getml.data.subroles"><code>subroles</code></a> from one or more columns.</p>
+        <p>Removes all <a class="autorefs autorefs-internal" href="../subroles/#getml.data.subroles"><code>subroles</code></a> from one or more columns.</p>
 
 
 <table>
@@ -13584,7 +13584,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Removes the unit from one or more columns.</p>
+        <p>Removes the unit from one or more columns.</p>
 
 
 <table>
@@ -13670,7 +13670,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data in the getML Engine to disk.</p>
+        <p>Writes the underlying data in the getML Engine to disk.</p>
 
 
 <table>
@@ -13757,7 +13757,7 @@ Engine.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Assigns a new role to one or more columns.</p>
+        <p>Assigns a new role to one or more columns.</p>
 <p>When switching from a role based on type float to a role based on type
 string or vice verse, an implicit type conversion will be conducted.
 The <code>time_formats</code> argument is used to interpret <a class="autorefs autorefs-internal" href="../../../user_guide/concepts/annotating_data/#time-stamp">Time Stamps</a>. For more information on
@@ -13822,7 +13822,7 @@ a time stamp is taking place.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p><div class="highlight"><pre><span></span><code><span class="n">data_df</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">animal</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hawk&quot;</span><span class="p">,</span> <span class="s2">&quot;parrot&quot;</span><span class="p">,</span> <span class="s2">&quot;goose&quot;</span><span class="p">],</span>
@@ -14044,7 +14044,7 @@ a time stamp is taking place.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Assigns one or several new <a class="autorefs autorefs-internal" href="../subroles/#getml.data.subroles"><code>subroles</code></a> to one or more columns.</p>
+        <p>Assigns one or several new <a class="autorefs autorefs-internal" href="../subroles/#getml.data.subroles"><code>subroles</code></a> to one or more columns.</p>
 
 
 <table>
@@ -14215,7 +14215,7 @@ new subroles to the existing subroles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Assigns a new unit to one or more columns.</p>
+        <p>Assigns a new unit to one or more columns.</p>
 
 
 <table>
@@ -14378,7 +14378,7 @@ we have seen that same bank account number in another table.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a <code>pyarrow.Table</code> from the current instance.</p>
+        <p>Creates a <code>pyarrow.Table</code> from the current instance.</p>
 <p>Loads the underlying data from the getML Engine and constructs
 a <code>pyarrow.Table</code>.</p>
 
@@ -14452,7 +14452,7 @@ a <code>pyarrow.Table</code>.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data into a newly created CSV file.</p>
+        <p>Writes the underlying data into a newly created CSV file.</p>
 
 
 <table>
@@ -14685,7 +14685,7 @@ the entire data frame into a single file.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data into a newly created table in the
+        <p>Writes the underlying data into a newly created table in the
 database.</p>
 
 
@@ -14824,7 +14824,7 @@ the Engine will use the default connection.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Represents the data frame in HTML format, optimized for an
+        <p>Represents the data frame in HTML format, optimized for an
 iPython notebook.</p>
 
 
@@ -14915,7 +14915,7 @@ iPython notebook.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a JSON string from the current instance.</p>
+        <p>Creates a JSON string from the current instance.</p>
 <p>Loads the underlying data from the getML Engine and constructs
 a JSON string.</p>
 
@@ -14953,7 +14953,7 @@ a JSON string.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a <code>pandas.DataFrame</code> from the current instance.</p>
+        <p>Creates a <code>pandas.DataFrame</code> from the current instance.</p>
 <p>Loads the underlying data from the getML Engine and constructs
 <code>pandas.DataFrame</code>.</p>
 
@@ -15031,7 +15031,7 @@ its underlying data.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data into a newly created parquet file.</p>
+        <p>Writes the underlying data into a newly created parquet file.</p>
 
 
 <table>
@@ -15135,7 +15135,7 @@ Supported values are "brotli", "gzip", "lz4", "snappy", "zstd"</p>
 
     <div class="doc doc-contents ">
 
-      <p>Generates a <a class="autorefs autorefs-internal" href="../placeholder/#getml.data.Placeholder"><code>Placeholder</code></a> from the
+        <p>Generates a <a class="autorefs autorefs-internal" href="../placeholder/#getml.data.Placeholder"><code>Placeholder</code></a> from the
 current <a class="autorefs autorefs-internal" href="#getml.data.DataFrame"><code>DataFrame</code></a>.</p>
 
 
@@ -15250,7 +15250,7 @@ be identical to the name of the current data frame.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Creates a <code>pyspark.sql.DataFrame</code> from the current instance.</p>
+        <p>Creates a <code>pyspark.sql.DataFrame</code> from the current instance.</p>
 <p>Loads the underlying data from the getML Engine and constructs
 a <code>pyspark.sql.DataFrame</code>.</p>
 
@@ -15409,7 +15409,7 @@ If None is passed, then the name of this
 
     <div class="doc doc-contents ">
 
-      <p>Writes the underlying data into a newly created CSV file
+        <p>Writes the underlying data into a newly created CSV file
 located in an S3 bucket.</p>
 
 
@@ -15515,7 +15515,7 @@ the entire data frame into a single file.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_access_key_id</span><span class="p">(</span><span class="s2">&quot;YOUR-ACCESS-KEY-ID&quot;</span><span class="p">)</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">set_s3_secret_access_key</span><span class="p">(</span><span class="s2">&quot;YOUR-SECRET-ACCESS-KEY&quot;</span><span class="p">)</span>
@@ -15715,7 +15715,7 @@ the entire data frame into a single file.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Unloads the data frame from memory.</p>
+        <p>Unloads the data frame from memory.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/data_frame.py</code></summary>
@@ -15761,7 +15761,7 @@ the entire data frame into a single file.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Extract a subset of rows.</p>
+        <p>Extract a subset of rows.</p>
 <p>Creates a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> as a
 subselection of the current instance.</p>
 
@@ -15814,7 +15814,7 @@ subselection of the current instance.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <p>Generate example data:
 <div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
@@ -16013,7 +16013,7 @@ Apply where condition. This creates a new DataFrame called "cherries":</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> that contains an additional column.</p>
+        <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> that contains an additional column.</p>
 
 
 <table>
@@ -16355,7 +16355,7 @@ special characters:</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> with a new name.</p>
+        <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> with a new name.</p>
 
 
 <table>
@@ -16462,7 +16462,7 @@ special characters:</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> with modified roles.</p>
+        <p>Returns a new <a class="autorefs autorefs-internal" href="../view/#getml.data.View"><code>View</code></a> with modified roles.</p>
 <p>The difference between <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_role"><code>with_role</code></a> and
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.set_role"><code>set_role</code></a> is that
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_role"><code>with_role</code></a> returns a view that is lazily
@@ -16649,7 +16649,7 @@ a time stamp is taking place.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new view with one or several new subroles on one or more columns.</p>
+        <p>Returns a new view with one or several new subroles on one or more columns.</p>
 <p>The difference between <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_subroles"><code>with_subroles</code></a> and
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.set_subroles"><code>set_subroles</code></a> is that
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_subroles"><code>with_subroles</code></a> returns a view that is lazily
@@ -16813,7 +16813,7 @@ new subroles to the existing subroles.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns a view that contains a new unit on one or more columns.</p>
+        <p>Returns a view that contains a new unit on one or more columns.</p>
 <p>The difference between <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_unit"><code>with_unit</code></a> and
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.set_unit"><code>set_unit</code></a> is that
 <a class="autorefs autorefs-internal" href="#getml.data.DataFrame.with_unit"><code>with_unit</code></a> returns a view that is lazily

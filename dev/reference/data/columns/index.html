@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -4122,7 +4122,7 @@
 
     <div class="doc doc-contents first">
 
-      <p>Handlers for 1-d arrays storing the data of an individual variable.</p>
+        <p>Handlers for 1-d arrays storing the data of an individual variable.</p>
 <p>Like the <a class="autorefs autorefs-internal" href="../data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, the
 <a class="autorefs autorefs-internal" href="#getml.data.columns"><code>columns</code></a> do not contain any actual data themselves
 but are only handlers to objects within the getML Engine. These
@@ -4230,7 +4230,7 @@ of a uniform type.</p>
               Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
 
-      <p>Handle for a lazily evaluated boolean column view.</p>
+        <p>Handle for a lazily evaluated boolean column view.</p>
 <p>Column views do not actually exist - they will be lazily
 evaluated when necessary.</p>
 <p>They can be used to take subselection of the data frame
@@ -4366,7 +4366,7 @@ or to update other columns.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Whether an entry is False - effectively inverts the Boolean column.</p>
+        <p>Whether an entry is False - effectively inverts the Boolean column.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
@@ -4402,7 +4402,7 @@ or to update other columns.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Transforms the boolean column into a numerical column</p>
+        <p>Transforms the boolean column into a numerical column</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/columns/columns.py</code></summary>
@@ -4454,7 +4454,7 @@ or to update other columns.</p>
               Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
 
-      <p>Handle for numerical data in the Engine.</p>
+        <p>Handle for numerical data in the Engine.</p>
 <p>This is a handler for all numerical data in the getML Engine,
 including time stamps.</p>
 
@@ -4500,7 +4500,7 @@ including time stamps.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -4634,7 +4634,7 @@ including time stamps.</p>
               Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
 
-      <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="#getml.data.columns.FloatColumn"><code>FloatColumn</code></a>.</p>
+        <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="#getml.data.columns.FloatColumn"><code>FloatColumn</code></a>.</p>
 <p>Column views do not actually exist - they will be lazily
 evaluated when necessary.</p>
 
@@ -4717,7 +4717,7 @@ evaluated when necessary.</p>
               Bases: <code><span title="getml.data.columns.column._Column">_Column</span></code></p>
 
 
-      <p>Handle for categorical data that is kept in the getML Engine</p>
+        <p>Handle for categorical data that is kept in the getML Engine</p>
 
 
 <table>
@@ -4761,7 +4761,7 @@ evaluated when necessary.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -4887,7 +4887,7 @@ evaluated when necessary.</p>
               Bases: <code><span title="getml.data.columns.columns._View">_View</span></code></p>
 
 
-      <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="#getml.data.columns.StringColumn"><code>StringColumn</code></a>.</p>
+        <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href="#getml.data.columns.StringColumn"><code>StringColumn</code></a>.</p>
 <p>Columns views do not actually exist - they will be lazily
 evaluated when necessary.</p>
 <details class="example">
@@ -5023,7 +5023,7 @@ evaluated when necessary.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns evenly spaced variables, within a given interval.</p>
+        <p>Returns evenly spaced variables, within a given interval.</p>
 
 
 <table>
@@ -5201,7 +5201,7 @@ evaluated when necessary.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Get the row numbers of the table.</p>
+        <p>Get the row numbers of the table.</p>
 
 
 <table>
@@ -5263,7 +5263,7 @@ evaluated when necessary.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Collects the data necessary for displaying the column footer.</p>
+        <p>Collects the data necessary for displaying the column footer.</p>
 
 
 
@@ -5292,7 +5292,7 @@ evaluated when necessary.</p>
               Bases: <code><a class="autorefs autorefs-external" title="typing.NamedTuple" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple" target="_blank" rel="noopener">NamedTuple</a></code></p>
 
 
-      <p>Contains the data to be shown
+        <p>Contains the data to be shown
 in the footer of the data frame or
 column.</p>
 
@@ -5338,7 +5338,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Lazily evaluated aggregation over a column.</p>
+        <p>Lazily evaluated aggregation over a column.</p>
 
 
 
@@ -5366,7 +5366,7 @@ column.</p>
     <div class="doc doc-contents ">
 
 
-      <p>Lazily evaluated aggregation over a column.</p>
+        <p>Lazily evaluated aggregation over a column.</p>
 <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">my_data_frame</span><span class="p">[</span><span class="s2">&quot;my_column&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">avg</span><span class="p">()</span>
@@ -5413,7 +5413,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Receives the value of the aggregation over the column.</p>
+        <p>Receives the value of the aggregation over the column.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/data/columns/aggregation.py</code></summary>
@@ -5489,7 +5489,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Format the column</p>
+        <p>Format the column</p>
 
 
 
@@ -5523,7 +5523,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns the last time a data frame has been changed.</p>
+        <p>Returns the last time a data frame has been changed.</p>
 
 
 
@@ -5557,7 +5557,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The last time any of the underlying data frames has been changed.</p>
+        <p>The last time any of the underlying data frames has been changed.</p>
 
 
 
@@ -5591,7 +5591,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns the length of the column</p>
+        <p>Returns the length of the column</p>
 
 
 
@@ -5625,7 +5625,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The length of the column (number of rows in the data frame).</p>
+        <p>The length of the column (number of rows in the data frame).</p>
 
 
 
@@ -5659,7 +5659,7 @@ column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Factory function for a function that can be used
+        <p>Factory function for a function that can be used
 to iterate through a column.</p>
 
 
@@ -5694,7 +5694,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Parses the columns from a cmd</p>
+        <p>Parses the columns from a cmd</p>
 
 
 
@@ -5728,7 +5728,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>ASCII representation of the column.</p>
+        <p>ASCII representation of the column.</p>
 
 
 
@@ -5762,7 +5762,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>HTML representation of the column.</p>
+        <p>HTML representation of the column.</p>
 
 
 
@@ -5796,7 +5796,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The subroles of this column.</p>
+        <p>The subroles of this column.</p>
 
 
 
@@ -5830,7 +5830,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Transform column to a pyarrow.ChunkedArray</p>
+        <p>Transform column to a pyarrow.ChunkedArray</p>
 
 
 
@@ -5864,7 +5864,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Transform column to a numpy array.</p>
+        <p>Transform column to a numpy array.</p>
 
 
 
@@ -5898,7 +5898,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Transform column to numpy array containing unique values</p>
+        <p>Transform column to numpy array containing unique values</p>
 
 
 
@@ -5932,7 +5932,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents ">
 
-      <p>The unit of this column.</p>
+        <p>The unit of this column.</p>
 
 
 
@@ -5976,7 +5976,7 @@ to iterate through a column.</p>
 
     <div class="doc doc-contents first">
 
-      <p>Creates an infinite column that contains the same
+        <p>Creates an infinite column that contains the same
 value in all of its elements.</p>
 
 
@@ -6151,7 +6151,7 @@ value in all of its elements.</p>
 
     <div class="doc doc-contents first">
 
-      <p>Create random column.</p>
+        <p>Create random column.</p>
 <p>The numbers will be uniformly distributed from 0.0 to 1.0. This can be
 used to randomly split a population table into a training and a test
 set</p>
@@ -6209,7 +6209,7 @@ set</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">population</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
 <span class="n">population</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;column_01&#39;</span><span class="p">)</span>

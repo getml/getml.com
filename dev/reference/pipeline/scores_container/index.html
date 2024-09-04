@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -3370,7 +3370,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>Container which holds the history of all scores associated with a given pipeline.
+        <p>Container which holds the history of all scores associated with a given pipeline.
 The container supports slicing and is sort- and filterable.</p>
 
 
@@ -3469,7 +3469,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>accuracy</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>accuracy</code> from the latest scoring run.</p>
     </div>
 
 </div>
@@ -3492,7 +3492,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>auc</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>auc</code> from the latest scoring run.</p>
     </div>
 
 </div>
@@ -3515,7 +3515,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>cross entropy</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>cross entropy</code> from the latest scoring run.</p>
     </div>
 
 </div>
@@ -3538,7 +3538,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>mae</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>mae</code> from the latest scoring run.</p>
 
 
 <table>
@@ -3585,7 +3585,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>rmse</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>rmse</code> from the latest scoring run.</p>
 
 
 <table>
@@ -3632,7 +3632,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>A convenience wrapper to retrieve the <code>rsquared</code> from the latest scoring run.</p>
+        <p>A convenience wrapper to retrieve the <code>rsquared</code> from the latest scoring run.</p>
 
 
 <table>
@@ -3676,7 +3676,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Filters the scores container.</p>
+        <p>Filters the scores container.</p>
 
 
 <table>
@@ -3727,7 +3727,7 @@ The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 <span class="n">one_week_ago</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
@@ -3800,7 +3800,7 @@ The container supports slicing and is sort- and filterable.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Sorts the scores container.</p>
+        <p>Sorts the scores container.</p>
 
 
 <table>
@@ -3869,7 +3869,7 @@ The container supports slicing and is sort- and filterable.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_auc</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">auc</span><span class="p">)</span>
 <span class="n">most_recent_first</span> <span class="o">=</span> <span class="n">pipe</span><span class="o">.</span><span class="n">scores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">score</span><span class="p">:</span> <span class="n">score</span><span class="o">.</span><span class="n">date_time</span><span class="p">,</span> <span class="n">descending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30+insiders-4.53.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30+insiders-4.53.11">
     
     
       
@@ -3329,7 +3329,7 @@
     <div class="doc doc-contents first">
 
 
-      <p>Container which holds a pipeline's columns. These include the columns for
+        <p>Container which holds a pipeline's columns. These include the columns for
 which importance can be calculated, such as the ones with
 <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles"><code>roles</code></a> as <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.categorical"><code>categorical</code></a>,
 <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.numerical"><code>numerical</code></a> and <a class="autorefs autorefs-internal" href="../../data/roles/#getml.data.roles.text"><code>text</code></a>.
@@ -3420,7 +3420,7 @@ to data frames provided to the pipeline.</p>
   <p>The container is an iterable. So, in addition to
 <a class="autorefs autorefs-internal" href="#getml.pipeline.Columns.filter"><code>filter</code></a> you can also use python list
 comprehensions for filtering.</p>
-</details>      <details class="example">
+</details>        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">all_my_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span>
 
@@ -3522,7 +3522,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Holds the names of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s columns.</p>
+        <p>Holds the names of a <a class="autorefs autorefs-internal" href="../pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>'s columns.</p>
 
 
 <table>
@@ -3571,7 +3571,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Filters the columns container.</p>
+        <p>Filters the columns container.</p>
 
 
 <table>
@@ -3622,7 +3622,7 @@ comprehensions for filtering.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">important_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">)</span>
 <span class="n">peripheral_columns</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">marker</span> <span class="o">==</span> <span class="s2">&quot;[PERIPHERAL]&quot;</span><span class="p">)</span>
@@ -3689,7 +3689,7 @@ comprehensions for filtering.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns the data for the column importances.</p>
+        <p>Returns the data for the column importances.</p>
 <p>Column importances extend the idea of column importances
 to the columns originally inserted into the pipeline.
 Each column is assigned an importance value that measures
@@ -3910,7 +3910,7 @@ importances.
 
     <div class="doc doc-contents ">
 
-      <p>Returns a new data container with all insufficiently important columns dropped.</p>
+        <p>Returns a new data container with all insufficiently important columns dropped.</p>
 
 
 <table>
@@ -4153,7 +4153,7 @@ to keep. Must be between 0.0 and 1.0.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Sorts the Columns container. If no arguments are provided the
+        <p>Sorts the Columns container. If no arguments are provided the
 container is sorted by target and name.</p>
 
 
@@ -4248,7 +4248,7 @@ container is sorted by target and name.</p>
           </tr>
       </tbody>
     </table>
-      <details class="example">
+        <details class="example">
 <summary>Example</summary>
 <div class="highlight"><pre><span></span><code><span class="n">by_importance</span> <span class="o">=</span> <span class="n">my_pipeline</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">importance</span><span class="p">)</span>
 </code></pre></div>
@@ -4408,7 +4408,7 @@ container is sorted by target and name.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Returns all information related to the columns in a pandas data frame.</p>
+        <p>Returns all information related to the columns in a pandas data frame.</p>
 
             <details class="quote">
               <summary>Source code in <code>getml/pipeline/columns.py</code></summary>
