@@ -20,8 +20,3 @@ title: Datasets
         - make_same_units_categorical
         - make_same_units_numerical
         - make_snowflake
-
-::: getml.datasets.base.DataFrameT
-    options:
-      heading_level: 2
-      show_root_full_path: false
