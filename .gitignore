@@ -137,6 +137,7 @@ venv.bak/
 
 # mkdocs documentation
 src/site
+site
 
 # mypy
 .mypy_cache/
@@ -167,6 +168,7 @@ cython_debug/
 
 ignore
 src/overrides/.icons/fontawesome-pro/*
+overrides/.icons/fontawesome-pro/*
 
 # VS Code Workspace
 .vscode/
