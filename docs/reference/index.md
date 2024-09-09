@@ -2,11 +2,10 @@
 title: API Reference
 ---
 
-[](){#python-api-reference}
-# Python API
+# Python API {#python-api-reference} 
 
 Welcome to the API documentation for Python. The Python API is a convenient,
-easy to use interface to the [getML Engine][engine]. General
+easy to use interface to the [getML Engine][engine-concepts]. General
 information about the interoperation of the different parts of getML can be
 found in the [user guide][user-guide-index].
 

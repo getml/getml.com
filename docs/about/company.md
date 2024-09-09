@@ -2,7 +2,6 @@
 title: About
 ---
 
-[](){#about}
 # About
 
 Established in 2017 by Dr. Patrick Urbanke and Alexander Uhlig, getML is dedicated to transforming predictive AI for relational and time-series data. Our mission is to make advanced machine learning algorithms accessible, enhancing data scientists' productivity with automated feature engineering and improving model accuracy.

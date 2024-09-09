@@ -1,5 +1,4 @@
-[](){#data-model}
-# Data model
+# Data model {#data-model-concepts}
 
 Defining the data model is a crucial step before training one of getML's [`Pipeline`][getml.pipeline.Pipeline]s. You typically deal with this step after having [imported your data][importing-data] and [specified the roles][annotating-data-roles] of each column.
 

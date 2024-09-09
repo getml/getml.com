@@ -1,4 +1,3 @@
-[](){#preprocessing}
 # Preprocessing
 
 As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and [`propositionalization`][featurelearning-vs-propositionalization] deal with *relational data structures* and result in a single-table representation thereof, we categorize all operations that work on *single tables* as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.
@@ -105,8 +104,7 @@ If you compare both of the features above, you will notice they are exactly the 
 Pipelines can include more than one preprocessor.
 
 While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: [`Mapping`][getml.preprocessors.Mapping] and [`TextFieldSplitter`][getml.preprocessors.TextFieldSplitter].
-[](){#preprocessing-mappings}
-## Mappings
+## Mappings {#preprocessing-mappings}
 
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
@@ -131,8 +129,8 @@ Here is an example mapping from the [CORA notebook](https://github.com/getml/get
        ('Probabilistic_Methods', 0.01293103448275862);
 ```
 Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
-[](){#preprocessing-free-form-text}
-## Handling of free form text
+
+## Handling of free form text {#preprocessing-free-form-text}
 
 getML provides the role [`text`][getml.data.roles.text] to annotate free form text fields within relational data structures. Learning from [`text`][getml.data.roles.text] columns works as follows: First, for each of the [`text`][getml.data.roles.text] columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter `vocab_size`. If a text field contains words that belong to the vocabulary, getML deals with columns of role [`text`][getml.data.roles.text] through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the [`TextFieldSplitter`][getml.preprocessors.TextFieldSplitter] preprocessor. Opting for the second approach is as easy as adding the [`TextFieldSplitter`][getml.preprocessors.TextFieldSplitter] to the list of `preprocessors` on your [`Pipeline`][getml.pipeline.Pipeline]. The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.
 
