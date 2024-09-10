@@ -26,7 +26,7 @@ Make sure that Docker is [installed](https://docs.docker.com/get-docker/). For L
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][python-api-concepts]: `pip install getml`
-    - Install the [Engine][engine-install] by following the same instructions as below. Just replace the URL with that of the Enterprise `docker-compose.yml` file you have been provided with.
+    - Install the [Engine][engine-concepts] by following the same instructions as below. Just replace the URL with that of the Enterprise `docker-compose.yml` file you have been provided with.
 
 
 Run the following command in your terminal (macOS & Linux) or PowerShell (Windows):
