@@ -5,7 +5,7 @@ Install [getML Community edition](https://github.com/getml/getml-community) with
 ```py
 pip install getml
 ```
-The will install both the [Python API][python-api-concepts] and the [Engine][engine-install] on your Linux machine. You are done.
+The will install both the [Python API][python-api-concepts] and the [Engine][engine-concepts] on your Linux machine. You are done.
 
 
 !!! enterprise-adm "Enterprise Edition"
