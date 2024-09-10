@@ -16,7 +16,7 @@ The will install both the [Python API][python-api-concepts] and the [Engine][eng
     Once you have obtained the getML Enterprise edition, you can install it as follows:
 
     - Install the [Python API][python-api-concepts]: `pip install getml`
-    - Install the [Engine][engine-install] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
+    - Install the [Engine][engine-concepts] by following [instructions for separate installation of it][separate-installation-of-engine] below. Start from step 2 and use the enterprise `tar` file you have been provided with.
 
 ## Separate installation of Engine {#separate-installation-of-engine}
 
