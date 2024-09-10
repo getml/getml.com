@@ -4,7 +4,7 @@
 
 On macOS and Windows, you can to run the Engine in a Docker container. We are working on providing native support for them in the near future.
 
-Setup the [Python API][python-api-concepts] and the [Engine][engine-install] of the [getML Community edition](https://github.com/getml/getml-community) as follows.
+Setup the [Python API][python-api-concepts] and the [Engine][engine-concepts] of the [getML Community edition](https://github.com/getml/getml-community) as follows.
 
 ## Python API
 
