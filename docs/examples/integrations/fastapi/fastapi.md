@@ -1,5 +1,4 @@
-[](){#fastapi}
-## Provide generic prediction endpoint via FastAPI
+## Provide generic prediction endpoint via FastAPI {#fastapi}
 
 A common way to communicate with resources is via REST-APIs. In Python, [FastAPI](https://fastapi.tiangolo.com/) is a well known web framework package to build web-APIs.
 
@@ -105,7 +104,7 @@ async def get_pipeline_pipeline_id(pipeline_id: str) -> Dict[str, Union[str, Lis
 To create the prediction endpoint the data scheme for the request body needs to
 be created first. For a prediction the getML Engine requires multiple data sets,
 the population data set `population` and any related peripheral data set
-`peripheral` based on the [Data model][data-model] of the pipeline. The
+`peripheral` based on the [Data model][data-model-concepts] of the pipeline. The
 peripheral data sets can be either a list or a dictionary where the order of the
 data sets in the list needs to match the order returned by
 `[_.name for _ in getml.pipeline.metadata.peripheral]`. This information

@@ -2,7 +2,6 @@
 title: Importing Data
 ---
 
-[](){#importing-data}
 # Importing data
 
 Before being able to analyze and process your data using the getML Suite,
@@ -69,7 +68,6 @@ well as at all occurrences of `None` and `NaN`.
 
 ## Import Formats
 
-[](){#csv}
 ### **CSV**
 
 The fastest way to import data into the getML Engine is to read it
@@ -89,7 +87,6 @@ In addition to reading data from a CSV file, you can also write an
 existing [`DataFrame`][getml.data.DataFrame] back into one using
 [`to_csv()`][getml.data.DataFrame.to_csv].
 
-[](){#pandas}
 ### **Pandas**
 
 [Pandas](https://pandas.pydata.org/) is one of the key packages used in most data science projects done in Python. The associated import interface is one of the slowest, but you can harness the good data exploration and manipulation capabilities of this Python package.
@@ -105,7 +102,6 @@ In addition to reading data from a `pandas.DataFrame`, you can also write an exi
 !!! note
     Due to the way data is stored within the getML Engine, the dtypes of the original `pandas.DataFrame` cannot be restored properly and there might be inconsistencies in the order of microseconds being introduced into timestamps.
 
-[](){#json}
 ### **JSON**
 
 A convenient but slow way to import data into the getML Engine via its Python API.
@@ -124,7 +120,6 @@ In addition to reading data from a JSON string, you can also convert an
 existing [`DataFrame`][getml.data.DataFrame] into one using
 [`to_json()`][getml.data.DataFrame.to_json].
 
-[](){#sqlite3}
 ### **SQLite3**
 
 [SQLite3](https://sqlite.org/index.html) is a popular in-memory database. It is faster than classical relational databases like PostgreSQL but less stable under massive parallel access. It requires all contained datasets to be loaded into memory, which might use up too much RAM, especially for large datasets.
@@ -141,7 +136,6 @@ Export to SQLite3
 
 You can also write your results back into the SQLite3 database. By providing a name for the destination table in [`transform()`][getml.pipeline.Pipeline.transform], the features generated from your raw data will be written back. Passing it into [`predict()`][getml.pipeline.Pipeline.predict] generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[](){#mysql}
 ### **MySQL**
 
 [MySQL](https://www.mysql.com) is one of the most popular databases in use today. It 
@@ -169,7 +163,6 @@ Export to MySQL
 
 You can also write your results back into the MySQL database. By providing a name for the destination table in [`transform()`][getml.pipeline.Pipeline.transform], the features generated from your raw data will be written back. Passing it into [`predict()`][getml.pipeline.Pipeline.predict] generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[](){#mariadb}
 ### **MariaDB**
 
 [MariaDB](https://mariadb.org/) is a popular open source fork of MySQL. It can be
@@ -203,7 +196,6 @@ Export to MariaDB
 
 You can also write your results back into the MariaDB database. By providing a name for the destination table in [`transform()`][getml.pipeline.Pipeline.transform], the features generated from your raw data will be written back. Passing it into [`predict()`][getml.pipeline.Pipeline.predict] generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[](){#postgresql}
 ### **PostgreSQL**
 
 [PostgreSQL](https://www.postgresql.org/) is a powerful and well-established open 
@@ -218,7 +210,6 @@ Export to PostgreSQL
 
 You can also write your results back into the PostgreSQL database. If you provide a name for the destination table in [`transform()`][getml.pipeline.Pipeline.transform], the features generated from your raw data will be written back. Passing it into [`predict()`][getml.pipeline.Pipeline.predict] generates predictions of the target variables to new, unseen data and stores the result into the corresponding table.
 
-[](){#greenplum}
 ### **Greenplum**
 
 !!! enterprise-adm "Enterprise edition"
@@ -253,7 +244,6 @@ from your raw data will be written back. Passing it into
 of the target variables to new, unseen data and stores the result into
 the corresponding table.
 
-[](){#odbc}
 ### **ODBC**
 
 !!! enterprise-adm "Enterprise edition"

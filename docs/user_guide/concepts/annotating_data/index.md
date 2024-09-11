@@ -1,9 +1,8 @@
-[](){#annotating-data}
 # Annotating data
 
 After you have [imported][importing-data] your data into the getML Engine, there is one more step to undertake before you can start learning features: You need to assign a **role** to each column. Why is that?
 
-First, the general structure of the individual data frames is needed to construct the [relational data model][data-model]. This is done by assigning the roles [join key][annotating-data-join-keys] and [time stamp][annotating-data-time-stamp]. The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).
+First, the general structure of the individual data frames is needed to construct the [relational data model][data-model-concepts]. This is done by assigning the roles [join key][annotating-data-join-keys] and [time stamp][annotating-data-time-stamp]. The former defines the columns that are used to join different data frames, the latter ensures that only rows in a reasonable time frame are taken into account (otherwise there might be data leaks).
 
 Second, you need to tell the [feature learning algorithm][feature-engineering] how to interpret the individual columns for it to construct sophisticated features. That is why we need the roles [numerical][annotating-data-numerical], [categorical][annotating-data-categorical], and [target][annotating-data-target]. You can also assign [units][annotating-data-units] to each column in a Data Frame.
 
@@ -23,9 +22,8 @@ When **learning features**, please keep the following things in mind:
 - Columns are only compared with each other if they have the same [unit][annotating-data-units].
 - If you want to make sure that a column is *only* used for comparison, you can set `comparison_only` (refer to [annotating units][annotating-data-units]). Time stamps are automatically set to `comparison_only`.
 
-[](){#annotating-data-roles}
-## Roles
-Roles determine if and how [`columns`][getml.data.columns] are handled during the construction of the [data model][data-model] and how they are interpreted by the [Feature Learning Algorithm][feature-engineering]. The following roles are available in getML:
+## Roles {#annotating-data-roles}
+Roles determine if and how [`columns`][getml.data.columns] are handled during the construction of the [data model][data-model-concepts] and how they are interpreted by the [Feature Learning Algorithm][feature-engineering]. The following roles are available in getML:
 
 | Role                | Class                                             | Included in FL Algorithm |
 |---------------------|---------------------------------------------------|--------------------------|
@@ -119,7 +117,7 @@ Even if your data source is type safe, setting roles is still a good idea becaus
 [](){#annotating-data-join-keys}
 ## Join key
 
-[`Join keys`][getml.data.roles.join_key] are required to establish a relation between two [`DataFrame`][getml.data.DataFrame] objects. Please refer to section [Data Model][data-model] for details.
+[`Join keys`][getml.data.roles.join_key] are required to establish a relation between two [`DataFrame`][getml.data.DataFrame] objects. Please refer to section [Data Model][data-model-concepts] for details.
 
 The content of this column is allowed to contain NULL values. NULL values won't be matched to anything, not even to NULL values in other join keys.
 

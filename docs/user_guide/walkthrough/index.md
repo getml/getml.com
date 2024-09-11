@@ -2,8 +2,7 @@
 title: Walkthrough
 ---
 
-[](){#walkthrough-guide}
-# Walkthrough
+# Walkthrough {#walkthrough-guide}
 
 In this walkthrough, you will learn about the basic concepts of getML. You will tackle a simple problem using the Python API in order to gain a technical understanding of the benefits of getML. More specifically, you will learn how to do the following:
 

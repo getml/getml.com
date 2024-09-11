@@ -12,7 +12,7 @@ Some parameters can be set via command line flags. If you do not explicitly set 
 the values from your *config.json* are taken instead. The *config.json* is located 
 in `$HOME/.getML/getml-VERSION`. For [Enterprise edition][enterprise-benefits] users, 
 the most elegant way to edit your config.json is via 
-the configuration view in the getML [Monitor][monitor]. Community edition users can edit 
+the configuration view in the getML [Monitor][monitor-concepts]. Community edition users can edit 
 the file via a text editor.
 
 The help menu can also be displayed by passing the flag `-help` or `-h`. The default values displayed in the help menu are the values in the *config.json* (therefore, they are not hard-coded).

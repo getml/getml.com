@@ -1,4 +1,3 @@
-[](){#release-notes}
 # Release Notes
 
 ## For getML Enterprise & Community editions { data-toc-label="getML" }

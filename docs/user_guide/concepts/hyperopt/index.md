@@ -1,4 +1,3 @@
-[](){#hyperparamter-optimization}
 # Hyperparameter optimization
 
 !!! enterprise-adm "Enterprise edition"

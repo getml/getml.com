@@ -1,4 +1,3 @@
-[](){#feature-engineering}
 # Feature engineering
 
 The deep learning revolution has enabled automated feature engineering for
@@ -78,7 +77,7 @@ typically be a
 this general information on the data schema, the intended usage of
 the variables has to be provided by setting the
 [roles][annotating-data-roles] of the corresponding columns. How to
-setup a data scheme is described in [data model][data-model].
+setup a data scheme is described in [data model][data-model-concepts].
 
 Features are often of the type (illustrated in pseudo SQL-like
 syntax):
@@ -116,8 +115,7 @@ getML contains five powerful feature learning algorithms:
 - [`Fastboost`][getml.feature_learning.Fastboost]
 - [`RelMT`][getml.feature_learning.RelMT]
 
-[](){#feature-engineering-algorithms-fastprop}
-### FastProp
+### FastProp {#feature-engineering-algorithms-fastprop}
 
 [`FastProp`][getml.feature_learning.FastProp] is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.
 
@@ -142,8 +140,7 @@ GROUP BY t1.rownum,
 
 You may notice that such a feature looks pretty similar to the [Multirel feature][feature-engineering-multirel-feature] below. And indeed, FastProp shares some of its [`aggregations`][getml.feature_learning.aggregations] with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the `WHERE` statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. 
 
-[](){#feature-engineering-algorithms-multirel}
-### Multirel
+### Multirel {#feature-engineering-algorithms-multirel}
 
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
@@ -229,8 +226,7 @@ GROUP BY t1.rownum,
 
 Further information can be found in the API documentation for [`Multirel`][getml.feature_learning.Multirel].
 
-[](){#feature-engineering-algorithms-relboost}
-### Relboost
+### Relboost {#feature-engineering-algorithms-relboost}
 
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
@@ -281,8 +277,7 @@ GROUP BY t1.rownum,
 ```
 Further information can be found in the API documentation for [`Relboost`][getml.feature_learning.Relboost].
 
-[](){#feature-engineering-algorithms-fastboost}
-### Fastboost
+### Fastboost {#feature-engineering-algorithms-fastboost}
 
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
@@ -307,8 +302,7 @@ hand, even though they can still be expressed as SQL code. Also, much like Relbo
 it is more difficult to apply Fastboost to multiple targets, because Fastboost has 
 to learn separate rules and weights for each target.
 
-[](){#feature-engineering-algorithms-relmt}
-### RelMT
+### RelMT {#feature-engineering-algorithms-relmt}
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].
 

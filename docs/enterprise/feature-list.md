@@ -3,8 +3,7 @@ hide:
   - toc
 ---
 
-[](){#enterprise-feature-list}
-## Community vs Enterprise edition
+## Community vs Enterprise edition {#enterprise-feature-list}
 
 Here are the highlights of the open-source getML Community edition and full-featured getML Enterprise edition:
 

@@ -1,7 +1,7 @@
 
 # Python API from source
 
-If you want to install the [Python API][getml-suite-python-api] from the source,
+If you want to install the [Python API][python-api-concepts] from the source,
 you will have to install the Engine separately unless you install the wheel file provided by following the steps for [building the Engine from source][compiling-from-source].
 
 ```bash
