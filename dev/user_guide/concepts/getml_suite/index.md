@@ -2,17 +2,15 @@
 title: getML Suite
 ---
 
-[](){#getml-suite}
-# The getML Suite
+# The getML Suite {#getml-suite}
 
 The getML ecosystem comprises three fundamental components:
 
-- [getML Engine][engine]
-- [Python API][python-api]
-- [getML Monitor][monitor]
+- [getML Engine][engine-concepts]
+- [Python API][python-api-concepts]
+- [getML Monitor][monitor-concepts]
 
-[](){#engine}
-## Engine
+## Engine {#engine-concepts}
 
 Written in C++, the getML Engine is the core of the Suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.
 
@@ -20,7 +18,7 @@ Written in C++, the getML Engine is the core of the Suite and does all the heavy
 
 Depending on the method used for the [installation of getML Suite][installation], the Engine can be started by executing:
 
-- `getml.engine.launch()` in the [Python API][getml-suite-python-api] for the [pip-based installation][installation-linux]
+- `getml.engine.launch()` in the [Python API][python-api-concepts] for the [pip-based installation][installation-linux]
 - `./getML` in terminal for [CLI-based installation][separate-installation-of-engine]
 -  `docker compose up` in terminal for [docker-based installation][macos-windows-docker]
 
@@ -39,10 +37,9 @@ Depending on how you started the Engine, there are different ways to shut it dow
 
 The Engine keeps a log about what it is currently doing.
 
-The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML Monitor][monitor]. The Engine will also output its log to the command line when it is started using the command-line interface.
+The easiest way to view the log is to click the '<> Log' tab in the sidebar of the [getML Monitor][monitor-concepts]. The Engine will also output its log to the command line when it is started using the command-line interface.
 
-[](){#getml-suite-python-api}
-## Python API
+## Python API {#python-api-concepts}
 
 Control the Engine with the getML Python API, which provides handlers to the objects in the Engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the [Python API documentation][python-api-reference].
 
@@ -76,8 +73,7 @@ getml.engine.delete_project("test")
 
 For more information, refer to the [Managing projects][project-management] section.
 
-[](){#python-api-lifecycles}
-### DataFrames
+### DataFrames {#python-api-lifecycles}
 
 Create a [`DataFrame`][getml.data.DataFrame] by calling for example:
 
@@ -166,8 +162,7 @@ To create a corresponding handle in the Python API, use the [`load()`][getml.pip
 pipe = getml.pipeline.load(NAME_OF_THE_PIPELINE)
 ```
 
-[](){#monitor}
-## Monitor
+## Monitor {#monitor-concepts}
 
 !!! enterprise-adm "Enterprise edition"
     This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the [benefits of the Enterprise edition][enterprise-benefits] and [compare their features][enterprise-feature-list].

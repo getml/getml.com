@@ -1,7 +1,7 @@
 ---
 icon: ""
 ---
-# Community Edition Notebooks
+# Community Edition Notebooks {#community-notebooks}
 
 A collection of Jupyter notebooks that demonstrate the extensive features and 
 capabilities of the getML Community Edition. These notebooks are designed to cover a 

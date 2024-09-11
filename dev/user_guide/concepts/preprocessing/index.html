@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#preprocessing_1" class="md-skip">
+        <a href="#preprocessing" class="md-skip">
           Skip to content
         </a>
       
@@ -1410,7 +1410,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
+  <a href="#preprocessing-mappings" class="md-nav__link">
     <span class="md-ellipsis">
       
         Mappings
@@ -1421,7 +1421,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handling-of-free-form-text" class="md-nav__link">
+  <a href="#preprocessing-free-form-text" class="md-nav__link">
     <span class="md-ellipsis">
       
         Handling of free form text
@@ -2208,7 +2208,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
+  <a href="#preprocessing-mappings" class="md-nav__link">
     <span class="md-ellipsis">
       
         Mappings
@@ -2219,7 +2219,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handling-of-free-form-text" class="md-nav__link">
+  <a href="#preprocessing-free-form-text" class="md-nav__link">
     <span class="md-ellipsis">
       
         Handling of free form text
@@ -2347,8 +2347,7 @@
 
 
 <!-- Page content -->
-<p><a href="" id="preprocessing"></a></p>
-<h1 id="preprocessing_1">Preprocessing</h1>
+<h1 id="preprocessing">Preprocessing</h1>
 <p>As preprocessing, we categorize operations on data frames that are not directly related to the relational data model. While feature learning and <a class="autorefs autorefs-internal" href="../feature_engineering/#feature-learning-vs-propositionalization"><code>propositionalization</code></a> deal with <em>relational data structures</em> and result in a single-table representation thereof, we categorize all operations that work on <em>single tables</em> as preprocessing. This includes numerical transformations, encoding techniques, or alternative representations.</p>
 <p>getML's preprocessors allow you to extract domains from email addresses (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.EmailDomain"><code>EmailDomain</code></a>), impute missing values (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Imputation"><code>Imputation</code></a>), map categorical columns to a continuous representation (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a>), extract seasonal components from time stamps (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a>), extract sub strings from string-based columns (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Substring"><code>Substring</code></a>) and split up <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns (<a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>). Preprocessing operations in getML are very efficient and happen really fast. In fact, most of the time you won't even notice the presence of a preprocessor in your pipeline. getML's preprocessors operate on an abstract level without polluting your original data, are evaluated lazily and their set-up requires minimal effort.</p>
 <p>Here is a small example that shows the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Seasonal"><code>Seasonal</code></a> preprocessor in action.
@@ -2445,12 +2444,11 @@
 </code></pre></div></p>
 <p>If you compare both of the features above, you will notice they are exactly the same: <code>COUNT - COUNT(DISTINCT)</code> on the month component conditional on the time-based restrictions introduced through memory and horizon.</p>
 <p>Pipelines can include more than one preprocessor.</p>
-<p>While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>.
-<a href="" id="preprocessing-mappings"></a></p>
-<h2 id="mappings">Mappings</h2>
+<p>While most of getML's preprocessors are straightforward, two of them deserve a more detailed introduction: <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mapping</code></a> and <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a>.</p>
+<h2 id="preprocessing-mappings">Mappings</h2>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p><a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.Mapping"><code>Mappings</code></a> are an alternative representation for categorical columns, text columns, and (quasi-categorical) discrete-numerical columns. Each discrete value (category) of a categorical column is mapped to a continuous spectrum by calculating the average target value for the subset of all rows belonging to the respective category. For columns from peripheral tables, the average target values are propagated back by traversing the relational structure.</p>
@@ -2467,9 +2465,8 @@
 <span class="w">       </span><span class="p">(</span><span class="s1">&#39;Neural_Networks&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">02088772845953003</span><span class="p">),</span>
 <span class="w">       </span><span class="p">(</span><span class="s1">&#39;Probabilistic_Methods&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">01293103448275862</span><span class="p">);</span>
 </code></pre></div>
-Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.
-<a href="" id="preprocessing-free-form-text"></a></p>
-<h2 id="handling-of-free-form-text">Handling of free form text</h2>
+Inspecting the actual values, it's highly likely, that this mapping stems from a feature learned by a sub learner targeting the label "Case_Based". In addition to the trivial case, we can see that the next closed neighboring category is the "Rule_Learning" category, to which 7.3 % of the papers citing the target papers are categorized.</p>
+<h2 id="preprocessing-free-form-text">Handling of free form text</h2>
 <p>getML provides the role <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> to annotate free form text fields within relational data structures. Learning from <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns works as follows: First, for each of the <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> columns, a vocabulary is built by taking into account the feature learner's text mining specific hyperparameter <code>vocab_size</code>. If a text field contains words that belong to the vocabulary, getML deals with columns of role <a class="autorefs autorefs-internal" href="../../../reference/data/roles/#getml.data.roles.text"><code>text</code></a> through one of two approaches: Text fields can either be integrated into features by learning conditions based on the mere presence (or absence) of certain words in those text fields (the default) or they can be split into a relational bag-of-words representation by means of the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> preprocessor. Opting for the second approach is as easy as adding the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> to the list of <code>preprocessors</code> on your <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>. The resulting bag of words can be viewed as another one-to-many relationship within our data model where each row holding a text field is related to n peripheral rows (n is the number of words in the text field). Consider the following example, where the text field is split into a relational bag of words.</p>
 <h3 id="one-row-of-a-table-with-a-text-field">One row of a table with a text field</h3>
 <table>
@@ -2533,7 +2530,7 @@ Inspecting the actual values, it's highly likely, that this mapping stems from a
 </tr>
 </tbody>
 </table>
-<p>As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (<code>COUNT WHERE words IN ('quick', 'jumps')</code>). Further, by utilizing <a class="autorefs autorefs-internal" href="#mappings">mappings</a>, any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.</p>
+<p>As text fields now present another relation, getML's feature learning algorithms are able to learn structural logic from text fields' contents by applying aggregations over the resulting bag of words itself (<code>COUNT WHERE words IN ('quick', 'jumps')</code>). Further, by utilizing <a class="autorefs autorefs-internal" href="#preprocessing-mappings">mappings</a>, any aggregation applicable to a (mapped) categorical column can be applied to bag-of-words mappings as well.</p>
 <p>Note that the splitting of text fields can be computationally expensive. If performance suffers too much, you may resort to the default behavior by removing the <a class="autorefs autorefs-internal" href="../../../reference/preprocessors/#getml.preprocessors.TextFieldSplitter"><code>TextFieldSplitter</code></a> from your <a class="autorefs autorefs-internal" href="../../../reference/pipeline/pipeline/#getml.pipeline.Pipeline"><code>Pipeline</code></a>.</p>
 
 <!-- Source file information -->

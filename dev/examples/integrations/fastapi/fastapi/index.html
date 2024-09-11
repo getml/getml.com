@@ -111,7 +111,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provide-generic-prediction-endpoint-via-fastapi" class="md-skip">
+        <a href="#fastapi" class="md-skip">
           Skip to content
         </a>
       
@@ -1759,7 +1759,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#provide-generic-prediction-endpoint-via-fastapi" class="md-nav__link">
+  <a href="#fastapi" class="md-nav__link">
     <span class="md-ellipsis">
       
         Provide generic prediction endpoint via FastAPI
@@ -2097,7 +2097,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#provide-generic-prediction-endpoint-via-fastapi" class="md-nav__link">
+  <a href="#fastapi" class="md-nav__link">
     <span class="md-ellipsis">
       
         Provide generic prediction endpoint via FastAPI
@@ -2250,8 +2250,7 @@
 
 
 <!-- Page content -->
-<p><a href="" id="fastapi"></a></p>
-<h2 id="provide-generic-prediction-endpoint-via-fastapi">Provide generic prediction endpoint via FastAPI</h2>
+<h2 id="fastapi">Provide generic prediction endpoint via FastAPI</h2>
 <p>A common way to communicate with resources is via REST-APIs. In Python, <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">FastAPI</a> is a well known web framework package to build web-APIs.</p>
 <p>The following shows an example how easily, pipelines in a project can be made accessible via endpoints in FastAPI.</p>
 <p>It is assumed that you have some basic knowledge of FastAPI and the getML framework.</p>
@@ -2333,7 +2332,7 @@ the previously created pipeline has the id <code>a1b2c3</code>.</p>
 <p>To create the prediction endpoint the data scheme for the request body needs to
 be created first. For a prediction the getML Engine requires multiple data sets,
 the population data set <code>population</code> and any related peripheral data set
-<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn/#data-model">Data model</a> of the pipeline. The
+<code>peripheral</code> based on the <a class="autorefs autorefs-internal" href="../../../../user_guide/concepts/data_model/#data-model-concepts">Data model</a> of the pipeline. The
 peripheral data sets can be either a list or a dictionary where the order of the
 data sets in the list needs to match the order returned by
 <code>[_.name for _ in getml.pipeline.metadata.peripheral]</code>. This information

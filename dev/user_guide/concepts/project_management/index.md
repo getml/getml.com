@@ -1,10 +1,9 @@
-[](){#project-management}
-# Managing Projects
+# Managing Projects {#project-management}
 
 When working with getML, all data is organized into *projects.* These projects are managed through the [`getml.project`][getml.project] module.
 
 ## Relationship between Projects and Engine Processes
-Each project is linked to a specific instance of the [getML Engine][engine], which runs as a global process, independent of your Python session. This setup allows multiple users to share a single getML instance and work on different projects. When switching projects using [`getml.project.switch()`][getml.project.attrs.switch], the Python API spawns a new process and connects to it, while the current project's process moves to the background (unless explicitly suspended via [`getml.project.suspend()`][getml.project.attrs.suspend]). You can also work on multiple projects simultaneously from different Python sessions, which is particularly useful when using [Jupyter Lab](https://jupyter.org/) to manage multiple notebooks and Python kernels concurrently.
+Each project is linked to a specific instance of the [getML Engine][engine-concepts], which runs as a global process, independent of your Python session. This setup allows multiple users to share a single getML instance and work on different projects. When switching projects using [`getml.project.switch()`][getml.project.attrs.switch], the Python API spawns a new process and connects to it, while the current project's process moves to the background (unless explicitly suspended via [`getml.project.suspend()`][getml.project.attrs.suspend]). You can also work on multiple projects simultaneously from different Python sessions, which is particularly useful when using [Jupyter Lab](https://jupyter.org/) to manage multiple notebooks and Python kernels concurrently.
 
 To load an existing project or create a new one, use [`getml.engine.set_project()`][getml.engine.set_project].
 

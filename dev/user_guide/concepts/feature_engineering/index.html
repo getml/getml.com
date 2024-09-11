@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#feature-engineering_1" class="md-skip">
+        <a href="#feature-engineering" class="md-skip">
           Skip to content
         </a>
       
@@ -1495,7 +1495,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fastprop" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-fastprop" class="md-nav__link">
     <span class="md-ellipsis">
       
         FastProp
@@ -1506,7 +1506,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#multirel" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-multirel" class="md-nav__link">
     <span class="md-ellipsis">
       
         Multirel
@@ -1517,7 +1517,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relboost" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-relboost" class="md-nav__link">
     <span class="md-ellipsis">
       
         Relboost
@@ -1528,7 +1528,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fastboost" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-fastboost" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fastboost
@@ -1539,7 +1539,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relmt" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-relmt" class="md-nav__link">
     <span class="md-ellipsis">
       
         RelMT
@@ -2308,7 +2308,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fastprop" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-fastprop" class="md-nav__link">
     <span class="md-ellipsis">
       
         FastProp
@@ -2319,7 +2319,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#multirel" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-multirel" class="md-nav__link">
     <span class="md-ellipsis">
       
         Multirel
@@ -2330,7 +2330,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relboost" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-relboost" class="md-nav__link">
     <span class="md-ellipsis">
       
         Relboost
@@ -2341,7 +2341,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fastboost" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-fastboost" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fastboost
@@ -2352,7 +2352,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#relmt" class="md-nav__link">
+  <a href="#feature-engineering-algorithms-relmt" class="md-nav__link">
     <span class="md-ellipsis">
       
         RelMT
@@ -2457,8 +2457,7 @@
 
 
 <!-- Page content -->
-<p><a href="" id="feature-engineering"></a></p>
-<h1 id="feature-engineering_1">Feature engineering</h1>
+<h1 id="feature-engineering">Feature engineering</h1>
 <p>The deep learning revolution has enabled automated feature engineering for
 images and sound data. Yet, for relational data and classical time series
 analysis, feature engineering is still done by hand or using very simple brute
@@ -2524,8 +2523,8 @@ typically be a
 <a class="autorefs autorefs-internal" href="../data_model/#self-joining-a-single-table">self-join</a>. In addition to
 this general information on the data schema, the intended usage of
 the variables has to be provided by setting the
-<a class="autorefs autorefs-internal" href="../annotating_data/#roles">roles</a> of the corresponding columns. How to
-setup a data scheme is described in <a class="autorefs autorefs-internal" href="../../../examples/enterprise-notebooks/kaggle_notebooks/cora_getml_vs_gnn/#data-model">data model</a>.</p>
+<a class="autorefs autorefs-internal" href="../annotating_data/#annotating-data-roles">roles</a> of the corresponding columns. How to
+setup a data scheme is described in <a class="autorefs autorefs-internal" href="../data_model/#data-model-concepts">data model</a>.</p>
 <p>Features are often of the type (illustrated in pseudo SQL-like
 syntax):
 <div class="highlight"><pre><span></span><code><span class="k">COUNT</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="o">`</span><span class="n">transactions</span><span class="o">`</span><span class="w"> </span><span class="n">within</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">`</span><span class="n">days</span><span class="o">`</span>
@@ -2553,8 +2552,7 @@ will be engineered automatically as well. Again, no input from the user is requi
 <li><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/fastboost/#getml.feature_learning.Fastboost"><code>Fastboost</code></a></li>
 <li><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relmt/#getml.feature_learning.RelMT"><code>RelMT</code></a></li>
 </ul>
-<p><a href="" id="feature-engineering-algorithms-fastprop"></a></p>
-<h3 id="fastprop">FastProp</h3>
+<h3 id="feature-engineering-algorithms-fastprop">FastProp</h3>
 <p><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/fastprop/#getml.feature_learning.FastProp"><code>FastProp</code></a> is getML's take on propositionalization. It is a fast and efficient implementation utilizing aggregations-based operations, which transform a relational data structure to a flat table. FastProp allows for the really fast generation of a substantial number of features based on simple (unconditional) aggregations.</p>
 <p>A typical FastProp feature looks like this:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">FEATURE_1</span><span class="w"> </span><span class="k">AS</span>
@@ -2571,14 +2569,13 @@ will be engineered automatically as well. Again, no input from the user is requi
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It is recommended that you combine FastProp with <a class="autorefs autorefs-internal" href="../preprocessing/#mappings">mappings</a>.</p>
+<p>It is recommended that you combine FastProp with <a class="autorefs autorefs-internal" href="../preprocessing/#preprocessing-mappings">mappings</a>.</p>
 </div>
 <p>You may notice that such a feature looks pretty similar to the <a class="autorefs autorefs-internal" href="#feature-engineering-multirel-feature">Multirel feature</a> below. And indeed, FastProp shares some of its <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/aggregations/#getml.feature_learning.aggregations"><code>aggregations</code></a> with Multirel. FastProp features, however, are usually much simpler because they lack the complex conditions learned by getML's other algorithms (the <code>WHERE</code> statement in the SQL representation). FastProp is an excellent choice in an exploration phase of a data science project and delivers decent results out of the box in many cases. </p>
-<p><a href="" id="feature-engineering-algorithms-multirel"></a></p>
-<h3 id="multirel">Multirel</h3>
+<h3 id="feature-engineering-algorithms-multirel">Multirel</h3>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p>Simply speaking, <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a> is a more efficient variation of Multi-relational Decision Tree Learning (MRDTL). The core idea is to minimize redundancies in the original algorithm by incremental updates. We then combined our improved version of MRDTL with ensemble learning methods.</p>
@@ -2635,11 +2632,10 @@ is hard. If the match used to be included and is in fact the maximum value, we n
 <span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
 </code></pre></div>
 <p>Further information can be found in the API documentation for <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/multirel/#getml.feature_learning.Multirel"><code>Multirel</code></a>.</p>
-<p><a href="" id="feature-engineering-algorithms-relboost"></a></p>
-<h3 id="relboost">Relboost</h3>
+<h3 id="feature-engineering-algorithms-relboost">Relboost</h3>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relboost/#getml.feature_learning.Relboost"><code>Relboost</code></a> is a generalization of the gradient boosting algorithm. More specifically, it generalizes the xgboost implementation to relational learning.</p>
@@ -2674,11 +2670,10 @@ is hard. If the match used to be included and is in fact the maximum value, we n
 <span class="w">         </span><span class="n">t1</span><span class="p">.</span><span class="n">time_stamp</span><span class="p">;</span>
 </code></pre></div>
 Further information can be found in the API documentation for <a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relboost/#getml.feature_learning.Relboost"><code>Relboost</code></a>.</p>
-<p><a href="" id="feature-engineering-algorithms-fastboost"></a></p>
-<h3 id="fastboost">Fastboost</h3>
+<h3 id="feature-engineering-algorithms-fastboost">Fastboost</h3>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p>While both are generalizations of the gradient boosting algorithm, the main difference 
@@ -2700,11 +2695,10 @@ Fastboost are less intuitive. They are further away from what you might write by
 hand, even though they can still be expressed as SQL code. Also, much like Relboost, 
 it is more difficult to apply Fastboost to multiple targets, because Fastboost has 
 to learn separate rules and weights for each target.</p>
-<p><a href="" id="feature-engineering-algorithms-relmt"></a></p>
-<h3 id="relmt">RelMT</h3>
+<h3 id="feature-engineering-algorithms-relmt">RelMT</h3>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p><a class="autorefs autorefs-internal" href="../../../reference/feature_learning/relmt/#getml.feature_learning.RelMT"><code>RelMT</code></a> is a generalization of linear model trees to relational data. Linear model trees are decision trees with a linear model at each leaf, resulting in a hybrid model that combines the strengths of linear models (like interpretability or the ability to capture linear relationships) with those of tree-based algorithms (like good performance or the ability to capture nonlinear relationships).</p>

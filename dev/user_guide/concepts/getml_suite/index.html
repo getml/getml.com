@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-getml-suite" class="md-skip">
+        <a href="#getml-suite" class="md-skip">
           Skip to content
         </a>
       
@@ -1210,7 +1210,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#engine_1" class="md-nav__link">
+  <a href="#engine-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Engine
@@ -1260,7 +1260,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-api" class="md-nav__link">
+  <a href="#python-api-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python API
@@ -1294,7 +1294,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dataframes" class="md-nav__link">
+  <a href="#python-api-lifecycles" class="md-nav__link">
     <span class="md-ellipsis">
       
         DataFrames
@@ -1321,7 +1321,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitor_1" class="md-nav__link">
+  <a href="#monitor-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Monitor
@@ -2280,7 +2280,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#engine_1" class="md-nav__link">
+  <a href="#engine-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Engine
@@ -2330,7 +2330,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-api" class="md-nav__link">
+  <a href="#python-api-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Python API
@@ -2364,7 +2364,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dataframes" class="md-nav__link">
+  <a href="#python-api-lifecycles" class="md-nav__link">
     <span class="md-ellipsis">
       
         DataFrames
@@ -2391,7 +2391,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitor_1" class="md-nav__link">
+  <a href="#monitor-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       
         Monitor
@@ -2491,22 +2491,20 @@
 
 
 <!-- Page content -->
-<p><a href="" id="getml-suite"></a></p>
-<h1 id="the-getml-suite">The getML Suite</h1>
+<h1 id="getml-suite">The getML Suite</h1>
 <p>The getML ecosystem comprises three fundamental components:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" href="../../../install/packages/docker/#engine">getML Engine</a></li>
-<li><a class="autorefs autorefs-internal" href="../../../install/packages/docker/#python-api">Python API</a></li>
-<li><a class="autorefs autorefs-internal" href="#monitor_1">getML Monitor</a></li>
+<li><a class="autorefs autorefs-internal" href="#engine-concepts">getML Engine</a></li>
+<li><a class="autorefs autorefs-internal" href="#python-api-concepts">Python API</a></li>
+<li><a class="autorefs autorefs-internal" href="#monitor-concepts">getML Monitor</a></li>
 </ul>
-<p><a href="" id="engine"></a></p>
-<h2 id="engine_1">Engine</h2>
+<h2 id="engine-concepts">Engine</h2>
 <p>Written in C++, the getML Engine is the core of the Suite and does all the heavy lifting. It is responsible for data management, feature engineering, and machine learning.</p>
 <h3 id="starting-the-engine">Starting the Engine</h3>
 <p>Depending on the method used for the <a class="autorefs autorefs-internal" href="../../../install/#installation">installation of getML Suite</a>, the Engine can be started by executing:</p>
 <ul>
-<li><code>getml.engine.launch()</code> in the <a class="autorefs autorefs-internal" href="#python-api">Python API</a> for the <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#installation-linux">pip-based installation</a></li>
-<li><code>./getML</code> in terminal for <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#separate-installation-of-engine_1">CLI-based installation</a></li>
+<li><code>getml.engine.launch()</code> in the <a class="autorefs autorefs-internal" href="#python-api-concepts">Python API</a> for the <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#installation-linux">pip-based installation</a></li>
+<li><code>./getML</code> in terminal for <a class="autorefs autorefs-internal" href="../../../install/packages/linux/#separate-installation-of-engine">CLI-based installation</a></li>
 <li><code>docker compose up</code> in terminal for <a class="autorefs autorefs-internal" href="../../../install/packages/docker/#docker-for-macos-windows-linux">docker-based installation</a></li>
 </ul>
 <p>Follow the links to learn more about each method. </p>
@@ -2520,10 +2518,9 @@
 </ul>
 <h3 id="logging">Logging</h3>
 <p>The Engine keeps a log about what it is currently doing.</p>
-<p>The easiest way to view the log is to click the '&lt;&gt; Log' tab in the sidebar of the <a class="autorefs autorefs-internal" href="#monitor_1">getML Monitor</a>. The Engine will also output its log to the command line when it is started using the command-line interface.</p>
-<p><a href="" id="getml-suite-python-api"></a></p>
-<h2 id="python-api">Python API</h2>
-<p>Control the Engine with the getML Python API, which provides handlers to the objects in the Engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the <a class="autorefs autorefs-internal" href="../../../reference/#python-api">Python API documentation</a>.</p>
+<p>The easiest way to view the log is to click the '&lt;&gt; Log' tab in the sidebar of the <a class="autorefs autorefs-internal" href="#monitor-concepts">getML Monitor</a>. The Engine will also output its log to the command line when it is started using the command-line interface.</p>
+<h2 id="python-api-concepts">Python API</h2>
+<p>Control the Engine with the getML Python API, which provides handlers to the objects in the Engine and all other necessary tools for end-to-end data science projects. For an in-depth read about its individual classes and methods, check out the <a class="autorefs autorefs-internal" href="../../../reference/#python-api-reference">Python API documentation</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -2551,9 +2548,8 @@ To remove an entire project, use <a class="autorefs autorefs-internal" href="../
 <div class="highlight"><pre><span></span><code><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">list_projects</span><span class="p">()</span>
 <span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">delete_project</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>For more information, refer to the <a class="autorefs autorefs-internal" href="../project_management/#managing-projects">Managing projects</a> section.</p>
-<p><a href="" id="python-api-lifecycles"></a></p>
-<h3 id="dataframes">DataFrames</h3>
+<p>For more information, refer to the <a class="autorefs autorefs-internal" href="../project_management/#project-management">Managing projects</a> section.</p>
+<h3 id="python-api-lifecycles">DataFrames</h3>
 <p>Create a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> by calling for example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
     <span class="s2">&quot;path/to/my/data.csv&quot;</span><span class="p">,</span> 
@@ -2563,7 +2559,7 @@ To remove an entire project, use <a class="autorefs autorefs-internal" href="../
 <p>This creates a data frame object in the getML Engine, imports the provided data, and returns a handler to the object as a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a> in the Python API.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are many other methods to create a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, including <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a>, or <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas()</code></a>. For a full list of available methods, refer to the <a class="autorefs autorefs-internal" href="../#importing-data">Importing data</a> section.</p>
+<p>There are many other methods to create a <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame"><code>DataFrame</code></a>, including <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_db"><code>from_db()</code></a>, <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_json"><code>from_json()</code></a>, or <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.from_pandas"><code>from_pandas()</code></a>. For a full list of available methods, refer to the <a class="autorefs autorefs-internal" href="../importing_data/#importing-data">Importing data</a> section.</p>
 </div>
 <p><strong>Synchronization</strong></p>
 <p>When you apply any method, like <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.add"><code>add()</code></a>, the changes will be automatically reflected in both the Engine and Python. Under the hood, the Python API sends a command to create a new column to the getML Engine. The moment the Engine is done, it informs the Python API and the latter triggers the <a class="autorefs autorefs-internal" href="../../../reference/data/data_frame/#getml.data.DataFrame.refresh"><code>refresh()</code></a> method to update the Python handler.</p>
@@ -2613,11 +2609,10 @@ To remove an entire project, use <a class="autorefs autorefs-internal" href="../
 <p>To create a corresponding handle in the Python API, use the <a class="autorefs autorefs-internal" href="../../../reference/pipeline/#getml.pipeline.load"><code>load()</code></a> function:
 <div class="highlight"><pre><span></span><code><span class="n">pipe</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">NAME_OF_THE_PIPELINE</span><span class="p">)</span>
 </code></pre></div></p>
-<p><a href="" id="monitor"></a></p>
-<h2 id="monitor_1">Monitor</h2>
+<h2 id="monitor-concepts">Monitor</h2>
 <div class="admonition enterprise-adm">
 <p class="admonition-title">Enterprise edition</p>
-<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#unprecedented-value-at-a-fraction-of-the-cost">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#community-vs-enterprise-edition">compare their features</a>.</p>
+<p>This feature is exclusive to the Enterprise edition and is not available in the Community edition. Discover the <a class="autorefs autorefs-internal" href="../../../enterprise/benefits/#enterprise-benefits">benefits of the Enterprise edition</a> and <a class="autorefs autorefs-internal" href="../../../enterprise/feature-list/#enterprise-feature-list">compare their features</a>.</p>
 <p>For licensing information and technical support, please <a class="autorefs autorefs-internal" href="../../../contact/#how-can-we-help-you">contact us</a>.</p>
 </div>
 <p>The Monitor provides information on the data imported into the Engine, as well as on the trained pipelines and their performance. It is written in Go and compiled into a binary separate from the getML Engine.</p>
