@@ -68,9 +68,6 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit !important;
   }
 
-  div.lt {
-  }
-
   .md-post__meta > li > nav > ul > li > a {
     display: block;
     background-color: var(--md-bg);
