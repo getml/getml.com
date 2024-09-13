@@ -46,7 +46,7 @@ Now, without further ado, let’s dig right into it.
 
 ## Framework and Dataset
 
-[GetML](https://www.getml.com/product#what-is-getml) is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. While I briefly touch on getML’s prediction algorithms, I will mostly exploit its feature learner capabilities.
+[GetML][why-getml] is a high-performance machine learning framework to build regression and prediction models on any kind of relational data. While I briefly touch on getML’s prediction algorithms, I will mostly exploit its feature learner capabilities.
 
 The dataset used for benchmarking is the well known CORA data set, that includes 2708 scientific publications classified into one of seven classes. The papers reference each other, giving rise to a graph network. Hence, in GNN terminology, the papers are nodes, the references are edges. Words in the papers’ abstract are features of the papers, i.e. node attributes.
 
