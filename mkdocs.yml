@@ -90,7 +90,23 @@ theme:
 # Plugins
 plugins:
   - autorefs
-  # - blog
+  - blog:
+      enabled: true
+      blog_dir: blog
+      archive: false
+      categories: true
+      categories_allowed:
+        - Getting Started
+        - Jupyter Notebooks
+        - Kaggle
+      authors_profiles: false
+      authors_profiles_name: Authors
+      authors_profiles_url_format: "team/{slug}"
+      authors_profiles_toc: false
+      post_excerpt_max_authors: 3
+      post_excerpt: required
+      post_excerpt_separator: "<!-- more -->"
+      post_url_format: "{slug}"
   - mkdocstrings:
       handlers:
         python:
@@ -128,6 +144,7 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - table-reader
   - tags
+  - typeset
   - meta
   - mike:
       canonical_version: latest
@@ -227,6 +244,12 @@ markdown_extensions:
         include:
           - reference/*
           - user_guide/*
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+            
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -438,5 +461,8 @@ nav:
     - Careers: about/careers.md
     - Imprint: about/imprint.md
     - Privacy: https://getml.notion.site/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a
+
+  - Blog:
+    - blog/index.md
 
   - getML 1.4 doc: https://docs.getml.com
