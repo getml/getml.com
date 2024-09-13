@@ -460,6 +460,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -2656,6 +2676,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -3090,8 +3205,19 @@ permanently lost.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML Engine is running and ready to accept
-commands and False otherwise.</p>
+                <p>True if the getML Engine is running and ready to accept</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>commands and False otherwise.</p>
               </div>
             </td>
           </tr>
@@ -3125,7 +3251,7 @@ commands and False otherwise.</p>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            True if the getML Engine is running and ready to accept</span>
-<span class="sd">                commands and False otherwise.</span>
+<span class="sd">            commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -3179,8 +3305,19 @@ commands and False otherwise.</p>
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>True if the getML Engine is running and ready to accept
-commands and False otherwise.</p>
+                <p>True if the getML Engine is running and ready to accept</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <span class="doc-returns-annotation">
+                    <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></code>
+                </span>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>commands and False otherwise.</p>
               </div>
             </td>
           </tr>
@@ -3214,7 +3351,7 @@ commands and False otherwise.</p>
 
 <span class="sd">    Returns:</span>
 <span class="sd">            True if the getML Engine is running and ready to accept</span>
-<span class="sd">                commands and False otherwise.</span>
+<span class="sd">            commands and False otherwise.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 

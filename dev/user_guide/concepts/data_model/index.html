@@ -454,6 +454,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -1373,7 +1393,9 @@
   <a href="#tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tables
+        <span class="md-typeset">
+          Tables
+        </span>
       
     </span>
   </a>
@@ -1385,7 +1407,9 @@
   <a href="#the-population-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The population table
+        <span class="md-typeset">
+          The population table
+        </span>
       
     </span>
   </a>
@@ -1401,7 +1425,9 @@
   <a href="#peripheral-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Peripheral tables
+        <span class="md-typeset">
+          Peripheral tables
+        </span>
       
     </span>
   </a>
@@ -1412,7 +1438,9 @@
   <a href="#placeholders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Placeholders
+        <span class="md-typeset">
+          Placeholders
+        </span>
       
     </span>
   </a>
@@ -1423,7 +1451,9 @@
   <a href="#joins" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Joins
+        <span class="md-typeset">
+          Joins
+        </span>
       
     </span>
   </a>
@@ -1434,7 +1464,9 @@
   <a href="#data-schemata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data schemata
+        <span class="md-typeset">
+          Data schemata
+        </span>
       
     </span>
   </a>
@@ -1446,7 +1478,9 @@
   <a href="#the-star-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The star schema
+        <span class="md-typeset">
+          The star schema
+        </span>
       
     </span>
   </a>
@@ -1457,7 +1491,9 @@
   <a href="#the-snowflake-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The snowflake schema
+        <span class="md-typeset">
+          The snowflake schema
+        </span>
       
     </span>
   </a>
@@ -1473,7 +1509,9 @@
   <a href="#time-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time series
+        <span class="md-typeset">
+          Time series
+        </span>
       
     </span>
   </a>
@@ -1485,7 +1523,9 @@
   <a href="#self-joining-a-single-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Self-joining a single table
+        <span class="md-typeset">
+          Self-joining a single table
+        </span>
       
     </span>
   </a>
@@ -1496,7 +1536,9 @@
   <a href="#horizon-and-memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Horizon and Memory
+        <span class="md-typeset">
+          Horizon and Memory
+        </span>
       
     </span>
   </a>
@@ -1507,7 +1549,9 @@
   <a href="#time_stamps-and-on" class="md-nav__link">
     <span class="md-ellipsis">
       
-        time_stamps and on
+        <span class="md-typeset">
+          <code>time_stamps</code> and <code>on</code>
+        </span>
       
     </span>
   </a>
@@ -1518,7 +1562,9 @@
   <a href="#lagged-target-and-horizon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lagged Target and horizon
+        <span class="md-typeset">
+          Lagged Target and horizon
+        </span>
       
     </span>
   </a>
@@ -1529,7 +1575,9 @@
   <a href="#features-based-on-time-stamps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features based on time stamps
+        <span class="md-typeset">
+          Features based on time stamps
+        </span>
       
     </span>
   </a>
@@ -2276,6 +2324,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -2333,7 +2476,9 @@
   <a href="#tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tables
+        <span class="md-typeset">
+          Tables
+        </span>
       
     </span>
   </a>
@@ -2345,7 +2490,9 @@
   <a href="#the-population-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The population table
+        <span class="md-typeset">
+          The population table
+        </span>
       
     </span>
   </a>
@@ -2361,7 +2508,9 @@
   <a href="#peripheral-tables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Peripheral tables
+        <span class="md-typeset">
+          Peripheral tables
+        </span>
       
     </span>
   </a>
@@ -2372,7 +2521,9 @@
   <a href="#placeholders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Placeholders
+        <span class="md-typeset">
+          Placeholders
+        </span>
       
     </span>
   </a>
@@ -2383,7 +2534,9 @@
   <a href="#joins" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Joins
+        <span class="md-typeset">
+          Joins
+        </span>
       
     </span>
   </a>
@@ -2394,7 +2547,9 @@
   <a href="#data-schemata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data schemata
+        <span class="md-typeset">
+          Data schemata
+        </span>
       
     </span>
   </a>
@@ -2406,7 +2561,9 @@
   <a href="#the-star-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The star schema
+        <span class="md-typeset">
+          The star schema
+        </span>
       
     </span>
   </a>
@@ -2417,7 +2574,9 @@
   <a href="#the-snowflake-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The snowflake schema
+        <span class="md-typeset">
+          The snowflake schema
+        </span>
       
     </span>
   </a>
@@ -2433,7 +2592,9 @@
   <a href="#time-series" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time series
+        <span class="md-typeset">
+          Time series
+        </span>
       
     </span>
   </a>
@@ -2445,7 +2606,9 @@
   <a href="#self-joining-a-single-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Self-joining a single table
+        <span class="md-typeset">
+          Self-joining a single table
+        </span>
       
     </span>
   </a>
@@ -2456,7 +2619,9 @@
   <a href="#horizon-and-memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Horizon and Memory
+        <span class="md-typeset">
+          Horizon and Memory
+        </span>
       
     </span>
   </a>
@@ -2467,7 +2632,9 @@
   <a href="#time_stamps-and-on" class="md-nav__link">
     <span class="md-ellipsis">
       
-        time_stamps and on
+        <span class="md-typeset">
+          <code>time_stamps</code> and <code>on</code>
+        </span>
       
     </span>
   </a>
@@ -2478,7 +2645,9 @@
   <a href="#lagged-target-and-horizon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lagged Target and horizon
+        <span class="md-typeset">
+          Lagged Target and horizon
+        </span>
       
     </span>
   </a>
@@ -2489,7 +2658,9 @@
   <a href="#features-based-on-time-stamps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Features based on time stamps
+        <span class="md-typeset">
+          Features based on time stamps
+        </span>
       
     </span>
   </a>

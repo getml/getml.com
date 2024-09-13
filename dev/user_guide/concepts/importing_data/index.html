@@ -454,6 +454,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -1293,7 +1313,9 @@
   <a href="#unified-import-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unified import interface
+        <span class="md-typeset">
+          Unified import interface
+        </span>
       
     </span>
   </a>
@@ -1304,7 +1326,9 @@
   <a href="#data-frames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Frames
+        <span class="md-typeset">
+          Data Frames
+        </span>
       
     </span>
   </a>
@@ -1315,7 +1339,9 @@
   <a href="#handling-of-null-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling of NULL values
+        <span class="md-typeset">
+          Handling of NULL values
+        </span>
       
     </span>
   </a>
@@ -1326,7 +1352,9 @@
   <a href="#import-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Import Formats
+        <span class="md-typeset">
+          Import Formats
+        </span>
       
     </span>
   </a>
@@ -1338,7 +1366,9 @@
   <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CSV
+        <span class="md-typeset">
+          <strong>CSV</strong>
+        </span>
       
     </span>
   </a>
@@ -1349,7 +1379,9 @@
   <a href="#pandas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pandas
+        <span class="md-typeset">
+          <strong>Pandas</strong>
+        </span>
       
     </span>
   </a>
@@ -1360,7 +1392,9 @@
   <a href="#json" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JSON
+        <span class="md-typeset">
+          <strong>JSON</strong>
+        </span>
       
     </span>
   </a>
@@ -1371,7 +1405,9 @@
   <a href="#sqlite3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQLite3
+        <span class="md-typeset">
+          <strong>SQLite3</strong>
+        </span>
       
     </span>
   </a>
@@ -1382,7 +1418,9 @@
   <a href="#mysql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MySQL
+        <span class="md-typeset">
+          <strong>MySQL</strong>
+        </span>
       
     </span>
   </a>
@@ -1393,7 +1431,9 @@
   <a href="#mariadb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MariaDB
+        <span class="md-typeset">
+          <strong>MariaDB</strong>
+        </span>
       
     </span>
   </a>
@@ -1404,7 +1444,9 @@
   <a href="#postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PostgreSQL
+        <span class="md-typeset">
+          <strong>PostgreSQL</strong>
+        </span>
       
     </span>
   </a>
@@ -1415,7 +1457,9 @@
   <a href="#greenplum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Greenplum
+        <span class="md-typeset">
+          <strong>Greenplum</strong>
+        </span>
       
     </span>
   </a>
@@ -1426,7 +1470,9 @@
   <a href="#odbc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ODBC
+        <span class="md-typeset">
+          <strong>ODBC</strong>
+        </span>
       
     </span>
   </a>
@@ -2253,6 +2299,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -2310,7 +2451,9 @@
   <a href="#unified-import-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unified import interface
+        <span class="md-typeset">
+          Unified import interface
+        </span>
       
     </span>
   </a>
@@ -2321,7 +2464,9 @@
   <a href="#data-frames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Frames
+        <span class="md-typeset">
+          Data Frames
+        </span>
       
     </span>
   </a>
@@ -2332,7 +2477,9 @@
   <a href="#handling-of-null-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling of NULL values
+        <span class="md-typeset">
+          Handling of NULL values
+        </span>
       
     </span>
   </a>
@@ -2343,7 +2490,9 @@
   <a href="#import-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Import Formats
+        <span class="md-typeset">
+          Import Formats
+        </span>
       
     </span>
   </a>
@@ -2355,7 +2504,9 @@
   <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CSV
+        <span class="md-typeset">
+          <strong>CSV</strong>
+        </span>
       
     </span>
   </a>
@@ -2366,7 +2517,9 @@
   <a href="#pandas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pandas
+        <span class="md-typeset">
+          <strong>Pandas</strong>
+        </span>
       
     </span>
   </a>
@@ -2377,7 +2530,9 @@
   <a href="#json" class="md-nav__link">
     <span class="md-ellipsis">
       
-        JSON
+        <span class="md-typeset">
+          <strong>JSON</strong>
+        </span>
       
     </span>
   </a>
@@ -2388,7 +2543,9 @@
   <a href="#sqlite3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQLite3
+        <span class="md-typeset">
+          <strong>SQLite3</strong>
+        </span>
       
     </span>
   </a>
@@ -2399,7 +2556,9 @@
   <a href="#mysql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MySQL
+        <span class="md-typeset">
+          <strong>MySQL</strong>
+        </span>
       
     </span>
   </a>
@@ -2410,7 +2569,9 @@
   <a href="#mariadb" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MariaDB
+        <span class="md-typeset">
+          <strong>MariaDB</strong>
+        </span>
       
     </span>
   </a>
@@ -2421,7 +2582,9 @@
   <a href="#postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PostgreSQL
+        <span class="md-typeset">
+          <strong>PostgreSQL</strong>
+        </span>
       
     </span>
   </a>
@@ -2432,7 +2595,9 @@
   <a href="#greenplum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Greenplum
+        <span class="md-typeset">
+          <strong>Greenplum</strong>
+        </span>
       
     </span>
   </a>
@@ -2443,7 +2608,9 @@
   <a href="#odbc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ODBC
+        <span class="md-typeset">
+          <strong>ODBC</strong>
+        </span>
       
     </span>
   </a>

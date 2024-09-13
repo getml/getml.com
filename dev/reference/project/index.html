@@ -460,6 +460,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -2652,6 +2672,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -2775,7 +2890,9 @@
   <a href="#data_frames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        data_frames
+        <span class="md-typeset">
+          data_frames
+        </span>
       
     </span>
   </a>
@@ -2786,7 +2903,9 @@
   <a href="#hyperopts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        hyperopts
+        <span class="md-typeset">
+          hyperopts
+        </span>
       
     </span>
   </a>
@@ -2797,7 +2916,9 @@
   <a href="#pipelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        pipelines
+        <span class="md-typeset">
+          pipelines
+        </span>
       
     </span>
   </a>
@@ -2808,7 +2929,9 @@
   <a href="#name" class="md-nav__link">
     <span class="md-ellipsis">
       
-        name
+        <span class="md-typeset">
+          name
+        </span>
       
     </span>
   </a>

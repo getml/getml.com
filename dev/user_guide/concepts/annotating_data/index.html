@@ -454,6 +454,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -1333,7 +1353,9 @@
   <a href="#in-short" class="md-nav__link">
     <span class="md-ellipsis">
       
-        In short
+        <span class="md-typeset">
+          In short
+        </span>
       
     </span>
   </a>
@@ -1344,7 +1366,9 @@
   <a href="#annotating-data-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roles
+        <span class="md-typeset">
+          Roles
+        </span>
       
     </span>
   </a>
@@ -1356,7 +1380,9 @@
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        <span class="md-typeset">
+          Example
+        </span>
       
     </span>
   </a>
@@ -1372,7 +1398,9 @@
   <a href="#a-note-on-reproducibility-and-efficiency" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A note on reproducibility and efficiency
+        <span class="md-typeset">
+          A note on reproducibility and efficiency
+        </span>
       
     </span>
   </a>
@@ -1383,7 +1411,9 @@
   <a href="#join-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Join key
+        <span class="md-typeset">
+          Join key
+        </span>
       
     </span>
   </a>
@@ -1394,7 +1424,9 @@
   <a href="#time-stamp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time stamp
+        <span class="md-typeset">
+          Time stamp
+        </span>
       
     </span>
   </a>
@@ -1406,7 +1438,9 @@
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        <span class="md-typeset">
+          Example
+        </span>
       
     </span>
   </a>
@@ -1422,7 +1456,9 @@
   <a href="#target" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Target
+        <span class="md-typeset">
+          Target
+        </span>
       
     </span>
   </a>
@@ -1433,7 +1469,9 @@
   <a href="#numerical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Numerical
+        <span class="md-typeset">
+          Numerical
+        </span>
       
     </span>
   </a>
@@ -1444,7 +1482,9 @@
   <a href="#categorical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Categorical
+        <span class="md-typeset">
+          Categorical
+        </span>
       
     </span>
   </a>
@@ -1455,7 +1495,9 @@
   <a href="#text" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text
+        <span class="md-typeset">
+          Text
+        </span>
       
     </span>
   </a>
@@ -1466,7 +1508,9 @@
   <a href="#unused_float" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unused_float
+        <span class="md-typeset">
+          Unused_float
+        </span>
       
     </span>
   </a>
@@ -1477,7 +1521,9 @@
   <a href="#unused_string" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unused_string
+        <span class="md-typeset">
+          Unused_string
+        </span>
       
     </span>
   </a>
@@ -1488,7 +1534,9 @@
   <a href="#units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Units
+        <span class="md-typeset">
+          Units
+        </span>
       
     </span>
   </a>
@@ -2270,6 +2318,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -2327,7 +2470,9 @@
   <a href="#in-short" class="md-nav__link">
     <span class="md-ellipsis">
       
-        In short
+        <span class="md-typeset">
+          In short
+        </span>
       
     </span>
   </a>
@@ -2338,7 +2483,9 @@
   <a href="#annotating-data-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Roles
+        <span class="md-typeset">
+          Roles
+        </span>
       
     </span>
   </a>
@@ -2350,7 +2497,9 @@
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        <span class="md-typeset">
+          Example
+        </span>
       
     </span>
   </a>
@@ -2366,7 +2515,9 @@
   <a href="#a-note-on-reproducibility-and-efficiency" class="md-nav__link">
     <span class="md-ellipsis">
       
-        A note on reproducibility and efficiency
+        <span class="md-typeset">
+          A note on reproducibility and efficiency
+        </span>
       
     </span>
   </a>
@@ -2377,7 +2528,9 @@
   <a href="#join-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Join key
+        <span class="md-typeset">
+          Join key
+        </span>
       
     </span>
   </a>
@@ -2388,7 +2541,9 @@
   <a href="#time-stamp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time stamp
+        <span class="md-typeset">
+          Time stamp
+        </span>
       
     </span>
   </a>
@@ -2400,7 +2555,9 @@
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        <span class="md-typeset">
+          Example
+        </span>
       
     </span>
   </a>
@@ -2416,7 +2573,9 @@
   <a href="#target" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Target
+        <span class="md-typeset">
+          Target
+        </span>
       
     </span>
   </a>
@@ -2427,7 +2586,9 @@
   <a href="#numerical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Numerical
+        <span class="md-typeset">
+          Numerical
+        </span>
       
     </span>
   </a>
@@ -2438,7 +2599,9 @@
   <a href="#categorical" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Categorical
+        <span class="md-typeset">
+          Categorical
+        </span>
       
     </span>
   </a>
@@ -2449,7 +2612,9 @@
   <a href="#text" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text
+        <span class="md-typeset">
+          Text
+        </span>
       
     </span>
   </a>
@@ -2460,7 +2625,9 @@
   <a href="#unused_float" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unused_float
+        <span class="md-typeset">
+          Unused_float
+        </span>
       
     </span>
   </a>
@@ -2471,7 +2638,9 @@
   <a href="#unused_string" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unused_string
+        <span class="md-typeset">
+          Unused_string
+        </span>
       
     </span>
   </a>
@@ -2482,7 +2651,9 @@
   <a href="#units" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Units
+        <span class="md-typeset">
+          Units
+        </span>
       
     </span>
   </a>

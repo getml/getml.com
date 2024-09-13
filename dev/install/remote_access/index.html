@@ -448,6 +448,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
       <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener">
         
@@ -1136,6 +1156,101 @@
 
   <!-- Navigation item with nested items -->
   
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level active item as section -->
+      
+
+      <!-- Navigation tabs + sections -->
+      
+
+        <!-- Render 2nd level items with nested items as sections -->
+        
+      
+
+    <!-- Navigation sections -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+      <!-- Prune item if it is not a section and not active -->
+      
+        
+        
+      
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+
+  <!-- Recurse, if the first item has further nested items -->
+  
+    <a href="../../blog/" class="md-nav__link">
+      
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        Blog
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+
+      <!-- Only render toggle if there's at least one nested item -->
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+    
+      
+      
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
     <li class="md-nav__item">
       <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener">
         
@@ -1195,7 +1310,9 @@
   <a href="#running-the-getml-suite-remotely" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running the getML Suite Remotely
+        <span class="md-typeset">
+          Running the getML Suite Remotely
+        </span>
       
     </span>
   </a>
@@ -1207,7 +1324,9 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        <span class="md-typeset">
+          Prerequisites
+        </span>
       
     </span>
   </a>
@@ -1218,7 +1337,9 @@
   <a href="#remote-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Remote Installation
+        <span class="md-typeset">
+          Remote Installation
+        </span>
       
     </span>
   </a>
@@ -1229,7 +1350,9 @@
   <a href="#starting-engine-and-monitor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Starting Engine and Monitor
+        <span class="md-typeset">
+          Starting Engine and Monitor
+        </span>
       
     </span>
   </a>
@@ -1240,7 +1363,9 @@
   <a href="#login" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Login
+        <span class="md-typeset">
+          Login
+        </span>
       
     </span>
   </a>
@@ -1251,7 +1376,9 @@
   <a href="#running-analyses-using-the-python-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running Analyses Using the Python API
+        <span class="md-typeset">
+          Running Analyses Using the Python API
+        </span>
       
     </span>
   </a>
@@ -1262,7 +1389,9 @@
   <a href="#retrieving-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Retrieving Results
+        <span class="md-typeset">
+          Retrieving Results
+        </span>
       
     </span>
   </a>
@@ -1273,7 +1402,9 @@
   <a href="#stopping-engine-and-monitor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stopping Engine and Monitor
+        <span class="md-typeset">
+          Stopping Engine and Monitor
+        </span>
       
     </span>
   </a>
@@ -1289,7 +1420,9 @@
   <a href="#accessing-the-getml-monitor-via-the-internet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Accessing the getML Monitor Via the Internet
+        <span class="md-typeset">
+          Accessing the getML Monitor Via the Internet
+        </span>
       
     </span>
   </a>
@@ -1301,7 +1434,9 @@
   <a href="#what-is-accessible-and-what-is-not" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Accessible and What is Not?
+        <span class="md-typeset">
+          What is Accessible and What is Not?
+        </span>
       
     </span>
   </a>
@@ -1312,7 +1447,9 @@
   <a href="#creating-and-using-tls-certificates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating and Using TLS Certificates
+        <span class="md-typeset">
+          Creating and Using TLS Certificates
+        </span>
       
     </span>
   </a>
@@ -1323,7 +1460,9 @@
   <a href="#adding-an-exception-in-browsers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding an Exception in Browsers
+        <span class="md-typeset">
+          Adding an Exception in Browsers
+        </span>
       
     </span>
   </a>
@@ -1334,7 +1473,9 @@
   <a href="#opening-the-https-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening the HTTPS Port
+        <span class="md-typeset">
+          Opening the HTTPS Port
+        </span>
       
     </span>
   </a>
