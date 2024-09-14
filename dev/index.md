@@ -185,7 +185,7 @@ For anyone who worked with Prophet, tsfresh or FeatureTools and is looking for a
 This is your choice if shorter development cycles and unprecedented model accuracy provide a competitive edge to your business. getML Enterprise gives you access to the most advanced Relational Learning algorithms.
 {.small-lg}
 
-[Learn more :octicons-arrow-right-24:](enterprise/benefits.md){: }
+[Learn more :octicons-arrow-right-24:](enterprise/index.md){: }
 
 </div>
 </div>
