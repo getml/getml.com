@@ -139,7 +139,7 @@ plugins:
         target: _blank
   - redirects:
       redirect_maps:
-        'enterprise.md': 'enterprise/benefits.md'
+        # 'enterprise.md': 'enterprise/benefits.md'
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - table-reader
