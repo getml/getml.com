@@ -317,7 +317,8 @@ nav:
       - Archive: install/packages/archive.md
 
   - Enterprise:
-    - Benefits: enterprise/benefits.md
+    - enterprise/index.md
+    # - Benefits: enterprise/benefits.md
     - Book a Demo: enterprise/book-demo.md
     - Feature List: enterprise/feature-list.md
     - Trial Download: enterprise/request-trial.md
