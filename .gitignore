@@ -77,6 +77,9 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*/examples/**/*.ipynb
+# Allow .ipynb files in community-notebooks
+!*/examples/community-notebooks/*.ipynb
 
 # IPython
 profile_default/
