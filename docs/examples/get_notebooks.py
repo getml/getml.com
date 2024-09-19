@@ -128,7 +128,7 @@ def fetch_from_github(
         target_dir: The directory where the notebooks should be stored.
     """
     
-    log.info(f"Fetching notebooks from {repo_name} repository...")
+    log.info(f"Fetching notebooks from {repo_name}[{repo_branch}] repository...")
 
     tarball_url = f"https://api.github.com/repos/{repo_name}/tarball/{repo_branch}"
 
