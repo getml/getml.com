@@ -1621,6 +1621,30 @@
 
       <!-- Navigation link to table of contents -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    <!-- 
+      We want to enforce the nav_item.title if it's an ipynb file
+      For example `nav_item.title` is <b>Atherosclerosis</b> in the following nav item:
+      <b>Atherosclerosis</b>: examples/enterprise-notebooks/atherosclerosis.ipynb
+    -->
+    
+        <span class="ntitle">epilepsy_recognition.ipynb</span> <span class="ndesc">Recognizing epilepsy in EEG data</span>
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -1648,6 +1672,290 @@
       </a>
 
       <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Introduction
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-primer-on-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          A Primer on Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-series-prediction-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Time Series Prediction Tasks
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Why We Need Feature Engineering
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interesting-features-for-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Interesting Features for Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-feature-engineering-for-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Automated Feature Engineering for Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-introduction-to-univariate-time-series-classification-with-getml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          An Introduction to Univariate Time Series Classification with getML
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          About the Dataset
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Acknowledgements
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Setup
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-up-getml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Start up getML
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Load Data
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Explore Data
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-getml-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Creating a GetML Data Model
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a GetML Data Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-dataframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML DataFrames
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML Data Model
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-machine-learning-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML machine learning pipeline
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Model Evaluation
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#studying-the-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Studying the Features
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
 
@@ -2285,6 +2593,279 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Introduction
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-primer-on-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          A Primer on Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-series-prediction-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Time Series Prediction Tasks
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-need-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Why We Need Feature Engineering
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interesting-features-for-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Interesting Features for Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-feature-engineering-for-time-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Automated Feature Engineering for Time Series
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-introduction-to-univariate-time-series-classification-with-getml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          An Introduction to Univariate Time Series Classification with getML
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          About the Dataset
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Acknowledgements
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Setup
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-up-getml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Start up getML
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Load Data
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Explore Data
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-getml-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Creating a GetML Data Model
+        </span>
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a GetML Data Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-dataframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML DataFrames
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML Data Model
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-getml-machine-learning-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          The getML machine learning pipeline
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Model Evaluation
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#studying-the-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          Studying the Features
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2887,7 +3468,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="using-getml-on-eeg-data-to-classify-epileptic-seizures">Using getML on EEG data to classify epileptic seizures<a class="anchor-link" href="#using-getml-on-eeg-data-to-classify-epileptic-seizures">¶</a></h1><h2 id="introduction">Introduction<a class="anchor-link" href="#introduction">¶</a></h2><h3 id="a-primer-on-time-series">A Primer on Time Series<a class="anchor-link" href="#a-primer-on-time-series">¶</a></h3><p>Wikipedia defines a time series as follows:</p>
+<h2 id="introduction">Introduction<a class="anchor-link" href="#introduction">¶</a></h2><h3 id="a-primer-on-time-series">A Primer on Time Series<a class="anchor-link" href="#a-primer-on-time-series">¶</a></h3><p>Wikipedia defines a time series as follows:</p>
 <p>In mathematics, a time series is a series of data points indexed (or listed or graphed) in time order. Most commonly, a time series is a sequence taken at successive equally spaced points in time.</p>
 <p>The first sentence defines a fundamental feature of time series: your data can be ordered in time. This does not necessitate the existence of a specific time stamp. It only means that data points should be in chronological order.</p>
 <p>Consider the following three examples. All of them are time series. The first example shows force measurements on a robot's arm. We do not know the specific time and date when these measurements were taken. But what we do know is that the data points are indexed according to chronological order. The second example shows hourly traffic volume on interstate 94 (a highway in the United States of America) in the first week of April 2016. This data has an exact date and time when the measurements were taken. The third example is a bio-signal, a recording of an EEG signal of human brain activity. For this kind of data, a specific time stamp can be useful, for example sleep data over longer time periods such as months, but commonly is not necessary for short term bio-signals such as EEG readings or movement data.</p>
@@ -3019,7 +3600,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="setup">Setup<a class="anchor-link" href="#setup">¶</a></h2><h3 id="start-up-getml">Start up getML<a class="anchor-link" href="#start-up-getml">¶</a></h3><p>First, we import the necessary libraries  and launch the <a href="https://getml.com/latest/user_guide/concepts/getml_suite/#engine" target="_blank" rel="noopener">getML engine</a>. The engine runs in the background and takes care of all the heavy lifting for you. This includes things like our powerful database engine and efficient algorithms as well as the <a href="https://getml.com/latest/user_guide/concepts/getml_suite/#monitor_1" target="_blank" rel="noopener">getML monitor</a>, which you can access by pointing your browser to <a href="http://localhost:1709/#/" target="_blank" rel="noopener">http://localhost:1709/#/</a></p>
+<h2 id="setup">Setup<a class="anchor-link" href="#setup">¶</a></h2><h3 id="start-up-getml">Start up getML<a class="anchor-link" href="#start-up-getml">¶</a></h3><p>First, we import the necessary libraries  and launch the <a href="https://getml.com/latest/user_guide/concepts/getml_suite/#engine-concepts" target="_blank" rel="noopener">getML engine</a>. The engine runs in the background and takes care of all the heavy lifting for you. This includes things like our powerful database engine and efficient algorithms as well as the <a href="https://getml.com/latest/user_guide/concepts/getml_suite/#monitor-concepts" target="_blank" rel="noopener">getML monitor</a>, which you can access by pointing your browser to <a href="http://localhost:1709/#/" target="_blank" rel="noopener">http://localhost:1709/#/</a></p>
 </div>
 </div>
 </div>
@@ -3155,8 +3736,8 @@ getml.engine.set_project("epilepsy_recognition")</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Launching ./getML --allow-push-notifications=true --allow-remote-ips=false --home-directory=/home/alex/.local/share/hatch/env/virtual/getml-demo/txflr3_Z/getml-demo/lib/python3.10/site-packages/getml --in-memory=true --install=false --launch-browser=true --log=false in /home/alex/.local/share/hatch/env/virtual/getml-demo/txflr3_Z/getml-demo/lib/python3.10/site-packages/getml/.getML/getml-1.4.0-x64-community-edition-linux...
-Launched the getML engine. The log output will be stored in /home/alex/.getML/logs/20240826151418.log.
+<pre>Launching ./getML --allow-push-notifications=true --allow-remote-ips=false --home-directory=/home/user/.local/share/hatch/env/virtual/getml-demo/txflr3_Z/getml-demo/lib/python3.10/site-packages/getml --in-memory=true --install=false --launch-browser=true --log=false in /home/user/.local/share/hatch/env/virtual/getml-demo/txflr3_Z/getml-demo/lib/python3.10/site-packages/getml/.getML/getml-1.4.0-x64-community-edition-linux...
+Launched the getML engine. The log output will be stored in /home/user/.getML/logs/20240826151418.log.
 Loading pipelines... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
 
 Connected to project 'epilepsy_recognition'
@@ -3173,7 +3754,7 @@ Connected to project 'epilepsy_recognition'
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>You can manage your projects conveniently through the monitor web interface or directly using Python commands. For example, you can suspend your current project to free resources using <a href="https://getml.com/latest/reference/engine/engine/#getml.engine.suspend_project" target="_blank" rel="noopener"><code>getml.project.suspend()</code></a>, switch to another project on the fly using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.switch" target="_blank" rel="noopener"><code>getml.project.switch('new project name')</code></a>, or restart using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.restart" target="_blank" rel="noopener"><code>getml.project.restart()</code></a> should something go wrong. You can even save your current project to disk using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.save" target="_blank" rel="noopener"><code>getml.project.save('filename')</code></a> and load it with <a href="https://getml.com/latest/reference/project/#getml.project.attrs.load" target="_blank" rel="noopener"><code>getml.project.load('filename')</code></a>.</p>
+<p>You can manage your projects conveniently through the monitor web interface or directly using Python commands. For example, you can suspend your current project to free resources using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.suspend" target="_blank" rel="noopener"><code>getml.project.suspend()</code></a>, switch to another project on the fly using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.switch" target="_blank" rel="noopener"><code>getml.project.switch('new project name')</code></a>, or restart using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.restart" target="_blank" rel="noopener"><code>getml.project.restart()</code></a> should something go wrong. You can even save your current project to disk using <a href="https://getml.com/latest/reference/project/#getml.project.attrs.save" target="_blank" rel="noopener"><code>getml.project.save('filename')</code></a> and load it with <a href="https://getml.com/latest/reference/project/#getml.project.attrs.load" target="_blank" rel="noopener"><code>getml.project.load('filename')</code></a>.</p>
 </div>
 </div>
 </div>
@@ -4755,7 +5336,7 @@ g.set_ylabels("std of eeg")</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="creating-a-getml-data-model">Creating a GetML Data Model<a class="anchor-link" href="#creating-a-getml-data-model">¶</a></h2><p>Now that we have explored our data, let's do some machine learning. GetML uses a highly sophisticated engine that runs in the background and takes away a lot of hassle in machine learning applications.</p>
-<p>Let's take a look at loading data into your getML project. First, let's learn how we work with data in getML. Data is represented by getML's custom <a href="https://getml.com/latest/reference/data/data_frame/" target="_blank" rel="noopener">DataFrame</a> that behaves similarly to a pandas DataFrame. However, a <a href="https://getml.com/latest/reference/data/data_frame/" target="_blank" rel="noopener">getML.DataFrame</a> is a representation of our data inside getML's highly efficient C++ database engine that runs in the background. We can <a href="https://getml.com/latest/user_guide/concepts/importing_data" target="_blank" rel="noopener">load data</a> from various sources such as pandas DataFrames (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_pandas" target="_blank" rel="noopener"><code>getml.DataFrame.from_pandas</code></a>), from CSV files (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_csv" target="_blank" rel="noopener"><code>getml.DataFrame.from_csv</code></a>), or load from remote databases (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_db" target="_blank" rel="noopener"><code>getml.DataFrame.from_db</code></a>) or even S3 buckets (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_s3" target="_blank" rel="noopener"><code>getml.DataFrame.from_s3</code></a>).</p>
+<p>Let's take a look at loading data into your getML project. First, let's learn how we work with data in getML. Data is represented by getML's custom <a href="https://getml.com/latest/reference/data/data_frame" target="_blank" rel="noopener">DataFrame</a> that behaves similarly to a pandas DataFrame. However, a <a href="https://getml.com/latest/reference/data/data_frame" target="_blank" rel="noopener">getML.DataFrame</a> is a representation of our data inside getML's highly efficient C++ database engine that runs in the background. We can <a href="https://getml.com/latest/user_guide/concepts/importing_data" target="_blank" rel="noopener">load data</a> from various sources such as pandas DataFrames (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_pandas" target="_blank" rel="noopener"><code>getml.DataFrame.from_pandas</code></a>), from CSV files (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_csv" target="_blank" rel="noopener"><code>getml.DataFrame.from_csv</code></a>), or load from remote databases (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_db" target="_blank" rel="noopener"><code>getml.DataFrame.from_db</code></a>) or even S3 buckets (<a href="https://getml.com/latest/reference/data/data_frame/#getml.data.DataFrame.from_s3" target="_blank" rel="noopener"><code>getml.DataFrame.from_s3</code></a>).</p>
 <p>Let's create a population DataFrame that contains our main goal: classify a 1s window. This means that we only need a DataFrame that holds the class labels of each window and a unique id, which in this case can just be the <code>sample_index</code>.</p>
 </div>
 </div>
@@ -5171,7 +5752,7 @@ g.set_ylabels("std of eeg")</div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>As you can see, our data is now stored inside the engine and represented by a getML.DataFrame (data is of course the same). The Python API provides a link to the getML.DataFrame in the monitor, where you can conveniently explore your data.</p>
-<p>Now we need to <a href="https://getml.com/latest/user_guide/concepts/annotating_data/" target="_blank" rel="noopener">annotate our data</a> so the engine knows what to do with it.</p>
+<p>Now we need to <a href="https://getml.com/latest/user_guide/concepts/annotating_data" target="_blank" rel="noopener">annotate our data</a> so the engine knows what to do with it.</p>
 <p>A key aspect of using getML.DataFrame are <a href="https://getml.com/latest/reference/data/roles_obj" target="_blank" rel="noopener">roles</a>. Every column with relevant data to our data model needs to have a certain role specified. As you can see, both of our columns have the <code>unused_float</code> role for now. One of the most important roles is <a href="https://getml.com/latest/reference/data/roles/#getml.data.roles.target" target="_blank" rel="noopener"><code>getml.data.roles.target</code></a>, specifying that the data in this column is our target variable, the value that we want to train our machine learning model on. In our case, the column <code>y</code> containing the class label is our target. Let's tell the engine exactly that:</p>
 </div>
 </div>
@@ -5761,7 +6342,7 @@ peripheral.set_role(["eeg"], getml.data.roles.numerical)</div>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="the-getml-data-model">The getML Data Model<a class="anchor-link" href="#the-getml-data-model">¶</a></h3><p>Now that we have our data efficiently stored in getML.DataFrame, we continue to construct our data model.</p>
 <p>This is very easily done by using one of getML's many <a href="https://getml.com/latest/user_guide/concepts/data_model" target="_blank" rel="noopener">DataModels</a>. We put our time-series data in a relational context and can utilze for example a simple <a href="https://getml.com/latest/reference/data/star_schema" target="_blank" rel="noopener">StarSchema</a> data model to accomplish this. Easily put, we see our windows (the time-series data) as splits into many individual samples that are joined onto the window labels. This way, we are effectively thinking of time series as relational data: we are identifying relevant information from our data and aggragate it into a single label. In fact, what we are doing is effectively a self join, because we are joining a table to itself. This allows for very efficient calculation.</p>
-<p>First, we define a random data <a href="https://getml.com/latest/reference/data/split/" target="_blank" rel="noopener">split</a>:</p>
+<p>First, we define a random data <a href="https://getml.com/latest/reference/data/split" target="_blank" rel="noopener">split</a>:</p>
 </div>
 </div>
 </div>
@@ -6067,9 +6648,9 @@ time_series.join(
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="the-getml-machine-learning-pipeline">The getML machine learning pipeline<a class="anchor-link" href="#the-getml-machine-learning-pipeline">¶</a></h3><p>Complex machine learning models are represented by getML <a href="https://getml.com/latest/reference/pipeline" target="_blank" rel="noopener">pipelines</a>. A pipeline contains the data model (including complex data relations), data <a href="https://getml.com/latest/reference/preprocessors" target="_blank" rel="noopener">preprocessors</a>, <a href="https://getml.com/latest/reference/feature_learning" target="_blank" rel="noopener">feature learners</a>, <a href="https://getml.com/latest/reference/predictors" target="_blank" rel="noopener">predictors</a> and so on.</p>
-<p>In our approach, we will use getML's very own <a href="https://getml.com/latest/reference/feature_learning/fastprop" target="_blank" rel="noopener">FastProp</a> automatic feature learner for <a href="https://getml.com/latest/user_guide/concepts/feature_engineering/" target="_blank" rel="noopener">feature engineering</a>. We specify a loss function suitable for classification. As we are only dealing with a univariate time-series, we want to use all possible aggregation functions.</p>
-<p>We use the highly efficient <a href="https://getml.com/latest/reference/predictors/xgboost_classifier" target="_blank" rel="noopener">XGBoost</a> classifier algorithm as a <a href="https://getml.com/latest/reference/predictors" target="_blank" rel="noopener">predictor</a>.</p>
+<h3 id="the-getml-machine-learning-pipeline">The getML machine learning pipeline<a class="anchor-link" href="#the-getml-machine-learning-pipeline">¶</a></h3><p>Complex machine learning models are represented by getML <a href="https://getml.com/latest/reference/pipeline/pipeline" target="_blank" rel="noopener">pipelines</a>. A pipeline contains the data model (including complex data relations), data <a href="https://getml.com/latest/reference/preprocessors" target="_blank" rel="noopener">preprocessors</a>, <a href="https://getml.com/latest/reference/feature_learning" target="_blank" rel="noopener">feature learners</a>, <a href="https://getml.com/latest/reference/predictors" target="_blank" rel="noopener">predictors</a> and so on.</p>
+<p>In our approach, we will use getML's very own <a href="https://getml.com/latest/reference/feature_learning/fastboost" target="_blank" rel="noopener">FastProp</a> automatic feature learner for <a href="https://getml.com/latest/user_guide/concepts/feature_engineering" target="_blank" rel="noopener">feature engineering</a>. We specify a loss function suitable for classification. As we are only dealing with a univariate time-series, we want to use all possible aggregation functions.</p>
+<p>We use the highly efficient <a href="https://getml.com/latest/reference/predictors/xgboost_classifier" target="_blank" rel="noopener">XGBoost</a> classifier algorithm as a <a href="https://getml.com/latest/user_guide/concepts/predicting" target="_blank" rel="noopener">predictor</a>.</p>
 </div>
 </div>
 </div>
@@ -6260,7 +6841,7 @@ Time taken: 0h:0m:1.434615
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now, let's look at how well our model performs. Again, getML does everything for you. We <a href="https://getml.com/latest/reference/pipeline/score" target="_blank" rel="noopener">score</a> our pipeline on the test set:</p>
+<p>Now, let's look at how well our model performs. Again, getML does everything for you. We <a href="https://getml.com/latest/reference/pipeline/pipeline/#getml.pipeline.Pipeline.score" target="_blank" rel="noopener">score</a> our pipeline on the test set:</p>
 </div>
 </div>
 </div>

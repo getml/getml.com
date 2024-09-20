@@ -4020,8 +4020,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -4039,46 +4039,102 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"PYARROW_IGNORE_TIMEZONE"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"1"</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">q</span> <span class="s2">"getml==1.5.0"</span> <span class="s2">"featuretools==1.31.0"</span> <span class="s2">"ipywidgets==8.1.5"</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-1">%pip install -q "getml==1.5.0" "featuretools==1.31.0" "ipywidgets==8.1.5"</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-2">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 
-<span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">request</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>  
 
 <span class="kn">import</span> <span class="nn">featuretools</span>
 <span class="kn">import</span> <span class="nn">woodwork</span> <span class="k">as</span> <span class="nn">ww</span>
 <span class="kn">import</span> <span class="nn">getml</span>
 
-<span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">home_directory</span><span class="o">=</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">(),</span> <span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s1">'token'</span><span class="p">)</span>
-<span class="n">getml</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">'seznam'</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"PYARROW_IGNORE_TIMEZONE"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"1"</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"getML API version: </span><span class="si">{</span><span class="n">getml</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import copy
-import os
-os.environ["PYARROW_IGNORE_TIMEZONE"] = "1"
-from pathlib import Path
+<div class="clipboard-copy-txt" id="cell-2">import os
+import warnings
 
-from urllib import request
-
-import numpy as np
 import pandas as pd
-from IPython.display import Image
-import matplotlib.pyplot as plt
-import seaborn as sns
-%matplotlib inline  
 
 import featuretools
 import woodwork as ww
 import getml
 
-getml.engine.launch(home_directory=Path.home(), allow_remote_ips=True, token='token')
+os.environ["PYARROW_IGNORE_TIMEZONE"] = "1"
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+print(f"getML API version: {getml.__version__}\n")</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>getML API version: 1.5.0
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">allow_remote_ips</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="s1">'token'</span><span class="p">)</span>
+<span class="n">getml</span><span class="o">.</span><span class="n">set_project</span><span class="p">(</span><span class="s1">'seznam'</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-3">getml.engine.launch(allow_remote_ips=True, token='token')
 getml.set_project('seznam')</div>
 </div>
 </div>
@@ -4091,10 +4147,16 @@ getml.set_project('seznam')</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>getML engine is already running.
-Loading pipelines... 100% |██████████| [elapsed: 00:01, remaining: 00:00]          
-
-Connected to project 'seznam'
+<pre>Launching ./getML --allow-push-notifications=true --allow-remote-ips=true --home-directory=/home/user --in-memory=true --install=false --launch-browser=true --log=false --token=token in /home/user/.getML/getml-1.5.0-x64-linux...
+Launched the getML Engine. The log output will be stored in /home/user/.getML/logs/20240912150434.log.
+  Loading pipelines... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Connected to project <span style="color: #008000; text-decoration-color: #008000">'seznam'</span>.
 </pre>
 </div>
 </div>
@@ -4129,10 +4191,10 @@ Connected to project 'seznam'
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-2">
+<clipboard-copy for="cell-4">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4152,7 +4214,7 @@ Connected to project 'seznam'
 
 <span class="n">conn</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">conn = getml.database.connect_mysql(
+<div class="clipboard-copy-txt" id="cell-4">conn = getml.database.connect_mysql(
     host="db.relational-data.org",
     dbname="Seznam",
     port=3306,
@@ -4170,7 +4232,7 @@ conn</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Connection(dbname='Seznam', dialect='mysql', host='db.relational-data.org', port=3306)</pre>
 </div>
@@ -4184,10 +4246,10 @@ conn</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-3">
+<clipboard-copy for="cell-5">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4214,7 +4276,7 @@ conn</div>
         <span class="n">data_frame</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">load_data_frame</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data_frame</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">def load_if_needed(name):
+<div class="clipboard-copy-txt" id="cell-5">def load_if_needed(name):
     """
     Loads the data from the relational learning
     repository, if the data frame has not already
@@ -4241,10 +4303,10 @@ conn</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-4">
+<clipboard-copy for="cell-6">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4258,7 +4320,7 @@ conn</div>
 <span class="n">probehnuto</span> <span class="o">=</span> <span class="n">load_if_needed</span><span class="p">(</span><span class="s2">"probehnuto"</span><span class="p">)</span>
 <span class="n">probehnuto_mimo_penezenku</span> <span class="o">=</span> <span class="n">load_if_needed</span><span class="p">(</span><span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">dobito = load_if_needed("dobito")
+<div class="clipboard-copy-txt" id="cell-6">dobito = load_if_needed("dobito")
 probehnuto = load_if_needed("probehnuto")
 probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
@@ -4272,10 +4334,10 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-5">
+<clipboard-copy for="cell-7">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4287,7 +4349,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">dobito</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">dobito</div>
+<div class="clipboard-copy-txt" id="cell-7">dobito</div>
 </div>
 </div>
 </div>
@@ -4297,7 +4359,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -4473,10 +4535,10 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-6">
+<clipboard-copy for="cell-8">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4488,7 +4550,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">probehnuto</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">probehnuto</div>
+<div class="clipboard-copy-txt" id="cell-8">probehnuto</div>
 </div>
 </div>
 </div>
@@ -4498,7 +4560,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -4674,10 +4736,10 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-7">
+<clipboard-copy for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4689,7 +4751,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">probehnuto_mimo_penezenku</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">probehnuto_mimo_penezenku</div>
+<div class="clipboard-copy-txt" id="cell-9">probehnuto_mimo_penezenku</div>
 </div>
 </div>
 </div>
@@ -4699,7 +4761,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -4884,10 +4946,10 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-8">
+<clipboard-copy for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -4906,7 +4968,7 @@ probehnuto_mimo_penezenku = load_if_needed("probehnuto_mimo_penezenku")</div>
 
 <span class="n">dobito</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">dobito.set_role("client_id", getml.data.roles.join_key)
+<div class="clipboard-copy-txt" id="cell-10">dobito.set_role("client_id", getml.data.roles.join_key)
 dobito.set_role("month_year_datum_transakce", getml.data.roles.time_stamp)
 dobito.set_role("sluzba", getml.data.roles.categorical)
 dobito.set_role("kc_dobito", getml.data.roles.numerical)
@@ -4923,7 +4985,7 @@ dobito</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -5106,10 +5168,10 @@ dobito</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-9">
+<clipboard-copy for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5128,7 +5190,7 @@ dobito</div>
 
 <span class="n">probehnuto</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">probehnuto.set_role("client_id", getml.data.roles.join_key)
+<div class="clipboard-copy-txt" id="cell-11">probehnuto.set_role("client_id", getml.data.roles.join_key)
 probehnuto.set_role("month_year_datum_transakce", getml.data.roles.time_stamp)
 probehnuto.set_role("sluzba", getml.data.roles.categorical)
 probehnuto.set_role("kc_proklikano", getml.data.roles.target)
@@ -5145,7 +5207,7 @@ probehnuto</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -5328,10 +5390,10 @@ probehnuto</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-10">
+<clipboard-copy for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5346,7 +5408,7 @@ probehnuto</div>
 
 <span class="n">probehnuto_mimo_penezenku</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-10">probehnuto_mimo_penezenku.set_role("client_id", getml.data.roles.join_key)
+<div class="clipboard-copy-txt" id="cell-12">probehnuto_mimo_penezenku.set_role("client_id", getml.data.roles.join_key)
 probehnuto_mimo_penezenku.set_role("Month/Year", getml.data.roles.time_stamp)
 
 probehnuto_mimo_penezenku</div>
@@ -5359,7 +5421,7 @@ probehnuto_mimo_penezenku</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -5506,10 +5568,10 @@ probehnuto_mimo_penezenku</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-11">
+<clipboard-copy for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5522,7 +5584,7 @@ probehnuto_mimo_penezenku</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">split</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">train</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">split</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-11">split = getml.data.split.random(train=0.8, test=0.2)
+<div class="clipboard-copy-txt" id="cell-13">split = getml.data.split.random(train=0.8, test=0.2)
 split</div>
 </div>
 </div>
@@ -5533,7 +5595,7 @@ split</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   th {
@@ -5642,10 +5704,10 @@ split</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-12">
+<clipboard-copy for="cell-14">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5679,7 +5741,7 @@ split</div>
 
 <span class="n">star_schema</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-12">star_schema = getml.data.StarSchema(population=probehnuto, alias="population", split=split)
+<div class="clipboard-copy-txt" id="cell-14">star_schema = getml.data.StarSchema(population=probehnuto, alias="population", split=split)
 
 star_schema.join(
     probehnuto,
@@ -5711,7 +5773,7 @@ star_schema</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <span style="font-size: 1.2rem; font-weight: 500;">data model</span>
 <div style="margin-top: 15px; margin-bottom: 5px;">
@@ -5924,10 +5986,10 @@ star_schema</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-13">
+<clipboard-copy for="cell-15">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -5950,7 +6012,7 @@ star_schema</div>
 
 <span class="n">predictor</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-13">mapping = getml.preprocessors.Mapping()
+<div class="clipboard-copy-txt" id="cell-15">mapping = getml.preprocessors.Mapping()
 
 fast_prop = getml.feature_learning.FastProp(
     aggregation=getml.feature_learning.FastProp.agg_sets.All,
@@ -5984,10 +6046,10 @@ predictor = getml.predictors.XGBoostRegressor(n_jobs=1)</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-14">
+<clipboard-copy for="cell-16">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6009,7 +6071,7 @@ predictor = getml.predictors.XGBoostRegressor(n_jobs=1)</div>
 
 <span class="n">pipe1</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-14">pipe1 = getml.Pipeline(
+<div class="clipboard-copy-txt" id="cell-16">pipe1 = getml.Pipeline(
     tags=['fast_prop'],
     data_model=star_schema.data_model,
     preprocessors=[mapping],
@@ -6029,7 +6091,7 @@ pipe1</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <pre>Pipeline(data_model='population',
          feature_learners=['FastProp'],
@@ -6063,10 +6125,10 @@ pipe1</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-15">
+<clipboard-copy for="cell-17">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6078,7 +6140,7 @@ pipe1</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe1</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-15">pipe1.check(star_schema.train)</div>
+<div class="clipboard-copy-txt" id="cell-17">pipe1.check(star_schema.train)</div>
 </div>
 </div>
 </div>
@@ -6089,18 +6151,29 @@ pipe1</div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Checking data model<span style="color: #808000; text-decoration-color: #808000">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Checking data model...
-Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:11, remaining: 00:00]          
-Checking... 100% |██████████| [elapsed: 00:02, remaining: 00:00]          
-
-The pipeline check generated 2 issues labeled INFO and 0 issues labeled WARNING.
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:20
+  Checking... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:02
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">The pipeline check generated <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> issues labeled INFO and <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span> issues labeled WARNING.
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   th {
@@ -6161,10 +6234,10 @@ The pipeline check generated 2 issues labeled INFO and 0 issues labeled WARNING.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-16">
+<clipboard-copy for="cell-18">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6176,7 +6249,7 @@ The pipeline check generated 2 issues labeled INFO and 0 issues labeled WARNING.
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-16">pipe1.fit(star_schema.train)</div>
+<div class="clipboard-copy-txt" id="cell-18">pipe1.fit(star_schema.train)</div>
 </div>
 </div>
 </div>
@@ -6187,29 +6260,62 @@ The pipeline check generated 2 issues labeled INFO and 0 issues labeled WARNING.
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Checking data model<span style="color: #808000; text-decoration-color: #808000">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Checking data model...
-Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-
-The pipeline check generated 2 issues labeled INFO and 0 issues labeled WARNING.
-To see the issues in full, run .check() on the pipeline.
-
-Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-FastProp: Trying 909 features... 100% |██████████| [elapsed: 00:49, remaining: 00:00]          
-FastProp: Building features... 100% |██████████| [elapsed: 01:38, remaining: 00:00]          
-XGBoost: Training as feature selector... 100% |██████████| [elapsed: 14:11, remaining: 00:00]            
-XGBoost: Training as predictor... 100% |██████████| [elapsed: 07:27, remaining: 00:00]          
-
-Trained pipeline.
-Time taken: 0h:24m:7.549216
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">The pipeline check generated <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">2</span> issues labeled INFO and <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span> issues labeled WARNING.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">To see the issues in full, run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">.check</span><span style="font-weight: bold">()</span> on the pipeline.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  FastProp: Trying 909 features... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 01:13
+  FastProp: Building features... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 02:31
+  XGBoost: Training as feature selector... ━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 20:02
+  XGBoost: Training as predictor... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 09:24
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Trained pipeline.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Time taken: 0:33:12.643341.
 
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <pre>Pipeline(data_model='population',
          feature_learners=['FastProp'],
@@ -6220,7 +6326,7 @@ Time taken: 0h:24m:7.549216
          predictors=['XGBoostRegressor'],
          preprocessors=['Mapping'],
          share_selected_features=0.5,
-         tags=['fast_prop', 'container-SCRdLN'])</pre>
+         tags=['fast_prop', 'container-AeQKVm'])</pre>
 </div>
 </div>
 </div>
@@ -6243,10 +6349,10 @@ Time taken: 0h:24m:7.549216
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-17">
+<clipboard-copy for="cell-19">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6259,7 +6365,7 @@ Time taken: 0h:24m:7.549216
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fastprop_score</span> <span class="o">=</span> <span class="n">pipe1</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">star_schema</span><span class="o">.</span><span class="n">test</span><span class="p">)</span>
 <span class="n">fastprop_score</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-17">fastprop_score = pipe1.score(star_schema.test)
+<div class="clipboard-copy-txt" id="cell-19">fastprop_score = pipe1.score(star_schema.test)
 fastprop_score</div>
 </div>
 </div>
@@ -6272,15 +6378,14 @@ fastprop_score</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-FastProp: Building features... 100% |██████████| [elapsed: 00:11, remaining: 00:00]          
-
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  FastProp: Building features... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:19
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   th {
@@ -6321,21 +6426,21 @@ FastProp: Building features... 100% |██████████| [elapsed: 0
 <tbody>
 <tr>
 <th>0</th>
-<td class="datetime">2024-02-21 16:38:46</td>
+<td class="datetime">2024-09-12 12:26:41</td>
 <td class="str">train</td>
 <td class="str">kc_proklikano</td>
-<td class="float">2957.3749</td>
-<td class="float">14390.1003</td>
-<td class="float">0.9422</td>
+<td class="float">2940.4502</td>
+<td class="float">14384.5507</td>
+<td class="float">0.9423</td>
 </tr>
 <tr>
 <th>1</th>
-<td class="datetime">2024-02-21 16:39:00</td>
+<td class="datetime">2024-09-12 12:27:01</td>
 <td class="str">test</td>
 <td class="str">kc_proklikano</td>
-<td class="float">3019.858</td>
-<td class="float">18800.7625</td>
-<td class="float">0.874</td>
+<td class="float">2998.9588</td>
+<td class="float">18673.8813</td>
+<td class="float">0.8751</td>
 </tr>
 </tbody>
 </table>
@@ -6361,10 +6466,10 @@ FastProp: Building features... 100% |██████████| [elapsed: 0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-18">
+<clipboard-copy for="cell-20">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6377,7 +6482,7 @@ FastProp: Building features... 100% |██████████| [elapsed: 0
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">include</span> <span class="o">=</span> <span class="p">(</span><span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.25</span><span class="p">)</span>
 <span class="n">include</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-18">include = (getml.data.random() &lt; 0.25)
+<div class="clipboard-copy-txt" id="cell-20">include = (getml.data.random() &lt; 0.25)
 include</div>
 </div>
 </div>
@@ -6388,7 +6493,7 @@ include</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   th {
@@ -6475,64 +6580,6 @@ include</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-19">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">population_train_pd</span> <span class="o">=</span> <span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">population</span><span class="p">[</span><span class="n">include</span><span class="p">]</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-<span class="n">population_test_pd</span> <span class="o">=</span> <span class="n">star_schema</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-19">population_train_pd = star_schema.train.population[include].to_pandas()
-population_test_pd = star_schema.test.population.to_pandas()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-20">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">population_train_pd</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_train_pd</span><span class="o">.</span><span class="n">index</span>
-<span class="n">population_test_pd</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_test_pd</span><span class="o">.</span><span class="n">index</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-20">population_train_pd["id"] = population_train_pd.index
-population_test_pd["id"] = population_test_pd.index</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
@@ -6546,13 +6593,11 @@ population_test_pd["id"] = population_test_pd.index</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">probehnuto_pd</span> <span class="o">=</span> <span class="n">probehnuto</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">probehnuto</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-<span class="n">dobito_pd</span> <span class="o">=</span> <span class="n">dobito</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dobito</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
-<span class="n">probehnuto_mimo_penezenku_pd</span> <span class="o">=</span> <span class="n">probehnuto_mimo_penezenku</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">probehnuto_mimo_penezenku</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">population_train_pd</span> <span class="o">=</span> <span class="n">star_schema</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">population</span><span class="p">[</span><span class="n">include</span><span class="p">]</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="n">population_test_pd</span> <span class="o">=</span> <span class="n">star_schema</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-21">probehnuto_pd = probehnuto.drop(probehnuto.roles.unused).to_pandas()
-dobito_pd = dobito.drop(dobito.roles.unused).to_pandas()
-probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_penezenku.roles.unused).to_pandas()</div>
+<div class="clipboard-copy-txt" id="cell-21">population_train_pd = star_schema.train.population[include].to_pandas()
+population_test_pd = star_schema.test.population.to_pandas()</div>
 </div>
 </div>
 </div>
@@ -6568,6 +6613,66 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-22">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">population_train_pd</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_train_pd</span><span class="o">.</span><span class="n">index</span>
+<span class="n">population_test_pd</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_test_pd</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-22">population_train_pd["id"] = population_train_pd.index
+population_test_pd["id"] = population_test_pd.index</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-23">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">probehnuto_pd</span> <span class="o">=</span> <span class="n">probehnuto</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">probehnuto</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="n">dobito_pd</span> <span class="o">=</span> <span class="n">dobito</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">dobito</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="n">probehnuto_mimo_penezenku_pd</span> <span class="o">=</span> <span class="n">probehnuto_mimo_penezenku</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">probehnuto_mimo_penezenku</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused</span><span class="p">)</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-23">probehnuto_pd = probehnuto.drop(probehnuto.roles.unused).to_pandas()
+dobito_pd = dobito.drop(dobito.roles.unused).to_pandas()
+probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_penezenku.roles.unused).to_pandas()</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-24">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6596,7 +6701,7 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 
     <span class="k">return</span> <span class="n">peripheral_new</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">"month_year_datum_transakce_y"</span><span class="p">:</span> <span class="s2">"month_year_datum_transakce"</span><span class="p">})</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-22">def prepare_peripheral(peripheral_pd, train_or_test):
+<div class="clipboard-copy-txt" id="cell-24">def prepare_peripheral(peripheral_pd, train_or_test):
     """
     Helper function that imitates the behavior of 
     the data model defined above.
@@ -6625,10 +6730,10 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-23">
+<clipboard-copy for="cell-25">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6657,7 +6762,7 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 
     <span class="k">return</span> <span class="n">peripheral_new</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-23">def prepare_probehnuto_mimo_penezenku(peripheral_pd, train_or_test):
+<div class="clipboard-copy-txt" id="cell-25">def prepare_probehnuto_mimo_penezenku(peripheral_pd, train_or_test):
     """
     Helper function that imitates the behavior of 
     the data model defined above.
@@ -6686,10 +6791,10 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-24">
+<clipboard-copy for="cell-26">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6703,7 +6808,7 @@ probehnuto_mimo_penezenku_pd = probehnuto_mimo_penezenku.drop(probehnuto_mimo_pe
 <span class="n">dobito_test_pd</span> <span class="o">=</span> <span class="n">prepare_peripheral</span><span class="p">(</span><span class="n">dobito_pd</span><span class="p">,</span> <span class="n">population_test_pd</span><span class="p">)</span>
 <span class="n">dobito_train_pd</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-24">dobito_train_pd = prepare_peripheral(dobito_pd, population_train_pd)
+<div class="clipboard-copy-txt" id="cell-26">dobito_train_pd = prepare_peripheral(dobito_pd, population_train_pd)
 dobito_test_pd = prepare_peripheral(dobito_pd, population_test_pd)
 dobito_train_pd</div>
 </div>
@@ -6715,7 +6820,7 @@ dobito_train_pd</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -6764,18 +6869,18 @@ dobito_train_pd</div>
 <td>50363</td>
 </tr>
 <tr>
-<th>3</th>
-<td>a</td>
-<td>25214.20</td>
-<td>2015-03-01</td>
-<td>2127</td>
+<th>14</th>
+<td>c</td>
+<td>408.20</td>
+<td>2015-08-01</td>
+<td>152319</td>
 </tr>
 <tr>
-<th>4</th>
-<td>a</td>
-<td>25214.20</td>
-<td>2015-03-01</td>
-<td>17709</td>
+<th>15</th>
+<td>c</td>
+<td>521.24</td>
+<td>2012-10-01</td>
+<td>153913</td>
 </tr>
 <tr>
 <th>...</th>
@@ -6785,39 +6890,39 @@ dobito_train_pd</div>
 <td>...</td>
 </tr>
 <tr>
-<th>4462025</th>
-<td>g</td>
-<td>37680.00</td>
-<td>2012-08-01</td>
-<td>217660</td>
-</tr>
-<tr>
-<th>4462026</th>
-<td>g</td>
-<td>37680.00</td>
-<td>2012-08-01</td>
-<td>235321</td>
-</tr>
-<tr>
 <th>4462027</th>
 <td>g</td>
-<td>37680.00</td>
+<td>6280.00</td>
 <td>2012-08-01</td>
-<td>253661</td>
+<td>92370</td>
 </tr>
 <tr>
 <th>4462028</th>
 <td>g</td>
-<td>37680.00</td>
+<td>6280.00</td>
 <td>2012-08-01</td>
-<td>264765</td>
+<td>140842</td>
+</tr>
+<tr>
+<th>4462029</th>
+<td>g</td>
+<td>6280.00</td>
+<td>2012-08-01</td>
+<td>146070</td>
+</tr>
+<tr>
+<th>4462030</th>
+<td>g</td>
+<td>6280.00</td>
+<td>2012-08-01</td>
+<td>175024</td>
 </tr>
 <tr>
 <th>4462031</th>
 <td>g</td>
-<td>31400.00</td>
+<td>6280.00</td>
 <td>2012-08-01</td>
-<td>288037</td>
+<td>253772</td>
 </tr>
 </tbody>
 </table>
@@ -6834,10 +6939,10 @@ dobito_train_pd</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-25">
+<clipboard-copy for="cell-27">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6851,7 +6956,7 @@ dobito_train_pd</div>
 <span class="n">probehnuto_test_pd</span> <span class="o">=</span> <span class="n">prepare_peripheral</span><span class="p">(</span><span class="n">probehnuto_pd</span><span class="p">,</span> <span class="n">population_test_pd</span><span class="p">)</span>
 <span class="n">probehnuto_train_pd</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-25">probehnuto_train_pd = prepare_peripheral(probehnuto_pd, population_train_pd)
+<div class="clipboard-copy-txt" id="cell-27">probehnuto_train_pd = prepare_peripheral(probehnuto_pd, population_train_pd)
 probehnuto_test_pd = prepare_peripheral(probehnuto_pd, population_test_pd)
 probehnuto_train_pd</div>
 </div>
@@ -6863,7 +6968,7 @@ probehnuto_train_pd</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -6933,39 +7038,39 @@ probehnuto_train_pd</div>
 <td>...</td>
 </tr>
 <tr>
-<th>11186670</th>
+<th>11186627</th>
 <td>None</td>
-<td>948.28</td>
-<td>2012-08-01</td>
-<td>291919</td>
+<td>13545.96</td>
+<td>2015-06-01</td>
+<td>175888</td>
 </tr>
 <tr>
-<th>11186671</th>
-<td>e</td>
-<td>979.68</td>
-<td>2012-09-01</td>
-<td>291919</td>
-</tr>
-<tr>
-<th>11186673</th>
+<th>11186634</th>
 <td>None</td>
-<td>948.28</td>
-<td>2012-08-01</td>
-<td>291848</td>
+<td>13545.96</td>
+<td>2015-06-01</td>
+<td>272451</td>
 </tr>
 <tr>
-<th>11186674</th>
-<td>e</td>
-<td>87.92</td>
-<td>2012-08-01</td>
-<td>291848</td>
+<th>11186644</th>
+<td>None</td>
+<td>13545.96</td>
+<td>2015-06-01</td>
+<td>284406</td>
 </tr>
 <tr>
-<th>11186686</th>
-<td>e</td>
-<td>1130.40</td>
-<td>2013-05-01</td>
-<td>290547</td>
+<th>11186660</th>
+<td>None</td>
+<td>153.86</td>
+<td>2015-07-01</td>
+<td>286198</td>
+</tr>
+<tr>
+<th>11186663</th>
+<td>None</td>
+<td>153.86</td>
+<td>2015-07-01</td>
+<td>284454</td>
 </tr>
 </tbody>
 </table>
@@ -6982,10 +7087,10 @@ probehnuto_train_pd</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-26">
+<clipboard-copy for="cell-28">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -6999,7 +7104,7 @@ probehnuto_train_pd</div>
 <span class="n">probehnuto_mimo_penezenku_test_pd</span> <span class="o">=</span> <span class="n">prepare_probehnuto_mimo_penezenku</span><span class="p">(</span><span class="n">probehnuto_mimo_penezenku_pd</span><span class="p">,</span> <span class="n">population_test_pd</span><span class="p">)</span>
 <span class="n">probehnuto_mimo_penezenku_train_pd</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-26">probehnuto_mimo_penezenku_train_pd = prepare_probehnuto_mimo_penezenku(probehnuto_mimo_penezenku_pd, population_train_pd)
+<div class="clipboard-copy-txt" id="cell-28">probehnuto_mimo_penezenku_train_pd = prepare_probehnuto_mimo_penezenku(probehnuto_mimo_penezenku_pd, population_train_pd)
 probehnuto_mimo_penezenku_test_pd = prepare_probehnuto_mimo_penezenku(probehnuto_mimo_penezenku_pd, population_test_pd)
 probehnuto_mimo_penezenku_train_pd</div>
 </div>
@@ -7011,7 +7116,7 @@ probehnuto_mimo_penezenku_train_pd</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7106,10 +7211,10 @@ probehnuto_mimo_penezenku_train_pd</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-27">
+<clipboard-copy for="cell-29">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -7122,7 +7227,7 @@ probehnuto_mimo_penezenku_train_pd</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">del</span> <span class="n">population_train_pd</span><span class="p">[</span><span class="s2">"client_id"</span><span class="p">]</span>
 <span class="k">del</span> <span class="n">population_test_pd</span><span class="p">[</span><span class="s2">"client_id"</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-27">del population_train_pd["client_id"]
+<div class="clipboard-copy-txt" id="cell-29">del population_train_pd["client_id"]
 del population_test_pd["client_id"]</div>
 </div>
 </div>
@@ -7135,10 +7240,10 @@ del population_test_pd["client_id"]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-28">
+<clipboard-copy for="cell-30">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -7150,7 +7255,7 @@ del population_test_pd["client_id"]</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">population_train_pd</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-28">population_train_pd</div>
+<div class="clipboard-copy-txt" id="cell-30">population_train_pd</div>
 </div>
 </div>
 </div>
@@ -7160,7 +7265,7 @@ del population_test_pd["client_id"]</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7279,10 +7384,10 @@ del population_test_pd["client_id"]</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-29">
+<clipboard-copy for="cell-31">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -7338,7 +7443,7 @@ del population_test_pd["client_id"]</div>
 <span class="n">probehnuto_mimo_penezenku_train_pd</span><span class="o">.</span><span class="n">ww</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">logical_types</span><span class="o">=</span><span class="n">probehnuto_mimo_penezenku_pd_logical_types</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">'index'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'probehnuto_mimo_penezenku'</span><span class="p">)</span>
 <span class="n">probehnuto_mimo_penezenku_test_pd</span><span class="o">.</span><span class="n">ww</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">logical_types</span><span class="o">=</span><span class="n">probehnuto_mimo_penezenku_pd_logical_types</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">'index'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'probehnuto_mimo_penezenku'</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-29">def add_index(df):
+<div class="clipboard-copy-txt" id="cell-31">def add_index(df):
     df.insert(0, "index", range(len(df)))
 
 population_pd_logical_types = {
@@ -7394,10 +7499,10 @@ probehnuto_mimo_penezenku_test_pd.ww.init(logical_types=probehnuto_mimo_penezenk
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-30">
+<clipboard-copy for="cell-32">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -7414,84 +7519,12 @@ probehnuto_mimo_penezenku_test_pd.ww.init(logical_types=probehnuto_mimo_penezenk
     <span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">:</span> <span class="p">(</span><span class="n">probehnuto_mimo_penezenku_train_pd</span><span class="p">,</span> <span class="p">),</span>
 <span class="p">}</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-30">dataframes_train = {
+<div class="clipboard-copy-txt" id="cell-32">dataframes_train = {
     "population" : (population_train_pd, ),
     "dobito": (dobito_train_pd, ),
     "probehnuto": (probehnuto_train_pd, ),
     "probehnuto_mimo_penezenku": (probehnuto_mimo_penezenku_train_pd, ),
 }</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-31">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">dataframes_test</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"population"</span> <span class="p">:</span> <span class="p">(</span><span class="n">population_test_pd</span><span class="p">,</span> <span class="p">),</span>
-    <span class="s2">"dobito"</span><span class="p">:</span> <span class="p">(</span><span class="n">dobito_test_pd</span><span class="p">,</span> <span class="p">),</span>
-    <span class="s2">"probehnuto"</span><span class="p">:</span> <span class="p">(</span><span class="n">probehnuto_test_pd</span><span class="p">,</span> <span class="p">),</span>
-    <span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">:</span> <span class="p">(</span><span class="n">probehnuto_mimo_penezenku_test_pd</span><span class="p">,</span> <span class="p">),</span>
-<span class="p">}</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-31">dataframes_test = {
-    "population" : (population_test_pd, ),
-    "dobito": (dobito_test_pd, ),
-    "probehnuto": (probehnuto_test_pd, ),
-    "probehnuto_mimo_penezenku": (probehnuto_mimo_penezenku_test_pd, ),
-}</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-32">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">relationships</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"dobito"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"probehnuto"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
-<span class="p">]</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-32">relationships = [
-    ("population", "id", "dobito", "id"),
-    ("population", "id", "probehnuto", "id"),
-    ("population", "id", "probehnuto_mimo_penezenku", "id"),
-]</div>
 </div>
 </div>
 </div>
@@ -7516,15 +7549,19 @@ probehnuto_mimo_penezenku_test_pd.ww.init(logical_types=probehnuto_mimo_penezenk
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_train_pd</span> <span class="o">=</span> <span class="n">featuretools</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span>
-    <span class="n">dataframes</span><span class="o">=</span><span class="n">dataframes_train</span><span class="p">,</span>
-    <span class="n">relationships</span><span class="o">=</span><span class="n">relationships</span><span class="p">,</span>
-    <span class="n">target_dataframe_name</span><span class="o">=</span><span class="s2">"population"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">dataframes_test</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"population"</span> <span class="p">:</span> <span class="p">(</span><span class="n">population_test_pd</span><span class="p">,</span> <span class="p">),</span>
+    <span class="s2">"dobito"</span><span class="p">:</span> <span class="p">(</span><span class="n">dobito_test_pd</span><span class="p">,</span> <span class="p">),</span>
+    <span class="s2">"probehnuto"</span><span class="p">:</span> <span class="p">(</span><span class="n">probehnuto_test_pd</span><span class="p">,</span> <span class="p">),</span>
+    <span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">:</span> <span class="p">(</span><span class="n">probehnuto_mimo_penezenku_test_pd</span><span class="p">,</span> <span class="p">),</span>
+<span class="p">}</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-33">featuretools_train_pd = featuretools.dfs(
-    dataframes=dataframes_train,
-    relationships=relationships,
-    target_dataframe_name="population")[0]</div>
+<div class="clipboard-copy-txt" id="cell-33">dataframes_test = {
+    "population" : (population_test_pd, ),
+    "dobito": (dobito_test_pd, ),
+    "probehnuto": (probehnuto_test_pd, ),
+    "probehnuto_mimo_penezenku": (probehnuto_mimo_penezenku_test_pd, ),
+}</div>
 </div>
 </div>
 </div>
@@ -7549,15 +7586,17 @@ probehnuto_mimo_penezenku_test_pd.ww.init(logical_types=probehnuto_mimo_penezenk
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_test_pd</span> <span class="o">=</span> <span class="n">featuretools</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span>
-    <span class="n">dataframes</span><span class="o">=</span><span class="n">dataframes_test</span><span class="p">,</span>
-    <span class="n">relationships</span><span class="o">=</span><span class="n">relationships</span><span class="p">,</span>
-    <span class="n">target_dataframe_name</span><span class="o">=</span><span class="s2">"population"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">relationships</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"dobito"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"probehnuto"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"population"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"probehnuto_mimo_penezenku"</span><span class="p">,</span> <span class="s2">"id"</span><span class="p">),</span>
+<span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-34">featuretools_test_pd = featuretools.dfs(
-    dataframes=dataframes_test,
-    relationships=relationships,
-    target_dataframe_name="population")[0]</div>
+<div class="clipboard-copy-txt" id="cell-34">relationships = [
+    ("population", "id", "dobito", "id"),
+    ("population", "id", "probehnuto", "id"),
+    ("population", "id", "probehnuto_mimo_penezenku", "id"),
+]</div>
 </div>
 </div>
 </div>
@@ -7582,18 +7621,22 @@ probehnuto_mimo_penezenku_test_pd.ww.init(logical_types=probehnuto_mimo_penezenk
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_train</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">featuretools_train_pd</span><span class="p">,</span> <span class="s2">"featuretools_train"</span><span class="p">)</span>
-<span class="n">featuretools_test</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">featuretools_test_pd</span><span class="p">,</span> <span class="s2">"featuretools_test"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_train_pd</span> <span class="o">=</span> <span class="n">featuretools</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span>
+    <span class="n">dataframes</span><span class="o">=</span><span class="n">dataframes_train</span><span class="p">,</span>
+    <span class="n">relationships</span><span class="o">=</span><span class="n">relationships</span><span class="p">,</span>
+    <span class="n">target_dataframe_name</span><span class="o">=</span><span class="s2">"population"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-35">featuretools_train = getml.data.DataFrame.from_pandas(featuretools_train_pd, "featuretools_train")
-featuretools_test = getml.data.DataFrame.from_pandas(featuretools_test_pd, "featuretools_test")</div>
+<div class="clipboard-copy-txt" id="cell-35">featuretools_train_pd = featuretools.dfs(
+    dataframes=dataframes_train,
+    relationships=relationships,
+    target_dataframe_name="population")[0]</div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7611,13 +7654,75 @@ featuretools_test = getml.data.DataFrame.from_pandas(featuretools_test_pd, "feat
 </div>
 </clipboard-copy>
 </div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_test_pd</span> <span class="o">=</span> <span class="n">featuretools</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span>
+    <span class="n">dataframes</span><span class="o">=</span><span class="n">dataframes_test</span><span class="p">,</span>
+    <span class="n">relationships</span><span class="o">=</span><span class="n">relationships</span><span class="p">,</span>
+    <span class="n">target_dataframe_name</span><span class="o">=</span><span class="s2">"population"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-36">featuretools_test_pd = featuretools.dfs(
+    dataframes=dataframes_test,
+    relationships=relationships,
+    target_dataframe_name="population")[0]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-37">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_train</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">featuretools_train_pd</span><span class="p">,</span> <span class="s2">"featuretools_train"</span><span class="p">)</span>
+<span class="n">featuretools_test</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">featuretools_test_pd</span><span class="p">,</span> <span class="s2">"featuretools_test"</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-37">featuretools_train = getml.data.DataFrame.from_pandas(featuretools_train_pd, "featuretools_train")
+featuretools_test = getml.data.DataFrame.from_pandas(featuretools_test_pd, "featuretools_test")</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-38">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_train</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="s2">"kc_proklikano"</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
 <span class="n">featuretools_train</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">featuretools_train</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused_float</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">numerical</span><span class="p">)</span>
 <span class="n">featuretools_train</span><span class="o">.</span><span class="n">set_role</span><span class="p">(</span><span class="n">featuretools_train</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">unused_string</span><span class="p">,</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">categorical</span><span class="p">)</span>
 
 <span class="n">featuretools_train</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-36">featuretools_train.set_role("kc_proklikano", getml.data.roles.target)
+<div class="clipboard-copy-txt" id="cell-38">featuretools_train.set_role("kc_proklikano", getml.data.roles.target)
 featuretools_train.set_role(featuretools_train.roles.unused_float, getml.data.roles.numerical)
 featuretools_train.set_role(featuretools_train.roles.unused_string, getml.data.roles.categorical)
 
@@ -7631,7 +7736,7 @@ featuretools_train</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -8656,10 +8761,10 @@ featuretools_train</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-37">
+<clipboard-copy for="cell-39">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -8675,7 +8780,7 @@ featuretools_train</div>
 
 <span class="n">featuretools_test</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-37">featuretools_test.set_role("kc_proklikano", getml.data.roles.target)
+<div class="clipboard-copy-txt" id="cell-39">featuretools_test.set_role("kc_proklikano", getml.data.roles.target)
 featuretools_test.set_role(featuretools_test.roles.unused_float, getml.data.roles.numerical)
 featuretools_test.set_role(featuretools_test.roles.unused_string, getml.data.roles.categorical)
 
@@ -8689,7 +8794,7 @@ featuretools_test</div>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   table {
@@ -9736,105 +9841,6 @@ featuretools_test</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-38">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_model</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="s2">"population"</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-38">data_model = getml.data.DataModel("population")</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy for="cell-39">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">imputation</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Imputation</span><span class="p">()</span>
-
-<span class="n">predictor</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">pipe2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
-    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">'featuretools'</span><span class="p">],</span>
-    <span class="n">data_model</span><span class="o">=</span><span class="n">data_model</span><span class="p">,</span>
-    <span class="n">preprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">imputation</span><span class="p">],</span>
-    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">predictor</span><span class="p">],</span>
-    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="n">pipe2</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-39">imputation = getml.preprocessors.Imputation()
-
-predictor = getml.predictors.XGBoostRegressor(n_jobs=1)
-
-pipe2 = getml.Pipeline(
-    tags=['featuretools'],
-    data_model=data_model,
-    preprocessors=[imputation],
-    predictors=[predictor],
-    include_categorical=True,
-)
-
-pipe2</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<pre>Pipeline(data_model='population',
-         feature_learners=[],
-         feature_selectors=[],
-         include_categorical=True,
-         loss_function='SquareLoss',
-         peripheral=[],
-         predictors=['XGBoostRegressor'],
-         preprocessors=['Imputation'],
-         share_selected_features=0.5,
-         tags=['featuretools'])</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
@@ -9848,51 +9854,9 @@ pipe2</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">featuretools_train</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_model</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataModel</span><span class="p">(</span><span class="s2">"population"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-40">pipe2.fit(featuretools_train)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Checking data model...
-Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Checking... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-
-The pipeline check generated 0 issues labeled INFO and 7 issues labeled WARNING.
-To see the issues in full, run .check() on the pipeline.
-
-Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-XGBoost: Training as predictor... 100% |██████████| [elapsed: 00:31, remaining: 00:00]          
-
-Trained pipeline.
-Time taken: 0h:0m:32.17949
-
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<pre>Pipeline(data_model='population',
-         feature_learners=[],
-         feature_selectors=[],
-         include_categorical=True,
-         loss_function='SquareLoss',
-         peripheral=[],
-         predictors=['XGBoostRegressor'],
-         preprocessors=['Imputation'],
-         share_selected_features=0.5,
-         tags=['featuretools'])</pre>
+<div class="clipboard-copy-txt" id="cell-40">data_model = getml.data.DataModel("population")</div>
 </div>
 </div>
 </div>
@@ -9917,10 +9881,184 @@ Time taken: 0h:0m:32.17949
 </div>
 </clipboard-copy>
 </div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">imputation</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">preprocessors</span><span class="o">.</span><span class="n">Imputation</span><span class="p">()</span>
+
+<span class="n">predictor</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">predictors</span><span class="o">.</span><span class="n">XGBoostRegressor</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">pipe2</span> <span class="o">=</span> <span class="n">getml</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s1">'featuretools'</span><span class="p">],</span>
+    <span class="n">data_model</span><span class="o">=</span><span class="n">data_model</span><span class="p">,</span>
+    <span class="n">preprocessors</span><span class="o">=</span><span class="p">[</span><span class="n">imputation</span><span class="p">],</span>
+    <span class="n">predictors</span><span class="o">=</span><span class="p">[</span><span class="n">predictor</span><span class="p">],</span>
+    <span class="n">include_categorical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">pipe2</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-41">imputation = getml.preprocessors.Imputation()
+
+predictor = getml.predictors.XGBoostRegressor(n_jobs=1)
+
+pipe2 = getml.Pipeline(
+    tags=['featuretools'],
+    data_model=data_model,
+    preprocessors=[imputation],
+    predictors=[predictor],
+    include_categorical=True,
+)
+
+pipe2</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<pre>Pipeline(data_model='population',
+         feature_learners=[],
+         feature_selectors=[],
+         include_categorical=True,
+         loss_function='SquareLoss',
+         peripheral=[],
+         predictors=['XGBoostRegressor'],
+         preprocessors=['Imputation'],
+         share_selected_features=0.5,
+         tags=['featuretools'])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-42">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">featuretools_train</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-42">pipe2.fit(featuretools_train)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Checking data model<span style="color: #808000; text-decoration-color: #808000">...</span>
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Checking... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">The pipeline check generated <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">0</span> issues labeled INFO and <span style="color: #008080; text-decoration-color: #008080; font-weight: bold">7</span> issues labeled WARNING.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">To see the issues in full, run <span style="color: #800080; text-decoration-color: #800080; font-weight: bold">.check</span><span style="font-weight: bold">()</span> on the pipeline.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:01
+  XGBoost: Training as predictor... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:32
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Trained pipeline.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Time taken: 0:00:33.622797.
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<pre>Pipeline(data_model='population',
+         feature_learners=[],
+         feature_selectors=[],
+         include_categorical=True,
+         loss_function='SquareLoss',
+         peripheral=[],
+         predictors=['XGBoostRegressor'],
+         preprocessors=['Imputation'],
+         share_selected_features=0.5,
+         tags=['featuretools'])</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-43">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">featuretools_score</span> <span class="o">=</span> <span class="n">pipe2</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">featuretools_test</span><span class="p">)</span>
 <span class="n">featuretools_score</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-41">featuretools_score = pipe2.score(featuretools_test)
+<div class="clipboard-copy-txt" id="cell-43">featuretools_score = pipe2.score(featuretools_test)
 featuretools_score</div>
 </div>
 </div>
@@ -9933,14 +10071,19 @@ featuretools_score</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Staging... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-Preprocessing... 100% |██████████| [elapsed: 00:00, remaining: 00:00]          
-
+<pre>⠸ Staging...                                            0% • 00:32</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>  Staging... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:00
+  Preprocessing... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 00:02
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
   th {
@@ -9981,7 +10124,7 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 <tbody>
 <tr>
 <th>0</th>
-<td class="datetime">2024-02-21 16:49:16</td>
+<td class="datetime">2024-09-12 12:37:42</td>
 <td class="str">featuretools_train</td>
 <td class="str">kc_proklikano</td>
 <td class="float">5024.2643</td>
@@ -9990,7 +10133,7 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 </tr>
 <tr>
 <th>1</th>
-<td class="datetime">2024-02-21 16:49:17</td>
+<td class="datetime">2024-09-12 12:37:45</td>
 <td class="str">featuretools_test</td>
 <td class="str">kc_proklikano</td>
 <td class="float">5183.7763</td>
@@ -10021,10 +10164,10 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-42">
+<clipboard-copy for="cell-44">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -10036,7 +10179,7 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">()[</span><span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"importances"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-42">pipe1.features.to_sql()[pipe1.features.sort(by="importances")[0].name]</div>
+<div class="clipboard-copy-txt" id="cell-44">pipe1.features.to_sql()[pipe1.features.sort(by="importances")[0].name]</div>
 </div>
 </div>
 </div>
@@ -10046,12 +10189,12 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/markdown" tabindex="0">
-<div class="highlight"><pre><span></span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"FEATURE_1_50"</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"FEATURE_1_64"</span><span class="p">;</span>
 
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"FEATURE_1_50"</span><span class="w"> </span><span class="k">AS</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">EWMA_1H</span><span class="p">(</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="ss">"kc_proklikano"</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="ss">"month_year_datum_transakce"</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="ss">"month_year_datum_transakce__1_000000_days"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"feature_1_50"</span><span class="p">,</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"FEATURE_1_64"</span><span class="w"> </span><span class="k">AS</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">EWMA_TREND_1H</span><span class="p">(</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="ss">"kc_proklikano"</span><span class="p">,</span><span class="w"> </span><span class="n">t1</span><span class="p">.</span><span class="ss">"month_year_datum_transakce"</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t2</span><span class="p">.</span><span class="ss">"month_year_datum_transakce__1_000000_days"</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">"feature_1_64"</span><span class="p">,</span>
 <span class="w">       </span><span class="n">t1</span><span class="p">.</span><span class="n">rowid</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rownum</span>
 <span class="k">FROM</span><span class="w"> </span><span class="ss">"POPULATION__STAGING_TABLE_1"</span><span class="w"> </span><span class="n">t1</span>
 <span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="ss">"PROBEHNUTO__STAGING_TABLE_3"</span><span class="w"> </span><span class="n">t2</span>
@@ -10082,10 +10225,10 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-43">
+<clipboard-copy for="cell-45">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -10099,7 +10242,7 @@ Preprocessing... 100% |██████████| [elapsed: 00:00, remainin
 <span class="c1"># the SQL code.</span>
 <span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"seznam_pipeline"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-43"># Creates a folder named seznam_pipeline containing
+<div class="clipboard-copy-txt" id="cell-45"># Creates a folder named seznam_pipeline containing
 # the SQL code.
 pipe1.features.to_sql().save("seznam_pipeline")</div>
 </div>
@@ -10113,10 +10256,10 @@ pipe1.features.to_sql().save("seznam_pipeline")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-44">
+<clipboard-copy for="cell-46">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -10128,7 +10271,7 @@ pipe1.features.to_sql().save("seznam_pipeline")</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">pipe1</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">dialect</span><span class="o">=</span><span class="n">getml</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">dialect</span><span class="o">.</span><span class="n">spark_sql</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"seznam_spark"</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-44">pipe1.features.to_sql(dialect=getml.pipeline.dialect.spark_sql).save("seznam_spark")</div>
+<div class="clipboard-copy-txt" id="cell-46">pipe1.features.to_sql(dialect=getml.pipeline.dialect.spark_sql).save("seznam_spark")</div>
 </div>
 </div>
 </div>
@@ -10151,10 +10294,10 @@ pipe1.features.to_sql().save("seznam_pipeline")</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy for="cell-45">
+<clipboard-copy for="cell-47">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -10172,7 +10315,7 @@ pipe1.features.to_sql().save("seznam_pipeline")</div>
     <span class="s1">'MAE'</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">score</span><span class="o">.</span><span class="n">mae</span><span class="si">:</span><span class="s1">,.0f</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">]</span>
 <span class="p">})</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-45">scores = [fastprop_score, featuretools_score]
+<div class="clipboard-copy-txt" id="cell-47">scores = [fastprop_score, featuretools_score]
 pd.DataFrame(data={
     'Name': ['getML: FastProp', 'featuretools'],
     'R-squared': [f'{score.rsquared:.2%}' for score in scores],
@@ -10188,7 +10331,7 @@ pd.DataFrame(data={
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10218,9 +10361,9 @@ pd.DataFrame(data={
 <tr>
 <th>0</th>
 <td>getML: FastProp</td>
-<td>87.40%</td>
-<td>18,801</td>
-<td>3,020</td>
+<td>87.51%</td>
+<td>18,674</td>
+<td>2,999</td>
 </tr>
 <tr>
 <th>1</th>
@@ -10232,6 +10375,33 @@ pd.DataFrame(data={
 </tbody>
 </table>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-48">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">getml</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-48">getml.engine.shutdown()</div>
 </div>
 </div>
 </div>
