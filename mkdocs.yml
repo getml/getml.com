@@ -173,7 +173,13 @@ plugins:
         - mailto:*
         - 'data:image/*'
         - '#*'
-
+  - git-revision-date-localized
+  - git-committers:
+      enabled: !ENV [ENABLED_GIT_COMMITTERS, false]
+      repository: getml/getml-docs
+      branch: develop
+      token: !ENV [GH_C17_DEV_TOKEN, ""]
+  
 hooks:
   - docs/examples/get_notebooks.py
 

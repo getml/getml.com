@@ -18,6 +18,8 @@ dependencies = [
   "mike~=2.1",
   "mkdocs-redirects~=1.2",
   "mkdocs-jupyter~=0.24.8",
-  "mkdocs-htmlproofer-plugin~=1.2"
+  "mkdocs-htmlproofer-plugin~=1.2",
+  "mkdocs-git-revision-date-localized-plugin~=1.2",
+  "mkdocs-git-committers-plugin-2~=2.3"
 ]
 python = "3.11"
