@@ -20,6 +20,7 @@ jobs:
       GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
       NOTEBOOKS_INCLUDE: '*.ipynb'
       ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
+      JUPYTER_PLATFORM_DIRS: 1
     steps:
       - name: Checkout getml-docs repo
         uses: actions/checkout@v4
@@ -64,6 +65,10 @@ jobs:
       - name: Fetch latest commit from gh-pages
         run: |
           git fetch origin gh-pages --depth=1
+
+      - name: Run Jupyter paths to fix deprecation warning
+        run: |
+          jupyter --paths
 
       - name: Deploy dev version if develop branch
         if: "github.ref == 'refs/heads/develop'"
