@@ -50,6 +50,10 @@ jobs:
           pip install hatch~=1.12 
           hatch env create
 
+      - name: Run Jupyter paths to fix deprecation warning
+        run: |
+          hatch run jupyter --paths
+
       - name: Clone monorepo & install getML
         run: |
           git clone -b $BRANCH git@gitlab.com:getml/all/monorepo.git
@@ -65,10 +69,6 @@ jobs:
       - name: Fetch latest commit from gh-pages
         run: |
           git fetch origin gh-pages --depth=1
-
-      - name: Run Jupyter paths to fix deprecation warning
-        run: |
-          jupyter --paths
 
       - name: Deploy dev version if develop branch
         if: "github.ref == 'refs/heads/develop'"
