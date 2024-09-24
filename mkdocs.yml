@@ -161,11 +161,7 @@ plugins:
       enabled: !ENV [ENABLED_HTMLPROOFER, False]
       raise_error_after_finish: True
       raise_error_excludes:
-        403: [https://www.sciencedirect.com/science/article/abs/pii/S0378778815304357, 
-              https://www.researchgate.net/publication/228572841_Mining_episode_rules_in_STULONG_dataset,
-              https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition]
         403: ['*']
-        
       ignore_urls:
         - https://static.getml.com/download/1.5.0/*
         - https://storage.googleapis.com/static.getml.com/download/1.5.0/*
@@ -179,6 +175,10 @@ plugins:
       repository: getml/getml-docs
       branch: develop
       token: !ENV [GH_C17_DEV_TOKEN, ""]
+  - minify:
+      minify_html: !ENV [ENABLED_MINIFY, False]
+      htmlmin_opts:
+        remove_comments: true
   
 hooks:
   - docs/examples/get_notebooks.py

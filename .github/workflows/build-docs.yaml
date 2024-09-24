@@ -21,6 +21,7 @@ jobs:
       NOTEBOOKS_INCLUDE: '*.ipynb'
       ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
       ENABLED_GIT_COMMITTERS: 'true'
+      ENABLED_MINIFY: 'true'
       JUPYTER_PLATFORM_DIRS: 1
     steps:
       - name: Checkout getml-docs repo
