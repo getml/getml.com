@@ -20,10 +20,13 @@ jobs:
       GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
       NOTEBOOKS_INCLUDE: '*.ipynb'
       ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
+      ENABLED_GIT_COMMITTERS: 'true'
       JUPYTER_PLATFORM_DIRS: 1
     steps:
       - name: Checkout getml-docs repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
