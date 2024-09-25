@@ -2,6 +2,14 @@
 
 ## For getML Enterprise & Community editions { data-toc-label="getML" }
 
+### 1.5.0   <small>Sep 24, 2024</small> {id="1.5.0"}
+- Overhaul and better integration of documentation and web page:
+  - Switch from sphinx to mkdocs
+  - Restructuring of [User Guide][concepts-guide], multiple amendments to documentation 
+- Introduce strict typing regiment for [feature learning aggregations][getml.feature_learning.aggregations] and [loss functions][getml.feature_learning.loss_functions]
+- Clean up and maintenance of [example notebooks][examples-index], make them executable in Colab
+- More informative progress bar and status updates
+
 ### 1.4.0	<small>Oct 17, 2023</small> {id="1.4.0"}
 - Accelerated feature learning through [Fastboost][getml.feature_learning.Fastboost]
 - Improved modelling on huge datasets through [ScaleGBMClassifier][getml.predictors.ScaleGBMClassifier] and [ScaleGBMRegressor][getml.predictors.ScaleGBMRegressor]
