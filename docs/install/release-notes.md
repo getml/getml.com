@@ -3,12 +3,36 @@
 ## For getML Enterprise & Community editions { data-toc-label="getML" }
 
 ### 1.5.0   <small>Sep 24, 2024</small> {id="1.5.0"}
-- Overhaul and better integration of documentation and web page:
-  - Switch from sphinx to mkdocs
-  - Restructuring of [User Guide][concepts-guide], multiple amendments to documentation 
+#### Features
+- Overhaul and better integration of API documentation and web page:
+    - Switch from [sphinx](https://www.sphinx-doc.org/en/master/) to [mkdocs](https://www.mkdocs.org/)
+    - Restructuring of [User Guide][concepts-guide], multiple amendments to documentation 
 - Introduce strict typing regiment for [feature learning aggregations][getml.feature_learning.aggregations] and [loss functions][getml.feature_learning.loss_functions]
-- Clean up and maintenance of [example notebooks][examples-index], make them executable in Colab
-- More informative progress bar and status updates
+- Clean up and maintenance of [example notebooks][examples-index], make them executable in [Colab](https://colab.google/)
+- More informative progress bar and status updates using [rich](https://github.com/Textualize/rich?tab=readme-ov-file)
+- Completely reworked IO
+    - capitalize on [PyArrow](https://arrow.apache.org/docs/python/index.html) to keep track with the fast pace of the Python DS ecosystem
+    - Improved reliability, speed and maintainability 
+- Introduce [reflect-cpp](https://github.com/getml/reflect-cpp) for parsing and de/serialization
+- Independent docker runtime
+    - getML docker runtime now runs as a proper docker service
+#### Developer-focused
+- New build pipeline (docker and linux native)
+    - Rework of the complete build pipeline
+    - Introduce [CCache](https://ccache.dev/), [conan](https://conan.io/), [vcpkg](https://vcpkg.io/en/)
+    - User multi-stage docker builds leveraging buildx and buildkit
+    - Centralized `VERSION`
+- [Ruff](https://docs.astral.sh/ruff/) for linting and formatting
+- [Hatch](https://hatch.pypa.io/latest/) for python package management
+#### Bug fixes
+- Generalization of [`Placeholder.join`][getml.data.Placeholder.join]'s `on` argument 
+- Improved timestamp handling
+- Slicing improvements
+    - Slicing of `DataFrames` returned wrong results: Remove short circuit for slices with upper bound
+    - Introduce set semantics for slicing of `DataFrame` (return empty collections instead of erroring)
+- Fix displaying of parameter lists with values that exceed the presentable width
+- Fix displaying of `DataFrames` with one row or less
+- Fix progress bar output on Google Colab
 
 ### 1.4.0	<small>Oct 17, 2023</small> {id="1.4.0"}
 - Accelerated feature learning through [Fastboost][getml.feature_learning.Fastboost]
