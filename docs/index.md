@@ -8,7 +8,7 @@ hide:
 
 <center>
 
-[**What's new?** | getML 1.4 release &rarr;][release-notes]
+[**What's new?** | getML 1.5 release &rarr;][release-notes]
 {: .pill }
 
 </center>
