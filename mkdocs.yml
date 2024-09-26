@@ -315,6 +315,7 @@ nav:
       - Any platform: install/uninstall.md
     - Archive:
       - Archive: install/packages/archive.md
+      - Release Notes: install/release-notes.md
 
   - Enterprise:
     - enterprise/index.md
