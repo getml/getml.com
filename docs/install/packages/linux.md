@@ -5,7 +5,7 @@ Install [getML Community edition](https://github.com/getml/getml-community) with
 ```py
 pip install getml
 ```
-The will install both the [Python API][python-api-concepts] and the [Engine][engine-concepts] on your Linux machine. You are done.
+This will install both the [Python API][python-api-concepts] and the [Engine][engine-concepts] on your Linux machine. And you are done.
 
 
 !!! enterprise-adm "Enterprise Edition"
@@ -59,7 +59,7 @@ To run the engine, execute:
 ```bash
 ./getML
 ```
-If a global installation is sucessful, getML is added to `/usr/local/bin` which should be on already on `PATH` on every distribution. If the Engine was installed to the user home directory, you can add the installation directory to your `PATH` variable if you want to call the getML [CLI][cli] from anywhere.
+If a global installation is successful, getML is added to `/usr/local/bin` which should be on already on `PATH` on every distribution. If the Engine was installed to the user home directory, you can add the installation directory to your `PATH` variable if you want to call the getML [CLI][cli] from anywhere.
 
 ```bash
 export PATH=$PATH:/path/to/getml-1.5.0-ARCH-community-edition-linux
