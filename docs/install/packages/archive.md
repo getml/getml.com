@@ -1,7 +1,7 @@
 <!-- # Installing from versioned archives -->
 # getML Community versions archive
 
-The getML Community edition is provided as downloadable, versioned archives for each release.
+The getML Community edition is provided as downloadable, versioned Tar archive for each release.
 
 ### Version 1.5.0
 
