@@ -314,7 +314,7 @@ nav:
     - Uninstall:
       - Any platform: install/uninstall.md
     - Archive:
-      - Archive: install/packages/archive.md
+      - Versions: install/packages/archive.md
       - Release Notes: install/release-notes.md
 
   - Enterprise:
