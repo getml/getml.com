@@ -12,7 +12,7 @@ version = "0.0.1"
 dependencies = [
   "mkdocs~=1.6",
   "mkdocstrings-python~=1.10",
-  "mkdocs-material @ git+https://{env:GH_C17_DEV_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git@9.5.30-insiders-4.53.11",
+  "mkdocs-material @ git+https://{env:GH_C17_DEV_TOKEN}@github.com/getml/mkdocs-material-insiders.git",
   "mkdocs-table-reader-plugin~=2.2",
   "black~=24.4",
   "mike~=2.1",
