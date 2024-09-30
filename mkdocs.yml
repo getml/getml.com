@@ -169,12 +169,22 @@ plugins:
         - mailto:*
         - 'data:image/*'
         - '#*'
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      exclude:
+        - index.md
+        - enterprise/**
+        - about/**
+        - contact/**
   - git-committers:
       enabled: !ENV [ENABLED_GIT_COMMITTERS, false]
       repository: getml/getml-docs
       branch: develop
       token: !ENV [GH_C17_DEV_TOKEN, ""]
+      exclude:
+        - index.md
+        - enterprise/**
+        - about/**
+        - contact/**
   - minify:
       minify_html: !ENV [ENABLED_MINIFY, False]
       htmlmin_opts:
