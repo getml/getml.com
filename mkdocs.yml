@@ -313,9 +313,10 @@ nav:
       - Build Engine & API: install/source/build.md
     - Uninstall:
       - Any platform: install/uninstall.md
-    - Archive:
-      - Versions: install/packages/archive.md
-      - Release Notes: install/release-notes.md
+    - Package:
+      - Download: install/packages/package.md
+    - Changelog: 
+      - install/changelog.md
 
   - Enterprise:
     - enterprise/index.md
