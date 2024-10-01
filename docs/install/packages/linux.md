@@ -22,7 +22,7 @@ This will install both the [Python API][python-api-concepts] and the [Engine][en
 In some cases, it might be preferred to install the Engine separately on Linux
 using [CLI][cli]. For example, if you want to use the [Enterprise
 edition][enterprise-benefits] of the Engine. You can download the current
-release's package from the [download page][packge-download].
+release's package from the [download page][package-download].
 
 If you want to download getML from the command line, you can use the following
 commands. Replace `<arch>` with either `amd64` or `arm64`, depending on your
@@ -38,7 +38,8 @@ curl -LO https://static.getml.com/download/<version>/getml-community-<version>-<
 # if [ "$(sha256sum getml-community-<version>-<arch>-linux.tar.gz) == $(cat getml-community-<version>-<arch>-linux.tar.gz.sha256)" ]; then echo "OK"; else echo "NOT OK"; fi
 
 tar -xzf getml-community-<version>-<arch>-linux.tar.gz
-getml-community-<version>-<arch>-linux/getML install
+cd getml-community-<version>-<arch>-linux
+./getML install
 ```
 
 The output of the `install` command will tell you where the Engine has been installed.
