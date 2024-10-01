@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<!-- Theme-related style sheets -->
+{% block styles %}
+  {{ super() }}
+
+  <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
+  <link
+    rel="stylesheet"
+    href="{{ 'assets/stylesheets/custom.css' | url }}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ 'assets/stylesheets/getml.css' | url }}"
+  />
+{% endblock %}
+
+<!-- Announcement bar -->
+{% block announce_main %}
+  For updates follow <strong>@squidfunk</strong> on
+  <a rel="me" href="https://fosstodon.org/@squidfunk">
+    <span class="twemoji mastodon">
+      {% include ".icons/fontawesome/brands/mastodon.svg" %}
+    </span>
+    <strong>Fosstodon</strong>
+  </a>
+  and
+  <a href="https://twitter.com/squidfunk">
+    <span class="twemoji twitter">
+      {% include ".icons/fontawesome/brands/x-twitter.svg" %}
+    </span>
+    <strong>X</strong> (Twitter)
+  </a>
+{% endblock %}
+
+<!-- Theme-related JavaScript -->
+{% block scripts %}
+  {{ super() }}
+
+  <!-- Extra JavaScript (can't be set in mkdocs.yml due to content hash) -->
+  <script src="{{ 'assets/javascripts/custom.js' | url }}"></script>
+
+{% endblock %}

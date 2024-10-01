@@ -1,0 +1,29 @@
+<!-- Tags -->
+{% include "partials/tags.html" %}
+
+<!-- Actions -->
+{% include "partials/actions.html" %}
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+{% if "\x3ch1" not in page.content %}
+    <h1 class="{% if page.meta.description %}title-description{% endif %}">{{ page.title | d(config.site_name, true)}}</h1>
+    {% if page.meta.description %}
+        <p class="description">{{ page.meta.description }}</p>
+        <hr class="description">
+    {% endif %}
+{% endif %}
+
+<!-- Page content -->
+{{ page.content }}
+
+<!-- Source file information -->
+{% include "partials/source-file.html" %}
+
+<!-- Was this page helpful? -->
+{% include "partials/feedback.html" %}
+
+<!-- Comment system -->
+{% include "partials/comments.html" %}

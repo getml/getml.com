@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+
+<!-- Site title -->
+{% block htmltitle %}
+  <title>{{ config.site_name }}</title>
+{% endblock %}
+
+<!-- Custom front matter -->
+{% block extrahead_ %}
+  <link rel="me" href="https://fosstodon.org/@squidfunk" />
+{% endblock %}
+
+<!-- Theme-related style sheets -->
+{% block styles %}
+  {{ super() }}
+
+  <!-- Extra style sheet (can't be set in mkdocs.yml due to content hash) -->
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/home.css' | url }}" />
+  <style>
+      .md-header__ellipsis, .md-header__version {
+          display: none !important;
+      }
+  </style>
+
+  <!-- Hack: detect Safari, so we can hack around problems with containment -->
+  <script>
+    if (navigator.vendor === "Apple Computer, Inc.")
+      document.documentElement.classList.add("safari")
+  </script>
+{% endblock %}
+
+<!-- Announcement bar -->
+{% block announce %}
+<style>
+div[data-md-component="announce"] button.md-banner__button {
+    display: none !important; /* if we dont have anything to announce */
+}
+</style>
+<!-- <div class="md-banner__announcement">
+    <b>getML 1.5 is live!</b> Download getML Community from <a href="github.com/getml/getml-community">GitHub</a> today.
+</div> -->
+<div class="md-banner__static">
+    <span class="chip">We are hiring</span> Join us in our <strong>Leipzig/DE</strong> offices. <a class="md-banner__static_cta" href="{{ 'about/careers' | url }}"><strong>Open positions</strong></a>
+    <div class="right">
+        <a class="md-banner__static_link" href="contact#how-can-we-help-you" target="_blank">Support</a>
+        <a class="md-banner__static_link" href="#" target="_blank">Log In</a>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Parallax container with contents -->
+{% block hero_ %}
+  {% include "partials/parallax.html" %}
+{% endblock %}
+
+<!-- Navigation tabs (collapsing) -->
+{% block tabs_ %}{% endblock %}
+
+<!-- Page content -->
+{% block content_ %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer_ %}{% endblock %}

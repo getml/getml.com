@@ -1,0 +1,120 @@
+name: Build and deploy documentation
+
+on:
+  push:
+    branches:
+      - develop
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      GH_C17_DEV_TOKEN: ${{ secrets.GH_C17_DEV_TOKEN }}
+      NOTEBOOKS_INCLUDE: '*.ipynb'
+      ENABLED_HTMLPROOFER: ${{ vars.ENABLED_HTMLPROOFER || 'False' }}
+      ENABLED_GIT_COMMITTERS: 'true'
+      ENABLED_MINIFY: 'true'
+      JUPYTER_PLATFORM_DIRS: 1
+    steps:
+      - name: Checkout getml-docs repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.GITLAB_MONOREPO_SSH_KEY }}" > ~/.ssh/id_ed25519_gitlab_monorepo
+          chmod 600 ~/.ssh/id_ed25519_gitlab_monorepo
+          
+          # Set up SSH config
+          echo "Host gitlab.com" >> ~/.ssh/config
+          echo "  HostName gitlab.com" >> ~/.ssh/config
+          echo "  User git" >> ~/.ssh/config
+          echo "  IdentityFile ~/.ssh/id_ed25519_gitlab_monorepo" >> ~/.ssh/config
+
+          # Add GitLab to known_hosts
+          ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+
+      - name: Install Hatch & create environment
+        run: |
+          pip install hatch~=1.12 
+          hatch env create
+
+      - name: Run Jupyter paths to fix deprecation warning
+        run: |
+          hatch run jupyter --paths
+
+      - name: Clone monorepo & install getML
+        run: |
+          git clone -b $BRANCH git@gitlab.com:getml/all/monorepo.git
+          hatch run pip install monorepo/src/python-api
+        env:
+          BRANCH: ${{ vars.MONOREPO_DEV_BRANCH }}
+
+      - name: Set git credentials
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Fetch latest commit from gh-pages
+        run: |
+          git fetch origin gh-pages --depth=1
+
+      - name: Deploy dev version if develop branch
+        if: "github.ref == 'refs/heads/develop'"
+        run: |
+          hatch run mike deploy dev
+
+      - name: Deploy release version if tag
+        if: "startsWith(github.ref, 'refs/tags/v')"
+        run: |
+          TAG_VERSION=$(echo "${{ github.ref }}" | sed -n 's/refs\/tags\/v\([0-9]\+\.[0-9]\+\).*/\1/p')
+
+          if [[ -z "$TAG_VERSION" ]]; then
+            echo "TAG_VERSION could not be obtained from ${{ github.ref }}. Make sure the tag has 'vX.Y' in the beginning (e.g v1.5). Exiting.."
+            exit 1
+          fi
+
+          LATEST_DEPLOYED_VERSION=$(hatch run mike list | grep -E '^[0-9]+\.[0-9]+' | awk '{print $1}' | sort -V | tail -n 1)
+
+          if [[ -z $LATEST_DEPLOYED_VERSION ]]; then
+            echo "No numbered deployed version found. Deploying $TAG_VERSION with the latest alias"
+            hatch run mike deploy $TAG_VERSION latest
+
+          elif [[ $(echo -e "$TAG_VERSION\n$LATEST_DEPLOYED_VERSION" | sort -V | tail -n 1) == "$TAG_VERSION" && "$TAG_VERSION" != "$LATEST_DEPLOYED_VERSION" ]]; then
+            echo "Tag version ($TAG_VERSION) is higher than the currently deployed latest version ($LATEST_DEPLOYED_VERSION). Deploying $TAG_VERSION with the latest alias"
+            hatch run mike deploy --update-aliases $TAG_VERSION latest
+
+          else
+            echo "Tag version ($TAG_VERSION) is not higher than the currently deployed latest version ($LATEST_DEPLOYED_VERSION). Deploying $TAG_VERSION without updating the latest alias"
+            hatch run mike deploy $TAG_VERSION
+            
+          fi
+
+      - name: Add CNAME file
+        run: |
+          git checkout gh-pages
+          if [ ! -f CNAME ]; then
+          echo "getml.com" > CNAME
+
+          git add CNAME
+          git commit -m "Add CNAME file if it doesn't exist"
+          fi
+      
+      - name: Push all changes to gh-pages
+        run: |
+          git push origin gh-pages

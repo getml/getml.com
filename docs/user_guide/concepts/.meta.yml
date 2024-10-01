@@ -1,0 +1,4 @@
+# Configuration
+theme:
+  features:
+    - navigation.path

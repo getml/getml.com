@@ -1,0 +1,26 @@
+[project]
+name = "getml-docs"
+keywords = []
+authors = [
+  { name = "Awais", email = "awais@getml.com" },
+  { name = "Jan", email = "jan@getml.com" }
+]
+
+version = "0.0.1"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "mkdocs~=1.6",
+  "mkdocstrings-python~=1.10",
+  "mkdocs-material @ git+https://{env:GH_C17_DEV_TOKEN}@github.com/getml/mkdocs-material-insiders.git",
+  "mkdocs-table-reader-plugin~=2.2",
+  "black~=24.4",
+  "mike~=2.1",
+  "mkdocs-redirects~=1.2",
+  "mkdocs-jupyter~=0.24.8",
+  "mkdocs-htmlproofer-plugin~=1.2",
+  "mkdocs-git-revision-date-localized-plugin~=1.2",
+  "mkdocs-git-committers-plugin-2~=2.3",
+  "mkdocs-minify-plugin~=0.8.0"
+]
+python = "3.11"

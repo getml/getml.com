@@ -1,0 +1,7 @@
+hide:
+  - path
+  - nav
+  - toc
+
+search:
+  exclude: true

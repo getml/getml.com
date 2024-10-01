@@ -1,0 +1,133 @@
+.jupyter-wrapper .jp-OutputArea-output pre {
+    font-size: 0.85em !important;
+}
+
+.jupyter-wrapper .jp-OutputArea-output {
+    font-size: 0.8em !important;
+}
+
+.jp-OutputArea-executeResult>span {
+    font-size: 1.5em !important;
+}
+
+.inline-icon {
+    height: 1rem !important;
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.badges {
+    font-size: 0.7em;
+    background-color: rgb(98 65 190 / 35%);
+    color: hsla(var(--md-hue),0%,100%,1);
+    text-decoration: none;
+    padding: 4px 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.badges:hover {
+    background-color: rgb(98 65 190 / 80%);
+}
+
+.jupyter-wrapper .highlight pre{
+    font-size: 0.8em !important;
+}
+
+
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: var(--md-code-bg-color--lighter);
+    padding: 16px 8px 8px 6px;
+    border-radius: 6px;
+}
+
+.md-header__title span.ntitle {
+    display: none;
+}
+
+/* .md-typeset code, .md-typeset kbd, .md-typeset pre {
+    background: var(--md-code-bg-color);
+} */
+
+.jupyter-wrapper .jp-InputArea-editor {
+    border-color: var(--md-default-fg-color--lightest) !important;
+}
+
+[data-md-color-scheme=slate] table.dataframe tbody tr:nth-child(odd) {
+    background: var(--md-code-bg-color) !important;
+}
+
+* {
+    --jp-cell-editor-background: var(--md-code-bg-color);
+}
+
+@media screen and (min-width: 76.25em) {
+
+    .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+        background: none !important;
+        box-shadow: none !important;
+        margin-top: 0;
+        position: relative;
+        /* top: 0; */
+        z-index: 1
+    }
+
+    a.md-nav__link span.ntitle { 
+        /* /* font-size: .72rem; */
+        font-size: .64rem;
+        /* font-weight: bold; */
+    }
+    
+    a.md-nav__link span.ndesc {
+        display: block;
+        font-size: .64rem;
+        padding-top: .1rem;
+        opacity: .64;
+    }
+    
+    a.md-nav__link--active span.ndesc {
+        color: var(--md-typeset-color);
+    }
+
+    .md-sidebar--secondary .md-sidebar__scrollwrap .md-nav{
+        font-size: .64rem !important;
+    }
+
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        /* background-color: var(--md-code-bg-color--lighter); */
+        padding: 16px 8px 8px 6px;
+        border-radius: 6px;
+    }
+    
+    .md-sidebar--secondary .md-sidebar__scrollwrap .md-sidebar__inner {
+        border-left: 1px solid var(--md-default-fg-color--lightest);
+    }
+
+    .md-nav--secondary .md-nav__title {
+        background: none;
+        box-shadow: none;
+        margin-top: 0;
+        position: relative;
+        /* top: 0; */
+        z-index: 1        
+    }
+
+    .jupyter-wrapper .jp-Notebook, .jupyter-wrapper .jp-Cell {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .jupyter-wrapper .jp-Collapser {
+        flex: 0 0 0 !important;
+    }
+
+    .md-content__inner:before {
+        height: 0 !important;
+    }
+
+    .jupyter-wrapper .jp-Notebook {
+        padding-top: 1.5rem !important;
+    }
+}

@@ -1,0 +1,3 @@
+hide:
+  - path
+template: notebooks.html
