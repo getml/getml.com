@@ -1,0 +1,815 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=...><meta name=author content="Code17 GmbH"><link href="https://dev.getml.com/latest/reference/data/columns/" rel="canonical"><link href=../access/ rel=prev><link href=../relationship/ rel=next><link rel=icon href=../../../images/favicon.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.5.39+insiders-4.53.14"><title>columns - getML Developer Portal</title><link rel=stylesheet href=../../../assets/stylesheets/main.fd1ad6e4.min.css><link rel=stylesheet href=../../../assets/stylesheets/palette.ab4e12ef.min.css><link rel=stylesheet href=../../../assets/stylesheets/custom.css><link rel=stylesheet href=../../../assets/stylesheets/getml.css><link rel=stylesheet href=../../../assets/stylesheets/api-reference.css><link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=../../../assets/_mkdocstrings.css><script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><script id=__analytics>function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script><script>"undefined"!=typeof __md_analytics&&__md_analytics()</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#getml.data.columns class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <div data-md-color-scheme=default data-md-component=outdated hidden> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../../.. title="getML Developer Portal" class="md-header__button md-logo" aria-label="getML Developer Portal" data-md-component=logo> <img id=logo_light_mode src=../../../assets/brand/getml-light.svg alt=logo> <img id=logo_dark_mode src=../../../assets/brand/getml-dark.svg alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic__nover> <span class="md-ellipsis hidden"> getML Developer Portal </span> </div> <div class=md-header__topic__nover data-md-component=header-topic> <span class=md-ellipsis> columns </span> </div> </div> </div> <div class=md-header__version> <div class="md-header__topic version-button"> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media=(prefers-color-scheme) data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <?xml version="1.0" encoding="UTF-8"?> <svg xmlns=http://www.w3.org/2000/svg version=1.1 viewbox="0 0 512 512"> <g> <g id=Layer_1> <path d=M361.5,1.2c5,2.1,8.6,6.6,9.6,11.9l19.9,107.9,107.9,19.8c5.3,1,9.8,4.6,11.9,9.6,2.1,5,1.5,10.7-1.6,15.2l-62.3,90.4,62.3,90.3c3.1,4.5,3.7,10.2,1.6,15.2s-6.6,8.6-11.9,9.6l-107.9,19.9-19.9,107.9c-1,5.3-4.6,9.8-9.6,11.9-5,2.1-10.7,1.5-15.2-1.6l-90.3-62.3-90.3,62.3c-4.5,3.1-10.2,3.7-15.2,1.6s-8.6-6.6-9.6-11.9l-19.9-107.9-107.9-19.9c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7,1.6-15.2l62.3-90.3L2.8,165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6,11.9-9.6l107.9-19.9,19.9-107.9c1-5.3,4.6-9.8,9.6-11.9s10.7-1.5,15.2,1.6l90.3,62.3L346.3,2.8c4.5-3.1,10.2-3.7,15.2-1.6ZM384,256c0-70.7-57.3-128-128-128s-128,57.3-128,128,57.3,128,128,128,128-57.3,128-128Z /> </g> </g> </svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=white data-md-color-accent=deep-purple aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 384 512"><!-- Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><defs><style>.fa-secondary{opacity:.4}</style></defs><path class=fa-primary d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=black data-md-color-accent=deep-purple aria-label="Switch to system preference" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to system preference" for=__palette_0 hidden> <?xml version="1.0" encoding="UTF-8"?> <svg xmlns=http://www.w3.org/2000/svg version=1.1 viewbox="0 0 576 512"> <defs> <style>
+      .cls-1 {
+        isolation: isolate;
+        opacity: .4;
+      }
+    </style> </defs> <g> <g id=Layer_1> <g id=Layer_1-2 data-name=Layer_1> <path d=M24,355h528c13.3,0,24,10.7,24,24s-10.7,24-24,24H24c-13.3,0-24-10.7-24-24s10.7-24,24-24Z /> <path class=cls-1 d=M403.1,92.1c-1-5.3-4.6-9.8-9.6-11.9s-10.7-1.5-15.2,1.6l-90.3,62.3-90.3-62.3c-4.5-3.1-10.2-3.7-15.2-1.6s-8.6,6.6-9.6,11.9l-19.9,107.9-107.9,19.9c-5.3,1-9.8,4.6-11.9,9.6s-1.5,10.7,1.6,15.2l51.3,74.3h74.9c7.9-63.1,61.7-112,127-112s119.1,48.9,127,112h74.9l51.3-74.3c3.1-4.5,3.7-10.2,1.6-15.2s-6.6-8.6-11.9-9.6l-107.9-19.9-19.9-107.9h0ZM382.7,319c-7.6-45.4-47.1-80-94.7-80s-87.1,34.6-94.7,80h189.4Z /> </g> </g> </g> </svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <a class="md-header__button md-button md-button--primary" href=../../../contact>Contact</a> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../../../user_guide/ class=md-tabs__link> User Guide </a> </li> <li class=md-tabs__item> <a href=../../../install/ class=md-tabs__link> Install </a> </li> <li class=md-tabs__item> <a href=../../../enterprise/ class=md-tabs__link> Enterprise </a> </li> <li class="md-tabs__item md-tabs__item--active"> <a href=../../ class=md-tabs__link> API Reference </a> </li> <li class=md-tabs__item> <a href=../../../examples/ class=md-tabs__link> Examples </a> </li> <li class=md-tabs__item> <a href=../../../about/company/ class=md-tabs__link> About </a> </li> <li class=md-tabs__item> <a href=../../../blog/ class=md-tabs__link> Blog </a> </li> <li class=md-tabs__item> <a href="https://docs.getml.com" class="md-tabs__link" target="_blank" rel="noopener"> getML 1.4 doc </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../../.. title="getML Developer Portal" class="md-nav__button md-logo" aria-label="getML Developer Portal" data-md-component=logo> <img id=logo_light_mode src=../../../assets/brand/getml-light.svg alt=logo> <img id=logo_dark_mode src=../../../assets/brand/getml-dark.svg alt=logo> </a> getML Developer Portal </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../user_guide/ class=md-nav__link> <span class=md-ellipsis> User Guide </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../install/ class=md-nav__link> <span class=md-ellipsis> Install </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../enterprise/ class=md-nav__link> <span class=md-ellipsis> Enterprise </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5 checked> <div class="md-nav__link md-nav__container"> <a href=../../ class="md-nav__link "> <span class=md-ellipsis> API Reference </span> </a> <label class="md-nav__link " for=__nav_5 id=__nav_5_label tabindex> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=true> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> API Reference </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5_2 checked> <div class="md-nav__link md-nav__container"> <a href=../../ class="md-nav__link "> <span class=md-ellipsis> Python API </span> </a> <label class="md-nav__link " for=__nav_5_2 id=__nav_5_2_label tabindex> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_2_label aria-expanded=true> <label class=md-nav__title for=__nav_5_2> <span class="md-nav__icon md-icon"></span> Python API </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_5_2_2 checked> <div class="md-nav__link md-nav__container"> <a href=../ class="md-nav__link "> <span class=md-ellipsis> getml.data </span> </a> <label class="md-nav__link " for=__nav_5_2_2 id=__nav_5_2_2_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=3 aria-labelledby=__nav_5_2_2_label aria-expanded=true> <label class=md-nav__title for=__nav_5_2_2> <span class="md-nav__icon md-icon"></span> getml.data </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../container/ class=md-nav__link> <span class=md-ellipsis> Container </span> </a> </li> <li class=md-nav__item> <a href=../data_frame/ class=md-nav__link> <span class=md-ellipsis> DataFrame </span> </a> </li> <li class=md-nav__item> <a href=../data_model/ class=md-nav__link> <span class=md-ellipsis> DataModel </span> </a> </li> <li class=md-nav__item> <a href=../placeholder/ class=md-nav__link> <span class=md-ellipsis> Placeholder </span> </a> </li> <li class=md-nav__item> <a href=../roles_obj/ class=md-nav__link> <span class=md-ellipsis> Roles </span> </a> </li> <li class=md-nav__item> <a href=../star_schema/ class=md-nav__link> <span class=md-ellipsis> StarSchema </span> </a> </li> <li class=md-nav__item> <a href=../subset/ class=md-nav__link> <span class=md-ellipsis> Subset </span> </a> </li> <li class=md-nav__item> <a href=../time_series/ class=md-nav__link> <span class=md-ellipsis> TimeSeries </span> </a> </li> <li class=md-nav__item> <a href=../view/ class=md-nav__link> <span class=md-ellipsis> View </span> </a> </li> <li class=md-nav__item> <a href=../access/ class=md-nav__link> <span class=md-ellipsis> access </span> </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> <span class=md-ellipsis> columns </span> <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> columns </span> </a> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;BooleanColumnView </span> </a> <nav class=md-nav aria-label= BooleanColumnView> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView.is_false class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;is_false </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView.as_num class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;as_num </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.FloatColumn class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FloatColumn </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.FloatColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FloatColumnView </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.StringColumn class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;StringColumn </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.StringColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;StringColumnView </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.arange class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;arange </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.rowid class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;rowid </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.collect_footer_data class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;collect_footer_data </span> </a> <nav class=md-nav aria-label= collect_footer_data> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.collect_footer_data.Footer class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Footer </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.aggregation class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;aggregation </span> </a> <nav class=md-nav aria-label= aggregation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.aggregation.Aggregation class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Aggregation </span> </a> <nav class=md-nav aria-label= Aggregation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.aggregation.Aggregation.get class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.format class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;format </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.last_change class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;last_change </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.last_change_from_col class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;last_change_from_col </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.length class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;length </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.length_property class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;length_property </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.make_iter class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;make_iter </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.parse class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;parse </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.repr class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;repr </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.repr_html class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;repr_html </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.subroles class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;subroles </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.to_arrow class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;to_arrow </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.to_numpy class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;to_numpy </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.unique class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;unique </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.unit class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;unit </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.from_value.from_value class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;from_value </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.random.random class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;random </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../relationship/ class=md-nav__link> <span class=md-ellipsis> relationship </span> </a> </li> <li class=md-nav__item> <a href=../roles/ class=md-nav__link> <span class=md-ellipsis> roles </span> </a> </li> <li class=md-nav__item> <a href=../split/ class=md-nav__link> <span class=md-ellipsis> split </span> </a> </li> <li class=md-nav__item> <a href=../time/ class=md-nav__link> <span class=md-ellipsis> time </span> </a> </li> <li class=md-nav__item> <a href=../subroles/ class=md-nav__link> <span class=md-ellipsis> subroles </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../../database/database/ class=md-nav__link> <span class=md-ellipsis> getml.database </span> </a> </li> <li class=md-nav__item> <a href=../../datasets/datasets/ class=md-nav__link> <span class=md-ellipsis> getml.datasets </span> </a> </li> <li class=md-nav__item> <a href=../../engine/engine/ class=md-nav__link> <span class=md-ellipsis> getml.engine </span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../hyperopt/ class=md-nav__link> <span class=md-ellipsis> getml.hyperopt </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../feature_learning/ class=md-nav__link> <span class=md-ellipsis> getml.feature_learning </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../project/ class=md-nav__link> <span class=md-ellipsis> getml.project </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../preprocessors/ class=md-nav__link> <span class=md-ellipsis> getml.preprocessors </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../pipeline/ class=md-nav__link> <span class=md-ellipsis> getml.pipeline </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../predictors/ class=md-nav__link> <span class=md-ellipsis> getml.predictors </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../sqlite3/ class=md-nav__link> <span class=md-ellipsis> getml.sqlite3 </span> <span class="md-nav__icon md-icon"></span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--section md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5_3> <label class=md-nav__link for=__nav_5_3 id=__nav_5_3_label tabindex> <span class=md-ellipsis> Command Line </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_5_3_label aria-expanded=false> <label class=md-nav__title for=__nav_5_3> <span class="md-nav__icon md-icon"></span> Command Line </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../cli/engine/ class=md-nav__link> <span class=md-ellipsis> Engine CLI </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../examples/ class=md-nav__link> <span class=md-ellipsis> Examples </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../about/company/ class=md-nav__link> <span class=md-ellipsis> About </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class="md-nav__item md-nav__item--pruned md-nav__item--nested"> <a href=../../../blog/ class=md-nav__link> <span class=md-ellipsis> Blog </span> <span class="md-nav__icon md-icon"></span> </a> </li> <li class=md-nav__item> <a href="https://docs.getml.com" class="md-nav__link" target="_blank" rel="noopener"> <span class=md-ellipsis> getML 1.4 doc </span> </a> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;BooleanColumnView </span> </a> <nav class=md-nav aria-label= BooleanColumnView> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView.is_false class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;is_false </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.BooleanColumnView.as_num class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;as_num </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.FloatColumn class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FloatColumn </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.FloatColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;FloatColumnView </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.StringColumn class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;StringColumn </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.StringColumnView class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;StringColumnView </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.arange class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;arange </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.rowid class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;rowid </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.collect_footer_data class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;collect_footer_data </span> </a> <nav class=md-nav aria-label= collect_footer_data> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.collect_footer_data.Footer class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Footer </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.aggregation class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;aggregation </span> </a> <nav class=md-nav aria-label= aggregation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.aggregation.Aggregation class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Aggregation </span> </a> <nav class=md-nav aria-label= Aggregation> <ul class=md-nav__list> <li class=md-nav__item> <a href=#getml.data.columns.aggregation.Aggregation.get class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;get </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#getml.data.columns.format class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;format </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.last_change class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;last_change </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.last_change_from_col class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;last_change_from_col </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.length class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;length </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.length_property class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;length_property </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.make_iter class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;make_iter </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.parse class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;parse </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.repr class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;repr </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.repr_html class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;repr_html </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.subroles class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;subroles </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.to_arrow class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;to_arrow </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.to_numpy class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;to_numpy </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.unique class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;unique </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.unit class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;unit </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.from_value.from_value class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;from_value </span> </a> </li> <li class=md-nav__item> <a href=#getml.data.columns.random.random class=md-nav__link> <span class=md-ellipsis> <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;random </span> </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <nav class=md-path aria-label=Navigation> <ol class=md-path__list> <li class=md-path__item> <a href=../../.. class=md-path__link> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-path__item> <a href=../../ class=md-path__link> <span class=md-ellipsis> API Reference </span> </a> </li> <li class=md-path__item> <a href=../../ class=md-path__link> <span class=md-ellipsis> Python API </span> </a> </li> <li class=md-path__item> <a href=../ class=md-path__link> <span class=md-ellipsis> getml.data </span> </a> </li> </ol> </nav> <article class="md-content__inner md-typeset"> <div class="doc doc-object doc-module"> <h1 id=getml.data.columns class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">getml.data.columns</span> </h1> <div class="doc doc-contents first"> <p>Handlers for 1-d arrays storing the data of an individual variable.</p> <p>Like the <a class="autorefs autorefs-internal" href=../data_frame/#getml.data.DataFrame><code>DataFrame</code></a>, the <a class="autorefs autorefs-internal" href=#getml.data.columns><code>columns</code></a> do not contain any actual data themselves but are only handlers to objects within the getML Engine. These containers store data of a single variable in a one-dimensional array of a uniform type.</p> <p>Columns are <em>immutable</em> and <em>lazily evaluated</em>.</p> <ul> <li> <p><em>Immutable</em> means that there are no in-place operation on the columns. Any change to the column will return a new, changed column.</p> </li> <li> <p><em>Lazy evaluation</em> means that operations won't be executed until results are required. This is reflected in the <em>column views</em>: Column views do not exist until they are required.</p> </li> </ul> <details class=example> <summary>Example</summary> <p>This is what some column operations might look like:</p> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+
+<span class=kn>import</span> <span class=nn>getml.data</span> <span class=k>as</span> <span class=nn>data</span>
+<span class=kn>import</span> <span class=nn>getml.engine</span> <span class=k>as</span> <span class=nn>engine</span>
+<span class=kn>import</span> <span class=nn>getml.data.roles</span> <span class=k>as</span> <span class=nn>roles</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>engine</span><span class=o>.</span><span class=n>set_project</span><span class=p>(</span><span class=s2>&quot;examples&quot;</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># Create a data frame from a JSON string</span>
+
+<span class=n>json_str</span> <span class=o>=</span> <span class=s2>&quot;&quot;&quot;{</span>
+<span class=s2>    &quot;names&quot;: [&quot;patrick&quot;, &quot;alex&quot;, &quot;phil&quot;, &quot;ulrike&quot;],</span>
+<span class=s2>    &quot;column_01&quot;: [2.4, 3.0, 1.2, 1.4],</span>
+<span class=s2>    &quot;join_key&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],</span>
+<span class=s2>    &quot;time_stamp&quot;: [&quot;2019-01-01&quot;, &quot;2019-01-02&quot;, &quot;2019-01-03&quot;, &quot;2019-01-04&quot;]</span>
+<span class=s2>}&quot;&quot;&quot;</span>
+
+<span class=n>my_df</span> <span class=o>=</span> <span class=n>data</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span>
+    <span class=s2>&quot;MY DF&quot;</span><span class=p>,</span>
+    <span class=n>roles</span><span class=o>=</span><span class=p>{</span>
+        <span class=s2>&quot;unused_string&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>,</span> <span class=s2>&quot;join_key&quot;</span><span class=p>,</span> <span class=s2>&quot;time_stamp&quot;</span><span class=p>],</span>
+        <span class=s2>&quot;unused_float&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]}</span>
+<span class=p>)</span><span class=o>.</span><span class=n>read_json</span><span class=p>(</span>
+    <span class=n>json_str</span>
+<span class=p>)</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col1</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]</span>
+
+<span class=c1># ----------------</span>
+
+<span class=c1># col2 is a column view.</span>
+<span class=c1># The operation is not executed yet.</span>
+<span class=n>col2</span> <span class=o>=</span> <span class=mf>2.0</span> <span class=o>-</span> <span class=n>col1</span>
+
+<span class=c1># This is when &#39;2.0 - col1&#39; is actually</span>
+<span class=c1># executed.</span>
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;column_02&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col2</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=s2>&quot;column_02&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>numerical</span><span class=p>)</span>
+
+<span class=c1># If you want to update column_01,</span>
+<span class=c1># you can&#39;t do that in-place.</span>
+<span class=c1># You need to replace it with a new column</span>
+<span class=n>col1</span> <span class=o>=</span> <span class=n>col1</span> <span class=o>+</span> <span class=n>col2</span>
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col1</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=s2>&quot;column_01&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>numerical</span><span class=p>)</span>
+</code></pre></div> </details> <div class="doc doc-children"> <div class="doc doc-object doc-class"> <h2 id=getml.data.columns.BooleanColumnView class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">BooleanColumnView</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>BooleanColumnView</span><span class=p>(</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><span title=getml.data.columns.columns.OperandType>OperandType</span></span><span class=p>],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><span title=getml.data.columns.columns.OperandType>OperandType</span></span><span class=p>],</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><span title=getml.data.columns.columns._View>_View</span></code></p> <p>Handle for a lazily evaluated boolean column view.</p> <p>Column views do not actually exist - they will be lazily evaluated when necessary.</p> <p>They can be used to take subselection of the data frame or to update other columns.</p> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+
+<span class=kn>import</span> <span class=nn>getml.data</span> <span class=k>as</span> <span class=nn>data</span>
+<span class=kn>import</span> <span class=nn>getml.engine</span> <span class=k>as</span> <span class=nn>engine</span>
+<span class=kn>import</span> <span class=nn>getml.data.roles</span> <span class=k>as</span> <span class=nn>roles</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>engine</span><span class=o>.</span><span class=n>set_project</span><span class=p>(</span><span class=s2>&quot;examples&quot;</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># Create a data frame from a JSON string</span>
+
+<span class=n>json_str</span> <span class=o>=</span> <span class=s2>&quot;&quot;&quot;{</span>
+<span class=s2>    &quot;names&quot;: [&quot;patrick&quot;, &quot;alex&quot;, &quot;phil&quot;, &quot;ulrike&quot;],</span>
+<span class=s2>    &quot;column_01&quot;: [2.4, 3.0, 1.2, 1.4],</span>
+<span class=s2>    &quot;join_key&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],</span>
+<span class=s2>    &quot;time_stamp&quot;: [&quot;2019-01-01&quot;, &quot;2019-01-02&quot;, &quot;2019-01-03&quot;, &quot;2019-01-04&quot;]</span>
+<span class=s2>}&quot;&quot;&quot;</span>
+
+<span class=n>my_df</span> <span class=o>=</span> <span class=n>data</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span>
+    <span class=s2>&quot;MY DF&quot;</span><span class=p>,</span>
+    <span class=n>roles</span><span class=o>=</span><span class=p>{</span>
+        <span class=s2>&quot;unused_string&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>,</span> <span class=s2>&quot;join_key&quot;</span><span class=p>,</span> <span class=s2>&quot;time_stamp&quot;</span><span class=p>],</span>
+        <span class=s2>&quot;unused_float&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]}</span>
+<span class=p>)</span><span class=o>.</span><span class=n>read_json</span><span class=p>(</span>
+    <span class=n>json_str</span>
+<span class=p>)</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>names</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>]</span>
+
+<span class=c1># This is a virtual boolean column.</span>
+<span class=n>a_or_p_in_names</span> <span class=o>=</span> <span class=n>names</span><span class=o>.</span><span class=n>contains</span><span class=p>(</span><span class=s2>&quot;p&quot;</span><span class=p>)</span> <span class=o>|</span> <span class=n>names</span><span class=o>.</span><span class=n>contains</span><span class=p>(</span><span class=s2>&quot;a&quot;</span><span class=p>)</span>
+
+<span class=c1># Creates a view containing</span>
+<span class=c1># only those entries, where &quot;names&quot; contains a or p.</span>
+<span class=n>my_view</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=n>a_or_p_in_names</span><span class=p>]</span>
+
+<span class=c1># ----------------</span>
+
+<span class=c1># Returns a new column, where all names</span>
+<span class=c1># containing &quot;rick&quot; are replaced by &quot;Patrick&quot;.</span>
+<span class=c1># Again, columns are immutable - this returns an updated</span>
+<span class=c1># version, but leaves the original column unchanged.</span>
+<span class=n>new_names</span> <span class=o>=</span> <span class=n>names</span><span class=o>.</span><span class=n>update</span><span class=p>(</span><span class=n>names</span><span class=o>.</span><span class=n>contains</span><span class=p>(</span><span class=s2>&quot;rick&quot;</span><span class=p>),</span> <span class=s2>&quot;Patrick&quot;</span><span class=p>)</span>
+
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;new_names&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>new_names</span>
+
+<span class=c1># ----------------</span>
+
+<span class=c1># Boolean columns can also be used to</span>
+<span class=c1># create binary target variables.</span>
+<span class=n>target</span> <span class=o>=</span> <span class=p>(</span><span class=n>names</span> <span class=o>==</span> <span class=s2>&quot;phil&quot;</span><span class=p>)</span>
+
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;target&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>target</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>target</span><span class=p>)</span>
+
+<span class=c1># By the way, instead of using the</span>
+<span class=c1># __setitem__ operator and .set_role(...)</span>
+<span class=c1># you can just use .add(...).</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>target</span><span class=p>,</span> <span class=s2>&quot;target&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>target</span><span class=p>)</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>296</span>
+<span class=normal>297</span>
+<span class=normal>298</span>
+<span class=normal>299</span>
+<span class=normal>300</span>
+<span class=normal>301</span>
+<span class=normal>302</span>
+<span class=normal>303</span>
+<span class=normal>304</span>
+<span class=normal>305</span>
+<span class=normal>306</span>
+<span class=normal>307</span>
+<span class=normal>308</span>
+<span class=normal>309</span>
+<span class=normal>310</span>
+<span class=normal>311</span>
+<span class=normal>312</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+    <span class=bp>self</span><span class=p>,</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>OperandType</span><span class=p>],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>OperandType</span><span class=p>],</span>
+<span class=p>):</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>BOOLEAN_COLUMN_VIEW</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operator_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>operator</span>
+
+    <span class=k>if</span> <span class=n>operand1</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand1_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand1</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=n>operand2</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand2_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand2</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> <div class="doc doc-object doc-function"> <h3 id=getml.data.columns.BooleanColumnView.is_false class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">is_false</span> </h3> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>is_false</span><span class=p>()</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Whether an entry is False - effectively inverts the Boolean column.</p> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>388</span>
+<span class=normal>389</span>
+<span class=normal>390</span>
+<span class=normal>391</span>
+<span class=normal>392</span>
+<span class=normal>393</span>
+<span class=normal>394</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>is_false</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;Whether an entry is False - effectively inverts the Boolean column.&quot;&quot;&quot;</span>
+    <span class=k>return</span> <span class=n>BooleanColumnView</span><span class=p>(</span>
+        <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;not&quot;</span><span class=p>,</span>
+        <span class=n>operand1</span><span class=o>=</span><span class=bp>self</span><span class=p>,</span>
+        <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+    <span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h3 id=getml.data.columns.BooleanColumnView.as_num class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">as_num</span> </h3> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>as_num</span><span class=p>()</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Transforms the boolean column into a numerical column</p> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>398</span>
+<span class=normal>399</span>
+<span class=normal>400</span>
+<span class=normal>401</span>
+<span class=normal>402</span>
+<span class=normal>403</span>
+<span class=normal>404</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>as_num</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;Transforms the boolean column into a numerical column&quot;&quot;&quot;</span>
+    <span class=k>return</span> <span class=n>FloatColumnView</span><span class=p>(</span>
+        <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;boolean_as_num&quot;</span><span class=p>,</span>
+        <span class=n>operand1</span><span class=o>=</span><span class=bp>self</span><span class=p>,</span>
+        <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+    <span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> </div> </div> </div> <div class="doc doc-object doc-class"> <h2 id=getml.data.columns.FloatColumn class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">FloatColumn</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>FloatColumn</span><span class=p>(</span>
+    <span class=n>name</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+    <span class=n>role</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;numerical&quot;</span><span class=p>,</span>
+    <span class=n>df_name</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><span title=getml.data.columns.column._Column>_Column</span></code></p> <p>Handle for numerical data in the Engine.</p> <p>This is a handler for all numerical data in the getML Engine, including time stamps.</p> <table> <thead> <tr> <th><span class=doc-section-title>ATTRIBUTE</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td><code><span title=getml.data.columns.FloatColumn.name>name</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p>Name of the categorical column.</p> </div> <p> </p> </td> </tr> <tr class=doc-section-item> <td><code><span title=getml.data.columns.FloatColumn.role>role</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p>Role that the column plays.</p> </div> <p> </p> </td> </tr> <tr class=doc-section-item> <td><code><span title=getml.data.columns.FloatColumn.df_name>df_name</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p><code>name</code> instance variable of the <a class="autorefs autorefs-internal" href=../data_frame/#getml.data.DataFrame><code>DataFrame</code></a> containing this column.</p> </div> <p> </p> </td> </tr> </tbody> </table> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+
+<span class=kn>import</span> <span class=nn>getml.data</span> <span class=k>as</span> <span class=nn>data</span>
+<span class=kn>import</span> <span class=nn>getml.engine</span> <span class=k>as</span> <span class=nn>engine</span>
+<span class=kn>import</span> <span class=nn>getml.data.roles</span> <span class=k>as</span> <span class=nn>roles</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>engine</span><span class=o>.</span><span class=n>set_project</span><span class=p>(</span><span class=s2>&quot;examples&quot;</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># Create a data frame from a JSON string</span>
+
+<span class=n>json_str</span> <span class=o>=</span> <span class=s2>&quot;&quot;&quot;{</span>
+<span class=s2>    &quot;names&quot;: [&quot;patrick&quot;, &quot;alex&quot;, &quot;phil&quot;, &quot;ulrike&quot;],</span>
+<span class=s2>    &quot;column_01&quot;: [2.4, 3.0, 1.2, 1.4],</span>
+<span class=s2>    &quot;join_key&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],</span>
+<span class=s2>    &quot;time_stamp&quot;: [&quot;2019-01-01&quot;, &quot;2019-01-02&quot;, &quot;2019-01-03&quot;, &quot;2019-01-04&quot;]</span>
+<span class=s2>}&quot;&quot;&quot;</span>
+
+<span class=n>my_df</span> <span class=o>=</span> <span class=n>data</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span>
+    <span class=s2>&quot;MY DF&quot;</span><span class=p>,</span>
+    <span class=n>roles</span><span class=o>=</span><span class=p>{</span>
+        <span class=s2>&quot;unused_string&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>,</span> <span class=s2>&quot;join_key&quot;</span><span class=p>,</span> <span class=s2>&quot;time_stamp&quot;</span><span class=p>],</span>
+        <span class=s2>&quot;unused_float&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]}</span>
+<span class=p>)</span><span class=o>.</span><span class=n>read_json</span><span class=p>(</span>
+    <span class=n>json_str</span>
+<span class=p>)</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col1</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col2</span> <span class=o>=</span> <span class=mf>2.0</span> <span class=o>-</span> <span class=n>col1</span>
+
+<span class=n>my_df</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>col2</span><span class=p>,</span> <span class=s2>&quot;name&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>numerical</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># If you do not explicitly set a role,</span>
+<span class=c1># the assigned role will either be</span>
+<span class=c1># roles.unused_float.</span>
+
+<span class=n>col3</span> <span class=o>=</span> <span class=p>(</span><span class=n>col1</span> <span class=o>+</span> <span class=mf>2.0</span><span class=o>*</span><span class=n>col2</span><span class=p>)</span> <span class=o>/</span> <span class=mf>3.0</span>
+
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;column_03&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col3</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=s2>&quot;column_03&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>numerical</span><span class=p>)</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>708</span>
+<span class=normal>709</span>
+<span class=normal>710</span>
+<span class=normal>711</span>
+<span class=normal>712</span>
+<span class=normal>713</span>
+<span class=normal>714</span>
+<span class=normal>715</span>
+<span class=normal>716</span>
+<span class=normal>717</span>
+<span class=normal>718</span>
+<span class=normal>719</span>
+<span class=normal>720</span>
+<span class=normal>721</span>
+<span class=normal>722</span>
+<span class=normal>723</span>
+<span class=normal>724</span>
+<span class=normal>725</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span> <span class=n>role</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;numerical&quot;</span><span class=p>,</span> <span class=n>df_name</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>):</span>
+    <span class=nb>super</span><span class=p>()</span><span class=o>.</span><span class=fm>__init__</span><span class=p>()</span>
+
+    <span class=n>FloatColumn</span><span class=o>.</span><span class=n>_num_columns</span> <span class=o>+=</span> <span class=mi>1</span>
+    <span class=k>if</span> <span class=n>name</span> <span class=o>==</span> <span class=s2>&quot;&quot;</span><span class=p>:</span>
+        <span class=n>name</span> <span class=o>=</span> <span class=n>FLOAT_COLUMN</span> <span class=o>+</span> <span class=s2>&quot; &quot;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>FloatColumn</span><span class=o>.</span><span class=n>_num_columns</span><span class=p>)</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operator_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>FLOAT_COLUMN</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;df_name_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>df_name</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;name_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>name</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;role_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>role</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>FLOAT_COLUMN</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-class"> <h2 id=getml.data.columns.FloatColumnView class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">FloatColumnView</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>FloatColumnView</span><span class=p>(</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><span title=getml.data.columns.columns.FloatOperandType>FloatOperandType</span></span><span class=p>],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><span title=getml.data.columns.columns.FloatOperandType>FloatOperandType</span></span><span class=p>],</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><span title=getml.data.columns.columns._View>_View</span></code></p> <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href=#getml.data.columns.FloatColumn><code>FloatColumn</code></a>.</p> <p>Column views do not actually exist - they will be lazily evaluated when necessary.</p> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>739</span>
+<span class=normal>740</span>
+<span class=normal>741</span>
+<span class=normal>742</span>
+<span class=normal>743</span>
+<span class=normal>744</span>
+<span class=normal>745</span>
+<span class=normal>746</span>
+<span class=normal>747</span>
+<span class=normal>748</span>
+<span class=normal>749</span>
+<span class=normal>750</span>
+<span class=normal>751</span>
+<span class=normal>752</span>
+<span class=normal>753</span>
+<span class=normal>754</span>
+<span class=normal>755</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+    <span class=bp>self</span><span class=p>,</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>FloatOperandType</span><span class=p>],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>FloatOperandType</span><span class=p>],</span>
+<span class=p>):</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>FLOAT_COLUMN_VIEW</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operator_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>operator</span>
+
+    <span class=k>if</span> <span class=n>operand1</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand1_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand1</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=n>operand2</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand2_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand2</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-class"> <h2 id=getml.data.columns.StringColumn class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">StringColumn</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>StringColumn</span><span class=p>(</span>
+    <span class=n>name</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+    <span class=n>role</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;categorical&quot;</span><span class=p>,</span>
+    <span class=n>df_name</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><span title=getml.data.columns.column._Column>_Column</span></code></p> <p>Handle for categorical data that is kept in the getML Engine</p> <table> <thead> <tr> <th><span class=doc-section-title>ATTRIBUTE</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td><code><span title=getml.data.columns.StringColumn.name>name</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p>Name of the categorical column.</p> </div> <p> </p> </td> </tr> <tr class=doc-section-item> <td><code><span title=getml.data.columns.StringColumn.role>role</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p>Role that the column plays.</p> </div> <p> </p> </td> </tr> <tr class=doc-section-item> <td><code><span title=getml.data.columns.StringColumn.df_name>df_name</span></code></td> <td class=doc-attribute-details> <div class=doc-md-description> <p><code>name</code> instance variable of the <a class="autorefs autorefs-internal" href=../data_frame/#getml.data.DataFrame><code>DataFrame</code></a> containing this column.</p> </div> <p> </p> </td> </tr> </tbody> </table> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+
+<span class=kn>import</span> <span class=nn>getml.data</span> <span class=k>as</span> <span class=nn>data</span>
+<span class=kn>import</span> <span class=nn>getml.engine</span> <span class=k>as</span> <span class=nn>engine</span>
+<span class=kn>import</span> <span class=nn>getml.data.roles</span> <span class=k>as</span> <span class=nn>roles</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>engine</span><span class=o>.</span><span class=n>set_project</span><span class=p>(</span><span class=s2>&quot;examples&quot;</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># Create a data frame from a JSON string</span>
+
+<span class=n>json_str</span> <span class=o>=</span> <span class=s2>&quot;&quot;&quot;{</span>
+<span class=s2>    &quot;names&quot;: [&quot;patrick&quot;, &quot;alex&quot;, &quot;phil&quot;, &quot;ulrike&quot;],</span>
+<span class=s2>    &quot;column_01&quot;: [2.4, 3.0, 1.2, 1.4],</span>
+<span class=s2>    &quot;join_key&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],</span>
+<span class=s2>    &quot;time_stamp&quot;: [&quot;2019-01-01&quot;, &quot;2019-01-02&quot;, &quot;2019-01-03&quot;, &quot;2019-01-04&quot;]</span>
+<span class=s2>}&quot;&quot;&quot;</span>
+
+<span class=n>my_df</span> <span class=o>=</span> <span class=n>data</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span>
+    <span class=s2>&quot;MY DF&quot;</span><span class=p>,</span>
+    <span class=n>roles</span><span class=o>=</span><span class=p>{</span>
+        <span class=s2>&quot;unused_string&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>,</span> <span class=s2>&quot;join_key&quot;</span><span class=p>,</span> <span class=s2>&quot;time_stamp&quot;</span><span class=p>],</span>
+        <span class=s2>&quot;unused_float&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]}</span>
+<span class=p>)</span><span class=o>.</span><span class=n>read_json</span><span class=p>(</span>
+    <span class=n>json_str</span>
+<span class=p>)</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col1</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>]</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col2</span> <span class=o>=</span> <span class=n>col1</span><span class=o>.</span><span class=n>substr</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=mi>3</span><span class=p>)</span>
+
+<span class=n>my_df</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>col2</span><span class=p>,</span> <span class=s2>&quot;short_names&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>categorical</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># If you do not explicitly set a role,</span>
+<span class=c1># the assigned role will either be</span>
+<span class=c1># roles.unused_string.</span>
+
+<span class=n>col3</span> <span class=o>=</span> <span class=s2>&quot;user-&quot;</span> <span class=o>+</span> <span class=n>col1</span> <span class=o>+</span> <span class=s2>&quot;-&quot;</span> <span class=o>+</span> <span class=n>col2</span>
+
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;new_names&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col3</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=s2>&quot;new_names&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>categorical</span><span class=p>)</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>479</span>
+<span class=normal>480</span>
+<span class=normal>481</span>
+<span class=normal>482</span>
+<span class=normal>483</span>
+<span class=normal>484</span>
+<span class=normal>485</span>
+<span class=normal>486</span>
+<span class=normal>487</span>
+<span class=normal>488</span>
+<span class=normal>489</span>
+<span class=normal>490</span>
+<span class=normal>491</span>
+<span class=normal>492</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>name</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>,</span> <span class=n>role</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;categorical&quot;</span><span class=p>,</span> <span class=n>df_name</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&quot;&quot;</span><span class=p>):</span>
+    <span class=nb>super</span><span class=p>()</span><span class=o>.</span><span class=fm>__init__</span><span class=p>()</span>
+
+    <span class=n>StringColumn</span><span class=o>.</span><span class=n>_num_columns</span> <span class=o>+=</span> <span class=mi>1</span>
+    <span class=k>if</span> <span class=n>name</span> <span class=o>==</span> <span class=s2>&quot;&quot;</span><span class=p>:</span>
+        <span class=n>name</span> <span class=o>=</span> <span class=n>STRING_COLUMN</span> <span class=o>+</span> <span class=s2>&quot; &quot;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>StringColumn</span><span class=o>.</span><span class=n>_num_columns</span><span class=p>)</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operator_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>STRING_COLUMN</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;df_name_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>df_name</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;name_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>name</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;role_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>role</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>STRING_COLUMN</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-class"> <h2 id=getml.data.columns.StringColumnView class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">StringColumnView</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>StringColumnView</span><span class=p>(</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span> <span class=n><span title=getml.data.columns.column._Column>_Column</span></span><span class=p>,</span> <span class=n><span title=getml.data.columns.columns._View>_View</span></span><span class=p>]],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span> <span class=n><span title=getml.data.columns.column._Column>_Column</span></span><span class=p>,</span> <span class=n><span title=getml.data.columns.columns._View>_View</span></span><span class=p>]],</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><span title=getml.data.columns.columns._View>_View</span></code></p> <p>Lazily evaluated view on a <a class="autorefs autorefs-internal" href=#getml.data.columns.StringColumn><code>StringColumn</code></a>.</p> <p>Columns views do not actually exist - they will be lazily evaluated when necessary.</p> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+
+<span class=kn>import</span> <span class=nn>getml.data</span> <span class=k>as</span> <span class=nn>data</span>
+<span class=kn>import</span> <span class=nn>getml.engine</span> <span class=k>as</span> <span class=nn>engine</span>
+<span class=kn>import</span> <span class=nn>getml.data.roles</span> <span class=k>as</span> <span class=nn>roles</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>engine</span><span class=o>.</span><span class=n>set_project</span><span class=p>(</span><span class=s2>&quot;examples&quot;</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># Create a data frame from a JSON string</span>
+
+<span class=n>json_str</span> <span class=o>=</span> <span class=s2>&quot;&quot;&quot;{</span>
+<span class=s2>    &quot;names&quot;: [&quot;patrick&quot;, &quot;alex&quot;, &quot;phil&quot;, &quot;ulrike&quot;],</span>
+<span class=s2>    &quot;column_01&quot;: [2.4, 3.0, 1.2, 1.4],</span>
+<span class=s2>    &quot;join_key&quot;: [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;],</span>
+<span class=s2>    &quot;time_stamp&quot;: [&quot;2019-01-01&quot;, &quot;2019-01-02&quot;, &quot;2019-01-03&quot;, &quot;2019-01-04&quot;]</span>
+<span class=s2>}&quot;&quot;&quot;</span>
+
+<span class=n>my_df</span> <span class=o>=</span> <span class=n>data</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span>
+    <span class=s2>&quot;MY DF&quot;</span><span class=p>,</span>
+    <span class=n>roles</span><span class=o>=</span><span class=p>{</span>
+        <span class=s2>&quot;unused_string&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>,</span> <span class=s2>&quot;join_key&quot;</span><span class=p>,</span> <span class=s2>&quot;time_stamp&quot;</span><span class=p>],</span>
+        <span class=s2>&quot;unused_float&quot;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&quot;column_01&quot;</span><span class=p>]}</span>
+<span class=p>)</span><span class=o>.</span><span class=n>read_json</span><span class=p>(</span>
+    <span class=n>json_str</span>
+<span class=p>)</span>
+
+<span class=c1># ----------------</span>
+
+<span class=n>col1</span> <span class=o>=</span> <span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;names&quot;</span><span class=p>]</span>
+
+<span class=c1># ----------------</span>
+
+<span class=c1># col2 is a virtual column.</span>
+<span class=c1># The substring operation is not</span>
+<span class=c1># executed yet.</span>
+<span class=n>col2</span> <span class=o>=</span> <span class=n>col1</span><span class=o>.</span><span class=n>substr</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=mi>3</span><span class=p>)</span>
+
+<span class=c1># This is where the Engine executes</span>
+<span class=c1># the substring operation.</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>col2</span><span class=p>,</span> <span class=s2>&quot;short_names&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>categorical</span><span class=p>)</span>
+
+<span class=c1># ----------------</span>
+<span class=c1># If you do not explicitly set a role,</span>
+<span class=c1># the assigned role will either be</span>
+<span class=c1># roles.unused_string.</span>
+
+<span class=c1># col3 is a virtual column.</span>
+<span class=c1># The operation is not</span>
+<span class=c1># executed yet.</span>
+<span class=n>col3</span> <span class=o>=</span> <span class=s2>&quot;user-&quot;</span> <span class=o>+</span> <span class=n>col1</span> <span class=o>+</span> <span class=s2>&quot;-&quot;</span> <span class=o>+</span> <span class=n>col2</span>
+
+<span class=c1># This is where the operation is</span>
+<span class=c1># is executed.</span>
+<span class=n>my_df</span><span class=p>[</span><span class=s2>&quot;new_names&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col3</span>
+<span class=n>my_df</span><span class=o>.</span><span class=n>set_role</span><span class=p>(</span><span class=s2>&quot;new_names&quot;</span><span class=p>,</span> <span class=n>roles</span><span class=o>.</span><span class=n>categorical</span><span class=p>)</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>568</span>
+<span class=normal>569</span>
+<span class=normal>570</span>
+<span class=normal>571</span>
+<span class=normal>572</span>
+<span class=normal>573</span>
+<span class=normal>574</span>
+<span class=normal>575</span>
+<span class=normal>576</span>
+<span class=normal>577</span>
+<span class=normal>578</span>
+<span class=normal>579</span>
+<span class=normal>580</span>
+<span class=normal>581</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span>
+    <span class=bp>self</span><span class=p>,</span>
+    <span class=n>operator</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span>
+    <span class=n>operand1</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>_Column</span><span class=p>,</span> <span class=n>_View</span><span class=p>]],</span>
+    <span class=n>operand2</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>_Column</span><span class=p>,</span> <span class=n>_View</span><span class=p>]],</span>
+<span class=p>):</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>STRING_COLUMN_VIEW</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operator_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>operator</span>
+    <span class=k>if</span> <span class=n>operand1</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand1_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand1</span><span class=p>)</span>
+    <span class=k>if</span> <span class=n>operand2</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;operand2_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_parse_operand</span><span class=p>(</span><span class=n>operand2</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-function"> <h2 id=getml.data.columns.arange class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">arange</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>arange</span><span class=p>(</span>
+    <span class=n>start</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class=p>]</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>,</span>
+    <span class=n>stop</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class=p>]]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
+    <span class=n>step</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class=p>]</span> <span class=o>=</span> <span class=mf>1.0</span><span class=p>,</span>
+<span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Returns evenly spaced variables, within a given interval.</p> <table> <thead> <tr> <th><span class=doc-section-title>PARAMETER</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td><code>start</code></td> <td class=doc-param-details> <div class=doc-md-description> <p>The beginning of the interval. Defaults to 0.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>]</code> </span> <span class=doc-param-default> <b>DEFAULT:</b> <code>0.0</code> </span> </p> </td> </tr> <tr class=doc-section-item> <td><code>stop</code></td> <td class=doc-param-details> <div class=doc-md-description> <p>The end of the interval.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/3/library/typing.html#typing.Optional" target="_blank" rel="noopener">Optional</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>]]</code> </span> <span class=doc-param-default> <b>DEFAULT:</b> <code>None</code> </span> </p> </td> </tr> <tr class=doc-section-item> <td><code>step</code></td> <td class=doc-param-details> <div class=doc-md-description> <p>The step taken. Defaults to 1.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" title="numbers.Real" href="https://docs.python.org/3/library/numbers.html#numbers.Real" target="_blank" rel="noopener">Real</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>]</code> </span> <span class=doc-param-default> <b>DEFAULT:</b> <code>1.0</code> </span> </p> </td> </tr> </tbody> </table> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>112</span>
+<span class=normal>113</span>
+<span class=normal>114</span>
+<span class=normal>115</span>
+<span class=normal>116</span>
+<span class=normal>117</span>
+<span class=normal>118</span>
+<span class=normal>119</span>
+<span class=normal>120</span>
+<span class=normal>121</span>
+<span class=normal>122</span>
+<span class=normal>123</span>
+<span class=normal>124</span>
+<span class=normal>125</span>
+<span class=normal>126</span>
+<span class=normal>127</span>
+<span class=normal>128</span>
+<span class=normal>129</span>
+<span class=normal>130</span>
+<span class=normal>131</span>
+<span class=normal>132</span>
+<span class=normal>133</span>
+<span class=normal>134</span>
+<span class=normal>135</span>
+<span class=normal>136</span>
+<span class=normal>137</span>
+<span class=normal>138</span>
+<span class=normal>139</span>
+<span class=normal>140</span>
+<span class=normal>141</span>
+<span class=normal>142</span>
+<span class=normal>143</span>
+<span class=normal>144</span>
+<span class=normal>145</span>
+<span class=normal>146</span>
+<span class=normal>147</span>
+<span class=normal>148</span>
+<span class=normal>149</span>
+<span class=normal>150</span>
+<span class=normal>151</span>
+<span class=normal>152</span>
+<span class=normal>153</span>
+<span class=normal>154</span>
+<span class=normal>155</span>
+<span class=normal>156</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>arange</span><span class=p>(</span>
+    <span class=n>start</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>,</span> <span class=nb>float</span><span class=p>]</span> <span class=o>=</span> <span class=mf>0.0</span><span class=p>,</span>
+    <span class=n>stop</span><span class=p>:</span> <span class=n>Optional</span><span class=p>[</span><span class=n>Union</span><span class=p>[</span><span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>,</span> <span class=nb>float</span><span class=p>]]</span> <span class=o>=</span> <span class=kc>None</span><span class=p>,</span>
+    <span class=n>step</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>,</span> <span class=nb>float</span><span class=p>]</span> <span class=o>=</span> <span class=mf>1.0</span><span class=p>,</span>
+<span class=p>):</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Returns evenly spaced variables, within a given interval.</span>
+
+<span class=sd>    Args:</span>
+<span class=sd>        start:</span>
+<span class=sd>            The beginning of the interval. Defaults to 0.</span>
+
+<span class=sd>        stop:</span>
+<span class=sd>            The end of the interval.</span>
+
+<span class=sd>        step:</span>
+<span class=sd>            The step taken. Defaults to 1.</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+    <span class=k>if</span> <span class=n>stop</span> <span class=ow>is</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=n>stop</span> <span class=o>=</span> <span class=n>start</span>
+        <span class=n>start</span> <span class=o>=</span> <span class=mf>0.0</span>
+
+    <span class=k>if</span> <span class=n>step</span> <span class=ow>is</span> <span class=kc>None</span><span class=p>:</span>
+        <span class=n>step</span> <span class=o>=</span> <span class=mf>1.0</span>
+
+    <span class=k>if</span> <span class=ow>not</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>start</span><span class=p>,</span> <span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>):</span>
+        <span class=k>raise</span> <span class=ne>TypeError</span><span class=p>(</span><span class=s2>&quot;&#39;start&#39; must be a real number&quot;</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=ow>not</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>stop</span><span class=p>,</span> <span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>):</span>
+        <span class=k>raise</span> <span class=ne>TypeError</span><span class=p>(</span><span class=s2>&quot;&#39;stop&#39; must be a real number&quot;</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=ow>not</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>step</span><span class=p>,</span> <span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>):</span>
+        <span class=k>raise</span> <span class=ne>TypeError</span><span class=p>(</span><span class=s2>&quot;&#39;step&#39; must be a real number&quot;</span><span class=p>)</span>
+
+    <span class=n>col</span> <span class=o>=</span> <span class=n>FloatColumnView</span><span class=p>(</span>
+        <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;arange&quot;</span><span class=p>,</span>
+        <span class=n>operand1</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+        <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+    <span class=p>)</span>
+
+    <span class=n>col</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;start_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=n>start</span><span class=p>)</span>
+    <span class=n>col</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;stop_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=n>stop</span><span class=p>)</span>
+    <span class=n>col</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;step_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=n>step</span><span class=p>)</span>
+
+    <span class=k>return</span> <span class=n>col</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h2 id=getml.data.columns.rowid class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">rowid</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>rowid</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=n><a class="autorefs autorefs-internal" title=getml.data.columns.columns.FloatColumnView href=#getml.data.columns.FloatColumnView>FloatColumnView</a></span>
+</code></pre></div> <div class="doc doc-contents "> <p>Get the row numbers of the table.</p> <table> <thead> <tr> <th><span class=doc-section-title>RETURNS</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <span class=doc-returns-annotation> <code><a class="autorefs autorefs-internal" title=getml.data.columns.columns.FloatColumnView href=#getml.data.columns.FloatColumnView>FloatColumnView</a></code> </span> </td> <td class=doc-returns-details> <div class=doc-md-description> <p>(numerical) column containing the row id, starting with 0</p> </div> </td> </tr> </tbody> </table> <details class=quote> <summary>Source code in <code>getml/data/columns/columns.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>162</span>
+<span class=normal>163</span>
+<span class=normal>164</span>
+<span class=normal>165</span>
+<span class=normal>166</span>
+<span class=normal>167</span>
+<span class=normal>168</span>
+<span class=normal>169</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>rowid</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=n>FloatColumnView</span><span class=p>:</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Get the row numbers of the table.</span>
+
+<span class=sd>    Returns:</span>
+<span class=sd>            (numerical) column containing the row id, starting with 0</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+    <span class=k>return</span> <span class=n>FloatColumnView</span><span class=p>(</span><span class=n>operator</span><span class=o>=</span><span class=s2>&quot;rowid&quot;</span><span class=p>,</span> <span class=n>operand1</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span> <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.collect_footer_data class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">collect_footer_data</span> </h2> <div class="doc doc-contents "> <p>Collects the data necessary for displaying the column footer.</p> <div class="doc doc-children"> <div class="doc doc-object doc-class"> <h3 id=getml.data.columns.collect_footer_data.Footer class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">Footer</span> </h3> <div class="doc doc-contents "> <p class="doc doc-class-bases"> Bases: <code><a class="autorefs autorefs-external" title="typing.NamedTuple" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple" target="_blank" rel="noopener">NamedTuple</a></code></p> <p>Contains the data to be shown in the footer of the data frame or column.</p> <div class="doc doc-children"> </div> </div> </div> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.aggregation class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">aggregation</span> </h2> <div class="doc doc-contents "> <p>Lazily evaluated aggregation over a column.</p> <div class="doc doc-children"> <div class="doc doc-object doc-class"> <h3 id=getml.data.columns.aggregation.Aggregation class="doc doc-heading"> <span class="doc doc-object-name doc-class-name">Aggregation</span> </h3> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>Aggregation</span><span class=p>(</span><span class=n>alias</span><span class=p>,</span> <span class=n>col</span><span class=p>,</span> <span class=n>agg_type</span><span class=p>)</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Lazily evaluated aggregation over a column.</p> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=n>my_data_frame</span><span class=p>[</span><span class=s2>&quot;my_column&quot;</span><span class=p>]</span><span class=o>.</span><span class=n>avg</span><span class=p>()</span>
+<span class=mf>3.0</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/aggregation.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>alias</span><span class=p>,</span> <span class=n>col</span><span class=p>,</span> <span class=n>agg_type</span><span class=p>):</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;as_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>alias</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;col_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>col</span><span class=o>.</span><span class=n>cmd</span>
+    <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>agg_type</span>
+</code></pre></div></td></tr></table></div> </details> <div class="doc doc-children"> <div class="doc doc-object doc-function"> <h4 id=getml.data.columns.aggregation.Aggregation.get class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">get</span> </h4> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>get</span><span class=p>()</span>
+</code></pre></div> <div class="doc doc-contents "> <p>Receives the value of the aggregation over the column.</p> <details class=quote> <summary>Source code in <code>getml/data/columns/aggregation.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>48</span>
+<span class=normal>49</span>
+<span class=normal>50</span>
+<span class=normal>51</span>
+<span class=normal>52</span>
+<span class=normal>53</span>
+<span class=normal>54</span>
+<span class=normal>55</span>
+<span class=normal>56</span>
+<span class=normal>57</span>
+<span class=normal>58</span>
+<span class=normal>59</span>
+<span class=normal>60</span>
+<span class=normal>61</span>
+<span class=normal>62</span>
+<span class=normal>63</span>
+<span class=normal>64</span>
+<span class=normal>65</span>
+<span class=normal>66</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>get</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Receives the value of the aggregation over the column.</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+
+    <span class=n>cmd</span><span class=p>:</span> <span class=n>Dict</span><span class=p>[</span><span class=nb>str</span><span class=p>,</span> <span class=n>Any</span><span class=p>]</span> <span class=o>=</span> <span class=p>{}</span>
+
+    <span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;name_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;&quot;</span>
+    <span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;type_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&quot;FloatColumn.aggregate&quot;</span>
+
+    <span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;aggregation_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>cmd</span>
+
+    <span class=k>with</span> <span class=n>comm</span><span class=o>.</span><span class=n>send_and_get_socket</span><span class=p>(</span><span class=n>cmd</span><span class=p>)</span> <span class=k>as</span> <span class=n>sock</span><span class=p>:</span>
+        <span class=n>msg</span> <span class=o>=</span> <span class=n>comm</span><span class=o>.</span><span class=n>recv_string</span><span class=p>(</span><span class=n>sock</span><span class=p>)</span>
+        <span class=k>if</span> <span class=n>msg</span> <span class=o>!=</span> <span class=s2>&quot;Success!&quot;</span><span class=p>:</span>
+            <span class=n>comm</span><span class=o>.</span><span class=n>handle_engine_exception</span><span class=p>(</span><span class=n>msg</span><span class=p>)</span>
+        <span class=n>mat</span> <span class=o>=</span> <span class=n>comm</span><span class=o>.</span><span class=n>recv_float_matrix</span><span class=p>(</span><span class=n>sock</span><span class=p>)</span>
+
+    <span class=k>return</span> <span class=n>mat</span><span class=o>.</span><span class=n>ravel</span><span class=p>()[</span><span class=mi>0</span><span class=p>]</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> </div> </div> </div> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.format class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">format</span> </h2> <div class="doc doc-contents "> <p>Format the column</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.last_change class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">last_change</span> </h2> <div class="doc doc-contents "> <p>Returns the last time a data frame has been changed.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.last_change_from_col class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">last_change_from_col</span> </h2> <div class="doc doc-contents "> <p>The last time any of the underlying data frames has been changed.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.length class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">length</span> </h2> <div class="doc doc-contents "> <p>Returns the length of the column</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.length_property class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">length_property</span> </h2> <div class="doc doc-contents "> <p>The length of the column (number of rows in the data frame).</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.make_iter class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">make_iter</span> </h2> <div class="doc doc-contents "> <p>Factory function for a function that can be used to iterate through a column.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.parse class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">parse</span> </h2> <div class="doc doc-contents "> <p>Parses the columns from a cmd</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.repr class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">repr</span> </h2> <div class="doc doc-contents "> <p>ASCII representation of the column.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.repr_html class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">repr_html</span> </h2> <div class="doc doc-contents "> <p>HTML representation of the column.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.subroles class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">subroles</span> </h2> <div class="doc doc-contents "> <p>The subroles of this column.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.to_arrow class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">to_arrow</span> </h2> <div class="doc doc-contents "> <p>Transform column to a pyarrow.ChunkedArray</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.to_numpy class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">to_numpy</span> </h2> <div class="doc doc-contents "> <p>Transform column to a numpy array.</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.unique class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">unique</span> </h2> <div class="doc doc-contents "> <p>Transform column to numpy array containing unique values</p> <div class="doc doc-children"> </div> </div> </div> <div class="doc doc-object doc-module"> <h2 id=getml.data.columns.unit class="doc doc-heading"> <span class="doc doc-object-name doc-module-name">unit</span> </h2> <div class="doc doc-contents "> <p>The unit of this column.</p> <div class="doc doc-children"> </div> </div> </div> </div> </div> </div> <div class="doc doc-object doc-function"> <h2 id=getml.data.columns.from_value.from_value class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">from_value</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>from_value</span><span class=p>(</span>
+    <span class=n>val</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a></span><span class=p>[</span><span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span><span class=p>,</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a></span><span class=p>,</span> <span class=n><span title=numpy.datetime64>datetime64</span></span><span class=p>]</span>
+<span class=p>)</span> <span class=o>-&gt;</span> <span class=n><span title=getml.data.columns.from_value.ReturnType>ReturnType</span></span>
+</code></pre></div> <div class="doc doc-contents first"> <p>Creates an infinite column that contains the same value in all of its elements.</p> <table> <thead> <tr> <th><span class=doc-section-title>PARAMETER</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td><code>val</code></td> <td class=doc-param-details> <div class=doc-md-description> <p>The value you want to insert into your column.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union" target="_blank" rel="noopener">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool" target="_blank" rel="noopener">bool</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str" target="_blank" rel="noopener">str</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float" target="_blank" rel="noopener">float</a>, <span title=numpy.datetime64>datetime64</span>]</code> </span> </p> </td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>RETURNS</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <span class=doc-returns-annotation> <code><span title=getml.data.columns.from_value.ReturnType>ReturnType</span></code> </span> </td> <td class=doc-returns-details> <div class=doc-md-description> <p>The column view containing the value.</p> </div> </td> </tr> </tbody> </table> <details class=quote> <summary>Source code in <code>getml/data/columns/from_value.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span>
+<span class=normal>50</span>
+<span class=normal>51</span>
+<span class=normal>52</span>
+<span class=normal>53</span>
+<span class=normal>54</span>
+<span class=normal>55</span>
+<span class=normal>56</span>
+<span class=normal>57</span>
+<span class=normal>58</span>
+<span class=normal>59</span>
+<span class=normal>60</span>
+<span class=normal>61</span>
+<span class=normal>62</span>
+<span class=normal>63</span>
+<span class=normal>64</span>
+<span class=normal>65</span>
+<span class=normal>66</span>
+<span class=normal>67</span>
+<span class=normal>68</span>
+<span class=normal>69</span>
+<span class=normal>70</span>
+<span class=normal>71</span>
+<span class=normal>72</span>
+<span class=normal>73</span>
+<span class=normal>74</span>
+<span class=normal>75</span>
+<span class=normal>76</span>
+<span class=normal>77</span>
+<span class=normal>78</span>
+<span class=normal>79</span>
+<span class=normal>80</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>from_value</span><span class=p>(</span><span class=n>val</span><span class=p>:</span> <span class=n>Union</span><span class=p>[</span><span class=nb>bool</span><span class=p>,</span> <span class=nb>str</span><span class=p>,</span> <span class=nb>int</span><span class=p>,</span> <span class=nb>float</span><span class=p>,</span> <span class=n>np</span><span class=o>.</span><span class=n>datetime64</span><span class=p>])</span> <span class=o>-&gt;</span> <span class=n>ReturnType</span><span class=p>:</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Creates an infinite column that contains the same</span>
+<span class=sd>    value in all of its elements.</span>
+
+<span class=sd>    Args:</span>
+<span class=sd>        val:</span>
+<span class=sd>            The value you want to insert into your column.</span>
+
+<span class=sd>    Returns:</span>
+<span class=sd>        The column view containing the value.</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+    <span class=n>cmd</span> <span class=o>=</span> <span class=n>_value_to_cmd</span><span class=p>(</span><span class=n>val</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=nb>bool</span><span class=p>):</span>
+        <span class=n>col</span><span class=p>:</span> <span class=n>ReturnType</span> <span class=o>=</span> <span class=n>BooleanColumnView</span><span class=p>(</span>
+            <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;const&quot;</span><span class=p>,</span>
+            <span class=n>operand1</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+            <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+        <span class=p>)</span>
+        <span class=n>col</span><span class=o>.</span><span class=n>cmd</span> <span class=o>=</span> <span class=n>cmd</span>
+        <span class=k>return</span> <span class=n>col</span>
+
+    <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=nb>str</span><span class=p>):</span>
+        <span class=n>col</span> <span class=o>=</span> <span class=n>StringColumnView</span><span class=p>(</span>
+            <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;const&quot;</span><span class=p>,</span>
+            <span class=n>operand1</span><span class=o>=</span><span class=n>val</span><span class=p>,</span>
+            <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+        <span class=p>)</span>
+        <span class=n>col</span><span class=o>.</span><span class=n>cmd</span> <span class=o>=</span> <span class=n>cmd</span>
+        <span class=k>return</span> <span class=n>col</span>
+
+    <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=p>(</span><span class=nb>int</span><span class=p>,</span> <span class=nb>float</span><span class=p>,</span> <span class=n>numbers</span><span class=o>.</span><span class=n>Number</span><span class=p>)):</span>
+        <span class=n>col</span> <span class=o>=</span> <span class=n>FloatColumnView</span><span class=p>(</span>
+            <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;const&quot;</span><span class=p>,</span>
+            <span class=n>operand1</span><span class=o>=</span><span class=n>val</span><span class=p>,</span>
+            <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+        <span class=p>)</span>
+        <span class=n>col</span><span class=o>.</span><span class=n>cmd</span> <span class=o>=</span> <span class=n>cmd</span>
+        <span class=k>return</span> <span class=n>col</span>
+
+    <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=n>np</span><span class=o>.</span><span class=n>datetime64</span><span class=p>):</span>
+        <span class=n>col</span> <span class=o>=</span> <span class=n>FloatColumnView</span><span class=p>(</span>
+            <span class=n>operator</span><span class=o>=</span><span class=s2>&quot;const&quot;</span><span class=p>,</span>
+            <span class=n>operand1</span><span class=o>=</span><span class=n>np</span><span class=o>.</span><span class=n>datetime64</span><span class=p>(</span><span class=n>val</span><span class=p>,</span> <span class=s2>&quot;s&quot;</span><span class=p>)</span><span class=o>.</span><span class=n>astype</span><span class=p>(</span><span class=nb>float</span><span class=p>),</span>
+            <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span>
+        <span class=p>)</span>
+        <span class=n>col</span><span class=o>.</span><span class=n>cmd</span> <span class=o>=</span> <span class=n>cmd</span>
+        <span class=k>return</span> <span class=n>col</span>
+
+    <span class=k>raise</span> <span class=ne>TypeError</span><span class=p>(</span><span class=s2>&quot;val must be bool, str or a number.&quot;</span><span class=p>)</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> <div class="doc doc-object doc-function"> <h2 id=getml.data.columns.random.random class="doc doc-heading"> <span class="doc doc-object-name doc-function-name">random</span> </h2> <div class="doc-signature highlight"><pre><span></span><code><span class=nf>random</span><span class=p>(</span><span class=n>seed</span><span class=p>:</span> <span class=n><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></span> <span class=o>=</span> <span class=mi>5849</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n><a class="autorefs autorefs-internal" title=getml.data.columns.columns.FloatColumnView href=#getml.data.columns.FloatColumnView>FloatColumnView</a></span>
+</code></pre></div> <div class="doc doc-contents first"> <p>Create random column.</p> <p>The numbers will be uniformly distributed from 0.0 to 1.0. This can be used to randomly split a population table into a training and a test set</p> <table> <thead> <tr> <th><span class=doc-section-title>PARAMETER</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td><code>seed</code></td> <td class=doc-param-details> <div class=doc-md-description> <p>Seed used for the random number generator.</p> </div> <p> <span class=doc-param-annotation> <b>TYPE:</b> <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int" target="_blank" rel="noopener">int</a></code> </span> <span class=doc-param-default> <b>DEFAULT:</b> <code>5849</code> </span> </p> </td> </tr> </tbody> </table> <table> <thead> <tr> <th><span class=doc-section-title>RETURNS</span></th> <th><span>DESCRIPTION</span></th> </tr> </thead> <tbody> <tr class=doc-section-item> <td> <span class=doc-returns-annotation> <code><a class="autorefs autorefs-internal" title=getml.data.columns.columns.FloatColumnView href=#getml.data.columns.FloatColumnView>FloatColumnView</a></code> </span> </td> <td class=doc-returns-details> <div class=doc-md-description> <p>FloatColumn containing random numbers</p> </div> </td> </tr> </tbody> </table> <details class=example> <summary>Example</summary> <div class=highlight><pre><span></span><code><span class=n>population</span> <span class=o>=</span> <span class=n>getml</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span><span class=s1>&#39;population&#39;</span><span class=p>)</span>
+<span class=n>population</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>numpy</span><span class=o>.</span><span class=n>zeros</span><span class=p>(</span><span class=mi>100</span><span class=p>),</span> <span class=s1>&#39;column_01&#39;</span><span class=p>)</span>
+
+<span class=n>idx</span> <span class=o>=</span> <span class=n>random</span><span class=p>(</span><span class=n>seed</span><span class=o>=</span><span class=mi>42</span><span class=p>)</span>
+<span class=n>population_train</span> <span class=o>=</span> <span class=n>population</span><span class=p>[</span><span class=n>idx</span> <span class=o>&gt;</span> <span class=mf>0.7</span><span class=p>]</span>
+<span class=n>population_test</span> <span class=o>=</span> <span class=n>population</span><span class=p>[</span><span class=n>idx</span> <span class=o>&lt;=</span> <span class=mf>0.7</span><span class=p>]</span>
+</code></pre></div> </details> <details class=quote> <summary>Source code in <code>getml/data/columns/random.py</code></summary> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span></pre></div></td><td class=code><div><pre><span></span><code><span class=k>def</span> <span class=nf>random</span><span class=p>(</span><span class=n>seed</span><span class=p>:</span> <span class=nb>int</span> <span class=o>=</span> <span class=mi>5849</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=n>FloatColumnView</span><span class=p>:</span>
+<span class=w>    </span><span class=sd>&quot;&quot;&quot;</span>
+<span class=sd>    Create random column.</span>
+
+<span class=sd>    The numbers will be uniformly distributed from 0.0 to 1.0. This can be</span>
+<span class=sd>    used to randomly split a population table into a training and a test</span>
+<span class=sd>    set</span>
+
+<span class=sd>    Args:</span>
+<span class=sd>        seed:</span>
+<span class=sd>            Seed used for the random number generator.</span>
+
+<span class=sd>    Returns:</span>
+<span class=sd>            FloatColumn containing random numbers</span>
+
+<span class=sd>    ??? example</span>
+<span class=sd>        ```python</span>
+<span class=sd>        population = getml.DataFrame(&#39;population&#39;)</span>
+<span class=sd>        population.add(numpy.zeros(100), &#39;column_01&#39;)</span>
+
+<span class=sd>        idx = random(seed=42)</span>
+<span class=sd>        population_train = population[idx &gt; 0.7]</span>
+<span class=sd>        population_test = population[idx &lt;= 0.7]</span>
+<span class=sd>        ```</span>
+<span class=sd>    &quot;&quot;&quot;</span>
+
+    <span class=k>if</span> <span class=ow>not</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>seed</span><span class=p>,</span> <span class=n>numbers</span><span class=o>.</span><span class=n>Real</span><span class=p>):</span>
+        <span class=k>raise</span> <span class=ne>TypeError</span><span class=p>(</span><span class=s2>&quot;&#39;seed&#39; must be a real number&quot;</span><span class=p>)</span>
+
+    <span class=n>col</span> <span class=o>=</span> <span class=n>FloatColumnView</span><span class=p>(</span><span class=n>operator</span><span class=o>=</span><span class=s2>&quot;random&quot;</span><span class=p>,</span> <span class=n>operand1</span><span class=o>=</span><span class=kc>None</span><span class=p>,</span> <span class=n>operand2</span><span class=o>=</span><span class=kc>None</span><span class=p>)</span>
+    <span class=n>col</span><span class=o>.</span><span class=n>cmd</span><span class=p>[</span><span class=s2>&quot;seed_&quot;</span><span class=p>]</span> <span class=o>=</span> <span class=n>seed</span>
+    <span class=k>return</span> <span class=n>col</span>
+</code></pre></div></td></tr></table></div> </details> </div> </div> <aside class=md-source-file> <span class=md-source-file__fact> <span class=md-icon title="Last update"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg> </span> <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2024</span> </span> <span class=md-source-file__fact> <span class=md-icon title=Contributors> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg> </span> <span>GitHub</span> <nav> <a href="https://github.com/awaismirza92" class="md-author" title="@awaismirza92" target="_blank" rel="noopener"> <img src="../../../assets/external/avatars.githubusercontent.com/u/47096947.fe356448.jpg" alt="awaismirza92"> </a> </nav> </span> </aside> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2024 – Code17 GmbH </div> </div> <div class=md-social> <a href="https://github.com/getml" target="_blank" rel="noopener" title="github.com" class="md-social__link"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </a> <a href="https://hub.docker.com/r/getml/getml" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 640 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg> </a> <a href="https://pypi.org/project/getml/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg> </a> <a href="https://www.youtube.com/@code17-gmbh" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg> </a> <a href="https://www.linkedin.com/company/code17-gmbh" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.expand", "navigation.indexes", "navigation.instant.prefetch", "navigation.path", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.c7c1ca2c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script> <script src=../../../assets/javascripts/bundle.9c5b6415.min.js></script> <script src="../../../assets/external/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <script src=../../../assets/javascripts/custom.js></script> </body> </html>
