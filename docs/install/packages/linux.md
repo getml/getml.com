@@ -19,10 +19,12 @@ This will install both the [Python API][python-api-concepts] and the [Engine][en
 
 ## Separate installation of Engine {#separate-installation-of-engine}
 
-In some cases, it might be preferred to install the Engine separately on Linux
-using [CLI][cli]. For example, if you want to use the [Enterprise
-edition][enterprise-benefits] of the Engine. You can download the current
-release's package from the [download page][package-download].
+In some cases, it might be preferable to install the Engine separately on Linux
+using the [CLI][cli], for example, if you just want to run getML in a dedicated
+process. You can download the current release's Community edition package from
+the [download page][package-download]. Additionally, the [getML Enterprise
+edition][enterprise-benefits] is distributed as a separate package and also needs 
+to be installed this way.
 
 If you want to download getML from the command line, you can use the following
 commands. Replace `<arch>` with either `amd64` or `arm64`, depending on your
@@ -35,7 +37,7 @@ curl -LO https://static.getml.com/download/<version>/getml-community-<version>-<
 
 # If you want to check the hash:
 # curl -LO https://static.getml.com/download/<version>/getml-community-<version>-<arch>-linux.tar.gz.sha256
-# if [ "$(sha256sum getml-community-<version>-<arch>-linux.tar.gz) == $(cat getml-community-<version>-<arch>-linux.tar.gz.sha256)" ]; then echo "OK"; else echo "NOT OK"; fi
+# if [ "$(sha256sum getml-community-<version>-<arch>-linux.tar.gz)" == "$(cat getml-community-<version>-<arch>-linux.tar.gz.sha256)" ]; then echo "OK"; else echo "NOT OK"; fi
 
 tar -xzf getml-community-<version>-<arch>-linux.tar.gz
 cd getml-community-<version>-<arch>-linux
@@ -63,10 +65,15 @@ To run the engine, execute:
 ./getML
 ```
 
-If a global installation is successful, getML is added to `/usr/local/bin` which
-should be on already on `PATH` on every distribution. If the Engine was
-installed to the user home directory, you can add the installation directory to
-your `PATH` variable if you want to call the getML [CLI][cli] from anywhere.
+If getML was installed globally, the `getML` executable is placed in the
+directory `/usr/local/bin`. This directory is typically included in the `PATH`
+environment variable on most major Linux distributions, so you should be able to
+run `getML` from any terminal session without any additional configuration.
+
+However, if the getML Engine was installed to your user's home directory rather
+than globally, it's stored in a location that isn't automatically included in
+the `PATH`. In this case, you can add the installation directory to your `PATH`
+environment variable to be able to call the getML CLI from any terminal session.
 
 ```bash
 export PATH=$PATH:/path/to/getml-1.5.0-ARCH-community-edition-linux
