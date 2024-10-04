@@ -1,6 +1,35 @@
-# Release Notes
+# Changelog {#changelog}
 
 ## For getML Enterprise & Community editions { data-toc-label="getML" }
+
+### 1.5.0   <small>Sep 24, 2024</small> {id="1.5.0"}
+#### Features
+- Overhaul and better integration of API documentation and web page:
+    - Switch from [sphinx](https://www.sphinx-doc.org/en/master/) to [mkdocs](https://www.mkdocs.org/)
+    - Restructuring of [User Guide][user-guide-index], multiple amendments to documentation 
+- Introduce strict typing regiment for [feature learning aggregations][getml.feature_learning.aggregations] and [loss functions][getml.feature_learning.loss_functions]
+- Clean up and maintenance of [example notebooks][examples-index], make them executable in [Colab](https://colab.google/)
+- More informative progress bar and status updates using [rich](https://github.com/Textualize/rich?tab=readme-ov-file)
+- Completely reworked IO
+    - Improved reliability, speed and maintainability by capitalizing on [PyArrow](https://arrow.apache.org/docs/python/index.html)
+- Introduce [reflect-cpp](https://github.com/getml/reflect-cpp) for parsing and de/serialization
+- Availability of [getML Docker runtime as a service on Docker Hub](https://hub.docker.com/r/getml/getml), allowing for easy setup 
+#### Developer-focused
+- Complete rework of the build pipeline (docker and linux native)
+    - Introduce [CCache](https://ccache.dev/), [conan](https://conan.io/), [vcpkg](https://vcpkg.io/en/)
+    - User multi-stage docker builds leveraging buildx and buildkit
+    - Centralized `VERSION`
+- [Ruff](https://docs.astral.sh/ruff/) for linting and formatting
+- [Hatch](https://hatch.pypa.io/latest/) for python package management
+#### Bug fixes
+- Generalization of [`Placeholder.join`][getml.data.Placeholder.join]'s `on` argument 
+- Improved timestamp handling
+- Slicing improvements
+    - Slicing of `DataFrames` returned wrong results: Remove short circuit for slices with upper bound
+    - Introduce set semantics for slicing of `DataFrame` (return empty collections instead of erroring)
+- Fix displaying of parameter lists with values that exceed the presentable width
+- Fix displaying of [`DataFrames`][getml.data.DataFrame] with one row or less
+- Fix progress bar output on Google Colab
 
 ### 1.4.0	<small>Oct 17, 2023</small> {id="1.4.0"}
 - Accelerated feature learning through [Fastboost][getml.feature_learning.Fastboost]
@@ -68,7 +97,7 @@
 
 ### 0.11.1 <small>Jul 13, 2020</small> {id="0.11.1"}
 - Add pipeline functionality: [Pipeline][getml.pipeline.Pipeline], [list_pipelines()][getml.pipeline.list_pipelines], [Features][getml.pipeline.Features], [Metrics][getml.pipeline.metrics], [SQLCode][getml.pipeline.SQLCode], [Scores][getml.pipeline.Scores]
-- Better control of hyperparameter optimization: [burn_in][getml.hyperopt.burn_in], [kernels][getml.hyperopt.kernels], [optimization][getml.hyperopt.burn_in.random]
+- Better control of hyperparameter optimization: [burn_in][getml.hyperopt.burn_in], [kernels][getml.hyperopt.kernels], [optimization][getml.hyperopt.optimization]
 - Handling of time stamps: [time][getml.data.time]
 - Improve database I/O: [connect_odbc()][getml.database.connect_odbc.connect_odbc], [copy_table()][getml.database.copy_table.copy_table], [list_connections()][getml.database.list_connections.list_connections], [read_s3()][getml.data.DataFrame.read_s3], [sniff_s3()][getml.database.sniff_s3.sniff_s3]
 - Enable S3 access: [set_s3_access_key_id()][getml.data.access.set_s3_access_key_id], [set_s3_secret_access_key()][getml.data.access.set_s3_secret_access_key]

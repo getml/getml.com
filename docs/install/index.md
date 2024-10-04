@@ -43,4 +43,4 @@ Build Engine and the API from source.
 
 In some scenarios, installing getML from an archive might be necessary.
 
-[Read the archive install guide](packages/archive.md){ .md-button .md-button--primary }
+[Read the archive install guide](packages/package.md){ .md-button .md-button--primary }

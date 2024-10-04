@@ -162,9 +162,10 @@ plugins:
       raise_error_after_finish: True
       raise_error_excludes:
         403: ['*']
+        502: ['https://archive.ics.uci.edu/dataset/357/occupancy+detection']
+
       ignore_urls:
         - https://static.getml.com/download/1.5.0/*
-        - https://storage.googleapis.com/static.getml.com/download/1.5.0/*
         - localhost:8080/*
         - mailto:*
         - 'data:image/*'
@@ -329,8 +330,10 @@ nav:
       - Build Engine & API: install/source/build.md
     - Uninstall:
       - Any platform: install/uninstall.md
-    - Archive:
-      - Archive: install/packages/archive.md
+    - Package:
+      - Download: install/packages/package.md
+    - Changelog: 
+      - install/changelog.md
 
   - Enterprise:
     - enterprise/index.md
