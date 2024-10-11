@@ -120,13 +120,13 @@ jobs:
 
           fi
 
-          - name: Deploy numbered version (old) if version branch
-          if: startsWith(github.ref, 'refs/heads/version-')
-          run: |
-            echo "Version branch detected."
-            echo "Update of existing old version. Deploying version $PROJECT_VERSION 
-              without updating the latest alias"
-            hatch run mike deploy "$PROJECT_VERSION"
+      - name: Deploy numbered version (old) if version branch
+        if: startsWith(github.ref, 'refs/heads/version-')
+        run: |
+          echo "Version branch detected."
+          echo "Update of existing old version. Deploying version $PROJECT_VERSION 
+            without updating the latest alias"
+          hatch run mike deploy "$PROJECT_VERSION"
         
       - name: Add CNAME file
         run: |
