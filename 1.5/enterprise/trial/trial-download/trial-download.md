@@ -5,23 +5,9 @@ search:
 
 # getML Enterprise trial download
 
-Thank you for your interest and trust in GetML. Download the getML Enterprise trial binary to get started with the most advanced feature learning algorithms.
+Thank you for your interest in getML! We appreciate your trust in our platform. We are currently in the final stages of testing and building getML-1.5.0-enterprise. We will notify you as soon as the download becomes available.
 
-## Choose your OS:
-
-### MacOS
-[Mac Intel](#){ .md-button .md-button--primary }
-[Mac ARM](#){ .md-button .md-button--primary }
-
-### Linux
-[Linux x86/64](#){ .md-button .md-button--primary }
-[Linux ARM](#){ .md-button .md-button--primary }
-[Docker](#){ .md-button .md-button--primary }
-
-### Windows
-[Windows](#){ .md-button .md-button--primary }
-
-By downloading and using getML Enterprise, I agree to the [Privacy Policy](https://www.notion.so/code17-io/Privacy-Notice-ce7fa0997ed94701a51cbb7dc1d0314a) and [Terms](terms.md).
+By downloading and using getML Enterprise, I agree to the [Privacy Policy](https://getml.notion.site/Datenschutzerkl-rung-Website-Data-Privacy-Statement-Website-ead93ad6213c4f289ce921a9ae166734) and [Terms](https://getml.notion.site/Testlizenz-Vereinbarung-Trial-License-Agreement-e03d5e7f49404781aa4e469d3486026c).
 
 [Changelog ->][changelog]
 
