@@ -176,6 +176,8 @@ plugins:
         - enterprise/**
         - about/**
         - contact/**
+        - examples/enterprise-notebooks/**
+        - examples/integrations/**
   - git-committers:
       enabled: !ENV [ENABLED_GIT_COMMITTERS, false]
       repository: getml/getml-docs
